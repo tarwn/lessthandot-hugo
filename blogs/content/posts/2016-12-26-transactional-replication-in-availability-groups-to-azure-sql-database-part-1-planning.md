@@ -77,7 +77,7 @@ Make sure the IP address of every publisher and distributor is allowed through t
 
 Using SSMS, verify you can connect from each publisher and distributor to the SQL DB. Resolve any errors before continuing.
 
-Use the “Deploy Database to Microsoft Azure SQL Database” wizard to find any incompatibilities within the database. If there are stored procedures that cross-reference another database, for example, that isn't supported in SQL Database and those objects can't be replicated.
+Use the "Deploy Database to Microsoft Azure SQL Database" wizard to find any incompatibilities within the database. If there are stored procedures that cross-reference another database, for example, that isn't supported in SQL Database and those objects can't be replicated.
 
 With all those pieces in place, let's get started!
 

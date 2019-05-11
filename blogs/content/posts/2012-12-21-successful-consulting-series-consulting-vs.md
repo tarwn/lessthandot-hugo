@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2012-12-21T14:44:00+00:00
 ID: 1875
-excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consulting&hellip;'
+excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, "Successful Consulting&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/successful-consulting-series-consulting-vs/
 views:
   - 23164
@@ -17,9 +17,9 @@ categories:
 ---
 </p> 
 
-> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, “[Successful Consulting Series][1]” for a full listing of each part in this series.
+> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, "[Successful Consulting Series][1]" for a full listing of each part in this series.
 
-Perhaps you're thinking, “I'm bored in my full-time job, managing the same 250 SQL Servers” and are considering a move to consulting. Perhaps you received a job offer from a consulting firm yesterday, and are wondering if you really should accept it. Working fulltime for a single company and being a consultant are two very different jobs. Here are a few things to consider before accepting the job – or declining it because it isn't the perfect job for you and you don't want to settle.
+Perhaps you're thinking, "I'm bored in my full-time job, managing the same 250 SQL Servers" and are considering a move to consulting. Perhaps you received a job offer from a consulting firm yesterday, and are wondering if you really should accept it. Working fulltime for a single company and being a consultant are two very different jobs. Here are a few things to consider before accepting the job – or declining it because it isn't the perfect job for you and you don't want to settle.
 
  
 
@@ -43,7 +43,7 @@ How will the consulting company, and the clients you are working with, respond t
 
 When you switch to consulting, you may have to travel no further than you normally would commute to a fulltime job. Some consultants are very lucky and get to work locally for the duration of an SOW. However, you may find the opposite is true. You may have a requirement of traveling 25%, 50%, or more time per week or month. <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/-2.png?mtime=1356107726" alt="" width="200" height="241" />
 
-There are many facets of travel where you have to ask, “Will I gain enough from this job to accept these conditions?” First and foremost, there is time away from your home and family. This may mean missing a school concert or having to do all chores on the weekend instead of a weeknight. What compromises will you need to make in this regard? If you're required to travel to clients that are a good distance away, you may need to fly. If this is the case, you'll need to be aware of who is responsible for booking airfare, hotel, and rental car. If you work for a consulting firm that has a person to make these arrangements for you, you're lucky. If not, you will have to spend (non-billable!) time making these arrangements. You'll also need to find out if you'll get a company credit card to use, or if you'll have to use your own. What expenses will be covered, down to things like parking your car at an airport? After that's determined, you'll have to save receipts and submit expenses in a timely manner. Take all of these points into consideration when weighing a consulting position.
+There are many facets of travel where you have to ask, "Will I gain enough from this job to accept these conditions?" First and foremost, there is time away from your home and family. This may mean missing a school concert or having to do all chores on the weekend instead of a weeknight. What compromises will you need to make in this regard? If you're required to travel to clients that are a good distance away, you may need to fly. If this is the case, you'll need to be aware of who is responsible for booking airfare, hotel, and rental car. If you work for a consulting firm that has a person to make these arrangements for you, you're lucky. If not, you will have to spend (non-billable!) time making these arrangements. You'll also need to find out if you'll get a company credit card to use, or if you'll have to use your own. What expenses will be covered, down to things like parking your car at an airport? After that's determined, you'll have to save receipts and submit expenses in a timely manner. Take all of these points into consideration when weighing a consulting position.
 
 If there are days or weeks you can't or won't travel, you will have to make that known right away. This may be a point of negotiation during talks to join a consulting firm. How will you handle the need to travel for work if it falls on a family birthday or the date of a race you've wanted to run? These are discussions you need to have beforehand, not afterwards.
 

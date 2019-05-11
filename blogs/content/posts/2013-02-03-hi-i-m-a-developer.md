@@ -140,7 +140,7 @@ tags:
 </p>
 
 <p style="margin-left: 36.0pt; line-height: 14.25pt;">
-  <span style="font-size: 10pt;"><span style="background-color: #ffff99;"><span style="font-size: small;"><span style="font-family: arial, helvetica, sans-serif;"><strong>“We have to do so much administration work, just to get to a solution developed and delivered”</strong></span></span></span></span>
+  <span style="font-size: 10pt;"><span style="background-color: #ffff99;"><span style="font-size: small;"><span style="font-family: arial, helvetica, sans-serif;"><strong>"We have to do so much administration work, just to get to a solution developed and delivered"</strong></span></span></span></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -212,7 +212,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">
-  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So back to the question at hand, just what kind of developer does a developer need to be?  Someone who is comfortable at administering their local, virtual and remote computers?  And just how much effort should be made before you require assistance (<em>and will that not take more effort</em>) but what if you work in an environment where the resources are not available and you have to <strong>“man up”</strong> (<em>so to speak</em>) and take the reins, do you factor that into any and every piece of work and project you do?</span></span>
+  <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">So back to the question at hand, just what kind of developer does a developer need to be?  Someone who is comfortable at administering their local, virtual and remote computers?  And just how much effort should be made before you require assistance (<em>and will that not take more effort</em>) but what if you work in an environment where the resources are not available and you have to <strong>"man up"</strong> (<em>so to speak</em>) and take the reins, do you factor that into any and every piece of work and project you do?</span></span>
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">

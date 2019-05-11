@@ -63,7 +63,7 @@ The SqlDataAdapter method is to create a local DataSet or DataTable then provide
 
 ### SqlBulkCopy Method
 
-The SqlBulkCopy object is designed to “let you efficiently bulk load a SQL Server table” ([MSDN][6]). It provides similar functionality as bcp, but from inside our .Net code and without the format files. This test works similarly to the SqlDataAdapter test, in that it holds the entire DataTable of test data in memory until it is told to commit it in one go (some of the tests are iterative, some are bulk, the test method caters to both).
+The SqlBulkCopy object is designed to "let you efficiently bulk load a SQL Server table" ([MSDN][6]). It provides similar functionality as bcp, but from inside our .Net code and without the format files. This test works similarly to the SqlDataAdapter test, in that it holds the entire DataTable of test data in memory until it is told to commit it in one go (some of the tests are iterative, some are bulk, the test method caters to both).
 
 ## Results
 

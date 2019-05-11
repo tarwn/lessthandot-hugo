@@ -24,7 +24,7 @@ I'll be using Visual Studio 2008 for this, but the process will be similar for a
 
 http://nis/\_vti\_bin/lists.asmx
 
-NOTE: You'll need to replace the “nis” section with the path to your own Sharepoint website.
+NOTE: You'll need to replace the "nis" section with the path to your own Sharepoint website.
 
 The following screen will then be presented displaying the list of available methods:
 
@@ -32,7 +32,7 @@ The following screen will then be presented displaying the list of available met
   <img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/AddWebReference.png" alt="" title="" width="817" height="563" />
 </div>
 
-Change the Web Reference Name to “Sharepoint.Lists” and click the “Add Reference” button to add it to your project.
+Change the Web Reference Name to "Sharepoint.Lists" and click the "Add Reference" button to add it to your project.
 
 Next, you'll need to open up a new form/page/module (whichever is appropriate to your solution), add a few imports:
 

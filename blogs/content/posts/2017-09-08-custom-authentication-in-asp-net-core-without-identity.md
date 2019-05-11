@@ -97,7 +97,7 @@ ASP.Net Core has Cookie Middleware we can use out of the box: [Using Cookie Auth
 
 
 <p>
-  <i>Note the OnRedirectToLogin logic, this causes the middleware to return basic 401 HTTP errors for calls through the “/api” path instead of redirects to the login page</i>
+  <i>Note the OnRedirectToLogin logic, this causes the middleware to return basic 401 HTTP errors for calls through the "/api" path instead of redirects to the login page</i>
 </p>
 
 
@@ -270,7 +270,7 @@ public static class AssemblyExtensions
 
 
 <p>
-  I'm not going to push a particular storage solution on you, so I have two interfaces I'll be using as stand-ins for all of my “storage” needs:
+  I'm not going to push a particular storage solution on you, so I have two interfaces I'll be using as stand-ins for all of my "storage" needs:
 </p>
 
 
@@ -395,7 +395,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions() {
 
 
 <p>
-  The last step is to the ability to access the User in other controllers. Controllers have a <code>User</code> property that grants access to the ClaimsPrincipal created during login. Assuming we had also stored a property like “UserId” in <code>ISessionManager.CreateSessionAsync</code> then we can access it like this:
+  The last step is to the ability to access the User in other controllers. Controllers have a <code>User</code> property that grants access to the ClaimsPrincipal created during login. Assuming we had also stored a property like "UserId" in <code>ISessionManager.CreateSessionAsync</code> then we can access it like this:
 </p>
 
 

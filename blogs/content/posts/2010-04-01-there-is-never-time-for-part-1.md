@@ -20,9 +20,9 @@ tags:
   - training
 
 ---
-There is never time for training, or to make sure the servers have the right background image, or to make a monitoring script to send emails when certain schema changes occur in the database, or to improve the feedback loop on quarterly goals, or to change that dreadful change management form to streamline the process. Unfortunately the deep, dark secret is that in 6 months we're going to be saying the same thing, “There isn't time now, we'll do it later”.
+There is never time for training, or to make sure the servers have the right background image, or to make a monitoring script to send emails when certain schema changes occur in the database, or to improve the feedback loop on quarterly goals, or to change that dreadful change management form to streamline the process. Unfortunately the deep, dark secret is that in 6 months we're going to be saying the same thing, "There isn't time now, we'll do it later".
 
-_This is the first article in a three part series on major gaps that we continue to put off until we have “time”, a magical state that never seems to occur on it's own. Each article is based on one high-level subject and provides ideas on how to gain individual and group level traction and make now that “time”._
+_This is the first article in a three part series on major gaps that we continue to put off until we have "time", a magical state that never seems to occur on it's own. Each article is based on one high-level subject and provides ideas on how to gain individual and group level traction and make now that "time"._
 
 ## Training and Development
 
@@ -49,7 +49,7 @@ Peer Review
 :   Some developers already do this and it's a tactic we can all take advantage of. That co-worker beside you? yeah, they know something you don't know. And guess what, you probably know something they don't know. Convince them to sit behind you for a little while, and vice versa. They are going to not only point out that you hit the backspace key 50 times per minute, but also that they do certain tasks slightly differently, or had a different understanding. And while it may seem slower to have someone sit behind you for a few hours insteda of working on their own, keep in mind that if they come up with one shortcut that saves you 10 minutes a day, you just bought an entire extra week of productivity a year (~48 weeks \* 5 days \* 10 minutes / 60 minutes = 40 hours).
 
 Blogging
-:   “Wait, writing stuff makes me better? That seems backwards.” Starting to write regular blog entries on technology or your professional interests will force you to focus your thoughts and find new ways to present them. You will end up doing random internet searches that provide you with more knowledge, you will work harder to form your thoughts and experiences into words that other people can (hopefully) understand. In short, you will be getting more out of the experiences and knowledge you already have and keeping those skills sharpened even when you aren't actively using them.
+:   "Wait, writing stuff makes me better? That seems backwards." Starting to write regular blog entries on technology or your professional interests will force you to focus your thoughts and find new ways to present them. You will end up doing random internet searches that provide you with more knowledge, you will work harder to form your thoughts and experiences into words that other people can (hopefully) understand. In short, you will be getting more out of the experiences and knowledge you already have and keeping those skills sharpened even when you aren't actively using them.
 
 ## Initiative
 

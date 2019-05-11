@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-06T15:57:00+00:00
 ID: 1119
-excerpt: 'Over the next month, with a few days change, LessThanDot will be posting, “DBA Tip a Day Series” for SQL Server Database Administrators. The hopes of this series of blogs and articles will be to assist anyone that is starting out in SQL Server and also&hellip;'
+excerpt: 'Over the next month, with a few days change, LessThanDot will be posting, "DBA Tip a Day Series" for SQL Server Database Administrators. The hopes of this series of blogs and articles will be to assist anyone that is starting out in SQL Server and also&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-database-administration-tip/
 views:
   - 4894
@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="Nth msg">
-  Over the next month, with a few days change, LessThanDot will be posting, “DBA Tip a Day Series” for SQL Server Database Administrators. The hopes of this series of blogs and articles will be to assist anyone that is starting out in SQL Server and also DBAs with vested years of experience to gain more knowledge. The list of tips includes topics such as Memory, CPU, I/O, Baselines, Security Auditing, and even Professional Development. These will be tips, and not in-depth looks into each one. The tips will draw from crucial areas in the community, pulling information from many resources, to provide a comprehensive guide to finding answers.</p> 
+  Over the next month, with a few days change, LessThanDot will be posting, "DBA Tip a Day Series" for SQL Server Database Administrators. The hopes of this series of blogs and articles will be to assist anyone that is starting out in SQL Server and also DBAs with vested years of experience to gain more knowledge. The list of tips includes topics such as Memory, CPU, I/O, Baselines, Security Auditing, and even Professional Development. These will be tips, and not in-depth looks into each one. The tips will draw from crucial areas in the community, pulling information from many resources, to provide a comprehensive guide to finding answers.</p> 
   
   <p>
     Once completed, this list will be made available on this page as a downloadable PDF. We hope that in the PDF form, you can take the complete listing of tips to work daily as a guide and assistance when needed.

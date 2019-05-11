@@ -47,6 +47,6 @@ Happy coding, leave me a comment if you signed up because of this post.
 > 
 > The mayor is joining more than 180,000 people currently taking part in Code Year, a campaign to encourage more people to programme.
 > 
-> “My New Year's resolution is to learn to code with Codeacademy in 2012!” he wrote on Twitter.
+> "My New Year's resolution is to learn to code with Codeacademy in 2012!" he wrote on Twitter.
 
 http://www.bbc.co.uk/news/technology-16440126

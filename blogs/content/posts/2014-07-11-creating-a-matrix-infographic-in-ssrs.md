@@ -20,11 +20,11 @@ tags:
   - world cup
 
 ---
-With “Matrix Infographic” I simply mean those infographics FiveThirtyEight ([site][1] | [Twitter][2]), the website of statistic revelation Nate Silver, uses to display forecasts of World cup matches. An example:
+With "Matrix Infographic" I simply mean those infographics FiveThirtyEight ([site][1] | [Twitter][2]), the website of statistic revelation Nate Silver, uses to display forecasts of World cup matches. An example:
 
 [<img class="alignnone size-medium wp-image-2830" src="/wp-content/uploads/2014/07/worldcup_matrixgraph2-300x296.png" alt="worldcup_matrixgraph2" width="300" height="296" srcset="/wp-content/uploads/2014/07/worldcup_matrixgraph2-300x296.png 300w, /wp-content/uploads/2014/07/worldcup_matrixgraph2.png 576w" sizes="(max-width: 300px) 100vw, 300px" />][3]
 
-I was wondering if something similar could be built using SSRS. And yes, it is possible and it isn't that hard. My starting point is a 10 by 10 matrix I downloaded from a [blog post][4] by Jason Thomas ([blog][5] | [twitter][6]). He uses this matrix in his 24 hours of PASS session “DataViz You Thought You Could NOT Do with SSRS”, which is an [absolute must-watch][7].
+I was wondering if something similar could be built using SSRS. And yes, it is possible and it isn't that hard. My starting point is a 10 by 10 matrix I downloaded from a [blog post][4] by Jason Thomas ([blog][5] | [twitter][6]). He uses this matrix in his 24 hours of PASS session "DataViz You Thought You Could NOT Do with SSRS", which is an [absolute must-watch][7].
 
 Each cell has a unique number and we start with 1 in the left bottom corner and we end with 100 in the top right corner. The font is set extra small, so that the column that contains 100 is not resized because of the 3 digits.
 

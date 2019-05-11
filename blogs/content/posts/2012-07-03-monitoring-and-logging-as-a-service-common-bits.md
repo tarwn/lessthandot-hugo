@@ -104,7 +104,7 @@ This little bit of code and their supporting classes are all it takes to talk to
 
 ## The Sample Website
 
-The sample website contains very little code that I added. The majority of the code is the “Empty MVC 3 Web Site” template from visual studio, I've added an extremely basic HomeController and some setup code in the global.asax to setup the log provider and log a few events.
+The sample website contains very little code that I added. The majority of the code is the "Empty MVC 3 Web Site" template from visual studio, I've added an extremely basic HomeController and some setup code in the global.asax to setup the log provider and log a few events.
 
 **SampleSiteWithLogging.Global** (<a href="https://github.com/tarwn/InstrumentationSampleCode/blob/master/SampleSiteWithLogging/Global.asax.cs" title="Global.asax.cs on GitHub" target="_blank">source</a>)
 
@@ -153,7 +153,7 @@ public class MvcApplication : System.Web.HttpApplication {
 	}
 }
 ```
-The global.asax file allows us to wire logic into the global application workflow. On startup we get a provider, based on our “Sensitive Settings” configuration file, set that as our default logger, then go ahead and log our first message with entries to indicate this is application startup and the current UTC timestamp. Each time we receive a request from a web browser, we use our on line logging call to log the browsers UserAgent string and a timestamp. When an error goes unhandled, we can log that too.
+The global.asax file allows us to wire logic into the global application workflow. On startup we get a provider, based on our "Sensitive Settings" configuration file, set that as our default logger, then go ahead and log our first message with entries to indicate this is application startup and the current UTC timestamp. Each time we receive a request from a web browser, we use our on line logging call to log the browsers UserAgent string and a timestamp. When an error goes unhandled, we can log that too.
 
 Elsewhere in our application we can use those same one line calls to pass information to the logging service. The HomeController logs information, but instead uses the CaptureElapsedTime method to log information and the time that elapses between it's instantiation and disposal.
 
@@ -182,9 +182,9 @@ public class HomeController : Controller {
 ```
 These examples are actually more wordy than I would like. If I were building this as part of a production application, I would refactor them down to take explicit arguments or infer some of the values, reducing the size of each call even further. 
 
-## “Sensitive Settings”
+## "Sensitive Settings"
 
-The Sensitive Settings library is just a quick settings library I threw together so I could prevent my API keys for these services from getting committed to github. The library is referenced by the website and unit test projects, each of which have a prebuild step to copy the “sensitive.config” file from the solution folder to their build target folders.
+The Sensitive Settings library is just a quick settings library I threw together so I could prevent my API keys for these services from getting committed to github. The library is referenced by the website and unit test projects, each of which have a prebuild step to copy the "sensitive.config" file from the solution folder to their build target folders.
 
 ## LoggingTests
 

@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-While untangling a pretty nasty correlated subquery someone had written at work that was going three layers deep with IN (select X from Y) type of stuff, I used twitter to vent some of my rage [SQL Training Wheels][1]. This found its way to facebook, where one of my friends (and fellow LessThanDot members) asked “How So”.
+While untangling a pretty nasty correlated subquery someone had written at work that was going three layers deep with IN (select X from Y) type of stuff, I used twitter to vent some of my rage [SQL Training Wheels][1]. This found its way to facebook, where one of my friends (and fellow LessThanDot members) asked "How So".
 
 Well, the answer is simple. Like training wheels, they are easy. Damn easy. But, also like training wheels, they can really get in the way. As such, use of IN is often good for quick ad-hoc queries, but for anything to be run more than once it's probably worth at least exploring the option of using a derived table and a join.
 

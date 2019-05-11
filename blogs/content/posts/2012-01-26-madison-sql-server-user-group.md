@@ -30,7 +30,7 @@ SQL Saturday Everywhere! Wisconsin and Chicago are putting on SQL Saturday event
   <a href="/wp-content/uploads/blogs/DataMgmt/-109.png?mtime=1327629592"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-109.png?mtime=1327629592" width="400" height="249" /></a>
 </div>
 
-As well as attending, I was able to present on Merge Replication.  This was the second time I was able to present his session.  I feel this time really fine-tuned it and from the responses, the group enjoyed learning some cool things to make Merge Replication and offline mobility of data.  Having the ability to take an application that can only function while retaining some type of online presence and sever that connectivity while retaining full functionality, is truly propelling it to the next level.  Merge Replication while coupled with skills in-house and a well-designed publication and landscape behind it, can be a stable and sound solution to “once and awhile connectivity” and keeping data in sync.
+As well as attending, I was able to present on Merge Replication.  This was the second time I was able to present his session.  I feel this time really fine-tuned it and from the responses, the group enjoyed learning some cool things to make Merge Replication and offline mobility of data.  Having the ability to take an application that can only function while retaining some type of online presence and sever that connectivity while retaining full functionality, is truly propelling it to the next level.  Merge Replication while coupled with skills in-house and a well-designed publication and landscape behind it, can be a stable and sound solution to "once and awhile connectivity" and keeping data in sync.
 
 Some high points that we covered were
 

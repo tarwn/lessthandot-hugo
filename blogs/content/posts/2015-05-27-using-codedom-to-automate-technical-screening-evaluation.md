@@ -26,7 +26,7 @@ To download and run the code yourself, you will need git and VisualSudion 2013 o
 
 The sample submissions for this post are intended to answer the following tech screening question:
 
-> Write a function that accepts an integer and outputs a string with: “Fizz” if it is divisible by 3, “Buzz” if it is divisible by 5, “FizzBuzz” if it is divisible by both, or the number if it is divisible by neither.
+> Write a function that accepts an integer and outputs a string with: "Fizz" if it is divisible by 3, "Buzz" if it is divisible by 5, "FizzBuzz" if it is divisible by both, or the number if it is divisible by neither.
 
 (this is not a real question from our tech screening)
 
@@ -105,7 +105,7 @@ In more detail:
   2. Compile the code and verify it built without errors
   3. Use reflection to get the object and method, instantiate the object, and invoke the method with the test inputs
 
-When we ask people to submit code exercise answers, there is no guarantee that it will or won't have using statements, a namespace, a class name, or static keywords where I do or don't expect them. Even if they are present, there is no guarantee they will have the naming I expect, such as the “namespaceName” and “ClassName” values I hardcoded above. 
+When we ask people to submit code exercise answers, there is no guarantee that it will or won't have using statements, a namespace, a class name, or static keywords where I do or don't expect them. Even if they are present, there is no guarantee they will have the naming I expect, such as the "namespaceName" and "ClassName" values I hardcoded above. 
 
 Also, ignore the fact that I grab the first method and assume it's the one I want. This works often enough that I don't mind rearranging a bit in the one or two exceptional cases.
 
@@ -113,7 +113,7 @@ Also, ignore the fact that I grab the first method and assume it's the one I wan
 
 To test consistently and automatically, we need to solve the following problems:
 
-  * Remove the “static” keyword from the method we intend to execute
+  * Remove the "static" keyword from the method we intend to execute
   * Add or rename the class name to an expected value
   * Add or rename the namespace name to an expected value
   * Add using statements if they are not present
@@ -185,7 +185,7 @@ if (!normalizedSource.Contains("using System"))
 normalizedSource = USING_STATEMENTS + "\r\n" + normalizedSource;
 }
 ```
-This will convert a file like the  [sample “Pass” submission file][6] like so:
+This will convert a file like the  [sample "Pass" submission file][6] like so:
 
 Before:
 

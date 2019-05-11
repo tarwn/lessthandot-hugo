@@ -37,7 +37,7 @@ Oh man, this is one of things I really love about my job. Working from home real
 
 4.). Comfort. This one is really subjective. For me, I'm most comfortable in darker rooms, with natural light. When I moved into our new house last October, I painted my office a dark grey, with white trim. It looks great, and helps me focus.
 
-### Do you clearly remember the first time you did something cool with technology and thought, “This is what I want to do for a living!”?
+### Do you clearly remember the first time you did something cool with technology and thought, "This is what I want to do for a living!"?
 
 I do! When I was 6 years old we moved to a new school district. I was in 2nd grade. My old school had a really good advanced program, but the new one didn't. Therefore, it ended up that during reading, math, and science time in class, I was excused for self study in the computer lab.
 

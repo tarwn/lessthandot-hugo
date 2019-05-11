@@ -20,7 +20,7 @@ Saturday, April 21, 2012 will be an historic occasion: the first [SQL Saturday][
   <img src="/wp-content/uploads/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751" alt="" />
 </p>
 
-After attending many SQL Saturdays from Ohio to Portland over the past years, I decided we needed one in Wisconsin. We have a strong SQL community, with three user groups and many active professionals that want to learn and network. Madison, where “my” user group is based, seemed the perfect location – very central, and with great facilities. The planning began.
+After attending many SQL Saturdays from Ohio to Portland over the past years, I decided we needed one in Wisconsin. We have a strong SQL community, with three user groups and many active professionals that want to learn and network. Madison, where "my" user group is based, seemed the perfect location – very central, and with great facilities. The planning began.
 
 On Saturday, April 21, 2012, join me and 250 of your closest SQL friends at [SQL Saturday #118][2] at the [MATC Truax Campus][3].  Registration will begin at 7:00 am. Sessions begin at 8:00 am and will go until 5:30 pm. We have [36 fantastic sessions scheduled][4], covering topics from new T-SQL tricks in SQL Server 2012 to MDX, Always On in 2012 to talks about The Cloud! It's going to be a great opportunity to learn.
 

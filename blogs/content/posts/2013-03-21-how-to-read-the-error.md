@@ -108,7 +108,7 @@ The output is something like you expect from xp_readerrorlog
   
 > 2013-03-21 13:04:08.100 Server Command Line Startup Parameters:
 	   
-> -s “MSSQLSERVER”
+> -s "MSSQLSERVER"
   
 > 2013-03-21 13:04:09.850 Server SQL Server detected 1 sockets with 1 cores per socket and 1 logical processors per socket, 1 total logical processors; using 1 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
   

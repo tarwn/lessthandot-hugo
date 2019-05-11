@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-So by this time all of you should know that SQL Server “Denali” CTP 3 is out and about.
+So by this time all of you should know that SQL Server "Denali" CTP 3 is out and about.
 
 For all of you(like me) who rushed to download and install it, there is a little secret. There are a few feature packs as well available to accompany your new installation and Visual Studio 2010(with SP 1).
 

@@ -1030,7 +1030,7 @@ So how does that work? First you replace all the zeroes with spaces, then you tr
 
 ## 10 Concatenate Values From Multiple Rows Into One Column {#10}
 
-If you want to concatenate values from multiple rows into one and you want to order it then you have to use FOR XML PATH. The ORDER BY is -not- guaranteed to be processed before the concatenation occurs, if you use that technique. However, it -is- guaranteed if you use FOR XML PATH(”).
+If you want to concatenate values from multiple rows into one and you want to order it then you have to use FOR XML PATH. The ORDER BY is -not- guaranteed to be processed before the concatenation occurs, if you use that technique. However, it -is- guaranteed if you use FOR XML PATH(").
 
 Let's take a look. First create these tables
 

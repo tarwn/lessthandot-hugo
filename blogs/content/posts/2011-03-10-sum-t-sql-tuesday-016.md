@@ -40,7 +40,7 @@ Jacob Sebastian, MVP ([B][16] | [T][17]) A T-SQL Tuesday first-timer (yay!) brin
 
 Bradley Ball ([B][19] | [T][20]) provides two scripts, one to get database size statistics, and another for table size statistics, in [T-SQL Tuesday 16: Aggregation][21]. 
 
-Jim McLeod ([B][22] | [T][23]) The burning question on Jim's mind is “Can we reproduce columnstore indexes in SQL Server 2008?” Find out by reading [Can We Reproduce Columnstore Aggregations in SQL 2008?][24] 
+Jim McLeod ([B][22] | [T][23]) The burning question on Jim's mind is "Can we reproduce columnstore indexes in SQL Server 2008?" Find out by reading [Can We Reproduce Columnstore Aggregations in SQL 2008?][24] 
 
 Luke Hayler ([B][25] | [T][26]) is a man after my own heart with a Reporting Services 2005 discussion about row groups, column groups and their scope in [T-SQL Tuesday #016 – Aggregations][27]. Excellent examples, Luke! 
 
@@ -74,15 +74,15 @@ Dev Nambi ([B][66] | [T][67]) walks us through finding MEDIAN, PERCENTILE and CO
 
 Doug Lane ([B][69] | [T][69]) Another man after my heart with a Reporting Services post, Doug asks if RS datasets are indexed in [T-SQL Tuesday #016: Aggregations in Reporting Services][70]. 
 
-Sean McCown, MVP ([B][71] | [T][53]) I've never heard of PowerShell scripts referred to as “cute”, until Sean wrote [T-SQL Tuesday #016: Get DB Sums With Powershell][72]. 
+Sean McCown, MVP ([B][71] | [T][53]) I've never heard of PowerShell scripts referred to as "cute", until Sean wrote [T-SQL Tuesday #016: Get DB Sums With Powershell][72]. 
 
-Claire Willett ([B][73] | [T][74]) [T-SQL Tuesday 016 – When is yesterday, exactly?][75] Claire tells us, “Despite only taking up 20% of the week, Mondays are kind of important.” She then shows us how she used aggregates with dates to pull data for the current business day and previous day. 
+Claire Willett ([B][73] | [T][74]) [T-SQL Tuesday 016 – When is yesterday, exactly?][75] Claire tells us, "Despite only taking up 20% of the week, Mondays are kind of important." She then shows us how she used aggregates with dates to pull data for the current business day and previous day. 
 
 George Mastros, MVP ([B][76] | [T][77]) walks us through the **how** of [Understanding SQL Server 2000 Pivot with Aggregates][78] . 
 
 Ricardo Leka ([B][79] | [T][80]) A quick but effective script to show blocked processes: [T-SQL Tuesday #016 – Blocking Processes – #tsql2sday][81]. 
 
-Jason Brimhall ([B][82] | [T][83]) [T-SQL Tuesday #016: Aggregates and Statistics][84]. First, I learned something new: what a “quartile” is. And he used OVER – a favorite! Jason shows us how to use MAX and OVER to properly size production databases. 
+Jason Brimhall ([B][82] | [T][83]) [T-SQL Tuesday #016: Aggregates and Statistics][84]. First, I learned something new: what a "quartile" is. And he used OVER – a favorite! Jason shows us how to use MAX and OVER to properly size production databases. 
 
 Andy Leonard, MVP ([B][85] | [T][86]) proves there are multiple ways to do the same thing with [T-SQL Tuesday: Aggregations in SSIS][87]!
 

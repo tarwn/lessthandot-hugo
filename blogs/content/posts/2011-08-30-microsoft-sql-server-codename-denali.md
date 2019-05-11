@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL Server, codename “Denali”, will be the last release to support OLE DB, ODBC is the new new thing
+title: Microsoft SQL Server, codename "Denali", will be the last release to support OLE DB, ODBC is the new new thing
 author: SQLDenis
 type: post
 date: 2011-08-30T16:13:00+00:00
@@ -9,7 +9,7 @@ excerpt: |
   
   Here is what they are currently saying
   
-  The next release of Microsoft SQL Server, codename “Denali”, will be the last release t&hellip;
+  The next release of Microsoft SQL Server, codename "Denali", will be the last release t&hellip;
 url: /index.php/datamgmt/datadesign/microsoft-sql-server-codename-denali/
 views:
   - 11007
@@ -27,11 +27,11 @@ tags:
   - sql server denali
 
 ---
-According to the Microsoft SQLNCli team blog, SQL Server, codename “Denali”, will be the last release to support OLE DB.
+According to the Microsoft SQLNCli team blog, SQL Server, codename "Denali", will be the last release to support OLE DB.
 
 Here is what they are currently saying
 
-> The next release of Microsoft SQL Server, codename “Denali”, will be the last release to support OLE DB. OLE DB will be supported for 7 years from launch, the life of Denali support, to allow you a large window of opportunity for changing your applications before the deprecation. This deprecation applies to the Microsoft SQL Server OLE DB provider only. Other OLE DB providers as well as the OLE DB standard will continue to be supported until explicitly announced.
+> The next release of Microsoft SQL Server, codename "Denali", will be the last release to support OLE DB. OLE DB will be supported for 7 years from launch, the life of Denali support, to allow you a large window of opportunity for changing your applications before the deprecation. This deprecation applies to the Microsoft SQL Server OLE DB provider only. Other OLE DB providers as well as the OLE DB standard will continue to be supported until explicitly announced.
 > 
 > We encourage you to adopt ODBC in the development of your new and future versions of your application. You don't need to change your existing applications using OLE DB, as they will continue to be supported for seven years from the launch of Denali, but you may want to consider migrating those applications to ODBC as a part of your future roadmap. 
 

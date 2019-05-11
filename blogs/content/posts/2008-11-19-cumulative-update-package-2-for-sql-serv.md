@@ -239,7 +239,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you try to export a SQL Server 2008 Reporting Services report by using Report Manager: “Internet Explorer cannot download <ReportName>.xls from <URL>”
+      FIX: Error message when you try to export a SQL Server 2008 Reporting Services report by using Report Manager: "Internet Explorer cannot download <ReportName>.xls from <URL>"
     </td>
   </tr>
   
@@ -281,7 +281,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you use a SQL Server 2008 SSIS package to query a table in an Oracle database: “SSIS Error Code DTS_E_INDUCEDTRANSFORMFAILUREONERROR”
+      FIX: Error message when you use a SQL Server 2008 SSIS package to query a table in an Oracle database: "SSIS Error Code DTS_E_INDUCEDTRANSFORMFAILUREONERROR"
     </td>
   </tr>
   
@@ -337,7 +337,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you estimate the compression on a table in SQL Server 2008: “Subquery returned more than 1 value”
+      FIX: Error message when you estimate the compression on a table in SQL Server 2008: "Subquery returned more than 1 value"
     </td>
   </tr>
   
@@ -435,7 +435,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Management Studio: When you try to generate a “Drop Table” script SQL Server Management Studio generates a “Create Table” script instead
+      FIX: Management Studio: When you try to generate a "Drop Table" script SQL Server Management Studio generates a "Create Table" script instead
     </td>
   </tr>
   
@@ -533,7 +533,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: The “Most Expensive Queries” chart in the Activity Monitor does not show database name or database ID number on a server that is running SQL Server 2008
+      FIX: The "Most Expensive Queries" chart in the Activity Monitor does not show database name or database ID number on a server that is running SQL Server 2008
     </td>
   </tr>
   
@@ -617,7 +617,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you run a distributed query in SQL Server 2005 or SQL Server 2008: “OLE DB provider 'SQLNCLI' for linked server '<Linked Server>' returned message 'No transaction is active'”
+      FIX: Error message when you run a distributed query in SQL Server 2005 or SQL Server 2008: "OLE DB provider 'SQLNCLI' for linked server '<Linked Server>' returned message 'No transaction is active'"
     </td>
   </tr>
   
@@ -631,7 +631,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: The License Terms screen of the Setup program for Cumulative Update 1 for SQL Server 2008 incorrectly states “To install Service Pack”
+      FIX: The License Terms screen of the Setup program for Cumulative Update 1 for SQL Server 2008 incorrectly states "To install Service Pack"
     </td>
   </tr>
   
@@ -645,7 +645,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you run the DBCC SHRINKFILE command or the DBCC SHRINKDATABASE command on a server that contains a SQL Server 2008 database: “5205 : DBCC SHRINKFILE: Moving Page <FileId>:<PageId> failed”
+      FIX: Error message when you run the DBCC SHRINKFILE command or the DBCC SHRINKDATABASE command on a server that contains a SQL Server 2008 database: "5205 : DBCC SHRINKFILE: Moving Page <FileId>:<PageId> failed"
     </td>
   </tr>
   
@@ -701,7 +701,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you run the snapshot agent on a replication of a stored procedure in SQL Server 2005: “The Name property cannot have a value of @param&#65343;name for this version of SQL Server”
+      FIX: Error message when you run the snapshot agent on a replication of a stored procedure in SQL Server 2005: "The Name property cannot have a value of @param&#65343;name for this version of SQL Server"
     </td>
   </tr>
   
@@ -715,7 +715,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you run the snapshot agent on a replication of a stored procedure in SQL Server 2005 or in SQL Server 2008: “The Name property cannot have a value of @param&#65343;name for this version of SQL Server”
+      FIX: Error message when you run the snapshot agent on a replication of a stored procedure in SQL Server 2005 or in SQL Server 2008: "The Name property cannot have a value of @param&#65343;name for this version of SQL Server"
     </td>
   </tr>
   
@@ -771,7 +771,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you try to add articles to a publication that uses an Oracle Database 11g database as the publisher in SQL Server 2008: “Constraint column '<ColumnName>' not found in table '<TableName>'”
+      FIX: Error message when you try to add articles to a publication that uses an Oracle Database 11g database as the publisher in SQL Server 2008: "Constraint column '<ColumnName>' not found in table '<TableName>'"
     </td>
   </tr>
   
@@ -785,7 +785,7 @@ Cumulative update package 2 for SQL Server 2008 is available. Here is what is fi
     </td>
     
     <td>
-      FIX: Error message when you synchronize data for a transactional publication in SQL Server 2008: “Procedure or function 'sp_MSins_dbo<TableName>_msrepl_ccs' expects parameter '@c7', which was not supplied”
+      FIX: Error message when you synchronize data for a transactional publication in SQL Server 2008: "Procedure or function 'sp_MSins_dbo<TableName>_msrepl_ccs' expects parameter '@c7', which was not supplied"
     </td>
   </tr>
 </table>

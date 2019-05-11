@@ -77,7 +77,7 @@ TRUNCATE TABLE TestTruncate
 
 _Msg 1088, Level 16, State 7, Line 1
   
-Cannot find the object “TestTruncate” because it does not exist or you do not have permissions._
+Cannot find the object "TestTruncate" because it does not exist or you do not have permissions._
 
 As you can see, you don't have permission. A delete will work just fine
 

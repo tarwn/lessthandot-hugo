@@ -62,7 +62,7 @@ WHERE      mt1.[JoinColumn1] (+)= mt2.[JoinColumn1]
 </p>
 
 <p class="MsoNormal">
-  <span lang="EN-US">And he was right. After some Googling I found this Oracle doc page: <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/queries006.htm">Joins</a>. It is described as the “Oracle join operator”. They advise not to use it, but you know, stuff like this always pops up in legacy code.</span>
+  <span lang="EN-US">And he was right. After some Googling I found this Oracle doc page: <a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/queries006.htm">Joins</a>. It is described as the "Oracle join operator". They advise not to use it, but you know, stuff like this always pops up in legacy code.</span>
 </p>
 
 <p class="MsoNormal">

@@ -18,9 +18,9 @@ tags:
   - programmer
 
 ---
-We've been conditioned to accept the terms “Programmer, “Software Developer”, and “Software Engineer” as synonymous. Want ads and internal job titles tell us so. When someone gets paid to fill a human-sized hole, they're going to use the most marketable term that can be attached to a three sentence description, so these terms are used almost interchangeably. We can't trust that a company hiring for a “Developer” actually needs the skills that make a “Developer” different from a “Programmer”.
+We've been conditioned to accept the terms "Programmer, "Software Developer", and "Software Engineer" as synonymous. Want ads and internal job titles tell us so. When someone gets paid to fill a human-sized hole, they're going to use the most marketable term that can be attached to a three sentence description, so these terms are used almost interchangeably. We can't trust that a company hiring for a "Developer" actually needs the skills that make a "Developer" different from a "Programmer".
 
-However, despite rampant misuse, the differences between the term “Developer” and “Programmer” still have value.
+However, despite rampant misuse, the differences between the term "Developer" and "Programmer" still have value.
 
 ## The Programmer vs. the Developer
 
@@ -28,7 +28,7 @@ To start with we have to accept that these titles represent different things. Th
 
 Ignored? Good.
 
-The defining difference between “Programmer” and “Developer” is one of scope, of depth vs. breadth.
+The defining difference between "Programmer" and "Developer" is one of scope, of depth vs. breadth.
 
 ### The Programmer
 

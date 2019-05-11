@@ -14,7 +14,7 @@ categories:
   - Book Review
 
 ---
-Last year, I had the opportunity to contribute to my first book, [Pro SQL Server 2012 Practices][1]. This was a huge honor, and the list of my co-authors is remarkable. What we've decided to do is each take one chapter, written by someone else, and post a review. I reviewed Jason Strate's ([blog][2] | [twitter][3]) chapter, “Indexing Outside the Bubble”.
+Last year, I had the opportunity to contribute to my first book, [Pro SQL Server 2012 Practices][1]. This was a huge honor, and the list of my co-authors is remarkable. What we've decided to do is each take one chapter, written by someone else, and post a review. I reviewed Jason Strate's ([blog][2] | [twitter][3]) chapter, "Indexing Outside the Bubble".
 
 <img style="float: right;" src="http://www.apress.com/media/catalog/product/cache/9/image/9df78eab33525d08d6e5fb8d27136e95/A/9/A9781430247708-3d_1.png" alt="" width="277" height="350" />
 

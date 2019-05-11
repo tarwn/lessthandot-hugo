@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2011-07-12T10:37:00+00:00
 ID: 1247
-excerpt: "Here we go again! It's T-SQL Tuesday #20 – a monthly blog party, this time hosted by Amit Banerjee. (Thanks Amit!) This month, we're talking about “T-SQL Best&hellip;"
+excerpt: "Here we go again! It's T-SQL Tuesday #20 – a monthly blog party, this time hosted by Amit Banerjee. (Thanks Amit!) This month, we're talking about 'T-SQL Best Practices'"
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-20-t/
 views:
   - 8448
@@ -19,7 +19,7 @@ categories:
 ---
 [![][1]][2]
 
-Here we go again! It's T-SQL Tuesday #20 – a monthly blog party, this time hosted by Amit Banerjee. (Thanks Amit!) This month, we're talking about “T-SQL Best Practices”. 
+Here we go again! It's T-SQL Tuesday #20 – a monthly blog party, this time hosted by Amit Banerjee. (Thanks Amit!) This month, we're talking about "T-SQL Best Practices". 
 
 I used to write a lot more T-SQL than I do now. I had lots of rules for how T-SQL was written in my shop. But rather than sharing that extensive document, today I want to share with you my top three pieces of T-SQL advice. 
 
@@ -31,7 +31,7 @@ Remember, though, to keep it simple. Someday, someone else will need to read tha
 
 **Table Aliases** 
 
-No, you don't need to ask people in the office to start calling you by your Twitter handle (no matter how funny that would be). SQL Server includes a “correlation name” or “range variable” to make FROM statements more easily readable. It's also known as a “table alias”. 
+No, you don't need to ask people in the office to start calling you by your Twitter handle (no matter how funny that would be). SQL Server includes a "correlation name" or "range variable" to make FROM statements more easily readable. It's also known as a "table alias". 
 
 A table alias is easy to implement, and saves trouble in the long run. How? Let's look at this simple query: 
 
@@ -41,7 +41,7 @@ FROM Customer
 INNER JOIN SalesOrder ON SalesOrder.CustomerID = Customer.CustomerID
 ```
 
-It's a pain to reference a field with the full table name. And while this query is readable, what table does “OrderDate” reside in? Can you easily tell? 
+It's a pain to reference a field with the full table name. And while this query is readable, what table does "OrderDate" reside in? Can you easily tell? 
 
 Try this version instead:
 
@@ -55,17 +55,17 @@ With a table alias:
 
 Right away, reading the SELECT statement, I can tell which tables the fields are being pulled from. 
 
-When I want to use a field that is in multiple tables with the same name, it's faster to type the above then “Customer.CustomerID” or “SalesOrder.CustomerID”. 
+When I want to use a field that is in multiple tables with the same name, it's faster to type the above then "Customer.CustomerID" or "SalesOrder.CustomerID". 
 
 If I need to join a table to itself, I have to alias the table names. Easily understandable aliases are important in that situation. 
 
 A few notes about table aliases: 
 
-Make them easy to understand – “a”, “b” and “c” are, usually, meaningless. 
+Make them easy to understand – "a", "b" and "c" are, usually, meaningless. 
 
 Use aliases for every field – you don't know when you'll need to add another table to that query, and if that table may have a field of the same name. 
 
-Be consistent – if you use “CUST” in one query, use it in the next. 
+Be consistent – if you use "CUST" in one query, use it in the next. 
 
 **Avoid Implicit Conversion** 
 

@@ -23,7 +23,7 @@ Previous Post: [Learning Elixir and Phoenix – Environments and Editors][1]
   Note: I'm just getting started, so this is not an expert post on the best way to learn Elixir, but closer to a log of the most useful things I used along the way. As I gain experience I'll likely have to revisit earlier assumptions and correct myself.
 </div>
 
-As I stated before, my goal is to get from “barely able to read it” to “able to ship readable, idiomatic, testable apps”. This is the path I took, including problems and successes I ran into along the way. The links I include are probably less than 5% of what I actually read and tried, this is the distilled set I think helped me the most.
+As I stated before, my goal is to get from "barely able to read it" to "able to ship readable, idiomatic, testable apps". This is the path I took, including problems and successes I ran into along the way. The links I include are probably less than 5% of what I actually read and tried, this is the distilled set I think helped me the most.
 
 # Getting Started – the interactive console
 
@@ -40,11 +40,11 @@ Here's some of the notes I made along the way:
   * String concatenation is weird <>
   * 'Arity' -> number of arguments for a function
   * Enum is the underscore of Elixir
-  * Case default uses the _ to match the final arg – “_” is a variable and it just happens to match anything that made it this far – Elixir doesn't provide warnings for not using variables that belong with underscore
+  * Case default uses the _ to match the final arg – "_" is a variable and it just happens to match anything that made it this far – Elixir doesn't provide warnings for not using variables that belong with underscore
 
 So very much trying to fit what I'm learning from Elixir with what I expect and know from other languages.
 
-As I got to “with” and functions, I noticed I was starting to psych myself out. I know a lot of languages and have pushed a lot of code to production, but there's this voice in the back of my head that says this is just too different from what I'm used to working with. That shipping something meaningful is incredibly far away and that I may never be able to understand this language well enough to write it in an idiomatic way.
+As I got to "with" and functions, I noticed I was starting to psych myself out. I know a lot of languages and have pushed a lot of code to production, but there's this voice in the back of my head that says this is just too different from what I'm used to working with. That shipping something meaningful is incredibly far away and that I may never be able to understand this language well enough to write it in an idiomatic way.
 
 So I took a break and then came back to it ([Decision fatigue][5]?). I was trying to climb a pretty steep learning curve and sometimes the best thing I could do was spend some time away and let the back of my brain digest for a bit.
 
@@ -64,9 +64,9 @@ There is a 30 minute preview [on the page above][8]. It is worth the time even i
 
 So I purchased the longer form version and started working along with it. 
 
-I had a little confusion about whether I should be starting with the ebook or the videos, so I just started with the video. I rarely pulled down his github examples unless they were necessary to finish an exercise (“I wrote some additional tests, debug them”), instead opting to hand write the code as he did, pausing the video if I needed more time. This continued to help reinforce what I was watching and forced me into a couple useful sidetracks, like making the Atom plugins work, identifying an out of date package on one Windows system, and digging deeper in a case where I thought I had solved an equation right but had some minor syntax issues that my new elixir eyes weren't seeing.
+I had a little confusion about whether I should be starting with the ebook or the videos, so I just started with the video. I rarely pulled down his github examples unless they were necessary to finish an exercise ("I wrote some additional tests, debug them"), instead opting to hand write the code as he did, pausing the video if I needed more time. This continued to help reinforce what I was watching and forced me into a couple useful sidetracks, like making the Atom plugins work, identifying an out of date package on one Windows system, and digging deeper in a case where I thought I had solved an equation right but had some minor syntax issues that my new elixir eyes weren't seeing.
 
-There were a few cases where I didn't quite know what he wanted (“write some more tests that you think would be useful”, “round the number 19”), so I spent some time doing something similar then moved on. 
+There were a few cases where I didn't quite know what he wanted ("write some more tests that you think would be useful", "round the number 19"), so I spent some time doing something similar then moved on. 
 
 By the time I made it through chapter 14, I started to get sidetracked again, so this was as far as I made it.
 

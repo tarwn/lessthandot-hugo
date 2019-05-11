@@ -4,7 +4,7 @@ author: George Mastros (gmmastros)
 type: post
 date: 2012-04-12T17:14:00+00:00
 ID: 1596
-excerpt: 'This blog is not meant to be a comprehensive explanation of indexes.  It is meant to help you determine if there are duplicate indexes within your database.  There appears to be some debate regarding what is a duplicate index.  This article defines an “&hellip;'
+excerpt: 'This blog is not meant to be a comprehensive explanation of indexes.  It is meant to help you determine if there are duplicate indexes within your database.  There appears to be some debate regarding what is a duplicate index.  This article defines an "&hellip;'
 url: /index.php/datamgmt/datadesign/finding-exact-duplicate-indexes/
 views:
   - 15294
@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-This blog is not meant to be a comprehensive explanation of indexes. It is meant to help you determine if there are duplicate indexes within your database. There appears to be some debate regarding what is a duplicate index. This article defines an “Exact Duplicate Index” where there are multiple non-clustered indexes with exactly the same keys and include columns.
+This blog is not meant to be a comprehensive explanation of indexes. It is meant to help you determine if there are duplicate indexes within your database. There appears to be some debate regarding what is a duplicate index. This article defines an "Exact Duplicate Index" where there are multiple non-clustered indexes with exactly the same keys and include columns.
 
 **This query will ignore clustered indexes.**
   

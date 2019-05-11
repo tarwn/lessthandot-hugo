@@ -24,7 +24,7 @@ If you try to execute xp_cmdshell on a fresh install of SQL Server 2005 or 2008 
 
 _Server: Msg 15281, Level 16, State 1, Procedure xp_cmdshell, Line 1
   
-SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. For more information about enabling 'xp_cmdshell', see “Surface Area Configuration” in SQL Server Books Online._
+SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. For more information about enabling 'xp_cmdshell', see "Surface Area Configuration" in SQL Server Books Online._
 
 This is done for security reasons. I see a bunch of Google searches hitting our site with a search like this: How do I enable xp_cmdshell in SQL Server 2005? Well you can do it two ways; one is with a script and the other with the Surface Configuration Tool
   
@@ -64,7 +64,7 @@ In SQL Server 2005 and 2008 OPENROWSET is also disabled by default, if you try t
 
 _Server: Msg 15281, Level 16, State 1, Line 1
   
-SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 'Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling 'Ad Hoc Distributed Queries', see “Surface Area Configuration” in SQL Server Books Online._
+SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 'Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling 'Ad Hoc Distributed Queries', see "Surface Area Configuration" in SQL Server Books Online._
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of 'xp_cmdshell' you will use 'Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 

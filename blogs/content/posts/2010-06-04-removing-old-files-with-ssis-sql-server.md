@@ -53,7 +53,7 @@ If anyone has other methods or improvements to these, please feel free to commen
   <img src="/wp-content/uploads/users/onpnt/ssis_delete_1.gif" alt="" title="" width="437" height="157" />
 </div>
 
-  2. Name the task, “Remove all files based on backdays”
+  2. Name the task, "Remove all files based on backdays"
   3. Create the following variables
 <div class="image_block">
   <img src="/wp-content/uploads/users/onpnt/ssis_delete_2.gif" alt="" title="" width="343" height="137" />

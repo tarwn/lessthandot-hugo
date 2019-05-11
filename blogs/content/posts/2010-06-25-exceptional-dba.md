@@ -64,7 +64,7 @@ I feel the Exceptional DBA of the Year award that Red Gate and SQL Server Centra
 
 
 
-Winning this award would be one of the highest accomplishments possible in my career. I'd love to say, “Vote for me!” But, what I sincerely would like everyone to do is take a few minutes and read about all of the finalists. If you don't know one of them from the community or personally, take a few minutes to research and find out what they have accomplished in their career. They have made it this far, and deserve the attention and recognition. Each of these DBAs is exceptional. It's a hard decision, but do your best to vote for the person you truly feel is the most exceptional.
+Winning this award would be one of the highest accomplishments possible in my career. I'd love to say, "Vote for me!" But, what I sincerely would like everyone to do is take a few minutes and read about all of the finalists. If you don't know one of them from the community or personally, take a few minutes to research and find out what they have accomplished in their career. They have made it this far, and deserve the attention and recognition. Each of these DBAs is exceptional. It's a hard decision, but do your best to vote for the person you truly feel is the most exceptional.
 
  [1]: http://sqlchicken.com/
  [2]: http://twitter.com/sqlchicken

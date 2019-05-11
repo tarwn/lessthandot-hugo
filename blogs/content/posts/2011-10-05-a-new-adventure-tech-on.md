@@ -16,7 +16,7 @@ categories:
 ---
 It was February 27, 2011. Derek Schauland ([twitter][1] | [blog][2]), Microsoft File Storage System MVP, was stepping off the plane after attending MVP Summit when he sent me a message on Twitter: _I have an idea_. 
 
-I **love** ideas. I thrive on them. I asked him to give me more information. The next two words sold me: tech beers. I saved his message, and I'm glad I did, because today, I can share with you what he did with me. “Tech presentations at a microbrewery with some deep content.” I was intrigued. 
+I **love** ideas. I thrive on them. I asked him to give me more information. The next two words sold me: tech beers. I saved his message, and I'm glad I did, because today, I can share with you what he did with me. "Tech presentations at a microbrewery with some deep content." I was intrigued. 
 
 We talked on the phone. We met and talked over beers. We met again, and again. Discussions were had about the format of the event, the dates, the location, and much more. We brought in Mark Cyrulik ([twitter][3]) to help with the planning. 
 

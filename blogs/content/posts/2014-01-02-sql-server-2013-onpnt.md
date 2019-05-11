@@ -26,7 +26,7 @@ In 2013 I took on a slightly different approach to writing by putting more into 
 
 Something that I noticed from this change in writing is the average views per visit going higher – 4248. That's a great deal of people I'm reaching and helping. With that, I've reached out to just under 1.5 million people that are interested in SQL Server or needed a specific problem and fix. This is a far cry from some of the others in the SQL Server Community but a great accomplish for myself noentheless.
 
-I had a great deal of focus in 2013 on the cloud. This shows in much writing as well as the work I've been managing. I made a tweet recently that stated, “I'm a cloud believer”. I wasn't joking either. When I accomplished a full architecture in Windows Azure with near real-time availability and performing very well, I found the reasoning for the strength the cloud has much more. With that, 2014 will probably bring much more on the cloud and how SQL Server fits into it. SQL Server 2014 is also in the pipeline and over 20 articles are already in draft, waiting to be thrown out. Unlike many of my co-sql community writers, I like to wait and fully understand, break and fix, new releases of SQL Server. This means, I publish articles on the new versions a little later. Although late, I feel I can write a much fuller and valued article on the topics you will all be putting into production.
+I had a great deal of focus in 2013 on the cloud. This shows in much writing as well as the work I've been managing. I made a tweet recently that stated, "I'm a cloud believer". I wasn't joking either. When I accomplished a full architecture in Windows Azure with near real-time availability and performing very well, I found the reasoning for the strength the cloud has much more. With that, 2014 will probably bring much more on the cloud and how SQL Server fits into it. SQL Server 2014 is also in the pipeline and over 20 articles are already in draft, waiting to be thrown out. Unlike many of my co-sql community writers, I like to wait and fully understand, break and fix, new releases of SQL Server. This means, I publish articles on the new versions a little later. Although late, I feel I can write a much fuller and valued article on the topics you will all be putting into production.
 
 Here is a rundown of the numbers and my 2013 year in writing. I hope they have provided many of you with insight and assistance in either fixing unique problems or making critical decisions on how to manage your own database architectures.
 
@@ -76,7 +76,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="SQL Server Configuration Manager â€“ Remote Procedure Call Failed" href="/index.php/All/?p=2269">SQL Server Configuration Manager Remote Procedure Call Failed</a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="SQL Server Configuration Manager â€" Remote Procedure Call Failed" href="/index.php/All/?p=2269">SQL Server Configuration Manager Remote Procedure Call Failed</a></span></strong>
       </p>
     </td>
     
@@ -90,7 +90,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="Which loads faster â€“ 2008, 2008 R2 or 2012" href="/index.php/All/?p=2237">Which loads faster – 2008, 2008 R2 or 2012</a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="Which loads faster â€" 2008, 2008 R2 or 2012" href="/index.php/All/?p=2237">Which loads faster – 2008, 2008 R2 or 2012</a></span></strong>
       </p>
     </td>
     
@@ -132,7 +132,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="Replication requires the actual server name â€“ Incorrect server name" href="/index.php/All/?p=2291">Replication requires the actual server name Incorrect server name</a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="Replication requires the actual server name â€" Incorrect server name" href="/index.php/All/?p=2291">Replication requires the actual server name Incorrect server name</a></span></strong>
       </p>
     </td>
     
@@ -174,7 +174,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="Missing index suggestion â€“ Duplicate Index" href="/index.php/All/?p=2180">Missing index suggestion Duplicate Index </a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="Missing index suggestion â€" Duplicate Index" href="/index.php/All/?p=2180">Missing index suggestion Duplicate Index </a></span></strong>
       </p>
     </td>
     
@@ -454,7 +454,7 @@ Here is a rundown of the numbers and my 2013 year in writing. I hope they have p
   <tr>
     <td width="627" valign="top">
       <p>
-        <strong><span style="text-decoration: underline;"><a title="Creating statistics manually â€“ Duplicate Statistics" href="/index.php/All/?p=2028">Creating statistics manually Duplicate Statistics </a></span></strong>
+        <strong><span style="text-decoration: underline;"><a title="Creating statistics manually â€" Duplicate Statistics" href="/index.php/All/?p=2028">Creating statistics manually Duplicate Statistics </a></span></strong>
       </p>
     </td>
     

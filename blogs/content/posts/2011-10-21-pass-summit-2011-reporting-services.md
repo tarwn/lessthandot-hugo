@@ -16,7 +16,7 @@ categories:
   - SSRS
 
 ---
-I managed to survive my first PASS Summit speaking engagement! That was exhilarating, and I think it went very well! Thank you to everyone that attended my session, “Reporting Services 201: From Basic to WOW!” 
+I managed to survive my first PASS Summit speaking engagement! That was exhilarating, and I think it went very well! Thank you to everyone that attended my session, "Reporting Services 201: From Basic to WOW!" 
 
 I covered a few of my favorite RS features that I think can make your reports stand out: 
 

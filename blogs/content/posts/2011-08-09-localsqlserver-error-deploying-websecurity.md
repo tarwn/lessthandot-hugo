@@ -42,7 +42,7 @@ The solution is to add the following section to your web.config:
 	<add key="enableSimpleMembership" value="true" />
 </appSettings>
 ```
-Basically what is happening is that my web host has a machine.config with a SQL Connection string called “LocalSqlServer” (it's created by default by the .Net framework). For some reason when we use anything Membership related, it attempts to access the configured connection string for Membership, even though WebSecurity is provided it's own connection string on initialization.
+Basically what is happening is that my web host has a machine.config with a SQL Connection string called "LocalSqlServer" (it's created by default by the .Net framework). For some reason when we use anything Membership related, it attempts to access the configured connection string for Membership, even though WebSecurity is provided it's own connection string on initialization.
 
 So the solution is to remove the settings that has been applied to our site from the host's machine.config and apply a new one. From what I can tell, it doesn't seem to matter if the new connection string is accurate, only that it exists.
 

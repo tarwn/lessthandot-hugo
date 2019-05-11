@@ -65,15 +65,15 @@ The tests are written in Nunit and extend a TestFixtureBase class that is respon
 
 The first step is to add SpecFlow. While there is a NuGet package for it, you will actually want to download the [SpecFlow installer][7] and install it. The installer includes templates, intellisense, and other bits and bobs that you won't get with the NuGet package. That said, I actually did both, first installing it then using NuGet to pull down the package for my project so I could commit the packaged references to the projects source code repository.
 
-After installing the full install package, there will be a few new items in the “Add New Items” menu in Visual Studio.
+After installing the full install package, there will be a few new items in the "Add New Items" menu in Visual Studio.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
-  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/AddNewItem.png" title="'Add New Item' dialog in Visual Studio" /><br /> “Add New Item” dialog in Visual Studio
+  <img src="http://www.tiernok.com/LTDBlog/SpecFlow/AddNewItem.png" title="'Add New Item' dialog in Visual Studio" /><br /> "Add New Item" dialog in Visual Studio
 </div>
 
-The “SpecFlow Feature File” option will create a new pair of files for our feature and the generated code behind that feature. The feature is where we will write our user story and the individual scenarios in Gherkin. The generated code reflects the scenario as an Nunit test, with each step in the scenario treated as a potential function to call out to.
+The "SpecFlow Feature File" option will create a new pair of files for our feature and the generated code behind that feature. The feature is where we will write our user story and the individual scenarios in Gherkin. The generated code reflects the scenario as an Nunit test, with each step in the scenario treated as a potential function to call out to.
 
-The “SpecFlow Step Definition” item is just a *.cs class file that we would put the individual step functions in for the tests to call. Both the Feature File and Step Definition file are populated with an addition sample as part of their template..
+The "SpecFlow Step Definition" item is just a *.cs class file that we would put the individual step functions in for the tests to call. Both the Feature File and Step Definition file are populated with an addition sample as part of their template..
 
 ## Adding a SpecFlow feature
 
@@ -179,25 +179,25 @@ namespace MvcMusicStore.InterfaceTests.Features {
 
 }
 ```
-I've used the SpecFlow hooks for BeforeScenario and AfterScenario to handle initialization and I've used the provided ScenarioContext to help store a common driver and the current page. I've also specified that these hooks only occur for tests tagged with “UI” so I can later create some additional tests that will make direct calls to the JSON controller endpoints without spinning up a whole browser session.
+I've used the SpecFlow hooks for BeforeScenario and AfterScenario to handle initialization and I've used the provided ScenarioContext to help store a common driver and the current page. I've also specified that these hooks only occur for tests tagged with "UI" so I can later create some additional tests that will make direct calls to the JSON controller endpoints without spinning up a whole browser session.
 
-At this point I still get all “Inconclusive” test results from Nunit, but I can see that each tests fires up a browser as Nunit progresses through the test run and the Before/AfterScenario hooks are called.
+At this point I still get all "Inconclusive" test results from Nunit, but I can see that each tests fires up a browser as Nunit progresses through the test run and the Before/AfterScenario hooks are called.
 
 ## Defining the Step Definition File
 
 With the Feature completed and a base Feature file created to handle our browser, it's time to write the code that will be executed behind the individuals steps of the file.
 
-Besides creating tests that result in “Inconclusive” results, SpecFlow also provides us with some basic code to get started with the step definition file. In the text output tab of the Nunit GUI we can see that each undefined step from SpecFlow outputs the information needed to implement the step, like so:
+Besides creating tests that result in "Inconclusive" results, SpecFlow also provides us with some basic code to get started with the step definition file. In the text output tab of the Nunit GUI we can see that each undefined step from SpecFlow outputs the information needed to implement the step, like so:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitStepDefinition.png" title="Step Definition text in Nunit Text Output" /><br /> Step Definition text in Nunit Text Output
 </div>
 
-Back in Visual Studio I will create a new “SpecFlow Step Definition” file and copy the content of the Nunit Text output window into the class in this file, removing the unnecessary addition example steps and all the extra class definitions and plain text. Each statement that appears in a Scenario in the Feature File has a corresponding method in the generated Nunit test, so each one will need a method. I've actually cheated a little and reused some steps from some earlier SpecFlow features, so my final file only has the new steps defined:
+Back in Visual Studio I will create a new "SpecFlow Step Definition" file and copy the content of the Nunit Text output window into the class in this file, removing the unnecessary addition example steps and all the extra class definitions and plain text. Each statement that appears in a Scenario in the Feature File has a corresponding method in the generated Nunit test, so each one will need a method. I've actually cheated a little and reused some steps from some earlier SpecFlow features, so my final file only has the new steps defined:
 
 The other steps are in a previously defined [Step Definition file][10]. I'll probably centralize common steps at some point to make them easy to find, but for the meantime the base class will help keep the current page and web browser accessible to the steps in both files and I have few enough tests that I'll remember where those definitions are (remind me I said this when I go back in a week and make a fuss on twitter about not remembering where they are).
 
-Once I have the Step Definition methods setup, I can go ahead and wire in the code necessary to drive the browser. I'll walk through the methods for the “Add an Item” feature.
+Once I have the Step Definition methods setup, I can go ahead and wire in the code necessary to drive the browser. I'll walk through the methods for the "Add an Item" feature.
 
 **InterfaceTests/Features/Cart.feature**
 
@@ -278,7 +278,7 @@ public abstract partial class PageBase : CommonBase {
 ```
 ### When I add the album to my cart
 
-If you remember, the original scenario we listed above was “When I add an item to my cart, it displays a total of 1”. Often it is fairly easy to separate the Given portion of our scenario from the When/Then portion because the Given part is often the part that we took for granted when we were describing the scenario or when it was described to us.
+If you remember, the original scenario we listed above was "When I add an item to my cart, it displays a total of 1". Often it is fairly easy to separate the Given portion of our scenario from the When/Then portion because the Given part is often the part that we took for granted when we were describing the scenario or when it was described to us.
 
 **InterfaceTests/Features/CartSteps.cs**
 
@@ -312,7 +312,7 @@ With all of the steps built, I can now run the test for verification:
   <img src="http://www.tiernok.com/LTDBlog/SpecFlow/NunitAddItemDone.png" title="Pass test run for 'Add Item' scenario" /><br /> Pass test run for 'Add Item' scenario
 </div>
 
-The text output tab of Nunit still provides us with information at the step level, but more importantly we now have a “Pass”.
+The text output tab of Nunit still provides us with information at the step level, but more importantly we now have a "Pass".
 
 ## Wrapping Up
 

@@ -1,5 +1,5 @@
 ---
-title: “Combobox” with multiple selections (Visual FoxPro)
+title: Combobox with multiple selections (Visual FoxPro)
 author: Naomi Nosonovsky
 type: post
 date: 2009-11-08T15:52:02+00:00

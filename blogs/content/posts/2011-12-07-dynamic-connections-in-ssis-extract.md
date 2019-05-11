@@ -48,9 +48,9 @@ To create a dynamic connection strategy, we will first create two packages, Pare
 
 The variables that will be required:
 
-Parent – variable “InstanceNameParent”
+Parent – variable "InstanceNameParent"
 
-Child – variable “InstanceName”
+Child – variable "InstanceName"
 
 Create each variable in the packages as a data type of string. Leave the value empty.
 
@@ -68,7 +68,7 @@ Go to the variable Mappings page and add a mapping from the User::InstanceNamePa
 
 The Foreach container is now configured and ready.  Click OK to save the changes.  Place an Execute Package Task into the Foreach container next.  The only change that is needed to the execute package task is the child package to call and parameter mapping.  This allows the variable that needs to pass to the child package and can be consumed by the configuration settings that will be done in the child package.
 
-For more on passing variables between parent and children packages, read “[Making SSIS Dynamic: Passing variables between packages][1]”
+For more on passing variables between parent and children packages, read "[Making SSIS Dynamic: Passing variables between packages][1]"
 
 Once completed, the parent package will contain one Foreach Loop Container and one task within it, Execute Package Task.
 
@@ -86,7 +86,7 @@ Map the variable as shown below
   <a href="/wp-content/uploads/blogs/DataMgmt/-73.png?mtime=1323272547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-73.png?mtime=1323272547" width="624" height="225" /></a>
 </div>
 
-This is described in detail in “[Making SSIS Dynamic: Passing variables between packages][1]”
+This is described in detail in "[Making SSIS Dynamic: Passing variables between packages][1]"
 
 Close the Package Configurations Organizer.
 
@@ -94,7 +94,7 @@ Create an ADO.NET Connection by going into connection manager configuration.  N
 
 In the connection just created, change DelayValidation to True.  Click the Expressions property next to open the Property Expression Editor.  Select ServerName Property and then use the following expression as the expression for ServerName
 
-ISNULL(@[User::InstanceName]) ? “SERVERNAME\DENALICTP3” :  @[User::InstanceName]
+ISNULL(@[User::InstanceName]) ? "SERVERNAME\DENALICTP3" :  @[User::InstanceName]
 
 Note: Change the instance name that will be the default if the variable name is null to one that is active on your development servers.  Validating empty strings should also be performed.
 
@@ -147,7 +147,7 @@ Execute the parent package to ensure everything works as it should.
 
 Success!!! Connect to the destination and verify the contents loaded.
 
-If you go down this route of dynamic connections, it is recommended to read [Jamie Thomson][2]'s [blog][3], “[Verify a connection before using it [SSIS]”][3] on validating the connection are active before allowing a long hanging process and failures in the packages.
+If you go down this route of dynamic connections, it is recommended to read [Jamie Thomson][2]'s [blog][3], "[Verify a connection before using it [SSIS]"][3] on validating the connection are active before allowing a long hanging process and failures in the packages.
 
 Happy auditing and I hope this helps both on dynamic connections and utilizing multiple packages.
 

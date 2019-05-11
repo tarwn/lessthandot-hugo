@@ -66,7 +66,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <p>
-  <strong>Cannot open database “aspnetdb” requested by the login. The login failed.<br /> Login failed for user 'Denis-PCDenis'.</strong>
+  <strong>Cannot open database "aspnetdb" requested by the login. The login failed.<br /> Login failed for user 'Denis-PCDenis'.</strong>
 </p>
 
 <p>

@@ -100,7 +100,7 @@ This is how the background image appears in Preview mode:
 </p>
 
 <p style="text-align: left;">
-  Other use cases for this have been putting the words “DRAFT” or “CONFIDENTIAL” as a watermark on reports.
+  Other use cases for this have been putting the words "DRAFT" or "CONFIDENTIAL" as a watermark on reports.
 </p>
 
 **Further Reading:**

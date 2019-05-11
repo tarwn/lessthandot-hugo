@@ -27,7 +27,7 @@ First up, let's build out an Azure Function to accept a form post and convert it
 
 ### Setting up the function
 
-From the Azure Dashboard, create a new “Azure Function App”.
+From the Azure Dashboard, create a new "Azure Function App".
 
 <div id="attachment_4981" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_0.png"><img src="/wp-content/uploads/2017/01/Azure_0.png" alt="Azure Function App - Getting Started" width="800" height="467" class="size-full wp-image-4981" srcset="/wp-content/uploads/2017/01/Azure_0.png 800w, /wp-content/uploads/2017/01/Azure_0-300x175.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -37,7 +37,7 @@ From the Azure Dashboard, create a new “Azure Function App”.
   </p>
 </div>
 
-The Azure Portal offers us a few options to get started quickly. Pick the one on the right “Webhook + API” to get a function set up with the trigger and output we need out of the box.
+The Azure Portal offers us a few options to get started quickly. Pick the one on the right "Webhook + API" to get a function set up with the trigger and output we need out of the box.
 
 The trigger for the Azure Function is the Webhook endpoint:
 
@@ -71,11 +71,11 @@ We don't have an input for this Azure Function, and the return value is simply t
   </p>
 </div>
 
-We now have the “hello world” version of a webhook, let's add more code.
+We now have the "hello world" version of a webhook, let's add more code.
 
 ### Coding the Contact Email and Response
 
-The function starts with some generated code that matches the variable names in the Trigger and Output (I picked C#, JavaScript is also an option), attempts to pull a value out of the querystring, and returns a “Hello” response:
+The function starts with some generated code that matches the variable names in the Trigger and Output (I picked C#, JavaScript is also an option), attempts to pull a value out of the querystring, and returns a "Hello" response:
 
 ```csharp
 using System.Net;
@@ -89,7 +89,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
 }
 ```
-Before we start in on the email code, let's start by not putting the secrets right in the code. Functions have a built in method to manage secrets, but they're not terribly easy to find. Click the “Function app settings” menu option at the bottom left to get to this screen:
+Before we start in on the email code, let's start by not putting the secrets right in the code. Functions have a built in method to manage secrets, but they're not terribly easy to find. Click the "Function app settings" menu option at the bottom left to get to this screen:
   
 
 
@@ -101,7 +101,7 @@ Before we start in on the email code, let's start by not putting the secrets rig
   </p>
 </div>
 
-Then click the “App Settings” button:
+Then click the "App Settings" button:
 
 <div id="attachment_4986" style="width: 420px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_5.png"><img src="/wp-content/uploads/2017/01/Azure_5.png" alt="Finding the App Settings, Step 2" width="410" height="249" class="size-full wp-image-4986" srcset="/wp-content/uploads/2017/01/Azure_5.png 410w, /wp-content/uploads/2017/01/Azure_5-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
@@ -111,7 +111,7 @@ Then click the “App Settings” button:
   </p>
 </div>
 
-This will open another blade to the right. One of the sections is the “App settings” section. You can enter AppSettings key/value configurations here that will be available to your function code. In my case, I'm going to add in all of my SMTP settings so I don't have them stored in the code when I later hook this to a git repository.
+This will open another blade to the right. One of the sections is the "App settings" section. You can enter AppSettings key/value configurations here that will be available to your function code. In my case, I'm going to add in all of my SMTP settings so I don't have them stored in the code when I later hook this to a git repository.
 
 <div id="attachment_4987" style="width: 378px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_6.png"><img src="/wp-content/uploads/2017/01/Azure_6.png" alt="Adding SMTP AppSettings" width="368" height="459" class="size-full wp-image-4987" srcset="/wp-content/uploads/2017/01/Azure_6.png 368w, /wp-content/uploads/2017/01/Azure_6-240x300.png 240w" sizes="(max-width: 368px) 100vw, 368px" /></a>
@@ -121,7 +121,7 @@ This will open another blade to the right. One of the sections is the “App set
   </p>
 </div>
 
-Now we can add some basic validation and some fairly standard “send an email” code. I'm accessing the stored secrets above via ConfigurationManager.AppSettings, as I would if you were writing a .Net application with an app.config. 
+Now we can add some basic validation and some fairly standard "send an email" code. I'm accessing the stored secrets above via ConfigurationManager.AppSettings, as I would if you were writing a .Net application with an app.config. 
 
 ```csharp
 using System.Configuration;
@@ -181,7 +181,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 ```
 With the code in place, we can use a tool like Postman to fire off some test POSTs and verify all the pieces are connected.
 
-Don't grab the URL above your code screen yet, it probably has an Administrative key coded into it. Open the “Keys” panel from the button (#1 below) in the top right and select the “default” key in the “Function Keys” list. When you do this, it will update the Function Url (#3) above the code panel to include this key instead of one of the Admin keys. As a final step, click the “Logs” (#2) button to open the log so you can see compile and run logs when it builds or is triggered. Now copy the Function URL (#3) so we can paste it into Postman to start testing.
+Don't grab the URL above your code screen yet, it probably has an Administrative key coded into it. Open the "Keys" panel from the button (#1 below) in the top right and select the "default" key in the "Function Keys" list. When you do this, it will update the Function Url (#3) above the code panel to include this key instead of one of the Admin keys. As a final step, click the "Logs" (#2) button to open the log so you can see compile and run logs when it builds or is triggered. Now copy the Function URL (#3) so we can paste it into Postman to start testing.
 
 <div id="attachment_4999" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_7.png"><img src="/wp-content/uploads/2017/01/Azure_7.png" alt="Azure Functions - Key, Logs, and URL" width="800" height="131" class="size-full wp-image-4999" srcset="/wp-content/uploads/2017/01/Azure_7.png 800w, /wp-content/uploads/2017/01/Azure_7-300x49.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -191,7 +191,7 @@ Don't grab the URL above your code screen yet, it probably has an Administrative
   </p>
 </div>
 
-In a new Postman request, enter the URL at the top, select “Post” as the method, and add in key/value pairs for the fromEmail and the message. Of course we expect this to fail the first time:
+In a new Postman request, enter the URL at the top, select "Post" as the method, and add in key/value pairs for the fromEmail and the message. Of course we expect this to fail the first time:
 
 <div id="attachment_5000" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2017/01/Azure_8.png"><img src="/wp-content/uploads/2017/01/Azure_8.png" alt="Azure Function - First Call Failed" width="800" height="385" class="size-full wp-image-5000" srcset="/wp-content/uploads/2017/01/Azure_8.png 800w, /wp-content/uploads/2017/01/Azure_8-300x144.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>

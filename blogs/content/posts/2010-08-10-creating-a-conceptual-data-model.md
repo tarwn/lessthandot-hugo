@@ -39,7 +39,7 @@ Start with the purpose of the project or initiative. As the business owner descr
 
 ### What does the business do?
 
-It may not always be necessary to ask the business this (hopefully if you work there you already know the answer), but at a minimum it should be written somewhere near your other notes. The business provides context for the data and drives the relative importance of different terms and entities. It's important to remember that one company's definition of “customer” could be entirely different from another company's. Knowing the context helps us determine how important the terms from the prior conversation are and the wide variety of contexts is the reason there isn't one world-wide standard for the “Customer” entity.
+It may not always be necessary to ask the business this (hopefully if you work there you already know the answer), but at a minimum it should be written somewhere near your other notes. The business provides context for the data and drives the relative importance of different terms and entities. It's important to remember that one company's definition of "customer" could be entirely different from another company's. Knowing the context helps us determine how important the terms from the prior conversation are and the wide variety of contexts is the reason there isn't one world-wide standard for the "Customer" entity.
 
 <div style="text-align: center; color: #666666; float: left; margin: 1em;">
   <a href="http://www.flickr.com/photos/miranda_jc/3406275289/"><img src="http://www.tiernok.com/LTDBlog/conceptual/sneakycat.png" alt="Evaluate outside influences" title="Evaluate outside influences" /></a><br />Outside influences can sneak up<br />Sneaky Cat on <a href="http://www.flickr.com/photos/miranda_jc/3406275289/" title="See original on Flickr">Flickr</a>
@@ -63,7 +63,7 @@ Now that we have all of those raw inputs, all of those conversations, all of tho
   <a href="http://www.flickr.com/photos/mcnutcase/2229434187/"><img src="http://www.tiernok.com/LTDBlog/conceptual/catbasket.jpg" alt="Turn the problem sideways" title="Turn the problem sideways" /></a><br />Turn the problem sideways<br />Cat in Basket on <a href="http://www.flickr.com/photos/mcnutcase/2229434187/" title="See original on Flickr">Flickr</a>
 </div>
 
-This last step incorporates the “Analysis” phase that I mentioned above. This is where we look at all of the potential attributes we have collected (you kept a list to make the logical phase easier, right?) and consider them from multiple different directions.
+This last step incorporates the "Analysis" phase that I mentioned above. This is where we look at all of the potential attributes we have collected (you kept a list to make the logical phase easier, right?) and consider them from multiple different directions.
 
 As we look through our list of entities and potential attributes, we want to question them on the dimensions of time, availability, location/person, and categorization:
 
@@ -82,4 +82,4 @@ There will be a time when you have to call it done (for now). I probably spend t
 
 ## The Finished Conceptual Model
 
-At the point we call it “Finished [for now]”, we will have one or more diagrams that display the different entities and relationships, using business terms. We will also have a whole slew of notes on what those terms meant, other terms that were mentioned during the exploration (potential attributes, technical requirements, etc), and a partially worn out whiteboard. These our our deliverables from the conceptual modeling process and provide the foundation for our next steps.
+At the point we call it "Finished [for now]", we will have one or more diagrams that display the different entities and relationships, using business terms. We will also have a whole slew of notes on what those terms meant, other terms that were mentioned during the exploration (potential attributes, technical requirements, etc), and a partially worn out whiteboard. These our our deliverables from the conceptual modeling process and provide the foundation for our next steps.

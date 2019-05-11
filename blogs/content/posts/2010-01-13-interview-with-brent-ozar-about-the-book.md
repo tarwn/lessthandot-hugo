@@ -43,7 +43,7 @@ Without a doubt. Whenever I present on DMVs, I hear a chorus of questions asking
 
 sys.dm\_db\_missing\_index\_details, I wish I could quit you.
 
-I do “weekend” performance tuning on the side, so when I troubleshoot performance, I'm usually looking at a database I've never seen before. Indexing is tough to do right, and easy to do wrong. I can usually get huge performance improvements by tweaking the index strategy. The missing index DMVs give me a starting point without having to run traces. They're still not a silver bullet – they're like the Index Tuning WIzard or Database Tuning Advisor in that they can give some pretty nasty advice. When used properly, though, they can give huge performance boosts. 
+I do "weekend" performance tuning on the side, so when I troubleshoot performance, I'm usually looking at a database I've never seen before. Indexing is tough to do right, and easy to do wrong. I can usually get huge performance improvements by tweaking the index strategy. The missing index DMVs give me a starting point without having to run traces. They're still not a silver bullet – they're like the Index Tuning WIzard or Database Tuning Advisor in that they can give some pretty nasty advice. When used properly, though, they can give huge performance boosts. 
 
 **Denis: Is there a place for Solid State Drives, perhaps for tempdb or is it still too early for mission critical servers?**
 
@@ -61,7 +61,7 @@ At the end of the day, does it really matter whether your Page Life Expectancy i
 
 **Denis: What part of SQL troubleshooting do people struggle the most with?**
 
-Reading execution plans and doing something about it. I bought Grant Fritchey's book, SQL Server 2008 Query Performance Tuning Distilled, for that exact reason – I just couldn't read the plans well enough, and the question comes up so gosh-darned often. I'm working with a company now that sends me execution plans so large that I would need to print them out on wallpaper and paste it up in a conference room. There comes a point where you have to draw the line and say, “It's not a matter of tuning this query – it's a matter of dumping this query and asking what the user is really trying to accomplish, and how we can meet their needs.”
+Reading execution plans and doing something about it. I bought Grant Fritchey's book, SQL Server 2008 Query Performance Tuning Distilled, for that exact reason – I just couldn't read the plans well enough, and the question comes up so gosh-darned often. I'm working with a company now that sends me execution plans so large that I would need to print them out on wallpaper and paste it up in a conference room. There comes a point where you have to draw the line and say, "It's not a matter of tuning this query – it's a matter of dumping this query and asking what the user is really trying to accomplish, and how we can meet their needs."
 
 **Denis: Can you name some tools that will help with troubleshooting performance?
   
@@ -83,11 +83,11 @@ http://www.brentozar.com/archive/2008/03/sql-server-2005-setup-checklist-part-1-
   
 Both of them.**
 
-Lemme make one thing perfectly clear: I am the dumbest author involved in this book. For real. When I first got the chance to be involved with this book, I looked at the available chapter list and said, “I'll take storage and the Performance Dashboard.” I took storage because I loooooove storage, and I took the Performance Dashboard because I thought it would be easy.
+Lemme make one thing perfectly clear: I am the dumbest author involved in this book. For real. When I first got the chance to be involved with this book, I looked at the available chapter list and said, "I'll take storage and the Performance Dashboard." I took storage because I loooooove storage, and I took the Performance Dashboard because I thought it would be easy.
 
 The storage chapter was hard because I wanted to keep working on it forever. One of my coauthors said he spent 1,200 hours on one chapter, and I can see how that would happen. As I was writing and editing the storage chapter, I just kept thinking of more and more things I wanted to throw in there, but when you're writing, you have to make sure you're covering each subject well enough. I didn't want to do a half-ass job covering a million topics. I eventually had to cut myself off to do my day job, and I'm still killing myself over things I didn't get to include. I didn't include the infamous 15-second IO warning events, for example. I'm hoping we get to do a SQL 2008 R2 version so I can expand it.
 
-The Performance Dashboard chapter was hard because I wrote it and then said, “Okay, this is not nearly enough information.” I dove into creating new reports because really, if you're going to go down the Performance Dashboard route, you're going to want to roll your own stuff too. I didn't originally sign onto the project to write an SSRS book (because I'm an SSRS noob) but I had to include some stuff on it, and that made me nervous.
+The Performance Dashboard chapter was hard because I wrote it and then said, "Okay, this is not nearly enough information." I dove into creating new reports because really, if you're going to go down the Performance Dashboard route, you're going to want to roll your own stuff too. I didn't originally sign onto the project to write an SSRS book (because I'm an SSRS noob) but I had to include some stuff on it, and that made me nervous.
 
 **Denis: Will you write another book?**
   

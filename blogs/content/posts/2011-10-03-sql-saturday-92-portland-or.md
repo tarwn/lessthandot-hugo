@@ -24,7 +24,7 @@ Where can you get your next @grrl_geek sighting? Check out [SQL Saturday #92][1]
 
 Check out [this schedule][3]! There are 40 presentations throughout the day, so you're sure to get your T-SQL, PowerShell, SSIS, Statistics or Denali fix. 
 
-I'll be presenting a preview of my PASS Summit session “Reporting Services 201: From Basic to WOW!” I'm going to show you rarely-used report and table properties that make reports pop. I'll walk you through the basics of a matrix. I'll demo one of my favorite features, lists. I'll also show off one of SSRS 2008R2's best features, charts and visualizations. 
+I'll be presenting a preview of my PASS Summit session "Reporting Services 201: From Basic to WOW!" I'm going to show you rarely-used report and table properties that make reports pop. I'll walk you through the basics of a matrix. I'll demo one of my favorite features, lists. I'll also show off one of SSRS 2008R2's best features, charts and visualizations. 
 
 I'll be sitting on the Women In Technology lunch panel as well! Sopheap Suy will be guiding a discussion on how we recruit, retaain and succeed in the technology world. Men and women are encouraged to join the discussion! I'll be up at the front of the room with Kendra Little and Yanni Robel. 
 

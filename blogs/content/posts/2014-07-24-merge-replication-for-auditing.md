@@ -47,7 +47,7 @@ To create the PersonAudit resolver, we will need to do coding in Visual Studio a
   
 Business Logic Handler coding is very standard. You will want to capture Update, Delete and Insert events. To write this code, you do not need to be an expert in C# development but just have a solid understanding of coding practices, reading the code and how the execution will occur.
 
-MSDN has a completed code area for the base structure to use for your own business logic handler. Using this base code, we can alter the code to take advantage of the Action handler. In this case, we would see, the final action each event takes is, “ActionOnDataChange.AcceptData”.
+MSDN has a completed code area for the base structure to use for your own business logic handler. Using this base code, we can alter the code to take advantage of the Action handler. In this case, we would see, the final action each event takes is, "ActionOnDataChange.AcceptData".
   
 For the UPDATE handler
 

@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-I've heard stories about people being approached about a new job by a company, rather than the other way around, because the company liked their work, their writing, their presentations, or maybe all three. I thought, “That's an awesome dream. It's not going to happen to me.” 
+I've heard stories about people being approached about a new job by a company, rather than the other way around, because the company liked their work, their writing, their presentations, or maybe all three. I thought, "That's an awesome dream. It's not going to happen to me." 
 
 Until last week. 
 

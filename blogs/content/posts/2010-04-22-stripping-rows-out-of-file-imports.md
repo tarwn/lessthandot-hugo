@@ -60,7 +60,7 @@ Create a variable at the package scope level named, global.
   
 
   
-Our global connections for the package will be one flat file connection named, “importer” and an OLEDB connection named as the instance. Our flat file will contain the following text
+Our global connections for the package will be one flat file connection named, "importer" and an OLEDB connection named as the instance. Our flat file will contain the following text
   
 
 
@@ -72,7 +72,7 @@ test
 test
 ```
 
-Bring over a data flow task and let's name it, “DF Flat File Pump”
+Bring over a data flow task and let's name it, "DF Flat File Pump"
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/buffer_2.gif" alt="" title="" width="394" height="124" />
@@ -82,13 +82,13 @@ In the data flow task, bring over a flat file source and configure it to use our
   
 
   
-Bring over a script component now and when the “Select Script Component Type” appears, select the “Transformation” option.
+Bring over a script component now and when the "Select Script Component Type" appears, select the "Transformation" option.
   
 
   
 In the Script Transformation Editor, select our one column (default: Column 0)
 
-Go into the, “Input and Outputs” window and select the output. 
+Go into the, "Input and Outputs" window and select the output. 
 
 If the names are all left as the defaults, the output will be titled, Output 0.
 
@@ -102,11 +102,11 @@ In the new output change the ExclusionGroup group to 1 as well and set the Synch
   <img src="/wp-content/uploads/blogs/DataMgmt/buffer_3.gif" alt="" title="" width="543" height="287" />
 </div>
 
-Select the Script window and add into the ReadWriteVariables the variable, “global”
+Select the Script window and add into the ReadWriteVariables the variable, "global"
   
 
   
-Go into the studio by clicking the, “design Script” next.
+Go into the studio by clicking the, "design Script" next.
   
 
   
@@ -147,7 +147,7 @@ Public Class ScriptMain
 End Class
 ```
 
-Drag and drop two OLEDB Destination's into the data flow and rename them “data pump” and “headers”. We are only creating the headers destination for our testing purposes to validate the headers coming out and for later utilization if needed.
+Drag and drop two OLEDB Destination's into the data flow and rename them "data pump" and "headers". We are only creating the headers destination for our testing purposes to validate the headers coming out and for later utilization if needed.
   
 
   

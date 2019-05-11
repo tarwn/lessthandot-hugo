@@ -143,7 +143,7 @@ After you are done, start your app and when you close the app, reports will be g
   
 If you don't see the reports then do the following; click on View–>Other Windows–>Performance Explorer. 
 
-FYI, You need to run as admin to generate these report and if you are on a 64bit machine then you need to set the platform target to x86 in order to be able to generate these reports. I was greeted with the following message: _To enable complete call stacks on x64 platforms, executive paging must be disabled. A reboot is then required. To make this change, click “Yes”, save your work, and then reboot. For more information, see http://go.microsoft.com/fwlink/?LinkId=157265_ . After I rebooted everything worked.
+FYI, You need to run as admin to generate these report and if you are on a 64bit machine then you need to set the platform target to x86 in order to be able to generate these reports. I was greeted with the following message: _To enable complete call stacks on x64 platforms, executive paging must be disabled. A reboot is then required. To make this change, click "Yes", save your work, and then reboot. For more information, see http://go.microsoft.com/fwlink/?LinkId=157265_ . After I rebooted everything worked.
 
 There are 3 types of reports that you will see. Here is what the CPU Utilization report looks like.
   

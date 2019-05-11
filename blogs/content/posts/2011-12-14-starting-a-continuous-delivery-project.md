@@ -24,7 +24,7 @@ I find that often the hardest part of trying a new technology or principle is fi
 
 ## Why a Continuous Delivery Model?
 
-Continuous Delivery focuses on standardizing the environments and processes for product delivery, with an aim to create a clear and consistent process from committing new code to having a deliverable product. Creating a consistent process reduces variability and risks involved with manual deployment, ensures all “ready to be released” products meet our build and testing standards, creates a faster feedback loop so that problems are detected sooner (and thus can be fixed cheaper), and adds a level of auditability that rarely exists with manual deployment processes. 
+Continuous Delivery focuses on standardizing the environments and processes for product delivery, with an aim to create a clear and consistent process from committing new code to having a deliverable product. Creating a consistent process reduces variability and risks involved with manual deployment, ensures all "ready to be released" products meet our build and testing standards, creates a faster feedback loop so that problems are detected sooner (and thus can be fixed cheaper), and adds a level of auditability that rarely exists with manual deployment processes. 
 
 There is a good article [on InformIT][1] by Jez Humble (who also coauthored the book [Continuous Delivery][2]) that covers the benefits more in depth.
 
@@ -32,7 +32,7 @@ So why use a continuous delivery model for my home lab?
 
 When I spend a weekend playing with caching in my ASP.Net project, I want to be able to walk away from the project knowing it still works and I won't be spending my next Saturday trying to figure what I did to break my test systems. This project will also provide a future testbed for load testing and static analysis tools. 
 
-Plus seeing all the green “pass” lights is nice 🙂
+Plus seeing all the green "pass" lights is nice 🙂
 
 ## Designing the Process
 
@@ -83,7 +83,7 @@ IIS 7
 :   Deploy Steps, IIS 7 supports the new webdeploy capabilities, which will make deployment much easier
 
 MS Deploy
-:   Deploy Steps, I haven't had an opportunity to do more than push the “Deploy” button in WebMatrix, looking forward to getting more in depth with WebDeploy
+:   Deploy Steps, I haven't had an opportunity to do more than push the "Deploy" button in WebMatrix, looking forward to getting more in depth with WebDeploy
 
 VBScript
 :   Deploy Steps, A small vbscript capable of using XMLHTTP to make raw HTTP GET requests (potentially switch to PowerShell later)

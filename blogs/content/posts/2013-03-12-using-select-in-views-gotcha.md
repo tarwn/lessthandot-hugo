@@ -5,7 +5,7 @@ type: post
 date: 2013-03-12T12:06:00+00:00
 ID: 2029
 excerpt: |
-  If ever a DBA walked up a mountain and came back down with two stones that had 10 commandments written on them, “thou shalt not use SELECT *” would be one of them.  
+  If ever a DBA walked up a mountain and came back down with two stones that had 10 commandments written on them, "thou shalt not use SELECT *" would be one of them.  
   However, that same DBA would turn around and within 5 minutes use it themselves!
 url: /index.php/datamgmt/dbadmin/using-select-in-views-gotcha/
 views:
@@ -20,7 +20,7 @@ tags:
   - views
 
 ---
-If ever a DBA walked up a mountain and came back down with two stones that had 10 commandments written on them, “thou shalt not use SELECT *” would be one of them. However, that same DBA would turn around and within 5 minutes use it themselves!
+If ever a DBA walked up a mountain and came back down with two stones that had 10 commandments written on them, "thou shalt not use SELECT *" would be one of them. However, that same DBA would turn around and within 5 minutes use it themselves!
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/kconan/moses.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/moses.JPG?mtime=1363096883" width="233" height="311" /></a>
@@ -71,7 +71,7 @@ INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
   <a href="/wp-content/uploads/users/kconan/view2.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view2.JPG?mtime=1363096883" width="245" height="38" /></a>
 </div>
 
-To fix the “broken” view, we have to rebuild it.
+To fix the "broken" view, we have to rebuild it.
 
 ```sql
 DROP VIEW vViewExample;

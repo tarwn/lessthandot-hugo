@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-15T14:31:00+00:00
 ID: 1443
-excerpt: "One of my good friends, Jason Strate has come up with a new meme topic that we can blog on each month.  The topic revolves around Social Networking each month.  This month's topic is on blogging.  The questions Jason asked us are, “Why&hellip;"
+excerpt: "One of my good friends, Jason Strate has come up with a new meme topic that we can blog on each month.  The topic revolves around Social Networking each month.  This month's topic is on blogging."
 url: /index.php/itprofessionals/professionaldevelopment/why-i-started-and-continue/
 views:
   - 3387
@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-One of my good friends, Jason Strate ([Blog][1] | [Twitter][2]) has come up with a new meme topic that we can blog on each month.  The topic revolves around [Social Networking each month][3].  This month's topic is on blogging.  The questions Jason asked us are, “Why did you start blogging and why do you currently blog?”
+One of my good friends, Jason Strate ([Blog][1] | [Twitter][2]) has come up with a new meme topic that we can blog on each month.  The topic revolves around [Social Networking each month][3].  This month's topic is on blogging.  The questions Jason asked us are, "Why did you start blogging and why do you currently blog?"
 
 **History**
 

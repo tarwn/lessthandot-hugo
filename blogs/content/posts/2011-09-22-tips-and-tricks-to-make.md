@@ -27,7 +27,7 @@ In SSMS, go to Tools > Options.
 
 **> Environment**
   
-**>> Keyboard:** Here you can set up “Query shortcuts”. By default, sp\_help, sp\_who and sp_lock are there. I've added things like [sp_whoisactive][1]. Are there other queries you use regularly? Set up shortcuts here, to save yourself the trouble of having to open a script file, or (gasp) typing them each time.
+**>> Keyboard:** Here you can set up "Query shortcuts". By default, sp\_help, sp\_who and sp_lock are there. I've added things like [sp_whoisactive][1]. Are there other queries you use regularly? Set up shortcuts here, to save yourself the trouble of having to open a script file, or (gasp) typing them each time.
 
  ![][2]
 
@@ -81,9 +81,9 @@ This can be broken into two sections.
 
  ![][12]
 
-“Include column headers when copying or saving the results” means just that. When I right-click a result-set, copy it, then paste it, the column headers will go with it. 
+"Include column headers when copying or saving the results" means just that. When I right-click a result-set, copy it, then paste it, the column headers will go with it. 
 
-“Display results in a separate tab” – when I execute my query, instead of the results being in the lower half, they are on a second tab. I can even choose to switch to that automatically. This is especially useful for presentations. 
+"Display results in a separate tab" – when I execute my query, instead of the results being in the lower half, they are on a second tab. I can even choose to switch to that automatically. This is especially useful for presentations. 
 
 Instead of this: 
 
@@ -107,7 +107,7 @@ Some of my favorites: Include descriptive headers, Script USE database, Include 
 
 **> Designers**
   
-**>> Table and database designers:** I uncheck the “Prevent saving changes that require table re-creation” option. 
+**>> Table and database designers:** I uncheck the "Prevent saving changes that require table re-creation" option. 
 
 ![][17]
 
@@ -119,7 +119,7 @@ First, when you are writing a query, especially against an older database that d
 
 ![][18]
 
-Dragging the “Columns” across to the query pane will produce this: 
+Dragging the "Columns" across to the query pane will produce this: 
 
  ![][19]
 
@@ -127,7 +127,7 @@ Second, you can filter the items you see in a database. The little blue funnel a
 
 ![][20]
 
-Here, I'm going to filter on the “Person” schema. 
+Here, I'm going to filter on the "Person" schema. 
 
 ![][21]
 

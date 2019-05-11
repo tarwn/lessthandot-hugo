@@ -82,7 +82,7 @@ one it is.
 **12:45 pm** — Everyone is making jokes about Twitter.  I show them #sqlhelp.  3 of the 4 are now on Twitter.
 
 **1:00 pm** — Back for some new ETL development that we discovered.  I'm mentoring this client a bit, so we         
-did some of the work together.  Really enjoyed watching his face when “it clicked”.
+did some of the work together.  Really enjoyed watching his face when "it clicked".
 
 **2:00 pm** — Working through some questions on the data warehouse load.  Originally we were going to load    
 by date, but it appears that we are going to have to load by date and SystemCode.  A wrinkle, but    
@@ -114,7 +114,7 @@ tomorrow night.
 **5:30 pm** — Wrap up at the office, still no solution to tempdb issue.
 
 **6:30 pm** — Stopped at Target for groceries for the week.  Back at the hotel now.  Logging in to kick off job    
-again and see if it “just works”.  It doesn't.  Making list of changes made today so we can back    
+again and see if it "just works".  It doesn't.  Making list of changes made today so we can back    
 the out one-by-one tomorrow while the DBA monitors the situation.
 
 **7:00 pm** — Running gear on.  Heading to <a title="Pond Meadow Park" href="http://pondmeadowpark.org/" target="_blank">Pond Meadow Park</a> for a run.  Client warned it was hilly.
@@ -126,7 +126,7 @@ strong right now.  I can do anything, so I don't know, call me maybe.
 
 **9:00 pm** — Stopped back at Target to get a couple of things that I forgot the first time.  Made a wrong turn    
 to get back to the hotel, ended up on the expressway again.  Turned back around.  Finally back    
-to “home”.  My brain never seems to work right after a good run.  Takes an hour for it to reset.
+to "home".  My brain never seems to work right after a good run.  Takes an hour for it to reset.
 
 **9:30 pm** — Salmon filets cooked.  Rice and broccoli as well.  Begin writing blog post for TSQL Tuesday.
 

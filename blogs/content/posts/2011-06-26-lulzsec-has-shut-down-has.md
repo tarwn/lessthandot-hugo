@@ -61,7 +61,7 @@ LulzSec has just announced that it is shutting down. LulzSec, so far has hacked 
 .                            .-""-.___` --  |         -.__..-
 </pre>
 
-Here is the “press release”
+Here is the "press release"
 
 > Friends around the globe,
 > 

@@ -20,7 +20,7 @@ tags:
   - windows azure
 
 ---
-This week I'm starting a new series on “Real World Azure”. These are stories or issues I have run into while working with Azure in the “Real World”. Today we're looking at a bug in the Azure API for Queue Services that appears to have been around for at least the last two versions of the storage API (prior to 2011-08-18, or SDK 1.7).
+This week I'm starting a new series on "Real World Azure". These are stories or issues I have run into while working with Azure in the "Real World". Today we're looking at a bug in the Azure API for Queue Services that appears to have been around for at least the last two versions of the storage API (prior to 2011-08-18, or SDK 1.7).
 
 <div style="background-color: #ffff99; padding: .5em; margin: 1em;">
   <h2 style="margin: .5em 0px;">
@@ -93,13 +93,13 @@ RequestId:98bd9fb1-d32f-45bd-9159-c900a9b2fed3
 Time:2013-09-07T17:04:30.5469796Z</Message>
 </Error>
 ```
-Wait, what? 404, MessageNotFound, “The specified message does not exist.”? 
+Wait, what? 404, MessageNotFound, "The specified message does not exist."? 
 
 That doesn't match the documentation OR sound correct?
 
 ## The PopReceiptMismatch Bug
 
-I've written a series of unit tests that show that you receive “Item not found” from using an outdated PopReceipt, a PopReceipt from another queue's item, and a fabricated PopReceipt. All cases where I would expect to receive the PopReceiptMismatch error.
+I've written a series of unit tests that show that you receive "Item not found" from using an outdated PopReceipt, a PopReceipt from another queue's item, and a fabricated PopReceipt. All cases where I would expect to receive the PopReceiptMismatch error.
 
 [AzureQueueIssues/PopReceiptMismatchReturnsWrongError.cs][7] (Full code available on Github)
 
@@ -159,7 +159,7 @@ In a [forum post from 2011][8] a microsoft representative said that the PopRecei
 
 The cross-queue case is of course included in a test like the one above and available on Github. Spoiler: 404 Message does not exist.
 
-**Conclusion:** When a Message does not exist or it exists but you have the wrong PopReceiptMismatch, you will receive “The specified message does not exist.”
+**Conclusion:** When a Message does not exist or it exists but you have the wrong PopReceiptMismatch, you will receive "The specified message does not exist."
 
 Here are the tests that I ran against live Azure and the latest emulator:
 

@@ -1,5 +1,5 @@
 ---
-title: Rule “Previous releases of Microsoft Visual Studio 2008” failed
+title: Rule "Previous releases of Microsoft Visual Studio 2008" failed
 author: ca8msm
 type: post
 date: 2009-04-09T09:58:03+00:00

@@ -75,7 +75,7 @@ Adding a partition can be a manual process, upon first time synchronizing or be 
 
 **Pseudo Coding**
 
-The “New Snapshot Needed” decision will be based off an internal decision coded as follows, with each distinct replication procedure listed beside it that is required.
+The "New Snapshot Needed" decision will be based off an internal decision coded as follows, with each distinct replication procedure listed beside it that is required.
 
   * Enumerate the publication – [sp\_helpmergepublication @publication\_name][5]
   * Extract the retention period – retention column returned from sp_helpmergepublication

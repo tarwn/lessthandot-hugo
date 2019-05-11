@@ -32,7 +32,7 @@ string result = Razor.Parse(template, new { Name = "World" });
 
 This certainly looked promising, so I set up a WinForms project to try it out. Sure enough, it worked against the client profile, and about as easily as I could have hoped. The key seems to be that it brings all of the web components it needs along for the ride in the included System.Web.Razor assembly. 
 
-The main calls to the static “Razor” class that we're concerned with are:
+The main calls to the static "Razor" class that we're concerned with are:
 
 ```csharp
 string Parse<T> (template, model);

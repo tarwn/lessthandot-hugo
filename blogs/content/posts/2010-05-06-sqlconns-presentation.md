@@ -46,7 +46,7 @@ If you have any problems or questions, feel free to jump into the LessThanDot fo
   
 I can't wait to have the opportunity to jump back in with this group and present again! 
 
-I'd also liked to thank “Everyone” that pitched in and gave Wendy, Aaron and I the gift for putting on SQL Saturday in Chicago. That was way over the top thoughtful! Thank you!!!
+I'd also liked to thank "Everyone" that pitched in and gave Wendy, Aaron and I the gift for putting on SQL Saturday in Chicago. That was way over the top thoughtful! Thank you!!!
 
  [1]: http://wendyverse.blogspot.com
  [2]: http://twitter.com/wendy_dance

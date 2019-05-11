@@ -15,7 +15,7 @@ categories:
   - Database Administration
 
 ---
-It's that time of year again to make sure we spend all the money in the training budget. Use it or lose it right! So, after a quick look at the upcoming projects on the white board, I decided it was time to upgrade my skill set in the area of BI. I've signed up for “Implementing and Maintaining SQL Server 2008 Analysis Services and Business Intelligence Solutions”. The class is being taught by Global Knowledge up in Boston for 5 days and covers the following;
+It's that time of year again to make sure we spend all the money in the training budget. Use it or lose it right! So, after a quick look at the upcoming projects on the white board, I decided it was time to upgrade my skill set in the area of BI. I've signed up for "Implementing and Maintaining SQL Server 2008 Analysis Services and Business Intelligence Solutions". The class is being taught by Global Knowledge up in Boston for 5 days and covers the following;
   
 • How SQL Server Analysis Services can be used to implement analytical solutions
   

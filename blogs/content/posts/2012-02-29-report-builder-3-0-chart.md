@@ -46,7 +46,7 @@ Then, I have to Choose a chart type. I select Pie. (Mmm...pie!)
 
 ![][5]
 
-Now I can “Arrange chart fields”. Charts will require at least one field in “Categories”, and at least one aggregated field in “Values”.
+Now I can "Arrange chart fields". Charts will require at least one field in "Categories", and at least one aggregated field in "Values".
 
 Categories are how the values will be divided up on the horizontal axis.
 
@@ -74,9 +74,9 @@ This is very basic. Very, very basic. A future post will go more in-depth on cha
 
 Add a report title.
 
-Right-click the pie chart and select “Show Data Labels” to have the values appear in the pie slice.
+Right-click the pie chart and select "Show Data Labels" to have the values appear in the pie slice.
 
-Right-click the square around the pie, select “Chart Area Properties”, and choose “3D”.
+Right-click the square around the pie, select "Chart Area Properties", and choose "3D".
 
 ![][9]
 

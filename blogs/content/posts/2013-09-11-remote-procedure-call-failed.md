@@ -70,7 +70,7 @@ Right click the shortcut and rename it something you can either see in the tile 
 
 ![][1]
 
-Once completed, right click the shortcut and “Pin to Start”
+Once completed, right click the shortcut and "Pin to Start"
 
 ![][2]
 

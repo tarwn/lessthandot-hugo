@@ -38,7 +38,7 @@ The Table or Matrix Wizard can be accessed in two ways. It will appear on the sp
 
 ![][1]
 
-First, choose a dataset. I select “Create a dataset”.
+First, choose a dataset. I select "Create a dataset".
 
 ![][2]
 
@@ -100,7 +100,7 @@ Click Save to save the .rdl.
 
 Is that perfect, brand new, shiny report ready to be turned loose in the business? It's time to deploy it!
 
-In the bottom left corner, you should see “No current report server.” Click Connect. Enter the Report Server URL.
+In the bottom left corner, you should see "No current report server." Click Connect. Enter the Report Server URL.
 
 Go to the File menu and click Publish Report Parts.
 

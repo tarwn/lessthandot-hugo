@@ -35,7 +35,7 @@ One of the things I needed to do though, was to detect when the user selected an
 
 ### The User Interface
 
-For this demo app, the UI is pretty simple. I just have two list boxes. Each list box has a DataTemplate with a CheckBox in it. The CheckBox has its Content bound to the “Text” member and IsChecked is bound to a like named member. The IsChecked property is also set to TwoWay mode. This means that when the user changes its checked state, it will update the underlying collection.
+For this demo app, the UI is pretty simple. I just have two list boxes. Each list box has a DataTemplate with a CheckBox in it. The CheckBox has its Content bound to the "Text" member and IsChecked is bound to a like named member. The IsChecked property is also set to TwoWay mode. This means that when the user changes its checked state, it will update the underlying collection.
 
 ```XAML
 <ListBox x:Name="lst1" Grid.Column="0" >
@@ -49,7 +49,7 @@ For this demo app, the UI is pretty simple. I just have two list boxes. Each lis
 
 ### On to the Items
 
-For the most part the Item class just contains our properties, but we have to beef it up just a bit. First, it needs <code class="codespan">Implements System.ComponentModel.INotifyPropertyChanged</code>. INotifyPropertyChanged will create a public event called “PropertyChanged”. In order to save ourselves a bit of repeating code, we can make a method called _onPropertyChanged_ that raises that event for us:
+For the most part the Item class just contains our properties, but we have to beef it up just a bit. First, it needs <code class="codespan">Implements System.ComponentModel.INotifyPropertyChanged</code>. INotifyPropertyChanged will create a public event called "PropertyChanged". In order to save ourselves a bit of repeating code, we can make a method called _onPropertyChanged_ that raises that event for us:
 
 ```VB.Net
 Private Sub onPropertyChanged(ByVal PropertyName As String)

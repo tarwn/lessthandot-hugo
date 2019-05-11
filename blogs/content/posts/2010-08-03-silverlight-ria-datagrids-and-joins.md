@@ -40,13 +40,13 @@ On the server side, find your service class. It should be called something like 
   
 <code =VB>Return (Me.ObjectContext.MyObjects.Include("MyChildObject")</code>
   
-In my case this was the 'GetLeagues' method and it contains: 'Return (Me.ObjectContext.Leagues.Include(“Player”))'
+In my case this was the 'GetLeagues' method and it contains: 'Return (Me.ObjectContext.Leagues.Include("Player"))'
 
 This will tell the Entity Framework model that it should Eager Load the .Player property. But before we rejoice and rebuild, wait, there's more!
 
 ## Getting RIA up off the Couch
 
-Next up, right next to the DomainService1 file should be a file called MyApplicationDomainService1.metadata. In this file we need to find the class that represents what we are querying (The “MyObject” from the previous step). In that class you should see the property you want to load (The “MyChildObject” from above). On this property, you want to prepend the <Include()> attribute. This will tell the RIA services that it should include this property in the serialization and transmission of the query results. 
+Next up, right next to the DomainService1 file should be a file called MyApplicationDomainService1.metadata. In this file we need to find the class that represents what we are querying (The "MyObject" from the previous step). In that class you should see the property you want to load (The "MyChildObject" from above). On this property, you want to prepend the <Include()> attribute. This will tell the RIA services that it should include this property in the serialization and transmission of the query results. 
 
 In my case of League and Owner Player, it looks like this:
 
@@ -63,7 +63,7 @@ Friend NotInheritable Class LeagueMetadata
 ```
 ## And the Grid?
 
-Now that the EF is loading the data we want, and the RIA services are returning the data we want, all we have to do is bind it! And this is the easiest part. It is just like they show in the video, with one minor change. Instead of just binding on the primary object's property, we use dot notation to get at the child object's property. Shown here as the “Player.Name” binding
+Now that the EF is loading the data we want, and the RIA services are returning the data we want, all we have to do is bind it! And this is the easiest part. It is just like they show in the video, with one minor change. Instead of just binding on the primary object's property, we use dot notation to get at the child object's property. Shown here as the "Player.Name" binding
 
 ```XML
 <sdk:DataGrid x:Name="grdLeagues" Margin="4,20,4,4" Grid.Row="1" ItemsSource="{Binding ElementName=LeagueDomainDataSource, Path=Data}" AutoGenerateColumns="False">

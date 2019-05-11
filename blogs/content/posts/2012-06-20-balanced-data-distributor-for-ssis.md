@@ -22,7 +22,7 @@ categories:
 
 As with most transforms, BDD has its specific place in which it can benefit an SSIS package.  BDD isn't a transform you would use simply to because it is there and can utilize multithreading and concurrent processing of data.  The transform works best when the data coming in is quick and you are finding the processing of that data within the package to be a bottleneck.  It's important to determine where bottlenecks are prior to making decisions if transforms like BDD are actually going to help the overall ETL process.
 
-With SSIS 2012 BDD, there isn't much of a change other than the support for SSIS 2012.  This blog by Matt Masson, “[The Balanced Data Distributor][5]” which contains a link to a video showing off BDD, is a great resource for determining how to use BDD and where it is appropriate.  I encourage all SSIS developers and DBAs that may have use [BIDS Helper][6] to determine an SSIS package and the transforms within it are causing a bottleneck, to download BDD and give it a try to see if it can benefit performance.
+With SSIS 2012 BDD, there isn't much of a change other than the support for SSIS 2012.  This blog by Matt Masson, "[The Balanced Data Distributor][5]" which contains a link to a video showing off BDD, is a great resource for determining how to use BDD and where it is appropriate.  I encourage all SSIS developers and DBAs that may have use [BIDS Helper][6] to determine an SSIS package and the transforms within it are causing a bottleneck, to download BDD and give it a try to see if it can benefit performance.
 
  [1]: http://www.microsoft.com/en-us/download/details.aspx?id=30147
  [2]: http://www.microsoft.com/en-us/download/details.aspx?id=4123

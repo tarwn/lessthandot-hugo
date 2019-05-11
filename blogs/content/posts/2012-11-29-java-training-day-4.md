@@ -104,7 +104,7 @@ The collections framework consists of:
   * Concurrent Implementations – Implementations designed for highly concurrent use.
   
     Wrapper Implementations – Add functionality, such as synchronization, to other implementations.
-  * Convenience Implementations – High-performance “mini-implementations” of the collection interfaces.
+  * Convenience Implementations – High-performance "mini-implementations" of the collection interfaces.
   * Abstract Implementations – Partial implementations of the collection interfaces to facilitate custom implementations.
   * Algorithms – Static methods that perform useful functions on collections, such as sorting a list.
   * Infrastructure – Interfaces that provide essential support for the collection interfaces.

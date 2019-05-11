@@ -31,9 +31,9 @@ tags:
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday1.gif" alt="" title="T-SQL Tuesday" width="154" height="154" align="left" />
-</div></a>I'm jumping into the T-SQL Tuesday fun this week. The very well known, Jorge Segarra ([blog][1] | [twitter][2]) is [hosting the fun][3] this time around. It is a busy week at that with SQL University writing and everything going on in the SQL Community. The SQL Server 2008 (R2) hottest, most favorite new feature topic had me wanting to throw SSIS out there once more and show off the Data Flow Engine changes. OK, the Data Flow Engine isn't a, “New Feature” but given the redesign, I'm throwing it into the mix with the rest. This was a big, big and did I say BIG change in SSIS 2008. Being a performance freak, the changes to the Data Flow and the effective use of multi-core processors was what had me the most excited. See, with SSIS 2005, Data Flow was sent off on its merry way running execution trees with only one lonely execution thread. That meant one thread! This doesn't help us much in a core happy world we live in. So in SSIS 2008 we had a big change to this architecture. Did I mention this was big? ### **Off to the races we go with Pipeline Parallelism**What SSIS 2008 has given us over SSIS 2005 and the execution tree is the ability to run more than one component from the single tree. This is really a huge change. Before this change and automated thread scheduling in SSIS, we had to try making our own with designing methods. In some cases the changes in designs caused other performance problems themselves. Now with a thread pool, threads are assigned dynamically (yes, auto-magically) to components. Thread pooling is not a new concept to the computing world (and .NET framework). Thread pooling manages where and what work a set of threads will work on. When work is thrown at the pool, the work is sent off to threads that can work on it. This means multiple threads working on multiple jobs in parallel execution. Thread pooling can be done manually but with SSIS and SQL Server, we like the concept of this being controlled without us causing problems. In SSIS 2008 we were given just that automatic scheduling.The question of the hour is, does this help us with performance? The performance shines from the massive tests that have been done already and can answer the question for us. If you haven't heard of the [ETL World Record][4], you need to get over there and check it out. 1 TB in 30 minutes!! Yes, on SSIS 2008 and the architecture behind it. The best way to check this out is to show the differences. Robert Sheldon also went over this test on the, [SSIS 2008 Crib sheet][5]. Very cool write-up and recommended reading it.### **The truth is in the pipe by logging it**Let's create a package that will run some data through so we can log the execution.> <span class="MT_red">Note: the SSIS 2008 Crib sheet shows pretty much the same here. Robert did an awesome job explaining all of this. Highly recommend reading it.</span>Steps to the test SSIS in 2005 and 2008 so we can see the execution changes and speed differences   1. In BIDS 2005, create a new package named Pipes 2005  2. Bring over an OLE DB Source and connect this source to AdventureWorks.   3. Bring in the table, Sales.SalesOrderDetail  4. Drop a Conditional Split into the Data Flow tab  5. Make the condition based on OrderQty being greater than one. <div class="image_block">
+</div></a>I'm jumping into the T-SQL Tuesday fun this week. The very well known, Jorge Segarra ([blog][1] | [twitter][2]) is [hosting the fun][3] this time around. It is a busy week at that with SQL University writing and everything going on in the SQL Community. The SQL Server 2008 (R2) hottest, most favorite new feature topic had me wanting to throw SSIS out there once more and show off the Data Flow Engine changes. OK, the Data Flow Engine isn't a, "New Feature" but given the redesign, I'm throwing it into the mix with the rest. This was a big, big and did I say BIG change in SSIS 2008. Being a performance freak, the changes to the Data Flow and the effective use of multi-core processors was what had me the most excited. See, with SSIS 2005, Data Flow was sent off on its merry way running execution trees with only one lonely execution thread. That meant one thread! This doesn't help us much in a core happy world we live in. So in SSIS 2008 we had a big change to this architecture. Did I mention this was big? ### **Off to the races we go with Pipeline Parallelism**What SSIS 2008 has given us over SSIS 2005 and the execution tree is the ability to run more than one component from the single tree. This is really a huge change. Before this change and automated thread scheduling in SSIS, we had to try making our own with designing methods. In some cases the changes in designs caused other performance problems themselves. Now with a thread pool, threads are assigned dynamically (yes, auto-magically) to components. Thread pooling is not a new concept to the computing world (and .NET framework). Thread pooling manages where and what work a set of threads will work on. When work is thrown at the pool, the work is sent off to threads that can work on it. This means multiple threads working on multiple jobs in parallel execution. Thread pooling can be done manually but with SSIS and SQL Server, we like the concept of this being controlled without us causing problems. In SSIS 2008 we were given just that automatic scheduling.The question of the hour is, does this help us with performance? The performance shines from the massive tests that have been done already and can answer the question for us. If you haven't heard of the [ETL World Record][4], you need to get over there and check it out. 1 TB in 30 minutes!! Yes, on SSIS 2008 and the architecture behind it. The best way to check this out is to show the differences. Robert Sheldon also went over this test on the, [SSIS 2008 Crib sheet][5]. Very cool write-up and recommended reading it.### **The truth is in the pipe by logging it**Let's create a package that will run some data through so we can log the execution.> <span class="MT_red">Note: the SSIS 2008 Crib sheet shows pretty much the same here. Robert did an awesome job explaining all of this. Highly recommend reading it.</span>Steps to the test SSIS in 2005 and 2008 so we can see the execution changes and speed differences   1. In BIDS 2005, create a new package named Pipes 2005  2. Bring over an OLE DB Source and connect this source to AdventureWorks.   3. Bring in the table, Sales.SalesOrderDetail  4. Drop a Conditional Split into the Data Flow tab  5. Make the condition based on OrderQty being greater than one. <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday2.gif" alt="" title="" width="628" height="76" />
-</div>  6. Next, drag and drop two Derived Column's  7. Make one Derived column the Case 1 output by connecting the first Path to it and selecting Case 1 output  8. Make the Expression (DT\_STR,3,1252)ProductID + ” for ” + (DT\_STR,3,1252)OrderQty  9. Change the Data Type to DT_STR (non-unicode string)<div class="image_block">
+</div>  6. Next, drag and drop two Derived Column's  7. Make one Derived column the Case 1 output by connecting the first Path to it and selecting Case 1 output  8. Make the Expression (DT\_STR,3,1252)ProductID + " for " + (DT\_STR,3,1252)OrderQty  9. Change the Data Type to DT_STR (non-unicode string)<div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday3.gif" alt="" title="" width="628" height="112" />
 </div> 10. Do this for the next Derived Column by connecting the remaining output path to it.  11. Name the column Under2orders and leave the Expression the same 12. Connect both Derived Columns to two unique SQL Server Destinations 13. In the SQL Server Destinations, use the same connection of AdventureWorks. Click, New to create a new table. Use the following CREATE TABLE statement: sql
 CREATE TABLE [Playing_1] (
@@ -50,37 +50,37 @@ CREATE TABLE [Playing_1] (
   <img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday7.gif" alt="" title="" width="380" height="419" />
 </div>Execution time was 936 MillisecondsSSIS 2005 PipelineExecutionTrees log> begin execution tree 0
      
-> output “OLE DB Source Output” (11)
+> output "OLE DB Source Output" (11)
      
-> input “Conditional Split Input” (17)
+> input "Conditional Split Input" (17)
      
-> output “Case 1” (146)
+> output "Case 1" (146)
      
-> input “Derived Column Input” (163)
+> input "Derived Column Input" (163)
      
-> output “Derived Column Output” (164)
+> output "Derived Column Output" (164)
      
-> input “SQL Server Destination Input” (61)
+> input "SQL Server Destination Input" (61)
      
-> output “Derived Column Error Output” (165)
+> output "Derived Column Error Output" (165)
      
-> output “Conditional Split Default Output” (18)
+> output "Conditional Split Default Output" (18)
      
-> input “Derived Column Input” (169)
+> input "Derived Column Input" (169)
      
-> output “Derived Column Output” (170)
+> output "Derived Column Output" (170)
      
-> input “SQL Server Destination Input” (78)
+> input "SQL Server Destination Input" (78)
      
-> output “Derived Column Error Output” (171)
+> output "Derived Column Error Output" (171)
      
-> output “Conditional Split Error Output” (20)
+> output "Conditional Split Error Output" (20)
   
 > end execution tree 0
   
 > begin execution tree 1
      
-> output “OLE DB Source Error Output” (12)
+> output "OLE DB Source Error Output" (12)
   
 > end execution tree 1We can see all of the work was primarily done in execution tree 0. 936 Milliseconds isn't the greatest for what we just did either.Now upgrade the package to 2008 by creating a new SSIS project. Right click SSIS Packages in the Solution Explorer and select Add Existing. Browse to the package we just created in SSIS 2005 (found in your projects folder in My Documents by default). Double click the package to bring it in.
   
@@ -92,7 +92,7 @@ Save and run the packagePackage execution time for this was 640 Milliseconds. No
      
 > Begin Path Plan 0
         
-> Call ProcessInput on component “Conditional Split” (16) for input “Conditional Split Input” (17)
+> Call ProcessInput on component "Conditional Split" (16) for input "Conditional Split Input" (17)
         
 > Create new execution item for subpath 0
         
@@ -100,25 +100,25 @@ Save and run the packagePackage execution time for this was 640 Milliseconds. No
         
 > Begin Subpath Plan 0
            
-> Create new row view for output “Case 1” (146)
+> Create new row view for output "Case 1" (146)
            
-> Call ProcessInput on component “Derived Column” (162) for input “Derived Column Input” (163)
+> Call ProcessInput on component "Derived Column" (162) for input "Derived Column Input" (163)
            
-> Create new row view for output “Derived Column Output” (164)
+> Create new row view for output "Derived Column Output" (164)
            
-> Call ProcessInput on component “SQL Server Destination” (45) for input “SQL Server Destination Input” (61)
+> Call ProcessInput on component "SQL Server Destination" (45) for input "SQL Server Destination Input" (61)
         
 > End Subpath Plan 0
         
 > Begin Subpath Plan 1
            
-> Create new row view for output “Conditional Split Default Output” (18)
+> Create new row view for output "Conditional Split Default Output" (18)
            
-> Call ProcessInput on component “Derived Column 1” (168) for input “Derived Column Input” (169)
+> Call ProcessInput on component "Derived Column 1" (168) for input "Derived Column Input" (169)
            
-> Create new row view for output “Derived Column Output” (170)
+> Create new row view for output "Derived Column Output" (170)
            
-> Call ProcessInput on component “SQL Server Destination 1” (62) for input “SQL Server Destination Input” (78)
+> Call ProcessInput on component "SQL Server Destination 1" (62) for input "SQL Server Destination Input" (78)
         
 > End Subpath Plan 1
      

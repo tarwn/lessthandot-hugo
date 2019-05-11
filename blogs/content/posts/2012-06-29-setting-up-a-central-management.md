@@ -32,7 +32,7 @@ Setting up a CMS is really easy!
 
 First thing to do is pick a SQL Instance that you want to host the CMS (you do not need a dedicated instance for it). A few things to consider is that the CMS is stored in the msdb, so db_reader (updated thanks to SQLArcher) or ServerGroupReaderRole access is needed for anyone you want to see it. The amount of disk space needed is very little (less than 100MB). To plan ahead, choose an instance where the service account that runs the job agent can be given access to all the instances you will list in the CMS (for policy management). Next, click open SSMS and connect to the chosen instance.
 
-From the View Menu, choose Registered Servers. Expand the Database Engine and then right click on Central Management Servers and choose the only option you get which is “Register Central Management Server...”.
+From the View Menu, choose Registered Servers. Expand the Database Engine and then right click on Central Management Servers and choose the only option you get which is "Register Central Management Server...".
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/kconan/CMS1.jpg?mtime=1340976654"><img alt="" src="/wp-content/uploads/users/kconan/CMS1.jpg?mtime=1340976654" width="656" height="526" /></a>

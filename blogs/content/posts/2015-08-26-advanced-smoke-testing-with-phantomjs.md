@@ -54,9 +54,9 @@ This test script is designed to verify the following path:
 
   1. Open http://ltd.local
   2. Verify the title is correct and that we aren't logged in yet
-  3. Click the “login” link in the nav bar
+  3. Click the "login" link in the nav bar
   4. Verify we're on the login page
-  5. Enter my username and password, then click the “Login” button
+  5. Enter my username and password, then click the "Login" button
   6. Get the success message
   7. Verify the page then redirects back to where I started, http://lesssthandot.com
 
@@ -152,10 +152,10 @@ Example Output:
 ```
 # BrowserController
 
-The BrowserController wraps around the PhantomJS page events and pushes the appropriate values into a loaded pageObject and/op handles errors. Script and resource errors are surfaced as “reject” calls (which are then handled by the catch back in the test). The onUrlChanged event followed by an onLoadFinished event allows the BrowserController to know a page has been loaded so it can compose additional page behavior logic onto the base page, passing it back to the test. It also has the ability to tie into events that will help track the number and size of files, and potentially even checks that specific files were or were not included (bundles versus individual scripts, for instance).
+The BrowserController wraps around the PhantomJS page events and pushes the appropriate values into a loaded pageObject and/op handles errors. Script and resource errors are surfaced as "reject" calls (which are then handled by the catch back in the test). The onUrlChanged event followed by an onLoadFinished event allows the BrowserController to know a page has been loaded so it can compose additional page behavior logic onto the base page, passing it back to the test. It also has the ability to tie into events that will help track the number and size of files, and potentially even checks that specific files were or were not included (bundles versus individual scripts, for instance).
 
 <div style="padding: .5em; margin: .5em; background-color: #eeeeee;">
-  <b>Ask Me About PhantomJS and GZip</b><br />I later found out that size is not going to happen. Phantom doesn't't handle/expose gzip or chunked file size properly even when supplied in the Response headers. “Disable gzip” was a common “fix” that totally ignores the fact that the only reason to use Phantom is to validate your site and turning off gzip means you're validating it completely unrealistically (since you probably had it turned on for a reason).
+  <b>Ask Me About PhantomJS and GZip</b><br />I later found out that size is not going to happen. Phantom doesn't't handle/expose gzip or chunked file size properly even when supplied in the Response headers. "Disable gzip" was a common "fix" that totally ignores the fact that the only reason to use Phantom is to validate your site and turning off gzip means you're validating it completely unrealistically (since you probably had it turned on for a reason).
 </div>
 
 Moving on...0...
@@ -285,7 +285,7 @@ Along the way, we also have hooks into other properties, like timeouts and resou
 
 The PageObjects are pretty simple. They have a match function to help compare against a URL and some functions that abstract interactions with the browser as a simple function we can call from our tests. This ensures that if we change around the screens or make changes to elements we care about, we only have to update our page abstraction and not track down ID or CSS magic strings throughout the test code.
 
-Rather than make my page objects match one-to-one to a browser page, I have chosen to compose the behavior from multiple pages. So for this test I have an anyPage that supports any page in the LessThanDot website, and I have the loginPage which is the specific behavior you would only find on the login page. When the login page is loaded, the BrowserController will attach the behavior from both of these pages, reducing the need to duplicate the logic in “anyPage” in every page (assuming I have more of them, which I will for my real test case).
+Rather than make my page objects match one-to-one to a browser page, I have chosen to compose the behavior from multiple pages. So for this test I have an anyPage that supports any page in the LessThanDot website, and I have the loginPage which is the specific behavior you would only find on the login page. When the login page is loaded, the BrowserController will attach the behavior from both of these pages, reducing the need to duplicate the logic in "anyPage" in every page (assuming I have more of them, which I will for my real test case).
 
 [/AdvancedSmokeTest/pages/anyPage.js][8]
 

@@ -28,7 +28,7 @@ Response.AddHeader("content-disposition", "attachment; filename=test.xls");
 
 However, when the excel file is generated it has a nasty side effect of having all the gridlines hidden. They can easily be turned back on in excel by the following: Tools > Options > click gridlines checkbox.
 
-Until today I put up with the gridlines being hidden. When I tried to search for a solution via google, most people suggested that it just wasn't possible to generate the excel report with gridlines. Other people offered solutions that required you to run a COM object on the server to start an instance of excel in the background to create the file. However, after searching through a bunch of garbage and piecing together bits and pieces of non-working solutions, I finally got it to work. The trick is to set up your own custom XML settings, and add the “Panes” worksheet option. Here was the working solution:
+Until today I put up with the gridlines being hidden. When I tried to search for a solution via google, most people suggested that it just wasn't possible to generate the excel report with gridlines. Other people offered solutions that required you to run a COM object on the server to start an instance of excel in the background to create the file. However, after searching through a bunch of garbage and piecing together bits and pieces of non-working solutions, I finally got it to work. The trick is to set up your own custom XML settings, and add the "Panes" worksheet option. Here was the working solution:
 
 ```csharp
 using System;

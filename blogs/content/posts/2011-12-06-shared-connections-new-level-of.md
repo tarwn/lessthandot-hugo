@@ -49,6 +49,6 @@ Once you've created a connection, you will see the connections start to show in 
 
  
 
-Note the reference of the connection as “(project)”.
+Note the reference of the connection as "(project)".
 
 These project level connections are now available to use within any package that is contained in the project.  You can still create connections at the package scope.  In many cases, multiple packages are becoming more popular to ensure reusability and ease of maintainability.  This new feature ensures that SSIS development is truly looking to make us more efficient.  More time designing and testing equates to stable and more accurately development SSIS packages.

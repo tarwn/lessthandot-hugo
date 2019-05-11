@@ -73,7 +73,7 @@ By default the monitor looks for a default instance as well. That was a nice fea
 
 One instance (a SQL Express instance) failed to register. Error: Bad Data. 
 
-Looking at the comprehensive list of events when it was registering showed, “Perfmon data is missing objects: MSSQL$SQLEXPRESS:Access Method. Possible causes include performance counter library corruption, or a 32-bit/64-bit mismatch between Windows and the performance counter provider (e.g. SQL Server).”
+Looking at the comprehensive list of events when it was registering showed, "Perfmon data is missing objects: MSSQL$SQLEXPRESS:Access Method. Possible causes include performance counter library corruption, or a 32-bit/64-bit mismatch between Windows and the performance counter provider (e.g. SQL Server)."
 
  The machine that SQL Monitor was tested on also had SQL Express x86 and SQL Express x64 installed. I can only come to the conclusion that this is the direct problem after exhausting my efforts to bring the instance up in Monitor successfully. The concept of mixing the two platform specific SQL Server installations is very rare so I do not feel this is a bad point for the Monitor. As I would expect, the instance that survived the registration in Monitor was the 64 bit version that matches the Windows platform. I will later test this on a full installation of SQL Server x86 on a x64 windows installation as that is a common of a setup. Even with this failure to register the SQL Express instance completely, it appeared that the instance was being monitored to some extent. Databases were shown and alerts generated for backups missing and other useful alerts.
 
@@ -85,7 +85,7 @@ First thing I want setup
 
 </strong>
 
-There are a few things that I as a DBA want setup before doing anything else. One of those is email alerts. Let's be honest, there is only so much time in a day and opening a tool and looking at everything is not as easy as it sounds. Email alerting is a must when it comes to our instances. When SQL Monitor was finished installing and I logged in, there was a nice view of four tabs that I had available. One of those tabs was, “configuration”. A thorn in any product is when configuring it is painful or so complex that you simply do not set it up just how you want it. Sometimes that even goes as far as getting to configuration settings. SQL Monitor makes this entire process easy and clear.
+There are a few things that I as a DBA want setup before doing anything else. One of those is email alerts. Let's be honest, there is only so much time in a day and opening a tool and looking at everything is not as easy as it sounds. Email alerting is a must when it comes to our instances. When SQL Monitor was finished installing and I logged in, there was a nice view of four tabs that I had available. One of those tabs was, "configuration". A thorn in any product is when configuring it is painful or so complex that you simply do not set it up just how you want it. Sometimes that even goes as far as getting to configuration settings. SQL Monitor makes this entire process easy and clear.
 
 **</p> 
 
@@ -93,7 +93,7 @@ Setting up email alerts
 
 </strong>
 
-To setup the email alerts, go into the configuration page and click, “Email settings”. Enter all your information for where to send emails, the sender (which I made, SQLMonitor@mydomain.com) and then mail server settings.
+To setup the email alerts, go into the configuration page and click, "Email settings". Enter all your information for where to send emails, the sender (which I made, SQLMonitor@mydomain.com) and then mail server settings.
 
 Next, make sure you setup your alerts and what you want to be alerted on. Trust me, your inbox will be filled with alerts that you just don't want in there. When I say filled, I mean filled. It is good that SQL Monitor has a default listing of what to email out. I like this very much for a more junior level position where the question may be raised on what really is important.
 
@@ -121,7 +121,7 @@ Each page view that you are brought to by clicking all of the instances has been
 
 From the below snapshot we can see that primary status of the instance is shown, the level of alerts on the instance, alerts we have been ignoring, database status and the level of alerting that the instance has raised.
 
-The level of the alert status is critical. A DBAs day is busy and having to dig into all instances with any alert is a handicap. When time is slim for proactively checking all of your SQL Server instances, having a “High” alerting process with the easy to point out view of that status is extremely helpful. As you can see from my High alert status on the instance below, that is provided right away in SQL Monitor.
+The level of the alert status is critical. A DBAs day is busy and having to dig into all instances with any alert is a handicap. When time is slim for proactively checking all of your SQL Server instances, having a "High" alerting process with the easy to point out view of that status is extremely helpful. As you can see from my High alert status on the instance below, that is provided right away in SQL Monitor.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_5.gif?mtime=1293726680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_5.gif?mtime=1293726680" width="624" height="383" /></a>
@@ -195,7 +195,7 @@ The first point is covered extremely well with Monitor. Looking at this informat
   5. Auto shrink
   6. Active transactions
 
-All of this information is a must to make a first round suggestion on why a log file may be growing rapidly. Something that would help this view greatly would be a last backup column in the File area. This comes out of the question, “Why is my log growing out of control”. Failure to back up your logs in Full recovery model is typically the reason for that.
+All of this information is a must to make a first round suggestion on why a log file may be growing rapidly. Something that would help this view greatly would be a last backup column in the File area. This comes out of the question, "Why is my log growing out of control". Failure to back up your logs in Full recovery model is typically the reason for that.
 
 <div class="image_block">
   <a href="/media/blogs/DataMgmt/-8.png?mtime=1293723945"><img src="/wp-content/uploads/blogs/DataMgmt/-8.png?mtime=1293723945" alt="" width="541" height="400" /></a>

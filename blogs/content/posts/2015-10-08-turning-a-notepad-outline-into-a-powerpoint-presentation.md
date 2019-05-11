@@ -36,7 +36,7 @@ Create an outline in Notepad. A couple of tips to help you make the best pres
 
 Save the file as a .txt file.
 
-Open PowerPoint. Choose the option to open an existing presentation. Navigate to where your text file is saved. In the bottom right, next to File name, use the drop-down menu to select “All Outlines”. Select your outline and click Open.
+Open PowerPoint. Choose the option to open an existing presentation. Navigate to where your text file is saved. In the bottom right, next to File name, use the drop-down menu to select "All Outlines". Select your outline and click Open.
 
 [<img class="aligncenter size-full wp-image-4212" src="/wp-content/uploads/2015/10/powerpoint-open.png" alt="powerpoint open" width="957" height="540" srcset="/wp-content/uploads/2015/10/powerpoint-open.png 957w, /wp-content/uploads/2015/10/powerpoint-open-300x169.png 300w" sizes="(max-width: 957px) 100vw, 957px" />][1]
 

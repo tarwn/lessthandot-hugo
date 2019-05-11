@@ -23,17 +23,17 @@ I'm working with the Adventure Works 2008 SSAS sample project. In a new SSRS 200
 
 ![Image1][1]
 
-Obviously, this is not a very easy user interface to work with. If we right-click on our data source in the Report Data tab, we can see we have an option to “Show Hidden DataSets.” This will give us the definition for the hidden dataset which populates our Date.Date parameter. If we copy the query text and paste it into SQL Server Management Studio, we can see that in this case, our parameter's value takes on the format of [Date].[Date].&[yyyyMMdd]. The format may be different depending on the individual Date hierarchy setup. So, what we need to do is use a calendar control yet still supply a proper string to our main dataset as a parameter value. We can accomplish this with a VB function within the report.
+Obviously, this is not a very easy user interface to work with. If we right-click on our data source in the Report Data tab, we can see we have an option to "Show Hidden DataSets." This will give us the definition for the hidden dataset which populates our Date.Date parameter. If we copy the query text and paste it into SQL Server Management Studio, we can see that in this case, our parameter's value takes on the format of [Date].[Date].&[yyyyMMdd]. The format may be different depending on the individual Date hierarchy setup. So, what we need to do is use a calendar control yet still supply a proper string to our main dataset as a parameter value. We can accomplish this with a VB function within the report.
 
 Add a new parameter to the report named Date. This parameter should have a Data type of Date/Time to ensure that it is rendered to the user as a calendar control. In the properties pane of our Report, we can add the following VB function in the Code window:
 
 _Function GetDateMemberString(DateValue As DateTime) As String
        
-Dim RetVal As String = “”
+Dim RetVal As String = ""
        
-RetVal = “[Date].[Calendar].[Date].&[”
+RetVal = "[Date].[Calendar].[Date].&["
        
-RetVal &= Format(DateValue, “yyyyMMdd”).ToString & “]”
+RetVal &= Format(DateValue, "yyyyMMdd").ToString & "]"
        
 Return RetVal
   

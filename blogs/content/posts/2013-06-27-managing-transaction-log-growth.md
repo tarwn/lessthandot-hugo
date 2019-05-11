@@ -19,7 +19,7 @@ categories:
 ---
 With almost all databases running on SQL Server, at some point there will be a need to load data, move data or delete data from tables that are not ideally setup for the operations in large batch sizes.  While many methods exist to handle the actual task of any of these needs, a commonly overlooked side effect of performing large batch operations is, transaction log growth.
 
-For over a decade now, one of the most commonly answered questions on the community forums and all around is, “My transaction log grew out of control and I need to reclaim my disk space.  How do I prevent this?”
+For over a decade now, one of the most commonly answered questions on the community forums and all around is, "My transaction log grew out of control and I need to reclaim my disk space.  How do I prevent this?"
 
 First, this falls under the concept that most have that SQL Server has a memory leak.  No, there isn't a memory leak in SQL Server.  It is all your fault why SQL Server processes consume all the memory on a server due to not configuring the instances accurately.  With transaction log management, this is the same concept.  While in full recovery model, transactions are required to be logged in order to be in a recoverable state based on the concepts of a full recovery model.  This means that a large batch operation that is not in true bulk load modes, will be logged at a higher rate than normal operations.  With this being known, the transaction log requires attention and management during the process of the tasks that are loading a higher rate of data into or out of a database.
 

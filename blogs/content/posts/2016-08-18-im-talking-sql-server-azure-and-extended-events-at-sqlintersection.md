@@ -15,7 +15,7 @@ categories:
   - Uncategorized
 
 ---
-I'll be in Las Vegas October 24-28, 2016 for [SQLintersection][1], part of the [DEVintersection][2] conference series! Why attend DEVintersection? It “brings your favorite Microsoft leaders, engineers and industry experts together to educate, network, and share their expertise with you. Just this year, ASP.NET Core, SQL Server 2016, Visual Studio 2015, Windows 10 and SharePoint 2016 launched. The new release of Windows Server is on the horizon and open source is becoming the norm. The cloud is real and so is cloud scaling. Are you ready?”
+I'll be in Las Vegas October 24-28, 2016 for [SQLintersection][1], part of the [DEVintersection][2] conference series! Why attend DEVintersection? It "brings your favorite Microsoft leaders, engineers and industry experts together to educate, network, and share their expertise with you. Just this year, ASP.NET Core, SQL Server 2016, Visual Studio 2015, Windows 10 and SharePoint 2016 launched. The new release of Windows Server is on the horizon and open source is becoming the norm. The cloud is real and so is cloud scaling. Are you ready?"
 
 What's that about SQL Server and Azure? I'm talking about both of them a lot that week! On Monday, October 24, I'm leading a full-day workshop, Get Started With SQL Server In Azure. This is seven hours of discussion about Azure fundamentals, the difference between IaaS (VMs) and PaaS (SQL Database). I talk about when to use each, along with how to create, maintain, and monitor them. If your organization wants to start putting data in Azure (or has already started), you don't want to miss this!
 

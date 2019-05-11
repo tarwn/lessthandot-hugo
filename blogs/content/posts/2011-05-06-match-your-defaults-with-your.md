@@ -23,7 +23,7 @@ tags:
   - triggers
 
 ---
-Here is a quick demonstration that shows you what can happen when you use defaults that are much shorter than the value that is updated from an insert trigger. The ModifiedBy column has a default of ” but in the trigger it gets updated to 'SomeapplicationName used by ' +SUSER\_NAME(). Ideally you want the default to also be 'SomeapplicationName used by ' +SUSER\_NAME()
+Here is a quick demonstration that shows you what can happen when you use defaults that are much shorter than the value that is updated from an insert trigger. The ModifiedBy column has a default of " but in the trigger it gets updated to 'SomeapplicationName used by ' +SUSER\_NAME(). Ideally you want the default to also be 'SomeapplicationName used by ' +SUSER\_NAME()
 
 Let's take a look, first create the following table
 

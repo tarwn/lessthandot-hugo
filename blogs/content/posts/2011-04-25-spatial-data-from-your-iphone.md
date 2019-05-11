@@ -21,7 +21,7 @@ Interested in finding out where your iPhone has been?
 
 How about importing that data into SQL Server and being able to analyze it and create maps from the spatial data?
 
-If you have an iPhone and/or follow any of the security news about it, you may have seen multiple posts recently stating that Apple is tracking everywhere your iPhone goes even when you have location services turned off. There's even an open source application called [iPhoneTracker][1] that will create a map for you. I'm not going to debate the good, bad, and why's of this “feature”, but what I will do is show you how you can find this data, import into SQL Server, and some things you can do with it.
+If you have an iPhone and/or follow any of the security news about it, you may have seen multiple posts recently stating that Apple is tracking everywhere your iPhone goes even when you have location services turned off. There's even an open source application called [iPhoneTracker][1] that will create a map for you. I'm not going to debate the good, bad, and why's of this "feature", but what I will do is show you how you can find this data, import into SQL Server, and some things you can do with it.
 
 **Where is the iPhone data?**  
 To find the location data from your iPhone you'll need to find the consolidated.db file that is stored in your iPhone backup. On Windows 7 the default backup directory should be similar to

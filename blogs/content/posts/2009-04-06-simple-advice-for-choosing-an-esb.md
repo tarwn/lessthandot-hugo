@@ -29,11 +29,11 @@ tags:
 ---
 I thought I would share a recent question that was raised on LinkedIn, which asked:
 
-> _**Starting the Holy Wars on ESB? Who brings the best package deal to the table i.e IBM, MSFT...... Look at this way ” A mid sized cash crunched has to implement ESB what are the options it has” or rather who should it be married to. Any thoughts**_
+> _**Starting the Holy Wars on ESB? Who brings the best package deal to the table i.e IBM, MSFT...... Look at this way " A mid sized cash crunched has to implement ESB what are the options it has" or rather who should it be married to. Any thoughts**_
 > 
 > Tons of ESB from various players are in the market IBM, MSFT, Oracle , SAP but remember its a cash crunched company which requires the ESB. I can provide more details on the technical side. The idea is to throw open the debate to get various perspective. 
 
-Well, let's forget for the moment that the question was raised by a Microsoft employee, and focus more on the general principle of the question... What should companies look for in an [ESB][1]? In my brief answer, I aim to get across the point that asking which ESB vendor you should be “Married to” is very much the wrong question to ask, and to consider that there is more to solving this problem intelligently (and thus cost effectively) than simply 'buying technology'. No single technology will solve your problem out of the box, so be careful not to expect or ask it to do so. 
+Well, let's forget for the moment that the question was raised by a Microsoft employee, and focus more on the general principle of the question... What should companies look for in an [ESB][1]? In my brief answer, I aim to get across the point that asking which ESB vendor you should be "Married to" is very much the wrong question to ask, and to consider that there is more to solving this problem intelligently (and thus cost effectively) than simply 'buying technology'. No single technology will solve your problem out of the box, so be careful not to expect or ask it to do so. 
 
 Here's the Answer in full:
 
@@ -61,7 +61,7 @@ Here's the Answer in full:
 > 
 > – This is where you need to really think about why you have an integration problem in the first place... closed, insular approaches to application design. This indicates that we want an OPEN and INTEROPERABLE environment which is based on STANDARDS to give you FLEXIBILITY.
 > 
-> The problem with a lot of products on the market if not understood or used properly is that you can very soon become (in your words) “Married” to that vendor's solution. This destroys the core principles of what integration is all about – you are simply adding the same problem on top of the original problems.
+> The problem with a lot of products on the market if not understood or used properly is that you can very soon become (in your words) "Married" to that vendor's solution. This destroys the core principles of what integration is all about – you are simply adding the same problem on top of the original problems.
 > 
 > In many ways the open source integration solutions (incl. ESBs – e.g. SOPERA (commercial and more advanced version of Eclipse Swordfish), Apache FUSE, JBoss,etc) lend themselves to these principles very well, however this does not guarantee they will fit your need, or perform to the level of some COTS/Closed Source options.
 > 

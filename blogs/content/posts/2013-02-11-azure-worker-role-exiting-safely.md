@@ -136,7 +136,7 @@ public override void Run()
 ```
 Replacing the Thread.Sleep with a [WaitOne()][5] call will allow us to reduce the time to cancel. Unless it receives a signal (cancellation), the token will wait the specified number of milliseconds before continuing. Moving the WaitOne to the end ensures that if a cancellation is signaled, we won't pick up one last bit of work before exiting.
 
-The other piece of the equation is making the OnStop wait until the we have safely exited the loop. We can achieve this by creating a “Safe to exit” WaitHandle that is only set after successfully exiting the loop. The OnStop will Cancel via the CancellationToken, then wait for the “Safe to exit” token to be set before returning.
+The other piece of the equation is making the OnStop wait until the we have safely exited the loop. We can achieve this by creating a "Safe to exit" WaitHandle that is only set after successfully exiting the loop. The OnStop will Cancel via the CancellationToken, then wait for the "Safe to exit" token to be set before returning.
 
 ```csharp
 private CancellationTokenSource _cancellationTokenSource;

@@ -20,7 +20,7 @@ categories:
   <img src="http://sqlblog.com/blogs/argenis_fernandez/TSQL2sDay150x150_thumb_2AA4EA0F.jpg" alt="" />
 </p>
 
-It's T-SQL Tuesday! This month's topic, A Day in the Life, is hosted by my friend Erin Stellato ([blog][2] | [twitter][3]).  She wanted each of us to track what we do for a day. I can attest that she will ask you, “What do you _do_?”, earnestly – she did when I went to the 2011 Columbus, OH SQL Saturday.
+It's T-SQL Tuesday! This month's topic, A Day in the Life, is hosted by my friend Erin Stellato ([blog][2] | [twitter][3]).  She wanted each of us to track what we do for a day. I can attest that she will ask you, "What do you _do_?", earnestly – she did when I went to the 2011 Columbus, OH SQL Saturday.
 
 What do I _do_? As of May 8, 2012, I'm a Consultant with Brent Ozar PLF. Consultant. One of _those_ people. Yes, I am one! I perform health checks on client servers, recommend changes, and do training. I also get to blog and present a lot (which I love). Thankfully, Erin asked me to capture a fairly typical day.
 
@@ -34,7 +34,7 @@ What do I _do_? As of May 8, 2012, I'm a Consultant with Brent Ozar PLF. Consult
   <img src="/wp-content/uploads/users/grrlgeek/my office.jpg" alt="" />
 </p>
 
-I start by reading through my email and saying hello to all my friends Twitter. I need Twitter, now that I work from home. It gives me virtual “coworkers” to talk to.
+I start by reading through my email and saying hello to all my friends Twitter. I need Twitter, now that I work from home. It gives me virtual "coworkers" to talk to.
 
 7:45 – Begin research time. I'm doing a server health check with a client this week. We've been asked to review his delete process and recommend possible alternatives. I'm investigating a SQLCAT blog on Fast Ordered Deletes – <http://sqlcat.com/sqlcat/b/msdnmirror/archive/2009/05/20/fast-ordered-delete.aspx>.
 
@@ -68,7 +68,7 @@ Then, there are training opportunities. I talk through SQL Server Agent and auto
 
 4:30 – BREAK TIME! I need to answer some emails, make a quick dinner, and get ready to present for a user group!
 
-5:45 – 7:15 – I present “Make Your Voice Heard” for the Quad Cities PASS user group. This is one of my favorite presentations. I love energizing people. I love reminding them that they have information they can and should share with others!
+5:45 – 7:15 – I present "Make Your Voice Heard" for the Quad Cities PASS user group. This is one of my favorite presentations. I love energizing people. I love reminding them that they have information they can and should share with others!
 
 I'm not done for the day, but I'm done for the day. I still need to finish up the findings slide deck for the client. I do that from about 9:00 – 10:00. Then it's time to shut down the laptop and relax for a bit.
 

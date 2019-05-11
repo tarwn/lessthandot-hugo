@@ -21,7 +21,7 @@ tags:
 ---
 For someone that is just interested in trying out Unit Testing the number of topics out there can seem overwhelming. From passionate articles about using TDD, to deeply technical articles around the differences in mocking frameworks, to complete sidetracks into architecture theory and how to make code more testable...just learning enough to get started and try out Unit Testing can seem like you need weeks of classes.
 
-If you're just catching up, I've been sharing commentary on the costs (and value) of Unit Testing, starting with [a brief (intended to be humorous) post][1], a presentation at the [Raleigh CodeCamp][2], and last weeks discussion of the [“Twice as Much Code”][3] issue.
+If you're just catching up, I've been sharing commentary on the costs (and value) of Unit Testing, starting with [a brief (intended to be humorous) post][1], a presentation at the [Raleigh CodeCamp][2], and last weeks discussion of the ["Twice as Much Code"][3] issue.
 
 This article will try to convey the ease with which you can add Unit Testing to a current project without (in the case of visual studio) extra downloads, installs, or configurations. Costing only a few minutes, and without any of the other terminology, products, or theory, we can get started trying out this Unit Testing concept in our own environment.
 
@@ -238,7 +238,7 @@ public void GetFormattedText_Address2EmptyString_ReturnsTwoHtmlLines() {
 
 Our test method calls the new GetFormattedAddress method with values for all of the arguments but address2, which is passed as an empty string. Then we use the Assert.AreEqual(_expected_,_actual_) method to tell the test framework that we expect the result to match the string <code class="codespan">"a<br />b c, d"</code>. On running this test (Ctrl+R, A), Visual Studio will give us a little green checkmark to indicate that the code met our expectations (no Assertions were in error).
 
-_Note: if you are following along with this project in Visual Studio, you will need to add a “using UnitTestPresentation;” to the top of your test class_
+_Note: if you are following along with this project in Visual Studio, you will need to add a "using UnitTestPresentation;" to the top of your test class_
 
 <div class="imgBox">
   <a href="http://www.tiernok.com/LTDBlog/unittesting/orig/TestRun1.png" title="See larger image size"><img src="http://www.tiernok.com/LTDBlog/unittesting/TestRun1.png" alt="Test Run results" /></a><br /> Viewing Test Run Results
@@ -288,7 +288,7 @@ Hopefully this shows how easy it would be to get started with Unit Testing on an
 
 Sample code and previous articles in this unplanned series:
 
-  * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][1]
+  * Initial "Unit Testing Costs Too Much" post: [Unit Testing Costs Too Much][1]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][8]
   * 2x Code Followup: [Unit Testing Costs Too Much – Twice The Code = Value?][9]
   * Sample Code: [ZIP Archive of Sample Project and Database Backup][4]

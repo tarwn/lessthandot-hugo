@@ -71,7 +71,7 @@ When I run into applications that consistently leave their environments in an un
 
 ### Error Messages
 
-There are a number of different levels to error messages. Using one generic error handler and message for every situation is the “we can't be bothered to do this” solution to the problem.
+There are a number of different levels to error messages. Using one generic error handler and message for every situation is the "we can't be bothered to do this" solution to the problem.
 
 #### How Do I Finish?
 
@@ -88,7 +88,7 @@ The other side of error messages is the technical perspective.
 When an application doesn't provide me with a meaningful error message I am left wondering if the application even knows why it failed. I immediately call into question the stability of the application, because if it doesn't know why it failed then it is also likely it didn't leave things in a good state (returning to the atomicity point). So, like the end user above, I know I have something that I might have to clean up after, but I have no clue what went wrong and no way to request assistance. 
 
 <div style="text-align: center; color: #c04623; margin: .5em; font-size: 1.25em;">
-  “Hi, I got the error 'We are sorry, the system had a general error', what do I do next? Is my data still good?”
+  "Hi, I got the error 'We are sorry, the system had a general error', what do I do next? Is my data still good?"
 </div>
 
 I have no idea what that partially complete task has done to the stability of my systems, so it's possible it has just caused problems elsewhere in my environment and I now need to waste my time trying to reproduce the error, not just to get the task done, but also to determine what else has been broken. 

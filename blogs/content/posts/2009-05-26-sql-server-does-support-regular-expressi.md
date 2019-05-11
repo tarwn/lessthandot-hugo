@@ -64,7 +64,7 @@ As you can see we got the following message twice
   
 _Server: Msg 547, Level 16, State 1, Line 1
   
-The INSERT statement conflicted with the CHECK constraint “ck_bla”. The conflict occurred in database “Test”, table “dbo.blatest”, column 'code'.
+The INSERT statement conflicted with the CHECK constraint "ck_bla". The conflict occurred in database "Test", table "dbo.blatest", column 'code'.
   
 The statement has been terminated.
   

@@ -47,7 +47,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">You can contact me through <a href="http://www.linkedin.com/in/kverbeeck">LinkedIn</a>, say “Hi!” to me on <a href="https://twitter.com/Ko_Ver">Twitter</a> or just leave a comment on my blog.</span>
+  <span lang="EN-US">You can contact me through <a href="http://www.linkedin.com/in/kverbeeck">LinkedIn</a>, say "Hi!" to me on <a href="https://twitter.com/Ko_Ver">Twitter</a> or just leave a comment on my blog.</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">

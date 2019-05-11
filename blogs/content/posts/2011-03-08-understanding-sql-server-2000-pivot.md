@@ -20,7 +20,7 @@ categories:
   
 This month's T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot's first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to explain how you can write a pivot query in SQL 2000 using aggregate functions. Writing a query is one thing, understanding how it works is another. The goal of this blog post is to explain HOW it works so that it can be applied to other interesting problems.
 
-Why? This database engine is 11 years old, why bother? We are sometimes stuck dealing with an older database engine. Understanding the concept behind this pivot will also allow you to use the technique in other interesting ways. Personally, I think that by understanding how this works is another step in the process of “thinking in sets”.
+Why? This database engine is 11 years old, why bother? We are sometimes stuck dealing with an older database engine. Understanding the concept behind this pivot will also allow you to use the technique in other interesting ways. Personally, I think that by understanding how this works is another step in the process of "thinking in sets".
 
 When we think of pivoting data, we usually want to see several rows of data displayed as additional columns. Often times this is for reporting purposes or GUI displays within an application.
 
@@ -142,7 +142,7 @@ From   #Temp
 4           Greg                 NULL
 4           NULL                 9</pre>
 
-Nothing fancy here. Just the column names. We still have NULL's in our data that we will want to eliminate. Which leads us to our next step, and the most important part, too. When we use aggregates, it's important to realize that they ignore NULL's in the data. For example, if we have 2 rows with “George” in one row and NULL in the other row, Max(Column) will ignore the NULL and return George. We can use that to our advantage here.
+Nothing fancy here. Just the column names. We still have NULL's in our data that we will want to eliminate. Which leads us to our next step, and the most important part, too. When we use aggregates, it's important to realize that they ignore NULL's in the data. For example, if we have 2 rows with "George" in one row and NULL in the other row, Max(Column) will ignore the NULL and return George. We can use that to our advantage here.
 
 ```sql
 Select Id,

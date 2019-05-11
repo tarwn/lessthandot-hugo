@@ -72,11 +72,11 @@ WITH  FILE = 2,  NORECOVERY,  NOUNLOAD,  STATS = 10
 GO
 ```
 
-Refer to this blog, “[Using Mirroring to Reduce DB Migration Downtime (Part 1)”.][1] 
+Refer to this blog, "[Using Mirroring to Reduce DB Migration Downtime (Part 1)".][1] 
 
 The tests will be based around simple CREATE TABLE, INSERT, UPDATE and DELETE statements. The resulting client statistics from the transactions will be used to show the total differences in execution time. 
 
-To set client statistics on from SSMS, click the, “Include Client Statistics” icon in the menu strip or to get the full execution time which is used primarily in this test, add SET STATISTICS TIME ON to the beginning of the query
+To set client statistics on from SSMS, click the, "Include Client Statistics" icon in the menu strip or to get the full execution time which is used primarily in this test, add SET STATISTICS TIME ON to the beginning of the query
 
 Again, no complexity is added so the statistics.
   
@@ -145,7 +145,7 @@ Paul's blog on [monitoring mirroring][2] is excellent and can be used to monitor
 
 ## Research for the advantage...
 
-Once again, these statistics are brief and a rough drawing as mirroring goes. The following documentation should be reviewed from BOL while in the planning phases of implementing mirroring, “[Database Mirroring Concepts][3]” 
+Once again, these statistics are brief and a rough drawing as mirroring goes. The following documentation should be reviewed from BOL while in the planning phases of implementing mirroring, "[Database Mirroring Concepts][3]" 
 
 Performance characteristics have been set in another broad range to fill some variables that are required to pick the correct operating modes.
 

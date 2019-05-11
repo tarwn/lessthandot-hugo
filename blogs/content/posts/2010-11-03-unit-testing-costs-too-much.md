@@ -19,7 +19,7 @@ tags:
 ---
 There is a long list of reasons not to use Unit Testing in your current projects. In fact I was able to make such a long list of reasons not to use automated Unit Testing that I wasn't able to use them all in my presentation for the [Raleigh Code Camp][1] this coming weekend. 
 
-While my presentation aims to dispel a number of these and show that unit testing can return a lot of value for low cost, I thought I would share the highlights from the “Why Not To Do It” list. 
+While my presentation aims to dispel a number of these and show that unit testing can return a lot of value for low cost, I thought I would share the highlights from the "Why Not To Do It" list. 
 
 Warning: I know, it seems a little lighter-hearted than my usual posts, maybe a little more sarcastic. I blame it on all the time staring at powerpoint this weekend.
 
@@ -29,7 +29,7 @@ Warning: I know, it seems a little lighter-hearted than my usual posts, maybe a 
 
 ## It's Twice as Much Code!
 
-First you have to write all the “real” code, then you have to write all the test code, and before you know it you've spent twice as long writing the same amount of code. Who's going to pay for all that keyboard wear? 
+First you have to write all the "real" code, then you have to write all the test code, and before you know it you've spent twice as long writing the same amount of code. Who's going to pay for all that keyboard wear? 
 
 _(Check out the follow-up link below for a lot more on this one)_
 
@@ -57,7 +57,7 @@ Feel free to keep adding to my list in the comments below, lets see who can thin
 
 Follow-ups:
 
-  * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][2]
+  * Initial "Unit Testing Costs Too Much" post: [Unit Testing Costs Too Much][2]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][3]
   * 2x Code Followup: [Unit Testing Costs Too Much – Twice The Code = Value?][4]
   * Too Many Things to Learn: [Unit Testing Costs Too Much – Too Many Things to Learn][5]

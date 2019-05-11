@@ -23,7 +23,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <em>Every time I do something “stupid”, which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb</em>: <em>“It's only stupid if you don't turn it into a learning experience”. </em><em>Okay, I might have made that last one up...</em>
+  <em>Every time I do something "stupid", which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb</em>: <em>"It's only stupid if you don't turn it into a learning experience". </em><em>Okay, I might have made that last one up...</em>
 </p>
 
 <p style="text-align: justify">

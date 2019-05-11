@@ -159,7 +159,7 @@ GO</pre>
 <pre style="padding-left: 30px">EXEC sys.sp_redirect_publisher @original_publisher = 'SQL2014AG2', @publisher_db = 'AGTest', @redirected_publisher = 'JesTestAGListen';
 GO</pre>
 
-Expected output is “Commands completed successfully.”
+Expected output is "Commands completed successfully."
 
 Then, you want to confirm this worked. To do so, run the following command.
 
@@ -168,7 +168,7 @@ Then, you want to confirm this worked. To do so, run the following command.
 <pre style="padding-left: 30px">EXEC sys.sp_validate_replica_hosts_as_publishers @original_publisher = 'SQL2014AG2', @publisher_db = 'AGTest', @redirected_publisher = 'JesTestAGListen';
 GO</pre>
 
-Expected output is “Commands completed successfully.”
+Expected output is "Commands completed successfully."
 
 After following all of these steps, your publication is ready. You can now set up the subscriber(s).
 

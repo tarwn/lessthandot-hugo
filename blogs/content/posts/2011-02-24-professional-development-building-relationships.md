@@ -47,7 +47,7 @@ A relationship can be created from the following:
   * Twitter – Social Networking
 
 <p style="padding-left: 30px;">
-  Social gathering areas like Twitter, Facebook and such are tools that we as professionals can use to make and strengthen relationships.  Twitter has been “The hot” area for this over the last two years.  With Twitter, I've made several new relationships and friendships.  Keep professional development in mind and make relationships professional as well as relaxed.  Just keep in mind the impact things can have if the professional aspect is lost.  My co-professor this week, Andy Leonard, dives into the difference between business and community presence.  This blog is excellent and points out the key things to keep in mind with social networking.  Twitter can be powerful but it can be damaging if you do things the wrong way. 
+  Social gathering areas like Twitter, Facebook and such are tools that we as professionals can use to make and strengthen relationships.  Twitter has been "The hot" area for this over the last two years.  With Twitter, I've made several new relationships and friendships.  Keep professional development in mind and make relationships professional as well as relaxed.  Just keep in mind the impact things can have if the professional aspect is lost.  My co-professor this week, Andy Leonard, dives into the difference between business and community presence.  This blog is excellent and points out the key things to keep in mind with social networking.  Twitter can be powerful but it can be damaging if you do things the wrong way. 
 </p>
 
   * Work – coworkers

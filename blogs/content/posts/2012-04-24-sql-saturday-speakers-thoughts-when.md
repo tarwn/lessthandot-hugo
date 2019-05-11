@@ -46,7 +46,7 @@ Evaluations are important to the organizers, but I feel they are more important 
 
  
 
-Scheduling is a hard task for a SQL Saturday.  Maybe some simply do the “eenie meenie miney mo” process but when I create a schedule I try my best to meet the following guidelines:
+Scheduling is a hard task for a SQL Saturday.  Maybe some simply do the "eenie meenie miney mo" process but when I create a schedule I try my best to meet the following guidelines:
 
  
 
@@ -57,7 +57,7 @@ Scheduling is a hard task for a SQL Saturday.  Maybe some simply do the “eeni
   4. Venue setup and layout for where you place those speakers and topics
   5. Overall, make the speakers feel they are wanted because, THEY ARE! No matter who they are, no matter how many times they have spoken. 
 
-There are a few other things but those are the major factors that I feel should be met in a solid “SQL Saturday” schedule.  I truly feel #1 is absolutely critical so we always give this, our community, a chance to mentor, create, and bring up new, highly talented speakers.
+There are a few other things but those are the major factors that I feel should be met in a solid "SQL Saturday" schedule.  I truly feel #1 is absolutely critical so we always give this, our community, a chance to mentor, create, and bring up new, highly talented speakers.
 
  [1]: http://www.kendalvandyke.com/
  [2]: http://www.twitter.com/SQLDBA

@@ -1,5 +1,5 @@
 ---
-title: “North to Alaska”
+title: \"North to Alaska\"
 author: Jes Borland
 type: post
 date: 2018-03-01T18:36:25+00:00
@@ -23,7 +23,7 @@ At the core of Tech Outbound is technical training. I'll be leading discussions 
 Here is a preview of my topics:
 
 <p style="padding-left: 30px">
-  <strong>Cosmos DB: The Future of Data... Now!</strong><br /> The opportunity for getting in on the ground floor of new technologies happens once in a blue moon. In 2017, Microsoft introduced Cosmos DB, a “globally distributed, multi-model database service”. It offers multiple APIs, multiple consistency models, automatic indexing, and guaranteed performance. This revolutionary database system is changing how developers store and work with their data. I'll cover the features, use cases, and case studies for Cosmos DB. Gain a competitive edge by learning about this emerging technology... now!
+  <strong>Cosmos DB: The Future of Data... Now!</strong><br /> The opportunity for getting in on the ground floor of new technologies happens once in a blue moon. In 2017, Microsoft introduced Cosmos DB, a "globally distributed, multi-model database service". It offers multiple APIs, multiple consistency models, automatic indexing, and guaranteed performance. This revolutionary database system is changing how developers store and work with their data. I'll cover the features, use cases, and case studies for Cosmos DB. Gain a competitive edge by learning about this emerging technology... now!
 </p>
 
 <p style="padding-left: 30px">

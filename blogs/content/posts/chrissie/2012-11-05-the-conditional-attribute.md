@@ -395,7 +395,7 @@ End Module
 > 
 > Applying ConditionalAttribute to a method indicates to compilers that a call to the method should not be compiled into Microsoft intermediate language (MSIL) unless the conditional compilation symbol that is associated with ConditionalAttribute is defined.
 > 
-> The line “test()” is a call to the method and hence subject to the above paragraph. But the next line is taking-address-of (not subject to the paragraph) and the one after is call to the delegate’s invoke method (also not subject).
+> The line "test()" is a call to the method and hence subject to the above paragraph. But the next line is taking-address-of (not subject to the paragraph) and the one after is call to the delegate’s invoke method (also not subject).
 > 
 > I think the VB MSDN page would be improved if it made this clear. (The C# page already makes it clear that you can’t take the address of a method in C# if that method has the conditional attribute). I’ll pass that on to the authors of the page.
 

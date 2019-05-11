@@ -6,6 +6,8 @@ date: 2010-04-15T09:55:44+00:00
 ID: 711
 excerpt: 'You see this kind of question all the time in newsgroups/forums, someone wants to return all the rows if nothing is passed in or just the rows that match the variable when something is passed in. Usually someone will reply with a suggestion to do someth&hellip;'
 url: /index.php/datamgmt/datadesign/do-you-use-column-param-or-param-is-null/
+aliases: 
+  - /index.php/datamgmt/dbprogramming/do-you-use-column-param-or-param-is-null
 views:
   - 71066
 rp4wp_auto_linked:

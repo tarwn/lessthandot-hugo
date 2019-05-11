@@ -44,7 +44,7 @@ There are a few things speakers want to know ahead of time: if there will be a P
 
 Make the day smoother on your posse and your speakers by having a volunteer in each room as a room monitor. We had morning and afternoon shifts. These great people handed out evaluation forms, collected them, gave them to the speakers, and made sure everything ran smoothly. It required a few extra people but eliminated a lot of headaches.
 
-As I mentioned above, you need sponsors to make your event happen. Don't forget to look for local sponsors! You can get them. They will appreciate the exposure. We asked our user group members to ask their employers. We asked local tech recruiting and placement firms. They said “yes”! We equally appreciate the national vendors that supported us, knowing that it is hard for them to spread their marketing dollars to every SQL-related event.
+As I mentioned above, you need sponsors to make your event happen. Don't forget to look for local sponsors! You can get them. They will appreciate the exposure. We asked our user group members to ask their employers. We asked local tech recruiting and placement firms. They said "yes"! We equally appreciate the national vendors that supported us, knowing that it is hard for them to spread their marketing dollars to every SQL-related event.
 
 With that in mind, when the day comes, put the sponsors in a high-traffic area. They want to – and deserve to – be visible and accessible to the attendees all day. Remember, their products and services can make your life easier. Tap into that!
 
@@ -62,7 +62,7 @@ On a related note: don't speak at the event you're organizing. I thought I could
 
 The only other thing I would do over would be to have an opening keynote, even if it was only 15 minutes long, to let people know what was going on. Close to 75% of our attendees were at their first SQL Saturday. I wish I could have explained how the day was going to run, what the Cows of a Spot tables at lunch were for, to make sure they stopped by the sponsor tables, and to remind them to network. Next time, I'll add this in.
 
-Last but not least, put your mark on the event. This is your chance to show off your user group, your city, your state, and your people. I tried to do this by washing the speaker shirts, having Wisconsin brats for lunch, and re-naming “Birds of a Feather” tables to “Cows of a Spot” tables. PASS has provided a great template for SQL Saturday. Embrace it, then make it yours. Have fun with it!
+Last but not least, put your mark on the event. This is your chance to show off your user group, your city, your state, and your people. I tried to do this by washing the speaker shirts, having Wisconsin brats for lunch, and re-naming "Birds of a Feather" tables to "Cows of a Spot" tables. PASS has provided a great template for SQL Saturday. Embrace it, then make it yours. Have fun with it!
 
 Most of all, enjoy your day. You're bringing high-quality, free training and networking to people. They will appreciate it, learn from it, and spread the word. Enjoy it!
 

@@ -47,9 +47,9 @@ Do you see what the error is in the code?
 
 In C# you need to use brackets, not parentheses so instead of the top line of code, you need to use the bottom one
 
-Dts.Variables<span class="MT_red">(</span>“varFileName”<span class="MT_red">)</span>.Value
+Dts.Variables<span class="MT_red">(</span>"varFileName"<span class="MT_red">)</span>.Value
   
-Dts.Variables<span class="MT_green">[</span>“varFileName”<span class="MT_green">]</span>.Value
+Dts.Variables<span class="MT_green">[</span>"varFileName"<span class="MT_green">]</span>.Value
 
 Here is the code block in C#
 

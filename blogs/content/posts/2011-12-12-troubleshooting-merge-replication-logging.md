@@ -36,7 +36,7 @@ replmerg.exe -Publisher [ONPNTRC0] -PublisherDB [AdventureWorks] -Publication [S
 
 As the error indicates, we need more verbose logging to determine the cause.  To do this, use the –Output and –OutputVerboseLevel options in the command.  The OutputVerboseLevel takes three values: 0, 1 and 2.  2 reports the highest level of logging.  There are two more undocumented levels: 3 and 4.  These offer an even more in-depth level of logging.    The higher the level, the more information that is logged and the more this logging will degrade overall performance.  It is good to use the lowest levels to determine if they can provide the information needed before logging too much.
 
--OutputVerboseLevel 4 -Output “C:replmerg2.log”
+-OutputVerboseLevel 4 -Output "C:replmerg2.log"
 
 The complete command
 

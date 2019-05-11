@@ -18,7 +18,7 @@ Last night I attended the monthly [MADPASS][1] SQL Server user group meeting, al
 
 The meeting was sponsored by [Confio][2] – I want to thank their rep, John, for coming, and for the Mastercard and Amazon gift cards and other swag. User groups wouldn't be the same without sponsors, and we appreciate ours.
 
-I presented the first session, giving “Make Your Voice Heard”, with tips and tricks for helping the SQL Server community through Twitter, forums, and blogging. I love talking about how to get involved in the community. I hope everyone was able to learn something new.
+I presented the first session, giving "Make Your Voice Heard", with tips and tricks for helping the SQL Server community through Twitter, forums, and blogging. I love talking about how to get involved in the community. I hope everyone was able to learn something new.
 
 After my presentation, we had birthday cake! It was delicious.
 
@@ -32,7 +32,7 @@ After my presentation, we had birthday cake! It was delicious.
   <em>The MADPASS board (L-R): Steve Novoselac, Tony Sebion, me, Matt Cherwin, and Tim Benninghoff</em>
 </p>
 
-After dinner and networking, our main presentation got underway. Bob Pusateri ([twitter][3] | [blog][4]) talked about “Backups and Recovery In Depth”. Even with a couple technical difficulties at the beginning, he was able to give a great presentation. I learned several new tips and tricks, particularly about restores.
+After dinner and networking, our main presentation got underway. Bob Pusateri ([twitter][3] | [blog][4]) talked about "Backups and Recovery In Depth". Even with a couple technical difficulties at the beginning, he was able to give a great presentation. I learned several new tips and tricks, particularly about restores.
 
 To wrap up the evening, we gave away some great raffle prizes, like a SQLSkills bag, an ARC mouse, the PASS Summit 2011 DVDs, and books. It was a great meeting, as always.
 

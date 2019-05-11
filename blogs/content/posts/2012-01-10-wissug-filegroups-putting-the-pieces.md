@@ -1,5 +1,5 @@
 ---
-title: 'WiSSUG “Filegroups: Putting the Pieces Together” Materials'
+title: 'WiSSUG "Filegroups: Putting the Pieces Together" Materials'
 author: Jes Borland
 type: post
 date: 2012-01-11T01:17:00+00:00
@@ -22,7 +22,7 @@ categories:
 ---
 I had a great time presenting for [WiSSUG][1] tonight! It's always good to see old friends, and meet people I've talked to on Twitter for the first time. 
 
-WiSSUG were witness to the debut of my newest presentation, “Filegroups: Putting the Pieces Together”. I want to thank everyone that attended for listening, asking questions, and offering opinions. I love to get my audience talking about a topic! We talked about this a lot: 
+WiSSUG were witness to the debut of my newest presentation, "Filegroups: Putting the Pieces Together". I want to thank everyone that attended for listening, asking questions, and offering opinions. I love to get my audience talking about a topic! We talked about this a lot: 
 
 ![][2]
 

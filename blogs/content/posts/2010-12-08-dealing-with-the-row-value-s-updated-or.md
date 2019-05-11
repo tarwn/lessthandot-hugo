@@ -32,7 +32,7 @@ INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
 INSERT INTO Test (col1) VALUES('<ccc>ddd</ccc>')
 ```
 
-Now, do the following, navigate to this table in Object Explorer, right click on the table, select the “Edit top 200 rows” option (see also below for image)
+Now, do the following, navigate to this table in Object Explorer, right click on the table, select the "Edit top 200 rows" option (see also below for image)
 
 ![][2]
 

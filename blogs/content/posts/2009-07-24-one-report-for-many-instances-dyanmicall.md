@@ -66,21 +66,21 @@ Now call the UDF to search the network for SQL Servers.
 SELECT * FROM InstanceFinder();
 ```
 
-Now to use that in SSRS we have to do a few things. Get a project ready and name it “DBAs Rule”. Add a shared data source named DBA. This points to the UDF we're going to use. Next add a blank report named, “SQL DB Check.rdl”
+Now to use that in SSRS we have to do a few things. Get a project ready and name it "DBAs Rule". Add a shared data source named DBA. This points to the UDF we're going to use. Next add a blank report named, "SQL DB Check.rdl"
 
-Create a new dataset named “ServerListing” like below
+Create a new dataset named "ServerListing" like below
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//srv_1.gif" alt="" title="" width="463" height="380" />
 </div>
 
-Save that by hitting OK and now let's create a parameter that our dataset will populate. Name the parameter “ServerName”. Select “From Query” for available values and find ServerListing in the list. select the only value available for “Value field” and “Label field”.
+Save that by hitting OK and now let's create a parameter that our dataset will populate. Name the parameter "ServerName". Select "From Query" for available values and find ServerListing in the list. select the only value available for "Value field" and "Label field".
 
 Now back in the Data tab create another dataset. Name this one DBListing. We need a new data source now sense our goal here is to connect to whatever SQL Server the UDF finds. So click the drop down for Data Source and hit create new. Name this DS NoInitialCatalog. That's as meaningful of a name as we can get as that is the key to how we do this. To create this type of connection string all we do is specify the Data Source itself without a initial catalog. For the connection string we need to use our parameter for the server as well. All we do is add it in there as an expression to accomplish that.
 
 like so...
 
-=”Data Source=” & Parameters!ServerName.Value
+="Data Source=" & Parameters!ServerName.Value
 
 and should appear like this in the prompts...
 
@@ -94,13 +94,13 @@ Save all of this and then in the text for the dataset use
 Select [Name] From sys.databases
 ```
 
-This step is import so don't forget to do it. In order for SSRS to know what you are returning from the query on NoIntialCatalog, you need to define it sense validation is out of it's control here and the column will not prefill for you. So in the Fields tab go ahead and enter a field name, “Name” with a type of databases field and value of Name.
+This step is import so don't forget to do it. In order for SSRS to know what you are returning from the query on NoIntialCatalog, you need to define it sense validation is out of it's control here and the column will not prefill for you. So in the Fields tab go ahead and enter a field name, "Name" with a type of databases field and value of Name.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//srv_3.gif" alt="" title="" width="474" height="408" />
 </div>
 
-Now to actually show this in action we need something on the report so drag a table over and remove the extra columns but the first. Drag over the “Name” from the dataset, “DBListing” and preview the report. 
+Now to actually show this in action we need something on the report so drag a table over and remove the extra columns but the first. Drag over the "Name" from the dataset, "DBListing" and preview the report. 
 
 The report is obviously going to be slow loading. You're scanning the network and we all know how annoying hitting that drop down in SSMS and selecting browse network is. To speed this up I actually modified it in most of my DBA related reports. I used my scans that I talk about [here][1] and use a simple query over the real-time scan. The scan on load is handy and in a few reports that I do searches I still use it but for speed and security, I use the results from my scan SSIS to run most of them.
 

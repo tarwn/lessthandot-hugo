@@ -22,7 +22,7 @@ categories:
 ---
 I have created several cross tab reports in the last few years. I have also seen several hacks with different ways to achieve what is actually already built into Reporting Services. To begin, let's define what a cross tab report is.
 
-According to Wikipedia, cross tab, or cross tabulation, means “the process of creating a contingency table from the multivariate frequency distribution of statistical variables.” To put that into laymen's terms, you create a grid with a group of objects on the X (horizontal) axis and another group of objects on the Y (vertical) axis, and you then tally how many occurrences those two objects meet.
+According to Wikipedia, cross tab, or cross tabulation, means "the process of creating a contingency table from the multivariate frequency distribution of statistical variables." To put that into laymen's terms, you create a grid with a group of objects on the X (horizontal) axis and another group of objects on the Y (vertical) axis, and you then tally how many occurrences those two objects meet.
 
 For example, let's say we want a cross tab of our computer inventory by department. One axis would have our computer inventory types (desktop, laptop, tablet, smartphone) and the other axis would have our departments (IT, Finance, HR). Here's how it might look:
 

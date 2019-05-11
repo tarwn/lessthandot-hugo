@@ -165,7 +165,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  This sidebar is where you can edit the “guts” of the report. You can add and edit parameters, images, data sources, and datasets. To add any of these, click New in the top left, or right-click the item and select Add. To edit an item, double-click it and the corresponding Properties window will open (except for Images).
+  This sidebar is where you can edit the "guts" of the report. You can add and edit parameters, images, data sources, and datasets. To add any of these, click New in the top left, or right-click the item and select Add. To edit an item, double-click it and the corresponding Properties window will open (except for Images).
 </p>
 
 <p class="MsoNormal">

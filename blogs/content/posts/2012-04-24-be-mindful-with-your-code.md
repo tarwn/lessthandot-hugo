@@ -66,7 +66,7 @@ No one likes getting an error message. An error message is the sign that no matt
 
 No?
 
-How about this then. We develop some software, send it out in the world, and one day receive a call from an annoyed end user about the error they are receiving. The message simply says “Null reference error”, maybe with a brief joke about cheese or a reference to a technical manual for the definition of null reference. Because we all love those “oh crap, I don't even know where to start” moments.
+How about this then. We develop some software, send it out in the world, and one day receive a call from an annoyed end user about the error they are receiving. The message simply says "Null reference error", maybe with a brief joke about cheese or a reference to a technical manual for the definition of null reference. Because we all love those "oh crap, I don't even know where to start" moments.
 
 No?
 

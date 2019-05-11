@@ -49,7 +49,7 @@ The following changes have been made to existing types and members for the ASP.N
   * The TempDataDictionary type has a new Peek method that reads values from TempData without removing the values from the dictionary.
   * Templated helpers such as Html.EditorFor and Html.DisplayFor show only simple properties by default. If you need to show complex properties, you can create a custom template to show any set of properties.
   * The Add View context menu in Visual Studio lets you create a view to delete items. The existing List template has a new Delete link for each item in the list.
-  * The validation helpers no longer render a default “form0” prefix for the id attribute.
+  * The validation helpers no longer render a default "form0" prefix for the id attribute.
   * Expression-based helpers that render input elements generate correct name attributes when the expression contains an array or collection index. For example, the value of the name attribute rendered by Html.EditorFor(m => m.Orders[i]) for the first order in a list would be Orders[0].
   * The new UrlParameter type allows default values in routes to be removed after URL routing runs. If an incoming route parameter has a value of UrlParameter.Optional, the MvcHandler instance will remove it from RouteData.Values collection before the controller action is executed. The Global.asax file in new projects uses UrlParameter.Optional in the default route definition. This makes it easier to bind to models that have a property named ID, because the default ID route parameter will not conflict with the binding operation.
   * The empty project template includes a small Site.css file that contains styles that are used by validation helpers such as Html.ValidationSummary and Html.ValidationMessage. 

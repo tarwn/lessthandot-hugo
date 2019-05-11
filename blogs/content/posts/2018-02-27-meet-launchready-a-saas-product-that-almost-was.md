@@ -79,7 +79,7 @@ The eventual intent was to move these tests as close to the developer as possibl
   <img src="/wp-content/uploads/2018/02/launchreadypost_01-600x147.png" alt="Defining a User Scenario feature" width="600" height="147" class="size-medium-width wp-image-8942" srcset="/wp-content/uploads/2018/02/launchreadypost_01-600x147.png 600w, /wp-content/uploads/2018/02/launchreadypost_01-300x74.png 300w, /wp-content/uploads/2018/02/launchreadypost_01-768x189.png 768w, /wp-content/uploads/2018/02/launchreadypost_01-1024x252.png 1024w, /wp-content/uploads/2018/02/launchreadypost_01.png 1172w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    Carefully chosen “User Scenario” terminology, codeless definitions
+    Carefully chosen "User Scenario" terminology, codeless definitions
   </p>
 </div>
 
@@ -153,7 +153,7 @@ Calculate screen complexity metrics for usability and provide warnings or errors
 
 Calculate workflow complexity metrics for usability as the tests walk through work flows in the application and warn or error when over certain limits.
 
-### 15. “Your site just got way slower!”
+### 15. "Your site just got way slower!"
 
 Capture timing for each test and test step over time and use anomaly detection and other forms of analysis to warn when a page has suddenly gotten much slower, when it has gotten significantly slower bit by bit over a long period of time, or when there is a lot of variability in it's timing.
 

@@ -68,10 +68,10 @@ Another major benefit from Kanban methods will become apparent as the initial vi
 
 The manufacturing community has hundreds of examples of visual boards, but for the purpose of the article I'm going to point out a couple links from Agile software development articles. Kanban boards do not have to be expensive and, in my opinion, should always start out as a physical board before diving into a software solution (if ever).
 
-  * [“Lean -Software Development in Small Teams” Article][3] – Whiteboard and Magnets
-  * [“Evolution of a Kanban Board” Article][4] – Whiteboard and Post-Its &tm;
-  * [“Visualizing Agile Projects with Kanban Boards” Article][5] – Several pictures and informative article
-  * [“The Kanban Story – Kanban Board” Article][6] – Final (Simple!) Result for another software development board
+  * ["Lean -Software Development in Small Teams" Article][3] – Whiteboard and Magnets
+  * ["Evolution of a Kanban Board" Article][4] – Whiteboard and Post-Its &tm;
+  * ["Visualizing Agile Projects with Kanban Boards" Article][5] – Several pictures and informative article
+  * ["The Kanban Story – Kanban Board" Article][6] – Final (Simple!) Result for another software development board
 
 Searching the internet will give you many additional examples in a variety of environments.
 

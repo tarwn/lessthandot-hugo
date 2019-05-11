@@ -37,7 +37,7 @@ What bothered me the whole drive home is the built in assumption that the busine
 
 Here's the flaw in this story (and every other place we talk about IT vs the business):
 
-Joe Random Executive doesn't know all the intricacies of accounting, purchasing, warehousing, marketing, sales, law, human resources, or any of a dozen other areas. They will probably know a couple in detail, but they are no more an expert in the rest then they are in IT (and of course we assume they didn't have an IT Background). These are all skills or roles that get casually lumped under the “business” umbrella. Because somehow all areas but IT are business, while only IT is non-business.
+Joe Random Executive doesn't know all the intricacies of accounting, purchasing, warehousing, marketing, sales, law, human resources, or any of a dozen other areas. They will probably know a couple in detail, but they are no more an expert in the rest then they are in IT (and of course we assume they didn't have an IT Background). These are all skills or roles that get casually lumped under the "business" umbrella. Because somehow all areas but IT are business, while only IT is non-business.
 
 Is this ego or laziness? Some of both. Only in the IT department do we somehow think our role gives us a magic ticket to be totally ignorant about the company we work for. 
 
@@ -69,7 +69,7 @@ The not-engaged worker is just there to do a job and go home. They are the prote
   Ignorance of how your company works is a sign of incompetence, not something to be proud of.
 </div>
 
-So the reason an IT person (even an IT Ops person) can speak to a non-IT worker about the business is because “the business” is the common language they share. IT, accounting, purchasing, human resources, whoever ... when we need to discuss why something is important, we discuss it's impact on the the business, the strategies or targets it effects, etc. In fact, being in IT typically requires a <u>higher</u> level of day-to-day, cross-functional contact then any of the prior examples. More, not less.
+So the reason an IT person (even an IT Ops person) can speak to a non-IT worker about the business is because "the business" is the common language they share. IT, accounting, purchasing, human resources, whoever ... when we need to discuss why something is important, we discuss it's impact on the the business, the strategies or targets it effects, etc. In fact, being in IT typically requires a <u>higher</u> level of day-to-day, cross-functional contact then any of the prior examples. More, not less.
 
 Engaging the business has come and gone as part of many buzzy things, and in DevOps it's rising again. Regardless of it's current popularity, if you work for a company, being an IT person doesn't magically separate you from the goals everyone else is working towards. Engage, learn the business, help them succeed, you'll find that you're company is doing some really interesting things and works with some really interesting people. If it's not, find one that resonates with you and learn what they're doing. Either way, you're part of the business, an you chose whether you're competent or not.
 

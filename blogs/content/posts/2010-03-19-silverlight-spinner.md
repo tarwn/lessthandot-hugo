@@ -101,7 +101,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </h3>
   
   <p>
-    Select all of the window rectangles, right click and select “Combine” and “Unite”. This will turn all of those separate rectangles into a single path.<br /> 
+    Select all of the window rectangles, right click and select "Combine" and "Unite". This will turn all of those separate rectangles into a single path.<br /> 
     
     <center>
       <a href="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/Spinner5.PNG"><img src="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/thSpinner5.PNG" border=0 /></a>
@@ -113,7 +113,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </h3>
   
   <p>
-    Next, ensure that the Mask rectangle is lower in the list (higher in z-order) than the new path. Select both the mask rectangle and the new path, right click and select “Combine” and “Subtract”. This will merge the two into a single path, but it will cut the old path out of the rectangle.<br /> 
+    Next, ensure that the Mask rectangle is lower in the list (higher in z-order) than the new path. Select both the mask rectangle and the new path, right click and select "Combine" and "Subtract". This will merge the two into a single path, but it will cut the old path out of the rectangle.<br /> 
     
     <center>
       <a href="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/Spinner6.PNG"><img src="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/thSpinner6.PNG" border=0 /></a>
@@ -209,7 +209,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </h3>
   
   <p>
-    Next, we want to animate the spinner. Click the “+”, or the down arrow and select New, above the control tree to create a new story board.<br /> 
+    Next, we want to animate the spinner. Click the "+", or the down arrow and select New, above the control tree to create a new story board.<br /> 
     
     <center>
       <a href="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/Spinner14.PNG"><img src="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/thSpinner14.PNG" border=0 /></a>
@@ -233,7 +233,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </h3>
   
   <p>
-    Use the “Record Keyframe” button to set a starting position at the 0 second mark on the Spinner rectangle line.<br /> 
+    Use the "Record Keyframe" button to set a starting position at the 0 second mark on the Spinner rectangle line.<br /> 
     
     <center>
       <a href="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/Spinner16.PNG"><img src="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/thSpinner16.PNG" border=0 /></a>
@@ -257,7 +257,7 @@ Every week in my shop we do cross training. Someone brings in something they are
   </h3>
   
   <p>
-    Before we get into the code, we need to change the looping behavior of the spin animation. Select the animation by clicking on it above the control tree. In the top right corner you should see the “Common Properties” pane. Set the RepeatBehavior to “Forever”.<br /> 
+    Before we get into the code, we need to change the looping behavior of the spin animation. Select the animation by clicking on it above the control tree. In the top right corner you should see the "Common Properties" pane. Set the RepeatBehavior to "Forever".<br /> 
     
     <center>
       <a href="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/Spinner18.PNG"><img src="http://ringdev.com.web10.reliabledomainspace.com/SpinnerTutorial/thSpinner18.PNG" border=0 /></a>

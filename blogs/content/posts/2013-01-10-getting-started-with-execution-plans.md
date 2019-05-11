@@ -34,13 +34,13 @@ To see a Query Execution plan, you need to create a query:
 SELECT * FROM Sales.vStoreWithContacts
 ```
 
-And then you click the “Display Estimated Execution Plan” or the “Include Actual Execution Plan” button in the SQL Editor Toolbar of SQL Server Management Studio.
+And then you click the "Display Estimated Execution Plan" or the "Include Actual Execution Plan" button in the SQL Editor Toolbar of SQL Server Management Studio.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP1.JPG?mtime=1357810925"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP1.JPG?mtime=1357810925" width="730" height="129" /></a>
 </div>
 
-The difference between the Estimated and the Actual plan is the execution of the query itself. When you hit the “Display Estimated Execution Plan” button, SQL Server Management Studio will immediately show you an Execution plan, however it's an estimated plan and the query itself is NOT executed. When you hit the “Include Actual Execution Plan” nothing will happen until you execute the query. After execution of the query a third tab will appear in SSMS showing the Execution Plan that was actually used:
+The difference between the Estimated and the Actual plan is the execution of the query itself. When you hit the "Display Estimated Execution Plan" button, SQL Server Management Studio will immediately show you an Execution plan, however it's an estimated plan and the query itself is NOT executed. When you hit the "Include Actual Execution Plan" nothing will happen until you execute the query. After execution of the query a third tab will appear in SSMS showing the Execution Plan that was actually used:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP2.JPG?mtime=1357810925"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP2.JPG?mtime=1357810925" width="1651" height="711" /></a>

@@ -44,11 +44,11 @@ tags:
   </p>
   
   <p style="text-align: justify">
-    Chapter 5 demonstrates the principle of eloquence through simplicity, or in other words: keep it simple stupid. It talks about how to reduce the “noise” in a dashboard so that only the important aspects remain. Chapter 6 gives an overview of available chart/display types and presents the bullet graph – invented by Stephen himself – which is a very efficient display medium. Chapter 7 talks about usability of your dashboards and chapter 8 brings it all together. In this final chapter Stephen gives a few examples of how to design a few command dashboards according to his vision. Here he also gives yet another few examples of very bad designed dashboards to illustrate his points.
+    Chapter 5 demonstrates the principle of eloquence through simplicity, or in other words: keep it simple stupid. It talks about how to reduce the "noise" in a dashboard so that only the important aspects remain. Chapter 6 gives an overview of available chart/display types and presents the bullet graph – invented by Stephen himself – which is a very efficient display medium. Chapter 7 talks about usability of your dashboards and chapter 8 brings it all together. In this final chapter Stephen gives a few examples of how to design a few command dashboards according to his vision. Here he also gives yet another few examples of very bad designed dashboards to illustrate his points.
   </p>
   
   <p style="text-align: justify">
-    I absolutely recommend this book to anyone who considers reading about data visualization in general. Every self-respecting BI professional should have read this book. The only criticism I can come up with is that the book focuses a lot on “the bad”, or how not to do things. Perhaps a little bit more focus on how to design properly would have been welcome. But overall, a very great book. In August 2013 <a href="http://www.perceptualedge.com/blog/?p=1656">a second edition of the book</a> should launch, and I definitely will keep my eye on that one.
+    I absolutely recommend this book to anyone who considers reading about data visualization in general. Every self-respecting BI professional should have read this book. The only criticism I can come up with is that the book focuses a lot on "the bad", or how not to do things. Perhaps a little bit more focus on how to design properly would have been welcome. But overall, a very great book. In August 2013 <a href="http://www.perceptualedge.com/blog/?p=1656">a second edition of the book</a> should launch, and I definitely will keep my eye on that one.
   </p>
   
   <p style="text-align: justify">
@@ -60,7 +60,7 @@ tags:
   </div>
   
   <p style="text-align: justify">
-    The second book I read was written by Andy Kirk (<a href="http://www.visualisingdata.com/">blog</a> | <a href="https://twitter.com/visualisingdata">twitter</a>), who also gives training classes about data visualization. In contrast with the previous book, this one talks about the design approach on how to create visualizations. In other words, it describes a project-based methodology on how to tackle the process of creating a visualization. This might make the book a bit more “dry” to read, but that doesn't make it less interesting.
+    The second book I read was written by Andy Kirk (<a href="http://www.visualisingdata.com/">blog</a> | <a href="https://twitter.com/visualisingdata">twitter</a>), who also gives training classes about data visualization. In contrast with the previous book, this one talks about the design approach on how to create visualizations. In other words, it describes a project-based methodology on how to tackle the process of creating a visualization. This might make the book a bit more "dry" to read, but that doesn't make it less interesting.
   </p>
   
   <p style="text-align: justify">

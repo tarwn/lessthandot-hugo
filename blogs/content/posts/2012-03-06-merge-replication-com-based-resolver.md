@@ -6,7 +6,7 @@ date: 2012-03-06T10:20:00+00:00
 ID: 1546
 excerpt: |
   Troubleshooting Methodolgy
-  One of my favorite books is, “Troubleshooting SQL Server – A Guide for the Accidental DBA”.  I may have helped author the book but I also rely on the book and the other authors to remind me just how important troubleshooting&hellip;
+  One of my favorite books is, "Troubleshooting SQL Server – A Guide for the Accidental DBA".  I may have helped author the book but I also rely on the book and the other authors to remind me just how important troubleshooting&hellip;
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/merge-replication-com-based-resolver/
 views:
   - 17872
@@ -19,7 +19,7 @@ categories:
 ---
 **Troubleshooting Methodolgy**
 
-One of my favorite books is, “[Troubleshooting SQL Server – A Guide for the Accidental DBA][1]”.  I may have helped author the book but I also rely on the book and the other authors to remind me just how important troubleshooting as a distinct set of tasks with parameters and means to deductions is.  The book has a great deal of content in terms of SQL Server performance paths that start from a problem andend in a resolution.  All of this content is absolutely invaluable to both beginning and seasoned DBAs.  One of my favorite chapters in the book, Chapter 1: A Performance Troubleshooting Methodology, truly grasps a concept that can be followed, not only by DBAs, but by any professional working on a specific problem.
+One of my favorite books is, "[Troubleshooting SQL Server – A Guide for the Accidental DBA][1]".  I may have helped author the book but I also rely on the book and the other authors to remind me just how important troubleshooting as a distinct set of tasks with parameters and means to deductions is.  The book has a great deal of content in terms of SQL Server performance paths that start from a problem andend in a resolution.  All of this content is absolutely invaluable to both beginning and seasoned DBAs.  One of my favorite chapters in the book, Chapter 1: A Performance Troubleshooting Methodology, truly grasps a concept that can be followed, not only by DBAs, but by any professional working on a specific problem.
 
  
 
@@ -67,13 +67,13 @@ Once the review of the il file was performed and the parameter changes from Doug
 
 A copy of replrec.dll was obtained prior to SP3 being applied and a replrec.dll after SP3 was applied.  Running the following commands genearted the il files for each.
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp “C:VMSetupback date replrecreplrec.dll” /OUT:SQLCOM_Backdate.dll
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp "C:VMSetupback date replrecreplrec.dll" /OUT:SQLCOM_Backdate.dll
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp “C:VMSetupreplrec.dll” /OUT:SQLCOM_Current.dll
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>tlbimp "C:VMSetupreplrec.dll" /OUT:SQLCOM_Current.dll
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm “SQLCOM\_backdate.dll” /OUT=SQLCOM\_backdate.il
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm "SQLCOM\_backdate.dll" /OUT=SQLCOM\_backdate.il
 
-c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm “SQLCOM\_Current.dll” /OUT=SQLCOM\_current.il
+c:Program Files (x86)Microsoft Visual Studio 10.0VC>ildasm "SQLCOM\_Current.dll" /OUT=SQLCOM\_current.il
 
 Comparing the contents of the SQLCOM\_backdate.il and SQLCOM\_current.il files reveals the primary difference in the current replrec.dll and the post dated replrec.dll being the method SetColumnStatus. It did not exist in the current replrec.dll, but was in the backdated replrec.dll file.
 
@@ -123,7 +123,7 @@ As shown below in steps where a subscription was synchronizing successfully, SP3
 
 **Conclusion**
 
-This article shows an exact method to resolve the case when COM interfaces are used with Merge Replication and the SP3 version of replrec.dll is applied to a SQL Server 2008 instance.  It also shows that the troubleshooting methodologies and 4-step process outlined are critical to coming to a sound and stable solution to any problem.  These steps and Chapter 1 from “[Troubleshooting SQL Server – A Guide for the Accidental DBA][1]” may be directed to other steps to resolve SQL Server problems, but they truly can be used with any administration event where a problem requires a step-by-stp process to find a resolution.  The resolution is then well documented and put in place to allow further transactions to continue as the business needs them.
+This article shows an exact method to resolve the case when COM interfaces are used with Merge Replication and the SP3 version of replrec.dll is applied to a SQL Server 2008 instance.  It also shows that the troubleshooting methodologies and 4-step process outlined are critical to coming to a sound and stable solution to any problem.  These steps and Chapter 1 from "[Troubleshooting SQL Server – A Guide for the Accidental DBA][1]" may be directed to other steps to resolve SQL Server problems, but they truly can be used with any administration event where a problem requires a step-by-stp process to find a resolution.  The resolution is then well documented and put in place to allow further transactions to continue as the business needs them.
 
  [1]: http://www.simple-talk.com/books/sql-books/troubleshooting-sql-server-a-guide-for-the-accidental-dba/
  [2]: http://www.replicationanswers.com/CustomResolver.asp

@@ -225,7 +225,7 @@ And have a look at the result:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB7.JPG?mtime=1358775445"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB7.JPG?mtime=1358775445" width="919" height="125" /></a>
 </div>
 
-Now we see that executing the second Stored Procedure also created 2 Executions Plans: 1 for the Stored Procedure “TwoProcs” and one for the Stored Procedure “EmpCntCity” that was effectively executed. But we see that there was no Execution Plan created for the Stored Procedure “OrderAmountYear”. And this Execution Plan was more complex than the Execution Plan of our “TwoProcs” Stored Procedure. We can also see that the sum of the sizes of the 2 Execution Plans (65536 + 16384 = 81920) is still smaller than the Execution Plan of the “TwoPlans” Stored Procedure (98304).
+Now we see that executing the second Stored Procedure also created 2 Executions Plans: 1 for the Stored Procedure "TwoProcs" and one for the Stored Procedure "EmpCntCity" that was effectively executed. But we see that there was no Execution Plan created for the Stored Procedure "OrderAmountYear". And this Execution Plan was more complex than the Execution Plan of our "TwoProcs" Stored Procedure. We can also see that the sum of the sizes of the 2 Execution Plans (65536 + 16384 = 81920) is still smaller than the Execution Plan of the "TwoPlans" Stored Procedure (98304).
 
 **Conclusion**
   

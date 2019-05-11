@@ -37,7 +37,7 @@ While I started out with credentials stored directly in the `LoginUser` Document
   </p>
 </div>
 
-In this post, that separation will start paying off, as it will allow us to add API key entries for the user and easily “revoke” them by switching their authentication type from “APIKey” to “RevokedAPIKey”, keeping the data available for audits but ensuring it's no longer valid for API authentication.
+In this post, that separation will start paying off, as it will allow us to add API key entries for the user and easily "revoke" them by switching their authentication type from "APIKey" to "RevokedAPIKey", keeping the data available for audits but ensuring it's no longer valid for API authentication.
 
 <div class="note-area">
   Posts in this series:</p> 
@@ -184,7 +184,7 @@ The AddKey view is a basic 1-field form (included more to show you I don't have 
 </div>
 ```
 
-And once it's created, we then show it to you with “ShowKey”:
+And once it's created, we then show it to you with "ShowKey":
 
 [SampleCosmosCore2App/Views/User/ShowKey.cshtml][5]
 
@@ -432,7 +432,7 @@ public async Task<RevocationDetails> RevokeAuthenticationAsync(string userId, st
   </p>
   
   <p>
-    I recognize that people really like them, but it misleads the next developer and makes it easy to introduce bugs when you're adding or changing “required” fields.
+    I recognize that people really like them, but it misleads the next developer and makes it easy to introduce bugs when you're adding or changing "required" fields.
   </p>
 </div>
 
@@ -451,7 +451,7 @@ public enum AuthenticationScheme
 First we add the two new Authentication types to the enum.
 
 <div class="note-area">
-  I really shouldn't have named this enum “AuthenticationScheme”, since that has a specific meaning for ASP.Net Core 2 already, sorry about that. Future refactor opportunity.
+  I really shouldn't have named this enum "AuthenticationScheme", since that has a specific meaning for ASP.Net Core 2 already, sorry about that. Future refactor opportunity.
 </div>
 
 
@@ -528,7 +528,7 @@ And we can revoke one of the keys easily:
   </p>
 </div>
 
-And here it is in Cosmos DB Data Explorer, with the poorly named “Scheme” property indicating “3”, which is “RevokedAPIKey”:
+And here it is in Cosmos DB Data Explorer, with the poorly named "Scheme" property indicating "3", which is "RevokedAPIKey":
 
 <div id="attachment_9207" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png" alt="Viewing Revoked API Key in Cosmos DB Data Explorer" width="600" height="236" class="size-medium-width wp-image-9207" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-300x118.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-768x302.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-763x300.png 763w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306.png 885w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -603,7 +603,7 @@ public class CustomMembershipAPIAuthHandler : AuthenticationHandler<CustomMember
     // ...
 }
 ```
-Notice we've added the concept of a “OneTimeLogin” to `ICustomMembership`. This will lead to a membership refactor to make it clearer which methods are relevant to “Interactive” logins and which are relevant to “OneTimeLogin” types like API request authentication.
+Notice we've added the concept of a "OneTimeLogin" to `ICustomMembership`. This will lead to a membership refactor to make it clearer which methods are relevant to "Interactive" logins and which are relevant to "OneTimeLogin" types like API request authentication.
 
 On top of having logic to look at handle Authenticate requests, we also want to add logic to handle Challenge and Forbidden requests. In this case, we are going to add a nice `WWW-Authenticate` header before letting the base class send it back as a 401, which is consistent with how most APIs handle challenges. We're also going to just let the base class handle the Forbidden cases as designed.
 
@@ -657,7 +657,7 @@ public void ConfigureServices(IServiceCollection services)
     });
 }
 ```
-First we make a one line addition to the `AddCustomMembershipAPIAuth` Extension method, passing in a `Scheme` and `Realm`. Next we add in a new “APIAccessOnly” policy that we will use to enforce API Access authentication only for API endpoints, which we can do next.
+First we make a one line addition to the `AddCustomMembershipAPIAuth` Extension method, passing in a `Scheme` and `Realm`. Next we add in a new "APIAccessOnly" policy that we will use to enforce API Access authentication only for API endpoints, which we can do next.
 
 [SampleCosmosCore2App/Controllers/ValuesController.cs][13]
 ```csharp
@@ -708,7 +708,7 @@ public async Task<ClaimsPrincipal> GetOneTimeLoginAsync(string scheme, string us
     return new ClaimsPrincipal(claimsIdentity);
 }
 ```
-Currently this method accepts an authentication scheme for the “OneTimeLogin”, later this will be refactored so that the membership class supports a separate “InteractiveAuthenticationScheme” and “OneTimeLoginScheme” that are configured in Startup and they will consistently set either `userId` and `userAuthId` claims or `userId` and `sessionid` claims.
+Currently this method accepts an authentication scheme for the "OneTimeLogin", later this will be refactored so that the membership class supports a separate "InteractiveAuthenticationScheme" and "OneTimeLoginScheme" that are configured in Startup and they will consistently set either `userId` and `userAuthId` claims or `userId` and `sessionid` claims.
 
 That's all we needed! Let's try it out with [postman][15].
 

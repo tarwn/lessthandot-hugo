@@ -20,7 +20,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  I finished my first book of this year and here's the review! After I finished the newest edition of Ralph Kimball's Data Warehouse Toolkit, a senior colleague of mine recommended the book <a href="http://www.amazon.com/Star-Schema-The-Complete-Reference/dp/0071744320">Star Schema The Complete Reference</a> by Christopher Adamson. To be honest, I had never heard about it. But was I wrong: this book is an absolute must read for every data warehouse professional who takes himself/herself seriously. The book is extremely well written and it explains the concepts of star schemas (hence the title of course) very thoroughly with great detailed examples. I would even go as far by proclaiming that I like this book better than the “Toolkit”. If I had to choose only one book to take with me on new projects, it would be this one.
+  I finished my first book of this year and here's the review! After I finished the newest edition of Ralph Kimball's Data Warehouse Toolkit, a senior colleague of mine recommended the book <a href="http://www.amazon.com/Star-Schema-The-Complete-Reference/dp/0071744320">Star Schema The Complete Reference</a> by Christopher Adamson. To be honest, I had never heard about it. But was I wrong: this book is an absolute must read for every data warehouse professional who takes himself/herself seriously. The book is extremely well written and it explains the concepts of star schemas (hence the title of course) very thoroughly with great detailed examples. I would even go as far by proclaiming that I like this book better than the "Toolkit". If I had to choose only one book to take with me on new projects, it would be this one.
 </p>
 
 <p style="text-align: justify">

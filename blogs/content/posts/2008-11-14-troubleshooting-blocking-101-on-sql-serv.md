@@ -25,7 +25,7 @@ First I recemmend looking at setting the threshold. You can read more on that an
 
 For now let's be old fassion and cheap...
 
-First query the master.dbo.sysprocesses view. There is a column named “blocked”. If the value is 1 then you have blocking going on. So if you wanted to do something really simple you could create a job that runs to check for this and send an email out to you.
+First query the master.dbo.sysprocesses view. There is a column named "blocked". If the value is 1 then you have blocking going on. So if you wanted to do something really simple you could create a job that runs to check for this and send an email out to you.
 
 ```sql
 Declare @body varchar(1000)
@@ -66,7 +66,7 @@ now we can grab the text
 ```sql
 select * from  sys.dm_exec_sql_text(0x02000000E7CB3C0ADF13F985EC06EB70C8FD4EB6F9F686BA) 
 ```
-which returned “select * from sys.dm\_exec\_requests”
+which returned "select * from sys.dm\_exec\_requests"
 
 We could also use a CROSS APPLY to the sys.dm_exec-connections to grab all the SQL text like
 

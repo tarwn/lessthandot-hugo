@@ -23,7 +23,7 @@ A major point of failure in a full recovery model is not testing your backups. Y
 
   1. Test restoring full backups
   2. Test applying differential and transaction log backups
-  3. Check header information on all backups. To do this you can submit to a table for historic purposes the results from RESTORE WITH HEADERONLY, “RESTORE HEADERONLY FROM DISK = BackupFile.bak'”
+  3. Check header information on all backups. To do this you can submit to a table for historic purposes the results from RESTORE WITH HEADERONLY, "RESTORE HEADERONLY FROM DISK = BackupFile.bak'"
   4. Push testing further than one time restore. Automate your RESTORE tests either daily, weekly or what your resources permit. Remember, just because you go on vacation does not mean your methods change and your duties go away.
   5. Document the results and let management know of those results with either simple reporting results of utilizing SSRS for subscription automation.
 

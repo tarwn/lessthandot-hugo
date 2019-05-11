@@ -96,7 +96,7 @@ WSC		Web service consumer
 XP		extended stored procedure
 </pre>
 
-Here are two examples. Both of these generate DDL for the primary and unique keys of all the tables in a database that begin with “PK”:
+Here are two examples. Both of these generate DDL for the primary and unique keys of all the tables in a database that begin with "PK":
 
 _ddlgen -Ulogin -Ppassword -TKC -Ndbname.%.%.PK%_
 
@@ -127,7 +127,7 @@ One thing that bcp does not have in Sybase is the _queryout_, you can however cr
 
 ## Automatic Recovery
 
-This was mostly about the log, dirty pages, when checkpoints occur, talking about the “trunc log on chkpt” option. Discussed was what happens when recovery kicks in, what happens to committed and uncommitted transaction, how to make recovery less long. Sybase doesn't have the concept of fast recovery, the database is not available until all the transactions have been rolled forward or rolled back. There is a way to specify which databases you want recovered first after the system databases have been recovered, you do this with the sp\_dbrecovery\_order proc
+This was mostly about the log, dirty pages, when checkpoints occur, talking about the "trunc log on chkpt" option. Discussed was what happens when recovery kicks in, what happens to committed and uncommitted transaction, how to make recovery less long. Sybase doesn't have the concept of fast recovery, the database is not available until all the transactions have been rolled forward or rolled back. There is a way to specify which databases you want recovered first after the system databases have been recovered, you do this with the sp\_dbrecovery\_order proc
 
 **sp\_dbrecovery\_order**
 

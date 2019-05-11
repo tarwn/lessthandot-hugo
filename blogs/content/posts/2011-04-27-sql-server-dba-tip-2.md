@@ -53,7 +53,7 @@ When RAID levels are chosen, testing the performance before actually using your 
 
 **Space Considerations**
 
-Each file that is part of the SQL Server installation requires specific space considerations.  Although the term of, “Disk is Cheap” is true, a lot of teams still have difficulty requesting additional disk simply to have it available for future expansion.  There is a need for DBA teams to make a sound case for the expense.  Teams can do that by outlining the possible growth of each specific file.
+Each file that is part of the SQL Server installation requires specific space considerations.  Although the term of, "Disk is Cheap" is true, a lot of teams still have difficulty requesting additional disk simply to have it available for future expansion.  There is a need for DBA teams to make a sound case for the expense.  Teams can do that by outlining the possible growth of each specific file.
 
 Log file sizing <span style="text-decoration: line-through;">is</span> can be done, in an extreme generalization, by determining the largest table (or Clustered Index) that exists on the database and doubling it.  This prevents growth concerns with the logs while index maintenance is being performed.  Further considerations for normal import operations can also factor into sizing log files.  This <span style="text-decoration: line-through;">is</span> can prove to be useful in determining the amount of disk to request to support log files.
 

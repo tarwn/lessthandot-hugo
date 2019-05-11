@@ -15,19 +15,19 @@ categories:
   - XHTML and CSS
 
 ---
-I decided that I wanted to provide a “live chat” link on my website so I had a look around for what software I could use to do it. There were quite a few good options, but none that were good enough for me and free. So, I had a look into using my MSN account which turned out to be quite easy.
+I decided that I wanted to provide a "live chat" link on my website so I had a look around for what software I could use to do it. There were quite a few good options, but none that were good enough for me and free. So, I had a look into using my MSN account which turned out to be quite easy.
 
 First off, you will need to sign in and go to:
 
 http://settings.messenger.live.com/applications/WebSettings.aspx
 
-Then, check the box that says “Allow anyone on the web to see my presence and send me messages.”:
+Then, check the box that says "Allow anyone on the web to see my presence and send me messages.":
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/WebDev/MSN1.gif" alt="" title="" width="751" height="217" />
 </div>
 
-Then, go to the “Create HTML” link on the left hand side of the page and choose “Status icon” from the “Choose which control you want to display on your page” section:
+Then, go to the "Create HTML" link on the left hand side of the page and choose "Status icon" from the "Choose which control you want to display on your page" section:
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/WebDev/MSN2.gif" alt="" title="" width="628" height="392" />
@@ -39,7 +39,7 @@ You will then be shown a small snippet of HTML that you can use to enter onto yo
   <img src="/wp-content/uploads/blogs/WebDev/MSN3.gif" alt="" title="" width="713" height="134" />
 </div>
 
-What we need to do is to use the URL from the “src” attribute in the above link, and in my case it looked like:
+What we need to do is to use the URL from the "src" attribute in the above link, and in my case it looked like:
   
 _
   
@@ -81,6 +81,6 @@ Public Function IsOnline() As Boolean
 ```
 So, as you can see from above, if the number of entries is less than 64, this dictates that I'm offline. Anything else, and I'm one of the other status' which as far as I'm concerned in this case makes me online and available.
 
-To see it in action, have a look at the “Live Chat” link in the footer of [my website][1].
+To see it in action, have a look at the "Live Chat" link in the footer of [my website][1].
 
  [1]: http://www.mdssolutions.co.uk

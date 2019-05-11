@@ -22,7 +22,7 @@ Prior to being a full-fledged DBA, I was a SQL Developer for a Warehouse Managem
 
 I was just making the move from SQL Developer to DBA when I first learned of Idera's Diagnostic Manager.  My first task to was to learn more about this product that the DBA who I was replacing convinced my new boss to buy 10 licenses of.
 
-So when I learned that Diagnostic Manager would record the state of the SQL Instance every “x” minutes (user defined), I was very excited.  This meant that I could go back in time to see what was happening during the “the system was slow between 5:00 and 5:30 yesterday morning”.
+So when I learned that Diagnostic Manager would record the state of the SQL Instance every "x" minutes (user defined), I was very excited.  This meant that I could go back in time to see what was happening during the "the system was slow between 5:00 and 5:30 yesterday morning".
 
 The next time I saw an e-mail asking what happened that morning around 4:00AM, I jumped into action.  I opened Diagnostic Manager and clicked on the SQL Instance in question and hit the History Browser window:
 
@@ -44,11 +44,11 @@ The next time I saw an e-mail asking what happened that morning around 4:00AM, I
 
 After looking around for what felt like hours, I sent Idera's Support an e-mail.  Idera's Support is top notch.  I got a reply within an hour with the exact details that I needed.
 
-If you notice, in the above screenshot there is a blue link right below the Calendar that says “Between 8:00 AM and 5:00 PM”.  If you click on that link you will get this screen:
+If you notice, in the above screenshot there is a blue link right below the Calendar that says "Between 8:00 AM and 5:00 PM".  If you click on that link you will get this screen:
 
 [<img src="/wp-content/uploads/users/kconan/DM - History Browser Options.jpg?mtime=1331600726" alt="" width="308" height="218" />][2]
 
-Like most people, we are a 24/7/365 shop and I need to be able to look at snapshots from any point of time.  So I chose the top option “Show all snapshots”.  Now I can see all of my snapshots!
+Like most people, we are a 24/7/365 shop and I need to be able to look at snapshots from any point of time.  So I chose the top option "Show all snapshots".  Now I can see all of my snapshots!
 
 I encourage you to learn more about Idera and to start a free trial of Diagnostic Manager.
 

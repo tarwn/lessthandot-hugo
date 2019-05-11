@@ -30,9 +30,9 @@ This is the final post in a multi-part series on my Continuous Delivery pipeline
 
 ## The Dashboard
 
-Early on in the project I found a “Build Pipeline” plugin for Jenkins and started looking into it. Before finding this, I was expecting I would have to write my own dashboard for visualization and triggering manual deployments. Luckily [Centrum Systems][3] has already done the hard work for us in creating and making available the “Build Pipeline” plugin.
+Early on in the project I found a "Build Pipeline" plugin for Jenkins and started looking into it. Before finding this, I was expecting I would have to write my own dashboard for visualization and triggering manual deployments. Luckily [Centrum Systems][3] has already done the hard work for us in creating and making available the "Build Pipeline" plugin.
 
-As with other plugins, the “Build Pipeline” plugin is available through the “Available Plugins” menu in Jenkins. This plugin is what's known as a “View” plugin. It allows us to generate a new view of the build data on our dashboard, then layers additional functionality and available configuration values into the jobs.
+As with other plugins, the "Build Pipeline" plugin is available through the "Available Plugins" menu in Jenkins. This plugin is what's known as a "View" plugin. It allows us to generate a new view of the build data on our dashboard, then layers additional functionality and available configuration values into the jobs.
 
 The configuration instructions on [the Build Pipeline Plugin page][4] provide all the information that is necessary to get started.
 
@@ -46,7 +46,7 @@ In the initial setup I have provided a name and title and, most importantly, sel
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_2step_lg.png" title="Larger view" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_2step.png" title="Pipeline Dashboard - CI and Interface Tests" /></a><br /> Pipeline Dashboard – CI and Interface Tests
 </div>
 
-The pipeline dashboard shows me the two steps (left to right) of my current pipeline and the trigger on the left side (either the Hg revision number or “No revision” for manual builds). Inside each tile is the name of the job, date, and duration. Each tile also links to the details for the specific run.
+The pipeline dashboard shows me the two steps (left to right) of my current pipeline and the trigger on the left side (either the Hg revision number or "No revision" for manual builds). Inside each tile is the name of the job, date, and duration. Each tile also links to the details for the specific run.
 
 ### Manually Execute Downstream Jobs
 
@@ -74,11 +74,11 @@ The QA and Production deployment steps are going to be very nearly the same. Bot
 
 ### Creating the Deployment Jobs
 
-To start with I create the empty “ASPNet MVC Music Store Deploy to QA” and “ASPNet MVC Music Store Deploy to Production” jobs in Jenkins. Returning to the Automated Interface job, I set the “Manually Execute Downstream Project” to my new QA job. In the QA job, I set the value to my Production job.
+To start with I create the empty "ASPNet MVC Music Store Deploy to QA" and "ASPNet MVC Music Store Deploy to Production" jobs in Jenkins. Returning to the Automated Interface job, I set the "Manually Execute Downstream Project" to my new QA job. In the QA job, I set the value to my Production job.
 
 And I check twitter in both, because it's fun to see all the tweets.
 
-Now, either because the environment variables are passed from the first job to all subsequent jobs or because there's some magic that happens when a build triggers a second one, I still have access to “SOURCE\_BUILD\_NUMBER” with the CI job's build number. This is good, because I can use almost exactly the same settings as the relevant steps in the Interface test job to build out these two new jobs:
+Now, either because the environment variables are passed from the first job to all subsequent jobs or because there's some magic that happens when a build triggers a second one, I still have access to "SOURCE\_BUILD\_NUMBER" with the CI job's build number. This is good, because I can use almost exactly the same settings as the relevant steps in the Interface test job to build out these two new jobs:
 
   * Windows Batch Step to delete local files: del /s /q *
   * Copy Artifacts from another project, by number using SOURCE\_BUILD\_NUMBER
@@ -102,7 +102,7 @@ Because these jobs both rely on their upstream jobs to provide the necessary inf
 
 ## The Pipeline
 
-With the addition of “manually execute deployments” to the QA and Production environment, I've completed all the pieces I outlined in my original pipeline plan.
+With the addition of "manually execute deployments" to the QA and Production environment, I've completed all the pieces I outlined in my original pipeline plan.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Overview.png" title="Delivery Pipeline" /><br /> Delivery Pipeline

@@ -20,7 +20,7 @@ categories:
   <a href="/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894" width="150" height="165" align="left" /></a>
 </div>
 
-What is Microsoft Business Intelligence? I'm not asked this question very often because it's typically an assumption. As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different ways; I ask it in almost every interview I perform that has the word, “Data” in it. The reasoning for asking that question isn't directly to say a person is wrong or right but to see the range they've taken on in knowing all the factors that lead to end solutions in data. 
+What is Microsoft Business Intelligence? I'm not asked this question very often because it's typically an assumption. As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different ways; I ask it in almost every interview I perform that has the word, "Data" in it. The reasoning for asking that question isn't directly to say a person is wrong or right but to see the range they've taken on in knowing all the factors that lead to end solutions in data. 
 
  
 

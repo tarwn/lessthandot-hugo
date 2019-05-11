@@ -36,7 +36,7 @@ This setup is one of the more common combinations of availability groups and rep
 
 Focusing back on the DR replica; if the asynchronous state becomes too far out of sync or the DR replica goes offline, replication will begin to fail with the following error.
 
-“Replicated transactions are waiting for next Log backup or for mirroring partner to catch up.”
+"Replicated transactions are waiting for next Log backup or for mirroring partner to catch up."
 
 Which is found by querying the [MSLogreader_History][2] table
 

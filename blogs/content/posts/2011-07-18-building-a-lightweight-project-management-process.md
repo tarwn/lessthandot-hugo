@@ -35,9 +35,9 @@ The purpose of process is to provide consistency and ground rules. A good proces
 
 I know, that sounds odd (and many of you probably think you are totally against having any process), so lets try a comparison.
 
-Say we're working on a software development project and we are required to deliver code documentation as part of the project. Once upon a time this would have required a great deal of time to put together, keep up to date as changes occurred, etc. It probably would have been a full time job on any team over 3-4 developers. Then someone came along and said “Look, if we comment every function like so, then I can write a script to extract those comments and automatically build the documentation.”
+Say we're working on a software development project and we are required to deliver code documentation as part of the project. Once upon a time this would have required a great deal of time to put together, keep up to date as changes occurred, etc. It probably would have been a full time job on any team over 3-4 developers. Then someone came along and said "Look, if we comment every function like so, then I can write a script to extract those comments and automatically build the documentation."
 
-In the software world we call this a “convention”. Incorporating conventions into our practice allows us to automate or get some extra value out of something simply because it's been done in a consistent manner (possibly with an extra step or two sprinkled on top). 
+In the software world we call this a "convention". Incorporating conventions into our practice allows us to automate or get some extra value out of something simply because it's been done in a consistent manner (possibly with an extra step or two sprinkled on top). 
 
 Process is not inherently bad. Like writing software, there is never only one answer and even using the latest and greatest of tools you can build a ghastly, unmaintainable mess. 
 
@@ -66,13 +66,13 @@ So this is my bare minimum set of requirements from my process, my focus.
       * Expected to convert some existing components for wider use w/ my portion without disrupting their existing functions
   * No automated testing – the framework is challenging for unit testing
   * Live environment – though my pieces of the system would not be live for weeks or months, the system is deployed weekly and existing portions would be used and revised
-  * I am a team of one – limits flexibility, easier to get “stuck in the mud” without someone to pull me out, limited to my own experiences 
+  * I am a team of one – limits flexibility, easier to get "stuck in the mud" without someone to pull me out, limited to my own experiences 
 
 So having a focus and an understanding of my initial challenges, I built an initial process.
 
 ## The End Process
 
-From the focus and challenges above, I pulled together a minimal process. Let's look at that process then circle back around to the “why was that piece chosen”. This process borrows heavily from Lean and Scrum processes, incorporating the idea of iterations (or sprints), a visual board, and a burndown chart. 
+From the focus and challenges above, I pulled together a minimal process. Let's look at that process then circle back around to the "why was that piece chosen". This process borrows heavily from Lean and Scrum processes, incorporating the idea of iterations (or sprints), a visual board, and a burndown chart. 
 
 I started by identifying the major features we were looking for in the system. Once I had these (through a series of conversations and prototyping), I had my manager prioritize them and help group them into potential releases. Initially this proved to be 3 major releases and a few extra features that would be prioritized after the last release.
 

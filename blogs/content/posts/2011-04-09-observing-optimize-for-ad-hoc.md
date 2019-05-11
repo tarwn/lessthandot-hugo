@@ -28,7 +28,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: &amp;amp; font-size: 8pt;">I've been watching this one particular server that has been throwing alerts for high physical memory usage from Red Gate's SQL Monitoring tool.<span style="mso-spacerun: yes;">  </span>I was discussing this with a friend of mine, Clayton Hoyt and he mentioned that I might want to look at the “Optimize for Ad Hoc Workloads” advanced server configuration options.<span style="mso-spacerun: yes;">  </span>I took him up on his advice and googled for the “Optimize For Ad Hoc Workloads” and “SQLSkills”.<span style="mso-spacerun: yes;">  </span>I found a wonderful article from Kimberly Tripp on just this topic.<span style="mso-spacerun: yes;">  </span>Here is the link.</span></strong>
+  <strong style="mso-bidi-font-weight: normal;"><span style="font-family: &amp;amp; font-size: 8pt;">I've been watching this one particular server that has been throwing alerts for high physical memory usage from Red Gate's SQL Monitoring tool.<span style="mso-spacerun: yes;">  </span>I was discussing this with a friend of mine, Clayton Hoyt and he mentioned that I might want to look at the "Optimize for Ad Hoc Workloads" advanced server configuration options.<span style="mso-spacerun: yes;">  </span>I took him up on his advice and googled for the "Optimize For Ad Hoc Workloads" and "SQLSkills".<span style="mso-spacerun: yes;">  </span>I found a wonderful article from Kimberly Tripp on just this topic.<span style="mso-spacerun: yes;">  </span>Here is the link.</span></strong>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
@@ -152,7 +152,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">Then I turned on “Optimized for Ad Hoc Workload” and watched the total number of plans decrease along with the total amount of space depleat.<span style="mso-spacerun: yes;">  </span>I kept monitoring during this time as well using SQL Monitor and the only thing that I noticed was the Buffer Free Pages dropped from 1.7 million to .7 million during this 4 hours I spent watching this server.</span>
+  <span style="font-family: &amp;amp; font-size: 8pt; mso-no-proof: yes;">Then I turned on "Optimized for Ad Hoc Workload" and watched the total number of plans decrease along with the total amount of space depleat.<span style="mso-spacerun: yes;">  </span>I kept monitoring during this time as well using SQL Monitor and the only thing that I noticed was the Buffer Free Pages dropped from 1.7 million to .7 million during this 4 hours I spent watching this server.</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -328,7 +328,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">
-  <span style="font-family: &amp;amp; font-size: 8pt;">Conclusion:<span style="mso-spacerun: yes;">  </span>The total number of Adhoc plans in cache were higher than the original baseline, however, the space being used for Adhoc plans was significantly less with the “Optimize For Ad Hoc Workloads” configuration option set on.<span style="mso-spacerun: yes;">  </span>Because this server houses databases that are accessed with an unusual amount of Adhoc queries I will leave this option on.</span>
+  <span style="font-family: &amp;amp; font-size: 8pt;">Conclusion:<span style="mso-spacerun: yes;">  </span>The total number of Adhoc plans in cache were higher than the original baseline, however, the space being used for Adhoc plans was significantly less with the "Optimize For Ad Hoc Workloads" configuration option set on.<span style="mso-spacerun: yes;">  </span>Because this server houses databases that are accessed with an unusual amount of Adhoc queries I will leave this option on.</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt;">

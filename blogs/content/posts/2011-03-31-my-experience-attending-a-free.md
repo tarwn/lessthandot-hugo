@@ -17,9 +17,9 @@ categories:
 ---
 In November 2010, before the annual PASS Summit, Brent Ozar held the first Free-Con, in Seattle WA. He invited a pretty impressive list of SQL community speakers and bloggers to talk about, well, speaking and blogging, and careers. You can read his wrap-up of it here: http://www.brentozar.com/archive/2010/11/my-latest-experiment-sqlpass-freecon/. Grant Fritchey, Kendra Little, Jeremiah Peschka, Tom LaRock, Karen Lopez, and more were there. 
 
-I remember quickly reading the post and thinking, “OK, Brent got a bunch of Those People in a room to talk about cool stuff. Must be nice.” Then I went back to working. 
+I remember quickly reading the post and thinking, "OK, Brent got a bunch of Those People in a room to talk about cool stuff. Must be nice." Then I went back to working. 
 
-Imagine my surprise when I got an email from Brent in early February saying, “I noticed you submitted to speak at SQL Saturday 67. I'm holding a Free-Con the day before. Want to come?” 
+Imagine my surprise when I got an email from Brent in early February saying, "I noticed you submitted to speak at SQL Saturday 67. I'm holding a Free-Con the day before. Want to come?" 
 
 Wait. 
 
@@ -31,7 +31,7 @@ So I told Brent I'd love to come!
 
 **The Catalyst Ranch** 
 
-We met [here][1] on Friday, March 25, the day before SQL Saturday 67. The meeting space was unbelievable. We had The Jitterbug. I was surrounded by free coffee, art supplies, toys, dress-up hats and comfy couches. I think the plan was to distract me from saying things like “SQUEEEEEEEEEE! It's GRANT F-ING FRITCHEY!” every time someone I admired walked in the room. Which happened approximately 10,000 times that day. 
+We met [here][1] on Friday, March 25, the day before SQL Saturday 67. The meeting space was unbelievable. We had The Jitterbug. I was surrounded by free coffee, art supplies, toys, dress-up hats and comfy couches. I think the plan was to distract me from saying things like "SQUEEEEEEEEEE! It's GRANT F-ING FRITCHEY!" every time someone I admired walked in the room. Which happened approximately 10,000 times that day. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/grrlgeek/SQLBarbiesSmall.jpg?mtime=1301584694"><img alt="" src="/wp-content/uploads/users/grrlgeek/SQLBarbiesSmall.jpg?mtime=1301584694" width="576" height="384" /></a>

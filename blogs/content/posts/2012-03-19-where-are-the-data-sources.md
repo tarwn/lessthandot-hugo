@@ -40,19 +40,19 @@ Next you would make a Data Source View based on the Data Source just created by 
 
 In the screen that pop's up you get the list of available Data Sources and after selecting one the Connection Manager is created.
   
-The last step is to create the Connection Manager that will be based on the Data Source. This is accomplished by right clicking in the Connection Manager pane and by selecting “New Connection From Data Source...”:
+The last step is to create the Connection Manager that will be based on the Data Source. This is accomplished by right clicking in the Connection Manager pane and by selecting "New Connection From Data Source...":
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV4.png?mtime=1332153238"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV4.png?mtime=1332153238" width="694" height="363" /></a>
 </div>
 
-To use the Data Source View a “Data Flow Task” must be created and in the task an “OLE DB Source” is used. When configuring the OLD DB Source you can finally refer to the Data Source View:
+To use the Data Source View a "Data Flow Task" must be created and in the task an "OLE DB Source" is used. When configuring the OLD DB Source you can finally refer to the Data Source View:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV6.png?mtime=1332160446"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV6.png?mtime=1332160446" width="190" height="117" /></a>
 </div>
 
-Now when I try the same scenario with the new “SQL Server Data Tools” you can immediatly see that there are no Data Sources and Data Source Views in the solution explorer:
+Now when I try the same scenario with the new "SQL Server Data Tools" you can immediatly see that there are no Data Sources and Data Source Views in the solution explorer:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV7.png?mtime=1332165228"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV7.png?mtime=1332165228" width="207" height="174" /></a>
@@ -64,7 +64,7 @@ What you can see is a Connection Managers folder. Right clicking the folder give
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV8.png?mtime=1332166288"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV8.png?mtime=1332166288" width="209" height="235" /></a>
 </div>
 
-But more important when you look at the Connection Managers pane in the package itself you'll see that there is a “(project)ConnectionManagerName” added to the package:
+But more important when you look at the Connection Managers pane in the package itself you'll see that there is a "(project)ConnectionManagerName" added to the package:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV9.png?mtime=1332166495"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DSV9.png?mtime=1332166495" width="241" height="58" /></a>

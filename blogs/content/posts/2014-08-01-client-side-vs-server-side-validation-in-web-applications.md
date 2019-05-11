@@ -13,7 +13,7 @@ categories:
   - Web Developer
 
 ---
-Validation exists to “ensure that the application is robust against all forms of input data” ([owasp.org][1]). Invalid data can cause unexpected execution errors, break assumptions elsewhere in your application, introduce errors into reporting, and even let someone hijack your service to attack others ([script injection][2], sending spam, etc). 
+Validation exists to "ensure that the application is robust against all forms of input data" ([owasp.org][1]). Invalid data can cause unexpected execution errors, break assumptions elsewhere in your application, introduce errors into reporting, and even let someone hijack your service to attack others ([script injection][2], sending spam, etc). 
 
 When we're talking about web form submission, the majority of invalid data tends to be users that missed a required field or mis-entered a strict value, like a phone number. So we have a high focus on helping the user understand and correct their input. The common question when we're building new sites is whether we build our validation on the server-side, client-side, or both. If the deadline is tight enough, it may only be a question of client-side or server-side. 
 

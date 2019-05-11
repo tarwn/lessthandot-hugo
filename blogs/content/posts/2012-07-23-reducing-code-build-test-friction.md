@@ -56,7 +56,7 @@ The Address class already has the basic properties it needs, but everything else
 
 ## Let's Go
 
-Open the solution and enable NCrunch (it finished installing, right?) by selecting it from the top menu and selecting “Enable”. For the most part you can select the defaults when it is enabling. Either select the option to enable all of your tests by default while it is going through the dialogs, or open the Tests window, make ignored tests visible (grey icon on far right) and enable tests for the two projects manually.
+Open the solution and enable NCrunch (it finished installing, right?) by selecting it from the top menu and selecting "Enable". For the most part you can select the defaults when it is enabling. Either select the option to enable all of your tests by default while it is going through the dialogs, or open the Tests window, make ignored tests visible (grey icon on far right) and enable tests for the two projects manually.
 
 Ready? Ok, moving on.
 

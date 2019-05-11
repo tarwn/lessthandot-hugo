@@ -5,7 +5,7 @@ type: post
 date: 2013-01-23T14:31:00+00:00
 ID: 1932
 excerpt: |
-  Remember this article, “Comparing the Chicago Highway System to your Disaster/Recovery”?
+  Remember this article, "Comparing the Chicago Highway System to your Disaster/Recovery"?
   
   Well, today, as with most days that I drive to the office or a client, the drive was lengthy and I started to compare the complete system of driving to a topic. &hellip;
 url: /index.php/datamgmt/datadesign/driving-predictive-analytics/
@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-Remember this article, “[Comparing the Chicago Highway System to your Disaster/Recovery][1]”?
+Remember this article, "[Comparing the Chicago Highway System to your Disaster/Recovery][1]"?
 
 <p style="text-align: center;">
    
@@ -30,7 +30,7 @@ Remember this article, “[Comparing the Chicago Highway System to your Disaster
 
  
 
-Well, today, as with most days that I drive to the office or a client, the drive was lengthy and I started to compare the complete system of driving to a topic.  This time, instead of DR, I was thinking about [predictive analytics][2].  To this day, I've been fortunate and not been in a major accident.  In fact, the only accident I was in was a bump on the bumper that didn't warrant much more than an, “I'm sorry”.   The reason for that comes from the same concept as predictive analytics follows.
+Well, today, as with most days that I drive to the office or a client, the drive was lengthy and I started to compare the complete system of driving to a topic.  This time, instead of DR, I was thinking about [predictive analytics][2].  To this day, I've been fortunate and not been in a major accident.  In fact, the only accident I was in was a bump on the bumper that didn't warrant much more than an, "I'm sorry".   The reason for that comes from the same concept as predictive analytics follows.
 
 **Predictive Driving vs. Analytics** 
 

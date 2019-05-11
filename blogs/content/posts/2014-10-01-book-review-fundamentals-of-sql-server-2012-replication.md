@@ -17,7 +17,7 @@ categories:
   
 ][1] 
 
-The description says the book “will walk you through setting up different replication scenarios. All hands-on exercises are designed with security best practices in mind.”
+The description says the book "will walk you through setting up different replication scenarios. All hands-on exercises are designed with security best practices in mind."
 
 The first chapter is a solid introduction to replication components and naming. There are a lot of moving pieces to replication – publishers, distributors, subscribers, publications, articles, subscriptions, and more. This chapter was a  good overview of these basics.
 

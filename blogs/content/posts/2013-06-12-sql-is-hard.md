@@ -25,9 +25,9 @@ But it's still a long road, and building that initial solid foundation can be a 
 
 ## The Inquisitive Coworker
 
-Over the years I've never had a good answer to the “where can I go to learn more about that” question from coworkers. There's a ton of beginner books out there, but who has the time to weed through them and figure out which ones are more dangerous than they are helpful?
+Over the years I've never had a good answer to the "where can I go to learn more about that" question from coworkers. There's a ton of beginner books out there, but who has the time to weed through them and figure out which ones are more dangerous than they are helpful?
 
-So the thought runs through my head, “How \_did\_ I learn that CROSS JOIN trick I just used?” and of course I don't remember. Except I'm willing to bet that I learned it while trying to solve a problem. It might have been from a book, from a video, from trying someone else's answer to one of Denis's SQL puzzles. The driver was the fact that I had a problem to solve and that new tool I picked up was what helped me solve it. And I later remembered it, used it again, and learned more about it because it helped me solve a problem.
+So the thought runs through my head, "How \_did\_ I learn that CROSS JOIN trick I just used?" and of course I don't remember. Except I'm willing to bet that I learned it while trying to solve a problem. It might have been from a book, from a video, from trying someone else's answer to one of Denis's SQL puzzles. The driver was the fact that I had a problem to solve and that new tool I picked up was what helped me solve it. And I later remembered it, used it again, and learned more about it because it helped me solve a problem.
 
 ## Learn by Doing
 
@@ -47,7 +47,7 @@ And thus was born the idea of [SQLisHard.com][8].
 
 It's still in the very early stages with only a single set of exercises, and I've only implemented about half of that set. There's a longer wishlist of features on a Trello board, but the initial focus here was making the core experience work. It's not as whimsical as the TryRuby site (Damnit Jim, I'm a software engineer not a web designer). Most of the fanciest features are focused on helping me choose the right improvements to make; easy deployment, anonymous usage statistics, error capturing and reporting, and so on.
 
-My list of “features I haven't gotten to yet” starts with “finish the first exercise set”. After that I have more exercise sets, both foundational and “where can I go to learn that” advanced sets, an ability to save your progress (register/login) while continuing to let people without pre-registering (or without registering at all, up front registration annoys me), more permanent pieces for the few that I took shortcuts on, alternative exercise goals so you can try several queries while learning a single step, performance improvements and retry logic 
+My list of "features I haven't gotten to yet" starts with "finish the first exercise set". After that I have more exercise sets, both foundational and "where can I go to learn that" advanced sets, an ability to save your progress (register/login) while continuing to let people without pre-registering (or without registering at all, up front registration annoys me), more permanent pieces for the few that I took shortcuts on, alternative exercise goals so you can try several queries while learning a single step, performance improvements and retry logic 
 
 But most importantly, I'm looking for feedback. Does this seem like something you would point a beginner to? When your coworker asks where they could learn to use windowing functions, could you imagine a method like this being useful?
 

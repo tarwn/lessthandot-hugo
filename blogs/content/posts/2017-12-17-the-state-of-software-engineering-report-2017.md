@@ -13,10 +13,10 @@ categories:
   - Uncategorized
 
 ---
-“It's not just about software — the <strong class="markup--strong markup--pullquote-strong">Enterprise</strong> is <strong class="markup--strong markup--pullquote-strong"><em class="markup--em markup--pullquote-em">the System”</em></strong>
+"It's not just about software — the <strong class="markup--strong markup--pullquote-strong">Enterprise</strong> is <strong class="markup--strong markup--pullquote-strong"><em class="markup--em markup--pullquote-em">the System"</em></strong>
 
 <p id="595b" class="graf graf--p graf-after--pullquote">
-  The “<em class="markup--em markup--p-em">Mastering Digital: Software Engineering Report</em>” (2017) provides analysis of detailed feedback from Architects and Engineers about their work on software projects for organisations of all types and sizes.
+  The "<em class="markup--em markup--p-em">Mastering Digital: Software Engineering Report</em>" (2017) provides analysis of detailed feedback from Architects and Engineers about their work on software projects for organisations of all types and sizes.
 </p><figure id="8b38" class="graf graf--figure graf-after--p"> 
 
 <div class="aspectRatioPlaceholder is-locked">

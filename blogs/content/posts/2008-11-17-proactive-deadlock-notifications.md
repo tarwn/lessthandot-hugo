@@ -17,14 +17,14 @@ Part of our jobs as DBA's is to be proactive on performance issues that may come
 
 Before I show you how to get SQL Server emailing you when there are problems like deadlock events, we should talk about the trace flags themselves. In simple terms trace flags are used to change the way SQL Server behaves. You can alter the way you start your database server, log events and configuration changes that you want to be a normal behavior that may not be an option to set permanently.
 
-To set a trace flag I still use the DBCC command of “DBCC TRACEON”.
+To set a trace flag I still use the DBCC command of "DBCC TRACEON".
   
 Example: 
 
 ```sql
 DBCC TRACEON (3605,1204,1222,-1)
 ```
-That is the manual way, but you can also set trace flags to start in the startup options of SQL Server by using the -T switch. So if I wanted 1204 to be turned on every time I restart my database server, I would use a “-T1204” in the startup options.
+That is the manual way, but you can also set trace flags to start in the startup options of SQL Server by using the -T switch. So if I wanted 1204 to be turned on every time I restart my database server, I would use a "-T1204" in the startup options.
   
 If you're curious to see, if you're running any trace flags, you can call a TRACESTATUS by passing in -1 as the trace flag like this
 
@@ -43,7 +43,7 @@ Explanation:
 
 I like both because to be honest I'm used to reading 1204 but 1222 has proven to give me information required that 1204 does not.
   
-Now you're setup to catch deadlocks. After the traces are running it's really just a query and a call to send the email. Every deadlock is logged as the first line of “Deadlock encountered”. Makes it pretty easy to tell if one happened. This is also why I set 1204 on. There is an xp_ command that helps you grab the error log into a result set that makes it easily queried then. That is xp_readerrorlog. Just remember you need xp enabled of course. Check surface configuration to see if it is. 
+Now you're setup to catch deadlocks. After the traces are running it's really just a query and a call to send the email. Every deadlock is logged as the first line of "Deadlock encountered". Makes it pretty easy to tell if one happened. This is also why I set 1204 on. There is an xp_ command that helps you grab the error log into a result set that makes it easily queried then. That is xp_readerrorlog. Just remember you need xp enabled of course. Check surface configuration to see if it is. 
 
 So let's get right to the small and simple script:
 

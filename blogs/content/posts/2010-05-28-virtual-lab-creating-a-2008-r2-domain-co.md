@@ -65,7 +65,7 @@ First we will want to configure the server name and then assign it a new static 
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/1_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/1_startup.png" alt="Changing the System Name" /></a><br /> Changing the System Name
 </div>
 
-After changing the name we'll open the network settings by either selecting the “Configure Networking” link on the Initial Configuration dashboard (above) or clicking the network icon in the tool tray at the bottom right, followed by “Open Network and Sharing”, and then “Change adapter settings” near the top right of the screen. With the “Network Connections” screen open we can right click the network adapter and enter the “Properties” pane. Select the “Internet Protocol Version 4” item from the list and press properties to access the IP configuration panel. 
+After changing the name we'll open the network settings by either selecting the "Configure Networking" link on the Initial Configuration dashboard (above) or clicking the network icon in the tool tray at the bottom right, followed by "Open Network and Sharing", and then "Change adapter settings" near the top right of the screen. With the "Network Connections" screen open we can right click the network adapter and enter the "Properties" pane. Select the "Internet Protocol Version 4" item from the list and press properties to access the IP configuration panel. 
 
 At this point we need to select a static IP address that isn't already in use on our network and isn't in the DHCP range for our network. After selecting an IP Address we enter the static IP address, enter the gateway server or switches address, and then enter the servers address as the primary DNS entry and our switch or external DNS as the secondary one.
 
@@ -91,7 +91,7 @@ In Windows 2008, Active Directory has expanded to take on a wider range of roles
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/0_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/0_setup.png" alt="Assigning Server Roles" /></a><br /> Assigning Server Roles
 </div>
 
-To start the installation and setup process, we will refer back to the Initial Configuration dashboard (click the pinned shortcut on the taskbar if you closed it already). Under section 3 there is a “Roles” category that will allow us to easily assign the necessary roles to our server.
+To start the installation and setup process, we will refer back to the Initial Configuration dashboard (click the pinned shortcut on the taskbar if you closed it already). Under section 3 there is a "Roles" category that will allow us to easily assign the necessary roles to our server.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/1_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/1_setup.png" alt="Assigning Server Roles" /></a><br /> Assigning Server Roles
@@ -99,7 +99,7 @@ To start the installation and setup process, we will refer back to the Initial C
 
 ### Installing the Active Directory Role
 
-The first page of the “Add Roles Wizard” presents us with some friendly reminders to set a static IP Address (check), ensure the Administrator account has a strong password (check), and make sure the server is up to date on Windows Updates (check). 
+The first page of the "Add Roles Wizard" presents us with some friendly reminders to set a static IP Address (check), ensure the Administrator account has a strong password (check), and make sure the server is up to date on Windows Updates (check). 
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/2_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/2_setup.png" alt="Assigning Server Roles" /></a><br /> Assigning Server Roles
@@ -117,13 +117,13 @@ On selecting the AD DS option the wizard runs a quick validation and notices tha
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/4_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/4_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Prerequisites
 </div>
 
-After choosing to install the prerequisite (a difficult and time consuming decision, or perhaps not) and pressing next on the main screen, we are provided with a list of “Things to Note” as well as links to additional information, saving me the time of writing and linking them up myself.
+After choosing to install the prerequisite (a difficult and time consuming decision, or perhaps not) and pressing next on the main screen, we are provided with a list of "Things to Note" as well as links to additional information, saving me the time of writing and linking them up myself.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/5_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/5_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Things to Note
 </div>
 
-A short confirmation displays the items we are installing, including the noted prerequisite above and a reminder that directory services won't truly be functional until we run “dcpromo”.
+A short confirmation displays the items we are installing, including the noted prerequisite above and a reminder that directory services won't truly be functional until we run "dcpromo".
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/6_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/6_setup.png" alt="Installing AD DS" /></a><br /> Installing AD DS – Confirmation
@@ -136,14 +136,14 @@ After the installation and verification is complete, we are presented a handy li
 </div>
 
 <div class="hint">
-  If you accidentally close the window before pressing the link or need to access dcpromo later, the start menu's run input will recognize “dcpromo” and find the requisite shortcut for you.
+  If you accidentally close the window before pressing the link or need to access dcpromo later, the start menu's run input will recognize "dcpromo" and find the requisite shortcut for you.
 </div>
 
 ### AD DS Installation Wizard (DCPromo)
 
 The dcpromo wizard will complete the installation of AD DS on the server. 
 
-On the first step we are presented with the option to “Use Advanced Mode Setup”. This option will cause several additional wizard windows to appear throughout the process that would have defaulted behind the scenes if it were not checked. Press the “advanced mode installation” hyperlink to get a help document about the additional options presented in advanced mode.
+On the first step we are presented with the option to "Use Advanced Mode Setup". This option will cause several additional wizard windows to appear throughout the process that would have defaulted behind the scenes if it were not checked. Press the "advanced mode installation" hyperlink to get a help document about the additional options presented in advanced mode.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/7_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/7_setup.png" alt="DCPromo" /></a><br /> DCPromo – Beginning
@@ -174,7 +174,7 @@ Next we'll set the functional level of our forest. The functional level defines 
 </div>
 
 <div class="hint">
-  One of the best reasons for using 2008 R2 mode is the new “Recycle Bin” option. This option keeps deleted entries in memory and provides an option to restore them, providing a bit of a safety net and reducing the potential for having to use the AD Recovery Mode to recover a deleted set of accounts or objects.
+  One of the best reasons for using 2008 R2 mode is the new "Recycle Bin" option. This option keeps deleted entries in memory and provides an option to restore them, providing a bit of a safety net and reducing the potential for having to use the AD Recovery Mode to recover a deleted set of accounts or objects.
 </div>
 
 <div class="mylab">
@@ -209,7 +209,7 @@ After a brief summary of the selected configurations and the option to export th
 
 The installer wraps up with the common Finish screen and a request to reboot.
 
-After rebooting, our “Initial Configuration Tasks” window confirms our new roles have been installed. 
+After rebooting, our "Initial Configuration Tasks" window confirms our new roles have been installed. 
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/BasicDC/16_setup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/BasicDC/16_setup.png" alt="DCPromo" /></a><br /> Initial Configuration Tasks – Roles

@@ -25,7 +25,7 @@ tags:
   - transaction log
 
 ---
-## My favorite topic, “The SHRINK!”
+## My favorite topic, "The SHRINK!"
 
 The topic really does cause pain. Shrinking a file in SQL Server is inherently a terrible action to take. However, we all know that in some cases when maintenance was never setup and recovery models were not properly chosen, the need does come up. An interesting [topic][1] came up on LTD in the forums regarding moving an overloaded and unmaintained log file to a server that had less disk space than the original. The first inclination would be to shrink the log and then backup/restore it to the new location. Seeing as the full backup consists of the data and just enough log to recover, the assumption would be that you would only get this in the new database. However, in this case, shrinking the log will not be the last step in the process. The initial size of the log will also need to change. 
 
@@ -33,7 +33,7 @@ The topic really does cause pain. Shrinking a file in SQL Server is inherently a
 
 In this case let's say we have a database that is 300MB with a transaction log that is 3000MB. 
 
-The database is a test log shipping database we will pick on named, “LOGSHIP_PUB”
+The database is a test log shipping database we will pick on named, "LOGSHIP_PUB"
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_1.gif" alt="" title="" width="628" height="134" />

@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-As I'm writing this, it's January, and I see a steady stream of “working on my annual review” tweets.
+As I'm writing this, it's January, and I see a steady stream of "working on my annual review" tweets.
 
 You want something. (We all do.) It could be a raise or a promotion at your current job, a new job, or a board position at a non-profit you love. How do you get that something? You tell people what you've already accomplished, and why you deserve more.
 

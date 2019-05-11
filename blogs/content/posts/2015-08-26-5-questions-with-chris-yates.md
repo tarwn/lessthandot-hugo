@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-It's time for me to interview another outstanding member of the SQL Server community, Chris Yates (<a href="http://t.co/lGx0ZW4YLP" target="_blank">blog </a>| <a href="https://twitter.com/YatesSQL" target="_blank">twitter </a>| <a href="https://www.linkedin.com/in/sqlyates" target="_blank">linkedin</a>). I want to say Chris and I “met” on Twitter first, but we have met in person, and he's as awesome as they come. He's always cheering someone on to reach a goal, he's always positive, and he has a wicked sense of humor. He didn't know what a <a href="http://www.culvers.com/menu-and-nutrition/butterburgers/" target="_blank">Culver's Butter Burger</a> was, but I've corrected that injustice!
+It's time for me to interview another outstanding member of the SQL Server community, Chris Yates (<a href="http://t.co/lGx0ZW4YLP" target="_blank">blog </a>| <a href="https://twitter.com/YatesSQL" target="_blank">twitter </a>| <a href="https://www.linkedin.com/in/sqlyates" target="_blank">linkedin</a>). I want to say Chris and I "met" on Twitter first, but we have met in person, and he's as awesome as they come. He's always cheering someone on to reach a goal, he's always positive, and he has a wicked sense of humor. He didn't know what a <a href="http://www.culvers.com/menu-and-nutrition/butterburgers/" target="_blank">Culver's Butter Burger</a> was, but I've corrected that injustice!
 
 I sent Chris a few questions to find out more about who he is, what he does, and how he's involved with the SQL Server community. Here we go!
 

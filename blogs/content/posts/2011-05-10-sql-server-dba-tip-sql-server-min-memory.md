@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-05-10T12:40:00+00:00
 ID: 1166
-excerpt: 'Tip 11 of this series is being added in as the topic has come up during the series on several occasions.  Specifically, the question was raised on the Twitter hash tag #SQLHELP of, “What are some good use-cases where setting min-server memory makes sens&hellip;'
+excerpt: 'Tip 11 of this series is being added in as the topic has come up during the series on several occasions.  Specifically, the question was raised on the Twitter hash tag #SQLHELP of, "What are some good use-cases where setting min-server memory makes sens&hellip;'
 url: /index.php/datamgmt/dbadmin/sql-server-dba-tip-sql-server-min-memory/
 views:
   - 4001
@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Tip 11 of this series is being added in as the topic has come up during the series on several occasions.  Specifically, the question was raised on the Twitter hash tag #SQLHELP of, “What are some good use-cases where setting min-server memory makes sense?”
+Tip 11 of this series is being added in as the topic has come up during the series on several occasions.  Specifically, the question was raised on the Twitter hash tag #SQLHELP of, "What are some good use-cases where setting min-server memory makes sense?"
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-55.png?mtime=1304943624"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-55.png?mtime=1304943624" width="93" height="92" align="left" /></a>

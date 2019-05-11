@@ -87,7 +87,7 @@ As several people saw in my CodeCamp presentation, it doesn't take long to add a
 
 Other posts in this unplanned series:
 
-  * Initial “Unit Testing Costs Too Much” post: [Unit Testing Costs Too Much][3]
+  * Initial "Unit Testing Costs Too Much" post: [Unit Testing Costs Too Much][3]
   * Code camp review and links for slides: [Raleigh Code Camp Followup][4]
   * 2x Code Followup: [Unit Testing Costs Too Much – Twice The Code = Value?][5]
   * Too Many Things to Learn: [Unit Testing Costs Too Much – Too Many Things to Learn][6]

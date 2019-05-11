@@ -29,9 +29,9 @@ Rather than just tell you about my experiences, let's build a lab to play with. 
   * You have an existing mirror without a witness (High Performance) 
   * SQL Server 2005×86 Enterprise 
   * No compression or third party tools are being used 
-  * These are on licensed developer editions. This means mirroring is disabled by default. Set trace flag 1400 in the startup in order to use mirroring in a “DEVELOPMENT” lab.* 
+  * These are on licensed developer editions. This means mirroring is disabled by default. Set trace flag 1400 in the startup in order to use mirroring in a "DEVELOPMENT" lab.* 
       1. Option 1 is add ;-T1400 to the startup in configuration manager 
-      2. Stop MSSQLSERVER and issue a, “NET START MSSQLSERVER /T1400
+      2. Stop MSSQLSERVER and issue a, "NET START MSSQLSERVER /T1400
   * Last, we are starting with clean instances with no endpoints etc... 
 
 In my test lab (local laptop ;-)) I have two instances I use for testing configurations, writing blogs etc. These are developer instances (identical to Enterprise). As we work through the lab setup, be aware that the Developer version of SQL Server allows us to use Enterprise features that are not available in the Standard version. If your production environment is Standard then there are several features you will not be able to rely on, such as true asynchronous

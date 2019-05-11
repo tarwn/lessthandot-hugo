@@ -15,7 +15,7 @@ tags:
   - sql
 
 ---
-So [Ward Pond][1] and [Michelle Ufford][2] started this SQL rap contest. I replied on twitter that I loved their raps and they told me “bring your skillz!”
+So [Ward Pond][1] and [Michelle Ufford][2] started this SQL rap contest. I replied on twitter that I loved their raps and they told me "bring your skillz!"
 
 Well I don't think I have any skillz (in that regard) so here it goes
 
@@ -99,7 +99,7 @@ So that is my pathetic attempt, In my opinion the best lyrics are from It's All 
 
 **Here are the lyrics**
   
-“It's All About The Pentiums”
+"It's All About The Pentiums"
 
 It's all about the Pentiums, baby
   
@@ -143,7 +143,7 @@ Upgrade my system at least twice a day
   
 I'm strictly plug-and-play, I ain't afraid of Y2K
   
-I'm down with Bill Gates, I call him “Money” for short
+I'm down with Bill Gates, I call him "Money" for short
   
 I phone him up at home and I make him do my tech support
   
@@ -173,7 +173,7 @@ Hey fella, I bet you're still livin' in your parents' cellar
   
 Downloadin' pictures of Sarah Michelle Gellar
   
-And postin' “Me too!” like some brain-dead AOL-er
+And postin' "Me too!" like some brain-dead AOL-er
   
 I should do the world a favor and cap you like Old Yeller
   
@@ -231,11 +231,11 @@ It does all my work without me even askin'
   
 Got a flat-screen monitor forty inches wide wide
   
-I believe that your says “Etch-A-Sketch” on the side
+I believe that your says "Etch-A-Sketch" on the side
   
 In a 32-bit world, you're a 2-bit user
   
-You've got your own newsgroup, “alt.total-loser”
+You've got your own newsgroup, "alt.total-loser"
   
 Your motherboard melts when you try to send a fax
   

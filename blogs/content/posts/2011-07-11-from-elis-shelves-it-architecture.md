@@ -48,7 +48,7 @@ Probably the hardest part of any IT initiative is explaining to executives and m
 
 <br style="clear: left" />
 
-Love or hate the term “IT/Business Alignment”, there are still thousands of IT groups and businesses that are working towards disparate goals (or no goals at all). Books like the two above, as well as many others in the EA space, can help us get a better picture of where we are, build a direction for where we should be going, improve the position and agility of our business, and provide a number of tools that are usable even in day-to-day operation.
+Love or hate the term "IT/Business Alignment", there are still thousands of IT groups and businesses that are working towards disparate goals (or no goals at all). Books like the two above, as well as many others in the EA space, can help us get a better picture of where we are, build a direction for where we should be going, improve the position and agility of our business, and provide a number of tools that are usable even in day-to-day operation.
 
  [1]: http://www.amazon.com/Architecture-Toolkit-Jane-Carbone/dp/0131473794 "IT Architecture Toolkit at Amazon"
  [2]: http://www.amazon.com/Enterprise-Architecture-Strategy-Foundation-Execution/dp/1591398398 "Enterprise Architecture as Strategy"

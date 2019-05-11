@@ -85,7 +85,7 @@ excerpt: summary of my post
 ---
 Content of my post
 ```
-The top section, or “front matter”, defines metadata used elsewhere in the build process. A “draft: true” value tells metalsmith to skip publishing the entry. The date is used when ordering the posts to decide what should show on the landing page and in the RSS feed. The “layout” property tells metalsmith to wrap this in the layouts/post.html content. The “excerpt” property is displayed on the landing page and in the RSS feed.
+The top section, or "front matter", defines metadata used elsewhere in the build process. A "draft: true" value tells metalsmith to skip publishing the entry. The date is used when ordering the posts to decide what should show on the landing page and in the RSS feed. The "layout" property tells metalsmith to wrap this in the layouts/post.html content. The "excerpt" property is displayed on the landing page and in the RSS feed.
 
 ### Additional details
 

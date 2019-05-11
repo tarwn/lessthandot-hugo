@@ -53,7 +53,7 @@ The test setup is now ready for virtual machines to be created.  The virtual ma
 
 To show how quickly a Windows VM can be created, Azure has the availability of images to create quick Windows servers.  While in the virtual machines page, again, click the New button in the lower left corner.
 
-This will show the options available for the new VM you wish to create.  The option to select will be the “From Gallery” option.  This will load another set of screens with preloaded images to select from.
+This will show the options available for the new VM you wish to create.  The option to select will be the "From Gallery" option.  This will load another set of screens with preloaded images to select from.
   
 [<img src="/wp-content/uploads/2014/09/azure_4.png" alt="azure_4" width="624" height="195" class="alignnone size-full wp-image-2949" srcset="/wp-content/uploads/2014/09/azure_4.png 624w, /wp-content/uploads/2014/09/azure_4-300x93.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][4]
   
@@ -135,7 +135,7 @@ As shown above, both endpoints and the load balanced endpoint were successfully 
 
 To complete the remaining step of creating the listener, the second script in the release notes is used.  This script is executed on the primary replica be making an RDP session to the server and then executing the script in a Windows PowerShell command window that is executed as administrator (use Run As Administrator when opening PowerShell)
 
-The last script and the parameters needed are the availability group, “$ag being the availability group name you used”, the cluster network name, which is typically Cluster Network 1 by default.  With these changed, you can execute the script and it will functionally work.  However, it is recommended to change the listener port.
+The last script and the parameters needed are the availability group, "$ag being the availability group name you used", the cluster network name, which is typically Cluster Network 1 by default.  With these changed, you can execute the script and it will functionally work.  However, it is recommended to change the listener port.
 
 ```powershell
 # Define variables

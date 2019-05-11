@@ -27,7 +27,7 @@ When reporting becomes a concern due to pressure it is putting on the primary fo
   1. How up-to-date does the data need to be in order to retain business continuity?
   2. What physical resources do I have available already?
   3. What are my cost constraints?
-  4. Do I need “all” the data to successfully satisfy reporting requirements?
+  4. Do I need "all" the data to successfully satisfy reporting requirements?
   5. Is this even possible?
   6. Is a standard operating procedure in the business a better option?
 

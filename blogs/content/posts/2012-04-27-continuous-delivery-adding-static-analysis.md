@@ -63,7 +63,7 @@ Several of the plugins below produce data that can be captured and displayed on 
 
 ### Compiler Warnings
 
-Compiler warnings can be captured easily using the [Warnings Plugin][5]. After adding it to the Jenkins server, we can open the CI job and add the checks in the “post-build Actions” section:
+Compiler warnings can be captured easily using the [Warnings Plugin][5]. After adding it to the Jenkins server, we can open the CI job and add the checks in the "post-build Actions" section:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Warnings.png" title="Analysis - Compiler Warnings" /><br /> Analysis – Compiler Warnings
@@ -87,7 +87,7 @@ In this case, we're actually looking at the warnings from 49 builds ago. Since t
 
 Open tasks refer to those little TODO and HACK tags we litter throughout our code, always with the intent of someday coming back and doing something with them. Using the [Task Scanner Plugin][6], the build can scan the code and add these comments to the trends and build details.
 
-The plugin adds a section to the “post-build Actions” section, which we can then configure to fit our specific needs:
+The plugin adds a section to the "post-build Actions" section, which we can then configure to fit our specific needs:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Tasks.png" title="Analysis - Open Tasks" /><br /> Analysis – Open Tasks
@@ -123,7 +123,7 @@ First, we need to run simian against our codebase to produce a report. I've adde
 
 I've told Simian to run against all *.cs files in my project directory, excluding the sample data file that is used to generate a sample Entity Framework model. At the tail end I force it to return an exit code of 0 so the job will continue to run the later steps and post-build analysis. Simian will helpfully return a failure exit code when it finds violations, but that's not useful for this case.
 
-In the “post-build Action” section, I've provided the path to the output file Simian creates:
+In the "post-build Action" section, I've provided the path to the output file Simian creates:
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_PostBuild.png" title="Analysis - Simian - Post Build" /><br /> Analysis – Simian – Post Build
@@ -157,7 +157,7 @@ Like Simian above, I need to first run the executable against the codebase, then
 
 I've added the command for Gendarme after the unit tests and before the Simian command above, pointing it at the dll for the project and specifying I want XML output. As with Simian, I've forced the batch to return an exit code of 0 so the run will continue through to process the later steps.
 
-also like simian, we specify the location of the XML file in the Violations section of the “post-Build Actions”.
+also like simian, we specify the location of the XML file in the Violations section of the "post-Build Actions".
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Simian_PostBuild.png" title="Analysis - Gendarme - Post Build" /><br /> Analysis – Gendarme – Post Build
@@ -203,7 +203,7 @@ mkdir "%WORKSPACE%testresults"
 ```
 This command (1) creates the test results folder, (2) runs OpenCover with arguments to locate the MSTest executable, flags to use with MSTest, a filter to limit execution to the main assemblies, and an output filename. The last lines (3) run the ReportGenerator executable against the results, producing the HtmlSummary report and (4) detailed HTML reports for each file. 
 
-Checking the “Publish HTML reports” option in “post-build Actions”, we can specify the folder, index page, and title to use for the generated reports.
+Checking the "Publish HTML reports" option in "post-build Actions", we can specify the folder, index page, and title to use for the generated reports.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Analysis_Coverage_PostBuild.png" title="Analysis - Coverage - PostBuild" /><br /> Analysis – Coverage – PostBuild

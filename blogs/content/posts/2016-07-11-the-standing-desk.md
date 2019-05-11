@@ -13,13 +13,13 @@ categories:
   - Uncategorized
 
 ---
-I hear that, “Sitting is the new smoking.” We're supposed to stand more often, walk more often, move more often. I'm an active person (running and biking regularly) – but not while working. After using the same basic desk (not designed for office work) for several years, I decided to purchase a desk meant for someone who is on the computer all day.
+I hear that, "Sitting is the new smoking." We're supposed to stand more often, walk more often, move more often. I'm an active person (running and biking regularly) – but not while working. After using the same basic desk (not designed for office work) for several years, I decided to purchase a desk meant for someone who is on the computer all day.
 
 Coworkers recommended [The Human Solution][1]'s [UPLIFT Desk][2]. With a wide variety of options for the frame, the top, and the accessories, along with a decent warranty, free shipping, and reasonable pricing, here is the setup I picked.
 
-I chose the [UPLIFT Stand Up Desk with 1” Thick Bamboo Top][3]. I really, really wanted a [reclaimed wood top][4] – how gorgeous are those? How trendy? But...how expensive?!
+I chose the [UPLIFT Stand Up Desk with 1" Thick Bamboo Top][3]. I really, really wanted a [reclaimed wood top][4] – how gorgeous are those? How trendy? But...how expensive?!
 
-My desktop is rectangular, 30” x 60”. It's so big! I have room for two laptops with docks, their accessories, piles of books, and room to spare when need to read or write.
+My desktop is rectangular, 30" x 60". It's so big! I have room for two laptops with docks, their accessories, piles of books, and room to spare when need to read or write.
 
 I picked a white C-frame. I like the clean look, and there is extra room for mounting a keyboard tray underneath. I'll come back to that thought later.
 
@@ -27,11 +27,11 @@ I chose the Advanced 1-Touch Digital Memory Keypad. It allows you to save up to 
 
 I opted to get the advanced wire management kit. That was a good choice. You'll see why soon.
 
-Since I chose the 30” x 60” desk, I chose two wire grommets, right and left. That helps keep the wires clean.
+Since I chose the 30" x 60" desk, I chose two wire grommets, right and left. That helps keep the wires clean.
 
 I opted to get the fancy keyboard tray, and it's been worth every penny. I'm small, so most desks and tables are way too high for me to set a keyboard and mouse on and use without having an aching shoulder and hurting wrists in an hour. The keyboard tray was really easy to install and lets me type comfortably.
 
-The desk came with a free UPLIFT standing desk mat. If it hadn't, I would have bought one anyway. My office is carpeted, and I have a plastic chair mat over it. I work from home, so I don't wear shoes. (I wish I didn't have to when I went into the office, either!) An anti-fatigue mat was a necessity. The mat is ¾” thick and high quality. I recommend it!
+The desk came with a free UPLIFT standing desk mat. If it hadn't, I would have bought one anyway. My office is carpeted, and I have a plastic chair mat over it. I work from home, so I don't wear shoes. (I wish I didn't have to when I went into the office, either!) An anti-fatigue mat was a necessity. The mat is ¾" thick and high quality. I recommend it!
 
 Because the monitor arm only came in black, I looked on Amazon.com for a white arm to match the frame. I purchased a [MonMount Dual LCD Monitor Stand][5] – in white.
 

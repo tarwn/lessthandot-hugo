@@ -125,7 +125,7 @@ In the current database, the specified object references the following:
 <pre>name		type		updated	selected	column
 dbo.Blah	user table	no	yes		SomeCol</pre>
 
-And as you can see it also shows that the table is used..like Borat would say “Very Nice”
+And as you can see it also shows that the table is used..like Borat would say "Very Nice"
 
 Clean up by dropping these sample objects
 

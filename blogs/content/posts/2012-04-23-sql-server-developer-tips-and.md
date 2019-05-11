@@ -61,7 +61,7 @@ where
 	isnull(d.Column10,'null') <> isnull(s.Column10,'null')
 ```
 
-Building an update statement like this can get pretty tiring, especially if you've got several that you need to write. A way to speed up this process is by copying the list of columns (which can be gotten using the steps outlined in “You don't have to type out the columns”) into a premade spreadsheet that looks like this:
+Building an update statement like this can get pretty tiring, especially if you've got several that you need to write. A way to speed up this process is by copying the list of columns (which can be gotten using the steps outlined in "You don't have to type out the columns") into a premade spreadsheet that looks like this:
 
 ![premade excel spreadsheet][2]
 
@@ -77,7 +77,7 @@ In the screen that pops up, you can set the filter in many different ways.
 
 ![filter settings][4]
 
-Play with this to find out what works best for you. At my organization we have what are called Code Generated Stored Procedures. All of these stored procedure's names start with “_”. So to only look at custom code I tell the filter to only show stored procedures that don't contain an underscore.
+Play with this to find out what works best for you. At my organization we have what are called Code Generated Stored Procedures. All of these stored procedure's names start with "_". So to only look at custom code I tell the filter to only show stored procedures that don't contain an underscore.
 
 ## Make sure your relationships are set up
 
@@ -127,7 +127,7 @@ With this set up, you can now assign security at the schema level, and every new
 
 ## Fine Tune SSMS Options
 
-SQL Server Management Studios has a lot of options to play with. One option that I have disabled is the “Use [database]” statement that you get whenever you script out a table. To change this I went to Tools – Options. Then went to SQL Server Object Explorer – Scripting, and changed “Script USE [database]” to false.
+SQL Server Management Studios has a lot of options to play with. One option that I have disabled is the "Use [database]" statement that you get whenever you script out a table. To change this I went to Tools – Options. Then went to SQL Server Object Explorer – Scripting, and changed "Script USE [database]" to false.
 
 ![getting to the options][11]
 

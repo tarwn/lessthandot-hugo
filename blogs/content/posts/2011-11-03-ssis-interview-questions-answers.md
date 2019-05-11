@@ -25,7 +25,7 @@ categories:
   </div>
   
   <p>
-    This post will contain the way I would answer the questions that were posted in, “<a href="/index.php/DataMgmt/ssis/ssis-interview-questions">SSIS Test yourself with these interview questions</a>“. I will post a few answers a day. Hope they help someone out there have a good understanding of the questions and why they may be a great thing to ask in an interview or testing situation. </div>
+    This post will contain the way I would answer the questions that were posted in, "<a href="/index.php/DataMgmt/ssis/ssis-interview-questions">SSIS Test yourself with these interview questions</a>". I will post a few answers a day. Hope they help someone out there have a good understanding of the questions and why they may be a great thing to ask in an interview or testing situation. </div>
   </p>
   
   <p>
@@ -43,13 +43,13 @@ categories:
     
     <p>
       <div>
-        If I have this in a document, “The dog went to the park with his owner on a leash”, the keywords here would perhaps be dog, park, owner, leash. Remember, skyscraper view. In the Error-Tolerant Index, this concept is roughly the same. The index takes words and chops them up, creating the index itself. So take the sentence again: “The dog went to the park with his owner on a leash”. The Error-Tolerant Index equates this to the words, the, dog, went, to, the, park, with, his, owner, on, a, leash. The index knows the location of them and exactly how to get back there based on each word, hence the meaning of an index. In the Error-Tolerant Index, it does go further into chopping even the words themselves up.
+        If I have this in a document, "The dog went to the park with his owner on a leash", the keywords here would perhaps be dog, park, owner, leash. Remember, skyscraper view. In the Error-Tolerant Index, this concept is roughly the same. The index takes words and chops them up, creating the index itself. So take the sentence again: "The dog went to the park with his owner on a leash". The Error-Tolerant Index equates this to the words, the, dog, went, to, the, park, with, his, owner, on, a, leash. The index knows the location of them and exactly how to get back there based on each word, hence the meaning of an index. In the Error-Tolerant Index, it does go further into chopping even the words themselves up.
       </div>
     </p>
     
     <p>
       <div>
-        If you have ever heard someone complaining loudly about the performance of a fuzzy lookup, this point may be the issue itself. By default, when using the fuzzy lookup, you will start building and rebuilding this indexing structure. The easiest way to increase this overall process is to store that index on the server. The reason I mention this at this point; if a candidate does get to this point and impresses the entire place by answering this question, the next step is not to say, “Wow, yeah, You nailed that one. Let's move on.” but more so to continue on the line of questioning. Let's be honest, only weirdo's read BOL and would know how the fuzzy lookup works without every actually using it and maybe, having problems with it? What starts to become impressive is the line of troubleshooting an everyday BI Developer, SQL Developer or DBA would take to become knowledgeably on the fact that the fuzzy lookup caused performance problems and they researched, learned and dissected the true overall processing of this area. Knowing this information, the person can now successfully start, execute and release a product from SSIS with much greater efficiency, both on time to developer and overall execution time.
+        If you have ever heard someone complaining loudly about the performance of a fuzzy lookup, this point may be the issue itself. By default, when using the fuzzy lookup, you will start building and rebuilding this indexing structure. The easiest way to increase this overall process is to store that index on the server. The reason I mention this at this point; if a candidate does get to this point and impresses the entire place by answering this question, the next step is not to say, "Wow, yeah, You nailed that one. Let's move on." but more so to continue on the line of questioning. Let's be honest, only weirdo's read BOL and would know how the fuzzy lookup works without every actually using it and maybe, having problems with it? What starts to become impressive is the line of troubleshooting an everyday BI Developer, SQL Developer or DBA would take to become knowledgeably on the fact that the fuzzy lookup caused performance problems and they researched, learned and dissected the true overall processing of this area. Knowing this information, the person can now successfully start, execute and release a product from SSIS with much greater efficiency, both on time to developer and overall execution time.
       </div>
     </p>
   </blockquote>
@@ -60,7 +60,7 @@ categories:
   
   <blockquote>
     <p>
-      I think the right way to ask this would be, “How would I implement logical...without finding myself in a field of weeds and red boxes?”<br /> The best method I've learned over the years for getting this job done is using the expression precedence constraint. If you say that, you're golden. You can conditionally move to tasks and components based on an expression in the precedence constraint. This makes for some intelligence in how the resource you are consuming will make the package react or even, what other packages you will need to call in order to set the stage right for a stable ETL.
+      I think the right way to ask this would be, "How would I implement logical...without finding myself in a field of weeds and red boxes?"<br /> The best method I've learned over the years for getting this job done is using the expression precedence constraint. If you say that, you're golden. You can conditionally move to tasks and components based on an expression in the precedence constraint. This makes for some intelligence in how the resource you are consuming will make the package react or even, what other packages you will need to call in order to set the stage right for a stable ETL.
     </p>
   </blockquote>
   
@@ -130,7 +130,7 @@ categories:
   
   <blockquote>
     <p>
-      It *is* the data flow. Well, really it is the buffer and threads that handle everything. Remember that, “Execution Tree is the buffer and threads that make up a Data Flow”.<br /> In 2008 this changed a bit overall. I wrote about this, praised it and gave it a big, O.M.G. that is cool. Essentially, in 2005 multi-processing power could not be taken advantage of by running components in parallel. In 2008 that was changed. The pipeline can divide and concur by using multiple, sub paths to execute multiple components at the same time (in parallel).
+      It *is* the data flow. Well, really it is the buffer and threads that handle everything. Remember that, "Execution Tree is the buffer and threads that make up a Data Flow".<br /> In 2008 this changed a bit overall. I wrote about this, praised it and gave it a big, O.M.G. that is cool. Essentially, in 2005 multi-processing power could not be taken advantage of by running components in parallel. In 2008 that was changed. The pipeline can divide and concur by using multiple, sub paths to execute multiple components at the same time (in parallel).
     </p>
   </blockquote>
   

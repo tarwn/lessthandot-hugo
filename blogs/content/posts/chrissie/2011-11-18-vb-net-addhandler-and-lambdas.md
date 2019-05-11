@@ -108,17 +108,17 @@ And yes it is legal and called delegate relaxation.
 
 And I will let Julian Wischik explain it.
 
-> (1) A lambda written “Function(r) e” will ALWAYS assume that “e” is an expression.
+> (1) A lambda written "Function(r) e" will ALWAYS assume that "e" is an expression.
 > 
-> And a lambda written “Sub(r) s” will ALWAYS assume that “s” is a statement.
+> And a lambda written "Sub(r) s" will ALWAYS assume that "s" is a statement.
 > 
 > So your hypothesis for what it’s doing is correct.
 > 
-> In other words: the decision for whether or not to interpret the thing as an EXPRESSION or STATEMENT is done solely by whether the keyword is “Function” or “Sub”. It is not determined by the target delegate type.
+> In other words: the decision for whether or not to interpret the thing as an EXPRESSION or STATEMENT is done solely by whether the keyword is "Function" or "Sub". It is not determined by the target delegate type.
 > 
 > (2) You wonder why it’s legal to assign a function-lambda to a void-returning-delegate-type.
 > 
-> Well, that’s always legal in VB. We call it “delegate relaxation”. It is type-safe.
+> Well, that’s always legal in VB. We call it "delegate relaxation". It is type-safe.
 > 
 > Here’s another example of delegate relaxation:
 > 
@@ -130,9 +130,9 @@ Dim lambda = Function()
 > Here’s another example of delegate relaxation:
 > 
 > ```vbnet
-Dim lambda = Sub() Console.WriteLine(“hello”)
+Dim lambda = Sub() Console.WriteLine("hello")
 > Dim a As Action(Of Integer, String) = lambda   ’ here the wrapper discards the arguments```
-> And here’s another example of that “wrapper which discards arguments”…
+> And here’s another example of that "wrapper which discards arguments"…
 > 
 > ```vbnet
 Sub Button1Click() Handles Button1.Click```

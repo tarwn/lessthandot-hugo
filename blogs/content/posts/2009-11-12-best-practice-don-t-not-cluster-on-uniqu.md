@@ -51,7 +51,7 @@ where   sind.status & 16 = 16
         and syscomments.text Like '%newid%'
 order by so.name, sik.keyno
 ```
-**How to correct it:** There are several ways to prevent this problem. The best method is to use NewSequentialId() instead of NewId. Alternatively (if you are using SQL 2000), you could set the fill factor for the index to be less than 100%. Fill factor identifies how “full” the data pages are when you recreate the index. With a 100% fill factor there is no room in the index to accommodate new rows. If you need to use a UniqueIdentifier, and it must be clustered and you cannot use NewSequentialId, then you should modify the Fill Factor to minimize page splits. If you do this, it's important to rebuild the index periodically.
+**How to correct it:** There are several ways to prevent this problem. The best method is to use NewSequentialId() instead of NewId. Alternatively (if you are using SQL 2000), you could set the fill factor for the index to be less than 100%. Fill factor identifies how "full" the data pages are when you recreate the index. With a 100% fill factor there is no room in the index to accommodate new rows. If you need to use a UniqueIdentifier, and it must be clustered and you cannot use NewSequentialId, then you should modify the Fill Factor to minimize page splits. If you do this, it's important to rebuild the index periodically.
 
 **Level of severity:** Moderate
 

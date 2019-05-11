@@ -1,5 +1,5 @@
 ---
-title: Presenting “The What, Why, and How of Filegroups” for PASSMN
+title: Presenting "The What, Why, and How of Filegroups" for PASSMN
 author: Jes Borland
 type: post
 date: 2012-06-14T14:17:00+00:00

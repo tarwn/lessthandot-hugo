@@ -32,7 +32,7 @@ namespace SquishIt.Framework
 }
 ```
 
-This takes the place of the old “FileSystem” static class, that probably only a few people are aware of. The implementation isn't that important, but it takes some information from HttpRuntime / HttpContext and uses that to convert between file locations on disk and app-relative web paths. 
+This takes the place of the old "FileSystem" static class, that probably only a few people are aware of. The implementation isn't that important, but it takes some information from HttpRuntime / HttpContext and uses that to convert between file locations on disk and app-relative web paths. 
 
 Because newer versions of Nancy don't reference System.Web, we had to find another way to do this. It seems like the best way to get it done is using Nancy's IRootPathProvider. The following looks like a reasonable approximation of what was being done with HttpContext / HttpRuntime – I have not tested it with CSS path rewriting or any of the trickier stuff that SquishIt does, but I think it will work. If not I'm sure someone will let me know.
 

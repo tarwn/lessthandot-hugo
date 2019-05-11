@@ -30,7 +30,7 @@ A person asked the following question:
 > 
 > On the Results tab I get 2 lines Could not find a part of the path 'serverdirectoryfilename'. NULL
 > 
-> How do I capture the first line in an error message? I tried using a Try Catch block with “SELECT @ErrorMessage = ERROR_MESSAGE()” and it doesn't grab it.
+> How do I capture the first line in an error message? I tried using a Try Catch block with "SELECT @ErrorMessage = ERROR_MESSAGE()" and it doesn't grab it.
 > 
 > The message is not coming from sys.messages. Where is this error message coming from then?
 

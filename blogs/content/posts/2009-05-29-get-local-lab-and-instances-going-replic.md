@@ -17,11 +17,11 @@ If you are anything like me, you have about 4 or 5 instances installed on your l
 
 First problem. I couldn't configure the distributor 
 
-error: “SQL Server is unable to connect to the server 'LKFW00TKLKF00TKSQL05'. Additional Information SQL Server replication requires the actual server name to make a
+error: "SQL Server is unable to connect to the server 'LKFW00TKLKF00TKSQL05'. Additional Information SQL Server replication requires the actual server name to make a
   
 connection to the server. Connections through a server alias, IP address, or any
   
-other alternate name are not supported. Specify the actual server name, 'LKFW00TKLKF00TKSQL05'. (Replication.Utilities)”
+other alternate name are not supported. Specify the actual server name, 'LKFW00TKLKF00TKSQL05'. (Replication.Utilities)"
 
 I knew exactly how to fix that sense I've had to so many times when I do multiple local installs. Simply run the following to clear up the server names
 
@@ -39,7 +39,7 @@ Restart SQL Server and you'll get in at least.
 
 Second issue. SQL Agent wasn't running mostly because I don't let it so my laptop actually runs and isn't bogged down. So I start it...
   
-Error: “SQLServerAgent could not be started (reason: SQLServerAgent must be able to connect to SQLServer as SysAdmin, but '(Unknown)' is not a member of the SysAdmin role). ”
+Error: "SQLServerAgent could not be started (reason: SQLServerAgent must be able to connect to SQLServer as SysAdmin, but '(Unknown)' is not a member of the SysAdmin role). "
 
 Urgh! Alright. I checked the cached credentials.
   

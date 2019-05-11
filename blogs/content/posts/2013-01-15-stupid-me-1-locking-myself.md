@@ -20,7 +20,7 @@ tags:
 
 ---
 <p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">
-  <span lang="EN-US">I've been thinking lately to do some sort of blog post series. Every time I do something “stupid”, which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb: <em>“It's only stupid if you don't turn it into a learning experience”</em>. Okay, I might have made that last one up...</span>
+  <span lang="EN-US">I've been thinking lately to do some sort of blog post series. Every time I do something "stupid", which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb: <em>"It's only stupid if you don't turn it into a learning experience"</em>. Okay, I might have made that last one up...</span>
 </p>
 
 <p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">
@@ -45,7 +45,7 @@ tags:
   <a href="/media/users/koenverbeeck/StupidMe1/error_inuse.png?mtime=1358236018"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe1/error_inuse.png?mtime=1358236018" alt="" width="560" height="427" /></a>
 </div>
 
-<span style="text-align: justify;">I thought one of my query windows was still open with an active connection to the database, so being the smarty pants that I am I ticked the checkbox </span>_“Close existing connections”_ <span style="text-align: justify;">without giving it too much thought. The drop database succeeded, but when I tried to create a new database, I got this beauty on my screen:</span>
+<span style="text-align: justify;">I thought one of my query windows was still open with an active connection to the database, so being the smarty pants that I am I ticked the checkbox </span>_"Close existing connections"_ <span style="text-align: justify;">without giving it too much thought. The drop database succeeded, but when I tried to create a new database, I got this beauty on my screen:</span>
 
 <p class="MsoNormal" style="text-align: justify; text-justify: inter-ideograph;">
   <span lang="EN-US"> </span>

@@ -21,7 +21,7 @@ categories:
 
 It's TSQL Tuesday #024! It's been two years and the monthly blog party is going strong. Thanks to Brad Schulz for hosting this month! 
 
-This month's topic is “Prox n' Funx”. I am going to show something that frustrates me, and, from what I see on forums, a lot of other people. When building a dataset in Reporting Services that calls a stored procedure, if the stored procedure has multiple result sets, only the first is returned. 
+This month's topic is "Prox n' Funx". I am going to show something that frustrates me, and, from what I see on forums, a lot of other people. When building a dataset in Reporting Services that calls a stored procedure, if the stored procedure has multiple result sets, only the first is returned. 
 
 I'm using SQL Server Reporting Services 2008R2 and AdventureWorks2008R2. I built a stored procedure that returns all products in a category, then a count of the number of products in the category, and the count of the number of products in that category in a specific color. 
 
@@ -82,7 +82,7 @@ When I run the report, I only see one set of results – the first listed in my 
   
 ![][6]
 
-**Why?** The short answer is: it's designed that way. According to BOL, “Multiple results sets from a single query are not supported.” (<http://msdn.microsoft.com/en-us/library/dd239379.aspx>) 
+**Why?** The short answer is: it's designed that way. According to BOL, "Multiple results sets from a single query are not supported." (<http://msdn.microsoft.com/en-us/library/dd239379.aspx>) 
 
 How can you work around this? 
 

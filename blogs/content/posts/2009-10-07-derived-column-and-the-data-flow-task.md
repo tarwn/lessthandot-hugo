@@ -102,9 +102,9 @@ Repeat the steps again for the source 2 connection.
 
 Bring over an OLE DB Source into the data flow window and configure it to use source1 connection manager and tblSource1. Select all of the columns in the Columns selection and hit ok to save the configuration. 
 
-Now bring over the Derived Column object and double click it. The Derived column transformation editor is pretty good at making things easy for you. Basically what we want is a column that will map to our “ident” column in SQL Server and hold the value we placed in the variable identifying this source. 
+Now bring over the Derived Column object and double click it. The Derived column transformation editor is pretty good at making things easy for you. Basically what we want is a column that will map to our "ident" column in SQL Server and hold the value we placed in the variable identifying this source. 
 
-To do this enter “ident” into the Derived Column Name, leave “add as new column” and then expand the variables section above that to expose your user variables. You can now drag the variable source1key into the Expression place holder. Once you do this the value will be parsed and the data type will be populated for you. 
+To do this enter "ident" into the Derived Column Name, leave "add as new column" and then expand the variables section above that to expose your user variables. You can now drag the variable source1key into the Expression place holder. Once you do this the value will be parsed and the data type will be populated for you. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//dragvariables.gif" alt="" title="" width="628" height="241" />
@@ -133,7 +133,7 @@ The data flow should look like this when all done
 Most of you running 64bit job servers or test systems with SSIS know that you can't just click execute now. You have to use DTEXEC so you run in 32bit mode. To do this you can build the solution so your package is created in the bin folder. Then by running the following command in command prompt
 
 ```
-DTEXEC /f “C:MultiImport.dtsx”
+DTEXEC /f "C:MultiImport.dtsx"
 ```
 
 Once executing that command you should receive the following return

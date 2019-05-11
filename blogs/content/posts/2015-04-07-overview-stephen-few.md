@@ -60,7 +60,7 @@ tags:
 </h1>
 
 <p style="text-align: justify">
-  <a href="http://amzn.to/1Oejusx"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/04/showmethenumbers-150x150.jpg" alt="showmethenumbers" width="150" height="150" /></a>After reading <em>Information Dashboard Design</em>, I thought: “Great, now I know how to design dashboards and charts, but what about tables?” This book is the answer to that question. It gives a full overview on how to design data visualizations, be it tables or graphs. There are even some exercises in the book.
+  <a href="http://amzn.to/1Oejusx"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/04/showmethenumbers-150x150.jpg" alt="showmethenumbers" width="150" height="150" /></a>After reading <em>Information Dashboard Design</em>, I thought: "Great, now I know how to design dashboards and charts, but what about tables?" This book is the answer to that question. It gives a full overview on how to design data visualizations, be it tables or graphs. There are even some exercises in the book.
 </p>
 
 <p style="text-align: justify">

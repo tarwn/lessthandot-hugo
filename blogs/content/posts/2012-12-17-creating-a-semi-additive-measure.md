@@ -4,7 +4,7 @@ author: Koen Verbeeck
 type: post
 date: 2012-12-17T11:11:00+00:00
 ID: 1844
-excerpt: 'Originally this blog post would have had the title “Disabling aggregations over a parent-child hierarchy”, but I thought it could create confusion with the Aggregation Design concept in Analysis Services (SSAS), which is something completely different.&hellip;'
+excerpt: 'Originally this blog post would have had the title "Disabling aggregations over a parent-child hierarchy", but I thought it could create confusion with the Aggregation Design concept in Analysis Services (SSAS), which is something completely different.&hellip;'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/creating-a-semi-additive-measure/
 views:
   - 48638
@@ -22,7 +22,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Originally this blog post would have had the title <em>“Disabling aggregations over a parent-child hierarchy”</em>, but I thought it could create confusion with the Aggregation Design concept in Analysis Services (SSAS), which is something completely different.
+  Originally this blog post would have had the title <em>"Disabling aggregations over a parent-child hierarchy"</em>, but I thought it could create confusion with the Aggregation Design concept in Analysis Services (SSAS), which is something completely different.
 </p>
 
 <p style="text-align: justify;">

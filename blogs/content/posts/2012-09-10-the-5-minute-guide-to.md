@@ -22,7 +22,7 @@ Windows 8 has been a hot topic of late – especially getting started with it. W
 
 Windows 8 has a great design for touch screens, and some great shortcuts for the PC User as well. I've been using it since Consumer Preview and to be honest – it did take a week or so to get used to the new interface. There are one or two tricks, that when you know them, make it a lot easier to work with as a PC User.
 
-To start of with, I am going to talk a bit about charms. Charms is the new “navigation” for Windows 8 – it appears on the right hand side whenever you move your mouse to either the top right, or bottom right corners of the screen.
+To start of with, I am going to talk a bit about charms. Charms is the new "navigation" for Windows 8 – it appears on the right hand side whenever you move your mouse to either the top right, or bottom right corners of the screen.
 
 This will bring up the following:
 

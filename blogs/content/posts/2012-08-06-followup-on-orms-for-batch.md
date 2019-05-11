@@ -102,7 +102,7 @@ In the last post I included a comparison of all of the various methods used to i
 
 With more details we can see the spread and variation a little more clearly. 
 
-**Big 'Ol String method:** One of the other surprises I ran into when doing this was how slow the “cram it all into one long string” method was (“SqlCommand – Insert Once” above). This is often suggested as a quick and dirty way to do batch insertion, basically by concatenating all the data into a single long INSERT statement with multiple VALUE rows or UNIONs. At 100 records this option tied with Dapper as the fastest method. Unfortunately it scales really horribly, moving up to nearly last, leading me to believe that people suggesting this method only tested it in lower ranges.
+**Big 'Ol String method:** One of the other surprises I ran into when doing this was how slow the "cram it all into one long string" method was ("SqlCommand – Insert Once" above). This is often suggested as a quick and dirty way to do batch insertion, basically by concatenating all the data into a single long INSERT statement with multiple VALUE rows or UNIONs. At 100 records this option tied with Dapper as the fastest method. Unfortunately it scales really horribly, moving up to nearly last, leading me to believe that people suggesting this method only tested it in lower ranges.
 
 ## Conclusions
 

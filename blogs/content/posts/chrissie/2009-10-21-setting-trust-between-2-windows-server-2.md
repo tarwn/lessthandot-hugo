@@ -1,5 +1,5 @@
 ---
-title: Setting trust between 2 windows server 2003 domains results in “The specified user already exist”
+title: Setting trust between 2 windows server 2003 domains results in "The specified user already exist"
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2009-10-21T05:45:29+00:00

@@ -52,7 +52,7 @@ The Gallery option presents a list of 52 CMS, blogging, eCommerce, (the list goe
 
 With a download, a few button clicks, administrative permissions, and entry of some basic settings, I just installed a fully customizeable version of WordPress. Which is really cool, but also kind of scary if you think about how little technical knowledge I really needed and that there are dozens of other packages available.
 
-_Note: it was at this point I noticed my MySQL installation was annoyed and not running properly, leaving me stuck partway on the WordPress Install. So a big YMMV may be necessary here, as it seems my skill at causing things to break has managed to break yet another “Next, Next, Next” wizardy dialog._
+_Note: it was at this point I noticed my MySQL installation was annoyed and not running properly, leaving me stuck partway on the WordPress Install. So a big YMMV may be necessary here, as it seems my skill at causing things to break has managed to break yet another "Next, Next, Next" wizardy dialog._
 
 **More Depth:** [A WordPress Blog in 15 Minutes with WebMatrix][1]
 
@@ -64,7 +64,7 @@ Ok, so what if we want to build our own site?
   <img src="http://www.tiernok.com/LTDBlog/webmatrix/SiteFromTemplate.png" alt="Creating Site From Template" style="padding-bottom: 5px;" /><br /> Creating Site from Template
 </div>
 
-The other side of the Site creation process is the option to create one from a template. This offers five options ranging from “Empty Site” to “Start Site and even “Bakery”. If you start with one of the non-Empty sites you will be given all the files and folders for a fully functioning site. These sites are based on the new WebPages framework and written in the C#-style razor syntax. The WebPages framework was released in conjunction with WebMatrix and joins Web Forms and MVC as an available ASP.Net framework.
+The other side of the Site creation process is the option to create one from a template. This offers five options ranging from "Empty Site" to "Start Site and even "Bakery". If you start with one of the non-Empty sites you will be given all the files and folders for a fully functioning site. These sites are based on the new WebPages framework and written in the C#-style razor syntax. The WebPages framework was released in conjunction with WebMatrix and joins Web Forms and MVC as an available ASP.Net framework.
 
 If we select the empty site option we'll be presented with one lonely little robots.txt file and an empty folder. The interesting part is what happens when we ask to add a file. We receive a file creation dialog (which should be familiar to Visual Studio users) and, given what I have seen so far and my Visual Studio background, I expect a list of CSHTML files, CSS, and maybe a JS or HTML. 
 
@@ -92,7 +92,7 @@ With so many different options, running these sites must require jumping through
 
 Not so much.
 
-WebMatrix uses IIS Express internally and offers a simple interface to hook into just a few settings that will cover most of our needs. Press the “Run” button and we're greeted with the current page run in whatever our default browser is. 
+WebMatrix uses IIS Express internally and offers a simple interface to hook into just a few settings that will cover most of our needs. Press the "Run" button and we're greeted with the current page run in whatever our default browser is. 
 
 <div style="border: 1px solid #AAAAAA; font-size: 80%; color: #666666; text-align: center; padding: 8px; margin: 8px;">
   <img src="http://www.tiernok.com/LTDBlog/webmatrix/Toolbar.png" alt="WebMatrix Files Toolbar" style="padding-bottom: 5px; max-width: 750px;" /><br /> WebMatrix Files Toolbar

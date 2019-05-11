@@ -32,7 +32,7 @@ This week we will go over these questions. We will start by asking ourselves if 
 
 Professional Development is a never ending process. There is not an ultimate goal that you can achieve other than a new step to add to the existing steps. Things change in SQL Server and change often as does a career based around this database management product. Professional Development encompasses the very will to wanting to keep up with the pace of SQL Server. This process can be painful, rob you of time with other things you love and hold dear and be downright painful. You have to sincerely want to keep putting your energy into becoming better and keeping pace with SQL Server.
 
-A dear friend once said, “When the clock strikes 12 on New Year's eve, as an SQL Server data professional, you not only think of new year's resolutions. You also think, geez, another SQL Server version is coming soon”
+A dear friend once said, "When the clock strikes 12 on New Year's eve, as an SQL Server data professional, you not only think of new year's resolutions. You also think, geez, another SQL Server version is coming soon"
   
 This quote is as close to the truth with being a database professional as it can get. In fact, most Information Technology fields can relate to this. Yearly we are challenged with our careers. In recent times this is even more part of a task for developing ourselves. The jobs that sit stagnant in a corner are quickly disappearing. We are made into more robust professionals with broader skills as ever before.
 

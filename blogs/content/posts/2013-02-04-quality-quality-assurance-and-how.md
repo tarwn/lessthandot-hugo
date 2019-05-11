@@ -15,17 +15,17 @@ categories:
   - IT Processes
 
 ---
-The technical sphere seems to have very mixed definitions for the terms “Quality” and “Quality Assurance”. The other day I was reading a post by Devlin Liles ([blog][1]|[twitter][2]) in response to a presentation he had attended ([Quality Assurance–The Team Approach][3]). While I agreed with a lot of his opinions, as I started to leave a comment I found myself sidetracked into examining the different (and in many cases, wrong) definitions we use for Quality and Quality Assurance.
+The technical sphere seems to have very mixed definitions for the terms "Quality" and "Quality Assurance". The other day I was reading a post by Devlin Liles ([blog][1]|[twitter][2]) in response to a presentation he had attended ([Quality Assurance–The Team Approach][3]). While I agreed with a lot of his opinions, as I started to leave a comment I found myself sidetracked into examining the different (and in many cases, wrong) definitions we use for Quality and Quality Assurance.
 
 ## Quality
 
-Often in the software world, Quality seems to mean “Does it work or not”. Occasionally there is the idea of a [Definition of Done][4], and the definition of Quality includes additional documents, automated tests, formal communications, etc. 
+Often in the software world, Quality seems to mean "Does it work or not". Occasionally there is the idea of a [Definition of Done][4], and the definition of Quality includes additional documents, automated tests, formal communications, etc. 
 
 > **Dictionary.com** – character with respect to fineness, or grade of excellence
   
 > **Merriam Webster** – degree of excellence, superiority in kind 
 
-If Quality is a scale of excellence, what level do we assign to “it works”? What grade do we get for “I didn't find any broken bits”? Why do we keep assuming “it isn't obviously broken” means we have achieved quality?
+If Quality is a scale of excellence, what level do we assign to "it works"? What grade do we get for "I didn't find any broken bits"? Why do we keep assuming "it isn't obviously broken" means we have achieved quality?
 
 I ran into [this post][5] that examines a number of different definitions of quality and refines them all into:
 
@@ -48,7 +48,7 @@ Quality is a scale, not an on/off switch.
   * If we deviate from their industry standards without informing them, we have Quality problems.
   * If we have to argue with the customer over whether we built what they asked for, we have Quality problems
 
-On a scale of “it destroyed our business” to “it was generations beyond what we could have imagined”, “we didn't find any obvious bugs” sits firmly at zero.
+On a scale of "it destroyed our business" to "it was generations beyond what we could have imagined", "we didn't find any obvious bugs" sits firmly at zero.
 
 ## Quality Assurance
 
@@ -60,7 +60,7 @@ Sound about right?
 
 Except this is Quality Ensurance. Testing the mostly finished product is designed to <u>Ensure</u> our product meets a specific standard of quality.
 
-Assurance is a proactive term, “it will be good” vs Ensure's “we checked at the end and it was good”. The purpose of Quality Assurance is to build confidence in the level of Quality (Assure) by driving improvements, so that improved Quality is a natural result. We Assure, are confidant of, better quality by helping it get cooked in from the start.
+Assurance is a proactive term, "it will be good" vs Ensure's "we checked at the end and it was good". The purpose of Quality Assurance is to build confidence in the level of Quality (Assure) by driving improvements, so that improved Quality is a natural result. We Assure, are confidant of, better quality by helping it get cooked in from the start.
 
 We are all responsible for Quality, but Quality Assurance is responsible for improving the processes, tooling, environment, and business to increase the Quality of our output. Inspection at the end serves as a good first step, so we can gather data to drive improvements, but if this is all you are getting from your Quality Assurance efforts, then you don't actually have a Quality Assurance effort. 
 
@@ -86,7 +86,7 @@ Technically, firing the quality team will also save you money. So will firing th
 
 **4. Unit Testing should be a task for each development task**
 
-I feel the same as Devlin on this, if you're in an environment that doesn't include it as part of getting a task done, then, yes, it may be helpful to assign each task with a paired “so the unit tests” task until people get used to doing them together. But this isn't an end state, at some point there should be agreement that doing the tests is simply part of calling the work done.
+I feel the same as Devlin on this, if you're in an environment that doesn't include it as part of getting a task done, then, yes, it may be helpful to assign each task with a paired "so the unit tests" task until people get used to doing them together. But this isn't an end state, at some point there should be agreement that doing the tests is simply part of calling the work done.
 
 **5.There are Different Kinds of testers**
 
@@ -106,7 +106,7 @@ However, I think there should still be someone who has overall responsibility fo
 
 A lot of people in the software world dislike Quality assurance, but I think this is because there are a lot of poor Quality Assurance efforts out there that never get past the manual test stage (and thus aren't actually assuring quality).
 
-Regardless, if “It ain't broke” is the highest measure of quality in your company, it may be time to recalibrate expectations.
+Regardless, if "It ain't broke" is the highest measure of quality in your company, it may be time to recalibrate expectations.
 
  [1]: http://devlinliles.com/ "DevlinLiles.com"
  [2]: https://twitter.com/devlinliles "@DevlinLiles on twitter"

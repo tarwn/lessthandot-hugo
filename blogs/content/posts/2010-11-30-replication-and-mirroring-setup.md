@@ -72,7 +72,7 @@ To follow the setup order, the first task is to setup the publisher in transacti
   
 > Setting up the distributor
 
-Replication setup can be achieved with the built in wizards from SSMS as well as the replication stored procedures packed with SQL Server. If using the wizard to set up replication, it is highly recommended that the “script to file” option is selected in the last screen of the wizard. This will script out the complete configuration the wizard has done utilizing the stored procedures behind the scenes. This acts as a quick way to set replication back up if the system is lost. Copy these files to a share that is located somewhere else and is also part of a disk to disk HA or DR solution.
+Replication setup can be achieved with the built in wizards from SSMS as well as the replication stored procedures packed with SQL Server. If using the wizard to set up replication, it is highly recommended that the "script to file" option is selected in the last screen of the wizard. This will script out the complete configuration the wizard has done utilizing the stored procedures behind the scenes. This acts as a quick way to set replication back up if the system is lost. Copy these files to a share that is located somewhere else and is also part of a disk to disk HA or DR solution.
 
 Ensure that SQL Server Replication is installed on the SQL Server instance. If it is not, use the setup installation wizard from your media to install.
   
@@ -122,8 +122,8 @@ In the wizard:
   4. Publication Type: select Transactional publication for the publication type
   5. Articles: select the articles (tables: Address, AddressType, Contact, ContactType and CountryRegion)
   6. Filtered table rows: no filters
-  7. Snapshot Agent: check “Create a snapshot immediately and keep the snapshot available to initialize subscriptions”
-  8. Agent Security: select the security settings as the “Run under the SQL Server Agent service account”
+  7. Snapshot Agent: check "Create a snapshot immediately and keep the snapshot available to initialize subscriptions"
+  8. Agent Security: select the security settings as the "Run under the SQL Server Agent service account"
   9. Wizard Options: finish by selecting the Generate scripts option.
 
 These steps are shown in order below ordered left to right
@@ -222,7 +222,7 @@ At this point mirroring and replication is functioning together. The principal a
 SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
 ```
 
-The statement above results in, “1970 Napa Ct”. Update the AddressLine1 value to, “1970 Napa Court” and ensure the changes flow to the subscriber of the publication.
+The statement above results in, "1970 Napa Ct". Update the AddressLine1 value to, "1970 Napa Court" and ensure the changes flow to the subscriber of the publication.
 
 ```sql
 UPDATE Person.Address SET AddressLine1 = '1970 Napa Court'
@@ -268,7 +268,7 @@ Check on the subscriber now that the changes flowed as they should have
 SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
 ```
 
-We see that the failover was successful and the value committed as, “1970 Napa Ct” and the distributor in the replication monitor shows the commands sent.
+We see that the failover was successful and the value committed as, "1970 Napa Ct" and the distributor in the replication monitor shows the commands sent.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_18.gif" alt="" title="" width="628" height="218" />

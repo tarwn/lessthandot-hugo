@@ -116,7 +116,7 @@ $xsl = (New-Object System.Xml.Xsl.XslCompiledTransform)
 $xsl.Load('%system.teamcity.build.workingDir%/TransformForTeamCity.xsl')
 $xsl.Transform('%system.teamcity.build.workingDir%/log.xml','%system.teamcity.build.workingDir%/teamcity-info.xml')
 ```
-TeamCity replaces the variables with the correct values and transforms the generated log into the specially named “teamcity-info.xml” file.
+TeamCity replaces the variables with the correct values and transforms the generated log into the specially named "teamcity-info.xml" file.
 
 ## Done
 

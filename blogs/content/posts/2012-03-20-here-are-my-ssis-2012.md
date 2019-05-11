@@ -19,7 +19,7 @@ tags:
   - ssis 2012
 
 ---
-In my [previous post][1] I wass looking for the Data Sources and Data Source Views in SSIS 2012 projects. As Carla Sabotta ([site][2]|[twitter][3]) mentioned in the comments you can change the deployment model of your project so the Data Sources folder will reappear. To do this right click the project in Solution Explorer and choose for “Convert to Package Deployment Model”:
+In my [previous post][1] I wass looking for the Data Sources and Data Source Views in SSIS 2012 projects. As Carla Sabotta ([site][2]|[twitter][3]) mentioned in the comments you can change the deployment model of your project so the Data Sources folder will reappear. To do this right click the project in Solution Explorer and choose for "Convert to Package Deployment Model":
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS1.png?mtime=1332236417"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS1.png?mtime=1332236417" width="524" height="259" /></a>

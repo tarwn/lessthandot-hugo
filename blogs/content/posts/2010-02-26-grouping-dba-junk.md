@@ -26,7 +26,7 @@ tags:
 ---
 ## Chaos or order?
 
-Managing objects in large and small installations of SQL Server can be a job in itself at times. In particular, for the DBA, objects we create on the instances we manage more often than not are found littered over the user and system databases. These objects more often are found in the master database in SQL Server. Really, why not put them there? We are the “masters” over the database server right? SSMS has this quality to it that when we connect to it, we get the master database glaring us in the face by default just like a booby. So of course that means we create our objects there. Right? 
+Managing objects in large and small installations of SQL Server can be a job in itself at times. In particular, for the DBA, objects we create on the instances we manage more often than not are found littered over the user and system databases. These objects more often are found in the master database in SQL Server. Really, why not put them there? We are the "masters" over the database server right? SSMS has this quality to it that when we connect to it, we get the master database glaring us in the face by default just like a booby. So of course that means we create our objects there. Right? 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/booby.gif" alt="" title="" width="460" height="504" /></p> 
@@ -40,7 +40,7 @@ After years managing the databases, we may find ourselves feeling just like that
 
 Maintaining order as a DBA starts with our own messes. That's a pretty direct statement we can really dive into. SQL Server has for many versions given us the ability to manage our messes by grouping them into meaningful areas called schemas. Many times people set schemas aside and only think of them as a security method but they are much more. They take the booby out of us! 
 
-In my own installations each instance contains a DBA database and everything I do as a DBA or Developer resides in there. To learn more about that first step in maintaining order check out, “[Instance design; Where to do your work as a DBA and DB Developer][1]“.
+In my own installations each instance contains a DBA database and everything I do as a DBA or Developer resides in there. To learn more about that first step in maintaining order check out, "[Instance design; Where to do your work as a DBA and DB Developer][1]".
 
 We can go much farther than that knowing schemas are available to us by grouping objects specific to other databases we maintain. 
 

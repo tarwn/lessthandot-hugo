@@ -291,7 +291,7 @@ Further Grails exploration
   
 Getting started with Compojure
   
-A sample Compojure project—“Am I an Otter or Not?”
+A sample Compojure project—"Am I an Otter or Not?"
   
 Summary
 

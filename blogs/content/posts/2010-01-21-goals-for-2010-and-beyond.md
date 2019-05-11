@@ -17,7 +17,7 @@ Ugh. Eli ([blog][1] | [twitter][2]) could not have picked a worse time to tag me
 
 #### School
 
-This one is almost done. For nearly three years I have been going to school at night in pursuit of a Masters' degree in Software Engineering. I finished my last class in December, and I'm currently putting the finishing touches on my thesis. I'm sure my advisor doesn't appreciate my dragging my feet (this was supposed to be done in December as well, but is in “deferred” status now) but the last part of 2009 was \*really\* hard for me. It may have been “good enough” at the end of December, but I think we've made it really good as a result of the extra time. I'm reasonably confident that I can have this finished within a week (as long as I don't get tagged in any other things 😉 )
+This one is almost done. For nearly three years I have been going to school at night in pursuit of a Masters' degree in Software Engineering. I finished my last class in December, and I'm currently putting the finishing touches on my thesis. I'm sure my advisor doesn't appreciate my dragging my feet (this was supposed to be done in December as well, but is in "deferred" status now) but the last part of 2009 was \*really\* hard for me. It may have been "good enough" at the end of December, but I think we've made it really good as a result of the extra time. I'm reasonably confident that I can have this finished within a week (as long as I don't get tagged in any other things 😉 )
 
 #### Family
 

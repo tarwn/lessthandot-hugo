@@ -24,11 +24,11 @@ tags:
 
 And then some scheduled jobs in our development and staging environments kick off and also report database timeouts. It's getting increasingly unlikely that this is us, time to contact support.
 
-**6.45 PM**. Calling support leaves me in a hold queue that is experiencing “longer than normal call volume”. Maybe this isn't just me? I check the service status page and everything is green. Still waiting on hold. I check twitter and don't see any mentions. 
+**6.45 PM**. Calling support leaves me in a hold queue that is experiencing "longer than normal call volume". Maybe this isn't just me? I check the service status page and everything is green. Still waiting on hold. I check twitter and don't see any mentions. 
 
 **7:10 PM**. Lets check the public forums...ah, there's a few other people with this problem. I add my own personal story so we can help flesh out the picture of what's going on. 
 
-**7:15 PM**. 30 minutes into the hold queue and I just got transferred to a ringing phone. After seeing the forum post, I suspect I'll end up getting a canned “We know there's a problem, we don't know what it is or when it will be fixed, thank you for all your money” speech. So I'm a little surprised when after two minutes of ringing the phone simply goes dead. 
+**7:15 PM**. 30 minutes into the hold queue and I just got transferred to a ringing phone. After seeing the forum post, I suspect I'll end up getting a canned "We know there's a problem, we don't know what it is or when it will be fixed, thank you for all your money" speech. So I'm a little surprised when after two minutes of ringing the phone simply goes dead. 
 
 By now I've added a few tweets to twitter with the appropriate tags, started looking at the SLA information for the service, and generally just continue to waste my evening in front of the computer instead of spending time with my wife and two year old. 
 

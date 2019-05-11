@@ -26,7 +26,7 @@ Open SSMS 2008 and connect to a development instance. Once open, right click the
 
 Now open SQL Server Profiler from the performance tools section located in the all programs section of SQL Server 2008. 
 
-Create a new trace and either save to a table or a file for the output. Saving to a table for this type of task is useful so we can query the results later and will not be a heavy performance issue as the trace will not be running long. Next, click the Event Selection so we can filter out most of the batch statements that we don't want to see. I put my filter to only show ApplicationName value of “Microsoft SQL Server Management Studio” and also LoginName of myself. 
+Create a new trace and either save to a table or a file for the output. Saving to a table for this type of task is useful so we can query the results later and will not be a heavy performance issue as the trace will not be running long. Next, click the Event Selection so we can filter out most of the batch statements that we don't want to see. I put my filter to only show ApplicationName value of "Microsoft SQL Server Management Studio" and also LoginName of myself. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/am2.png" alt="" title="" width="480" height="315" />
@@ -38,7 +38,7 @@ You should start to see all of the main statements that are driving the Activity
 
 We can see that the queries are based on several DMV/DMF and are being inserted into temporary tables for the Activity Monitor to show. At this point the query isn't helpful sense the data is being inserted into temporary tables we cannot control. The temporary tables are already created by the monitor so recreating them manually ourselves would also cause a problem. We can use these queries though to manage our own results by simple changes in them and executing them in tasks we create ourselves.
 
-Let's show this by grabbing the query that populates the file information in the “Data File I/O” section of the Activity Monitor. The query that does this should look like this in the beginning of the batch
+Let's show this by grabbing the query that populates the file information in the "Data File I/O" section of the Activity Monitor. The query that does this should look like this in the beginning of the batch
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/am.gif" alt="" title="" width="555" height="177" />

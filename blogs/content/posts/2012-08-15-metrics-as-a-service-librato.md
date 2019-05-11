@@ -54,7 +54,7 @@ Getting the sample application hooked into the service was extremely easy, even 
 
 Clone a copy of the sample application from [tarwn/InstrumentationSampleCode on github][5]. Go to the <a href="https://metrics.librato.com/" target="_blank">metrics.librato.com website</a> and sign up for an account (they have a 30 day free trial). 
 
-After signing in to your account, you can access your account information from the “Account Settings” link at the bottom of the screen. Add or edit the _sensitive.config_ file at the root of the .Net solution, substituting your values where appropriate:
+After signing in to your account, you can access your account information from the "Account Settings" link at the bottom of the screen. Add or edit the _sensitive.config_ file at the root of the .Net solution, substituting your values where appropriate:
 
 **sensitive.config**
 

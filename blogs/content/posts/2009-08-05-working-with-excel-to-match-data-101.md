@@ -27,7 +27,7 @@ Option 1 is usually how I do it since I can write and validate the query it seem
 
 First you need the Excel sheet in the DBA database. Either the import wizard or OPENROWSET again. I use the import wizard for these. It's perfect for it and quick. 
 
-To do that, right click the database, scroll to tasks and select Import Data. Select “Microsoft Excel” in the Data source listing. Note: if you receive an Excel file version 2007+, you need to use Office 12 OLEDB providers. You can read about that [here][1] and how to set the properties or if you allow OPENROWSET then you can simply throw this in there and execute it.
+To do that, right click the database, scroll to tasks and select Import Data. Select "Microsoft Excel" in the Data source listing. Note: if you receive an Excel file version 2007+, you need to use Office 12 OLEDB providers. You can read about that [here][1] and how to set the properties or if you allow OPENROWSET then you can simply throw this in there and execute it.
 
 ```sql
 SELECT * 
@@ -51,7 +51,7 @@ Back to the import wizard; now that you have the data source, click browse to lo
   <img src="/wp-content/uploads/blogs/DataMgmt//xls_1.gif" alt="" title="" width="541" height="519" />
 </div>
 
-Hit Next and you should be able to hit next again sense you are working in the database to import directly. If they are not, fill in the blanks as needed for your DB and instance. Leave, “copy data from one or more tables or views” select and hit next in the next screen. In the, “select source tables and views screen, tick the first sheet (or the sheet that has the relevant data) and either leave the name for the destination the same or change it to what you want. I like to change it to a meaningful name and one that is easier to type for my query.
+Hit Next and you should be able to hit next again sense you are working in the database to import directly. If they are not, fill in the blanks as needed for your DB and instance. Leave, "copy data from one or more tables or views" select and hit next in the next screen. In the, "select source tables and views screen, tick the first sheet (or the sheet that has the relevant data) and either leave the name for the destination the same or change it to what you want. I like to change it to a meaningful name and one that is easier to type for my query.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt//xls_2.gif" alt="" title="" width="541" height="519" />

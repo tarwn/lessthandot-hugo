@@ -20,7 +20,7 @@ categories:
 ---
 The Spring 2011 edition of [24 Hours of PASS: Celebrating Women in Technology][1] has ended. The past two days have been intense, fun and wonderful. 
 
-I presented “Reporting Services 201: The Next Level”. I kicked off day two at 7:00 AM CST, with just over 300 attendees. Thank you to everyone that attended! I hope you learned at least one new SSRS trick that you can start using! My slide deck and report samples are uploaded as [24HOP Reporting Services 201.zip][2]. Please feel free to download these for reference and testing. All reports use the AdventureWorks database, and were developed using Reporting Services 2008 R2. 
+I presented "Reporting Services 201: The Next Level". I kicked off day two at 7:00 AM CST, with just over 300 attendees. Thank you to everyone that attended! I hope you learned at least one new SSRS trick that you can start using! My slide deck and report samples are uploaded as [24HOP Reporting Services 201.zip][2]. Please feel free to download these for reference and testing. All reports use the AdventureWorks database, and were developed using Reporting Services 2008 R2. 
 
 The sessions were recorded, and will be available on the 24HOP site soon! 
 

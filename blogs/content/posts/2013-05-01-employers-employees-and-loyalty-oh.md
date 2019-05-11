@@ -4,7 +4,7 @@ author: chopstik
 type: post
 date: 2013-05-01T06:38:00+00:00
 ID: 2075
-excerpt: 'I recently read an article discussing the idea of loyalty, particularly as it applies to millennials – those of the youngest generation currently working. The article was titled “The Truth About Millennials and Job Loyalty”.  I found the article to be a&hellip;'
+excerpt: 'I recently read an article discussing the idea of loyalty, particularly as it applies to millennials – those of the youngest generation currently working. The article was titled "The Truth About Millennials and Job Loyalty".  I found the article to be a&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/employers-employees-and-loyalty-oh/
 views:
   - 28772
@@ -15,7 +15,7 @@ categories:
   - Professional Development
 
 ---
-I recently read an article discussing the idea of loyalty, particularly as it applies to millennials – those of the youngest generation currently working. The article was titled “[The Truth About Millennials and Job Loyalty][1]”.  I found the article to be an interesting introspective of how “loyalty” is defined by someone within the millennial generation versus how older generations have defined the word. Whether it is right or wrong is, as the author put it, subjective to the point of view of the particular individual.
+I recently read an article discussing the idea of loyalty, particularly as it applies to millennials – those of the youngest generation currently working. The article was titled "[The Truth About Millennials and Job Loyalty][1]".  I found the article to be an interesting introspective of how "loyalty" is defined by someone within the millennial generation versus how older generations have defined the word. Whether it is right or wrong is, as the author put it, subjective to the point of view of the particular individual.
 
 <p class="MsoNoSpacing">
   However, there is a core ideal to loyalty regardless of how various individuals may define it and the author included it in his original article from the dictionary definition – unswerving allegiance. Within the workplace, we tend to view loyalty through the prism of how it may have worked in the past, though I remain somewhat skeptical that our memories of workplace loyalty may be somewhat rose-colored in much the same manner that we tend to remember things from our own youths. We have this romanticized view that people stayed with companies and all was good from that time on. Much of this may have to do with how corporations were set up in the past. Older generations did not have the education available in earlier times that exists today and that levels much of the playing field in terms of workplace skills. In the past, those who obtained the high-level skills were, in many ways, guaranteed good employment by their respective companies because there were few alternatives. Whether these were always happy marriages and whether that loyalty is because there were few alternatives (in either the employer or employee viewpoints) is beside the point. The companies kept faith with their employees and there was little incentive for employees to go elsewhere.

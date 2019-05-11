@@ -146,7 +146,7 @@ think that is prone to typos and copying the job_id directly out of sysjob is a 
 ```sql
 select job_id,[name] from msdb.dbo.sysjobs
 ```
-This shows “8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC” for the Capacity Restriction Monitor Plant 01 job_id
+This shows "8386ED61-E2A8-4DE5-B54C-4A7DFD3CDDEC" for the Capacity Restriction Monitor Plant 01 job_id
 
 Syntax for sp\_update\_job is as follows. One key note is you can use job\_name or job\_id to update the job with
   

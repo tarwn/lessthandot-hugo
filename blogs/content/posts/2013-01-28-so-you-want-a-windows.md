@@ -17,7 +17,7 @@ categories:
   - Project Management
 
 ---
-I've been a Droid phone user for some time now and really, couldn't have imagined using anything else. One of the things that is always important to me is, efficiency in work. That being said, Droid has always been quick to find what I need, actually makes calls and has the tools I need to get the job done. So why would I even consider going to a Windows 8 Phone? Well, “Look, Shiny!!!!” No, really, that wasn't it. 
+I've been a Droid phone user for some time now and really, couldn't have imagined using anything else. One of the things that is always important to me is, efficiency in work. That being said, Droid has always been quick to find what I need, actually makes calls and has the tools I need to get the job done. So why would I even consider going to a Windows 8 Phone? Well, "Look, Shiny!!!!" No, really, that wasn't it. 
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/ITProfessionals/winphone_1.gif?mtime=1359380136"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/winphone_1.gif?mtime=1359380136" width="402" height="190" /></a>

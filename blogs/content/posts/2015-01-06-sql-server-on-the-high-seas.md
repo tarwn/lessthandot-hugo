@@ -24,11 +24,11 @@ It's a new year, you (hopefully) have a new training budget and vacation time, a
 **From fantastic instructors.** Learn about execution plans from Grant Fritchey ([blog][1] | [Twitter][2]), who literally <a href="https://www.simple-talk.com/books/sql-books/sql-server-execution-plans,-second-edition,-by-grant-fritchey/" target="_blank">wrote the book about them</a>; learn how to be the best DBA from Kevin Kline ([blog][3] | [Twitter][4]), a long-time data professional with loads of great career advice; and learn about virtualized SQL Servers from David Klee ([blog][5] | [Twitter][6]), who is both a Microsoft SQL Server MVP and a VMware vExpert.
 
 <p style="padding-left: 30px">
-  Shameless plug: I'm one of the instructors, too, and I'm stoked. “Automating: The Effective DBA” is a session on tools you can use to automate your job – freeing up time for new projects, upgrades, and maybe even catching up on all those SQL Server blogs! I will talk about one of my favorite tools, SQL Server Agent, along with overviews of tools like SSIS and PowerShell.
+  Shameless plug: I'm one of the instructors, too, and I'm stoked. "Automating: The Effective DBA" is a session on tools you can use to automate your job – freeing up time for new projects, upgrades, and maybe even catching up on all those SQL Server blogs! I will talk about one of my favorite tools, SQL Server Agent, along with overviews of tools like SSIS and PowerShell.
 </p>
 
 <p style="padding-left: 30px">
-  “Restore Methods for Database Recovery” is one of my favorite topics. Restoring databases can be straightforward, or you can employ special features and commands to do things like restore to a specific point in time, or bring part of the database online at a time. I love talking about how to keep your data safe and highly available, so I'm really excited for this session.
+  "Restore Methods for Database Recovery" is one of my favorite topics. Restoring databases can be straightforward, or you can employ special features and commands to do things like restore to a specific point in time, or bring part of the database online at a time. I love talking about how to keep your data safe and highly available, so I'm really excited for this session.
 </p>
 
 **Office Hours.** Imagine if you could take one of your favorite instructors, sit her  down, and have a beverage with her while picking her brain about topics from what it's like to be a DBA at a Fortune 500 company to the latest features in SQL Server 2014, career planning, the consulting life, work-life balance, and more. That's Office Hours. These are some of the best hours on the cruise.

@@ -28,7 +28,7 @@ Aside from the fact that the R2 SP1 release is a CTP release and in no way shoul
 
 I could see it being a problem is a production release of a Service Pack was done days after a Cumulative Update for the same version.  That would flare some anger if the timing was just right and DBAs had tested and applied the CU already.  To my recollection, that isn't common or happened much. 
 
-If you are interested in seeing what enhancements are in SQL Server 2008 SP1 CTP, check Denis Gobo's post, “[SQL Server 2008 R2 SP1 CTP Available for download][4]”.
+If you are interested in seeing what enhancements are in SQL Server 2008 SP1 CTP, check Denis Gobo's post, "[SQL Server 2008 R2 SP1 CTP Available for download][4]".
 
 Remember, not all installations have the need for applying all Cumulative Updates.  In fact, if particular problems that many hotfixes repair are not present on your installations, waiting for the Service Pack is a sound strategy.  That does not mean that you should not monitor the CU releases and what they include for hotfixes.  If a CU has a hotfix for a critical area of SQL Server that is in a way, sitting dormant on all SQL Server installations, you should consider applying it. 
 

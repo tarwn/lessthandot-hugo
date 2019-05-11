@@ -34,7 +34,7 @@ Kanban forces us to face these measurement systems and correct some of the flaws
   
 Ingrained habits are difficult to change. Instead of challenging these beliefs directly, start by modeling the process and tasks that are flowing through them. There are separate challenges in this modeling process, but once the visualization is in place and you start getting others involved in refining that visualization and tracking tasks through it, many of these challenges will go away. The ability to see the tasks flow through the process fulfills a need that many people have, providing visibility and insight into the process that previously was ruled by estimation and occasional guesswork.
 
-### “IT is not Manufacturing”
+### "IT is not Manufacturing"
 
 Another common challenge to Kanban is the fact that, having originated in Manufacturing environments, it is not suitable for an IT environment. This is a widely stated argument against Kanban (and Lean principles in general) and it has been soundly disproved in a wide number of industries. The idea that practices or knowledge from one industry cannot be used to further our understanding in others seems a bit egotistical, especially when coupled with arguments that any one area is too specialized to learn anything from others. If this were truly the case then the medical advances we gain from the space program would never have occurred, and neither would hundreds of other concepts and ideas that have crossed industry boundaries to breed new ideas or products in other, dissimilar industries.
   

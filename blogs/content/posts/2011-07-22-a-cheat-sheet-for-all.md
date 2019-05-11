@@ -90,7 +90,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $Name=”Jes”
+        $Name="Jes"
       </td>
     </tr>
     
@@ -132,7 +132,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
     
     <tr>
       <td>
-        ”
+        "
       </td>
       
       <td>
@@ -144,7 +144,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $a=100<br /> “The value of a is $a” will output as:<br /> The value of a is 100
+        $a=100<br /> "The value of a is $a" will output as:<br /> The value of a is 100
       </td>
     </tr>
     
@@ -180,7 +180,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        “The value is `$10” will output as:<br /> The value is $10<br /> It won't treat it as a variable.
+        "The value is `$10" will output as:<br /> The value is $10<br /> It won't treat it as a variable.
       </td>
     </tr>
     
@@ -198,7 +198,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        “text”.ToUpper()<br /> (2 +1)*4
+        "text".ToUpper()<br /> (2 +1)*4
       </td>
     </tr>
     
@@ -234,7 +234,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        Get-Wmiobject -list | where {$_.name -match “win32*”}
+        Get-Wmiobject -list | where {$_.name -match "win32*"}
       </td>
     </tr>
     
@@ -269,7 +269,7 @@ I made myself this PowerShell Punctuation Cheat Sheet. Hopefully it helps you ou
       </td>
       
       <td>
-        $Name=”Jes”; $Name
+        $Name="Jes"; $Name
       </td>
     </tr>
     

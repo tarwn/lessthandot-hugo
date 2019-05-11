@@ -22,7 +22,7 @@ tags:
 ---
 Long time since I posted something on this blog but I hope to pick up the pace again. Only the subjects of the post will slightly change.
   
-Working for a large e-business integrator in Belgium can have some unexpected effects on your career. It all started almost a year ago with a simple sentence: “We want to extend our product portfolio with Product Information Management and we think you are the right person to help us with this.”
+Working for a large e-business integrator in Belgium can have some unexpected effects on your career. It all started almost a year ago with a simple sentence: "We want to extend our product portfolio with Product Information Management and we think you are the right person to help us with this."
   
 Well, I was free to decide, continue with SQL Server like the 12 years before or close my eyes and jump into the dark.
   

@@ -62,9 +62,9 @@ Now if you execute the following
 
 You get back both document
   
-{ “_id” : ObjectId(“512118a7c1eca3d7ffcd00f9”), “name” : “Denis”, “age” : null }
+{ "_id" : ObjectId("512118a7c1eca3d7ffcd00f9"), "name" : "Denis", "age" : null }
   
-{ “_id” : ObjectId(“512123d9c1eca3d7ffcd00fa”), “name” : “Denis2” }
+{ "_id" : ObjectId("512123d9c1eca3d7ffcd00fa"), "name" : "Denis2" }
 
 In order to return the document where the value that is stored is null, you can use `$type: 10`. What that means is that the field is of BSON Type Null 
 

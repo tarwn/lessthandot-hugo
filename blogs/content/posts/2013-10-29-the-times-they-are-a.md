@@ -33,7 +33,7 @@ tags:
   </p>
   
   <p>
-    The most important one is my switch to a new employer. After almost 3 years being happily employed at Ordina Belgium, I'll move to <a href="http://www.element61.be/">element61</a> in November. element61 is a Performance Management and Business Intelligence consultancy firm. From their website: “<em>element61 is the thought-leading Business Analytics, Performance Management and Financial Reporting consulting company in the Belgian marketplace. Today, element61 has brought together the most experienced team in Performance Management, BI & data warehousing in Belgium. The company has grown in 6 years to about 36 senior consultants with -on average- 12 years of experience in PM & BI, totaling over 425 man years of experience</em>”.
+    The most important one is my switch to a new employer. After almost 3 years being happily employed at Ordina Belgium, I'll move to <a href="http://www.element61.be/">element61</a> in November. element61 is a Performance Management and Business Intelligence consultancy firm. From their website: "<em>element61 is the thought-leading Business Analytics, Performance Management and Financial Reporting consulting company in the Belgian marketplace. Today, element61 has brought together the most experienced team in Performance Management, BI & data warehousing in Belgium. The company has grown in 6 years to about 36 senior consultants with -on average- 12 years of experience in PM & BI, totaling over 425 man years of experience</em>".
   </p>
   
   <p>

@@ -45,7 +45,7 @@ The Web Sites option is at the bottom and enabled with a button and dialog:
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-02.png" alt="WindowsAzure.com - Preview Features" /><br /> WindowsAzure.com – Preview Features
 </div>
 
-Once it's enabled, I can go into the portal and when I press the “New” button at the bottom, I'll have options to create a new Web Site instance.
+Once it's enabled, I can go into the portal and when I press the "New" button at the bottom, I'll have options to create a new Web Site instance.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-03.png" alt="WindowsAzure.com - New Website" /><br /> WindowsAzure.com – New Website
@@ -65,7 +65,7 @@ Because I chose to use an Azure Web Site, the build changes are going to be mini
 
 In the properties dashboard for the new website above, there is a link to download the publish settings for the site and a link to setup credentials. First setup the credentials, then click the download link to download the publish settings. These settings are intended for Visual Studio or Web Matrix, but being XML we can read the file and pluck out the important values.
 
-I made a copy of my final “Deploy to Production” step and modified the msdeploy step to use a new Param file. The Param file is used during the deployment to set the IIS name and connection strings, you can see all of them on [BitBucket][5]. 
+I made a copy of my final "Deploy to Production" step and modified the msdeploy step to use a new Param file. The Param file is used during the deployment to set the IIS name and connection strings, you can see all of them on [BitBucket][5]. 
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/Azure-05.png" alt="TeamCity Build Steps" /><br /> TeamCity Build Steps

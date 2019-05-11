@@ -85,7 +85,7 @@ In this episode of 10-4, we introduce a new tooling enhancement coming with Visu
 
 **[Episode 16: Windows Workflow 4][16]**
   
-In this episode of 10-4 we build a “Hello Workflow 4” application. You might have heard that .NET 4 includes an all new Workflow engine – learn how you can not only use Workflow but also do test first style development with it.
+In this episode of 10-4 we build a "Hello Workflow 4" application. You might have heard that .NET 4 includes an all new Workflow engine – learn how you can not only use Workflow but also do test first style development with it.
 
 **[Episode 17: F# Intro][17]**
   
@@ -105,7 +105,7 @@ This demo is based on an early build of Visual Studio Team System 2010 Beta 1.
 
 **[Episode 19: Service Discovery with WCF][19]**
   
-WCF in .NET 4 includes an implementation of the WS-Discovery protocol. Sounds exciting right? Actually it is very cool because it allows you to build applications and services that can discover other services using UDP multicast messages or via a discovery proxy. In this episode I'll walk through the Service Discovery lab where we build a messenger style application I call “ChatWOW”. In this lab you will see how to make your service discoverable and how you can discover other services. Later when Beta 1 is released, you can try it yourself.
+WCF in .NET 4 includes an implementation of the WS-Discovery protocol. Sounds exciting right? Actually it is very cool because it allows you to build applications and services that can discover other services using UDP multicast messages or via a discovery proxy. In this episode I'll walk through the Service Discovery lab where we build a messenger style application I call "ChatWOW". In this lab you will see how to make your service discoverable and how you can discover other services. Later when Beta 1 is released, you can try it yourself.
 
 Update: The WCF/WF4 Training Kit is now live at http://code.msdn.microsoft.com/wcfwf4 so you can try it yourself.
 

@@ -38,15 +38,15 @@ Now run this command
 
 You should get back something like the following, the ObjectId will be different for you
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
 
 Ordering in MongoDB is pretty easy, you add sort, then you specify the fields you want to sort on, use 1 for ascending and use -1 for descending
 
@@ -56,15 +56,15 @@ If we want to sort by name descending, we can use the following
 
 Here are the results, as you can see they are sorted by name descending
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
 
 To sort by name ascending, you just have to change -1 to 1
 
@@ -72,15 +72,15 @@ To sort by name ascending, you just have to change -1 to 1
 
 Here are the results and the names are now ascending
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
 
 Here is age ascending
 
@@ -88,29 +88,29 @@ Here is age ascending
 
 Results
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
 
 Here is age descending
 
 <pre>db.SortTest.find().sort( { age: 1 } );</pre>
 
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
 
 Let's do another insert, this one has the same name but a different age
 
@@ -122,17 +122,17 @@ Sorting by name again
 
 As you can see Abe is there twice
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6818103141917bce645a4”), “name” : “Abe”, “age” : 50 }
+{ "_id" : ObjectId("50f6818103141917bce645a4"), "name" : "Abe", "age" : 50 }
 
 Here is how you do a multi-field sort, it is pretty much the same as in SQL, you just add the other field and specify 1 or -1
 
@@ -142,33 +142,33 @@ So let's sort by age descending and name ascending
 
 Here are the results
   
-{ “_id” : ObjectId(“50f6818103141917bce645a4”), “name” : “Abe”, “age” : 50 }
+{ "_id" : ObjectId("50f6818103141917bce645a4"), "name" : "Abe", "age" : 50 }
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
 
 Now, we are going to sort by age ascending and name descending
 
 <pre>db.SortTest.find().sort( { age: 1 , name: -1} );</pre>
 
-{ “_id” : ObjectId(“50f6811d03141917bce645a2”), “name” : “Xavier”, “age” : 10 }
+{ "_id" : ObjectId("50f6811d03141917bce645a2"), "name" : "Xavier", "age" : 10 }
   
-{ “_id” : ObjectId(“50f6811c03141917bce6459f”), “name” : “Denis”, “age” : 20 }
+{ "_id" : ObjectId("50f6811c03141917bce6459f"), "name" : "Denis", "age" : 20 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a0”), “name” : “Abe”, “age” : 30 }
+{ "_id" : ObjectId("50f6811d03141917bce645a0"), "name" : "Abe", "age" : 30 }
   
-{ “_id” : ObjectId(“50f6811d03141917bce645a1”), “name” : “John”, “age” : 40 }
+{ "_id" : ObjectId("50f6811d03141917bce645a1"), "name" : "John", "age" : 40 }
   
-{ “_id” : ObjectId(“50f6811e03141917bce645a3”), “name” : “Zen”, “age” : 50 }
+{ "_id" : ObjectId("50f6811e03141917bce645a3"), "name" : "Zen", "age" : 50 }
   
-{ “_id” : ObjectId(“50f6818103141917bce645a4”), “name” : “Abe”, “age” : 50 }
+{ "_id" : ObjectId("50f6818103141917bce645a4"), "name" : "Abe", "age" : 50 }
 
 As you can see sorting is very easy to do in MongoDB. One thing to keep in mind
 

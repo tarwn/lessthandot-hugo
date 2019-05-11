@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2013-12-10T07:00:00+00:00
 ID: 2199
-excerpt: John Sansom asks, “If you could give an aspiring DBA just one piece of advice what would it be?”
+excerpt: John Sansom asks, "If you could give an aspiring DBA just one piece of advice what would it be?"
 url: /index.php/itprofessionals/professionaldevelopment/advice-for-aspiring-data-professionals/
 views:
   - 12838
@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-“If you could give an aspiring DBA just one piece of advice what would it be?” This was a question posed to me by John Sansom (<a href="http://www.johnsansom.com/" target="_blank">blog </a>| <a href="https://twitter.com/SqlBrit" target="_blank">twitter</a>).
+"If you could give an aspiring DBA just one piece of advice what would it be?" This was a question posed to me by John Sansom (<a href="http://www.johnsansom.com/" target="_blank">blog </a>| <a href="https://twitter.com/SqlBrit" target="_blank">twitter</a>).
 
 Question everything about the data – access to it, security of it, and how it's being used.
 

@@ -47,7 +47,7 @@ GO
 
 Resulting error message:
 
-<span class="MT_red">Msg 2760, Level 16, State 1, Line 1<br /> The specified schema name “dbo” either does not exist or you do not have permission to use it.</span>
+<span class="MT_red">Msg 2760, Level 16, State 1, Line 1<br /> The specified schema name "dbo" either does not exist or you do not have permission to use it.</span>
 
 schema to FinanceTables and attempt to run the statement again.
 
@@ -67,7 +67,7 @@ ALTER SCHEMA IndexMaint TRANSFER dba.indexlog;
 GO
 ```
 
-This change does not truly move the table but redefines the schema that owns it.  This method can be used to change security on a wide range of objects quickly.  Moving the entire contents can be performed as shown in the Wiki entry, “[Move all tables from one schema to another quickly][3]”
+This change does not truly move the table but redefines the schema that owns it.  This method can be used to change security on a wide range of objects quickly.  Moving the entire contents can be performed as shown in the Wiki entry, "[Move all tables from one schema to another quickly][3]"
 
 Resources
 

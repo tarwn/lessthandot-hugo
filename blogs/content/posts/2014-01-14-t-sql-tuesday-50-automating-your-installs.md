@@ -18,7 +18,7 @@ tags:
 ---
 <a href="http://sqlchow.wordpress.com/2014/01/07/t-sql-tuesday-050-automation-how-much-of-it-is-the-same/" target="_blank"><img class="alignnone size-full wp-image-2241" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" /></a>
 
-This month's T-SQL Tuesday is being hosted by SQLChow (<a href="http://sqlchow.wordpress.com/" target="_blank">b</a> | <a href="https://twitter.com/sqlchow" target="_blank">t</a>) and the topic is “Automation, how much of it is the same?”.  As SQLChow noted, automation was a topic a few years ago and now it is being revisited to see if and how it has changed over the years.
+This month's T-SQL Tuesday is being hosted by SQLChow (<a href="http://sqlchow.wordpress.com/" target="_blank">b</a> | <a href="https://twitter.com/sqlchow" target="_blank">t</a>) and the topic is "Automation, how much of it is the same?".  As SQLChow noted, automation was a topic a few years ago and now it is being revisited to see if and how it has changed over the years.
 
 I know for me, over the last few years, automation has taken a larger role in many of the things I do.  I've automated many processes over the years using various tools such as SSIS and PowerShell and doing so has not only saved me time but my sanity as well  One of the biggest areas of automation for me over the past couple of years has been the automation my installs of SQL Server.  Everything from test and production server installs to automating the installation of the SQL Server Client Tools on developers machines and even cluster installs.
 

@@ -27,7 +27,7 @@ This morning Adam Machanic ([blog][1] | [twitter][2]) asked the following questi
 
 A very interesting question, as I was wondering this myself at my last session. I was presenting the slides using presenter mode, which means the projector screen is an extension of your desktop. PowerPoint does this automatically. However, when exiting the slideshow I would like to go back to duplicated screens, as it's much easier to do demos when your screen is duplicated instead of extended. I have heard other presenters with the same issue as well.
 
-A quick search with my favorite search engine led me to a [Q&A on the Microsoft website][3]. Apparently all you have to do is add a registry setting (of course, we're still using Windows). At [HKEY\_CURRENT\_USER\Software\Microsoft\Office\15.0\PowerPoint\Options] the following DWORD value has to be added: “RestoreTopology”=dword:00000001. The site I linked to has an easy update script that you can use.
+A quick search with my favorite search engine led me to a [Q&A on the Microsoft website][3]. Apparently all you have to do is add a registry setting (of course, we're still using Windows). At [HKEY\_CURRENT\_USER\Software\Microsoft\Office\15.0\PowerPoint\Options] the following DWORD value has to be added: "RestoreTopology"=dword:00000001. The site I linked to has an easy update script that you can use.
 
 Adam has already tested it and it works perfectly!
 

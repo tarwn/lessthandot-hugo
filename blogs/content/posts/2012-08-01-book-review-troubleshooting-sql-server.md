@@ -41,7 +41,7 @@ This book is administration-focused. It does not cover any T-SQL or programming 
 
 The troubleshooting method laid out begins with wait stats, and I agree that's a good place to start for most issues. What is mentioned at the end of the book, but not in this section, is that when things go wrong, the first thing to do is remain calm.
 
-Under Plan Cache Usage, Jonathan states, “In my experience, the Plan Cache in SQL Server 2005 and 2008 is one of the most underused assets for troubleshooting performance problems in SQL Server.” This is true. You can view the most CPU- and disk-intensive queries, historically.
+Under Plan Cache Usage, Jonathan states, "In my experience, the Plan Cache in SQL Server 2005 and 2008 is one of the most underused assets for troubleshooting performance problems in SQL Server." This is true. You can view the most CPU- and disk-intensive queries, historically.
 
 **Chapter 2 – Disk I/O Configuration** 
 
@@ -49,9 +49,9 @@ First, a thorough, easy-to-understand overview of RAID levels is presented. This
 
 **Chapter 3 – High CPU Utilization** 
 
-This chapter describes what happens when you have CPU pressure in your system. Perfmon, SQL Trace, and DMVs are used as troubleshooting tools. There are great sample queries to have in your DBA tool belt, such as “finding the top 10 CPU-consuming queries”. Problems that can cause high CPU usage, such as missing indexes and parameter sniffing, are a good take-away. How to deal with them is even better.
+This chapter describes what happens when you have CPU pressure in your system. Perfmon, SQL Trace, and DMVs are used as troubleshooting tools. There are great sample queries to have in your DBA tool belt, such as "finding the top 10 CPU-consuming queries". Problems that can cause high CPU usage, such as missing indexes and parameter sniffing, are a good take-away. How to deal with them is even better.
 
-“Inappropriate parallelism” made me giggle.
+"Inappropriate parallelism" made me giggle.
 
 **Chapter 4 – Memory Management** 
 
@@ -73,11 +73,11 @@ Several methods to gather deadlock information by capturing deadlock graphs are 
 
 **Chapter 8 – Large or Full Transaction Log** 
 
-I have run into problems with transaction logs that filled up drives, or long-running transactions that took up a lot of space in the log, many times. The chapter starts with a quick review of how the transaction log works. Several reasons the log could grow outrageously are discussed. Then, methods to fix it such as taking a log backup or adding space are discussed. What's equally important is the “what not to do” section. There is a lot of bad advice given on the internet, and I'm glad that issue is addressed here.
+I have run into problems with transaction logs that filled up drives, or long-running transactions that took up a lot of space in the log, many times. The chapter starts with a quick review of how the transaction log works. Several reasons the log could grow outrageously are discussed. Then, methods to fix it such as taking a log backup or adding space are discussed. What's equally important is the "what not to do" section. There is a lot of bad advice given on the internet, and I'm glad that issue is addressed here.
 
 **Chapter 9 – Truncated Tables, Dropped Objects, and Other Accidents Waiting to Happen** 
 
-The chapter starts with real-world stories of tables that have been dropped from production systems, whether through bad security practices or an accident. I've had moments like that, too – I've dropped tables from databases because of a missing WHERE clause. In real life, it happens. It's how you react to it that's important. Good guidelines are given, and the advice to “keep calm” is really important.
+The chapter starts with real-world stories of tables that have been dropped from production systems, whether through bad security practices or an accident. I've had moments like that, too – I've dropped tables from databases because of a missing WHERE clause. In real life, it happens. It's how you react to it that's important. Good guidelines are given, and the advice to "keep calm" is really important.
 
 **A Practical Everyday Reference** 
 

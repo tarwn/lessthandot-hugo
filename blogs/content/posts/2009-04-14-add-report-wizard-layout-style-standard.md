@@ -22,7 +22,7 @@ Find this directory
 
 C:Program FilesMicrosoft Visual Studio 8Common7IDEPrivateAssembliesBusiness Intelligence WizardsReportsStylesen
 
-Note there is a backup one level up. I suggest you leave that alone and as a recovery point. If you mess this up, the report wizard will fail on you. Guess that means this is a, “At your own risk” post.
+Note there is a backup one level up. I suggest you leave that alone and as a recovery point. If you mess this up, the report wizard will fail on you. Guess that means this is a, "At your own risk" post.
 
 Open StyleTemplates.xml for editing.
 

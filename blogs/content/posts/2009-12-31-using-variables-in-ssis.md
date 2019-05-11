@@ -41,7 +41,7 @@ Setting up the container is the first step. The initial setting we'll need is th
 
 The next section under the variable mappings is crucial to the functional loop through all the files in the folder. This will allow us to set the index of the file name currently focused in a variable so we can utilize it through the flow of the import.
 
-Drop down the Variable selection and select “<new variable>” so we can create our variable with the editor. In this case, scope is important. Scope of a variable (the container in which is can be accessed) acts as option explicit does in the old visual basic world. It will dictate to the program flow what objects can access the variable and how they access them. For our case the file name is of the highest level of our objects and will be accessed by the entire package. This tells us we need to make the scope of the variable at the package container level. Index level is assigned to out variable by default based on how you add them. The file name is the first index so we simply leave our single variable in the mappings as is.
+Drop down the Variable selection and select "<new variable>" so we can create our variable with the editor. In this case, scope is important. Scope of a variable (the container in which is can be accessed) acts as option explicit does in the old visual basic world. It will dictate to the program flow what objects can access the variable and how they access them. For our case the file name is of the highest level of our objects and will be accessed by the entire package. This tells us we need to make the scope of the variable at the package container level. Index level is assigned to out variable by default based on how you add them. The file name is the first index so we simply leave our single variable in the mappings as is.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/var_2.gif" alt="" title="" width="485" height="193" />
@@ -65,7 +65,7 @@ Now going into the designer we have the ability to read the focused_fil variable
 Dts.Variables["processed"].Value = "File " + Dts.Variables["focused_fil"].Value + " processed @ " + System.DateTime.Now.ToString();
 ```
 
-This results in setting the processed variable as “File document.xml processed @ {system date}”
+This results in setting the processed variable as "File document.xml processed @ {system date}"
 
 More error handling can be added to accurately email the status of the files that were touched by the package and even move them to error folders or reprocessing folders later. This is where we start to see the power in error handling of variables and working them through the flow of the package.
 
@@ -83,7 +83,7 @@ Once we've set the variable as needed and create a connection, you can dictate u
 
 ## Data Flow Setup
 
-Create a new connection by right clicking the connection managers area and select OLE DB connection. Click the New button to create a new connection and put “destination” in the server name of the connection and click OK to close it. This creates a connection to basically nothing at this point but gives us a shell to work with dynamically. 
+Create a new connection by right clicking the connection managers area and select OLE DB connection. Click the New button to create a new connection and put "destination" in the server name of the connection and click OK to close it. This creates a connection to basically nothing at this point but gives us a shell to work with dynamically. 
 
 Create two new variables in the package container named, dest\_conn and dest\_db. Set these variables to string data types and enter static values for the instance and the initial catalog we want to connect to. Highlight the destination connection in the connection managers area to expose the properties of the connection in the properties window. In the properties window, click the browse button for expressions to open the property expression editor. Here we can set the connection string to what we want based on a real-time validated expression. To set a trusted connection we can build a connection string such as
 
@@ -129,7 +129,7 @@ Create one more variable named, archive. I set this to a static value of C:files
   
 We can already see that this newly added variable could be accompanied by another that shows the source of the files and could be used prior in the foreach container for the property values of source and also the initial connection of the flat file connection. 
 
-In our File System Task editor we only need to set 3 values with our variables in order to “archive” the processed file. The file system task also has the intelligence for you to tell it if the source and destination are going to be variables. This essentially will allow the processor to evaluate them and not show unwanted errors if directories do not exist at build time.
+In our File System Task editor we only need to set 3 values with our variables in order to "archive" the processed file. The file system task also has the intelligence for you to tell it if the source and destination are going to be variables. This essentially will allow the processor to evaluate them and not show unwanted errors if directories do not exist at build time.
   
 Set IsDestinationPathVariable and IsSourcePathVariable to True and set the following variables to the property assigned. 
 

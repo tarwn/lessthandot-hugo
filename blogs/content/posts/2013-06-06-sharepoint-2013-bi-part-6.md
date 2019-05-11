@@ -5,7 +5,7 @@ type: post
 date: 2013-06-06T12:14:00+00:00
 ID: 2097
 excerpt: |
-  In this part of the series we will install the Analysis Service instance that will host the PowerPivot workbooks used in SharePoint, also known as “the PowerPivot instance”.
+  In this part of the series we will install the Analysis Service instance that will host the PowerPivot workbooks used in SharePoint, also known as "the PowerPivot instance".
   The first step is to create a service account for this instance. I named it SP&hellip;
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/sharepoint-2013-bi-part-6/
 views:
@@ -31,7 +31,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Before we can configure SharePoint, we will have to install the Analysis Service instance that will host the PowerPivot workbooks used in SharePoint, also known as “the PowerPivot instance”.
+  Before we can configure SharePoint, we will have to install the Analysis Service instance that will host the PowerPivot workbooks used in SharePoint, also known as "the PowerPivot instance".
 </p>
 
 <p style="text-align: justify;">

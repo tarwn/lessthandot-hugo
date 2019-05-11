@@ -21,7 +21,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  ITPROceed 2014 is now a thing of the past, but is has been an awesome – and free! – event. A very big thank you and “well done” to the organizers. It has been a great gathering of the #sqlfamily, with superb sessions about Azure, restoring databases with PowerShell, Hekaton (yes yes In-Memory OLTP), Administration Intelligence (a new buzzword for marketing?), a glimpse into the new APS (Analytics Platform System, a blend of PDW and Hadoop that will knock your socks off) and of course my own session about data visualization.
+  ITPROceed 2014 is now a thing of the past, but is has been an awesome – and free! – event. A very big thank you and "well done" to the organizers. It has been a great gathering of the #sqlfamily, with superb sessions about Azure, restoring databases with PowerShell, Hekaton (yes yes In-Memory OLTP), Administration Intelligence (a new buzzword for marketing?), a glimpse into the new APS (Analytics Platform System, a blend of PDW and Hadoop that will knock your socks off) and of course my own session about data visualization.
 </p>
 
 <p style="text-align: justify">

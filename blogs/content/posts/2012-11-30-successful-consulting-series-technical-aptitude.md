@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-30T12:53:00+00:00
 ID: 1814
-excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consulting&hellip;'
+excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, "Successful Consulting&hellip;'
 url: /index.php/itprofessionals/ethicsit/successful-consulting-series-technical-aptitude/
 views:
   - 18011
@@ -15,7 +15,7 @@ categories:
   - Professional Development
 
 ---
-> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “[Successful Consulting Series][1]” for a full listing of each part in this series.
+> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, "[Successful Consulting Series][1]" for a full listing of each part in this series.
 
 Aptitude can be defined as talent.  Don't think this means that you can only be successful in consulting if you have a talent for technology.  Of course, talent breeds success if the will and motivation are combined.  You can obtain talent by hard work, even if it comes seemingly easy for some people. Consulting and aptitude simply have a relationship in which the level should exceed the mundane nature of other positions.  Consulting in data architecture, for example, holds a certain need for technical aptitude that should be sought after with a high level of energy.  This aptitude can be gained in a few ways.
 

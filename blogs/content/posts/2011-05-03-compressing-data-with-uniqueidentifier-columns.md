@@ -20,7 +20,7 @@ I was running some tests on compression for row and page level, and noticed some
 
 **Estimate Compression ROW and PAGE level**
 
-To return a sampling of the compression result, use the procedure sp\_estimate\_data\_compression\_savings.  The procedure is very useful but it is an “_estimation_” tool. 
+To return a sampling of the compression result, use the procedure sp\_estimate\_data\_compression\_savings.  The procedure is very useful but it is an "_estimation_" tool. 
 
 To run a test, create the following table and then execute the estimation procedure on both samplings for ROW and PAGE level compression.
 
@@ -87,7 +87,7 @@ GO
   <a href="/wp-content/uploads/blogs/DataMgmt/-53.png?mtime=1304392781"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-53.png?mtime=1304392781" width="624" height="118" /></a>
 </div>
 
-We can see the true impact is on the first index but there is a loss on the second index.  Looking into the second index it is shown as the AK\_SalesOrderDetail\_rowguid index.  This index is the uniqueidentfier in the table.  Of course, the compression of the primary key and the slightcompression of the product ID index accumulate to savings still.  That was the why the “fence” statement earlier. 
+We can see the true impact is on the first index but there is a loss on the second index.  Looking into the second index it is shown as the AK\_SalesOrderDetail\_rowguid index.  This index is the uniqueidentfier in the table.  Of course, the compression of the primary key and the slightcompression of the product ID index accumulate to savings still.  That was the why the "fence" statement earlier. 
 
 Make sure you test your compression estimated results before enabling it on your tables.  You may actually hurt yourself if certain data types are in the table and there are no true benefiting data types existing.
 

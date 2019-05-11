@@ -42,7 +42,7 @@ Next we need to set our default command-line scripting engine to cscript.exe so 
 
 <code class="codespan">cscript //H:cscript</code>
 
-_Note: this actually failed on my main system with an error indicating it wasn't able to change my default script engine. I fixed this by opening up the registry and setting [HKEY\_CLASSES\_ROOTWSFFileShell] to “Open2”. The command above did work on my build VM, so YMMV_
+_Note: this actually failed on my main system with an error indicating it wasn't able to change my default script engine. I fixed this by opening up the registry and setting [HKEY\_CLASSES\_ROOTWSFFileShell] to "Open2". The command above did work on my build VM, so YMMV_
 
 WCAT is designed to run with one or more clients sending the requests to the target site. This architecture means we have a controller that orchestrates the test run and clients that actually execute it. In order to prepare systems for their future role as a WCAT client, we need to run the following (which will result in a reboot):
 
@@ -84,13 +84,13 @@ To get started I opened Fiddler, opened Chrome, then opened one of the sub-sites
 
 So I cleared the cache in Chrome and deleted all these entries (select them all, press delete). Clean slate.
 
-My load test is going to be a worst case. Every “end user” will visit with a cold cache and buy just a single item. This will give me a good combination of reads, writes, cart processing logic, and authentication. Generating the session information is as easy as following the path I want to test with Fiddler capturing the individual GET and POST requests in the background.
+My load test is going to be a worst case. Every "end user" will visit with a cold cache and buy just a single item. This will give me a good combination of reads, writes, cart processing logic, and authentication. Generating the session information is as easy as following the path I want to test with Fiddler capturing the individual GET and POST requests in the background.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/wcat_fiddler_2.png" title="Fiddler Screenshot" /><br /> Fiddler Screenshot
 </div>
 
-After deleting all the irrelevant traffic, like the Tweetdeck calls to twitter, I have a list of GET/POST requests that ended in 200 and 302 statuses. Form the file menu I'll select “Export Sessions”, “All Sessions”. The dialog offers several options for export, but the one I want is the WCAT option as the bottom.
+After deleting all the irrelevant traffic, like the Tweetdeck calls to twitter, I have a list of GET/POST requests that ended in 200 and 302 statuses. Form the file menu I'll select "Export Sessions", "All Sessions". The dialog offers several options for export, but the one I want is the WCAT option as the bottom.
 
 The exported file is a WCAT scenario file I can run locally against my beta server. It still has the name of the randomly selected sub-folder I used in Chrome (my smoketest URL), but I'll change that later after I have a chance to set up a new URL on my beta VM.
 

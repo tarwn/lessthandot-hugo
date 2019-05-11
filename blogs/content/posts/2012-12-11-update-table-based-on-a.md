@@ -5,7 +5,7 @@ type: post
 date: 2012-12-11T12:20:00+00:00
 ID: 1849
 excerpt: |
-  This may seem like a simple and basic task but it is a common question asked, “How do I update a column based on a query that has joins in it?”
+  This may seem like a simple and basic task but it is a common question asked, "How do I update a column based on a query that has joins in it?"
   Let's say you have a query such as the one below from AdventureWorks2012.
   SELECT per.LastName
   	,emp.JobTit&hellip;
@@ -28,7 +28,7 @@ This month's T-SQL Tuesday is hosted by Sebastian Meine ([blog][1] | [twitter][2
 
 I thought I'd write about a question I get often from Developers and some DBAs.
   
-This may seem like a simple and basic task but it is a common question asked, “How do I update a column based on a query that has joins in it?”
+This may seem like a simple and basic task but it is a common question asked, "How do I update a column based on a query that has joins in it?"
 
 Let's say you have a query such as the one below from AdventureWorks2012.
 

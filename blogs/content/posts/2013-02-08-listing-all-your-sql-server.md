@@ -52,4 +52,4 @@ msdb		     38.00 MB	sa		4	Feb 10 2012	110
 master		     18.63 MB	sa		1	Apr  8 2003	110
 ReportServer	     12.94 MB	DenisDenis	5	Aug 16 2012	110</pre>
 
-This “check” will be part of the informational section of SQLCop
+This "check" will be part of the informational section of SQLCop

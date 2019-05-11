@@ -85,7 +85,7 @@ FROM dbo.TestOver;
 </ol>
 
 <p style="text-align: justify">
-  Starting from SQL Server 2012, the T-SQL windowing functions and the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.120).aspx">OVER clause</a> were greatly enhanced. Suddenly you can specify an ORDER BY for the aggregate windowing functions (which I did in the first attempts, remember?). However, if you specify an ORDER BY clause but no ROW or RANGE clause, SQL Server will apply the following defaults: RANGE UNBOUNDED PRECEDING as the lower limit and CURRENT ROW for the upper limit of the window. When Hugo explained this, I had my “Eureka” moment (or rather my “How could I have been this stupid?” moment). Because of these defaults, the MAX aggregate was calculated over the wrong windows! Let's illustrate the concept for group A:
+  Starting from SQL Server 2012, the T-SQL windowing functions and the <a href="http://msdn.microsoft.com/en-us/library/ms189461(v=sql.120).aspx">OVER clause</a> were greatly enhanced. Suddenly you can specify an ORDER BY for the aggregate windowing functions (which I did in the first attempts, remember?). However, if you specify an ORDER BY clause but no ROW or RANGE clause, SQL Server will apply the following defaults: RANGE UNBOUNDED PRECEDING as the lower limit and CURRENT ROW for the upper limit of the window. When Hugo explained this, I had my "Eureka" moment (or rather my "How could I have been this stupid?" moment). Because of these defaults, the MAX aggregate was calculated over the wrong windows! Let's illustrate the concept for group A:
 </p>
 
 <p style="text-align: justify">

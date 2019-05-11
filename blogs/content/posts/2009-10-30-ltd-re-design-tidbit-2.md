@@ -33,13 +33,13 @@ The same pages and site sections that exist today are also present in the new de
 
 The blogs no longer present a 6 foot long front page to the world. When you first visit this section you are presented with a short section of summaries from the most recent blogs that looks similar to the launchpad of the site. This will allow the articles to be visible longer on the front page, as not many people were comfortable scrolling the entire height of the page to see what articles had been posted recently. In addition to presenting a better reading experience, we have also enhanced the main article view, moving rating and feedback buttons into more accessible places, providing new links to share material on common social sites, and providing additional information about the author of each article.
 
-## Social “Sitings”
+## Social "Sitings"
 
 The group at LTD belong to a wider number of social sites than I knew existed. Each of you likely followed a link from one of those sites to get to this article. To provide better visibility into events and new articles, social link information has been built into the site.
 
 ![][3]
 
-This area still has a number of enhancements on the development list, but links are already appearing throughout the beta site that provide social links for both the site and individual users. Initially the only user-centric links will be in new “About Author” section for blog articles, but we have plans to expend this information to the rest of the site and all members in a later iteration.
+This area still has a number of enhancements on the development list, but links are already appearing throughout the beta site that provide social links for both the site and individual users. Initially the only user-centric links will be in new "About Author" section for blog articles, but we have plans to expend this information to the rest of the site and all members in a later iteration.
 
 ![][4]
 

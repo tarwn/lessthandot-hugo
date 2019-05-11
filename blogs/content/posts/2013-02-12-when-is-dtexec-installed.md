@@ -24,7 +24,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Or in other words, what do I need to install during SQL Server setup in order to end up with a fully operational SSIS server with a minimal surface area configuration? I came up with this blog post after I participated in the following thread at the MSDN forum: <a href="http://social.msdn.microsoft.com/Forums/en-US/sqlintegrationservices/thread/4f29e3a3-fc8a-465c-8acc-12ecedfcb24c">“What's the minimum configuration to run dtexec on windows 2003 server?”</a> <a href="http://msdn.microsoft.com/en-us/library/ms162810(v=SQL.105).aspx">DTEXEC</a> is the command line utility used behind the scenes to run SSIS packages. The question asker thought only the client tools needed to be installed, but I was not sure of this. Time to investigate!
+  Or in other words, what do I need to install during SQL Server setup in order to end up with a fully operational SSIS server with a minimal surface area configuration? I came up with this blog post after I participated in the following thread at the MSDN forum: <a href="http://social.msdn.microsoft.com/Forums/en-US/sqlintegrationservices/thread/4f29e3a3-fc8a-465c-8acc-12ecedfcb24c">"What's the minimum configuration to run dtexec on windows 2003 server?"</a> <a href="http://msdn.microsoft.com/en-us/library/ms162810(v=SQL.105).aspx">DTEXEC</a> is the command line utility used behind the scenes to run SSIS packages. The question asker thought only the client tools needed to be installed, but I was not sure of this. Time to investigate!
 </p>
 
 <p style="text-align: justify;">
@@ -51,13 +51,13 @@ tags:
   To test if DTEXEC is installed and if it works correctly, the following commands are used in a command window:
 </p>
 
-> _<span style="font-size: small;">dtexec /F “c:SimpleTest.dtsx” > SimpleLog.txt</span>_
+> _<span style="font-size: small;">dtexec /F "c:SimpleTest.dtsx" > SimpleLog.txt</span>_
 
 <p style="text-align: justify;">
   and
 </p>
 
-> _<span style="font-size: small;">dtexec /F “c:AdvancedTest.dtsx” > AdvancedLog.txt</span>_
+> _<span style="font-size: small;">dtexec /F "c:AdvancedTest.dtsx" > AdvancedLog.txt</span>_
 
 <p style="text-align: justify;">
   These commands execute a package located on the file system and output the results to a text file.
@@ -116,7 +116,7 @@ tags:
 </p>
 
 > <p style="text-align: justify;">
->   <span style="font-size: 9pt;"><em>The component “(DER) Add timestamp” (38) cannot run on installed (64-bit) of Integration Services. It requires Standard Edition (64-bit) or higher.</em></span>
+>   <span style="font-size: 9pt;"><em>The component "(DER) Add timestamp" (38) cannot run on installed (64-bit) of Integration Services. It requires Standard Edition (64-bit) or higher.</em></span>
 > </p>
 
 <p style="text-align: justify;">
@@ -124,7 +124,7 @@ tags:
 </p>
 
 > <p style="text-align: justify;">
->   <span style="font-size: 9pt;"><em>Warning: 2013-01-16 14:49:02.56  Code: 0xC0048000<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (DFT) Throw data around (SSIS.Pipeline)<br /> &nbsp;&nbsp; Description: The registry key “SOFTWAREClassesCLSID{119D450D-E2A3-4DB0-A7BC-ACDE2536673E}DTSInfo” cannot be opened.<br /> End Warning<br /> Warning: 2013-01-16 14:49:02.56   Code: 0x8004801E<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (DFT) Throw data around (SSIS.Pipeline)<br /> &nbsp;&nbsp; Description: Cannot find the “CurrentVersion” value for component {119D450D-E2A3-4DB0-A7BC-ACDE2536673E}. The CurrentVersion value for the component cannot be located. This error occurs if the component has not set its registry information to contain a CurrentVersion value in the DTSInfo section. This message occurs during component development, or when the component is used in a package, if the component is not registered properly.<br /> End Warning<br /> Error: 2013-01-16 14:49:02.56   Code: 0xC0048020<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (DFT) Throw data around (SSIS.Pipeline)<br /> &nbsp;&nbsp; Description: The version of component “(TEX) Extraction FirstName” (77) is not compatible with this version of the DataFlow.<br /> End Error<br /> Error: 2013-01-16 14:49:02.56   Code: 0xC0048020<br /> &nbsp;&nbsp; Source: (DFT) Throw data around SSIS.Pipeline<br /> &nbsp;&nbsp; Description: The version of component “(TEX) Extraction FirstName” (77) is not compatible with this version of the DataFlow.<br /> End Error<br /> ...<br /> Error: 2013-01-16 14:49:02.56  Code: 0xC0048021<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (TEX) Extraction FirstName [77]<br /> &nbsp;&nbsp; Description: The component is missing, not registered, not upgradeable, or missing required interfaces. The contact information for this component is “”.<br /> End Error<br /> Error: 2013-01-16 14:49:02.56   Code: 0xC0047017<br /> &nbsp;&nbsp; Source: (DFT) Throw data around SSIS.Pipeline<br /> &nbsp;&nbsp; Description: component “(TEX) Extraction FirstName” (77) failed validation and returned error code 0xC0048021.<br /> End Error<br /> </em></span>
+>   <span style="font-size: 9pt;"><em>Warning: 2013-01-16 14:49:02.56  Code: 0xC0048000<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (DFT) Throw data around (SSIS.Pipeline)<br /> &nbsp;&nbsp; Description: The registry key "SOFTWAREClassesCLSID{119D450D-E2A3-4DB0-A7BC-ACDE2536673E}DTSInfo" cannot be opened.<br /> End Warning<br /> Warning: 2013-01-16 14:49:02.56   Code: 0x8004801E<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (DFT) Throw data around (SSIS.Pipeline)<br /> &nbsp;&nbsp; Description: Cannot find the "CurrentVersion" value for component {119D450D-E2A3-4DB0-A7BC-ACDE2536673E}. The CurrentVersion value for the component cannot be located. This error occurs if the component has not set its registry information to contain a CurrentVersion value in the DTSInfo section. This message occurs during component development, or when the component is used in a package, if the component is not registered properly.<br /> End Warning<br /> Error: 2013-01-16 14:49:02.56   Code: 0xC0048020<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (DFT) Throw data around (SSIS.Pipeline)<br /> &nbsp;&nbsp; Description: The version of component "(TEX) Extraction FirstName" (77) is not compatible with this version of the DataFlow.<br /> End Error<br /> Error: 2013-01-16 14:49:02.56   Code: 0xC0048020<br /> &nbsp;&nbsp; Source: (DFT) Throw data around SSIS.Pipeline<br /> &nbsp;&nbsp; Description: The version of component "(TEX) Extraction FirstName" (77) is not compatible with this version of the DataFlow.<br /> End Error<br /> ...<br /> Error: 2013-01-16 14:49:02.56  Code: 0xC0048021<br /> &nbsp;&nbsp; Source: (DFT) Throw data around (TEX) Extraction FirstName [77]<br /> &nbsp;&nbsp; Description: The component is missing, not registered, not upgradeable, or missing required interfaces. The contact information for this component is "".<br /> End Error<br /> Error: 2013-01-16 14:49:02.56   Code: 0xC0047017<br /> &nbsp;&nbsp; Source: (DFT) Throw data around SSIS.Pipeline<br /> &nbsp;&nbsp; Description: component "(TEX) Extraction FirstName" (77) failed validation and returned error code 0xC0048021.<br /> End Error<br /> </em></span>
 > </p>
 
 <p style="text-align: justify;">

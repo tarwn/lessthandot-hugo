@@ -24,7 +24,7 @@ As always, the most important thing you can do is have a baseline of wait statis
 
 If the waits are high and performance is bad, you can work to solve the problem immediately. If the performance on the server is acceptable, with a baseline, monitor it so you can tell when there is something abnormal going on, and then can work to fix the problem.
 
-You can try to spend all of your time eliminating waits, or eliminating what you think are “bad” waits, but you may be wasting your time. Focus on what is truly important, what is really a problem.
+You can try to spend all of your time eliminating waits, or eliminating what you think are "bad" waits, but you may be wasting your time. Focus on what is truly important, what is really a problem.
 
  [1]: http://www.sqlskills.com/blogs/erin/
  [2]: https://twitter.com/erinstellato

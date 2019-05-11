@@ -47,11 +47,11 @@ CamStudio fails to encode the recording if it is over 2GB. By dialing down the f
   <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/Recording02.jpg" alt="Recording Settings Dialog" /><br /> Recording Settings Dialog
 </div>
 
-Note: You may also want to go to “Options”, “Program Options”, “Directory for Recording” to specify where the files will be saved.
+Note: You may also want to go to "Options", "Program Options", "Directory for Recording" to specify where the files will be saved.
 
 **3: Open the window you want to record**
   
-In CamStudio, select the “Window” option from the “Region” menu if you want to record a single window (which I do), or select the appropriate option for your case.
+In CamStudio, select the "Window" option from the "Region" menu if you want to record a single window (which I do), or select the appropriate option for your case.
 
 I'll use a browser with the LessThanDot site as the example window I'll be recording.
 
@@ -76,10 +76,10 @@ Warning: Cancelling out of this window with a blank selection will give you erro
   
 Right clicking the open video gives access to additional settings for the video window.
 
-  * “Video Format” – Modify the dimensions and pixel depth of the webcam overlay 
-  * “Edit Text” – Remove the “Right Click to Edit Text” text on the webcam overlay
-  * “Edit Image” – Lets you tweak the shape and border of the overlay
-  * “Edit Refresh Rate” – Lets you dial down the refresh rate of the webcam if you are having performance problems
+  * "Video Format" – Modify the dimensions and pixel depth of the webcam overlay 
+  * "Edit Text" – Remove the "Right Click to Edit Text" text on the webcam overlay
+  * "Edit Image" – Lets you tweak the shape and border of the overlay
+  * "Edit Refresh Rate" – Lets you dial down the refresh rate of the webcam if you are having performance problems
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/Recording04.jpg" alt="Recording - Video Annotations Options" /><br /> Recording – Video Annotations Options – Circle w/ Border
@@ -113,13 +113,13 @@ VirtualDub can display the input and output streams side-by-side, but they may w
   <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/VirtualDub01.jpg" alt="VirtualDub - Opening the Video" /><br /> VirtualDub – Opening the Video
 </div>
 
-The option for which panes to see is in the “View”, “Pane Layout” menu.
+The option for which panes to see is in the "View", "Pane Layout" menu.
 
 **2: Select codec**
   
-VirtualDub supports multiple codecs, in my case I used the Xvid codec with the built-in “General Purpose” settings.
+VirtualDub supports multiple codecs, in my case I used the Xvid codec with the built-in "General Purpose" settings.
 
-  * From the top menu, Select “Video”, “Compression”
+  * From the top menu, Select "Video", "Compression"
   * Select the Xvid codec (it may be a separate download, can't recall)
   * Select configure if you want to change from the the defaults
 
@@ -127,13 +127,13 @@ VirtualDub supports multiple codecs, in my case I used the Xvid codec with the b
   <img src="http://www.tiernok.com/LTDBlog/RecordingWebCam/VirtualDub02.jpg" alt="VirtualDub - Codec Selection" /><br /> VirtualDub – Codec Selection
 </div>
 
-**2: Add a “Resize” filter**
+**2: Add a "Resize" filter**
   
-VirtualDub works by passing video through a series of filters. We will specify the “resize” filter to reduce the resolution.
+VirtualDub works by passing video through a series of filters. We will specify the "resize" filter to reduce the resolution.
 
-  * From the top menu, go to “Video”, “Filters”
-  * Press “Add”, find “Resize” in the list and add it
-  * Before changing the size, Set “Aspect Ratio” to same as source and set Codec-friendly sizing to multiples of 4, my Codec mode is bicubic, -.75 (which should be the default)
+  * From the top menu, go to "Video", "Filters"
+  * Press "Add", find "Resize" in the list and add it
+  * Before changing the size, Set "Aspect Ratio" to same as source and set Codec-friendly sizing to multiples of 4, my Codec mode is bicubic, -.75 (which should be the default)
   * At this point you should be able to tweak the height or width and the other dimension will respond accordingly
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
@@ -144,7 +144,7 @@ Note: On closing the window, you can see the resolution rounds to the nearest mu
 
 **2: Audio**
   
-I set my audio to direct stream copy (“Audio” menu, “Direct Stream Processing”), though unfortunately I can't say whether it makes a difference for this processing job or not.
+I set my audio to direct stream copy ("Audio" menu, "Direct Stream Processing"), though unfortunately I can't say whether it makes a difference for this processing job or not.
 
 Note: if I was an expert at this stuff, I probably would have purchased professional software by now 🙂
 
@@ -154,7 +154,7 @@ At any point, you can preview the output video just by using the player controls
 
 **4: Save**
   
-Saving is as simple as going to the “File” menu and selecting “Save as AVI”. When you save, the application will process the full video based on the settings we have added.
+Saving is as simple as going to the "File" menu and selecting "Save as AVI". When you save, the application will process the full video based on the settings we have added.
 
 My original 5 minute video went from 760MB to 74MB. Part of this was the reduction in resolution, but part was running it through VirtualDub. If you don't want to reduce the resolution, running through VirtualDub will still give an improvement (740MB to 114MB in the above case). An interesting experiment I'll try next time will be to use Xvid for the original recording to see if there is the same level of difference before and after running through VirtualDub.
 

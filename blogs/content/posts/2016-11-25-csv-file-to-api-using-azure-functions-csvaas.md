@@ -21,7 +21,7 @@ We're living in the future. During a conversational aside the other day, the CEO
 
 ## To Launch a managed API in less than 200 lines of code
 
-When I went down this path, I decided it had to be a realistic. The API side had to have authentication, analytics, rate limiting, documentation, subscriptions, and endpoints that reflect the latest dataset (“/latest”), the list of all files received (“/all”), and access to a specific dataset/CSV (“/archive/{name}”). The CSV side of things had to be incredibly simple, no new interfaces, upload tools, or anything. I want to save a file in a local folder and have the data available via an API on the internet.
+When I went down this path, I decided it had to be a realistic. The API side had to have authentication, analytics, rate limiting, documentation, subscriptions, and endpoints that reflect the latest dataset ("/latest"), the list of all files received ("/all"), and access to a specific dataset/CSV ("/archive/{name}"). The CSV side of things had to be incredibly simple, no new interfaces, upload tools, or anything. I want to save a file in a local folder and have the data available via an API on the internet.
 
 <div id="attachment_4840" style="width: 810px" class="wp-caption alignnone">
   <a href="/wp-content/uploads/2016/11/CSVaaS.png"><img src="/wp-content/uploads/2016/11/CSVaaS.png" alt="Transformation Pipeline - Saving a CSV in a folder to Managed API" width="960" height="235" class="size-full wp-image-4840" srcset="/wp-content/uploads/2016/11/CSVaaS.png 960w, /wp-content/uploads/2016/11/CSVaaS-300x73.png 300w" sizes="(max-width: 960px) 100vw, 960px" /></a>
@@ -31,19 +31,19 @@ When I went down this path, I decided it had to be a realistic. The API side had
   </p>
 </div>
 
-I drop a file in my Dropbox folder, it's picked up and processed into a similarly named JSON blob, a “latest” JSON blob, and an entry in the “list” of archived entries, all in Azure Storage from the original CSV file within 15 seconds or less. API Management then serves as a gateway to give me rate-limited, documented, etc, etc access to those pre-generated JSON responses.
+I drop a file in my Dropbox folder, it's picked up and processed into a similarly named JSON blob, a "latest" JSON blob, and an entry in the "list" of archived entries, all in Azure Storage from the original CSV file within 15 seconds or less. API Management then serves as a gateway to give me rate-limited, documented, etc, etc access to those pre-generated JSON responses.
 
 ### Tools and Services
 
 Here's the tools I used:
 
-  * Azure API Management – provides an API gateway with built-in authentication mechanisms, analytics, customizable policies, caching, and documentation with “Try It” interfaces
+  * Azure API Management – provides an API gateway with built-in authentication mechanisms, analytics, customizable policies, caching, and documentation with "Try It" interfaces
   * Azure Storage – provides infinite file storage where I can drop translated JSON files to serve as the back-end behind the API gateway
   * Azure Functions 
-      * #1: monitors dropbox and scoops up changes to convert them from CSV into JSON, saving to an “archive” container in Azure Storage
-      * #2: monitors the “archive” container and publishes new entries by copying them to “public/latest” and adding them to a list in “listing/all”
+      * #1: monitors dropbox and scoops up changes to convert them from CSV into JSON, saving to an "archive" container in Azure Storage
+      * #2: monitors the "archive" container and publishes new entries by copying them to "public/latest" and adding them to a list in "listing/all"
   * Microsoft Account – identity provider for API subscription
-  * Dropbox – my end-user “UI”
+  * Dropbox – my end-user "UI"
 
 The only one of these that requires coding is the Azure Functions, and I did those in C#.
 
@@ -153,7 +153,7 @@ Here's the details of what it took to build it.
 
 Add a new Storage Account with a catchy name:[About Azure Storage Accounts][2]
 
-Open the containers list and add an archive container to hold the JSON files and container(s) for the “latest” and “listing” blobs. We can use re-write rules in the API Management operations to flatten or translate these paths later.
+Open the containers list and add an archive container to hold the JSON files and container(s) for the "latest" and "listing" blobs. We can use re-write rules in the API Management operations to flatten or translate these paths later.
 
 ### Step 2: API Management
 
@@ -189,7 +189,7 @@ There is a Starter Product and an Unlimited Product already predefined. Use the 
   </p>
 </div>
 
-Now we need an API endpoint. Add an Operation, I chose to name my “latest”. It will concatenate this value automatically on the base URL provided in the first setup screen (or you can choose to rewrite to a different URL). I'm going with the simple option of matching my Blob name to the path.
+Now we need an API endpoint. Add an Operation, I chose to name my "latest". It will concatenate this value automatically on the base URL provided in the first setup screen (or you can choose to rewrite to a different URL). I'm going with the simple option of matching my Blob name to the path.
 
 <div id="attachment_4845" style="width: 810px" class="wp-caption alignnone">
   <a href="/wp-content/uploads/2016/11/APIM_4.jpg"><img src="/wp-content/uploads/2016/11/APIM_4.jpg" alt="Defining an API Operation" width="800" height="419" class="size-full wp-image-4845" srcset="/wp-content/uploads/2016/11/APIM_4.jpg 800w, /wp-content/uploads/2016/11/APIM_4-300x157.jpg 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
@@ -207,7 +207,7 @@ Provision an Azure Functions item from the dashboard, set it to the same resourc
 
 #### Step 3A: CSV to JSON
 
-Create a new function with a trigger of type “External File Trigger”. I chose Dropbox as my input and blob storage as my output, using the same “{name}” token in both names so that my incoming CSV file will generate a matching named JSON file in my output.
+Create a new function with a trigger of type "External File Trigger". I chose Dropbox as my input and blob storage as my output, using the same "{name}" token in both names so that my incoming CSV file will generate a matching named JSON file in my output.
 
 Lastly, write some code to convert the CSV to JSON. I used a nuget package, so I added a project.json to specify my dependencies:
 

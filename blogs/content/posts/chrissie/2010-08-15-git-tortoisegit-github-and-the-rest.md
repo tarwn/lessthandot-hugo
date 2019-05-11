@@ -38,7 +38,7 @@ I choose to install [TortoiseGit][5] to use as a client. But first you need to i
 
 [I was helped by this article.][9]
 
-Select the option Add “Git Bash here”
+Select the option Add "Git Bash here"
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DesktopDev/github/Github1.png" alt="" title="" width="513" height="398" />

@@ -31,7 +31,7 @@ public String RetrieveValue()
 
 I know, its' breathtaking 😉
 
-Its' important to note the “EnableSession” attribute here, this is what give your service access to the Session.
+Its' important to note the "EnableSession" attribute here, this is what give your service access to the Session.
 
 Another thing you will need to do is set your webservice to allow POSTs, like so:
 
@@ -39,7 +39,7 @@ Another thing you will need to do is set your webservice to allow POSTs, like so
 <add verb="GET,HEAD, POST" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
 ```
 
-(this is found in the “httpHandlers” section of the web.config)
+(this is found in the "httpHandlers" section of the web.config)
 
 To be able to call the webservice, we need its' IP from the debugger, so set the service to be your startup project and fire it up. Make a note of the address (for example, http://localhost:52588) because we will need it here. May as well just leave the services running on localhost so we can call them (I haven't figured out a way to make ctrl+f5 start up both).
 
@@ -75,7 +75,7 @@ In our connection string, we just need to add the Application Name property. So 
 <sessionState mode="SQLServer" sqlConnectionString="Data Source=127.0.0.1; Integrated Security=SSPI; Application Name=TEST" cookieless="false" timeout="20"/>
 ```
 
-So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There's a proc called “TempGetAppID” in the ASP state database. I don't know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal's change:
+So how can we use this then? Lets check out the stored procedure change (found at [sneal.net][2]). There's a proc called "TempGetAppID" in the ASP state database. I don't know all the inner workings of this database, but its used within the database to identify the application connecting to it. So we can alter the proc to include the kind Mr. (or Mrs.) Sneal's change:
 
 ```sql
 -- start change

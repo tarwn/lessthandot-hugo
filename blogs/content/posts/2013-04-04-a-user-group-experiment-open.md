@@ -16,7 +16,7 @@ categories:
 ---
 I've been running [FoxPASS][1] in Appleton, WI for 8 months. In that time, we've had excellent presentations from great speakers, the word has spread to many people, and there's a lot of buzz in the community.
 
-One of my goals with the chapter is to try out new, exciting ideas. One of my favorite community projects is to grow the pool of speakers. I thought, “How can I combine these two?” I decided to try an Open Mic night – anyone could sign up to talk about any SQL-related topic for 5-10 minutes. I encouraged our members to talk about anything they enjoyed, their favorite tool or T-SQL command, or a real-life scenario they learned from.
+One of my goals with the chapter is to try out new, exciting ideas. One of my favorite community projects is to grow the pool of speakers. I thought, "How can I combine these two?" I decided to try an Open Mic night – anyone could sign up to talk about any SQL-related topic for 5-10 minutes. I encouraged our members to talk about anything they enjoyed, their favorite tool or T-SQL command, or a real-life scenario they learned from.
 
 I didn't know how well this would go over. Getting up in front of a room full of people and presenting – especially on a technical topic – can be terrifying, and I didn't know if people would be up for it. I was delighted when five people signed up!
 
@@ -43,7 +43,7 @@ Last night we kicked off the meeting with a demo from our great sponsor, [Red Ga
 </p>
 
 <p style="padding-left: 30px;">
-  Jeff gave us a demo of SQL Prompt, which was great. Every time he mentioned a feature, I nodded and thought, “Yep, that's my favorite feature.” Then I realized, they can't all be my favorite. But they are.
+  Jeff gave us a demo of SQL Prompt, which was great. Every time he mentioned a feature, I nodded and thought, "Yep, that's my favorite feature." Then I realized, they can't all be my favorite. But they are.
 </p>
 
 As a user group leader, this was one of the best things I've done yet. It was inspiring to hear from members of the community that hadn't spoken before. It was fun to hear about multiple topics in one night, too.

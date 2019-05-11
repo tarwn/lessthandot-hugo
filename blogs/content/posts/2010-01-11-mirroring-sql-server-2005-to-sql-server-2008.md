@@ -64,7 +64,7 @@ Once you initiate your failover, you can back the SQL Server 2008 database up wh
 
 One theory that I am still testing is getting the upgraded version of 655 databases from SQL Server 2008 back to 2005. Then setup mirroring again to eliminate the snapshot problems.
 
-Once my labs are done I will post back in “part 2” with a complete process flow and steps to take for this type of upgrade path. For now and if you question mirroring from the same editions of SQL Server 2005 to SQL Server 2008, the answer is yes. You very well can do this. If you have questions on using mirroring for migrations of SQL Server, you can read a detailed step-by-step process from the following links.
+Once my labs are done I will post back in "part 2" with a complete process flow and steps to take for this type of upgrade path. For now and if you question mirroring from the same editions of SQL Server 2005 to SQL Server 2008, the answer is yes. You very well can do this. If you have questions on using mirroring for migrations of SQL Server, you can read a detailed step-by-step process from the following links.
   
 [Using Mirroring to Reduce DB Migration Downtime (Part 1)][1]
   

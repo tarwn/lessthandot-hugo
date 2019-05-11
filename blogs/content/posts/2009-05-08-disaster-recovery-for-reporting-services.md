@@ -47,7 +47,7 @@ First command is to actually script everything. This can be accomplished with th
 
 Here is how a sample command would look
   
-c:tempreportsrsscriptercmd /s:http://localhost/ReportServer/ReportService2005.asmx /c:”c:tempreportsRSScripter.cfg” /l:”c:tempreportsrsscripterlog.txt”
+c:tempreportsrsscriptercmd /s:http://localhost/ReportServer/ReportService2005.asmx /c:"c:tempreportsRSScripter.cfg" /l:"c:tempreportsrsscripterlog.txt"
 
 You're Catalog.xml file should look like this
 

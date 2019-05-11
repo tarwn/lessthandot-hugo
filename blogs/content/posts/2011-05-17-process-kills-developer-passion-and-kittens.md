@@ -56,7 +56,7 @@ Ok, yes, any process can be implemented poorly. A few years ago people were sayi
 
 MVC is [over 30 years old][3]. Scrum? [Longer than you think][4]. Any guesses on when we started adding behavior to objects?
 
-Scrum is a starting point, as are most of the defined flavors of Agile. If you previously did more complex processes, then Scrum is going to feel extremely lightweight. If you are used to “Adhoc” \*cough cowboy\* style processes, then Scrum will feel like more work. In either case you will probably feel some pain because Scrum (and even more so, Kanban) expose underlying issues that you didn't have to see before.
+Scrum is a starting point, as are most of the defined flavors of Agile. If you previously did more complex processes, then Scrum is going to feel extremely lightweight. If you are used to "Adhoc" \*cough cowboy\* style processes, then Scrum will feel like more work. In either case you will probably feel some pain because Scrum (and even more so, Kanban) expose underlying issues that you didn't have to see before.
 
 ## Ok, so what then?
 
@@ -68,7 +68,7 @@ I'm a developer, I'm allowed to say things like that.
 
 There are going to be things we dislike about any practice, and that's going to be exacerbated if we are pressured to continue following those practices without buying-in. 
 
-> Disaffected programmers write poor code, and poor code makes management add more process in an attempt to “make” their programmers write good code. That just makes morale worse, and so on.
+> Disaffected programmers write poor code, and poor code makes management add more process in an attempt to "make" their programmers write good code. That just makes morale worse, and so on.
 
 Yep, totally agree, and I think a lot of people would be willing to volunteer my experience with similar issues over the years. I do tend to go on....
 

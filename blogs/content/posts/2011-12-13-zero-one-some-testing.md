@@ -72,7 +72,7 @@ Tests for zero records seem to uncover missing requirements or defects in code i
 
 Whereas tests for one and some records seem to uncover more problems in loops when a specific exit condition is needed.
 
-Tests for multiple (“some”) records may also be useful when data can be duplicated. Often we assume that data being processed is unique, but asking the question, “what if there are multiple instances of the same record?” can be illuminating.
+Tests for multiple ("some") records may also be useful when data can be duplicated. Often we assume that data being processed is unique, but asking the question, "what if there are multiple instances of the same record?" can be illuminating.
 
 ## Special Cases:
 

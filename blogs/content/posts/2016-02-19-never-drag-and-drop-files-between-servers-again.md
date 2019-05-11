@@ -30,7 +30,7 @@ The file(s) are copied, with progress shown. A few things I love about this:
   * I can specify a network location or a local directory for either the source or the destination.
   * I can copy one backup file, or every transaction log backup in the directory.
   * I can use the /z option to tell Robocopy that if the transfer gets interrupted, pick back up when it gets reconnected.
-  * I can see the progress, in terms of actual bytes, not just Windows's “45%” that runs for three hours.
+  * I can see the progress, in terms of actual bytes, not just Windows's "45%" that runs for three hours.
 
 Here are a couple examples.
 

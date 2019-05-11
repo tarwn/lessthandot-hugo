@@ -27,10 +27,10 @@ For the purposes of this post, I have created a solution with an Existing Consol
   <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_01.png" alt="Solution Explorer" /><br /> Solution Explorer view of the Sample Solution
 </div>
 
-If we right click the Azure “Roles” folder, the option to use an existing Worker Role project is not available. Visual Studio enables or disables this option automatically, based on whether we have any assignable projects in the solution that aren't already associated with the Azure project.
+If we right click the Azure "Roles" folder, the option to use an existing Worker Role project is not available. Visual Studio enables or disables this option automatically, based on whether we have any assignable projects in the solution that aren't already associated with the Azure project.
 
 <div class="font-size: 85%; color: #666666; text-align: center">
-  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_02.png" alt="Add Role menu options" /><br /> “Worker Role Project in Solution” is Disabled
+  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_02.png" alt="Add Role menu options" /><br /> "Worker Role Project in Solution" is Disabled
 </div>
 
 The first thing we want to do is add a RoleEntryPoint to the console application. To keep this simple, I'm going to convert the Program class to serve as the RoleEntryPoint also.
@@ -68,7 +68,7 @@ namespace ExistingConsoleApplication
 	}
 }
 ```
-The last thing we need to do is add some information to the project file. I can open the file in Visual Studio by right clicking and selecting “Unload Project”, then right clicking again and selecting “Edit _project name_“. In the Property Group I need to add a single property named “RoleType” to identify this as a Worker (see the last entry):
+The last thing we need to do is add some information to the project file. I can open the file in Visual Studio by right clicking and selecting "Unload Project", then right clicking again and selecting "Edit _project name_". In the Property Group I need to add a single property named "RoleType" to identify this as a Worker (see the last entry):
 
 ```text
 <PropertyGroup>
@@ -87,7 +87,7 @@ The last thing we need to do is add some information to the project file. I can 
 Save and reload the project, and now when we right click on the Azure Cloud Project Roles, the option to associate and existing project is available.
 
 <div class="font-size: 85%; color: #666666; text-align: center">
-  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_04.png" alt="Add Role menu options" /><br /> “Worker Role Project in Solution” is Available Now
+  <img src="http://www.tiernok.com/LTDBlog/AzureWorkerRole/awr_04.png" alt="Add Role menu options" /><br /> "Worker Role Project in Solution" is Available Now
 </div>
 
 After adding the project, we can now run it either as a local console application or in the computer emulator as an emulated worker role.

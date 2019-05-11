@@ -99,11 +99,11 @@ GO
 
 You will see the following message
 
-> The file “TestMove” has been modified in the system catalog. The new path will be used the next time the database is started.
+> The file "TestMove" has been modified in the system catalog. The new path will be used the next time the database is started.
   
-> The file “TestMove2” has been modified in the system catalog. The new path will be used the next time the database is started.
+> The file "TestMove2" has been modified in the system catalog. The new path will be used the next time the database is started.
   
-> The file “TestMove3” has been modified in the system catalog. The new path will be used the next time the database is started.
+> The file "TestMove3" has been modified in the system catalog. The new path will be used the next time the database is started.
 
 **[EDIT]**
   

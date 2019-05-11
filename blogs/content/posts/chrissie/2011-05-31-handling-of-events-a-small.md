@@ -70,7 +70,7 @@ As soon as you add a parameter then it will no longer compile.
 
 Lucian Wischik put&#8217;s it like this.
 
-> VB allows “zero-argument relaxation”, which is typesafe.
+> VB allows "zero-argument relaxation", which is typesafe.
 
 ## The C# code
 

@@ -21,7 +21,7 @@ I arrived early and got to start early. There were 45 questions, and I was given
 
 What happened? 
 
-I don't know exactly which questions I got wrong. But I know that I did really well in day-to-day stuff, like “Maintaining a SQL Server Database”, and bombed monitoring, troubleshooting and optimizing SQL Server. When studying, I had focused a lot on installation, features, backup and restore, and the different high availability features. I know that during the test I struggled with questions about specific DMVs, system monitor, data collectors, and PBM. My score in the “Maintaining SQL Server Instances” category was a 0%. 
+I don't know exactly which questions I got wrong. But I know that I did really well in day-to-day stuff, like "Maintaining a SQL Server Database", and bombed monitoring, troubleshooting and optimizing SQL Server. When studying, I had focused a lot on installation, features, backup and restore, and the different high availability features. I know that during the test I struggled with questions about specific DMVs, system monitor, data collectors, and PBM. My score in the "Maintaining SQL Server Instances" category was a 0%. 
 
 So what did I learn? 
 
@@ -29,7 +29,7 @@ SQL Server is a huge product, with a lot of features. It's hard to be proficient
 
 More importantly, it was reinforced that the SQL community is the best. People answered my questions, quizzed me, told me how they did on their exams, wished me luck, and cheered me up when I didn't pass. 
 
-I think Grant Fritchey ([Blog][1] | [Twitter][2]) made the biggest impact this morning when he tweeted “You had the guts to try. I still haven't tried one of the exams. You'll get it next time.” 
+I think Grant Fritchey ([Blog][1] | [Twitter][2]) made the biggest impact this morning when he tweeted "You had the guts to try. I still haven't tried one of the exams. You'll get it next time." 
 
 Yes, I will. I don't know when that is – I'm not sure when I will reschedule my exam – but I know what I need to do now, and I'm ready to get started. After a week off.
 

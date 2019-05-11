@@ -55,7 +55,7 @@ In the Expression box type:
 
 Change {dataset name} to what you named your dataset. Click OK to save the expression and exit properties.
   
-In the new textbox type =”No data returned. Report executed on “ & Now
+In the new textbox type ="No data returned. Report executed on " & Now
   
 Like this...
 
@@ -65,7 +65,7 @@ Like this...
 
 Now you don't want to see the textbox all the time. The two options you have are to hide it or set the visibility based on something. I like to hide it sense checking for things will obviously take more time.
   
-So make sure you have the textbox selected. Right click and select “Send to Back”. Start hitting the up arrow (on the keyboard) so you move the textbox behind the Table. keep doing this until you cannot see the box anymore.
+So make sure you have the textbox selected. Right click and select "Send to Back". Start hitting the up arrow (on the keyboard) so you move the textbox behind the Table. keep doing this until you cannot see the box anymore.
   
 Now you can resize the report back to fit the table again.
   

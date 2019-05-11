@@ -154,7 +154,7 @@ When I enter a ceiling and then an integer, the integer is validated against tha
 
 ## Simple Knockout Validation
 
-Knockout does not have validation cooked in the way Angular does, but the [Knockout Validation][5] project on github provides a comparable set of features (and it was the first google search result for 'knockout validation'). The library provides two options for defining validation, either as “extends” calls directly in on the observable properties on models/viewmodels or as HTML5 attributes.
+Knockout does not have validation cooked in the way Angular does, but the [Knockout Validation][5] project on github provides a comparable set of features (and it was the first google search result for 'knockout validation'). The library provides two options for defining validation, either as "extends" calls directly in on the observable properties on models/viewmodels or as HTML5 attributes.
 
 ### Knockout Simple Validation Example
 

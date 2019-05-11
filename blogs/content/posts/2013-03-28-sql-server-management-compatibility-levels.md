@@ -30,6 +30,6 @@ This is completely incorrect and a dangerous trap! Compatibility levels are mean
 
 Doing a search on the internet, I cannot find anything directly from Microsoft about what the compatibility levels really do. However, I've seen and experienced firsthand that they do not allow discontinued code to suddenly work.
 
-For example, in SQL 2005 you can use a command called “RAISEERROR” (note the use of two e's in the middle). If you try that command on a database in SQL 2012 (no matter what compatibility level you have it set at), it will not work because it was discontinued.
+For example, in SQL 2005 you can use a command called "RAISEERROR" (note the use of two e's in the middle). If you try that command on a database in SQL 2012 (no matter what compatibility level you have it set at), it will not work because it was discontinued.
 
-What I'm trying to say is this, you cannot skip testing and removing discontinued code by using compatibility levels. You must test, removed discontinued code and work on migrate deprecated code to a supported solution. It like the old saying “If something appears too good to be true, it probably is too good to be true”.
+What I'm trying to say is this, you cannot skip testing and removing discontinued code by using compatibility levels. You must test, removed discontinued code and work on migrate deprecated code to a supported solution. It like the old saying "If something appears too good to be true, it probably is too good to be true".

@@ -5,6 +5,8 @@ type: post
 date: 2010-04-02T09:22:20+00:00
 ID: 733
 url: /index.php/datamgmt/datadesign/getting-the-physical-device-name-and-bac/
+aliases:
+  - /index.php/datamgmt/dbadmin/mssqlserveradmin/getting-the-physical-device-name-and-bac
 views:
   - 12582
 rp4wp_auto_linked:

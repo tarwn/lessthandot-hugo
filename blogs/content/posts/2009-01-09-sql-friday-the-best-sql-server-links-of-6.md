@@ -23,9 +23,9 @@ Here is what I found interesting this past week in SQL Land:
   
 Explanation of the following: When you attempt to change the Login Account for the SQL services [SQL Server, SQL Agent, Full Text, Analysis Services] from the SQL Server Computer Manager tool, you may encounter the following error message:
   
-“WMI Provider Error”
+"WMI Provider Error"
   
-“Access is denied. [0x80070005]”
+"Access is denied. [0x80070005]"
 
 **[What is allocation bottleneck?][2]**
   
@@ -49,7 +49,7 @@ This topic has indeed been done to death. Yet I still often encounter unecessary
 
 **[The first pillar – A Coherent Design][7]**
   
-One of the definitions on wiktionary.org for coherence is “a logical arrangements of parts”. In my initial post, I defined “coherent” for database designs in the following manner: cohesive, comprehendible, standards based, names/datatypes all make sense, needs little documentation. Louis Davidson explains Coherent Design
+One of the definitions on wiktionary.org for coherence is "a logical arrangements of parts". In my initial post, I defined "coherent" for database designs in the following manner: cohesive, comprehendible, standards based, names/datatypes all make sense, needs little documentation. Louis Davidson explains Coherent Design
 
 **[The Lesser Known Features of SQL Server Management Studio (Part 1)][8]**
   

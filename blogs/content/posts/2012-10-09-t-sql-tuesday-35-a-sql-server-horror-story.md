@@ -32,7 +32,7 @@ It's October. That means fall, colorful leaves on the trees, soups simmering on 
   <a href="http://www.flickr.com/photos/kaptainkobold/257491210/lightbox/">http://www.flickr.com/photos/kaptainkobold/257491210/lightbox/</a>
 </address>
 
-It's also another month of T-SQL Tuesday, edition #35. Our host, Nick Haslam, asks, “What is your most horrifying discovery from your work with SQL Server?”
+It's also another month of T-SQL Tuesday, edition #35. Our host, Nick Haslam, asks, "What is your most horrifying discovery from your work with SQL Server?"
 
 <p style="text-align: center;">
   <a href="http://blog.nhaslam.com/2012/10/04/t-sql-tuesday-35-soylent-green-tsql2sday/"><img src="http://nicksmsblog.files.wordpress.com/2012/10/20121003-200545.jpg?w=640" alt="" /></a>
@@ -40,7 +40,7 @@ It's also another month of T-SQL Tuesday, edition #35. Our host, Nick Haslam, as
 
 **Once Upon a Time** 
 
-Long, long ago, in a land far, far away, I was the very junior DBA at a small company. We had one main production server that hosted the databases for our financial and sales applications. I took great care of this server. I made sure backups ran every day. I tested restores (to a separate server, for reporting) regularly. DBCC CHECKDB, index maintenance, and statistics maintenance were run regularly. I had alerts set up in case jobs failed, and I could use Activity Monitor and some of my scripts to check for problems when I got the inevitable “the system is slow” calls.
+Long, long ago, in a land far, far away, I was the very junior DBA at a small company. We had one main production server that hosted the databases for our financial and sales applications. I took great care of this server. I made sure backups ran every day. I tested restores (to a separate server, for reporting) regularly. DBCC CHECKDB, index maintenance, and statistics maintenance were run regularly. I had alerts set up in case jobs failed, and I could use Activity Monitor and some of my scripts to check for problems when I got the inevitable "the system is slow" calls.
 
 Then, one dark and stormy night, a disaster happened.
 

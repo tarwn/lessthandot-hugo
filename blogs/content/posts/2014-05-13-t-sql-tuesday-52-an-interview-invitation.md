@@ -38,7 +38,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  First of all, I believe you have to adjust your questions to the expected level of the person being interviewed. If you interview a junior person, I wouldn't start asking how they would implement partition switching in order to speed up the bulk loading of a fact table. If they claim to be senior, you can bring out the big guns after a while. Note I mentioned “after a while”. I would start asking basic questions to test their knowledge and then gradually move on to the more difficult stuff. Immediately starting with insane questions to make your conversation partner nervous or uncomfortable is just bad form in my opinion.
+  First of all, I believe you have to adjust your questions to the expected level of the person being interviewed. If you interview a junior person, I wouldn't start asking how they would implement partition switching in order to speed up the bulk loading of a fact table. If they claim to be senior, you can bring out the big guns after a while. Note I mentioned "after a while". I would start asking basic questions to test their knowledge and then gradually move on to the more difficult stuff. Immediately starting with insane questions to make your conversation partner nervous or uncomfortable is just bad form in my opinion.
 </p>
 
 <p style="text-align: justify">
@@ -47,7 +47,7 @@ tags:
 
 <ul style="text-align: justify">
   <li>
-    SSIS (of course). Although some people think of business intelligence just as creating some dashboards and reports, the data has to be there as well. A working knowledge of SSIS is always useful. I'd start with basic questions – what is the data flow and the control flow – and then work myself up to more advanced, broader questions, such as “how would you implement custom logging or restartability in your packages?”.
+    SSIS (of course). Although some people think of business intelligence just as creating some dashboards and reports, the data has to be there as well. A working knowledge of SSIS is always useful. I'd start with basic questions – what is the data flow and the control flow – and then work myself up to more advanced, broader questions, such as "how would you implement custom logging or restartability in your packages?".
   </li>
   <li>
     Data warehouses. Architectures and modelling, that kind of stuff. I don't expect everyone to recite the differences between Kimball, Inmon and data vaults, but I do expect that there is a basic knowledge about facts, dimensions, star schema versus snowflake and so on (except for very junior people). If a person seems to be well versed in architecting data warehouses, you could go deeper such as for example on the different types of slowly changing dimensions (mini dimensions, outriggers, that kind of stuff. It should provide good discussions) or how to index a data warehouse.

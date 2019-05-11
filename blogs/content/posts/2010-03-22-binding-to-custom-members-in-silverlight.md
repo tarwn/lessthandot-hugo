@@ -16,7 +16,7 @@ tags:
   - silverlight binding
 
 ---
-The Binding system is Silverlight is pretty cool. It lets us easily bind property values of UI Elements to all sorts of good stuff. But, if you want to create your own custom bind-able properties, it takes a bit more effort than the usual Property=”{Binding=Field}” in XAML.
+The Binding system is Silverlight is pretty cool. It lets us easily bind property values of UI Elements to all sorts of good stuff. But, if you want to create your own custom bind-able properties, it takes a bit more effort than the usual Property="{Binding=Field}" in XAML.
 
 For example, I have a datagrid. One of the columns in that data grid holds a control that displays and icon and a tool tip based on the content of some data.
 

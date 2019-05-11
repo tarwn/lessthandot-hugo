@@ -39,7 +39,7 @@ Full source available at [Angular/SimpleDI.html][5].
 
 Angular modules are collections of functionality with a shared configuration block. Controllers, services, and even values can be attached to the module and will be loaded with the module. Modules can have dependencies on one another, which affects their loading order. Controllers and Providers (services, factories, etc) list their dependencies when they are defined, and those dependencies are filled by Angulars injector.
 
-Here is an example based on the earlier sample for data binding, except our controller has a dependency on the “sampleServices/ListOfItemsService” service and when we push the button it will call this service to obtain the list of items to be displayed.
+Here is an example based on the earlier sample for data binding, except our controller has a dependency on the "sampleServices/ListOfItemsService" service and when we push the button it will call this service to obtain the list of items to be displayed.
 
 ```html
 <html ng-app="sampleApp">
@@ -272,7 +272,7 @@ I'd compare RequireJS + Knockout to Angular, but when we included RequireJS we n
 
 In both cases there is one unanswered issue. When is your application too big for keeping it all in a couple files? When does it become so large it impacts the user's ability to load it via script tags, impacts our ability to keep our dependencies straight, etc. I think 10 – 20 modules is not too bad to keep track of as separate files, but I wouldn't want to go larger than that. I could easily use namespacing with Knockout instead of a module loader for something that small, though it's not as clean when it comes time to unit test (that post is coming, don't worry).
 
-So what is big? When do we need to switch from a few files or one big minified file to a module loader or a bundler like [Cassette][14] that can auto bundle everything based on include comments? Is there a sweet spot in between where just have modules and DI without asynchronous loading is perfect? Or is asynchronous loading for “huge” applications (defined by Brian Ford above as tens and hundreds of thousands of lines) totally unnecessary?
+So what is big? When do we need to switch from a few files or one big minified file to a module loader or a bundler like [Cassette][14] that can auto bundle everything based on include comments? Is there a sweet spot in between where just have modules and DI without asynchronous loading is perfect? Or is asynchronous loading for "huge" applications (defined by Brian Ford above as tens and hundreds of thousands of lines) totally unnecessary?
 
 I don't have those answers, but they are important considerations we should be making when we sit down and try to choose between AngularJS and Knockout on a future project.
 

@@ -148,7 +148,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  After a few months of well deserved “non-studying for exams” I decided to pick up the pace again and to start preparing for the 70-466 exam. I was in between projects at the time, so it was excellent timing to get some studying done.
+  After a few months of well deserved "non-studying for exams" I decided to pick up the pace again and to start preparing for the 70-466 exam. I was in between projects at the time, so it was excellent timing to get some studying done.
 </p>
 
 <p style="text-align: justify">

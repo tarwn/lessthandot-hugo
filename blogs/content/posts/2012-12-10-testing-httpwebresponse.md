@@ -91,7 +91,7 @@ public void TestFixtureSetup()
 	WebRequest.RegisterPrefix("test", TestableWebRequestCreateFactory.GetFactory());
 }
 ```
-TestableWebRequestCreateFactory.GetFactory() exposes a singleton that can be referenced from any of the tests in this class. When the WebRequest object receives a Uri starting with “test://”, it will call the associated factory, giving us the opportunity to respond with a Request object of our choosing.
+TestableWebRequestCreateFactory.GetFactory() exposes a singleton that can be referenced from any of the tests in this class. When the WebRequest object receives a Uri starting with "test://", it will call the associated factory, giving us the opportunity to respond with a Request object of our choosing.
 
 A common base URI will prove helpful as we write the tests:
 
@@ -100,7 +100,7 @@ public Uri BaseUri { get { return new Uri("test://mydomain.com/api/"); } }
 ```
 **2: Building a Test**
 
-The easiest test to start with is one that will test the “happy path” where our API call receives a 200 Success response. 
+The easiest test to start with is one that will test the "happy path" where our API call receives a 200 Success response. 
 
 First we need to set up the request:
 
@@ -173,7 +173,7 @@ private Exception MappedException(WebException we)
 ```
 Exercising the mapping logic is going to require the WebRequest to receive a WebException. Let's make that happen.
 
-_Yes, I know a HEAD request will break this, that's why it's called “sample” code 🙂_
+_Yes, I know a HEAD request will break this, that's why it's called "sample" code 🙂_
 
 In the first test, we used the EnqueueResponse method of the TestableWebRequest to set up a 200 Success response. It's just as simple to return a 404 Http code with the expected message and request body:
 

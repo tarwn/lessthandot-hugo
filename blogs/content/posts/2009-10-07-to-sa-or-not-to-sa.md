@@ -43,7 +43,7 @@ ALTER LOGIN sa DISABLE;
 ALTER LOGIN sa WITH NAME = IAMGOD;
 ALTER LOGIN IAMGOD ENABLE;
 ```
-The first problem is that SA is an account recognized by the SQL Server team as a systems admin. Now I know in the last few version of SQL Server SA was not utilized. At least from my upgrade experience, I never saw it referenced. That being said it should not be required. I still have it in the back of my head there is no reason not to leave it there “just in case”. That brings us to handling it though.
+The first problem is that SA is an account recognized by the SQL Server team as a systems admin. Now I know in the last few version of SQL Server SA was not utilized. At least from my upgrade experience, I never saw it referenced. That being said it should not be required. I still have it in the back of my head there is no reason not to leave it there "just in case". That brings us to handling it though.
 
 How many times have you seen this connection string?
 
@@ -67,7 +67,7 @@ First, Active Directory group setup for the DBAs is the only ones that have acce
   </p>
 </blockquote>
 
-<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="/index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/embed/#?secret=AHCITsCkau" data-secret="AHCITsCkau" width="500" height="282" title="“Securing your password for SQL Server 2005 and 2008 and more” — LessthanDot" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="/index.php/datamgmt/datadesign/securing-you-password-for-sql-server-200/embed/#?secret=AHCITsCkau" data-secret="AHCITsCkau" width="500" height="282" title=""Securing your password for SQL Server 2005 and 2008 and more" — LessthanDot" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 So now that I got it out that only the DBAs should at any time be able to access sa in any way shape or form, what about the password?
 
@@ -75,6 +75,6 @@ Here is how I've handled SA and its password in my career. Bi-weekly (every two 
 
 That does a few things for you. First it resets the password frequently enough it is less likely to be compromised. Two, if it is somehow used by some person that you trusted with your life, whatever they used it on will break. I love that moment when it does to 😉 Out come the lashes with a wet noodle!
 
-Last point I wanted to talk about is the fact that SA should never be the account you go to in order to save your ass. Yes, I really meant to be that direct on that statement. You as a DBA are in charge of securing the database servers. That means you have to secure your path into them for disasters and recovery points as well. This means the thought process must be handled of a complete loss of active directory and most accounts that would be typical or default to SQL Server. The SA account is default and that being said can be a point of disaster itself. In the least you should have an account on SQL Authentication that you can utilize for single user controls or dedicated admin connections. Trust me from experience of having these things break. You don't want to be google'ing, “How do I recover the sa password” 
+Last point I wanted to talk about is the fact that SA should never be the account you go to in order to save your ass. Yes, I really meant to be that direct on that statement. You as a DBA are in charge of securing the database servers. That means you have to secure your path into them for disasters and recovery points as well. This means the thought process must be handled of a complete loss of active directory and most accounts that would be typical or default to SQL Server. The SA account is default and that being said can be a point of disaster itself. In the least you should have an account on SQL Authentication that you can utilize for single user controls or dedicated admin connections. Trust me from experience of having these things break. You don't want to be google'ing, "How do I recover the sa password" 
 
 Happy is the DBA that protects from disaster!

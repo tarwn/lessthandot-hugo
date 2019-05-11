@@ -22,7 +22,7 @@ The question is often asked: when will SQL Server statistics update if auto upda
 
 The short answer: When auto update stats is enabled in a database, statistics will update when 20% + 500 rows have changed in the table.  This change can be adding new rows, removing rows or updating rows.
 
-If you attend sessions or read many tuning articles that involve statistics on the internet, you may have seen the statement, “20% + 500 rows” more than a few times.  Some related information on when the 20% + 500 does actually come into play and how the cardinality of the table plays a role can be found in KB 195565, “[Statistical maintenance functionality (autostats) in SQL Server][1]”.
+If you attend sessions or read many tuning articles that involve statistics on the internet, you may have seen the statement, "20% + 500 rows" more than a few times.  Some related information on when the 20% + 500 does actually come into play and how the cardinality of the table plays a role can be found in KB 195565, "[Statistical maintenance functionality (autostats) in SQL Server][1]".
 
 Specifically a section extracted...
 
@@ -50,7 +50,7 @@ Given statistics will be automatically updated when 20% + 500 rows have changed,
 
 Let's run an example to see if the 20% + 500 really is accurate.  To monitor the update of statistics, extended events will be used.  This is also a great way to monitor your systems for auto update stats being heavily performed and potentially a reason to turn off auto update stats.
 
-Setup XEvent “auto_stats”
+Setup XEvent "auto_stats"
 
 ```sql
 CREATE EVENT SESSION [AutoStats_Monitor] ON SERVER 

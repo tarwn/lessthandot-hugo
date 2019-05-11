@@ -21,7 +21,7 @@ tags:
 ---
 Measurements have value. Measure something over time and we have a baseline. Monitor that measurement and we can see problems before they become obvious. Experiment with minor changes, and we can compare to the baseline to tell if we have improved or hurt our performance. Collect enough measurements and trends will emerge, exposing a layer of information we didn't have access to before.
 
-<quote style="text-align: center; display: block; font-size: 110%">“If you cannot measure it, you cannot improve it” – Lord Kelvin</quote>
+<quote style="text-align: center; display: block; font-size: 110%">"If you cannot measure it, you cannot improve it" – Lord Kelvin</quote>
 
 But this isn't just relevant to our servers, our software, and our support systems, it's also relevant to ourselves and our work.
 
@@ -144,8 +144,8 @@ Lead time measures how quickly we respond and is an excellent number to use when
 
 ## Measure twice...
 
-Often when we decide we need measurements, we stop at “how much work is getting done”, but Productivity is not the only measure. Selecting the right measurements depends on our environment, business, and what we intend to achieve.
+Often when we decide we need measurements, we stop at "how much work is getting done", but Productivity is not the only measure. Selecting the right measurements depends on our environment, business, and what we intend to achieve.
 
-<quote style="text-align: center; display: block; font-size: 110%">“What gets measured, gets managed” – Peter Drucker</quote>
+<quote style="text-align: center; display: block; font-size: 110%">"What gets measured, gets managed" – Peter Drucker</quote>
 
 Measuring our progress or current state can be difficult, often those numbers are less than spectacular. Poor numbers can make us feel worse about the current state. The state hasn't changed, we've simply gotten a clearer picture of it. All of the area above that measurement is opportunity.

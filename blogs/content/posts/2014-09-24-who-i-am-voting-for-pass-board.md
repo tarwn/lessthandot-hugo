@@ -21,6 +21,6 @@ Honestly, look at him
 
 Such a cuddly little teddy bear. How can you not want this guy leading? Even more, the way that light gleams off the top of his head. Don't get me started about the sword. 
 
-So, before everyone freaks out and says, “You wasted my time. You need real reasons to vote for someone. This isn't a game!” Well, it's not a game. It's a standard of experience and honor that I know my friend will uphold. So if you are also completely sick of the negative &*@$^)@ floating around by the people that love the attention, let's step back and just vote and get on with it. But, don't forget that teddy bear feel this man gives us.
+So, before everyone freaks out and says, "You wasted my time. You need real reasons to vote for someone. This isn't a game!" Well, it's not a game. It's a standard of experience and honor that I know my friend will uphold. So if you are also completely sick of the negative &*@$^)@ floating around by the people that love the attention, let's step back and just vote and get on with it. But, don't forget that teddy bear feel this man gives us.
 
  [1]: /wp-content/uploads/2014/09/bald-d.jpg

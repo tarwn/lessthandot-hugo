@@ -126,13 +126,13 @@ This will allow the mappings to be performed before we add the expression to bui
   <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_8.gif" alt="" title="" width="387" height="278" />
 </div>
 
-The ADO.NET Destination now can point directly to the table, “dbo”.”EmpManagers”.
+The ADO.NET Destination now can point directly to the table, "dbo"."EmpManagers".
   
 Once the Execute SQL Task and Data Flow Task are completed, move to create the variables for EmployeeID and SqlCmd.
   
 EmployeeID will be named ID and a data type of Int32 matching the INT parameter data type in the procedure uspGetExployeeManagers. The SqlCmd variable will be a string data type and hold the following expression:
   
-“EXEC dbo.uspGetEmployeeManagers @EmployeeID=” + (DT_WSTR, 10) @[User::ID]
+"EXEC dbo.uspGetEmployeeManagers @EmployeeID=" + (DT_WSTR, 10) @[User::ID]
   
 If the variable has the value 4 preset, this expression evaluated will result in:
   

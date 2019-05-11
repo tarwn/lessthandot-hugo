@@ -1,5 +1,5 @@
 ---
-title: 'Presenting “Filegroups: Putting the Pieces Together” for Chicago SQL Connections'
+title: 'Presenting "Filegroups: Putting the Pieces Together" for Chicago SQL Connections'
 author: Jes Borland
 type: post
 date: 2012-03-26T12:39:00+00:00
@@ -22,7 +22,7 @@ I'll be presenting on Tuesday, April 3, 2012, at 6:00 pm, for SQL Connection Sub
 
 [![][1]][2]
 
-I'll be giving my new favorite presentation, “Filegroups: Putting the Pieces Together”.
+I'll be giving my new favorite presentation, "Filegroups: Putting the Pieces Together".
 
 Abstract: Every DBA must know how to create and maintain filegroups because they affect performance, maintenance, and security of your data. What are filegroups, and how do you use them? In this session, I'll show you how to create filegroups, create objects in them, move objects to them, perform maintenance, and walk through piecemeal restores.
 

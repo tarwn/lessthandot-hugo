@@ -19,7 +19,7 @@ tags:
 ---
 Have you ever found yourself working on an ASP.net Action and noticed there isn't a single Authorization attribute in sight? Or gone to edit an endpoint in WebAPI, only to realize you took a coffee break at exactly the wrong time and forgot to come back and add the authorization attribute...a month ago? Or the time you found an MVC endpoint with WebAPI Authorization attributes on it? 
 
-While relying on code reviews and regular reminders to the team can reduce occurrences of this, we're human and can only catch so much. Instead, it would be nice if a warning popped up before we ever pushed the code out: “You haven't defined authentication for the XYZ endpoint yet!”. Luckily we have a CI environment (right???), so we can use Unit Tests to provide that warning and serve as a safety net to make sure we can't push unprotected endpoints out to production.
+While relying on code reviews and regular reminders to the team can reduce occurrences of this, we're human and can only catch so much. Instead, it would be nice if a warning popped up before we ever pushed the code out: "You haven't defined authentication for the XYZ endpoint yet!". Luckily we have a CI environment (right???), so we can use Unit Tests to provide that warning and serve as a safety net to make sure we can't push unprotected endpoints out to production.
 
 Code for this post: [Github: tarwn/Blog_KnockoutMVVMPatterns/.../AuthorizationSafetyNetTests.cs][1]
 
@@ -93,7 +93,7 @@ public void AllMvcActionsHaveExplicitAuthorizationDefined_UsingStandardReflectio
   * 3: If any attributes on each action match the test, skip to the next attribute
   * 4: After collecting a list of actions that are missing auth, we can now product a test failure message with the relevant information
 
-In my sample code I have an Action called “AccidentalOpenEndpoint” in my HomeController to show the test in action:
+In my sample code I have an Action called "AccidentalOpenEndpoint" in my HomeController to show the test in action:
 
 ```text
 1 action(s) do not have explicit authorization: HomeController.AccidentalOpenEndpoint
@@ -129,7 +129,7 @@ public void AllMvcActionsHaveExplicitAuthorizationDefined()
 }
 ```
   * 1: Once again get all of the IController implementations in the assembly for HomeController, but this time wrap them in ReflectedControllerDescriptor's
-  * 2: Use the ReflectedController's built in “GetCanonicalActions” method to get a collection of ActionDescriptors
+  * 2: Use the ReflectedController's built in "GetCanonicalActions" method to get a collection of ActionDescriptors
   * 3: Get the attributes from the Action and it's Controller and run them through the IsMVCAttributeAuth test
   * 4: Once again, output a test failure message for Actions that didn't pass the test
 

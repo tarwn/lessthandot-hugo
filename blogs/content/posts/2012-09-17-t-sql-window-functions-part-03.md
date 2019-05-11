@@ -1794,7 +1794,7 @@ This next example is more creative. It begins to show how powerful the window fu
   </tr>
 </table>
 
-The ORDER BY clause creates an expanding group within the partition. In the examples above, the partition was the customer. Within each partition, ordered groups based on order date and order id are “created”. At each row, the order date and order id groups are aggregated up to the current row's group thus producing the running total. If more than one row has the same order grouping, all of the rows in the group are aggregated into the total as shown in the second example above with the days and years. 
+The ORDER BY clause creates an expanding group within the partition. In the examples above, the partition was the customer. Within each partition, ordered groups based on order date and order id are "created". At each row, the order date and order id groups are aggregated up to the current row's group thus producing the running total. If more than one row has the same order grouping, all of the rows in the group are aggregated into the total as shown in the second example above with the days and years. 
 
 # Aggregates with ROWS
 

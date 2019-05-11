@@ -238,7 +238,7 @@ It is not a best practice to have xp\_cmdshell enabled. As a matter of fact begi
   
 Server: Msg 15281, Level 16, State 1, Procedure xp_cmdshell, Line 1
 
-SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. For more information about enabling 'xp_cmdshell', see “Surface Area Configuration” in SQL Server Books Online.
+SQL Server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. For more information about enabling 'xp_cmdshell', see "Surface Area Configuration" in SQL Server Books Online.
 
 To enable xp_cmdshell execute the following code
 
@@ -262,7 +262,7 @@ In SQL Server 2005 and 2008 OPENROWSET is also disabled by default, if you try t
 
 Server: Msg 15281, Level 16, State 1, Line 1
   
-SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 'Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling 'Ad Hoc Distributed Queries', see “Surface Area Configuration” in SQL Server Books Online.
+SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' of component 'Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. A system administrator can enable the use of 'Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling 'Ad Hoc Distributed Queries', see "Surface Area Configuration" in SQL Server Books Online.
 
 To enable OPENROWSET and OPENQUERY you can use the previous script but instead of 'xp_cmdshell' you will use 'Ad Hoc Distributed Queries'. The script to enable Ad Hoc Distributed Queries is below
 

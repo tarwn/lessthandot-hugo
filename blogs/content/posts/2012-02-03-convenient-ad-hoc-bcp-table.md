@@ -21,9 +21,9 @@ To do that, I quickly create a staging table in my database, then save the Excel
 
 Then I have to go play with bcp and figure out the syntax yet again, since I don't do it often enough to have made it unthinkingly automatic. Recently I got tired of these repeated lookups and created the following batch file to help out:
 
-<span style="font-family: courier new,courier;">@echo off<br />:top<br />if .%1==. goto end<br />echo Ready to import file to SqlServerName, DB DBName:<br />echo  %1<br />set /P tablename=Type destination table name and press Enter: <br />osql -S SqlServerName -d DBName</span> <span style="font-family: courier new,courier;"></span><span style="font-family: courier new,courier;">-E -Q “truncate table %tablename%”<br />bcp DBName.%tablename% in %1 -S SqlServername -T -c<br />echo.<br />shift<br />goto top<br />:end<br />set tablename=<br />pause</span>
+<span style="font-family: courier new,courier;">@echo off<br />:top<br />if .%1==. goto end<br />echo Ready to import file to SqlServerName, DB DBName:<br />echo  %1<br />set /P tablename=Type destination table name and press Enter: <br />osql -S SqlServerName -d DBName</span> <span style="font-family: courier new,courier;"></span><span style="font-family: courier new,courier;">-E -Q "truncate table %tablename%"<br />bcp DBName.%tablename% in %1 -S SqlServername -T -c<br />echo.<br />shift<br />goto top<br />:end<br />set tablename=<br />pause</span>
 
-Name the batch file “SqlServerName DBName import replace (drop file).bat”.
+Name the batch file "SqlServerName DBName import replace (drop file).bat".
 
 Now in Windows Explorer, just drag any file you want to import to your database onto the batch file. When prompted, type in the schema and table name you want it loaded to, and press Enter. You'll get a nice pause to see what the result was so you can fix it if not successful. It even supports dropping multiple files, and you'll be asked for a destination table name for each file.
 

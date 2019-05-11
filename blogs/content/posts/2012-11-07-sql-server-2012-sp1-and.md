@@ -45,11 +45,11 @@ Download Service Pack 1 for SQL Server 2012 here: http://www.microsoft.com/en-us
 
 # **Hekaton**
 
-Project codenamed “Hekaton,” a new in-memory technology for transaction processing that will be built directly into the data platform and ship in the next major version of SQL Server.
+Project codenamed "Hekaton," a new in-memory technology for transaction processing that will be built directly into the data platform and ship in the next major version of SQL Server.
 
-Currently in private technology preview with a small set of customers, “Hekaton” will complete Microsoft's portfolio of in-memory capabilities across analytics, transactions, streaming and caching workloads.
+Currently in private technology preview with a small set of customers, "Hekaton" will complete Microsoft's portfolio of in-memory capabilities across analytics, transactions, streaming and caching workloads.
   
-Based on customer testing to date, “Hekaton” will offer performance gains of up to 10 times for existing apps and up to 50 times for new applications optimized for in-memory performance.
+Based on customer testing to date, "Hekaton" will offer performance gains of up to 10 times for existing apps and up to 50 times for new applications optimized for in-memory performance.
   
 We will also announce the next version of our enterprise-class appliance, SQL Server 2012 Parallel Data Warehouse (PDW), available in the first half of 2013.
   

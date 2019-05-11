@@ -595,7 +595,7 @@ SET ANSI_PADDING OFF
 GO
 
 ```
-This gives us our database, you can just move you files to the correct directory as well as add all the secondary files and file groups you need to sustain this. There is also a table “template” with which to create your tables. Each table will be specific to an audit file.
+This gives us our database, you can just move you files to the correct directory as well as add all the secondary files and file groups you need to sustain this. There is also a table "template" with which to create your tables. Each table will be specific to an audit file.
 
 Next we need to get the audit information into the database, below is the script I used and can be modified to fit into either a SQL Job or SSIS package.
 

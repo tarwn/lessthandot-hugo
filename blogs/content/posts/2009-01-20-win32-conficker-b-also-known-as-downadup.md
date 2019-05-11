@@ -21,7 +21,7 @@ tags:
 Got this from Microsoft and decided would be good to share this with you
 
 <p style="line-height:115%">
-  <span style="font-size:11.0pt;line-height:115%">Based on feedback from<br /> MVPs and other sources, we are concerned about the rise in reported<br /> infections due to the worm Win32/Conficker.B also known as<br /> “Downadup.” Though systems which have already applied the<br /> out-of-band released <a href="http://www.microsoft.com/technet/security/bulletin/ms08-067.mspx" target="_blank"><span style="color:windowtext">MS08-067</span></a> in October 2008 are protected,<br /> unpatched system users have experienced system lockout and other<br /> problems. </span>
+  <span style="font-size:11.0pt;line-height:115%">Based on feedback from<br /> MVPs and other sources, we are concerned about the rise in reported<br /> infections due to the worm Win32/Conficker.B also known as<br /> "Downadup." Though systems which have already applied the<br /> out-of-band released <a href="http://www.microsoft.com/technet/security/bulletin/ms08-067.mspx" target="_blank"><span style="color:windowtext">MS08-067</span></a> in October 2008 are protected,<br /> unpatched system users have experienced system lockout and other<br /> problems. </span>
 </p>
 
 <p style="line-height:115%">
@@ -49,7 +49,7 @@ Got this from Microsoft and decided would be good to share this with you
 </p>
 
 <p style="margin-left:.25in;text-indent:-.25in;line-height:115%">
-  <span style="font-size:11.0pt;line-height:115%;font-family:Symbol"><span>·<span style="font:7.0pt &quot;Times New Roman&quot;"><br /> </span></span></span><span style="font-size:11.0pt;line-height:115%">Created the KB article 962007 “<a href="http://support.microsoft.com/kb/962007" target="_blank">Virus alert about the<br /> Win32/Conficker.B worm</a>” to provide public details on the symptoms and<br /> removal methods available to address this issue.</span>
+  <span style="font-size:11.0pt;line-height:115%;font-family:Symbol"><span>·<span style="font:7.0pt &quot;Times New Roman&quot;"><br /> </span></span></span><span style="font-size:11.0pt;line-height:115%">Created the KB article 962007 "<a href="http://support.microsoft.com/kb/962007" target="_blank">Virus alert about the<br /> Win32/Conficker.B worm</a>" to provide public details on the symptoms and<br /> removal methods available to address this issue.</span>
 </p>
 
 <p style="margin-left:.25in;text-indent:-.25in;line-height:115%">

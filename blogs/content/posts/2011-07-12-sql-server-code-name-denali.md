@@ -1,5 +1,5 @@
 ---
-title: SQL Server Code Name “Denali” CTP3 is available for download
+title: SQL Server Code Name "Denali" CTP3 is available for download
 author: SQLDenis
 type: post
 date: 2011-07-12T12:19:00+00:00
@@ -24,7 +24,7 @@ tags:
   - denali
 
 ---
-SQL Server Code Name “Denali” CTP3 is available for download. You can get it here: https://www.microsoft.com/betaexperience/pd/SQLDCTP3CTA/enus/default.aspx
+SQL Server Code Name "Denali" CTP3 is available for download. You can get it here: https://www.microsoft.com/betaexperience/pd/SQLDCTP3CTA/enus/default.aspx
 
 There are a bunch of new things in this CTP, Apollo (column store indexes), some new date functions, new parse functions and more goodies
 

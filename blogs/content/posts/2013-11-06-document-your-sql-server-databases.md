@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2013-11-06T15:08:00+00:00
 ID: 2193
-excerpt: 'How important is database documentation to you? I know you have a hundred “more important” things to do. But consider this: how much time is it going to take you to document the purpose of a constraint right now? How much time will you spend trying to r&hellip;'
+excerpt: 'How important is database documentation to you? I know you have a hundred "more important" things to do. But consider this: how much time is it going to take you to document the purpose of a constraint right now? How much time will you spend trying to r&hellip;'
 url: /index.php/datamgmt/datadesign/document-your-sql-server-databases/
 views:
   - 61132
@@ -18,7 +18,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-How important is database documentation to you? I know you have a hundred “more important” things to do. But consider this: how much time is it going to take you to document the purpose of a constraint right now? How much time will you spend trying to remember that purpose in seven months when a developer has a question about it? Documenting a database and its objects when they are created can save you hours of work in the long run.
+How important is database documentation to you? I know you have a hundred "more important" things to do. But consider this: how much time is it going to take you to document the purpose of a constraint right now? How much time will you spend trying to remember that purpose in seven months when a developer has a question about it? Documenting a database and its objects when they are created can save you hours of work in the long run.
 
 There are many ways to create and store documentation. You could create a spreadsheet for each database, with information about each table, view, and stored procedure – and update it manually. You could buy a third party product and use it – but then you're paying for a method to track this information. Or you could use a built-in tool in SQL Server to add the information, and use Reporting Services to display it.
 
@@ -46,9 +46,9 @@ You can add extended properties to many – but not all – objects in SQL Serve
 
 ### **Use Cases** 
 
-Let's start with the database itself – you could add an “Application” property with the name of the application it's tied into.  For each schema in the database, you can document the purpose of it – was it to support application functionality, for readability, or for security? In functions and procedures, comments should explain the “why”, but properties could be added to document the data types and default values for parameters – just in case they accidentally get changed. If you have a column with a default constraint or a default value, document what it is and why if appropriate. If there is a trigger, document why that's necessary.
+Let's start with the database itself – you could add an "Application" property with the name of the application it's tied into.  For each schema in the database, you can document the purpose of it – was it to support application functionality, for readability, or for security? In functions and procedures, comments should explain the "why", but properties could be added to document the data types and default values for parameters – just in case they accidentally get changed. If you have a column with a default constraint or a default value, document what it is and why if appropriate. If there is a trigger, document why that's necessary.
 
-These are just a few examples of the “why”. Let's look at the “how”.
+These are just a few examples of the "why". Let's look at the "how".
 
 ### Security
 
@@ -237,7 +237,7 @@ The results are much more comprehensive now.
   <em>Figure 3: Joining sys.extended_properties to other views for better results</em>
 </p>
 
-Let's look at a few other examples. (Note that our end goal is to have “one query to rule them all” – I want to be able to run one general query to get the results into an SSRS report. Thus, there will be some NULL columns.)
+Let's look at a few other examples. (Note that our end goal is to have "one query to rule them all" – I want to be able to run one general query to get the results into an SSRS report. Thus, there will be some NULL columns.)
 
 I added some database-level properties. To query those, I look for class 0. Note that I'm not joining it to any other views – all the information is contained in sys.extended_properties.
 

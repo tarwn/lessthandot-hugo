@@ -1,5 +1,5 @@
 ---
-title: “Please sir, can I have some more?” – shiny hardware and .NET
+title: \"Please sir, can I have some more?\" – shiny hardware and .NET
 author: Tahir Khalid
 type: post
 date: 2014-12-25T03:02:24+00:00
@@ -23,7 +23,7 @@ This wasn't so much a case of tight purse strings as lack of understanding at th
 
 I am fortunate in that I have done development roles were the hardware was inadequate and abysmal and in one case it took over a year to obtain more memory into what was an already struggling Dell desktop machine...with a single screen – THE HORROR!
 
-Things did improve, alibet slowly and I think that was down more to me as a developer because over time in interviews and/or during 1-2-1 and developer forums I would start to raise concerns and in the case of some recent past interviews one of my primary questions to the employers was: “What's the hardware like, what's the software like, how is the Group policy, Servers” and so on because as a developer I should know what I need to do my job and equally development managers should know what their guys need to work efficiently.
+Things did improve, alibet slowly and I think that was down more to me as a developer because over time in interviews and/or during 1-2-1 and developer forums I would start to raise concerns and in the case of some recent past interviews one of my primary questions to the employers was: "What's the hardware like, what's the software like, how is the Group policy, Servers" and so on because as a developer I should know what I need to do my job and equally development managers should know what their guys need to work efficiently.
 
 Fortunately the last 5+ years I have always used HP hardware from the might Z600 Xeon Workstation to the rather nifty small form factor EliteDesk series PC's and always in all cases HP's workstation build quality impressed me as did the consistent performance and reliability.
 
@@ -42,7 +42,7 @@ So about 2 weeks ago I decided I would take another look on eBay, see what new t
 
 It's not about outright speed or cores, its about the reliability and rock solid performance you get with business class notebooks because quite frankly they are better built than the plastic laptops you get in your local retail shop and most business laptops/notebooks have rugged good looks to boot.
 
-One such notebook popped up in my radar, the HP 8560w Mobile Workstation – up to this point I had known about the older HP EliteDesk notebooks which were very nice to use and had a very high quality metallic finish to them but they always lacked in power or at least that's what I thought until I came across the 2011 model advertised as “Military specification mobile workstation” which obviously perked my interest.
+One such notebook popped up in my radar, the HP 8560w Mobile Workstation – up to this point I had known about the older HP EliteDesk notebooks which were very nice to use and had a very high quality metallic finish to them but they always lacked in power or at least that's what I thought until I came across the 2011 model advertised as "Military specification mobile workstation" which obviously perked my interest.
 
 After obsessively researching the internet about this particular HP 8560w mobile workstation I was very impressed by what I read in reviews and from comments made my former, current and new owners – these notebooks are serious power houses when spec'd correctly.  So off I went on my merry way and by pure luck came across one of these:
 
@@ -80,11 +80,11 @@ eSata port, Display Port, USB 2 & 3 ports, firewire port and 1 x USB powered por
 
 Safe to say the specification goes above and beyond what most people would need from a notebook but for me it means that I have no issues with the notebook lasting several years at least and being able to perform to a very high level.   After agreeing a deal with the eBay seller I handed over almost £600 pounds (about $930 US dollars) for 1 used HP 8560w notebook – it's bit of a gamble with eBay with regards to item condition and quality as some sellers tend to be creative with their description and using actual photo's of what you are purchasing however common sense prevailed and I checked out the sellers eBay history (100% positive) and I could the seller had been doing this for a while so wasn't completely clueless.
 
-Some swift email and texts later and we had agreed for me to collect said notebook, a somewhat long drive to the other side of London (almost 200 miles in total) however the trip was worth the effort and the seller turned out to be a nice honest trader who was true to his word and when he revealed the notebook it was in flawless condition, actually I was taken back at how “mint” it looked, almost new bar for one very minor defect with the locking mechanism that wasn't even noticeable – overall a very good eBay buying experience.
+Some swift email and texts later and we had agreed for me to collect said notebook, a somewhat long drive to the other side of London (almost 200 miles in total) however the trip was worth the effort and the seller turned out to be a nice honest trader who was true to his word and when he revealed the notebook it was in flawless condition, actually I was taken back at how "mint" it looked, almost new bar for one very minor defect with the locking mechanism that wasn't even noticeable – overall a very good eBay buying experience.
 
 As a bonus the guy threw in a registered installation of Windows 8.1 Standard (it does the job), a new Belkin notebook bag which is rather hefty but can accommodate the rugged HP 8560w notebook very well including all its peripherals and power supply which is like a brick itself consuming about 150W, not shy then.
 
-What has impressed me the most is the very high level of engineering that has gone into designing and constructing the HP 8560w mobile workstation (to give it it's full name), it really is leagues apart from your typical laptops/notebooks, both commercial and business models and dare I say it is better in many ways to the solid lump of metal that is the Macbook Pro.  Yes it doesn't have the finish of the Apple products but in many ways it's better and more appealing to the eye because it has a rugged metallic finish that shouts “I am a techies toy not a portable mirror” – it would not look out of place in an engineering lab which is one of many scenarios HP must have envisioned this notebook to be used.
+What has impressed me the most is the very high level of engineering that has gone into designing and constructing the HP 8560w mobile workstation (to give it it's full name), it really is leagues apart from your typical laptops/notebooks, both commercial and business models and dare I say it is better in many ways to the solid lump of metal that is the Macbook Pro.  Yes it doesn't have the finish of the Apple products but in many ways it's better and more appealing to the eye because it has a rugged metallic finish that shouts "I am a techies toy not a portable mirror" – it would not look out of place in an engineering lab which is one of many scenarios HP must have envisioned this notebook to be used.
 
 <div style="width: 473px" class="wp-caption alignnone">
   <img src="http://www.kuchbhibecho.com/images/product/pro/13934228691392389602_602226778_10-HP-EliteBook-8560w-.jpg" alt="Rugged good looks" width="463" height="348" />
@@ -110,7 +110,7 @@ Really really well, what's most impressive is the boot time from cold power up t
 
 While Windows 8.1 doesn't have the Windows Experience index visible anywhere like Windows 7 had, however th<span style="color: #000000">he underlying benchmark utility, known as the Windows System Assessment Tool (WinSAT), is still there in Windows 8.1 and can be accessed the following way:</span>
 
-<span style="color: #000000">Open a command prompt as administrator, then type “winsat prepop” and press Enter. This will run the benchmark and store the results on your PC as XML file</span>
+<span style="color: #000000">Open a command prompt as administrator, then type "winsat prepop" and press Enter. This will run the benchmark and store the results on your PC as XML file</span>
 
 <div style="width: 630px" class="wp-caption alignnone">
   <img src="http://cnet2.cbsistatic.com/hub/i/r/2014/01/01/3ebcecc0-8533-11e3-bc97-14feb5ca9861/resize/620x/a89d3999dc93211414aa91967400bfb9/winsat_prepop.png" alt="Open command line and type Winsat preprop" width="620" height="320" />

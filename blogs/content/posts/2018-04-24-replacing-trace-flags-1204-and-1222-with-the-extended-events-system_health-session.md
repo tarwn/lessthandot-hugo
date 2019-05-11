@@ -20,7 +20,7 @@ Deadlocks in a SQL Server instance are problematic. They can cause application e
 
 How do you find deadlocks? Over the years, there have been various methods, depending on what tools were available in SQL Server. Many of us used to run a Profiler or server trace to capture the Deadlock Graph event – useful if we knew when they were occurring (or they occurred all the time). We could also enable trace flags 1204 and/or 1222 to write the information to the event log – better if we knew there were issues, but they weren't predictable.
 
-However, I don't like a messy event log. I like it neat and clean, so I can see errors easily. For example, I enable TF 3226 to suppress “Log was backed up” messages. With SQL Server 2012+, I also prefer to use the Extended Events default system_health session to view deadlock graphs – with no extra work required!
+However, I don't like a messy event log. I like it neat and clean, so I can see errors easily. For example, I enable TF 3226 to suppress "Log was backed up" messages. With SQL Server 2012+, I also prefer to use the Extended Events default system_health session to view deadlock graphs – with no extra work required!
 
 Let me walk through what a deadlock looks like with TF 1222 and compare that to the XE session.
 
@@ -79,7 +79,7 @@ Here you'll see deadlocks that have occurred. The Value field will show the XML 
 
 [<img class="aligncenter size-full wp-image-9233" src="/wp-content/uploads/2018/04/details.png" alt="details" width="515" height="238" srcset="/wp-content/uploads/2018/04/details.png 515w, /wp-content/uploads/2018/04/details-300x139.png 300w" sizes="(max-width: 515px) 100vw, 515px" />][7]
 
-Don't ignore that sneaky “Deadlock” tab, however – that's where you'll find the easier-to-read deadlock graph!
+Don't ignore that sneaky "Deadlock" tab, however – that's where you'll find the easier-to-read deadlock graph!
 
 [<img class="aligncenter size-large wp-image-9234" src="/wp-content/uploads/2018/04/deadlock-1024x433.png" alt="deadlock" width="1024" height="433" srcset="/wp-content/uploads/2018/04/deadlock-1024x433.png 1024w, /wp-content/uploads/2018/04/deadlock-300x127.png 300w, /wp-content/uploads/2018/04/deadlock-768x324.png 768w, /wp-content/uploads/2018/04/deadlock-600x253.png 600w, /wp-content/uploads/2018/04/deadlock-710x300.png 710w, /wp-content/uploads/2018/04/deadlock.png 1044w" sizes="(max-width: 1024px) 100vw, 1024px" />][8]
 

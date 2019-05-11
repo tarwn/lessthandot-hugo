@@ -29,11 +29,11 @@ So, here's a very simple walk-through of the steps I had to follow in order to e
 
 <img src="/wp-content/uploads/blogs/SysAdmins/telnet/telnet_servermanager.jpg" alt="" title="" width="453" height="528" />
 
-2. Select “Features” from the left TreeView pane and then click “Add Features” from the right-hand pane:
+2. Select "Features" from the left TreeView pane and then click "Add Features" from the right-hand pane:
 
 <img src="/wp-content/uploads/blogs/SysAdmins/telnet/telnet_features.jpg" alt="" title="" width="716" height="379" />
 
-3. Select “Telnet Server” from the list of available features and click Next followed by Install:
+3. Select "Telnet Server" from the list of available features and click Next followed by Install:
 
 <img src="/wp-content/uploads/blogs/SysAdmins/telnet/telnet_server.jpg" alt="" title="" width="780" height="587" />
 
@@ -41,6 +41,6 @@ So, here's a very simple walk-through of the steps I had to follow in order to e
 
 <img src="/wp-content/uploads/blogs/SysAdmins/telnet/telnet_installing.jpg" alt="" title="" width="777" height="583" />
 
-5. When it is complete, open a command prompt, type “telnet” and you should be presented with the following screen:
+5. When it is complete, open a command prompt, type "telnet" and you should be presented with the following screen:
 
 <img src="/wp-content/uploads/blogs/SysAdmins/telnet/telnet_installed.jpg" alt="" title="" width="668" height="331" />

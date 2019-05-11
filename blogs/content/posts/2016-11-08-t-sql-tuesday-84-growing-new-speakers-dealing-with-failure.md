@@ -20,16 +20,16 @@ I'm joining [this month's #tsql2sday blog party][1] as Andy Yun ([blog][1] | [Tw
 I've had the opportunity to present hundreds of times – in-person to small user groups and at large conferences, online to one person or hundreds. As I present, I'm working with technology – the laptop I'm using, the projector I'm connected to, the SQL Server I'm running demos against. Technology can and will fail. As a speaker, this can be downright terrifying.
 
 <h3 style="text-align: justify">
-  “I have not failed. I've just found 10,000 ways that won't work.” – Thomas A. Edison
+  "I have not failed. I've just found 10,000 ways that won't work." – Thomas A. Edison
 </h3>
 
 You can prepare so you're able to continue presenting when there is a problem.
 
 ### Be Proactive
 
-The first piece of advice I give to anyone considering speaking is, “Talk about what interests you. Not what's popular or what that great speaker you look up to talks about. You'll give a better presentation if you love the subject.”
+The first piece of advice I give to anyone considering speaking is, "Talk about what interests you. Not what's popular or what that great speaker you look up to talks about. You'll give a better presentation if you love the subject."
 
-The second piece of advice I give is, “Practice, practice, practice.” Knowing what your topic is, what you're going to say, and what you're going to demo will give you a huge confidence boost if something goes wrong. You need to practice what you're going to say, out loud, several times so you understand how long it will take and how to transition between ideas. You need to practice your demos so you know what results to expect. You need to practice transitions between your PowerPoint and your demos so you know what to expect.
+The second piece of advice I give is, "Practice, practice, practice." Knowing what your topic is, what you're going to say, and what you're going to demo will give you a huge confidence boost if something goes wrong. You need to practice what you're going to say, out loud, several times so you understand how long it will take and how to transition between ideas. You need to practice your demos so you know what results to expect. You need to practice transitions between your PowerPoint and your demos so you know what to expect.
 
 You also should have backups of your presentation files – slides and demos, VMs if necessary. Store them on a USB drive and online (OneDrive or Google Drive, for example). This will give you extra peace of mind – and help if the failure is your laptop! (And this has happened. I know people who have had their laptops stolen, lost, or died in the first 10 minutes of their presentations.)
 

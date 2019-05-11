@@ -80,6 +80,6 @@ public enum TransactionState
 }
 ```
 
-So now hopefully you can avoid the embarassing mistake of failing to batch your queries properly. One would think a “database guy” would know better 😳
+So now hopefully you can avoid the embarassing mistake of failing to batch your queries properly. One would think a "database guy" would know better 😳
 
 Well, he does now!

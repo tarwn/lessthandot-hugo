@@ -43,7 +43,7 @@ Using the Person.Address table in AdventureWorks, disable indexes IX\_Address\_A
 
 > <span class="MT_red">Note: To enable an index after disabling it, rebuild the index. This will enable it again</span>
 
-Run the following query while having “show actual execution plan” set on.
+Run the following query while having "show actual execution plan" set on.
 
 ```sql
 SELECT 

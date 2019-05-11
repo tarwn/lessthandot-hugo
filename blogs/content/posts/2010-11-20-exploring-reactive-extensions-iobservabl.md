@@ -26,7 +26,7 @@ The two interfaces we need are remarkably simple, but very powerful. The generic
 
 ## A Quick Example
 
-I really struggled to think of a simple, “hello world” type application for this. In the presentation I saw, the sample application was a tool to query netflix's oData service. This was cool (especially the auto-complete) but seems like a bit much for a quick introduction, and I don't want to steal Jon's idea. Sometimes I wish I had one of those clocks that show several time zones at once, like the ones they use in call centers, so I could check before bothering some of my friends from lessthandot at unholy hours. I don't have nearly enough interest in figuring out every country's wacky daylight savings time rules to actually make such a thing, but decided it could be a decent example. It consists of several elements getting data from a single source, and doing some of their own processing on the data before passing it along, which is exactly what I wanted to show. So we'll work with the clockmaster 3000.
+I really struggled to think of a simple, "hello world" type application for this. In the presentation I saw, the sample application was a tool to query netflix's oData service. This was cool (especially the auto-complete) but seems like a bit much for a quick introduction, and I don't want to steal Jon's idea. Sometimes I wish I had one of those clocks that show several time zones at once, like the ones they use in call centers, so I could check before bothering some of my friends from lessthandot at unholy hours. I don't have nearly enough interest in figuring out every country's wacky daylight savings time rules to actually make such a thing, but decided it could be a decent example. It consists of several elements getting data from a single source, and doing some of their own processing on the data before passing it along, which is exactly what I wanted to show. So we'll work with the clockmaster 3000.
 
 We'll start with the observable. In this case it is just a class that sends time updates to any subscribers. I called it the Atomic Clock because it sounds cool. The Subscribe method is the most important here.
 
@@ -148,7 +148,7 @@ public partial class GlobalClock : Form {
 
 Hopefully this provided a decent introduction. A VS2008 solution containing all the code can be found over at [github][4], and any further projects will be added there (this post focused on the ClockMaster3000 project).
 
-It appears that the reactive extensions can be tricked into [working with mono][5] (binaries can be found in an interesting location, **C:Program FilesMicrosoft Cloud ProgrammabilityReactive Extensions** if you need to copy them over). I had some trouble with this at first because of lingering GAC references in the project but it does appear that when referenced locally the reactive framework “just works”. I'll update the project on github to include local references for any other mono folks.
+It appears that the reactive extensions can be tricked into [working with mono][5] (binaries can be found in an interesting location, **C:Program FilesMicrosoft Cloud ProgrammabilityReactive Extensions** if you need to copy them over). I had some trouble with this at first because of lingering GAC references in the project but it does appear that when referenced locally the reactive framework "just works". I'll update the project on github to include local references for any other mono folks.
 
  [1]: http://twitter.com/jon_graves
  [2]: http://msdn.microsoft.com/en-us/devlabs/ee794896.aspx

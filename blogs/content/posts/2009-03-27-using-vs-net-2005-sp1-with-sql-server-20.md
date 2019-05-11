@@ -31,7 +31,7 @@ So Microsoft was kind enough to allow me to use my full VS.NET 2005 SP1 installa
   
 SQL Server 2008 instances. Thank you!!!
 
-The update is called, “Microsoft Visual Studio 2005 Service Pack 1 Update for Microsoft SQL Server 2008 Support”.
+The update is called, "Microsoft Visual Studio 2005 Service Pack 1 Update for Microsoft SQL Server 2008 Support".
   
 This is similar to the DTS legacy support update that we all had to throw in when we had those nagging 2000 instances
   
@@ -51,7 +51,7 @@ my hard head is sticking with it until they really put the pressure on me.
 
 The install process is a next...next...finish one as usual. You should now be able to connect to SQL Server 2008
   
-“almost error free”. I say almost because there is still the nice little gotcha listed on the download page of
+"almost error free". I say almost because there is still the nice little gotcha listed on the download page of
 
 This update does not support the following features for SQL Server 2008:
   

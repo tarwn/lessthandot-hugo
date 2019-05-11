@@ -47,7 +47,7 @@ you will get the following error
 
 _ORA-00923: FROM keyword not found where expected
   
-00923. 00000 – “FROM keyword not found where expected”_
+00923. 00000 – "FROM keyword not found where expected"_
 
 I decided to see where the Dual table came from.
 

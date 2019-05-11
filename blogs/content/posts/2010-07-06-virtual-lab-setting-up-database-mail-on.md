@@ -40,7 +40,7 @@ In SSMS we can right click the Database Mail entry under Management to begin the
   <a href="http://www.tiernok.com/LTDBlog/DatabaseMail/orig/01_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/DatabaseMail/01_config.png" alt="SSMS DatabaseMail" /></a><br /> DatabaseMail Menu Item in SSMS
 </div>
 
-The Intro screen is fairly boring, so lets press “Next” and head to the main configuration page. This being the first time we are configuring DatabaseMail on our new server, we want to leave the first option selected and continue.
+The Intro screen is fairly boring, so lets press "Next" and head to the main configuration page. This being the first time we are configuring DatabaseMail on our new server, we want to leave the first option selected and continue.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/DatabaseMail/orig/02_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/DatabaseMail/02_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS
@@ -54,7 +54,7 @@ A quick check by the wizard and it determines that components for Database Mail 
 
 Profiles are used to represent a set of email addresses which allows us to represent a single person (or system) with multiple fail-over accounts. If an error occurs when the system is attempting to send mail from the first account in a profile, it fails to the next and retries, continuing until it either runs out of accounts or successfully sends it's message.
 
-Lets enter a Profile Name of “The Accidental Admin”.
+Lets enter a Profile Name of "The Accidental Admin".
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/DatabaseMail/orig/03_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/DatabaseMail/02_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS
@@ -92,13 +92,13 @@ After a final review screen, press the 'Finish' button to implement the changes.
   <a href="http://www.tiernok.com/LTDBlog/DatabaseMail/orig/08_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/DatabaseMail/08_config.png" alt="SSMS DatabaseMail Wizard" /></a><br /> DatabaseMail Wizard in SSMS – Finished
 </div>
 
-The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select “Send Test Email...”.
+The last step is to test our new setup. Right-click the Database Mail menu option in SSMS and select "Send Test Email...".
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/DatabaseMail/orig/09_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/DatabaseMail/09_config.png" alt="SSMS DatabaseMail - Test Email" /></a><br /> SSMS Menu – Sending a Test Email
 </div>
 
-After entering an email address for our test message, we can hit the “Send” button and wait for confirmation of our ability to hit “Next, Next, Finish”.
+After entering an email address for our test message, we can hit the "Send" button and wait for confirmation of our ability to hit "Next, Next, Finish".
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/DatabaseMail/orig/10_config.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/DatabaseMail/10_config.png" alt="SSMS DatabaseMail - Test Email Dialog" /></a><br /> SSMS DatabaseMail – Test Email Dialog

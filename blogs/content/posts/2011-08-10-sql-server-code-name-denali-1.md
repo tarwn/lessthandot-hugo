@@ -1,5 +1,5 @@
 ---
-title: SQL Server Code Name “Denali” CTP3 Product Guide available for download
+title: SQL Server Code Name "Denali" CTP3 Product Guide available for download
 author: SQLDenis
 type: post
 date: 2011-08-10T09:28:00+00:00
@@ -7,7 +7,7 @@ ID: 1294
 excerpt: |
   This is pretty cool and it is all in one place, the download is 456.0 MB
   
-  The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resources and demos that will help IT Professionals better evaluate of CTP3.  This includes:
+  The SQL Server Code Name "Denali" CTP3 Product Guide includes useful resources and demos that will help IT Professionals better evaluate of CTP3.  This includes:
   -          14&hellip;
 url: /index.php/datamgmt/datadesign/sql-server-code-name-denali-1/
 views:
@@ -27,7 +27,7 @@ This is pretty cool and it is all in one place, the download is 456.0 MB
 
 I went through the guide and have listed all the white papers, demos, datasheets etc etc.
 
-_The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resources and demos that will help IT Professionals better evaluate of CTP3. This includes:
+_The SQL Server Code Name "Denali" CTP3 Product Guide includes useful resources and demos that will help IT Professionals better evaluate of CTP3. This includes:
   
           **14 Product Datasheets**</p> 
 
@@ -50,11 +50,11 @@ _The SQL Server Code Name “Denali” CTP3 Product Guide includes useful resour
 
   * Denali Technical Overview
   * Microsoft SQL Server: The Data and BI Platform for Today and Tomorrow
-  * For Partners – Exploring Opportunities with the Cloud-Ready Information Platform and SQL Server Code Name “Denali”
+  * For Partners – Exploring Opportunities with the Cloud-Ready Information Platform and SQL Server Code Name "Denali"
   * Security Features Overview
   * All Up Data Warehouse: From SMP to Parallel Data Warehouse
   * Optimize SQL Server for Private Cloud Technical Presentation
-  * Introducing Microsoft SQL Server Developer Tools,Code Name “Juneau”: An Introduction to Doing Database Development in a Modern Way
+  * Introducing Microsoft SQL Server Developer Tools,Code Name "Juneau": An Introduction to Doing Database Development in a Modern Way
   * Best Practices for Building Custom Open Data Protocol (OData) Services with Windows Azure
 
           **5 Technical White Papers**

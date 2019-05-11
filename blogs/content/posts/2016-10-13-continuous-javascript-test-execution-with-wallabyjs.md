@@ -31,9 +31,9 @@ I used this sample project throughout the post: [github.com/tarwn/townthing][4].
 
 First step, open Visual Studio Code and install the extension: ext install wallaby-vscode
 
-Wallaby has a really easy to follow “getting started” guide that I mostly ignored: <https://wallabyjs.com/docs/config/overview.html>
+Wallaby has a really easy to follow "getting started" guide that I mostly ignored: <https://wallabyjs.com/docs/config/overview.html>
 
-I didn't pay a lot of attention, but jumped straight to pushing Ctrl+Shift+R, R after installing the extension. It prompted me to identify a config file (I created an empty “wallaby.js” file), then upset my firewall briefly by running node.js (which I allowed).
+I didn't pay a lot of attention, but jumped straight to pushing Ctrl+Shift+R, R after installing the extension. It prompted me to identify a config file (I created an empty "wallaby.js" file), then upset my firewall briefly by running node.js (which I allowed).
 
 I then created my wallaby.js configuration using a short example of using wallaby with RequireJS: [github.com/wallabyjs/wallaby-requirejs-sample][5]
 
@@ -124,7 +124,7 @@ Here is the working code:
   </p>
 </div>
 
-and now when I add a “+ 1” to the end of the line without even saving the file, the test marker turns red and I get instant results in the console below:
+and now when I add a "+ 1" to the end of the line without even saving the file, the test marker turns red and I get instant results in the console below:
   
 
 

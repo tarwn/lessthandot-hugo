@@ -34,7 +34,7 @@ Now think about it from an IT perspective. In the IT world we have a habit of ov
 
 That approach doesn't work in the restaurant business and it only appears to work in the IT trade because no one gets violently ill when we deliver half-cooked systems. 
 
-“Don't get to clever”. A professional chef manages the size of their menu to what they can deliver and a professional IT group has to do the same. We need to build a simpler menu that focuses on delivering what the business needs and what we can provide rather than trying to deliver anything and everything on the market (and doing all of it poorly). This doesn't mean leaving off new technologies, but we need to make sure we've tried them and have a good grasp of their strengths and weaknesses before putting them on the menu.
+"Don't get to clever". A professional chef manages the size of their menu to what they can deliver and a professional IT group has to do the same. We need to build a simpler menu that focuses on delivering what the business needs and what we can provide rather than trying to deliver anything and everything on the market (and doing all of it poorly). This doesn't mean leaving off new technologies, but we need to make sure we've tried them and have a good grasp of their strengths and weaknesses before putting them on the menu.
 
 ## Authenticity
 
@@ -56,7 +56,7 @@ Chaos is stressful and tends to feedback into itself. Clear, consistent communic
 
 A key to return business is the ability to deliver meals in a consistent manner. The consistency of the food helps set the customers expectations and build trust, while an inconsistent meal generates mistrust and is guaranteed to disappoint the customer. Part of delivering consistent food is tasting every dish before it goes out, testing each one to make sure it is up to the chef's expectations before it reaches the customer.
 
-In IT we have a habit of delivering inconsistent solutions. Applications are released that perform poorly in the real world, never having run outside of the developers machine. Networks and services are provided with no measures for quality, performance, scalability. Usability and user experience are add-ons at the end. We spend time on unnecessary features and rush the necessary ones...the list goes on. If no one is tasting the product, if we don't have both a guide for what “good” is and test against that expectation, then we won't be able to tell when those systems are failing to live up to our expectations. We can say they're the best systems in the country, but it's just wishing.
+In IT we have a habit of delivering inconsistent solutions. Applications are released that perform poorly in the real world, never having run outside of the developers machine. Networks and services are provided with no measures for quality, performance, scalability. Usability and user experience are add-ons at the end. We spend time on unnecessary features and rush the necessary ones...the list goes on. If no one is tasting the product, if we don't have both a guide for what "good" is and test against that expectation, then we won't be able to tell when those systems are failing to live up to our expectations. We can say they're the best systems in the country, but it's just wishing.
 
 We need to define our expectations, test our systems against those expectations, and be consistent with our delivery. Wishing our systems are good makes all the time and energy we have put into them a waste and guarantees that we will be delivering inconsistent systems.
 
@@ -72,7 +72,7 @@ There are only two directions, improving and deteriorating. No matter what impro
 
 We may not work in kitchens, but we do work in environments that can be very stressful, where every customer sees themselves as a chef and outages have to be corrected at 3am. We tend to add complexity where we should be removing it, we have communications problems, we have disconnects from our 'customers', we have difficulty delivering consistently, and we treat leadership as something that is granted at the wave of a new title. 
 
-I picked five elements in the show, but these are not the only parallels I saw. Management, passion, pride, respect, continuous improvement, keeping our eye on the “plot” ... IT doesn't have to invent everything from scratch. At the end of the day we are in an industry of people, delivering solutions to people, for problems that people created. All of the people-side issues exist all around us, in hundreds of different industries, we just need to step beyond our egos and be open to learning from them.
+I picked five elements in the show, but these are not the only parallels I saw. Management, passion, pride, respect, continuous improvement, keeping our eye on the "plot" ... IT doesn't have to invent everything from scratch. At the end of the day we are in an industry of people, delivering solutions to people, for problems that people created. All of the people-side issues exist all around us, in hundreds of different industries, we just need to step beyond our egos and be open to learning from them.
 
 _After writing this up I took my own advice to go see who else had drawn similar parallels. Here are a couple links you should head over and check out:</p> 
 

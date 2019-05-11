@@ -205,7 +205,7 @@ namespace ConsoleApplication1
 
 Here is the output from those calls
 
-p.OptionalTest(“bla”);
+p.OptionalTest("bla");
               
 param1 = bla
               
@@ -215,7 +215,7 @@ param3 = three
               
 param4 =
 
-p.OptionalTest(“bla”,”twelve”)
+p.OptionalTest("bla","twelve")
               
 param1 = bla
               
@@ -225,7 +225,7 @@ param3 = three
               
 param4 =
 
-p.OptionalTest(“bla”,”twelve”,”Thirsty”)
+p.OptionalTest("bla","twelve","Thirsty")
               
 param1 = bla
               
@@ -235,7 +235,7 @@ param3 = Thirsty
               
 param4 =
 
-p.OptionalTest(“bla”,”twelve”,”Thirsty”,”Forty”)
+p.OptionalTest("bla","twelve","Thirsty","Forty")
               
 param1 = bla
               
@@ -245,7 +245,7 @@ param3 = Thirsty
               
 param4 = Forty
 
-p.OptionalTest(“bla”,param3:”Thirsty”)
+p.OptionalTest("bla",param3:"Thirsty")
               
 param1 = bla
               
@@ -255,7 +255,7 @@ param3 = Thirsty
               
 param4 =
 
-p.OptionalTest(“bla”,param4:”Thirsty”)
+p.OptionalTest("bla",param4:"Thirsty")
               
 param1 = bla
               
@@ -265,7 +265,7 @@ param3 = three
               
 param4 = Thirsty
 
-p.OptionalTest(“bla”,null,null,”Thirsty”)
+p.OptionalTest("bla",null,null,"Thirsty")
               
 param1 = bla
               
@@ -279,7 +279,7 @@ As you can see there is almost no difference between SQL and C# when calling wit
 
 exec OptionalTest 'bla' ,@Param4 = 'Thirsty'
   
-p.OptionalTest(“bla”,param4:”Thirsty”)
+p.OptionalTest("bla",param4:"Thirsty")
 
 Now you might ask yourself why do we need this? Have you ever called Office COM components? Here is what you would do now
 

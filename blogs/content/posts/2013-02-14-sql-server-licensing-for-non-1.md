@@ -4,7 +4,7 @@ author: Kevin Conan
 type: post
 date: 2013-02-14T12:25:00+00:00
 ID: 1994
-excerpt: 'One of my favorite movie quotes comes from Under Siege 2 (slightly altered to avoid cursing):  “Assumption is the mother of all screw ups”.'
+excerpt: 'One of my favorite movie quotes comes from Under Siege 2 (slightly altered to avoid cursing):  "Assumption is the mother of all screw ups".'
 url: /index.php/datamgmt/dbprogramming/mssqlserver/sql-server-licensing-for-non-1/
 views:
   - 14467
@@ -17,13 +17,13 @@ tags:
   - sql server
 
 ---
-One of my favorite movie quotes comes from Under Siege 2 (slightly altered to avoid cursing): “Assumption is the mother of all screw ups”.
+One of my favorite movie quotes comes from Under Siege 2 (slightly altered to avoid cursing): "Assumption is the mother of all screw ups".
 
 Before we go any further, if you are ever unsure about SQL Server Licensing, contact Microsoft (1-800-426-9400 open Monday through Friday 6:00 AM PST to 6:00 PM PST). What is valid for me at this point in time may not be valid for you or even for myself at a different point in time.
 
 # The Back Story
 
-One of my most recent “egg on my face” moments came from a discussion on twitter about SQL Server licensing in non-production environments. A question came in on the #sqlhelp hashtag asking about a situation where the QA group at their company installed Enterprise Edition and the person wanted to know if they had to uninstall it and reinstall Developer Edition to be compliant with licensing. 
+One of my most recent "egg on my face" moments came from a discussion on twitter about SQL Server licensing in non-production environments. A question came in on the #sqlhelp hashtag asking about a situation where the QA group at their company installed Enterprise Edition and the person wanted to know if they had to uninstall it and reinstall Developer Edition to be compliant with licensing. 
 
 <div class="image_block">
   <a href="http://www.flickr.com/photos/xurble/376588066/"><img alt="court" src="/wp-content/uploads/users/kconan/neon question mark.jpg?mtime=1360851095" width="300" height="300" /></a>
@@ -47,7 +47,7 @@ I replied back on the twitter conversation with what I talked about with my vend
 
 I called Microsoft's Licensing and was able to get ahold of someone with a couple minutes and they told me that unless you have an Enterprise Agreement, Microsoft does not look at production and non-production differently. You have to license each one. For the non-production SQL Instances you can use Developer Edition but must have a license of it purchased for each person who will use any of the Developer Edition SQL Instances.
 
-So now I will leave you with two of the favorite DBA sayings about Licensing: “It depends” and “Always confirm with Microsoft about your licensing situation”.
+So now I will leave you with two of the favorite DBA sayings about Licensing: "It depends" and "Always confirm with Microsoft about your licensing situation".
 
  [1]: https://twitter.com/SQLSoldier
  [2]: http://www.sqlsoldier.com

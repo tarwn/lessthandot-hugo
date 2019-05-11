@@ -44,7 +44,7 @@ In the entire process, the decision making tasks in this work of the package is 
 
  
 
-The Lookup Transformation is precisely what the term sounds like for meaning.  The transform attempts to make a match on each row from one set to the other.  Why is this important information to know about a Lookup?  The key is, “each row”.  For every row that is sent through the buffer the operation is performed.  This in terms of an extremely large volume of data means performance will severely suffer due to the row-by-row operations.  Now this should not make the Lookup Transformation something to stay away from.  It should however make the use of it critical to the fact; operations will be affected by how it behaves. 
+The Lookup Transformation is precisely what the term sounds like for meaning.  The transform attempts to make a match on each row from one set to the other.  Why is this important information to know about a Lookup?  The key is, "each row".  For every row that is sent through the buffer the operation is performed.  This in terms of an extremely large volume of data means performance will severely suffer due to the row-by-row operations.  Now this should not make the Lookup Transformation something to stay away from.  It should however make the use of it critical to the fact; operations will be affected by how it behaves. 
 
 There are options to the Lookup.  These consist of the Merge and a Script Transform.  Jamie Thomson is someone that I have learned a great deal from and his work takes up about 75% of my own bookmarked resources.  In fact, this very article being written is based off a process using the [Lookup and Conditional Split][3] seen here.  You will see that there is not much difference to take from this type of processing in SSIS.  Once you learn the steps, they move from your needs with slight changes very easily.
 
@@ -57,7 +57,7 @@ Getting back to our use of the Lookup; the goal of the Lookup in this situation 
 Set the Lookup Transformation as follows:
 
   1. In the Lookup Transformation Editor 
-      1. Set the “Specify how to handle rows with no matching entries” to “Redirect rows to error output”
+      1. Set the "Specify how to handle rows with no matching entries" to "Redirect rows to error output"
       2. In Connection, select your connection manager and select the table dbo.SystemConfigMaster
       3. In Columns, map ConfigPath to ConfigPath and check ConfigID and CreateDate.
       4. Save the editor settings
@@ -72,7 +72,7 @@ The next steps are to bring a Conditional Split into the Data Flow tab and also 
 
 **Configuration of the Conditional Split**
 
-  1. In the Conditional Split Transformation Editor, add the condition Row Needs Update.  The actual condition expression for this is, “CreateDate != ModifiedDate”
+  1. In the Conditional Split Transformation Editor, add the condition Row Needs Update.  The actual condition expression for this is, "CreateDate != ModifiedDate"
   2. Connect the Lookup to the Conditional Split with the success precedence connector based on output rows of a match being found.
 
 No other changes are needed to the Conditional Split.  Click OK to save the condition and move to configuring the insert processing.
@@ -88,7 +88,7 @@ No other changes are needed to the Conditional Split.  Click OK to save the con
 
   1. Drag the success precedence to a new OLEDB Command.  
   2. In the OLEDB Command, set the connection manager to your connection.
-  3. In the Component Properties tab, set the name to Insert new and make the SqlCommand, “dba_InsertNewConfig ?,?,?,?, ?” 
+  3. In the Component Properties tab, set the name to Insert new and make the SqlCommand, "dba_InsertNewConfig ?,?,?,?, ?" 
       1. This will map the columns in the row to the ordering index of the question marks which are set in the column mappings tab.
       2.  In the Column Mappings tab, set the mappings. 
           1. ModifiedDate_Source to @date
@@ -109,7 +109,7 @@ The update command will be based on the same type of configuration as the insert
 
   1. Drag the success precedence from the conditional split to a new OLEDB Command.  Set the output to Row Needs Update.
   2. In the OLEDB Command, set the connection manager to your connection.
-  3. In the Component Properties tab, set the name to Update Rows and make the SqlCommand, “dba_UpdateNewConfig ?,?,?”
+  3. In the Component Properties tab, set the name to Update Rows and make the SqlCommand, "dba_UpdateNewConfig ?,?,?"
   4. In the Column Mappings tab, set the mappings. 
       1. ModifiedDate to @date
       2. ConfigID to @ConfigID

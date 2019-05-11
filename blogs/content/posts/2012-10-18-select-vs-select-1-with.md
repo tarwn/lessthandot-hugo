@@ -20,7 +20,7 @@ Often, I see in articles and code a query using the EXISTS logical operator and 
 
 **Explanation of SELECT 1 vs. SELECT ***
 
-There is one essential difference between the use of SELECT  \* and SELECT 1.  SELECT \* will expand the column list and then throw what isn't needed out.  Now, don't take, “throw what isn't needed out” literally.  The compilation of the query will simply determine which columns are relevant and to be used.   With SELECT 1, this step isn't performed during compilation..
+There is one essential difference between the use of SELECT  \* and SELECT 1.  SELECT \* will expand the column list and then throw what isn't needed out.  Now, don't take, "throw what isn't needed out" literally.  The compilation of the query will simply determine which columns are relevant and to be used.   With SELECT 1, this step isn't performed during compilation..
 
 It's important to note that compilation is where the effects of this occur.  The runtime versions of these different methods will be used functionally, the same with the same performance.
 

@@ -1,5 +1,5 @@
 ---
-title: Dealing with the “The text, ntext, or image pointer value conflicts with the column name specified.” error from Visual Foxpro
+title: Dealing with the "The text, ntext, or image pointer value conflicts with the column name specified." error from Visual Foxpro
 author: Naomi Nosonovsky
 type: post
 date: 2012-04-03T22:58:00+00:00
@@ -20,7 +20,7 @@ categories:
 ---
 Recently my colleague sent me a strange error she was getting in our VFP application
   
-“The text, ntext, or image pointer value conflicts with the column name specified.”
+"The text, ntext, or image pointer value conflicts with the column name specified."
 
 I was not getting the same error, so it was puzzling indeed. After some research online I found the [following thread][1] and suspected the problem was in the image size. And yes, after I chose a file about 2MB in size I was able to reproduce the same error. I haven't been able to determine the exact image size when this error occurs, but in my tests the files less than 400Kb worked and bigger files produced the error.
 

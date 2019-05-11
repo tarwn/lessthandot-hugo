@@ -28,7 +28,7 @@ As much as possible, all data should be located with the SSRS installation. This
 
 Security:
 
-Not only should security be important to the data you may replicate, snapshot, ETL, log ship or whatever you so choose to use to build your warehouse, but it is even more critical to the other database servers that you have no choice but to access remotely. In no way should you install SSRS on your production OLTP driven database servers. So that means if you are running your ERP solution on one database server and the SSRS instance is rendering across the LAN, you have to access it either through linked servers, data extracts or some other form of collection. This connection is critical to secure. If I had a dollar for every time I saw “sa” in a linked server entry I could have retired months before writing this.
+Not only should security be important to the data you may replicate, snapshot, ETL, log ship or whatever you so choose to use to build your warehouse, but it is even more critical to the other database servers that you have no choice but to access remotely. In no way should you install SSRS on your production OLTP driven database servers. So that means if you are running your ERP solution on one database server and the SSRS instance is rendering across the LAN, you have to access it either through linked servers, data extracts or some other form of collection. This connection is critical to secure. If I had a dollar for every time I saw "sa" in a linked server entry I could have retired months before writing this.
 
 Rapid Development of Report:
 

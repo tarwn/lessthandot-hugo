@@ -26,7 +26,7 @@ Introduced support for a maximum of 15,000 partitions in tables and indexes in M
 
 **Reporting Services in SharePoint Integrated Mode.**
   
-SQL Server 2008 SP2 provides updates for Reporting Services integration with SharePoint products. SQL Server 2008 SP2 report servers can integrate with SharePoint 2010 products. SQL Server 2008 SP2 also provides a new add-in to support the integration of SQL Server 2008 R2 report servers with SharePoint 2007 products. For more information see the “What's New in SharePoint Integration and SQL Server 2008 Service Pack 2 (SP2)” section in What's New (Reporting Services).
+SQL Server 2008 SP2 provides updates for Reporting Services integration with SharePoint products. SQL Server 2008 SP2 report servers can integrate with SharePoint 2010 products. SQL Server 2008 SP2 also provides a new add-in to support the integration of SQL Server 2008 R2 report servers with SharePoint 2007 products. For more information see the "What's New in SharePoint Integration and SQL Server 2008 Service Pack 2 (SP2)" section in What's New (Reporting Services).
 
 **SQL Server 2008 R2 Application and Multi-Server Management Compatibility with SQL Server 2008.**
 

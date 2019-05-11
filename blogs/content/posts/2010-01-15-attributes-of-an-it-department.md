@@ -18,7 +18,7 @@ tags:
   - improvement
 
 ---
-Earlier today I was reading an article by [Peter Cripps][1] entitled [“Attributes of an IT Architect”][2]. Several of his statements won my instant agreement, but one or two left me deep in thought, on the cusp of disagreement. This being a challenging state to be in while halfway into my first cup of coffee, I immediately started a second cup to fuel the train of thought and, ultimately, this post.
+Earlier today I was reading an article by [Peter Cripps][1] entitled ["Attributes of an IT Architect"][2]. Several of his statements won my instant agreement, but one or two left me deep in thought, on the cusp of disagreement. This being a challenging state to be in while halfway into my first cup of coffee, I immediately started a second cup to fuel the train of thought and, ultimately, this post.
 
 What came from that second cup was a short series of attributes that I believe all IT Departments should strive for.
 
@@ -46,7 +46,7 @@ An engaged IT department reduces stresses across the business. Technical decisio
 
 One of the early budget items to go in hard years is the training budget. Whether this is because that budget is generally mis-applied or because people believe IT training to be for personal improvement, it doesn't matter. At the end of the day we have decided to allow our technology to stagnate and to stop growing our options and skillsets. When the times are tight, the company with the most options is going to have a better chance at reducing costs or implementing a technology that drives improvements in the business.
 
-Training budgets are not the only way to learn, but they are the first and last option provided in many IT departments. For the company that is serious about encouraging their employees to learn, a little imagination or web seaching can turn up cheaper options that allow us to continue the rowth of our employees at lower costs. Options that include weekly or monthly “Lunch and Learn's”, webinars, even regular book report-esque assignments. The important thing is to keep growing and to keep that momentum.
+Training budgets are not the only way to learn, but they are the first and last option provided in many IT departments. For the company that is serious about encouraging their employees to learn, a little imagination or web seaching can turn up cheaper options that allow us to continue the rowth of our employees at lower costs. Options that include weekly or monthly "Lunch and Learn's", webinars, even regular book report-esque assignments. The important thing is to keep growing and to keep that momentum.
 
 ### Option: No Training
 
@@ -58,7 +58,7 @@ In an environment that provides training and positive reinforcement of other met
 
 ## Improvement
 
-Improvement is a common theme in the manufacturing world and one that showed up in the previous “Learning” section. Improvement, or the drive to improve, is a crucial ingredient in an IT Department and business in general and is the arm arm of a triangle that, in my mind, leads to a world class IT group. Improvement goes beyond updating software and hardware or taking training classes. Improvement means facing our failures and learning from them, finding places where we are under performing and correcting root cause issues, or finding wastes in our department and altering our process to reduce them. Improvement is a cultural difference that often leads to enormous gains in productivity or cost reduction, as well as smoother processes and higher morale.
+Improvement is a common theme in the manufacturing world and one that showed up in the previous "Learning" section. Improvement, or the drive to improve, is a crucial ingredient in an IT Department and business in general and is the arm arm of a triangle that, in my mind, leads to a world class IT group. Improvement goes beyond updating software and hardware or taking training classes. Improvement means facing our failures and learning from them, finding places where we are under performing and correcting root cause issues, or finding wastes in our department and altering our process to reduce them. Improvement is a cultural difference that often leads to enormous gains in productivity or cost reduction, as well as smoother processes and higher morale.
 
 ### Option: No Improvement
 
@@ -66,7 +66,7 @@ Theer are many departments that have stagnated, that barely pursue the minimum o
 
 ### Option: Technology Improvement Only
 
-A group that only improves their technology is not in danger like the previous group, but they may be blind to answers that don't require technology. Simple process changes will not occur as frequently as massive infrastructure projects, leading to increased cost and fewer potential options. A reliance on technology can also be reflected in common, recurring delays and outages, issues that the team believes can only be corrected by further technology investment. There may be some root cause analysis for common issues, but these are also relegated to a “need more technology” category or as un-fixable due to a legacy system that must be replaced. A side-effect of this method of handling issues is that there is a greater tendency to require users to use the systems correctly, rather than a focus on error-proofing the systems or improving usability.
+A group that only improves their technology is not in danger like the previous group, but they may be blind to answers that don't require technology. Simple process changes will not occur as frequently as massive infrastructure projects, leading to increased cost and fewer potential options. A reliance on technology can also be reflected in common, recurring delays and outages, issues that the team believes can only be corrected by further technology investment. There may be some root cause analysis for common issues, but these are also relegated to a "need more technology" category or as un-fixable due to a legacy system that must be replaced. A side-effect of this method of handling issues is that there is a greater tendency to require users to use the systems correctly, rather than a focus on error-proofing the systems or improving usability.
 
 ### Option: Continuous Improvement Culture
 

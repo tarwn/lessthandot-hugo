@@ -98,7 +98,7 @@ Namespace Implementation
 End Namespace
 ```
 <p style="text-indent: 30pt;">
-  A couple of things to notice here. First, there are two classes in this file, both the request and the response. This is just for organizational purposes. You'll also want to note the “servicemanager.AutoCreateSessionId()” attribute on the Request class. We'll use this again later.
+  A couple of things to notice here. First, there are two classes in this file, both the request and the response. This is just for organizational purposes. You'll also want to note the "servicemanager.AutoCreateSessionId()" attribute on the Request class. We'll use this again later.
 </p>
 
 <p style="text-indent: 30pt;">
@@ -106,7 +106,7 @@ End Namespace
 </p>
 
 <p style="text-indent: 30pt;">
-  The “innerFillRequest” method is where the actual functionality of this web method takes place. In the case of GetInit, it grabs a string from the Environment Provider, splits it, and adds it to a member on the Response object.
+  The "innerFillRequest" method is where the actual functionality of this web method takes place. In the case of GetInit, it grabs a string from the Environment Provider, splits it, and adds it to a member on the Response object.
 </p>
 
 <p style="text-indent: 30pt;">
@@ -287,7 +287,7 @@ Namespace ServiceManager
 End Namespace
 ```
 <p style="text-indent: 30pt;">
-  The “FillRequest” method is the conductor of this train. This is the method that the web services are actually calling. Right off the bat, if starts up a stop watch, so we can get performance indicators off of every web service call.
+  The "FillRequest" method is the conductor of this train. This is the method that the web services are actually calling. Right off the bat, if starts up a stop watch, so we can get performance indicators off of every web service call.
 </p>
 
 <p style="text-indent: 30pt;">
@@ -299,7 +299,7 @@ End Namespace
 </p>
 
 <p style="text-indent: 30pt;">
-  The “GetLoggingReplacement” is a block we use to replace chunks of text we don't want to log. For instance, if the request contains large binary blocks (like uploading files) or sensitive information, we can set up string manipulations here to remove those items from the serialized request before it gets logged. This sub is usually overridden by the derived classes to add more method specific replacements.
+  The "GetLoggingReplacement" is a block we use to replace chunks of text we don't want to log. For instance, if the request contains large binary blocks (like uploading files) or sensitive information, we can set up string manipulations here to remove those items from the serialized request before it gets logged. This sub is usually overridden by the derived classes to add more method specific replacements.
 </p>
 
 ### Until Next Time

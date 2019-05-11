@@ -74,7 +74,7 @@ In the data flow task, all that is needed is to map the results to the flat file
   <a href="/wp-content/uploads/blogs/All/-34.png?mtime=1327674103"><img alt="" src="/wp-content/uploads/blogs/All/-34.png?mtime=1327674103" width="624" height="453" /></a>
 </div>
 
-Finally, add a task to clean up the temporary table. Normally, the temporary table would be removed on its own in SQL Server later in the connection's life cycle.  However, keeping to the code of conduct, “If you make a mess, clean up after yourself” the table should be removed manually in a final step.
+Finally, add a task to clean up the temporary table. Normally, the temporary table would be removed on its own in SQL Server later in the connection's life cycle.  However, keeping to the code of conduct, "If you make a mess, clean up after yourself" the table should be removed manually in a final step.
 
 To do this, we check to ensure the table exists before calling a DROP TABLE statement.
 
@@ -110,7 +110,7 @@ With this redesign, the same test results in the following.
 
 The runtime on each test is a remarkable difference from the first SSIS Package design.  This is, in a way, the same as tuning a really bad execution plan but for SSIS, we tuned if our flow is right first.  The query takes over 20 minutes, but after adding an index or two, query time goes to a second or two.
 
-As expected, the files are created and populated with the information we can use to start turning on the “fast” button in SQL Server by ensuring indexing is done correctly.
+As expected, the files are created and populated with the information we can use to start turning on the "fast" button in SQL Server by ensuring indexing is done correctly.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/-39.png?mtime=1327674288"><img alt="" src="/wp-content/uploads/blogs/All/-39.png?mtime=1327674288" width="323" height="168" /></a>

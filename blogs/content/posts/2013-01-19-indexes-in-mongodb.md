@@ -175,7 +175,7 @@ Now if we try to insert the same name again, you will see that we get an error
 
 Here is the output
   
-_E11000 duplicate key error index: Indexing.Indexing.$name_1 dup key: { : “Denis” }_
+_E11000 duplicate key error index: Indexing.Indexing.$name_1 dup key: { : "Denis" }_
 
 As you can see it is pretty easy to create a unique index
 

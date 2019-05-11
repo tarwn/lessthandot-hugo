@@ -99,7 +99,7 @@ namespace SampleWebDriverUnitTest {
 ```
 This is all it takes to get our first test. Create the solution, add the reference, create the test class and method. Since it's MS Test, Ctrl+R, A will run all of our tests in the integrated test runner.
 
-Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl(“http://www.tiernok.com”);
+Selenium WebDriver is written in a somewhat fluent syntax, so for the rest of the post we will combine the URL and navigation into a single statement: driver.Navigate().GoToUrl("http://www.tiernok.com");
 
 ## The First Test Cases
 

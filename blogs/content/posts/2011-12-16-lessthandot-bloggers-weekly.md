@@ -7,7 +7,7 @@ ID: 1446
 excerpt: |
   This week was an active week for the bloggers on LessThanDot.  Here is a recap on everyone's contributions.
   Week 12/11 – 12/15
-  Saturday started with Denis Gobo continuing an excellent series titled, “SQL Advent 2011”.  This week's daily blogs for Deni&hellip;
+  Saturday started with Denis Gobo continuing an excellent series titled, "SQL Advent 2011".  This week's daily blogs for Deni&hellip;
 url: /index.php/itprofessionals/professionaldevelopment/lessthandot-bloggers-weekly/
 views:
   - 3073
@@ -21,7 +21,7 @@ This week was an active week for the bloggers on LessThanDot.  Here is a recap 
 
 **Week 12/11 – 12/15**
 
-Saturday started with [Denis Gobo][1] continuing an excellent series titled, “SQL Advent 2011”.  This week's daily blogs for Denis's series were
+Saturday started with [Denis Gobo][1] continuing an excellent series titled, "SQL Advent 2011".  This week's daily blogs for Denis's series were
 
 [SQL Advent 2011 Day 15: Joins][2]
 
@@ -39,7 +39,7 @@ DDL Triggers you say?  I can have a trigger on my database for catching events 
 
 [SQL Advent 2011 Day 12: Table Value Constructor][5]
 
-Ah, the TVC.  How I learned to love thee.  Really, out of everything became useful immediately and was a welcome enhancement.  Remember those old Classic ASP days where you'd build a really long and nasty string with hundreds of “INSERT INTO....”  Well, thankfully, this was a great addition to SQL Server.
+Ah, the TVC.  How I learned to love thee.  Really, out of everything became useful immediately and was a welcome enhancement.  Remember those old Classic ASP days where you'd build a really long and nasty string with hundreds of "INSERT INTO...."  Well, thankfully, this was a great addition to SQL Server.
 
 [SQL Advent 2011 Day 11: DML statements with the OUTPUT clause][6]
 
@@ -89,7 +89,7 @@ I contributed this week with topics on Replication, Orphaned Database Users, SSI
 
 blogged this week about **[Zero-One-Some Testing][17]**. George goes over this method of testing extremely well.  One line I'd like to point out that I think makes the most impact and value from George's blog is, ****
 
-_“Tests for zero records seem to uncover missing requirements or defects in code involving aggregations or in places where programmers assume that there will simply be data (perhaps because their test database already has data in it).”_ __
+_"Tests for zero records seem to uncover missing requirements or defects in code involving aggregations or in places where programmers assume that there will simply be data (perhaps because their test database already has data in it)."_ __
 
 Need I say more?  I recommend reading this blog highly and following the direction.   ****
 
@@ -97,11 +97,11 @@ Need I say more?  I recommend reading this blog highly and following the direct
 
 #### [Eli Weinstock-Herman][18]
 
-blogged this week about using the Continuous Delivery Model for his home lab.   Eli shows us the setup that is planned and a “next steps” preview.  I'm looking forward to this mostly because if Eli is doing it, it means I will probably want to pay attention and follow suite in my own labs at home.
+blogged this week about using the Continuous Delivery Model for his home lab.   Eli shows us the setup that is planned and a "next steps" preview.  I'm looking forward to this mostly because if Eli is doing it, it means I will probably want to pay attention and follow suite in my own labs at home.
 
 One part that sticks out on the concept and reasoning for why you would want to stick to this model
 
-_“When I spend a weekend playing with caching in my ASP.Net project, I want to be able to walk away from the project knowing it still works and I won't be spending my next Saturday trying to figure what I did to break my test systems. This project will also provide a future testbed for load testing and static analysis tools”_
+_"When I spend a weekend playing with caching in my ASP.Net project, I want to be able to walk away from the project knowing it still works and I won't be spending my next Saturday trying to figure what I did to break my test systems. This project will also provide a future testbed for load testing and static analysis tools"_
 
 How many times was that you? I know it was me more than a few times.
 

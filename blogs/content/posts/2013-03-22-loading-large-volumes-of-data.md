@@ -23,15 +23,15 @@ Simple Testing
 
 A basic test from a box version of SQL Server to a SQL Database is pretty uneventful.  In the past, these tests have proven effective with only a few catches.  A few of those are
 
-1)      Network, network and network.  Your line to the “cloud” is critical to stability and speed.
+1)      Network, network and network.  Your line to the "cloud" is critical to stability and speed.
 
 2)      Disconnections can be painful so plan for them. Have a restart point.
 
 3)      Manipulate your connections and data flow so they are tuned for a push to a cloud environment.
 
-Before going too far, the testing so far has been limited to SSIS.  BCP and Bulk Copy are two other options that should be investigated if you run into performance problems.  However, SSIS being the flagship ETL for Microsoft Platforms, it is a given this is the tool you will look at initially. There is a need to state, “Use the right tool for the task”.
+Before going too far, the testing so far has been limited to SSIS.  BCP and Bulk Copy are two other options that should be investigated if you run into performance problems.  However, SSIS being the flagship ETL for Microsoft Platforms, it is a given this is the tool you will look at initially. There is a need to state, "Use the right tool for the task".
 
-The first thing you can do in order to perform a simple test of pushing data to a SQL Database is go out and get a [trial of Windows Azure][1].  The trial is pretty small in terms of nodes and performance, but it serves as a great introduction to working with Azure.  You can connect to SQL Azure with a number of methods.  SSMS is typically going to be a common one if you are a DBA type or used to working out of SSMS.  To connect to SQL Azure from SSMS, you can follow the instructions here, “[Connecting to SQL Azure from SQL Management Studio 2008][2]” or for a more visual look and addition notes on firewall changes, “[Connecting to SQL Azure with SQL Server Management Studio 2008 R2][3]”.   With SSMS 2012, all of these steps are identical and nothing changes.
+The first thing you can do in order to perform a simple test of pushing data to a SQL Database is go out and get a [trial of Windows Azure][1].  The trial is pretty small in terms of nodes and performance, but it serves as a great introduction to working with Azure.  You can connect to SQL Azure with a number of methods.  SSMS is typically going to be a common one if you are a DBA type or used to working out of SSMS.  To connect to SQL Azure from SSMS, you can follow the instructions here, "[Connecting to SQL Azure from SQL Management Studio 2008][2]" or for a more visual look and addition notes on firewall changes, "[Connecting to SQL Azure with SQL Server Management Studio 2008 R2][3]".   With SSMS 2012, all of these steps are identical and nothing changes.
 
 Once you configure your SQL Database, a good test is to push some data from AdventureWorks.  This task is almost identical to the task of pushing data from one SQL Server to another.  Create a connection (ADO.NET or OLEDB) for a source from SQL Server and AdventureWorks and then create a destination using the same guidelines and options as how you would connect to SQL Azure from SSMS.
 
@@ -53,13 +53,13 @@ Some things that are important and also recommended from the SQL CAT team when i
 
 3)      Think about indexes. If you have a ton of indexes, consider disabling them, dropping them and so on for a data load situation. This is the same with any data loading event.
 
-“[Loading data to SQL Azure the fast way][6]” is a great resource for these and other testing and options to pay close attention to.
+"[Loading data to SQL Azure the fast way][6]" is a great resource for these and other testing and options to pay close attention to.
 
 **Lots of Data**
 
 The simple test of pushing data into SQL Azure is excellent for getting used to the slight differences and dealing with throwing data out into the cloud.  The problem you run into is going to be volume of data.  This is where the typical trial will cause some suffering on performance.
 
-Recently, I had the chance to finally load a real life amount of data into SQL Azure and I wasn't all that happy with it.  Now, before going on, there are some things that could make it better.  More nodes in the cluster, a thicker network, possibly a design change to the table.  The list could go on but we're talking about real life and I wanted to share this experience in case you run into it and know what to be prepared for.  Remember, this is pushing over the internet.  We're not hard-lined into a network so that must be taken into account when we say, “it was slow”.
+Recently, I had the chance to finally load a real life amount of data into SQL Azure and I wasn't all that happy with it.  Now, before going on, there are some things that could make it better.  More nodes in the cluster, a thicker network, possibly a design change to the table.  The list could go on but we're talking about real life and I wanted to share this experience in case you run into it and know what to be prepared for.  Remember, this is pushing over the internet.  We're not hard-lined into a network so that must be taken into account when we say, "it was slow".
 
 The amount of data that needed to be loaded from a SQL Server instance to SQL Azure was 90GB, comprised of one table.  The table was thin at 20 columns and a maximum row size of 233 bytes.  This information is important when considering your packet size.
 

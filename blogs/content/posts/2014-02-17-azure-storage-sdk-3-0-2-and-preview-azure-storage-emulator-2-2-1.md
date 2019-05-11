@@ -15,7 +15,7 @@ tags:
   - azure
 
 ---
-Late in November, the Azure Storage team announced an update of the Storage Library that corresponds with the “2013-08-15” Storage API update. They weren't explicit about it in the release post, but this was a major version upgrade to Azure Storage SDK 3.0. The 3.0.2 Storage SDK is not part of an official Azure SDK release, the Azure 2.2 SDK officially shipped with Azure Storage 2.1.0.2 ([release notes][1]). I expect the next Azure SDK will include this Storage SDK (or perhaps a 3.1 version, depending on timing).
+Late in November, the Azure Storage team announced an update of the Storage Library that corresponds with the "2013-08-15" Storage API update. They weren't explicit about it in the release post, but this was a major version upgrade to Azure Storage SDK 3.0. The 3.0.2 Storage SDK is not part of an official Azure SDK release, the Azure 2.2 SDK officially shipped with Azure Storage 2.1.0.2 ([release notes][1]). I expect the next Azure SDK will include this Storage SDK (or perhaps a 3.1 version, depending on timing).
 
 _[Read the SDK release announcement here, 27 Nov 2013][2]_
 
@@ -23,7 +23,7 @@ _[Read the SDK release announcement here, 27 Nov 2013][2]_
   <strong>A Plethora of Version Numbers</strong></p> 
   
   <p>
-    The Azure SDK is composed of a number of different assemblies and projects that are versioned independently. The Azure API has been updated annually for the last few years, the latest version being “2013-08-15”, a yyyy-MM-dd value. The Azure Storage SDK for .Net split from the main versioning between SDK 1.7 and 1.8, going from 1.7 to 2.0. The Azure ConfigurationManager assembly is currently on 2.0.2.11-something, is listed in nuget as 2.0.3, has a file version of 2.0.0.0, and is part of Azure SDK 2.2. I haven't looked at the node, java, etc projects and have not looked terribly closely at the the rest of the assemblies that make up the .Net Azure SDK.
+    The Azure SDK is composed of a number of different assemblies and projects that are versioned independently. The Azure API has been updated annually for the last few years, the latest version being "2013-08-15", a yyyy-MM-dd value. The Azure Storage SDK for .Net split from the main versioning between SDK 1.7 and 1.8, going from 1.7 to 2.0. The Azure ConfigurationManager assembly is currently on 2.0.2.11-something, is listed in nuget as 2.0.3, has a file version of 2.0.0.0, and is part of Azure SDK 2.2. I haven't looked at the node, java, etc projects and have not looked terribly closely at the the rest of the assemblies that make up the .Net Azure SDK.
   </p>
   
   <p>
@@ -31,7 +31,7 @@ _[Read the SDK release announcement here, 27 Nov 2013][2]_
   </p>
 </div>
 
-Besides the confusion of mismatched version numbers, this version of the Storage SDK was released without local development (emulator) support. When released, there was no emulator support for “2013-08-15”, however a [preview version of the emulator][3] has been released now, for those of us that depend on local development.
+Besides the confusion of mismatched version numbers, this version of the Storage SDK was released without local development (emulator) support. When released, there was no emulator support for "2013-08-15", however a [preview version of the emulator][3] has been released now, for those of us that depend on local development.
 
 ## Azure Storage SDK 1.7 (Silently?) Deprecated
 

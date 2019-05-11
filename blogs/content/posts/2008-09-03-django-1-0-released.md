@@ -26,7 +26,7 @@ Yes it is true, Django 1.0 has been released today. Here is a part of the announ
 > 
 > Well.
 > 
-> What happened, of course, was that an amazing community sprung up literally overnight — our IRC channel had over a hundred people in it the day after release, and it's never been that “empty” since.
+> What happened, of course, was that an amazing community sprung up literally overnight — our IRC channel had over a hundred people in it the day after release, and it's never been that "empty" since.
 > 
 > I really can't stress enough how amazing our community of users and developers are. About half of the code that's gone into Django over the past three years has been contributed by someone other than a core committer. Since our last stable release, we've made over 4,000 code commits, fixed more than 2,000 bugs, and edited, added, or removed around 350,000 lines of code. We've also added 40,000 lines of new documentation, and greatly improved what was already there.
 > 

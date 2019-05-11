@@ -69,9 +69,9 @@ Overview
   
 For transactional workloads I/O performance of the writes to the SQL Server transaction log is critical to both throughput and application response time. This document discusses briefly how to determine if I/O to the transaction log file is a performance bottleneck and how to determine if this is storage related; a limitation is due to log manager itself or a combination of the two. Concepts and topics described in this paper apply mainly to SQL Server 2005 and SQL Server 2008.
 
-**[Is LINQ the next OLE DB? “LINQ-ed” Server as a rowset source?][11]**
+**[Is LINQ the next OLE DB? "LINQ-ed" Server as a rowset source?][11]**
   
-Bob Beauchemin writes “The “relational database bigots” I hang out with don't like LINQ at all. They hope it would shrivel up in a corner and become part of the fad-technology graveyard. Or they're waiting to make big bucks fixing the performance problems they think will ensue.............”
+Bob Beauchemin writes "The "relational database bigots" I hang out with don't like LINQ at all. They hope it would shrivel up in a corner and become part of the fad-technology graveyard. Or they're waiting to make big bucks fixing the performance problems they think will ensue............."
   
 You can read the rest there and tell me what you think.
 

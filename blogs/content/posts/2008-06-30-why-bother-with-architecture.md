@@ -26,7 +26,7 @@ Creativity is a wonderful thing. It's also something different for each of us, w
 
 # We don't need architects! ...Do we ?
 
-It's important for us to remember that we develop software to “do something” that we want it to do. In which case we need to continually review the success of that software or solution by evaluating it's ability to meet our needs. But who gets to say what those needs are, and how well they are met? More importantly, what makes IT solutions good or bad ? Is it how big they are ? Or how easy to use they are ? Or maybe how efficiently they operate ? Or what about how well measured and managed they are ? Or even how easy it is to change the way they work ? What about all of the above, and much more...?
+It's important for us to remember that we develop software to "do something" that we want it to do. In which case we need to continually review the success of that software or solution by evaluating it's ability to meet our needs. But who gets to say what those needs are, and how well they are met? More importantly, what makes IT solutions good or bad ? Is it how big they are ? Or how easy to use they are ? Or maybe how efficiently they operate ? Or what about how well measured and managed they are ? Or even how easy it is to change the way they work ? What about all of the above, and much more...?
 
 Getting to a point where a) you understand what success looks like, and b) you have a solution that delivers that success, can be achieved by using an Architect to facilitate and coordinate the construction of a design and resulting solution. But that's not always what happens. Apart from the many varying definitions of an architect's role (and the different types of architects.. e.g. Enterprise Architect, Solutions Architect, Application Architect, Technical Architect,etc), there's also often a perception from developers that architects are generally away with the fairies, dreaming up blue sky designs that are just not grounded in reality or worthwhile bothering with. Additionally, a lot of businesses (too many unfortunately), just don't understand the value of using an architect... Why pay someone to design the solution, when you've got business systems analysts and developers that can work it out between themselves ?
 
@@ -77,7 +77,7 @@ Firstly, let me introduce the Winchester Mystery House, of the Winchester Guns f
   * 65 doors to blank walls
   * 13 abandoned staircases
   * 24 skylights in floors
-  * Rooms “build-around” other rooms
+  * Rooms "build-around" other rooms
   * Enough keys to fill 2 large buckets
 
 
@@ -95,9 +95,9 @@ Ouch.
 
 ## Sound Familiar ?
 
-We've all worked on a project with something like this. Usually because the system wasn't really 'designed' it just 'happened'. Maybe if we spent a little more time designing, and a little less building things would work a little better. I bet they had some very talented builders working on this too – but their perspective wasn't to make a solid overall design, it was to simply get on and do what they were tasked with.. sound familiar ? How often do users come to a technical forum and ask for a solution to their problem to be faced with answers like “you need to normalise your database” etc, to which they simply retort “that's not part of this project” ? Too many, but sadly understandably so.
+We've all worked on a project with something like this. Usually because the system wasn't really 'designed' it just 'happened'. Maybe if we spent a little more time designing, and a little less building things would work a little better. I bet they had some very talented builders working on this too – but their perspective wasn't to make a solid overall design, it was to simply get on and do what they were tasked with.. sound familiar ? How often do users come to a technical forum and ask for a solution to their problem to be faced with answers like "you need to normalise your database" etc, to which they simply retort "that's not part of this project" ? Too many, but sadly understandably so.
 
-A favourite Project Manager quote is “Failing to Plan is Planning to Fail”. And they are generally right – not having a consistent, well thought out and planned design can lead to very complicated and difficult to manage, change or even use software. Most architects will have come across solutions or applications that weren't 'designed' and just evolved, and will know just how much of a problem those applications really are. This is [Software's Dirty Little Secret][1] – many systems have just “happened” without real thought to the design of the software. And for that matter, haven't thought about the application as part of a composite solution either – this is actually quite rare, even today with all the SOA hype of the last few years. 
+A favourite Project Manager quote is "Failing to Plan is Planning to Fail". And they are generally right – not having a consistent, well thought out and planned design can lead to very complicated and difficult to manage, change or even use software. Most architects will have come across solutions or applications that weren't 'designed' and just evolved, and will know just how much of a problem those applications really are. This is [Software's Dirty Little Secret][1] – many systems have just "happened" without real thought to the design of the software. And for that matter, haven't thought about the application as part of a composite solution either – this is actually quite rare, even today with all the SOA hype of the last few years. 
 
 ### The Architect's hand
 
@@ -105,9 +105,9 @@ Sometimes it might seem strange to developers that an architect wants to make a 
 
 There are several methodologies to use for developing an architecture – personally I use TOGAF which is more for generalist Enterprise & Solutions Architecture development but the <acronym title="Architecture Development Methodology">ADM</acronym> can be applied in concept to designing most solutions/systems/applications. 
 
-## So we do need to “do architecture” then?
+## So we do need to "do architecture" then?
 
-In short, Yes. But how you actually “do architecture” depends greatly on the context. There is a simple lesson here – architecture is all about simplifying and standardising the problem domain to provide an efficient, re-usable and consistent answer. The important difference between a formal “architect” and a “builder” is not of technical expertise, but of perspective, so don't assume that your most expert Java Programmer is naturally the architect to your solutions. This doesn't mean that an architect of all types shouldn't possess good technical abilities and experience.
+In short, Yes. But how you actually "do architecture" depends greatly on the context. There is a simple lesson here – architecture is all about simplifying and standardising the problem domain to provide an efficient, re-usable and consistent answer. The important difference between a formal "architect" and a "builder" is not of technical expertise, but of perspective, so don't assume that your most expert Java Programmer is naturally the architect to your solutions. This doesn't mean that an architect of all types shouldn't possess good technical abilities and experience.
 
 There is a nice [overview of the different types of Architects][2] at the Microsoft Architecture Journal (which is often surprisingly not MS biased) written by IASA Sweden, however this misses out the technical/infrastructure architect from their Roles diagram, which is a key architect in any IT implementation. Also, another article on the Architect Journal talks about [what an architect actually is][3], however is a little Software Architect focused. Both interesting reads, especially for non-architects to understand how to 'use' an architect (well, work with one effectively at least 😉 ). 
 
@@ -119,7 +119,7 @@ One thing I will write about soon is the risk of 'over-designing' a solution, be
 
 ## And Finally...
 
-So... Yes – Sometimes it's nice to just set out in your car and drive wherever the wind takes you until the fuel runs out. But other times, and almost always when it is on 'business time', wandering aimlessly in the hope of finding something that might be useful is just not acceptable. Having that vision, aspiration, direction and roadmap an architecture can bring to your project might seem like a chore and “impossible” to achieve to some people.. but how else will you get there, without ever actively and knowingly moving toward it ? Chance ? Good Luck with that...
+So... Yes – Sometimes it's nice to just set out in your car and drive wherever the wind takes you until the fuel runs out. But other times, and almost always when it is on 'business time', wandering aimlessly in the hope of finding something that might be useful is just not acceptable. Having that vision, aspiration, direction and roadmap an architecture can bring to your project might seem like a chore and "impossible" to achieve to some people.. but how else will you get there, without ever actively and knowingly moving toward it ? Chance ? Good Luck with that...
 
 So, the next time you think about just winging it, and not bothering with architecture, just think about your software product as your own house that you wish to build – would you really just start building ? Or even just draw up your own plans on visio and ask the builders to 'sort it out' ? 
 

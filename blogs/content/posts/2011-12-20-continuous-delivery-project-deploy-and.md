@@ -56,7 +56,7 @@ With the server setup, the last few steps were completed by trying to manually d
 
 <code class="codespan">"C:Program FilesIISMicrosoft Web Deploy V2\msdeploy.exe" -source:package='c:Program Files (x86)JenkinsjobsASPNet MVC Music Store CI BuildworkspaceMvcMusicStoreobjReleasePackageMvcMusicStore.zip' -dest:auto,computerName='AVL-BETA-01',userName='AVL-BETA-01Administrator',password='MYPASSWORD',includeAcls='False' -verb:sync -disableLink:AppPoolExtension -disableLink:ContentExtension -disableLink:CertificateExtension -setParam:"IIS Web Application Name"="Default Web Site/MvcMusicStore_SmokeTest" -whatif</code>
 
-This command basically says that I want to deploy from the packaged zip file to the following destination, with the additional “IIS Web Application Name” parameters set to the name of the website and Application I want to deploy to on the server. The “-whatif” flag on the end tells MSDeploy that I want to do a simulated deployment. This causes MSDeploy to do all of the steps of doing a deployment short of actually copying the files up to the server. This was useful during the troubleshooting and configuration above.
+This command basically says that I want to deploy from the packaged zip file to the following destination, with the additional "IIS Web Application Name" parameters set to the name of the website and Application I want to deploy to on the server. The "-whatif" flag on the end tells MSDeploy that I want to do a simulated deployment. This causes MSDeploy to do all of the steps of doing a deployment short of actually copying the files up to the server. This was useful during the troubleshooting and configuration above.
 
 ## Deploying
 
@@ -137,7 +137,7 @@ With the application will displaying the value from the BuildVersion file, all t
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildnumber.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildnumber.png" title="Adding Build Number to Site" /></a><br /> Adding Build Number to Site
 </div>
 
-Ad the build number isadded as part of the CI build job, I'll see the word “DEV” in my development environment and the appropriate build number everywhere else. Now I can automate tests to check for the expected build number and trace deployed sites back to their original build history.
+Ad the build number isadded as part of the CI build job, I'll see the word "DEV" in my development environment and the appropriate build number everywhere else. Now I can automate tests to check for the expected build number and trace deployed sites back to their original build history.
 
 ### Smoke Testing Script
 
@@ -164,7 +164,7 @@ A recent sample of the output looks like this:
 	<testcase name="Genre Content" time="0"></testcase>
 </testsuite>
 ```
-With the script built, all I need to do is add a final “Windows Batch Command” step to my job to execute this script.
+With the script built, all I need to do is add a final "Windows Batch Command" step to my job to execute this script.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_smoketest.png" title="Job Configuration - Smoke Test" /></a><br /> Job Configuration – Smoke Test

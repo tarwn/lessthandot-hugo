@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-Today I saw someone asked a question in MSDN t-sql forums [“How to calculate the number of working days between two given dates”.][1] I found this very interesting, since we can solve this problem by using a very simple and methodical approach and by using an unorthodox approach. I will explain both the approaches.
+Today I saw someone asked a question in MSDN t-sql forums ["How to calculate the number of working days between two given dates".][1] I found this very interesting, since we can solve this problem by using a very simple and methodical approach and by using an unorthodox approach. I will explain both the approaches.
 
 **1. By Using Auxilary Calendar Table
   

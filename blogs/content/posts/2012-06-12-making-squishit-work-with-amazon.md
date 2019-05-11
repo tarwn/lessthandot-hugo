@@ -37,7 +37,7 @@ Bundle.JavaScript()
     .Render("combinedOutput.js");
 ```
 
-So the first thing that came to mind was to add something like a “WithFileRenderer” method. This would give us a way to inject a renderer into a bundle and have it used to render the combined files. However, we probably don't want to render to the CDN while debugging, so “WithReleaseFileRenderer” might be more appropriate. Setting up the method went something like this:
+So the first thing that came to mind was to add something like a "WithFileRenderer" method. This would give us a way to inject a renderer into a bundle and have it used to render the combined files. However, we probably don't want to render to the CDN while debugging, so "WithReleaseFileRenderer" might be more appropriate. Setting up the method went something like this:
 
 ```csharp
 IRenderer releaseFileRenderer;
@@ -169,7 +169,7 @@ public interface IRenderer
 }
 ```
 
-The only things we'll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won't want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key – if the file doesn't exist we will get a “not found” status on the exception thrown by the s3 client. So the most important test will look like this:
+The only things we'll need to implement this method are an initialized S3 client, a bucket and the key builder we implemented in the last section. By default, we won't want to upload our content if it already exists on the CDN, so we will need to check for existence before uploading the content. This can be done by querying for object metadata using the desired key – if the file doesn't exist we will get a "not found" status on the exception thrown by the s3 client. So the most important test will look like this:
 
 ```csharp
 [Test]
@@ -202,7 +202,7 @@ public void Render_Uploads_If_File_Doesnt_Exist()
 }
 ```
 
-Note that it is checking the PutObjectRequest to ensure that the ACL used is “NoACL”. This is probably not an optimal default (most people will want the “PublicRead” ACL I imagine) but I decided to err on the side of caution and force people to opt-in to making their content publicly visible. The implementation for the render method looks something like this:
+Note that it is checking the PutObjectRequest to ensure that the ACL used is "NoACL". This is probably not an optimal default (most people will want the "PublicRead" ACL I imagine) but I decided to err on the side of caution and force people to opt-in to making their content publicly visible. The implementation for the render method looks something like this:
 
 ```csharp
 public void Render(string content, string outputPath)
@@ -339,7 +339,7 @@ class CloudFrontInvalidator : IDisposable, IInvalidator
 }
 ```
 
-As an interesting aside, while I was working on this Amazon released [support for querystring invalidation/versioning][7], which is SquishIt's default behavior. I had planned to add a release note telling people that they would need to use squishit's “hash in filename” option, but it seems like now there won't be any need 🙂
+As an interesting aside, while I was working on this Amazon released [support for querystring invalidation/versioning][7], which is SquishIt's default behavior. I had planned to add a release note telling people that they would need to use squishit's "hash in filename" option, but it seems like now there won't be any need 🙂
 
 ### Neat, But How Do I Use This?
 

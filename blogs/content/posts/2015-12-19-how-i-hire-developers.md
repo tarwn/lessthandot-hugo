@@ -23,13 +23,13 @@ So let's talk hiring.
 
 ## Step 0 – The Criteria
 
-We evaluate candidates between each step of the process. A single “No” at any stage, from anyone involved in the process is all it takes to decide the fit is not there. We interview a lot of amazing people, but not all of them are a good fit for this specific team.
+We evaluate candidates between each step of the process. A single "No" at any stage, from anyone involved in the process is all it takes to decide the fit is not there. We interview a lot of amazing people, but not all of them are a good fit for this specific team.
 
 From the Phone Screen forward, we always commit to a date and time we will provide feedback. People are important to us, so we make the commitment to limit stress on the candidate (we have all been there before, wondering if we would get a call and when). 
 
 ## Step 1 – The Introduction
 
-First, you have to find us somehow. We do work with a couple recruiters, so that's one possible introduction path. We also have job ads cleverly hidden in the careers section of our website (though they were in drastic need of a redo). We also meet people at events and have the occasional referral (more in a minute on why these are “occasional”).
+First, you have to find us somehow. We do work with a couple recruiters, so that's one possible introduction path. We also have job ads cleverly hidden in the careers section of our website (though they were in drastic need of a redo). We also meet people at events and have the occasional referral (more in a minute on why these are "occasional").
 
 We typically had 4 job ads listed at a time, not because we were looking for 4 people, but because we are looking for awesome people and wanted to outline our expectations at different stages of experience. The next experiment was going to be be trying to crush all of this down into one ad that was shorter than the original 4 but still reflected the gradient of experience and responsibilities we expect when looking at a candidates experience and salary expectations.
 
@@ -51,7 +51,7 @@ The key to the application path is to capture the interest of people that will b
 
 The devil is in the details. 
 
-The application is not a formality, it is the first piece of information we are going to see about a candidate and will help us understand if there is a reason to continue further. We include some “optional” questions that ask about learning styles, great customer experiences, and so on. We include a note in the job description to fill out all of the optional questions. This filters for folks that are excited about the role, care enough about their next role to read the whole description, and have attention to detail.
+The application is not a formality, it is the first piece of information we are going to see about a candidate and will help us understand if there is a reason to continue further. We include some "optional" questions that ask about learning styles, great customer experiences, and so on. We include a note in the job description to fill out all of the optional questions. This filters for folks that are excited about the role, care enough about their next role to read the whole description, and have attention to detail.
 
 Providing a resume and application queues the candidate up for internal review and, if they pass muster, will lead to the Technical Screen (Step 2), followed by the Phone Screen (Step 3).
 
@@ -206,7 +206,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <p>
-      (The process improvement from this section is almost always “you spent all the time talking” (aimed at me). But, seriously, how can you answer questions about a whole company in less than an hour AND not talk most of the time...sheesh.)
+      (The process improvement from this section is almost always "you spent all the time talking" (aimed at me). But, seriously, how can you answer questions about a whole company in less than an hour AND not talk most of the time...sheesh.)
     </p>
     
     <p>
@@ -226,11 +226,11 @@ We limit referrals, but they also have greater prestige attached to them when th
     </h3>
     
     <p>
-      Just when we managed to get their stress level down and all of that food is trying to force their brain into a coma, we go to the technical deep dive. We tend to focus this on the technologies that are most relevant to us and talking through how the candidate has applied them in past projects, places they stubbed their toes, those wonderful moments when something suddenly made sense, and so on. We think these tell us a lot more about folks technical capabilities and approach than grilling them from the “200 C# Interview Questions” list we downloaded off the internet five minutes before.
+      Just when we managed to get their stress level down and all of that food is trying to force their brain into a coma, we go to the technical deep dive. We tend to focus this on the technologies that are most relevant to us and talking through how the candidate has applied them in past projects, places they stubbed their toes, those wonderful moments when something suddenly made sense, and so on. We think these tell us a lot more about folks technical capabilities and approach than grilling them from the "200 C# Interview Questions" list we downloaded off the internet five minutes before.
     </p>
     
     <p>
-      We learn a lot about this approach because of the types of questions we ask. We ask things like “what was the hardest problem you had to debug in C#”, “What was the hardest thing to learn about SQL?”, “What was the trickiest project you had to do with Angular, would you choose the same technology again and why/why not?”, “What annoys you about threading?”, and so on. Each of these is the beginning of a conversation that helps us get a feel for their technical depth and breadth, troubleshooting experience, design skills, and so on. If we feel someone is telling us a story, we just keep going deeper until we get to something like “well, actually I was just doing the FlibberGibbet, it was Joe that did the real crazy stuff” or dig past their expertise with the topic.
+      We learn a lot about this approach because of the types of questions we ask. We ask things like "what was the hardest problem you had to debug in C#", "What was the hardest thing to learn about SQL?", "What was the trickiest project you had to do with Angular, would you choose the same technology again and why/why not?", "What annoys you about threading?", and so on. Each of these is the beginning of a conversation that helps us get a feel for their technical depth and breadth, troubleshooting experience, design skills, and so on. If we feel someone is telling us a story, we just keep going deeper until we get to something like "well, actually I was just doing the FlibberGibbet, it was Joe that did the real crazy stuff" or dig past their expertise with the topic.
     </p>
     
     <p>
@@ -246,7 +246,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <p>
-      The last part before the wrap-up is the Team Q&A. This is intended to be a time that the candidate can ask any quesitons they want form their potential future teammates without management presence hovering around to ensure the “Right Answers” are provided. We've done a lot of these and I still don't know what answers people hear in there, it's a total black box to me. The group consists of developers that have been in the interview throughout the day, hopefully making it easier to ask them questions about how we really work day to day, work/life balance, overtime, doctors appointments, pushing to production in the middle of the day, onboarding, etc.
+      The last part before the wrap-up is the Team Q&A. This is intended to be a time that the candidate can ask any quesitons they want form their potential future teammates without management presence hovering around to ensure the "Right Answers" are provided. We've done a lot of these and I still don't know what answers people hear in there, it's a total black box to me. The group consists of developers that have been in the interview throughout the day, hopefully making it easier to ask them questions about how we really work day to day, work/life balance, overtime, doctors appointments, pushing to production in the middle of the day, onboarding, etc.
     </p>
     
     <h3>
@@ -254,7 +254,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </h3>
     
     <p>
-      The last step is a recap of the day. We review the questions from the “must ask” list and answer any new ones that occurred over the course of the day. When we get to the end, we commit to a date/time that we'll provide an update by, thank you for taking the time to spend the day with us, and wish you well.
+      The last step is a recap of the day. We review the questions from the "must ask" list and answer any new ones that occurred over the course of the day. When we get to the end, we commit to a date/time that we'll provide an update by, thank you for taking the time to spend the day with us, and wish you well.
     </p>
     
     <p>
@@ -286,7 +286,7 @@ We limit referrals, but they also have greater prestige attached to them when th
     </p>
     
     <p>
-      The Decisioning step's purpose is to reach a Go/no-Go decision. Everyone that has been involved in the interview is involved, even the lunch folks. We review the expectations for the role, do a round of votes (string yes, weak yes, weak no, strong no), discuss the things that were awesome, the things that worry us, and anything that would be an instant No, re-voting occasionally. At any point, one “Strong No” can close the process. Even when this happens, though, we continue discussing through the whole decision to try and get the most experience and learning we can for the next interview. It takes a full round of Yes's to move forward.
+      The Decisioning step's purpose is to reach a Go/no-Go decision. Everyone that has been involved in the interview is involved, even the lunch folks. We review the expectations for the role, do a round of votes (string yes, weak yes, weak no, strong no), discuss the things that were awesome, the things that worry us, and anything that would be an instant No, re-voting occasionally. At any point, one "Strong No" can close the process. Even when this happens, though, we continue discussing through the whole decision to try and get the most experience and learning we can for the next interview. It takes a full round of Yes's to move forward.
     </p>
     
     <h2>

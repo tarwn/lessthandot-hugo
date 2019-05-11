@@ -61,7 +61,7 @@ I'm pretty sure someone else did the original LessThanDot teeming work on B2Evol
 
 ### I Just Built It...
 
-I started out the WordPress migration with a blank theme folder called “LessThanDot2009”. There are a plethora of posts out there on creating a custom theme, but the one I liked walked through the creation of a theme in small steps, building it up one piece at a time. I followed along, using LessThanDot code snippets where the author was using bootstrap, until before I knew it I had most of our site put together. 
+I started out the WordPress migration with a blank theme folder called "LessThanDot2009". There are a plethora of posts out there on creating a custom theme, but the one I liked walked through the creation of a theme in small steps, building it up one piece at a time. I followed along, using LessThanDot code snippets where the author was using bootstrap, until before I knew it I had most of our site put together. 
 
 <div id="attachment_2282" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/01/WordpressProgress.png"><img src="/wp-content/uploads/2014/01/WordpressProgress-300x187.png" alt="WordPress Migration - The First Page" width="300" height="187" class="size-medium wp-image-2282" srcset="/wp-content/uploads/2014/01/WordpressProgress-300x187.png 300w, /wp-content/uploads/2014/01/WordpressProgress.png 800w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -71,7 +71,7 @@ I started out the WordPress migration with a blank theme folder called “LessTh
   </p>
 </div>
 
-I quickly started branching out as I followed the tutorial, and before long I realized that Googling for “WordPress _anything_” would consistently net me a clear set of documentation pages with the exact the functions or hooks that I needed to do that _anything_.
+I quickly started branching out as I followed the tutorial, and before long I realized that Googling for "WordPress _anything_" would consistently net me a clear set of documentation pages with the exact the functions or hooks that I needed to do that _anything_.
 
 <div style="float: right; background-color: #dddddd; margin: 4px 0px 4px 8px; padding: 12px 8px 12px 0;">
   <h4 style="margin: 0px 0px 8px 8px;">
@@ -186,7 +186,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  2. What functions are calling the database? Every time I add a function outside “The Loop”, I'm worried that I'm causing more database calls to be made when I don't want them to be. It's not clear when it will be smart enough to have 5 or 6 individual calls not call the database on their own when the whole post is going to be loaded just a bit further down the page? I haven't done a lot of digging on this topic, but it seems to be more heavily technical than most people want to read about on WordPress, so it doesn't show up in the documentation.
+  2. What functions are calling the database? Every time I add a function outside "The Loop", I'm worried that I'm causing more database calls to be made when I don't want them to be. It's not clear when it will be smart enough to have 5 or 6 individual calls not call the database on their own when the whole post is going to be loaded just a bit further down the page? I haven't done a lot of digging on this topic, but it seems to be more heavily technical than most people want to read about on WordPress, so it doesn't show up in the documentation.
 </p>
 
 <p>

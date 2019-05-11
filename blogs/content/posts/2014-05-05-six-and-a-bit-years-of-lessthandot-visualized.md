@@ -65,7 +65,7 @@ FROM wp_term_taxonomy TT
    INNER JOIN wp_terms T ON T.term_id = TT.term_id
 WHERE taxonomy = 'category'
 ```
-I wasn't sure if I was going to use the name or slug in the “file path”, so I grabbed both. I also grabbed the parent so I could recursively build the paths in Excel.
+I wasn't sure if I was going to use the name or slug in the "file path", so I grabbed both. I also grabbed the parent so I could recursively build the paths in Excel.
 
 ### 3. Generate Category Paths in Excel
 
@@ -83,15 +83,15 @@ Nothing fancy, but this will let me use a VLOOKUP from the posts tab to produce 
 
 ### 5. Build the log file in Excel
 
-With the results of the first query in an excel tab named “wp\_posts” and the categories in “wp\_term\_taxonomy”, I add some extra rows in the wp\_posts sheet to accommodate calculated fields I will be adding:
+With the results of the first query in an excel tab named "wp\_posts" and the categories in "wp\_term\_taxonomy", I add some extra rows in the wp\_posts sheet to accommodate calculated fields I will be adding:
 
 A:unix timestamp, B:author, C:A/M, D:(inserted), E:(inserted), F:(inserted), G:post title, H:category/term id
 
-In Column D, I add the following lookup to build the “File path”:
+In Column D, I add the following lookup to build the "File path":
 
 `="LessThanDot/" & VLOOKUP($H1,wp_term_taxonomy!$A$1:$E$126,5,FALSE) & "/" & G1`
 
-This uses VLOOKUP to find the category “path”, prepends a root of “LessThanDot” and appends the post title, giving me something that looks like a file path.
+This uses VLOOKUP to find the category "path", prepends a root of "LessThanDot" and appends the post title, giving me something that looks like a file path.
 
 In Column E, I do the VLOOKUP that grabs each authors assigned color:
 

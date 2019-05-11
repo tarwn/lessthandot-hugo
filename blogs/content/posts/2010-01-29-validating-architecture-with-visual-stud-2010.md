@@ -30,7 +30,7 @@ Anyway here's what the diagram looks like:
 
 Nothing really special here – the words are the name of the tier, and the numbers are the number of units of code (in this case projects, but you can add individual namespaces or classes as well). To create the diagram, we need to first create a new Visual Studio Modeling Project. A new layer diagram can then be added to this project. I used the designer to add the shapes and dependency lines, and all looks good. But we want to do more than look at it!
 
-This is where things get interesting. To place modules into one of the tiers, you can drag and drop either from the Solution Explorer or from the new Architecture Explorer. Both have different ways of finding the objects you are looking for, but the result is the same. Once all modules are allocated to the right layer, you can right click the diagram and choose “Validate Architecture”.
+This is where things get interesting. To place modules into one of the tiers, you can drag and drop either from the Solution Explorer or from the new Architecture Explorer. Both have different ways of finding the objects you are looking for, but the result is the same. Once all modules are allocated to the right layer, you can right click the diagram and choose "Validate Architecture".
 
 Visual Studio will then build your solution and validate its architecture. If all goes well, you'll see something like this in the output window:
 
@@ -38,7 +38,7 @@ Visual Studio will then build your solution and validate its architecture. If al
   
 > 1/28/2010 4:04:23 PM: Architecture validation succeeded (0 suppressed). 
 
-Now, let's try adding an illegal call, in this case from the data tier to a caching provider found in the web tier (I first tried adding a reference to the “Biz” project, but was not allowed because it would introduce a cyclic dependency – I guess this was in previous versions but I never ran into it before – pretty cool).
+Now, let's try adding an illegal call, in this case from the data tier to a caching provider found in the web tier (I first tried adding a reference to the "Biz" project, but was not allowed because it would introduce a cyclic dependency – I guess this was in previous versions but I never ran into it before – pretty cool).
 
 After this call is added, try validating the architecture again. The solution will be rebuilt, and you'll see something like this: 
 
@@ -54,15 +54,15 @@ Ok, so we have violations, just as expected. Clicking over to the error list you
 
 So, not only do the undesirable calls added to the Data Layer's code trigger violations, but the reference itself does as well. There are a few things of interest that we can do with the errors from here. 
 
-When right clicking the error, you can choose “Manage Validation Errors” from the context menu, and then “Suppress Errors”. Well, as long as you're willing to do it at your own risk ;). Then you'd end up with a build output like this:
+When right clicking the error, you can choose "Manage Validation Errors" from the context menu, and then "Suppress Errors". Well, as long as you're willing to do it at your own risk ;). Then you'd end up with a build output like this:
 
 > 1/28/2010 4:25:03 PM: Architecture validation is starting.
   
 > 1/28/2010 4:25:09 PM: Architecture validation succeeded (3 suppressed).
 
-Knowing our readership, I doubt this will be an option though. So what can be done about this? If you want to fix the error immediately, you can double click the error message and be taken to the offending code, just as you would for a syntax error if a normal build failed. If you use Team Foundation Server, you can also select “Create Work Item” to create a new TFS work item based on the error.
+Knowing our readership, I doubt this will be an option though. So what can be done about this? If you want to fix the error immediately, you can double click the error message and be taken to the offending code, just as you would for a syntax error if a normal build failed. If you use Team Foundation Server, you can also select "Create Work Item" to create a new TFS work item based on the error.
 
-This can also be included as part of your local build process by setting the “Validate Architecture” property of the Modeling Project. TFS users can also add this step to their team build by opening the Compilation tab and adding the following to the MSBuild arguments section:
+This can also be included as part of your local build process by setting the "Validate Architecture" property of the Modeling Project. TFS users can also add this step to their team build by opening the Compilation tab and adding the following to the MSBuild arguments section:
 
 > /p:ValidateArchitecture=true
 

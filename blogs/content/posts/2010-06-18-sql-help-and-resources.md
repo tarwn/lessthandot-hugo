@@ -57,7 +57,7 @@ If you are reading this and have been part of a SQL Saturday, SQL Server User Gr
 
 These companies take the vast amount of resources and pour them into building the community. 
 
-Quest Software is a great example. Quest has not only been a major sponsor for dozens of SQL events but also spends a great deal of resources on providing things like, “[The pain of the week][7]” to the community. [SQLServerPedia][8] is a huge resource powered by Quest with Mr. Ozar leading the way. You could without a doubt spend a month reading, watching and learning from [SQLServerPedia][8]. 
+Quest Software is a great example. Quest has not only been a major sponsor for dozens of SQL events but also spends a great deal of resources on providing things like, "[The pain of the week][7]" to the community. [SQLServerPedia][8] is a huge resource powered by Quest with Mr. Ozar leading the way. You could without a doubt spend a month reading, watching and learning from [SQLServerPedia][8]. 
 
 Red-Gate is another great company supporting the community in a number of ways, from the [Exceptional DBA of the Year][9] recognition that is going on right now, to the work that Steve Jones ([Blog][10] | [Twitter][11])and Brad McGehee ([Blog][12] | [Twitter][13]) do for the community backed by Red-Gate. Red-Gate stands behind the community and does a great deal for us all. And did I mention the SQL Tools rock?
 

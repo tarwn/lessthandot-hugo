@@ -41,7 +41,7 @@ In earlier public releases of SQL Server 2012 (Denali) and documentation and blo
   2. [sys.column\_store\_segments][2]
   3. [sys.column\_store\_index_stats][3]
 
-The views are useful but given columnstore indexing and the needs compared to row store indexing (clustered, nonclustered), the use is more informational and not based on maintenance as much other than space allocation.  This is part in thanks to columnstore and the xVelocity technology itself.  Eric Hanson authored a [Columnstore Index FAQ][4] on the wiki of Technet that also contains a very good query to return size in segments, dictionaries and partitioned information.  The output from Eric's query can be seen below on the columnstore indexes that were created from, “[Columnstore Index Basics][5]”.
+The views are useful but given columnstore indexing and the needs compared to row store indexing (clustered, nonclustered), the use is more informational and not based on maintenance as much other than space allocation.  This is part in thanks to columnstore and the xVelocity technology itself.  Eric Hanson authored a [Columnstore Index FAQ][4] on the wiki of Technet that also contains a very good query to return size in segments, dictionaries and partitioned information.  The output from Eric's query can be seen below on the columnstore indexes that were created from, "[Columnstore Index Basics][5]".
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-133.png?mtime=1334081259"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-133.png?mtime=1334081259" width="624" height="336" /></a>
@@ -49,7 +49,7 @@ The views are useful but given columnstore indexing and the needs compared to ro
 
 **Relating segments and dictionaries**
 
-Relating the two catalog views, sys.column\_store\_dictionaries and sys.column\_store\_segments is relatively straight forward when reviewing the raw data returned from both views.  Run the following two select statements on the AdventureWorkdDW2012 database that hold the columnstore indexes created from, “[Columnstore Index Basics][5]”. (We'll assume AdventureWorksDW2012 and the indexes exist from here.)
+Relating the two catalog views, sys.column\_store\_dictionaries and sys.column\_store\_segments is relatively straight forward when reviewing the raw data returned from both views.  Run the following two select statements on the AdventureWorkdDW2012 database that hold the columnstore indexes created from, "[Columnstore Index Basics][5]". (We'll assume AdventureWorksDW2012 and the indexes exist from here.)
 
 ```sql
 select * from sys.column_store_dictionaries

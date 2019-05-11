@@ -31,4 +31,4 @@ A colleague of mine told me this neat trick which I had to share:
 echo "FIGNORE=.svn" >> ~/.bashrc
 source ~/.bashrc
 ```
-Now when you're moving around subversion controlled directories with only one subdirectory, hitting tab won't try to autocomplete to “.svn/”.
+Now when you're moving around subversion controlled directories with only one subdirectory, hitting tab won't try to autocomplete to ".svn/".

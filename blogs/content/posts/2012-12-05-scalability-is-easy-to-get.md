@@ -31,7 +31,7 @@ Probably the number one failure of system scaling is when people dive right in a
 Recently I've been working on a system to simulate parallelizing workloads, specifically workloads that depend on external resources with rate or load thresholds. Let's use it to look at a somewhat contrived example.
 
 <div style="background-color: #eeeeee; padding: 1em; margin: 1em;">
-  Note: For this post, the simulated “service” has a 100 request/minute limit and throttles individual clients for 15 second windows. Individual operations consist of 50ms of local processing and a single service request that has 50ms of latency and 100 ms for processing and response time. Similar results can be achieved with more realistic batch sizes and rates, the smaller values just allow me to more quickly produce samples for the blog post.
+  Note: For this post, the simulated "service" has a 100 request/minute limit and throttles individual clients for 15 second windows. Individual operations consist of 50ms of local processing and a single service request that has 50ms of latency and 100 ms for processing and response time. Similar results can be achieved with more realistic batch sizes and rates, the smaller values just allow me to more quickly produce samples for the blog post.
 </div>
 
 So the backstory is that I have a batch process that is running more and more slowly as we take on larger and more frequent workloads. 

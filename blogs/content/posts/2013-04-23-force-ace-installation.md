@@ -39,7 +39,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <em>The requested OLE DB provider Microsoft.ACE.OLEDB.12.0 is not registered. If the 64-bit driver is not installed, run the package in 32-bit mode. ... Description: “Class not registered”</em>
+  <em>The requested OLE DB provider Microsoft.ACE.OLEDB.12.0 is not registered. If the 64-bit driver is not installed, run the package in 32-bit mode. ... Description: "Class not registered"</em>
 </p>
 
 <p style="text-align: justify;">

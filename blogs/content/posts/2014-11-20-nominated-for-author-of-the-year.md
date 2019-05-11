@@ -23,7 +23,7 @@ tags:
 
 ---
 <p style="text-align: justify">
-  I have the great pleasure to announce that I have been nominated for the “Author of the Year” award at the <a href="http://www.mssqltips.com/">MSSQLTips </a>website. This means however I have to persuade people to vote for me, hence this blog post 😉
+  I have the great pleasure to announce that I have been nominated for the "Author of the Year" award at the <a href="http://www.mssqltips.com/">MSSQLTips </a>website. This means however I have to persuade people to vote for me, hence this blog post 😉
 </p>
 
 <p style="text-align: justify">

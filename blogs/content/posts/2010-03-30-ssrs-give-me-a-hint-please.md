@@ -26,13 +26,13 @@ Today a friend of mine asked for a hand with an SSRS error he was getting. I hav
 
 On the report server, navigate through the directory structure to the installation folders for the SSRS binary files. In these folder you will find a folder named, LogFiles. This folder will house the default report server trace logs. All execution trace events will be logged in these flat files and can be excellent information to troubleshooting report execution issues. After understanding the trace files, it is also a great way to utilize SSIS to import and report off of them to be more proactive on the report executions. 
 
-To read in-depth on the trace logs see, “[Report Server Service Trace Log][1]”
+To read in-depth on the trace logs see, "[Report Server Service Trace Log][1]"
   
 
   
 Learning how the log files are recycled can be key on finding the file that will help you in a troubleshooting session. The following extract from the BOL documentation explains just how this process is handled.
 
-> “_The trace log file is ReportServerService_<timestamp>.log. The trace log is an ASCII text file. You can use any text editor to view the file. This file is located at Microsoft SQL Server<sql Server Instance>Reporting ServicesLogFiles. The trace log is created daily, starting with the first entry that occurs after midnight (local time), and whenever the service is restarted. The timestamp is based on Coordinated Universal Time (UTC). The file is in EN-US format. By default, trace logs are limited to 32 megabytes and deleted after 14 days</sql></timestamp>_“
+> "_The trace log file is ReportServerService_<timestamp>.log. The trace log is an ASCII text file. You can use any text editor to view the file. This file is located at Microsoft SQL Server<sql Server Instance>Reporting ServicesLogFiles. The trace log is created daily, starting with the first entry that occurs after midnight (local time), and whenever the service is restarted. The timestamp is based on Coordinated Universal Time (UTC). The file is in EN-US format. By default, trace logs are limited to 32 megabytes and deleted after 14 days</sql></timestamp>_"
 
 Knowing the recycle times and when a new log is created can lower the length of time spent on searching them for the error needed. 
 
@@ -82,7 +82,7 @@ Determine the time the error occurred and open the log file that coincides with 
      
 > — End of inner exception stack trace —_
 
-We can now see that the root cause of the report failure was, “_Transaction (Process ID 306) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction._“. 
+We can now see that the root cause of the report failure was, "_Transaction (Process ID 306) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction._". 
 
 ## In closing
 

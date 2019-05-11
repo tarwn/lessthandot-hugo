@@ -30,7 +30,7 @@ Quick background:  I got interested in Web API after I decided to build a frien
 
 So I thought it was about time I looked at Web API proper and as 2.0 had recently surfaced it was a good a time as any to jump on board.
 
-First things first I created a simple test app remembering my good friend Kevin's advice to me: “keep that \**** simple or I will come round and choke you out!” – no greater words spoken.  I followed this good tutorial to get me started: <a title="Getting Started with ASP.NET Web API 2 (C#)" href="http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api" target="_blank"><span style="color: #000000">Getting Started with ASP.NET Web API 2 </span></a><span style="color: #898989"><a title="Getting Started with ASP.NET Web API 2 (C#)" href="http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api" target="_blank">(C#)</a> </span>however what seems to be a common occurrence with me, shit just goes wrong!
+First things first I created a simple test app remembering my good friend Kevin's advice to me: "keep that \**** simple or I will come round and choke you out!" – no greater words spoken.  I followed this good tutorial to get me started: <a title="Getting Started with ASP.NET Web API 2 (C#)" href="http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api" target="_blank"><span style="color: #000000">Getting Started with ASP.NET Web API 2 </span></a><span style="color: #898989"><a title="Getting Started with ASP.NET Web API 2 (C#)" href="http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api" target="_blank">(C#)</a> </span>however what seems to be a common occurrence with me, shit just goes wrong!
 
 So what gives? Well I kept getting the dreaded 404 error when I adapted the tutorial to my simple project which consists of the following:
 
@@ -58,7 +58,7 @@ The controller class:
 
 The little gotcha above btw is that you need a return JSON object or null otherwise you will get a failed response at the client side, not the least of my worries though as I was getting another 404 message:
 
-“No matching action method found in the selected controller”
+"No matching action method found in the selected controller"
 
 Awesome, just what I was expecting!  I thought okay simple enough just a mismatch somewhere but nope wasn't anything I tried and I spent days scouring through Stack Overflow (and occasionally crying) and other online resources (part of the problem being I had no clue what my question was to begin with or rather the correct search terms, this came later after much much pain and vomiting).
 
@@ -66,7 +66,7 @@ Some bright spark suggested decorating the method but that completely breaks the
 
 By the way at any point in your development hell you go through this, make sure you get a handle on how to debug Web API using resources like <a title="Get Firebug" href="http://getfirebug.com/" target="_blank">Firebug </a>(Chrome Debugger is good but the layout is too shitty for me and I hate Google anyway) and <a title="Fiddler" href="http://www.telerik.com/fiddler" target="_blank">Fiddler </a>(an awesome tool for composing JSON requests and tracking requests/responses for stuff like Web API).
 
-First I came across this great article by a cool developer called Dave Ward (author of the Encosia website): “<a title="Using jQuery to POST [FromBody] parameters to Web API" href="http://encosia.com/using-jquery-to-post-frombody-parameters-to-web-api/" target="_blank">Using jQuery to POST [FromBody] parameters to Web API</a>” however when I followed the steps mentioned by Dave I was still getting some problems namely I was not able to post any kind of JSON data using the getJSON jquery method so what the hell was going on, again?!  Well the first part was resolved by using the [FromBody] as suggested by Dave but something else was still causing my request to turn to shit.
+First I came across this great article by a cool developer called Dave Ward (author of the Encosia website): "<a title="Using jQuery to POST [FromBody] parameters to Web API" href="http://encosia.com/using-jquery-to-post-frombody-parameters-to-web-api/" target="_blank">Using jQuery to POST [FromBody] parameters to Web API</a>" however when I followed the steps mentioned by Dave I was still getting some problems namely I was not able to post any kind of JSON data using the getJSON jquery method so what the hell was going on, again?!  Well the first part was resolved by using the [FromBody] as suggested by Dave but something else was still causing my request to turn to shit.
 
 <span style="color: #999999"><em>Disclaimer: Shit is a universal word used by developers and has a neutral meaning neither an offensive or defensive word but cool all the same!</em></span>
 

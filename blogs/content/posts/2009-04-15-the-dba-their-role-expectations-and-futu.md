@@ -25,7 +25,7 @@ My reply to the question
   * Proactive monitoring of all resources including any instances currently installed in the environment. This includes development and test. Be able to fix them!!!
   * Proactive monitoring of performance bottlenecks. Blocking, deadlocks, memory pressure, load balancing due to pressure, index, statistics, usage of these. Load balancing references things like pushing reporting off main databases to prevent issues etc..
   * Create a stable security landscape. Schemas, user roles etc... and maintain it! If someone knows sa then they failed.
-  * Knowledge and ability to install and configure “PROPERLY” any SQL Server service. SSRS, SSIS, SSAS etc.. If you are titled SQL Server DBA then you better know it's not just a DB Service and know how to maintain and configure them all.
+  * Knowledge and ability to install and configure "PROPERLY" any SQL Server service. SSRS, SSIS, SSAS etc.. If you are titled SQL Server DBA then you better know it's not just a DB Service and know how to maintain and configure them all.
   * Ability to communicate high level DB Server issues to peers in less technical manner. Can you explain a deadlock and actually have a manager understand it? Important! You won't get hardware upgrades without it.
   * Document everything. Landscape, security, service configurations
   * Ability to setup and configure a stable and trustworthy disaster recovery model.

@@ -16,7 +16,7 @@ tags:
   - Vagrant
 
 ---
-Setting up a development environment for LessThanDot is kind of tricky, where “tricky” is defined somewhere between “I have PHP on my Windows box” and “at least I'm running it in a version of Apache”. Recently I realized I had misplaced my local development environment somewhere and needed a way to make some changes.
+Setting up a development environment for LessThanDot is kind of tricky, where "tricky" is defined somewhere between "I have PHP on my Windows box" and "at least I'm running it in a version of Apache". Recently I realized I had misplaced my local development environment somewhere and needed a way to make some changes.
 
 Have a problem once? Solve it. Have a problem a second time? Automate it.
 
@@ -40,7 +40,7 @@ LessThanDot is probably not that dissimilar from other LAMP blogs. We have wired
 
 The real configuration file and vagrant_data folder are listed in the gitignore to ensure real configurations and media content don't make it into git (more soon on where that media content even came from).
 
-**Type “vagrant up” on the host:**
+**Type "vagrant up" on the host:**
 
   * VM is created with matching version of Centos and booted
   * The local configuration file is loaded with values for: 
@@ -60,7 +60,7 @@ The real configuration file and vagrant_data folder are listed in the gitignore 
   * Creates a local /vagrant/vagrant_data folder if it doesn't exist (this is synced with the host)
   * If there isn't a database backup available in /vagrant/vagrant_data: 
       * Connect to the backup server and download the most recent database backup
-      * Since this is synced with the host, I can choose to leave this file for subsequent “vagrant up” runs or delete it to get a fresh one
+      * Since this is synced with the host, I can choose to leave this file for subsequent "vagrant up" runs or delete it to get a fresh one
   * If there isn't a media backup available in /vagrant/vagrant_data: 
       * Connect to the backup server and download the most recent media backup
   * Install PHP 
@@ -69,7 +69,7 @@ The real configuration file and vagrant_data folder are listed in the gitignore 
   * Install MySQL 
       * `yum -y install mysql-server`
       * `service mysqld start`
-  * Secure MySQL – run the “secure-mysql.sh” script (below), passing the configured root password from the conf file
+  * Secure MySQL – run the "secure-mysql.sh" script (below), passing the configured root password from the conf file
   * Create the website database user from passed configs
   * Restore MySQL Backups 
       * unzip the database backup from /vagrant/vagrant_data to the local user directory
@@ -98,7 +98,7 @@ Here are some of the details and sticky spots, without revealing anything I shou
 
 initially I couldn't get the VirtualBox VMs to start. vagrant would get stuck after setting the private key for SSH. I pulled up the VritualBox GUI and tried to view the screen and it warned me that I couldn't run a 64-bit VM. I rebooted and turned on the Intel virtualization option in my BIOS, which didn't fix it. Then I removed the Hyper-V feature from Windows, which did the trick.
 
-At this point, I could successfully launch a Centos VM from the command-line. I could SSH into the system with “vagrant ssh” and it automatically linked my host directory with “/vagrant” on the VM, so files copied in either would sync back to the first”.
+At this point, I could successfully launch a Centos VM from the command-line. I could SSH into the system with "vagrant ssh" and it automatically linked my host directory with "/vagrant" on the VM, so files copied in either would sync back to the first".
 
 ### Local Configuration File, not in git, passed through to VM
 
@@ -178,7 +178,7 @@ SETTINGS_BACKUPS_DATA=${11}
 
 ### Custom Domains / Hosts file
 
-To have the host names resolve, I used a plugin named “hostsupdater”. It doesn't support windows UAC yet, so for the short term I had to make my hosts file editable by my user account (ick). I chose this plugin because it allowed me to specify additional aliases rather than assuming I only wanted the hostname of the VM added.
+To have the host names resolve, I used a plugin named "hostsupdater". It doesn't support windows UAC yet, so for the short term I had to make my hosts file editable by my user account (ick). I chose this plugin because it allowed me to specify additional aliases rather than assuming I only wanted the hostname of the VM added.
 
 To install it:
   
@@ -190,11 +190,11 @@ In my Vagrantfile:
 config.vm.hostname = settings["vagrant.hostname"]
 config.hostsupdater.aliases = ["sqlcop.#{config.vm.hostname}","blogs.#{config.vm.hostname}","wiki.#{config.vm.hostname}","forum.#{config.vm.hostname}","cooking.#{config.vm.hostname}","admin.#{config.vm.hostname}"]
 ```
-The plugin, hostsupdater, takes care of adding and removing entries from the hosts files when I “vagrant up”.
+The plugin, hostsupdater, takes care of adding and removing entries from the hosts files when I "vagrant up".
 
 ### Copying files that already exist
 
-This will get stuck at an “are you sure” prompt: 
+This will get stuck at an "are you sure" prompt: 
 
 ```bash
 cp /vagrant/configs/httpd.conf /etc/httpd/conf/httpd.conf

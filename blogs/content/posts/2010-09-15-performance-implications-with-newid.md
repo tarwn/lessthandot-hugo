@@ -13,7 +13,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-Today, I came across a question in MSDN forums “How to pick 5 random records?”. In SQL Server the only consistent way I know is to use NEWID() function in the Order By Clause. 
+Today, I came across a question in MSDN forums "How to pick 5 random records?". In SQL Server the only consistent way I know is to use NEWID() function in the Order By Clause. 
 
 ```sql
 select top 5 * from Orders  order by NEWID()
@@ -22,7 +22,7 @@ This approach will always scan the entire table irrespective of number of rows r
 
 After thinking for a while, I got an idea; If the table has a Unique column and its covered by an index, we can use that column to select the required random records and then join it with the table. This is going to improve performance.
         
-Assume a table “Orders” with an index on column “OrderId”. In order to pick 5 random rows, we can write query like this.
+Assume a table "Orders" with an index on column "OrderId". In order to pick 5 random rows, we can write query like this.
 
 ```sql
 ;with cte as 
@@ -34,7 +34,7 @@ inner join Orders t on t.OrderID = c.OrderID
 ```
 The Inner CTE will use the index and pick the 5 random orders and outer query will get the details of those 5 random rows. By picking just the OrderIDs in CTE, we avoid the scanning of entire table. In the outer query, SQL optimizer will get the details of those rows by using lookups.
 
-The Table we used for testing,has around 1,80,000 records. Has an Clustered index and Non-Clustered Index on the Column. For Both indexes, the only common column is “ID”. The size of these indexes is listed below.
+The Table we used for testing,has around 1,80,000 records. Has an Clustered index and Non-Clustered Index on the Column. For Both indexes, the only common column is "ID". The size of these indexes is listed below.
 
 ```sql
 select index_type_desc,index_level,page_count from sys.dm_db_index_physical_stats(DB_ID(),object_id('Issues'),null,null,'detailed')
@@ -218,6 +218,6 @@ Look at the Execution Plans of the 2 queries. The CTE query outperforms the non 
 
 **Note:** After a discussion with Brad, There will be some exceptional cases, which optimizer will choose entire Clustered Index Scan to retrieve the records
 
-1. When the “Id” column is not covered by index or it is not the first key column in case of index has multiple keycolumns.
+1. When the "Id" column is not covered by index or it is not the first key column in case of index has multiple keycolumns.
   
 2. When the Random Records Sample size is too large.

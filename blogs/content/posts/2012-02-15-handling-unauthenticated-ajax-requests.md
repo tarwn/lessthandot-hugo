@@ -28,7 +28,7 @@ A common pattern that I use in creating ajaxy applications is to return a small 
 
 In this case, when you sign up for a task it is supposed to return the updated task, and use this task to replace the notecard into the DOM on the right hand side. It can actually get uglier, as we support signing up for multiple tasks at a time. However, if the session expires we get a big, ugly login page displayed in the midst of all our pretty notecards. What I'd like to find is a way to retain the convenience of using forms authentication, but handle scenarios like this more gracefully.
 
-Adding a piece of metadata to the login page seemed like a good way to get this done without making things any harder on the user. I initially wanted to get the login page classified as an error, so that redirection could be accomplished on the client side using the error callback available when using jQuery for AJAX requests. This would be nice, but in jQuery 1.5 and above a “statusCode” callback has been added that is even nicer. You can use the callback like this:
+Adding a piece of metadata to the login page seemed like a good way to get this done without making things any harder on the user. I initially wanted to get the login page classified as an error, so that redirection could be accomplished on the client side using the error callback available when using jQuery for AJAX requests. This would be nice, but in jQuery 1.5 and above a "statusCode" callback has been added that is even nicer. You can use the callback like this:
 
 ```javascript
 $.ajax({

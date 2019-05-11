@@ -28,7 +28,7 @@ I do have to say, I didn't like the first thing I saw about this tool.  You are
 
 There also seems to be a little bug on the initial loading of the tool in which it does not prepopulate the instances it finds.  Hit cancel and then FileàConnect to a server, the list populates then.
 
-Entering in a SQL Server 2012 RC0 instance, I quickly received a message stating, “No fragmented Indexes were found”.  Took me a minute to find the “Reanalyze” button so if you are looking up, look down. It is on the bottom menu strip, in the left corner.
+Entering in a SQL Server 2012 RC0 instance, I quickly received a message stating, "No fragmented Indexes were found".  Took me a minute to find the "Reanalyze" button so if you are looking up, look down. It is on the bottom menu strip, in the left corner.
 
 **Internals**
 
@@ -56,7 +56,7 @@ The next steps are to go into checking for all the indexes by querying sys.index
 
 It appears that the SQL Index Manager retrieves all the object and index metadata before doing any true analysis of fragmentation.  The first thought I have here is the cost in memory consumed locally by the machine running the SQL Index Manager.  Having one SQL Server database with enough returned resulted in memory is one thing but I could easily see an entire instance being able to return and fill a nasty chunk of memory with this method.  It reminds me of the documenting tool and it erroring out if you try to script too many objects in one database.
 
-On to the good stuff: SQL Index Manager is more than likely dynamic T-SQLing out the findings in both results from the objects set and the index set with some sort of merge there.  The tool proceeds to reply on the DMV sys.dm\_db\_index\_physical\_stats to retrieve the avg\_fragmentation\_in\_percent and page\_count.  Yes, page count does make a difference when asking, “Do we need to defrag something with 2 pages?”
+On to the good stuff: SQL Index Manager is more than likely dynamic T-SQLing out the findings in both results from the objects set and the index set with some sort of merge there.  The tool proceeds to reply on the DMV sys.dm\_db\_index\_physical\_stats to retrieve the avg\_fragmentation\_in\_percent and page\_count.  Yes, page count does make a difference when asking, "Do we need to defrag something with 2 pages?"
 
 An example of that call
 

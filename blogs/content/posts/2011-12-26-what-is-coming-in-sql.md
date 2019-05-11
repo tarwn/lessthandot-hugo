@@ -74,11 +74,11 @@ Columnar storage is new in SQL Server 2012, make sure to read the wiki for all y
   
 Before converting, use TRY_CONVERT that will tell you if the value can be converted to the data type you want
 
-[SQL Server Code Name “Denali” CTP3 Product Guide available for download][16]
+[SQL Server Code Name "Denali" CTP3 Product Guide available for download][16]
   
 There is some cool documentation available, this includes white papers and videos
 
-[Microsoft SQL Server, codename “Denali”, will be the last release to support OLE DB, ODBC is the new new thing][17]
+[Microsoft SQL Server, codename "Denali", will be the last release to support OLE DB, ODBC is the new new thing][17]
   
 Looks like OLE DB has run its course, ODBC is the new thing
 

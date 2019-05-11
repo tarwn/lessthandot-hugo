@@ -143,7 +143,7 @@ Add a new parameter to the report and make the following changes
 
   1. Data Type = String
   2. Allow blank value
-  3. Select Non-Queried under the “Available values” section
+  3. Select Non-Queried under the "Available values" section
   4. Make Label <blank></blank>
   5. rary1.InstanceSearch.InstanceFinder() as an expression in the Value option
 

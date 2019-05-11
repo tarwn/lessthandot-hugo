@@ -32,7 +32,7 @@ _Wednesday, February 22, 5:30 pm Central_
 
 [MADPASS SQL Server User Group][4]
 
-I'll be giving an abbreviated version of the same presentation for “my” user group. If you're in the Madison area, make plans to attend! You'll also get to hear a great presentation from Bob Pusateri ([twitter][5] | [blog][6]) about backups and recovery.
+I'll be giving an abbreviated version of the same presentation for "my" user group. If you're in the Madison area, make plans to attend! You'll also get to hear a great presentation from Bob Pusateri ([twitter][5] | [blog][6]) about backups and recovery.
 
 Make Your Voice Heard
 

@@ -21,7 +21,7 @@ tags:
 ---
 Recently I decided to start doing JavaScript [code katas.][1] I've been using JavaScript for around ten years, but there there are still a lot of aspects I don't know well or that I could use more practice in. Case in point, I had never used a unit testing framework with javascript. Having never unit tested JavaScript before, I used a scientific tool to carefully select from amongst the numerous unit testing packages available.
 
-I typed “javascript unit testing” into Google and started reading.
+I typed "javascript unit testing" into Google and started reading.
 
 ## jsTestDriver
 
@@ -63,7 +63,7 @@ This tells jsTestDriver to run all available tests (based on the settings in the
 
 Once we have gotten this far, we can start writing some simple tests.
 
-In each directory (src and src-test), create a file named “mystuff.js”.
+In each directory (src and src-test), create a file named "mystuff.js".
 
 **src/mystuff.js**
 
@@ -140,7 +140,7 @@ Tests failed: Tests failed. See log for details.
 
 The top reflects the tests that have run at a glance with .s for passing tests, Fs for failed, and E for errored. Afterwards we get a summary of the total counts and then a section for the one browser we ran with. jsTestDriver allows you to capture multiple browsers, so we could configure this to run our tests across chrome, firefox, and IE simultaneously.
 
-jsTestDriver also supports “setup” and “teardown” functions to run before and after tests. 
+jsTestDriver also supports "setup" and "teardown" functions to run before and after tests. 
 
 ## Qunit
 
@@ -221,7 +221,7 @@ Opening the testrunner html file, we should now see it display a block for each 
   <img src="http://www.tiernok.com/LTDBlog/jsunittest/qunit.png" alt="QUnit Results" /><br /> QUnit Results
 </div>
 
-Failed tests automatically display details. Any test can be toggled open/closed by clicking it's name, and a handy “rerun” button lets us re-run a single test.
+Failed tests automatically display details. Any test can be toggled open/closed by clicking it's name, and a handy "rerun" button lets us re-run a single test.
 
 ## Combining Them
 

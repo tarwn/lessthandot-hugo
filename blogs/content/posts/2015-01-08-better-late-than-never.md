@@ -13,7 +13,7 @@ categories:
   - Uncategorized
 
 ---
-Just like [last year][1], I'm a bit late with the obligatory “how was last year and what is this year supposed to bring” blog post. Anyway, here it is. Let's start by wishing every one of you the very best for the new year. I hope 2015 may bring us many professional highlights, next to a fulfilling private life.
+Just like [last year][1], I'm a bit late with the obligatory "how was last year and what is this year supposed to bring" blog post. Anyway, here it is. Let's start by wishing every one of you the very best for the new year. I hope 2015 may bring us many professional highlights, next to a fulfilling private life.
 
 [<img class="alignnone size-medium wp-image-3148" src="/wp-content/uploads/2015/01/fireworks-300x200.jpg" alt="fireworks" width="300" height="200" srcset="/wp-content/uploads/2015/01/fireworks-300x200.jpg 300w, /wp-content/uploads/2015/01/fireworks-1024x682.jpg 1024w, /wp-content/uploads/2015/01/fireworks.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px" />][2]
 

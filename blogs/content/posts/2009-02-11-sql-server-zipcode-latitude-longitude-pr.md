@@ -142,7 +142,7 @@ Where  Longitude Between @MinLongitude And @MaxLongitude
        And Latitude Between @MinLatitude And @MaxLatitude
        And dbo.CalculateDistance(@Longitude, @Latitude, Longitude, Latitude) <= 20
 ```
-You could also use this for a “store locator”. On a website, potential customers could enter their zipcode and you could present a list of top 5 closest stores.
+You could also use this for a "store locator". On a website, potential customers could enter their zipcode and you could present a list of top 5 closest stores.
   
 The query shown below assumes you have a Stores table with a ZipCode column.
 

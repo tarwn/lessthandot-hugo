@@ -26,7 +26,7 @@ I'm building a B2C website with Cosmos DB as the back-end store and starting wit
   </p>
 </div>
 
-In this post I'll also start exploring `User Authentications` as a separate document collection, rather than as additional fields on my User document. I've noticed in several past systems I've built API keys and authentication mechanisms as properties on Users, but recently started considering that, like my house keys, mixing properties of the user with authentication methods on a single “User” record has been making me uncomfortable.
+In this post I'll also start exploring `User Authentications` as a separate document collection, rather than as additional fields on my User document. I've noticed in several past systems I've built API keys and authentication mechanisms as properties on Users, but recently started considering that, like my house keys, mixing properties of the user with authentication methods on a single "User" record has been making me uncomfortable.
 
 <div id="attachment_9181" style="width: 236px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_202.png" alt="Defining People (Users) Separate from House Keys (User Authentication)" width="226" height="161" class="size-full wp-image-9181" />
@@ -109,7 +109,7 @@ When the redirect comes back from Twitter, it passed back account information th
   During the Twitter authentication challenge, there is an internal cookie to carry state between the call to twitter and callback. Once the account information has been parsed, however, that information exists purely in the HttpContext for that request.
 </div>
 
-To bridge the gap between receiving the Twitter information and being able to use it on the final redirect, we can register a second Cookie middleware and tell twitter to use that middleware's `AuthenticationScheme` for SignIn. This way, once the Twitter middleware has finished parsing the Claims, it will turn around and “SignIn” via the new Cookie Middleware. This writes the claims from Twitter to a new cookie for subsequent requests.
+To bridge the gap between receiving the Twitter information and being able to use it on the final redirect, we can register a second Cookie middleware and tell twitter to use that middleware's `AuthenticationScheme` for SignIn. This way, once the Twitter middleware has finished parsing the Claims, it will turn around and "SignIn" via the new Cookie Middleware. This writes the claims from Twitter to a new cookie for subsequent requests.
 
 [SampleCosmosCore2App/Startup.cs][4]
 
@@ -147,7 +147,7 @@ We'll add a new `/account/login/twitter` endpoint with a final callback of `/acc
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_205.png" alt="Addition of a &quot;Login with Twitter&quot; button" width="351" height="379" class="size-full wp-image-9185" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_205.png 351w, /wp-content/uploads/2018/04/aspnetcore2cosmos_205-278x300.png 278w" sizes="(max-width: 351px) 100vw, 351px" />
   
   <p class="wp-caption-text">
-    Addition of a “Login with Twitter” button
+    Addition of a "Login with Twitter" button
   </p>
 </div>
 
@@ -203,10 +203,10 @@ public async Task<IActionResult> LoginWithTwitterContinueAsync(string returnUrl 
     return LocalRedirect(returnUrl ?? _membership.Options.DefaultPathAfterLogin);
 }
 ```
-The Twitter information comes back in the “ExternalCookie” we registered in the Startup configuration. We'll add a method to `CosmosDBMembership` to create a `LoginSession` just like we do with a username/password, except for a third-party identity instead. The last step is to clean up the “External Cookie” using it's `SignOut` method.
+The Twitter information comes back in the "ExternalCookie" we registered in the Startup configuration. We'll add a method to `CosmosDBMembership` to create a `LoginSession` just like we do with a username/password, except for a third-party identity instead. The last step is to clean up the "External Cookie" using it's `SignOut` method.
 
 <div class="note-area">
-  Originally I added the <code>SignOut</code> for cleanliness, but it was later pointed out to me that this is extra overhead going across the wire on every Request/Response and, in some cases, can actually result in “Request Too Long” web server errors if you stack up too many cookies.
+  Originally I added the <code>SignOut</code> for cleanliness, but it was later pointed out to me that this is extra overhead going across the wire on every Request/Response and, in some cases, can actually result in "Request Too Long" web server errors if you stack up too many cookies.
 </div>
 
 ### Registration Endpoints
@@ -217,7 +217,7 @@ The registration flow is similar to the login flow, but we need one additional e
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_206.png" alt="&quot;Continue with Twitter&quot; on Register Form" width="347" height="395" class="size-full wp-image-9186" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_206.png 347w, /wp-content/uploads/2018/04/aspnetcore2cosmos_206-264x300.png 264w" sizes="(max-width: 347px) 100vw, 347px" />
   
   <p class="wp-caption-text">
-    “Continue with Twitter” on Register Form
+    "Continue with Twitter" on Register Form
   </p>
 </div>
 
@@ -340,14 +340,14 @@ public async Task<IActionResult> RegisterWithTwitterContinueAsync(RegisterWithTw
     return LocalRedirect(_membership.Options.DefaultPathAfterLogin);
 }
 ```
-Once again, the last step in the process is to SignOut of the “ExternalCookie”, cleaning up after the stored Twitter information.
+Once again, the last step in the process is to SignOut of the "ExternalCookie", cleaning up after the stored Twitter information.
 
 ## Membership and Persistence
 
 The changes for the membership object are fairly light. We need to be able to:
 
   * `Register(username, email, "Twitter", twitterId)`: Register a new account w/ Twitter authentication
-  * `Login("Twitter", twitterId)`: Login with “Twitter” authentication
+  * `Login("Twitter", twitterId)`: Login with "Twitter" authentication
 
 These will expose the new Persistence methods we need against Cosmos DB.
 
@@ -422,9 +422,9 @@ public class CosmosDBMembership : ICustomMembership
 ```
 The Login method is straightforward: Find a user that has a UserAuthentication of Twitter with the given twitter id. If we can't find a user, we don't know who they are.
 
-Registration is a little trickier. We have to create and store both a `LoginUser` and `LoginUserAuthentication` object to successfully register the user and we need the generated `id` from the `LoginUser` that Cosmos DB generates from that save to populate the `UserId` property on the “LoginUserAuthentication</code> before saving. So we create both classes, populate the `UserId` in between saves, and if the second save fails for any reason we delete the initial `LoginUser` document.
+Registration is a little trickier. We have to create and store both a `LoginUser` and `LoginUserAuthentication` object to successfully register the user and we need the generated `id` from the `LoginUser` that Cosmos DB generates from that save to populate the `UserId` property on the "LoginUserAuthentication</code> before saving. So we create both classes, populate the `UserId` in between saves, and if the second save fails for any reason we delete the initial `LoginUser` document.
 
-I'm not sure that I like the “Twitter” string being passed around, so you can see I've switched to an enumerated value for Persistence and will likely refactor that back up the stack later.
+I'm not sure that I like the "Twitter" string being passed around, so you can see I've switched to an enumerated value for Persistence and will likely refactor that back up the stack later.
 
 Persistence needs some additional setup to create the new DocumentCollection, a method to retrieve a `LoginUser` document for a given Twitter identity, ability to Delete a user document, and methods to create and check given Twitter identities in the system.
   
@@ -515,7 +515,7 @@ These all follow naturally from the methods created for prior posts.
 
 ## Wrapping Up, Next Steps
 
-Adding Twitter as an alternative interactive login method was pretty easy, once I figured out how the Middleware worked behind the scenes. Adding a second or third method would also be relatively easy, though I would likely want to use the Middleware options to remap specific claims like “urn:twitter:userid” and the matching value for LinkedIn or others to a common set of named claims to funnel redirects into a common set of callback URls.
+Adding Twitter as an alternative interactive login method was pretty easy, once I figured out how the Middleware worked behind the scenes. Adding a second or third method would also be relatively easy, though I would likely want to use the Middleware options to remap specific claims like "urn:twitter:userid" and the matching value for LinkedIn or others to a common set of named claims to funnel redirects into a common set of callback URls.
 
 Next up is the final Authentication post, adding in a per-request API key/secret method that relies on revocable API keys the user will manage as additional `LoginUserAuthentication` identities.
 

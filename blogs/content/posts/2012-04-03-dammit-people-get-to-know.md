@@ -56,7 +56,7 @@ You get this error message back
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the CHECK constraint “ck_bla”. The conflict occurred in database “tempdb”, table “dbo.SomeTable”, column 'code'.
+The INSERT statement conflicted with the CHECK constraint "ck_bla". The conflict occurred in database "tempdb", table "dbo.SomeTable", column 'code'.
   
 The statement has been terminated._
 
@@ -83,7 +83,7 @@ insert SomeTable2 values ('100')
 
 _Msg 547, Level 16, State 0, Line 2
   
-The INSERT statement conflicted with the CHECK constraint “ck_SomeTable2”. The conflict occurred in database “tempdb”, table “dbo.SomeTable2”, column 'SomeCol'.
+The INSERT statement conflicted with the CHECK constraint "ck_SomeTable2". The conflict occurred in database "tempdb", table "dbo.SomeTable2", column 'SomeCol'.
   
 The statement has been terminated._
 

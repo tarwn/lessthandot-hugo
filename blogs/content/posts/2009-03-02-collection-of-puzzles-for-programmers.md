@@ -26,7 +26,7 @@ The goal is to identify all friday the thirteenths for a given timeframe
 
 **[Regular Pentagon][2]**
   
-Given a grid co-ordinate (x,y) as the centre point of a regular pentagon, and the sum of the length of the sides, return the co-ordinates of each point as: “Top”, “MidLeft”, “MidRight”, “BottomLeft”, “BottomRight” and the distance from the centre to each of the points.
+Given a grid co-ordinate (x,y) as the centre point of a regular pentagon, and the sum of the length of the sides, return the co-ordinates of each point as: "Top", "MidLeft", "MidRight", "BottomLeft", "BottomRight" and the distance from the centre to each of the points.
 
 **[ASCII Art Shapes][3]**
   
@@ -74,7 +74,7 @@ Write a program that will take two dates as inputs, and output the number of wee
 
 **[Hello World! For Hackers][11]**
   
-Create the most unique way of writing “Hello World” – the more fantastic, cryptic, oddball the better 
+Create the most unique way of writing "Hello World" – the more fantastic, cryptic, oddball the better 
 
 **[Calculate the moon phase][12]**
   

@@ -17,11 +17,11 @@ tags:
   - sql server profiler
 
 ---
-Stop me if you've heard this one...a programmer walks up to a DBA and says, “The database is slow.” 
+Stop me if you've heard this one...a programmer walks up to a DBA and says, "The database is slow." 
 
 One of the many performance tuning and troubleshooting tools in the SQL Server DBA toolbelt is Profiler. You pick events you want to see, set up a trace, and watch the events roll by. The problem is that this graphical tool, especially when run from a workstation, can place a heavy load on the server. 
 
-A better way to perform a trace of events is to run it on the server. I was asked to do this at work last week, and had to say, “I don't know how to do that.” I learned something new, and I want to share it with you! 
+A better way to perform a trace of events is to run it on the server. I was asked to do this at work last week, and had to say, "I don't know how to do that." I learned something new, and I want to share it with you! 
 
 **Setting Up the Trace** 
 
@@ -37,7 +37,7 @@ Next, go to Events Selection and check your events. I've chosen a standard templ
   <img src="/wp-content/uploads/users/grrlgeek/ProfilerPropertiesEvents.JPG" alt="" title="" width="888" height="641" />
 </div>
 
-Click “Run” to begin the trace. I executed a stored procedure in my AdventureWorks database to make sure the trace was capturing data. 
+Click "Run" to begin the trace. I executed a stored procedure in my AdventureWorks database to make sure the trace was capturing data. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/users/grrlgeek/ProfilerRunning.JPG" alt="" title="" width="692" height="565" />

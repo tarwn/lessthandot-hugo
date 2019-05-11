@@ -30,7 +30,7 @@ So what actually happened with Kaspersky? Here is what ChannelWeb had to say abo
   
 > The hacker, known as Unu, posted screen shots as well as a list of tables Feb. 7 to a blog after hacking into the security company's Web site via a simple SQL injection attack that allowed information to be exposed by entering secret username and password information.
 > 
-> “Kaspersky is one of the leading companies in the security and antivirus market. It seems as though they are not able to secure their own databases,” the hacker said on a hackerblog.org posting. “Alter one of the parameters and you have access to EVERYTHING: users, activation codes, lists of bugs, admins, shop, etc.”
+> "Kaspersky is one of the leading companies in the security and antivirus market. It seems as though they are not able to secure their own databases," the hacker said on a hackerblog.org posting. "Alter one of the parameters and you have access to EVERYTHING: users, activation codes, lists of bugs, admins, shop, etc."
 
 You can read that whole article here: http://www.crn.com/security/213401972
 

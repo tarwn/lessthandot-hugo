@@ -116,7 +116,7 @@ CREATE TABLE [dbo].[Upd_DimEmployee](
 </p>
 
 <p style="text-align: justify">
-  Move your cursor to the first line, right after “= u.” and simply paste the columns.
+  Move your cursor to the first line, right after "= u." and simply paste the columns.
 </p>
 
 <p style="text-align: justify">

@@ -160,4 +160,4 @@ But 20 seconds was still not acceptable.
 
 I'm so glad I figured this out as it was not going to be nice for users to sit and wait for 20 seconds just to pull in a few hundred orders.
 
-So put a little note in your mental toolbox on the “table variable” slot: Note: this tool can occasionally cause terrible performance. Try a regular temp table if you have problems.
+So put a little note in your mental toolbox on the "table variable" slot: Note: this tool can occasionally cause terrible performance. Try a regular temp table if you have problems.

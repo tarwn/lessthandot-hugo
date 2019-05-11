@@ -17,7 +17,7 @@ tags:
 ---
 I am reading this very good book. It&#8217;s called [Head first Design Patterns by Eric Freeman & Elisabeth Freeman][1]. It covers all the basic design patterns an OO-developer could ever use. Actualy, if you are doing OO programming you might see that you were already using some of these patterns but didn&#8217;t know it. Alle the patterns are quite well explained in a simple matter. And we all know what Einstein said about explaining things simple. But for those of you who didn&#8217;t.
 
-> [“If you can&#8217;t explain it simply, you don&#8217;t understand it well enough”][2]
+> ["If you can&#8217;t explain it simply, you don&#8217;t understand it well enough"][2]
 
 So clearly Eric and Elisabeth have grocked design patterns.
 

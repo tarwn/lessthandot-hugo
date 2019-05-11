@@ -22,7 +22,7 @@ tags:
 
 The answer lies in a very simple query and a little logging.
 
-_Aaron Nelson (<a href="https://twitter.com/#!/sqlvariant" title="@SQLVariant on twitter" alt="@sqlvariant on twitter">twitter</a>|[blog][1]) is hosting [T-SQL Tuesday][2] this month with the topic of “Logging”. Check out [his post][2] for a list of other T-SQL Tuesday posts this month and congratulate him on speaking at TechEd on Tuesday morning (he's denied being the loud powershell fan in the keynote, btw)._
+_Aaron Nelson (<a href="https://twitter.com/#!/sqlvariant" title="@SQLVariant on twitter" alt="@sqlvariant on twitter">twitter</a>|[blog][1]) is hosting [T-SQL Tuesday][2] this month with the topic of "Logging". Check out [his post][2] for a list of other T-SQL Tuesday posts this month and congratulate him on speaking at TechEd on Tuesday morning (he's denied being the loud powershell fan in the keynote, btw)._
 
 ## The Setup
 

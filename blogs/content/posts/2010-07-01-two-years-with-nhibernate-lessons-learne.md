@@ -19,7 +19,7 @@ tags:
 ---
 I realized the other day that it's been nearly two years since I wrote a [series of posts][1] as I was learning to use NHibernate for data access. I haven't really blogged a whole lot about NHibernate (I leave that to our resident expert, Chris) but I've certainly been working with it a bit. And I've learned to like it a lot. 
 
-A little background on what I've been doing – the recipe tracker app I was using as a sort of “hello world” has increased greatly in scope (good thing that never happens in our day jobs, right 😉 ). It has gone from a desktop app to a slightly better desktop app before reaching its current state as a web application. In the process it has also gone from using an embedded database for the back end to a full blown RDBMS. The only thing that's remained constant is the data access code, and I think that's kind of beautiful.
+A little background on what I've been doing – the recipe tracker app I was using as a sort of "hello world" has increased greatly in scope (good thing that never happens in our day jobs, right 😉 ). It has gone from a desktop app to a slightly better desktop app before reaching its current state as a web application. In the process it has also gone from using an embedded database for the back end to a full blown RDBMS. The only thing that's remained constant is the data access code, and I think that's kind of beautiful.
 
 I thought it may be worth writing down some of the things I've learned in the process so that I don't forget them later. Most items discussed probably apply to **any** ORM but, since my experience is specific to NHibernate, I will keep things focused there.
 

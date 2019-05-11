@@ -30,7 +30,7 @@ If a job fails, you can don't have check the history of the job in SSMS to see w
 
 The history will be displayed on the lower section and you can expand each run of the job. Find the failed execute of the job that you want more information about and expand it. If you hover over the message it will pop up displaying the whole message. The problem is that it disappears really fast and can be annoying or hard to read if it is long.
 
-So here is today's tip! Right click on the message and choose “View Message”. Now the message opens in a pop up window that you can change the size of, highlight and copy and paste the details. When you are finished reading it, you can close it.
+So here is today's tip! Right click on the message and choose "View Message". Now the message opens in a pop up window that you can change the size of, highlight and copy and paste the details. When you are finished reading it, you can close it.
 
 <div class="image_block">
   <a href="/wp-content/uploads/users/kconan/DMJobMessage2.jpg?mtime=1337826030"><img alt="" src="/wp-content/uploads/users/kconan/DMJobMessage2.jpg?mtime=1337826030" width="905" height="441" /></a>

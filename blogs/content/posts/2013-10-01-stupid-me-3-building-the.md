@@ -6,7 +6,7 @@ date: 2013-10-01T13:05:00+00:00
 ID: 2162
 excerpt: |
   After over 6 months of silence, it is time again for another Stupid me™®©! For those unfamiliar with the concept:
-  Every time I do something “stupid”, which happens from time to time, I'll do a little blog post on what happened and how I solved it. The&hellip;
+  Every time I do something "stupid", which happens from time to time, I'll do a little blog post on what happened and how I solved it. The&hellip;
 url: /index.php/datamgmt/ssis/stupid-me-3-building-the/
 views:
   - 150710
@@ -28,7 +28,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <em>Every time I do something “stupid”, which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb</em>: <em>“It's only stupid if you don't turn it into a learning experience”. Okay, I might have made that last one up...</em>
+  <em>Every time I do something "stupid", which happens from time to time, I'll do a little blog post on what happened and how I solved it. The reason for this is twofold: I'll have a solution online I can consult if it happens again and other people can benefit from my mistakes as well. Because remember the ancient Chinese proverb</em>: <em>"It's only stupid if you don't turn it into a learning experience". Okay, I might have made that last one up...</em>
 </p>
 
 <p style="text-align: justify;">

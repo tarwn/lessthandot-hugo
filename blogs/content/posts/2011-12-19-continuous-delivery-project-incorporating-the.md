@@ -33,7 +33,7 @@ This is the fourth post in a multi-part series on my Continuous Delivery pipelin
 
 ## Run the Build
 
-With the automated build already polling changes from the source code repository, this process actually started while I was still writing the initial unit tests for the prior post. With the little red “failed build” dot as my guide, and the ever present twitter bot reminding me on each broken commit, I ended up working on both the unit tests and the server configuration in overlapping steps.
+With the automated build already polling changes from the source code repository, this process actually started while I was still writing the initial unit tests for the prior post. With the little red "failed build" dot as my guide, and the ever present twitter bot reminding me on each broken commit, I ended up working on both the unit tests and the server configuration in overlapping steps.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_firstfail.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_firstfail.png" title="Failing Unit Test Build" /></a><br /> Failing Unit Test Build
@@ -49,7 +49,7 @@ Once the install was completed and I had patched Visual Studio up to date, I was
 
 ## Run the Tests in the Build
 
-At this point I am building the test project every time the build runs, but I'm not actually running any of the tests. In order to run the tests, I am going to drop to the command line and run the MS Test executable directly. To execute a command directly as a build step, I'll add a “Windows Batch Command” step to the “Build” section of my CI Build job.
+At this point I am building the test project every time the build runs, but I'm not actually running any of the tests. In order to run the tests, I am going to drop to the command line and run the MS Test executable directly. To execute a command directly as a build step, I'll add a "Windows Batch Command" step to the "Build" section of my CI Build job.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_command.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration – New Windows Batch Command
@@ -65,9 +65,9 @@ At this point, I can run the build again but it doesn't show anything different 
 
 ## Integrating the Test Run
 
-To integrate the MS Test results into Jenkins, I'll use a plugin to map the MS Test format to a format that Jenkins natively understands (Junit XML results). A plugin is available from the “Manage Plugins” screen (Jenkins, Manage Jenkins, Manage Plugins, Click the Available Tab) to do this work for me. 
+To integrate the MS Test results into Jenkins, I'll use a plugin to map the MS Test format to a format that Jenkins natively understands (Junit XML results). A plugin is available from the "Manage Plugins" screen (Jenkins, Manage Jenkins, Manage Plugins, Click the Available Tab) to do this work for me. 
 
-After the plugin installs successfully, there is a new entry in the “Post-Build Actions” section of the job configuration. All I need to do is check the new “Publish MSTest test result report” checkbox and enter the path I used above for the result files. 
+After the plugin installs successfully, there is a new entry in the "Post-Build Actions" section of the job configuration. All I need to do is check the new "Publish MSTest test result report" checkbox and enter the path I used above for the result files. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_results.png" title="Jenkins Configuration - New Windows Batch Command" /></a><br /> Jenkins Configuration – New Windows Batch Command
@@ -79,7 +79,7 @@ Now when I run the build again, a new section shows up on the run summary screen
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_success.png" title="Jenkins Configuration - Successful Job w/ Unit Tests" /></a><br /> Jenkins Configuration – Successful Job w/ Unit Tests
 </div>
 
-In addition to the test information, there is also a new menu item on the left side named “History”. Clicking this will show historical information on the test runs, including a graph of the execution times and test counts. 
+In addition to the test information, there is also a new menu item on the left side named "History". Clicking this will show historical information on the test runs, including a graph of the execution times and test counts. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_history_lg.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/unittest_history.png" title="Jenkins Configuration - Unit Test History" /></a><br /> Jenkins Configuration – Unit Test History

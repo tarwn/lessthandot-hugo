@@ -19,7 +19,7 @@ Recently I was working on an application with rich C# objects that I wanted to s
 
 ## Case 1: Strongly Typed Identities to SQL ints
 
-A complex web application can end up passing object id's through any number of controller methods, business functions, or storage calls. It's not hard to end up with a smattering of integer or GUIDs in the application to represent the id values, with limited meaning when appended to error messages, serialized, or represented in tests. Though it's nice to see functions with strongly types ID objects (and error messages that don't tell you “4 could not be found”), this can switch to a nuisance at API and database borders when it comes time to save or communicate those complex types.
+A complex web application can end up passing object id's through any number of controller methods, business functions, or storage calls. It's not hard to end up with a smattering of integer or GUIDs in the application to represent the id values, with limited meaning when appended to error messages, serialized, or represented in tests. Though it's nice to see functions with strongly types ID objects (and error messages that don't tell you "4 could not be found"), this can switch to a nuisance at API and database borders when it comes time to save or communicate those complex types.
 
 Here's an example Identity object (T4 generated):
 
@@ -130,7 +130,7 @@ lock (_lock)
     }
 }
 ```
-I can only register a mapper for a given type once, so I use a lock statement and see if my custom type is registered before attempting to register my increasingly poorly named “IdentityMapper”. I am actually registering this for anything that we attempt to load or save from that Assembly, which also includes objects like the UserStep one above. 
+I can only register a mapper for a given type once, so I use a lock statement and see if my custom type is registered before attempting to register my increasingly poorly named "IdentityMapper". I am actually registering this for anything that we attempt to load or save from that Assembly, which also includes objects like the UserStep one above. 
 
 _Note: There are overloads to register for specific types instead of an entire assembly, but they weren't working for me and I didn't dig deep enough to determine what I had done wrong since I ended up wanting custom mapping for other objects in that assembly also._
 

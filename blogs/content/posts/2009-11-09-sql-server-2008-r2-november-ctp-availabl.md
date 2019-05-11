@@ -25,7 +25,7 @@ Last week I wrote that [SQL Server 2008 R2 Editions pricing has been announced][
 
 Go to http://www.microsoft.com/sqlserver/2008/en/us/R2.aspx to get more information and to download!
 
-The November CTP is “feature complete” so try out the new features in this CTP release which include: 
+The November CTP is "feature complete" so try out the new features in this CTP release which include: 
 
   * Support for Windows Server 2008 R2, including Hyper-V with Live Migration 
   * Enhanced data compression with support for Unicode UCS-2 

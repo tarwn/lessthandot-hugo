@@ -43,7 +43,7 @@ Below is a list of the 10 keywords that people have used in search engines to ge
     Same as number two 
   8. [sp_executesql][8]  
     A post showing that changing exec to sp_executesql doesn't provide any benefit if you are not using parameters correctly 
-  9. [sql server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. a system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. for more information about enabling 'xp_cmdshell', see “surface area configuration” in sql server books online.][9]  
+  9. [sql server blocked access to procedure 'sys.xp\_cmdshell' of component 'xp\_cmdshell' because this component is turned off as part of the security configuration for this server. a system administrator can enable the use of 'xp\_cmdshell' by using sp\_configure. for more information about enabling 'xp_cmdshell', see "surface area configuration" in sql server books online.][9]  
     How to enable xp_cmdshell and Ad Hoc Distributed Queries on SQL Server 2005 
  10. [mssql create xml file][10]  
     A post explaining how to create XML files out of SQL Server with SSIS and FOR XML syntax 

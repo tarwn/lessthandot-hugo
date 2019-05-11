@@ -27,7 +27,7 @@ Internet Explorer 9 is available for a test drive
 
 Microsoft detailed its support for a number of HTML5 specifications, including CSS3, Scalable Vector Graphics (SVG), XHTML parsing, and the video and audio tags using industry-standard (H.264/MPEG4 and MP3/AAC) codecs, among others. In addition, Microsoft demonstrated a new JavaScript engine that uses the multiple cores of today's modern chips to effectively manage computing resources and improve Web performance. By combining increased interoperability with a new JavaScript engine and Direct 2D technology, Internet Explorer 9 enables Web developers to provide users with richer experiences that render more quickly and consistently.
 
-The new IE 9 script engine is codenamed “Chakra”
+The new IE 9 script engine is codenamed "Chakra"
   
 Internet Explorer 9 focuses on three key themes:
 

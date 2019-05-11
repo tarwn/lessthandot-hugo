@@ -22,7 +22,7 @@ tags:
 ---
 Few days ago my colleague showed me strange behavior of SQL Server's 2008 RTM MERGE statement. Although this is corrected in SP1 1 or more probably in CU1 (there is [bug solved in CU1][1] connected to this – imo), I do believe its worth to be mentioned.
 
-If you try to update parent column (column referenced by foreign key) even with the same value it fails with message “<span style="font-family: courier new,courier;">The MERGE statement conflicted with the REFERENCE constraint</span>” when index used for FK relationship is NONCLUSTERED. It does not matter if this index is primary key, unique constraint or non-filtered unique key (those are options you can use for FK). Moreover, it does not matter if there is (or there's not) some other clustered index. It also does not matter if child table has indexes, clustered or non-clustered.
+If you try to update parent column (column referenced by foreign key) even with the same value it fails with message "<span style="font-family: courier new,courier;">The MERGE statement conflicted with the REFERENCE constraint</span>" when index used for FK relationship is NONCLUSTERED. It does not matter if this index is primary key, unique constraint or non-filtered unique key (those are options you can use for FK). Moreover, it does not matter if there is (or there's not) some other clustered index. It also does not matter if child table has indexes, clustered or non-clustered.
 
 How to reproduce:
 
@@ -49,7 +49,7 @@ Example:
 
 UPDATE:
 
-Simmilar issue was found by Alexander Kuznetsov in [“Trusted” Foreign Keys Allow Orphans, Reject Valid Child Rows][2] for SQL Server 2008 R2.
+Simmilar issue was found by Alexander Kuznetsov in ["Trusted" Foreign Keys Allow Orphans, Reject Valid Child Rows][2] for SQL Server 2008 R2.
 
  [1]: http://support.microsoft.com/kb/956718
  [2]: http://sqlblog.com/blogs/alexander_kuznetsov/archive/2011/10/17/trusted-foreign-keys-allow-orphans-reject-valid-child-rows.aspx

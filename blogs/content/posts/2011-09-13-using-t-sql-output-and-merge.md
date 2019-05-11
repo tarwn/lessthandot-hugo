@@ -92,7 +92,7 @@ Which brings us to MERGE.
 
 MERGE was added in SQL 2008 and allows us to define a source dataset, target data set, and rules to insert or update data from that source to the target. While we don't really need the rules and update capability, what it also provides is simultaneous access to both datasets AND support for OUTPUT. Aha, I hear you saying.
 
-By forcing the merge to always perform an INSERT, we will satisfy our needs for inserting the data into the “New” tables as well as have the capability to capture both the original and new key in a single OUTPUT statement.
+By forcing the merge to always perform an INSERT, we will satisfy our needs for inserting the data into the "New" tables as well as have the capability to capture both the original and new key in a single OUTPUT statement.
 
 ```sql
 CREATE TABLE #ID_Transfer(new_key int, old_key int);

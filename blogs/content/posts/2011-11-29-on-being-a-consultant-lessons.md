@@ -19,7 +19,7 @@ And has it ever been an adventure. I won't lie, there have been a couple of mome
 
 **Ask questions** 
 
-I don't know everything – about the office, about the clients, about the projects, or about technology. There are the typical “new job” questions – where are the bathrooms? Where is the coffee? Where is my desk? There's adjusting to new coworkers, new IM software, a new email address, and remembering to drive to the correct office. 
+I don't know everything – about the office, about the clients, about the projects, or about technology. There are the typical "new job" questions – where are the bathrooms? Where is the coffee? Where is my desk? There's adjusting to new coworkers, new IM software, a new email address, and remembering to drive to the correct office. 
 
 In addition to that, rather than working for one company, I've been working on multiple projects for multiple clients since day one. I have to learn about new industries. There are new acronyms (this is not limited just to IT, believe it or not), new laws, and new business models. This is scary. I've had a lot of questions. 
 

@@ -44,7 +44,7 @@ What sticks with me most through this: I remember all of my teacher's and mentor
 
 **A Question, and An Answer**
 
-At SQL Saturday 50 East Iowa, after my WIT lunch session, a woman asked me, “If you had a daughter, would you _really_ encourage her to get into IT?” My answer, in less than a heartbeat, was, “Yes, if she loved it.” 
+At SQL Saturday 50 East Iowa, after my WIT lunch session, a woman asked me, "If you had a daughter, would you _really_ encourage her to get into IT?" My answer, in less than a heartbeat, was, "Yes, if she loved it." 
 
 I don't have kids, but I actively encourage my nephew and nieces to work on their math and science homework as much as their reading and their art. They all know that I work with computers, and that I love it. If they show an interest in it as they get older, I'll be more than happy to mentor them and support them. 
 

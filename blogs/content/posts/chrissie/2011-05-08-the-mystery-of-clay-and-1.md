@@ -38,11 +38,11 @@ Over the last 2 days [I played with Clay][1] because a certain [Scott Hanselman]
           
 > Console.WriteLine(plant.Length);
 > 
-> But remove the “ref” keyword, and it’ll work…
+> But remove the "ref" keyword, and it’ll work…
 > 
 > WHAT’S GOING ON
 > 
-> In C#, “ref” parameters are explicitly stated at the callsite (except in the case of COM where the ref keyword can be omitted). In VB, the “ByRef” modifier is only needed on the declaration.
+> In C#, "ref" parameters are explicitly stated at the callsite (except in the case of COM where the ref keyword can be omitted). In VB, the "ByRef" modifier is only needed on the declaration.
 > 
 > So what happens in VB late-binding is that it always assumes ByRef parameter, just in case.
 > 
@@ -54,7 +54,7 @@ Over the last 2 days [I played with Clay][1] because a certain [Scott Hanselman]
 > 
 > var argValues = Expression.NewArrayInit(typeof(object), args.Select(x => Expression.Convert(x.Expression, typeof(Object))));
 > 
-> which, in the case of a ByRef parameter, just copies the “ByRefness” over into the lambda it generates. This function needs to be modified to remove ByRefness if it was there.
+> which, in the case of a ByRef parameter, just copies the "ByRefness" over into the lambda it generates. This function needs to be modified to remove ByRefness if it was there.
 > 
 > Personally, I think that expression trees are just difficult to work with correctly. Whenever you write code that consumes expression trees you have to do an enormous amount of testing to make sure you cover every possible input tree. It’s hard for people to do this comprehensively.
 > 
@@ -62,7 +62,7 @@ Over the last 2 days [I played with Clay][1] because a certain [Scott Hanselman]
 > 
 > You observed that AnonymousTypes have slightly different codegen between VB and C#. That doesn’t matter in this case – the same issue manifests with named types, or even with arrays as I used above.
 > 
-> You observed that VB and C# use entirely different mechanisms for doing late-bound invocation. VB simply calls straight into its existing late-binder. C# does a whole lot more, keeping a local “cache” of the most recent dynamic resolution in its method. But those things don’t matter either.
+> You observed that VB and C# use entirely different mechanisms for doing late-bound invocation. VB simply calls straight into its existing late-binder. C# does a whole lot more, keeping a local "cache" of the most recent dynamic resolution in its method. But those things don’t matter either.
 > 
 > &#8212;
 > 

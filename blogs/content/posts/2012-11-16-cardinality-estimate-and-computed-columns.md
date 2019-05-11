@@ -128,6 +128,6 @@ Given the computed column and persisted nature, the estimated versus actual rows
 
 Utilizing computed columns can be extremely effective for tuning certain queries to resolve cardinality issues.  While this can be effective, having the persisted setting on or off is vital to the overall effectiveness of the computed column. When creating computed columns, persisted or not, take care in the time it may take to ALTER the table based on the number of rows, data types utilized for the columns in the expression for the computed column and overall, time that may be used with high level locks that can cause severe blocking.
 
-To read more on the selectivity estimate, “[Statistics on Computed Columns][1]” by Benjamin Nevarez.
+To read more on the selectivity estimate, "[Statistics on Computed Columns][1]" by Benjamin Nevarez.
 
  [1]: http://www.benjaminnevarez.com/2011/06/statistics-on-computed-columns/

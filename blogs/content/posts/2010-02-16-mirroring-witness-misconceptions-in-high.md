@@ -25,7 +25,7 @@ tags:
 ---
 ## Concepts in Mirroring
 
-I wanted to start writing a series of blogs on mirroring to share what I've learned over the years since SQL Server 2005 gave us the ability to setup mirroring for High Availabtility (HA). Before we go into that I want to go over the operating modes that we have in mirroring. We truly have two configurations for mirroring, Asynchronous and Synchronous. These are better known as operating modes High Availability, High Performance and High Protection. In my personal daily methods as a DBA, I think we can focus on there essentially being two modes of operation, High Availability and High Performance. High Protection is a sound method of mirroring but typically a setup that does not need to be done. This simply says we are taking a witness out of the picture in mirroring which forces a manual failover in the event of a lose connection to a principal database. In most cases this is due to the thought process that a witness must be a fully licensed and “_hard core_” database server much like the principal and mirror instances. In truth, we can use any edition including SQL Express for a witness so removing the witness in sychronous mirroring isn't very ideal given the addition of transaction latency from this mode. The first major key to go over in Asynchronous mirroring is that this type of mirroring is only available in Enterprise Edition (and Developer). Some misconceptions are that if we remove the witness from the mirroring landscape on Standard Edition, we achieve asynchronous mirroring. This is, however, not true. In this case we are running in Synchronous mode but without automatic failover or safety off. Transactions are still synchronized on both partners first even without the witness. So in short, we still have the added performance hit with synchronous mirroring but without automated failover abilities. To achieve true asynchronous mirroring we need Enterprise and the features it brings along with it. 
+I wanted to start writing a series of blogs on mirroring to share what I've learned over the years since SQL Server 2005 gave us the ability to setup mirroring for High Availabtility (HA). Before we go into that I want to go over the operating modes that we have in mirroring. We truly have two configurations for mirroring, Asynchronous and Synchronous. These are better known as operating modes High Availability, High Performance and High Protection. In my personal daily methods as a DBA, I think we can focus on there essentially being two modes of operation, High Availability and High Performance. High Protection is a sound method of mirroring but typically a setup that does not need to be done. This simply says we are taking a witness out of the picture in mirroring which forces a manual failover in the event of a lose connection to a principal database. In most cases this is due to the thought process that a witness must be a fully licensed and "_hard core_" database server much like the principal and mirror instances. In truth, we can use any edition including SQL Express for a witness so removing the witness in sychronous mirroring isn't very ideal given the addition of transaction latency from this mode. The first major key to go over in Asynchronous mirroring is that this type of mirroring is only available in Enterprise Edition (and Developer). Some misconceptions are that if we remove the witness from the mirroring landscape on Standard Edition, we achieve asynchronous mirroring. This is, however, not true. In this case we are running in Synchronous mode but without automatic failover or safety off. Transactions are still synchronized on both partners first even without the witness. So in short, we still have the added performance hit with synchronous mirroring but without automated failover abilities. To achieve true asynchronous mirroring we need Enterprise and the features it brings along with it. 
 
 The witness allows us to utilize the key aspect of mirroring in helping us protect the data and give us true high database availability (HA). However, the witness is not required and on many occasions omitted from the initial setup of mirroring when running in Synchronous mirroring. Sadly the safety is later found to be a requirement by the business only after the HA strategy is put into effect in the case of a disaster. If you have found that a witness is required after configuring mirroring, a full reconfiguration is not required. All we would need to do is set the witness endpoint up and then alter the principal database to set the witness. 
 
@@ -51,7 +51,7 @@ Books Online (BOL) does a good job in describing operating modes in my opinion. 
 > 
 > Instances are TK2008 (Standard), TK2008DEV (Developer) and TK2008DEV2 (Developer)
 > 
-> Our two Developer instances have a database “NEEDTOMOVE” mirrored running in high-performance without a witness. 
+> Our two Developer instances have a database "NEEDTOMOVE" mirrored running in high-performance without a witness. 
 > 
 > We want to get a witness in there now to show how common the misconception is that it will help for automating failover. 
 > 
@@ -108,7 +108,7 @@ ALTER DATABASE NEEDTOMOVE SET PARTNER OFF
 
 > This brings up another problem in getting our mirroring reconfigured. In the case of Asynchronous mirroring the databases are typically large, high transactional databases that are set geographically apart from each other. This adds hardships to configuring and starting mirroring. Getting the mirror database to the synchronization level enough to start mirroring can truly be an interesting task in itself. 
 > 
-> To read more on the impact of a witness on mirroring review, “[Asynchronous Database Mirroring (High-Performance Mode)][1]“
+> To read more on the impact of a witness on mirroring review, "[Asynchronous Database Mirroring (High-Performance Mode)][1]"
   
 > 
 > 
@@ -122,7 +122,7 @@ ALTER DATABASE NEEDTOMOVE SET PARTNER OFF
 > > 
 > > ## What's next?
 > > 
-> > I won't try to fool anyone. There are hundreds of, “Troubleshooting mirroring” blogs and whitepapers out there. What I thought may help a few people would be my own steps in troubleshooting. To do that I am going to follow this blog up with a setup of mirroring and then we'll break/fix it as we work through things.
+> > I won't try to fool anyone. There are hundreds of, "Troubleshooting mirroring" blogs and whitepapers out there. What I thought may help a few people would be my own steps in troubleshooting. To do that I am going to follow this blog up with a setup of mirroring and then we'll break/fix it as we work through things.
 > > 
 > > Until then..protect your data!
 

@@ -75,7 +75,7 @@ Windows does not allow for certain characters in file names
   
 : (colon)
   
-” (double quote)
+" (double quote)
   
 / (forward slash)
    

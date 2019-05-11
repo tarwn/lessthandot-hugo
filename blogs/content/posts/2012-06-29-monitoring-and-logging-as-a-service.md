@@ -30,11 +30,11 @@ This was the state of monitoring in the manufacturing world a decade ago, runnin
 
 ## But IT Demand is Continuing to Grow
 
-In IT, the most mature market for monitoring and data collection is infrastructure (systems and network). But “most mature” is [still behind][1]. The fact that so many systems barely have the concept of recipes for common monitoring targets, or lock our data behind such limited interfaces, leaves most of the commercial options closer to 15 years behind. 
+In IT, the most mature market for monitoring and data collection is infrastructure (systems and network). But "most mature" is [still behind][1]. The fact that so many systems barely have the concept of recipes for common monitoring targets, or lock our data behind such limited interfaces, leaves most of the commercial options closer to 15 years behind. 
 
 Software development lags even farther behind. 
 
-The current state of monitoring for most of the application world hovers between nonexistent and barely proactive. I have seen as many applications lacking even basic error logging as I have those with it, and the presence of even regular daily or weekly state checks has been even less prevalent. The state of application monitoring can be summed up as “We usually know when the system breaks, sometimes we get those messages immediately, and sometimes we actually read them”. 
+The current state of monitoring for most of the application world hovers between nonexistent and barely proactive. I have seen as many applications lacking even basic error logging as I have those with it, and the presence of even regular daily or weekly state checks has been even less prevalent. The state of application monitoring can be summed up as "We usually know when the system breaks, sometimes we get those messages immediately, and sometimes we actually read them". 
 
 This market is beginning to emerge more, and hopefully that movement will start driving more tool development. Somewhere between fixed value monitoring and reporting on unstructured log data, we are building more businesses that value transparency in our application behavior. And even though most of the tools are better suited to infrastructure or basic log parsing, there is still an enormous potential in that first level of visibility beyond logging to a local file or an email address.
 

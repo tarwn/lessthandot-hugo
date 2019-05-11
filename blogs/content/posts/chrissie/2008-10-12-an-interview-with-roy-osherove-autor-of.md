@@ -1,5 +1,5 @@
 ---
-title: An interview with Roy Osherove author of “The Art of Unit Testing”
+title: An interview with Roy Osherove author of "The Art of Unit Testing"
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2008-10-12T13:47:07+00:00

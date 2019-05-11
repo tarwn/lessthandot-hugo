@@ -24,11 +24,11 @@ To find out what catalogs you have do the following. (you can do this on any Win
 
 Click Start–>Search
   
-In the Right menu click “Change Preferences”
+In the Right menu click "Change Preferences"
   
-Then click “With Indexing Service (for faster local searches”
+Then click "With Indexing Service (for faster local searches"
   
-Then click “Change indexing service settings (advanced)
+Then click "Change indexing service settings (advanced)
 
 This opens the snap for indexing service. Write down you catalogs if you want to recreate them. Note: I found no valid reasoning to actually recreate these catalogs although I felt better putting the system back in the state it was.
 

@@ -71,9 +71,9 @@ Basically, we needed the customer-defined fields shown on the page grouped by th
 </CustomFieldList>
 ```
 
-In the framework that was developed to support the older bits of our application (bites tongue), there are at least two ways (probably more) to dump a normal ADO recordset into a node of the XML document used to render the page, but that wouldn't help because I needed a bit of structure to the data (I suppose that I could have made everything completely flat, but being as unskilled as I am with XSL I wanted to minimize the room for me to mess something up). Coding the transformation in VB6 wasn't really a valid option either because it would require untangling the rat's nest of existing VB6 code, and there just wasn't any time. Enter “For Xml”.
+In the framework that was developed to support the older bits of our application (bites tongue), there are at least two ways (probably more) to dump a normal ADO recordset into a node of the XML document used to render the page, but that wouldn't help because I needed a bit of structure to the data (I suppose that I could have made everything completely flat, but being as unskilled as I am with XSL I wanted to minimize the room for me to mess something up). Coding the transformation in VB6 wasn't really a valid option either because it would require untangling the rat's nest of existing VB6 code, and there just wasn't any time. Enter "For Xml".
 
-I'd never used For Xml to generate a nested xml output like this before, and the syntax proved to be just a little awkward for me. What I needed to do first was get the list of customers associated with the business entity being displayed, and then get the list of Customer Fields associated with each of them (along with any data that had already been entered for those fields). The actual query to retrieve it ended up being kind of nasty, so I won't hurt anyone's eyes with that. For the sake of the example, lets assume that everything for the inner bits of xml (the “Field” elements) comes from one table.
+I'd never used For Xml to generate a nested xml output like this before, and the syntax proved to be just a little awkward for me. What I needed to do first was get the list of customers associated with the business entity being displayed, and then get the list of Customer Fields associated with each of them (along with any data that had already been entered for those fields). The actual query to retrieve it ended up being kind of nasty, so I won't hurt anyone's eyes with that. For the sake of the example, lets assume that everything for the inner bits of xml (the "Field" elements) comes from one table.
 
 ```sql
 declare @caseid int
@@ -111,7 +111,7 @@ Group By CustomerTable.Id, CustomerTable.Name, CustomFieldsTable.Id
 Order By TypeId
 For Xml Path('CustomerFields'), Type, Root('CustomFieldList')
 ```
-What I found awkward here was that nested select – it's written much like a correlated subquery, but it returns multiple rows / columns, and relies on the “For Xml” magic to to associate the resulting list with the correct outer node.
+What I found awkward here was that nested select – it's written much like a correlated subquery, but it returns multiple rows / columns, and relies on the "For Xml" magic to to associate the resulting list with the correct outer node.
 
 It took a bit of mental gymnastics to adjust to the way this feature works, but it **really** saved the day for me in this situation. The feature ended up finished on time, and an internal client that I had once thought was impossible to please was actually pleased (if only for a fleeting moment).
 

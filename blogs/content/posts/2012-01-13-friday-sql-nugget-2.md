@@ -17,15 +17,15 @@ categories:
   - Database Programming
 
 ---
- <img src="/wp-content/uploads/blogs/ITProfessionals/sqlnugget.jpg?mtime=1326466147" alt="" title="" align="left" width="200" height="200" />It's time for [SQL Nuggets][1]! This is a cool idea started by LTD's own [Ted Krueger][2] – a quick SQL-related blog on Fridays. This week's nugget is **“Deciding I need to delete it all and start over again”** (and I'd like that with a side of honey mustard, please). 
+ <img src="/wp-content/uploads/blogs/ITProfessionals/sqlnugget.jpg?mtime=1326466147" alt="" title="" align="left" width="200" height="200" />It's time for [SQL Nuggets][1]! This is a cool idea started by LTD's own [Ted Krueger][2] – a quick SQL-related blog on Fridays. This week's nugget is **"Deciding I need to delete it all and start over again"** (and I'd like that with a side of honey mustard, please). 
 
-A wise Jedi once said, “Try not. Do or do not. There is no try.” What happens when you do, but you do poorly? You do it over. 
+A wise Jedi once said, "Try not. Do or do not. There is no try." What happens when you do, but you do poorly? You do it over. 
 
 I'm not going to focus on a report I built, or code I wrote. I'm going to talk about a challenge at my (still-new-to-me) job: database design. 
 
 Database design is part art, part war. There are many, many blogs, articles, and books on how to design a database. How to gather requirements. What questions to ask the users. What I wasn't prepared for was: how to capture that information. 
 
-My first design project started simply enough. I was going through requirements documents and talking to the project manager. I grabbed a stack of Post-It Notes and started scribbling entities on them. I thought, “I'll put them in something later.” What started as a few Post-Its quickly grew to a wall full of them. Attributes were scratched out, then added again. I had no way to capture data types, or notes about specific fields I knew I'd need. 
+My first design project started simply enough. I was going through requirements documents and talking to the project manager. I grabbed a stack of Post-It Notes and started scribbling entities on them. I thought, "I'll put them in something later." What started as a few Post-Its quickly grew to a wall full of them. Attributes were scratched out, then added again. I had no way to capture data types, or notes about specific fields I knew I'd need. 
 
 Simply put, it was a mess. 
 

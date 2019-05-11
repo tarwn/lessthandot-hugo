@@ -38,7 +38,7 @@ To sum up my latest adventure, [Tech on Tap v1.2 SharePoint][1], here's a simple
 
 3. Learning about claims and form-based authentication from Rob. This was new to me, and really interesting.
 
-2. Quote: “There is more than one way to skin a cat, and every one of them will kill a cat.”
+2. Quote: "There is more than one way to skin a cat, and every one of them will kill a cat."
 
 1. Watching the looks on people's faces as they progress through a day of training and networking. The excitement, thoughtfulness, and hunger to learn are apparent. It's what keeps me going and makes me want to do this again.
 

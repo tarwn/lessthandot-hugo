@@ -28,59 +28,59 @@ I think the only way to do justice to this book is list my favorite quotes – a
 
 _<img style="vertical-align: text-top;" src="/wp-content/uploads/users/grrlgeek/words.JPG?mtime=1354110128" alt="" width="159" height="84" />_
 
-_On principles_: “I often find myself reading with interest about a topic I never thought would interest me – some scientific quest, perhaps. What holds me is the enthusiasm of the writer for his field.”
+_On principles_: "I often find myself reading with interest about a topic I never thought would interest me – some scientific quest, perhaps. What holds me is the enthusiasm of the writer for his field."
 
-_On simplicity_: “Clutter is the disease of American writing.”
+_On simplicity_: "Clutter is the disease of American writing."
 
-“Simplify, simplify.”
+"Simplify, simplify."
 
-_On writing style_: “Therefore I urge people to write in the first person: to use “I” and “me” and “we” and “us.” They put up a fight.
+_On writing style_: "Therefore I urge people to write in the first person: to use "I" and "me" and "we" and "us." They put up a fight.
 
 <p style="padding-left: 30px;">
-  “Who am I to say what <em>I</em> think?” they ask, “Or what <em>I</em> feel?”
+  "Who am I to say what <em>I</em> think?" they ask, "Or what <em>I</em> feel?"
 </p>
 
 <p style="padding-left: 30px;">
-  “Who are you <em>not</em> to say what you think?” I tell them. “There's only one you. Nobody else thinks or feels in exactly the same way.”
+  "Who are you <em>not</em> to say what you think?" I tell them. "There's only one you. Nobody else thinks or feels in exactly the same way."
 </p>
 
-“We have become a society fearful of revealing who we are.”
+"We have become a society fearful of revealing who we are."
 
-“Writing is an act of ego, and you might as well admit it. Use its energy to keep yourself going.”
+"Writing is an act of ego, and you might as well admit it. Use its energy to keep yourself going."
 
-_On the audience_: “You are writing for yourself.”
+_On the audience_: "You are writing for yourself."
 
-_On words_: “Remember that words are the only tools you've got.”
+_On words_: "Remember that words are the only tools you've got."
 
-_On methods_: “You learn to write by writing.”
+_On methods_: "You learn to write by writing."
 
-_On unity_: “Every successful piece of nonfiction should leave the reader with one provocative thought that he or she didn't have before. Not two thoughts, or five – just one.”
+_On unity_: "Every successful piece of nonfiction should leave the reader with one provocative thought that he or she didn't have before. Not two thoughts, or five – just one."
 
-_On the lead and the ending_: “The most important sentence in any article is the first one.” (Yes, this was the first sentence of the chapter.)
+_On the lead and the ending_: "The most important sentence in any article is the first one." (Yes, this was the first sentence of the chapter.)
 
-“Knowing when to end an article is far more important than most writers realize.”
+"Knowing when to end an article is far more important than most writers realize."
 
-_On bits & pieces_: “Use active verbs unless there is no comfortable way to get around using a passive verb.”
+_On bits & pieces_: "Use active verbs unless there is no comfortable way to get around using a passive verb."
 
-“Most adverbs are unnecessary.” <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/writing.JPG?mtime=1354110128" alt="" width="149" height="78" />
+"Most adverbs are unnecessary." <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/writing.JPG?mtime=1354110128" alt="" width="149" height="78" />
 
-“Most adjectives are also unnecessary.”
+"Most adjectives are also unnecessary."
 
-“Don't say you were a bit confused and sort of tired and a little depressed and somewhat annoyed. Be confused. Be tired. Be depressed. Be annoyed. Don't hedge your prose with little timidities. Good writing is lean and confident.”
+"Don't say you were a bit confused and sort of tired and a little depressed and somewhat annoyed. Be confused. Be tired. Be depressed. Be annoyed. Don't hedge your prose with little timidities. Good writing is lean and confident."
 
-“There's not much to be said about the period except that most writers don't reach it soon enough.”
+"There's not much to be said about the period except that most writers don't reach it soon enough."
 
-“Keep your paragraphs short.”
+"Keep your paragraphs short."
 
-“Rewriting is the essence of writing well: it's where the game is won or lost.”
+"Rewriting is the essence of writing well: it's where the game is won or lost."
 
-“There's no subject you don't have permission to write about.”
+"There's no subject you don't have permission to write about."
 
-_On writing about people_: “Get people talking. Learn to ask question that will elicit answers about what is most interesting or vivid in their lives.”
+_On writing about people_: "Get people talking. Learn to ask question that will elicit answers about what is most interesting or vivid in their lives."
 
-_On humor_: “Humor is the secret weapon of the nonfiction writer.”
+_On humor_: "Humor is the secret weapon of the nonfiction writer."
 
-_On enjoyment, fear, and confidence_: “Living is the trick. Writers who write interestingly tend to be men and women who keep themselves interested.”
+_On enjoyment, fear, and confidence_: "Living is the trick. Writers who write interestingly tend to be men and women who keep themselves interested."
 
 ### I Will Write Better
 

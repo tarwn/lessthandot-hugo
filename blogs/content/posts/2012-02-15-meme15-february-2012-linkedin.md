@@ -14,9 +14,9 @@ categories:
   - Professional Development
 
 ---
-![][1]It's time for #meme15 – Jason Strate's ([twitter][2] | [blog][3]) monthly blogging topic. This month, he wants to know, “[Why and how you use LinkedIn?][4]” 
+![][1]It's time for #meme15 – Jason Strate's ([twitter][2] | [blog][3]) monthly blogging topic. This month, he wants to know, "[Why and how you use LinkedIn?][4]" 
 
-In a discussion at work this week, we agreed that no one knows how to use LinkedIn – even LinkedIn. Is it for people to connect with other professionals? For companies to post jobs? For people to join and post to groups? I just realized today that posts to groups now have a “Like” button. I've referred to it as “Facebook for professionals, minus the pictures”, but I didn't realize it had gone that far. 
+In a discussion at work this week, we agreed that no one knows how to use LinkedIn – even LinkedIn. Is it for people to connect with other professionals? For companies to post jobs? For people to join and post to groups? I just realized today that posts to groups now have a "Like" button. I've referred to it as "Facebook for professionals, minus the pictures", but I didn't realize it had gone that far. 
 
 <p align="center">
   <img src="http://graphics8.nytimes.com/images/2008/05/07/science/platypus.span.600.jpg" width="300" height="140" alt="" title="It's like a platypus - it couldn't figure out what it was" />
@@ -34,7 +34,7 @@ The groups are useful for communication about various interests, like user group
 
 So, while LinkedIn may still be struggling to find its identity, I've found a few solid uses for it. 
 
-On a related note, [next Tuesday, February 21, and next Wednesday, February 22, I'll be presenting][5] “Make Your Voice Heard” for user groups. One of the tools I cover is LinkedIn, along with Twitter, forums, and blogging. Please try to attend one of these, in person or virtually, to learn more!
+On a related note, [next Tuesday, February 21, and next Wednesday, February 22, I'll be presenting][5] "Make Your Voice Heard" for user groups. One of the tools I cover is LinkedIn, along with Twitter, forums, and blogging. Please try to attend one of these, in person or virtually, to learn more!
 
  [1]: /wp-content/uploads/blogs/ITProfessionals/-16.png?mtime=1329313898 ""
  [2]: http://twitter.com/stratesql

@@ -23,7 +23,7 @@ Remember this moment?
   <a href="/wp-content/uploads/users/grrlgeek/IMG_1122.JPG?mtime=1325477156"><img alt="" src="/wp-content/uploads/users/grrlgeek/IMG_1122.JPG?mtime=1325477156" width="484" height="648" /></a>
 </div>
 
-I sure do. At SQL Saturday #67, Chicago 2011, I won the SQLskills swag bag. My second-favorite part of the package was the book, [Microsoft SQL Server 2008 Internals][1]. It was written by Kalen Delaney ([blog][2] | [twitter][3]), Paul Randal ([blog][4] | [twitter][5]), Kimberly Tripp ([blog][6] | [twitter][7]), Conor Cunningham ([blog][8]), Adam Machanic ([blog][9] | [twitter][10]), and Ben Nevarez ([blog][11] | [twitter][12]). (My favorite part was the SQLskills Sharpie pen!) This is **The Book** to read if you want to know the “how” of SQL Server. 
+I sure do. At SQL Saturday #67, Chicago 2011, I won the SQLskills swag bag. My second-favorite part of the package was the book, [Microsoft SQL Server 2008 Internals][1]. It was written by Kalen Delaney ([blog][2] | [twitter][3]), Paul Randal ([blog][4] | [twitter][5]), Kimberly Tripp ([blog][6] | [twitter][7]), Conor Cunningham ([blog][8]), Adam Machanic ([blog][9] | [twitter][10]), and Ben Nevarez ([blog][11] | [twitter][12]). (My favorite part was the SQLskills Sharpie pen!) This is **The Book** to read if you want to know the "how" of SQL Server. 
 
 **Rating:** 4.5/5 
 
@@ -115,7 +115,7 @@ Knowing the steps the database takes during a check is very in-depth, and very t
 
 **My Brain Hasn't Exploded, But It Was Close A Couple Times** 
 
-This book was really in-depth and really technical. I feel much smarter after reading it. I have a feeling that in three months or a year, I'll have a problem, and I'll think, “Oh, I read about that somewhere.” I'll be able to pull this out and reference it. So, I may not understand all of it right now, but in the long run, it was a great decision to stick with it and read it. 
+This book was really in-depth and really technical. I feel much smarter after reading it. I have a feeling that in three months or a year, I'll have a problem, and I'll think, "Oh, I read about that somewhere." I'll be able to pull this out and reference it. So, I may not understand all of it right now, but in the long run, it was a great decision to stick with it and read it. 
 
 Thank you Kalen, Paul, Kimberly, Conor, Adam, and Ben, for sharing all of this knowledge!
 

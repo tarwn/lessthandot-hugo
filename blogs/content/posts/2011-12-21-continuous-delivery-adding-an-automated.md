@@ -56,9 +56,9 @@ The project is available on [BitBucket][3]. I don't intend to dive into the all 
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/interfacetests.png" title="Interface Tests Project" /><br /> Interface Tests Project
 </div>
 
-The project uses Selenium WebDriver to interface with the web browser by implementing the PageObject pattern (I covered this in a [previous Selenium post][4] if you would like to read more about the mechanics). Using this pattern I create a library of “Pages” that each correspond to a Page in my website.
+The project uses Selenium WebDriver to interface with the web browser by implementing the PageObject pattern (I covered this in a [previous Selenium post][4] if you would like to read more about the mechanics). Using this pattern I create a library of "Pages" that each correspond to a Page in my website.
 
-With an abstracted library of “Pages”, I then use Nunit to write tests that follow a path of actions or pages through the site. For instance, a tour of the site looks like this:
+With an abstracted library of "Pages", I then use Nunit to write tests that follow a path of actions or pages through the site. For instance, a tour of the site looks like this:
 
 ```csharp
 [TestFixture]
@@ -107,25 +107,25 @@ To test the settings thus far, I'll trigger a build manually and verify this por
 
 ### Import the CI Artifacts
 
-With the build step working, now I can focus on picking up the artifacts from the CI Build and getting them setup on a test site. From the plugins screen I install the “Copy Artifact” plugin, the “Trigger Parametrized Build” plugin, and the “Nunit” plugin. 
+With the build step working, now I can focus on picking up the artifacts from the CI Build and getting them setup on a test site. From the plugins screen I install the "Copy Artifact" plugin, the "Trigger Parametrized Build" plugin, and the "Nunit" plugin. 
 
-In the top of my job configuration I'll check the “This Build is Parametrized” box and add a SOURCE\_BUILD\_NUMBER parameter where I will specify the CI Job's build number that I want to run against. Initially this will require me to manually enter the build number, a bit later I'll return to the CI Build and create a trigger to pass the parameter automatically.
+In the top of my job configuration I'll check the "This Build is Parametrized" box and add a SOURCE\_BUILD\_NUMBER parameter where I will specify the CI Job's build number that I want to run against. Initially this will require me to manually enter the build number, a bit later I'll return to the CI Build and create a trigger to pass the parameter automatically.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_params.png" title="Build Parameters" /><br /> Interface Tests – Build Parameters
 </div>
 
-Next, I'll add a “Copy artifacts from another project” step (Thank you “Copy Artifacts” plugin) to the top of the build steps. This plugin has a number of different options, but I'll use the build number I passed in as a parameter to retrieve the artifacts. Using the parametrized number option allows me to run the job by typing a build number in, which can be handy, and is similar to how the later QA and Production deploy stages will be setup to retrieve artifacts (I like consistency).
+Next, I'll add a "Copy artifacts from another project" step (Thank you "Copy Artifacts" plugin) to the top of the build steps. This plugin has a number of different options, but I'll use the build number I passed in as a parameter to retrieve the artifacts. Using the parametrized number option allows me to run the job by typing a build number in, which can be handy, and is similar to how the later QA and Production deploy stages will be setup to retrieve artifacts (I like consistency).
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_artifacts.png" title="Copy Artifacts" /><br /> Interface Tests – Copy Artifacts
 </div>
 
-At this point I realized I had forgotten to check the “Clean Build” option in my Mercurial settings, so I'll go back and add that so I don't risk having a stale copy of the artifacts from a prior run.
+At this point I realized I had forgotten to check the "Clean Build" option in my Mercurial settings, so I'll go back and add that so I don't risk having a stale copy of the artifacts from a prior run.
 
 ### Deploy and Smoke Test
 
-Now that I have all the pieces in place, it's just a matter of putting them together. Like the CI Build Job, I'll create a Deploy batch command and a Smoke Test batch command. The only difference is that here I have specified a different target website and I have used the parametrized “SOURCE\_BUILD\_NUMBER” instead of the local BUILD_NUMBER environment variable.
+Now that I have all the pieces in place, it's just a matter of putting them together. Like the CI Build Job, I'll create a Deploy batch command and a Smoke Test batch command. The only difference is that here I have specified a different target website and I have used the parametrized "SOURCE\_BUILD\_NUMBER" instead of the local BUILD_NUMBER environment variable.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_deploy.png" title="Deploy for Testing" /><br /> Interface Tests – Deploy for Testing
@@ -141,11 +141,11 @@ I'll download Nunit from the [Nunit website][6] and install that on my server, t
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_stage2_runtests.png" title="Run the Tests" /><br /> Interface Tests – Run the Tests
 </div>
 
-The first step is a basic copy command to copy the prepared “auto” config to “TestRun.config”, the file my test code will pick up when it starts. The Nunit command executes the nunit console against the compiled assembly, which runs all available test methods in the assembly, just as if I was running it from the GUI.
+The first step is a basic copy command to copy the prepared "auto" config to "TestRun.config", the file my test code will pick up when it starts. The Nunit command executes the nunit console against the compiled assembly, which runs all available test methods in the assembly, just as if I was running it from the GUI.
 
 <code class="codespan">"C:Program Files (x86)NUnit 2.5.10binnet-2.0nunit-console.exe" MvcMusicStore.InterfaceTestsbinDebugMvcMusicStore.InterfaceTests.dll /framework:net-4.0 /xml:SeleniumTestResult.xml</code>
 
-The last part, before I run my build again, is to import the results of the test run like like I did with MS Test and the smoke tests. The Nunit plugin has provided a “Publish Nunit test result report” section in the post-build options, so I'll check that box and enter the xml path I specified for the output of the nunit-console command.
+The last part, before I run my build again, is to import the results of the test run like like I did with MS Test and the smoke tests. The Nunit plugin has provided a "Publish Nunit test result report" section in the post-build options, so I'll check that box and enter the xml path I specified for the output of the nunit-console command.
 
 With that completed, I'll run the test again to verify the results.
 
@@ -159,7 +159,7 @@ Fix that issue, wait for the CI Build to run again, trigger this job with the nu
 
 ## Wiring them Together
 
-The last step is to configure the CI Build to automatically trigger this new job when it completes. Opening the CI Build job, there is a new option in the Post-build configuration section that was added when I installed the “Trigger Parametrized Builds” plugin. I'll add a “Predefined Parameter” with the same name as I used in the new job, SOURCE\_BUILD\_NUMBER, and I'll populate it with the local BUILD_NUMBER environment variable of the CI Build job.
+The last step is to configure the CI Build to automatically trigger this new job when it completes. Opening the CI Build job, there is a new option in the Post-build configuration section that was added when I installed the "Trigger Parametrized Builds" plugin. I'll add a "Predefined Parameter" with the same name as I used in the new job, SOURCE\_BUILD\_NUMBER, and I'll populate it with the local BUILD_NUMBER environment variable of the CI Build job.
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_parameterized.png" title="Parameterized Build Trigger" /><br /> CI Build – Parameterized trigger

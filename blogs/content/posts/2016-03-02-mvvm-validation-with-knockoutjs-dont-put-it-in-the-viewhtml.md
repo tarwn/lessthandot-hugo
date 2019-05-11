@@ -21,12 +21,12 @@ When it comes to input validation for rich websites and Single Page Applications
 In the past couple years I have used Knockout on sites ranging from toy size ([the SQL Azure post][1]) up to a large modular SPA rewrite of a Silverlight application. This post is based on one of the patterns we created working on the latter, a large platform expected to support continued growth from multiple teams working side-by-side.
 
 <div style="background-color: #eeeeee; margin: .5em; margin-bottom: 1.5em; padding: .5em">
-  “Large modular SPA”: It seems like every time I find a post on SPAs or large front-end techniques about a “Big” application, there is almost never a definition for what the author considered “Big”. This rewrite was for a 300 KLOC Silverlight application and has 30+ discrete screens ranging from “simple” in-screen search results that make IE tables weep, to complex SVG dashboards, to a multi-tabbed screen that can scale from 50 inputs to 1000's, depending on the complexity of the user and their use case.
+  "Large modular SPA": It seems like every time I find a post on SPAs or large front-end techniques about a "Big" application, there is almost never a definition for what the author considered "Big". This rewrite was for a 300 KLOC Silverlight application and has 30+ discrete screens ranging from "simple" in-screen search results that make IE tables weep, to complex SVG dashboards, to a multi-tabbed screen that can scale from 50 inputs to 1000's, depending on the complexity of the user and their use case.
 </div>
 
 ## Validation Defined in the View
 
-Here are a couple examples of what I mean when I say “validation defined in the view”:
+Here are a couple examples of what I mean when I say "validation defined in the view":
 
 AngularJS Documentation: <a href="https://docs.angularjs.org/guide/forms" title="AngularJS Documentation / Forms / Custom Validation" target="_blank">https://docs.angularjs.org/guide/forms</a>
 
@@ -54,7 +54,7 @@ Have a field that is shown on 3 screens? That means defining the restrictions 3 
 
 **3. The format isn't defined**
 
-Give a group of humans a textbox that says “Amount”, and some of them will include currency symbols and group separators ($ and , for USD) and this is a totally valid thing to do. Or we could force users to change how they type dollars into a computer simply because we want to store it as a number (no, really, please stop doing things like this).
+Give a group of humans a textbox that says "Amount", and some of them will include currency symbols and group separators ($ and , for USD) and this is a totally valid thing to do. Or we could force users to change how they type dollars into a computer simply because we want to store it as a number (no, really, please stop doing things like this).
 
 **4. There are fewer rules than you might think**
 
@@ -66,7 +66,7 @@ Sold yet?
 
 Whether you're using MVVM, MVC, or MV-Whatever in the front-end, you have a Model that represents the data you save to the server and display on the screen. Because it is data, it doesn't really care about how the user can best consume that data, only that it fits a certain structure and type.
 
-Enter an adapter I will call, for this post, the “PresentationModel”:
+Enter an adapter I will call, for this post, the "PresentationModel":
 
 <div id="attachment_4420" style="width: 410px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2016/02/Diagram.png"><img src="/wp-content/uploads/2016/02/Diagram.png" alt="PresentationModel - Defines Validation/Formatting" width="400" height="400" class="size-full wp-image-4420" srcset="/wp-content/uploads/2016/02/Diagram.png 400w, /wp-content/uploads/2016/02/Diagram-200x200.png 200w, /wp-content/uploads/2016/02/Diagram-300x300.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a>
@@ -93,7 +93,7 @@ function OrderLinePresModel(orderLineModel){
 	this.price = orderLineModel.price.extend({ validate: { type: currencyType, min: 0, max: 100, required: true } });
 }
 ```
-The example is an Order object with a collection of Order Lines that alow a user to free-type a name, quantity, and price which are then used for various sub-total calculations and presumably saved at some point. In the “PresentationModel”, I've extended the Model's properties with the validation/formatting definitions for each of the values. 
+The example is an Order object with a collection of Order Lines that alow a user to free-type a name, quantity, and price which are then used for various sub-total calculations and presumably saved at some point. In the "PresentationModel", I've extended the Model's properties with the validation/formatting definitions for each of the values. 
 
 <div id="attachment_4416" style="width: 568px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2016/02/Screenshot.png"><img src="/wp-content/uploads/2016/02/Screenshot.png" alt="Formatted and Validated Inputs" width="558" height="183" class="size-full wp-image-4416" srcset="/wp-content/uploads/2016/02/Screenshot.png 558w, /wp-content/uploads/2016/02/Screenshot-300x98.png 300w" sizes="(max-width: 558px) 100vw, 558px" /></a>
@@ -105,10 +105,10 @@ The example is an Order object with a collection of Order Lines that alow a user
 
 I now have several levels of tests I can easily write, as well:
 
-  * Parsing and Formatting tests – make sure “currencyType” works consistently, instead of testing 500 different currency inputs in my application
-  * PresentationModel regression tests – make sure each field in the “PresentationModel” has the correct type and length requirements
+  * Parsing and Formatting tests – make sure "currencyType" works consistently, instead of testing 500 different currency inputs in my application
+  * PresentationModel regression tests – make sure each field in the "PresentationModel" has the correct type and length requirements
 
-When I later re-use this model to display a summary of the order, I already have all of the types defined (and tested) in the “PresentationModel”, making it impossible to accidentally format one as a currency amount and the other as a plain decimal value.
+When I later re-use this model to display a summary of the order, I already have all of the types defined (and tested) in the "PresentationModel", making it impossible to accidentally format one as a currency amount and the other as a plain decimal value.
 
 ## A Knockout Implementation
 
@@ -223,7 +223,7 @@ var currencyType = {
 	}
 };
 ```
-This is a pretty basic example. Starting here, we could easily come back through and pass the field's name though for richer error messages, use the format method for the values in the tryValidate error messages, and so on. We could also extend the tryParse method to accept and expand on values like “$100K”, converting something that would be natural to the user to a value that is natural to the inner Model (and then doing the reverse in the format method). 
+This is a pretty basic example. Starting here, we could easily come back through and pass the field's name though for richer error messages, use the format method for the values in the tryValidate error messages, and so on. We could also extend the tryParse method to accept and expand on values like "$100K", converting something that would be natural to the user to a value that is natural to the inner Model (and then doing the reverse in the format method). 
 
 ## What we gain
 

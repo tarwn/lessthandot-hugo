@@ -16,7 +16,7 @@ tags:
   - sql server community
 
 ---
-This will be a short post but nonetheless a very important one to me. A good friend of mine, Jason Strate ([Blog][1] | [Twitter][2]), posted a blog, “[What are you thankful for][3]?” In this post he asked all of his readers to also take a few moments and blog about the same. So here we go...
+This will be a short post but nonetheless a very important one to me. A good friend of mine, Jason Strate ([Blog][1] | [Twitter][2]), posted a blog, "[What are you thankful for][3]?" In this post he asked all of his readers to also take a few moments and blog about the same. So here we go...
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/ITProfessionals/thankssqlstyle.gif" alt="" title="" width="264" height="199" align="left" />

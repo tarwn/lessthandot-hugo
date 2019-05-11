@@ -228,7 +228,7 @@ The last step of this whole load test adventure is incorporating the load test j
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_load.png" title="Continuous Delivery Pipeline with Load Test Step" /><br /> Continuous Delivery Pipeline with Load Test Step
 </div>
 
-The only changes necessary to insert the Load Test job into the pipeline is to modify my “ASPNet MVC Music Store Interface Tests” build job to trigger a parametrized build of this new load test and in the load test, check the “Build Pipeline Plugin -> Manually Execute Downstream Project” option and specify the “Deploy to QA” build step as the target. 
+The only changes necessary to insert the Load Test job into the pipeline is to modify my "ASPNet MVC Music Store Interface Tests" build job to trigger a parametrized build of this new load test and in the load test, check the "Build Pipeline Plugin -> Manually Execute Downstream Project" option and specify the "Deploy to QA" build step as the target. 
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/pipeline_wload.png" title="Continuous Delivery Pipeline w/ Load Testing Step" /><br /> Continuous Delivery Pipeline w/ Load Testing Step

@@ -23,10 +23,10 @@ Except it wasn't.
 
 The first issue we ran into was the difficulty in writing tests around this already incredibly complex business case and trying to fake expected user interaction with the callbacks. The next issue was how difficult it was for the next developer (and sometimes just us, a week later) to figure out which magic properties had to be set for dialogs to work correctly. Then we noticed that debugging was about 100x harder than we expected. So we went back to the drawing board.
 
-Somewhere between looking into examples that use promises and talking through how a perfect test would look, we came upon something profound (to us at least): “the user is an asynchronous API”.
+Somewhere between looking into examples that use promises and talking through how a perfect test would look, we came upon something profound (to us at least): "the user is an asynchronous API".
 
 <div style="background-color: #eeeeee; margin: .5em; margin-bottom: 1.5em; padding: .5em">
-  Like the <a href="/index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/" title="MVVM Validation with KnockoutJS – Don't put it in the View/HTML">prior post</a>, the “Large modular SPA” in this case was a complete replatform of a 300+ KLOC Silverlight application with 30+ discrete screens ranging from “simple” in-screen search results that make IE tables weep, to complex SVG dashboards, to a multi-tabbed screen that can scale from 50 inputs to 1000's, depending on the complexity of the user and their use case.
+  Like the <a href="/index.php/webdev/mvvm-validation-with-knockoutjs-dont-put-it-in-the-viewhtml/" title="MVVM Validation with KnockoutJS – Don't put it in the View/HTML">prior post</a>, the "Large modular SPA" in this case was a complete replatform of a 300+ KLOC Silverlight application with 30+ discrete screens ranging from "simple" in-screen search results that make IE tables weep, to complex SVG dashboards, to a multi-tabbed screen that can scale from 50 inputs to 1000's, depending on the complexity of the user and their use case.
 </div>
 
 Th fulle sample code for these posts is on github here: [tarwn/Blog_KnockoutMVVMPatterns][1]
@@ -71,7 +71,7 @@ Let's start with a sample of what it looks like when we call a regular server-si
 
 ```
 
-Clicking the “Save” button updates some local values that will be used to modify the display, then calls saveShippingAddress on the service, which returns a promise. Once that service call is complete and the promise is resolved successfully, the display is updated again accordingly. 
+Clicking the "Save" button updates some local values that will be used to modify the display, then calls saveShippingAddress on the service, which returns a promise. Once that service call is complete and the promise is resolved successfully, the display is updated again accordingly. 
 
 A test for the save method could then look like this:
 

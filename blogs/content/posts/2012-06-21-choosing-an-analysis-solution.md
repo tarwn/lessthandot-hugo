@@ -18,7 +18,7 @@ With the introduction of the SQL Server PowerPivot for Excel and SharePoint in S
 
 ### **xVelocity** formerly known as Vertipaq
 
-When it was initially released, the in-memory data solution was called Vertipaq. With the release of SQL Server 2012, the Vertipaq engine was rebranded to xVelocity which includes all of Microsoft's in-memory technologies. In the case of SQL Server and PowerPivot, Vertipaq is called “xVelocity in-memory analytics engine”, which I will refer to as xVelocity for the duration of this blog.
+When it was initially released, the in-memory data solution was called Vertipaq. With the release of SQL Server 2012, the Vertipaq engine was rebranded to xVelocity which includes all of Microsoft's in-memory technologies. In the case of SQL Server and PowerPivot, Vertipaq is called "xVelocity in-memory analytics engine", which I will refer to as xVelocity for the duration of this blog.
 
 ### The Engine Options
 
@@ -34,15 +34,15 @@ Beyond the storage difference, the multidimensional model natively supports MDX 
 
 The next engine released by Microsoft was the PowerPivot add-in for SharePoint and Excel. This allows users to build an in-memory data store from disparate data sources in Excel and deploy it for shared use in SharePoint. One of the key goals behind this solution was the ability to create an analysis tool without needing the overhead of moving data to new server location via ETL. 
 
-PowerPivot allows a user to add data into their PowerPivot tables from a variety of data sources including SQL Server, Oracle, Excel, text and even SSRS reports. Once the data has been “loaded” into the PowerPivot tables, the user can build relationships between the tables allowing for a “cube-like” experience without building a cube or ETL process. Once built and deployed to SharePoint, you can build reports against a PowerPivot data source in the same manner you would build a report against the multidimensional model. 
+PowerPivot allows a user to add data into their PowerPivot tables from a variety of data sources including SQL Server, Oracle, Excel, text and even SSRS reports. Once the data has been "loaded" into the PowerPivot tables, the user can build relationships between the tables allowing for a "cube-like" experience without building a cube or ETL process. Once built and deployed to SharePoint, you can build reports against a PowerPivot data source in the same manner you would build a report against the multidimensional model. 
 
 PowerPivot does support calculations and uses DAX as its native query language. This is the same query language used in the Tabular model and can be considered the query language for Microsoft's in-memory data stores.
   
-Finally, it is important to note that the size limit for a PowerPivot database is 2 GB. This is an “artificial” restriction that allows it to be uploaded into SharePoint. While this does hold a large amount of data because of the compression capability of xVelocity, it is still smaller in scope than either the multidimensional or tabular model options.
+Finally, it is important to note that the size limit for a PowerPivot database is 2 GB. This is an "artificial" restriction that allows it to be uploaded into SharePoint. While this does hold a large amount of data because of the compression capability of xVelocity, it is still smaller in scope than either the multidimensional or tabular model options.
 
 #### Analysis Services – Tabular Model
 
-In SQL Server 2012, Microsoft introduced the tabular model. This is the “grown up” version of PowerPivot. The tabular model can be built with Visual Studio or migrated from PowerPivot for Excel. The tabular model is also an in-memory data store built on xVelocity. However, the tabular model is limited by the memory available on the server as opposed to the fixed 2 GB limit in PowerPivot. The primary design difference is that the tabular model supports partitions which support scoped data refresh reducing the update time for the model. Beyond partitioning and database size, the capabilities in the tabular model and PowerPivot 2012 version are very similar.
+In SQL Server 2012, Microsoft introduced the tabular model. This is the "grown up" version of PowerPivot. The tabular model can be built with Visual Studio or migrated from PowerPivot for Excel. The tabular model is also an in-memory data store built on xVelocity. However, the tabular model is limited by the memory available on the server as opposed to the fixed 2 GB limit in PowerPivot. The primary design difference is that the tabular model supports partitions which support scoped data refresh reducing the update time for the model. Beyond partitioning and database size, the capabilities in the tabular model and PowerPivot 2012 version are very similar.
 
 ### Choosing the Right Engine
 

@@ -39,7 +39,7 @@ Now that HA / DR week is completed, please take a moment to rate this week (and 
 
 High Availability (HA) for SQL Server can be defined in one sentence: Keep data available 100% of the time. That really is the objective of HA and nothing short of that.
 
-Realistically, 100% is unachievable given the nature of computing. There are needs for a SQL Server and Windows Server to be rebooted at least once a year. This is to allow for updates on both SQL Server and Windows to be maintained. So the ranking method we use for measuring high availability is the “nines” scale. The five nines is a goal that most database
+Realistically, 100% is unachievable given the nature of computing. There are needs for a SQL Server and Windows Server to be rebooted at least once a year. This is to allow for updates on both SQL Server and Windows to be maintained. So the ranking method we use for measuring high availability is the "nines" scale. The five nines is a goal that most database
   
 administrators and teams set for their standards. The five nines level is a height of availability that is truly an achievement and one to be proud of. 
 

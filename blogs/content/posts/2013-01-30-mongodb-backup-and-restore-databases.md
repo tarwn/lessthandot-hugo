@@ -93,7 +93,7 @@ As you can see the backup also creates a metadata file Blog.metadata.json
 
 All that the manifest file has in it is the following
   
-{ “indexes” : [ { “v” : 1, “key” : { “\_id” : 1 }, “ns” : “blog.Blog”, “name” : “\_id_” } ] }
+{ "indexes" : [ { "v" : 1, "key" : { "\_id" : 1 }, "ns" : "blog.Blog", "name" : "\_id_" } ] }
 
 As you can see it has the database as well as the collection name
 

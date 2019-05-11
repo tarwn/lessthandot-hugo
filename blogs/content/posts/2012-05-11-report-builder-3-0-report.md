@@ -51,7 +51,7 @@ You can publish from both Report Designer (BIDS, or now SQL Server Data Tools) a
 
 **Publishing a Report Part** 
 
-When looking at a report in Report Builder 3.0, go to the Report Builder button in the top left corner and select “Publish Report Parts”. A screen that opens will allow you to publish all parts of the report you've chosen, or only selected parts.
+When looking at a report in Report Builder 3.0, go to the Report Builder button in the top left corner and select "Publish Report Parts". A screen that opens will allow you to publish all parts of the report you've chosen, or only selected parts.
 
 <p style="text-align: center">
   <img src="/wp-content/uploads/users/grrlgeek/RB3Parts1.JPG?mtime=1336705090" alt="" width="603" height="456" />
@@ -97,6 +97,6 @@ The two main benefits to using report parts are time savings and consistency –
 
 Creating a table, chart, or image can be a time-consuming process. There are many details to be considered, such as what data is included, what the layout is, and even color schemes.  If that is done once, and the information is needed again, it will save the organization time. Multiply that by many tables and many reports over a year, and you can see the savings adding up.
 
-Data consistency is also a very important part of report building. When your reports reference “Monthly Sales by Territory”, all definitions of “sales” and “territories” should be the same. If you're re-using datasets and the items to linked to it, the chance of having inconsistent data is greatly reduced.
+Data consistency is also a very important part of report building. When your reports reference "Monthly Sales by Territory", all definitions of "sales" and "territories" should be the same. If you're re-using datasets and the items to linked to it, the chance of having inconsistent data is greatly reduced.
 
 Consider using report parts to save time and increase efficiency!

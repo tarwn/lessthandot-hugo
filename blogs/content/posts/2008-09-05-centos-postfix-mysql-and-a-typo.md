@@ -82,7 +82,7 @@ gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-5
 priority=2
 includepkgs=kernel* postfix*
 ```
-Ooops. Can you spot it? :yes: Yep, exactly – every entry apart from the updates was excluding “postfix”, whilst the updates were excluding “posfix”.. :no: 
+Ooops. Can you spot it? :yes: Yep, exactly – every entry apart from the updates was excluding "postfix", whilst the updates were excluding "posfix".. :no: 
 
 ## Fixing the shame..
 

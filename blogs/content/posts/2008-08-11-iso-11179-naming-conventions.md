@@ -20,11 +20,11 @@ tags:
   - sql server
 
 ---
-Straight from the man himself comes this statement posted in the [microsoft.public.sqlserver.programming forum][1]: “_You need to read ISO-11179 so you use proper data element names. You
+Straight from the man himself comes this statement posted in the [microsoft.public.sqlserver.programming forum][1]: "_You need to read ISO-11179 so you use proper data element names. You
   
-actually had “tbl-“on the table names! Sometimes “id” id a
+actually had "tbl-"on the table names! Sometimes "id" id a
   
-prefix and sometimes it is a postfix._”
+prefix and sometimes it is a postfix._"
 
 Of course you know who I am talking about? No? Joe Celko of course. So what is ISO-11179?
 

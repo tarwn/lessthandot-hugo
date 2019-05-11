@@ -45,7 +45,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">If I had a “right hand” in planning this event, it would be Shelly.  Not only did she put up with my late night ideas, she also helped to reign me in to ensure that I didn't try to take on more than I could handle. In addition to keeping me in check, Shelly also volunteered to be the Sponsor Coordinator, ensuring that the sponsors had everything they needed I the days leading up to the event, as well as the day of.  Thanks Shelly, and I look forward to working with you in the future, if you'll agree to it again.</span>
+  <span style="font-family: verdana,geneva;">If I had a "right hand" in planning this event, it would be Shelly.  Not only did she put up with my late night ideas, she also helped to reign me in to ensure that I didn't try to take on more than I could handle. In addition to keeping me in check, Shelly also volunteered to be the Sponsor Coordinator, ensuring that the sponsors had everything they needed I the days leading up to the event, as well as the day of.  Thanks Shelly, and I look forward to working with you in the future, if you'll agree to it again.</span>
 </p>
 
 <p class="MsoNormal">
@@ -53,7 +53,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">I asked Joe to help to act as my volunteer coordinator pretty late in the game, and in true “Joe” style, he agreed with bounds of enthusiasm. Joe and I worked together a few weeks before the event to design a Volunteer plan and held a series of meetings to ensure that everyone knew what their roles would be.  Joe was able to successfully run at team of 15 people with minimal instruction from me.  Thanks Joe. I look forward to working further with you on our various projects!</span>
+  <span style="font-family: verdana,geneva;">I asked Joe to help to act as my volunteer coordinator pretty late in the game, and in true "Joe" style, he agreed with bounds of enthusiasm. Joe and I worked together a few weeks before the event to design a Volunteer plan and held a series of meetings to ensure that everyone knew what their roles would be.  Joe was able to successfully run at team of 15 people with minimal instruction from me.  Thanks Joe. I look forward to working further with you on our various projects!</span>
 </p>
 
 <p class="MsoNormal">
@@ -91,7 +91,7 @@ categories:
 ## <span style="font-family: verdana,geneva;"><strong style="mso-bidi-font-weight: normal;">Event Recap</strong></span> {.MsoNormal}
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">SQL Saturday “day” actually started on Friday morning for me.  Knowing that I would have a lot of things to focus on starting Friday afternoon, I decided to take some “me” time and head out for a run.  1.5 hours and 7 miles later, I was feeling refreshed but tired, and ready to attack the day. </span>
+  <span style="font-family: verdana,geneva;">SQL Saturday "day" actually started on Friday morning for me.  Knowing that I would have a lot of things to focus on starting Friday afternoon, I decided to take some "me" time and head out for a run.  1.5 hours and 7 miles later, I was feeling refreshed but tired, and ready to attack the day. </span>
 </p>
 
 <p class="MsoNormal">
@@ -99,7 +99,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;">On my way there, I received a phone call from Joe Fleming, my volunteer coordinator. “We don't' have any lanyards here.”  LANYARDS!!  I left the lanyards at home, two hours away.  There was no way I could make it home and back before the speaker dinner.  Luckily I was able to get ahold of some family members and they were able to “get” into my house and meet me halfway.  So I only ate up two hours of time instead of four.  Big thanks to Joe and Shelly for covering for me while I made that trip, and also to my family members for making a trip for me.<br /></span>
+  <span style="font-family: verdana,geneva;">On my way there, I received a phone call from Joe Fleming, my volunteer coordinator. "We don't' have any lanyards here."  LANYARDS!!  I left the lanyards at home, two hours away.  There was no way I could make it home and back before the speaker dinner.  Luckily I was able to get ahold of some family members and they were able to "get" into my house and meet me halfway.  So I only ate up two hours of time instead of four.  Big thanks to Joe and Shelly for covering for me while I made that trip, and also to my family members for making a trip for me.<br /></span>
 </p>
 
 <p class="MsoNormal">

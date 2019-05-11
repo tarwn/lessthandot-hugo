@@ -53,7 +53,7 @@ I spoke at user groups, SQL Saturdays, 24 Hours of PASS, and PASS Summit. I'm bl
 
 **Attend PASS Summit** 
 
-I wrote, “This is the year I go and take PASS Summit by storm.” All I can say is: done. 
+I wrote, "This is the year I go and take PASS Summit by storm." All I can say is: done. 
 
 **Support Cool Community Projects**
 

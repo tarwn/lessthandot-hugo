@@ -15,7 +15,7 @@ tags:
   - teamcity
 
 ---
-A few years back, I posted “[Displaying .Net Build Warnings in TeamCity][1]“. Many folks found it useful (and it served as a good reference the last time I needed to re-setup warnings). Recently, Mitch Terlisner reached out to me with a much improved version to share with folks that includes better build status output, an interactive warnings tab, statistics chart, and a custom metric to enable custom failure rules:
+A few years back, I posted "[Displaying .Net Build Warnings in TeamCity][1]". Many folks found it useful (and it served as a good reference the last time I needed to re-setup warnings). Recently, Mitch Terlisner reached out to me with a much improved version to share with folks that includes better build status output, an interactive warnings tab, statistics chart, and a custom metric to enable custom failure rules:
 
 **Better Warning Output in build status!**
   
@@ -91,7 +91,7 @@ Mitch added these parameters and steps to his build template to apply to multipl
 
 Download the powershell script here: [BuildWarningReportGenerator.ps1 Gist][2]
 
-1. Select the “Parameters” menu.
+1. Select the "Parameters" menu.
   
 2. Add a a parameter for the Build Log name that we'll generate from MSBuild: 
 
@@ -144,9 +144,9 @@ To add a report tab with the warning information in TeamCity:
 
 [<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png" alt="Add Report Tab" width="895" height="453" class="aligncenter size-full wp-image-4503" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png 895w, /wp-content/uploads/2016/05/TeamCityWarnings_Report1-300x151.png 300w" sizes="(max-width: 895px) 100vw, 895px" />][5]
 
-1. Open the Project and click “Edit Project Settings” and select the Report Tab
+1. Open the Project and click "Edit Project Settings" and select the Report Tab
   
-2. Click the “Create new build report tab” button
+2. Click the "Create new build report tab" button
   
 3. Enter settings and press Save
 

@@ -18,7 +18,7 @@ tags:
   - syndicated
 
 ---
-I have the pleasure and privilege to announce that I was awarded with the [“Author of the Year” award][1] at the [MSSQLTips.com][2] website!
+I have the pleasure and privilege to announce that I was awarded with the ["Author of the Year" award][1] at the [MSSQLTips.com][2] website!
   
 I am humbled by the recognition of my fellow peers in the SQL Server community and I'd like to thank all of you, the #sqlfamily, for voting.
 

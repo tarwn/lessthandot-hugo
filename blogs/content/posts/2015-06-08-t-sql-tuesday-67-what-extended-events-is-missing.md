@@ -24,7 +24,7 @@ XE is supposed to be the replacement for Profiler. But, Profiler had two great f
 
 ### Stopping a session
 
-When I created a Profiler trace, I could “Enable trace stop time”, and the trace would end at that particular time. I used this for many reasons – when I started a trace and knew I'd get caught up in something else, and didn't want it to run until I (hopefully) remembered to stop it; when the server would always get slow between, say, 10:00 am and 11:00 am, but no one knew why; or when looking for things that happened in the middle of my night – I didn't want to get up at 2:00 am for Profiler.
+When I created a Profiler trace, I could "Enable trace stop time", and the trace would end at that particular time. I used this for many reasons – when I started a trace and knew I'd get caught up in something else, and didn't want it to run until I (hopefully) remembered to stop it; when the server would always get slow between, say, 10:00 am and 11:00 am, but no one knew why; or when looking for things that happened in the middle of my night – I didn't want to get up at 2:00 am for Profiler.
 
 XE doesn't have this capability. It's not in the New Session Wizard, it's not in the New Session un-wizard, and it's not in the T-SQL. However, this is easy to work around. After creating a session, create a SQL Server Agent Job that stops the session, then schedule it.
 

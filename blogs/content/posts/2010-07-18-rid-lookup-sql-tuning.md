@@ -44,7 +44,7 @@ Once looking at the execution plan of the query that was in the log related to t
 
 To portray the data, indexes and query we will step through recreating the exact situation that occurred.
 
-First step will be to create a database that we can work in. We will then create an item table and load the item table from use of the AdventureWorks database table, “Production.Product”.
+First step will be to create a database that we can work in. We will then create an item table and load the item table from use of the AdventureWorks database table, "Production.Product".
 
 > <span class="MT_red">Note: AdventureWorks can be used for this entire recreation but to retain the database as it is the secondary database was created for example purposes.</span>
 
@@ -121,13 +121,13 @@ GO
 ```
 </p> 
 
-We should be fine as the nonclustered index, “IDX_ITEMID” should be used in an index seek given the WHERE clause on ITEMCODE. However, when we run this query to check the estimated execution plan, we can see we have a lookup occurring.
+We should be fine as the nonclustered index, "IDX_ITEMID" should be used in an index seek given the WHERE clause on ITEMCODE. However, when we run this query to check the estimated execution plan, we can see we have a lookup occurring.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/rid_2.gif" alt="" title="" width="624" height="368" />
 </div>
 
-The lookup is caused by the fact that there is not a covering index to fulfill the entire needs of the query. The WHERE clause and columns returned combined equate to, “covering”. In order to satisfy this query and remove the RID Lookup, we need to create a covering index or a clustered index on the ITEMCODE. Creating a clustered index physically orders the data under the conditions of the index and in some cases (like this) that was not possible. An effective solution in this case is a nonclustered index covering the entire query requirements.
+The lookup is caused by the fact that there is not a covering index to fulfill the entire needs of the query. The WHERE clause and columns returned combined equate to, "covering". In order to satisfy this query and remove the RID Lookup, we need to create a covering index or a clustered index on the ITEMCODE. Creating a clustered index physically orders the data under the conditions of the index and in some cases (like this) that was not possible. An effective solution in this case is a nonclustered index covering the entire query requirements.
 
 > <span class="MT_red">Note: Let's say that the table in question isn't a HEAP and there is an existing clustered index on a different key. Since we can only have one clustered index per table, the resolution of ITEMCODE becoming a clustered index to resolve our RID Lookup is not possible. A nonclustered index is then the only way to resolve (or remove) the RID Lookup. </span>
 

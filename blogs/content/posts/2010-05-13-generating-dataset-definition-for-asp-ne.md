@@ -13,7 +13,7 @@ categories:
   - Web Design, Graphics and Styling
 
 ---
-Over the past couple of years, we've been moving from a “custom-developed” (read: terrible) reporting system towards SSRS-type reports. We do this using the ASP.net client reports, but with a twist. We had a lot of problems using the built in data-binding, especially when making schema changes (which are frequent as we try to move the database to a more sane design). In order to get around these problems, we created a report definition class that encapsulates the stored procedure used to get the report data, the parameters, and anything else we need to display on the report viewer page. We use this class, along with custom parameter input pages and a dedicated report viewer page, to late-bind the report to a data table retrieved at runtime. This would conceivably make it easier to report from a different data source as well. I won't go too much farther off topic, but to make a long story short this forces us to define data sets in our reports manually, which is of course a pain in the neck.
+Over the past couple of years, we've been moving from a "custom-developed" (read: terrible) reporting system towards SSRS-type reports. We do this using the ASP.net client reports, but with a twist. We had a lot of problems using the built in data-binding, especially when making schema changes (which are frequent as we try to move the database to a more sane design). In order to get around these problems, we created a report definition class that encapsulates the stored procedure used to get the report data, the parameters, and anything else we need to display on the report viewer page. We use this class, along with custom parameter input pages and a dedicated report viewer page, to late-bind the report to a data table retrieved at runtime. This would conceivably make it easier to report from a different data source as well. I won't go too much farther off topic, but to make a long story short this forces us to define data sets in our reports manually, which is of course a pain in the neck.
 
 For the uninitiated, when viewing a .rdlc file (or .rdl) as an XML document, the dataset definition looks something like this. Only yours probably have a real datasource 😉
 
@@ -69,7 +69,7 @@ public static DataTable SchemaTable(String source_query)
 }
 ```
 
-From there, we need to build up an XML string, similar to what is posted above. It doesn't need to be a complete document, just a fragment that can be pasted into our template when creating a new report. I used string manipulation to build it because I didn't feel like wrestling with the .net classes to get the namespace “rd” defined (it proved tricky since I don't want to build the entire document). The formatting is a little funny, just to make the output easy to read:
+From there, we need to build up an XML string, similar to what is posted above. It doesn't need to be a complete document, just a fragment that can be pasted into our template when creating a new report. I used string manipulation to build it because I didn't feel like wrestling with the .net classes to get the namespace "rd" defined (it proved tricky since I don't want to build the entire document). The formatting is a little funny, just to make the output easy to read:
 
 ```csharp
 /// <summary>Build an XML String representing the data set returned by provided query</summary>

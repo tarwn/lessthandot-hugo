@@ -144,7 +144,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @SourceDirFOR <span style="color: gray;">=</span> <span style="color: red;">'FOR %I IN (“'</span> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @SourceFile <span style="color: gray;">+</span> <span style="color: red;">'”) DO @ECHO %~nxtI'</span><span style="color: gray;">;</span></span>
+  <span style="font-family: &amp;amp; color: blue; font-size: 10pt; mso-no-proof: yes;">SET</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> @SourceDirFOR <span style="color: gray;">=</span> <span style="color: red;">'FOR %I IN ("'</span> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @SourceFile <span style="color: gray;">+</span> <span style="color: red;">'") DO @ECHO %~nxtI'</span><span style="color: gray;">;</span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
@@ -308,7 +308,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">
-  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">            </span><span style="color: blue;">SET</span> @DelCommand <span style="color: gray;">=</span> <span style="color: red;">'</span></span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;">DEL</span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;"> /Q “'</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @FileName <span style="color: gray;">+</span> <span style="color: red;">'”'</span><span style="color: gray;">;</span><span style="mso-spacerun: yes;">     </span></span>
+  <span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"><span style="mso-spacerun: yes;">            </span><span style="color: blue;">SET</span> @DelCommand <span style="color: gray;">=</span> <span style="color: red;">'</span></span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;">DEL</span><span style="font-family: &amp;amp; color: red; font-size: 10pt; mso-no-proof: yes;"> /Q "'</span><span style="font-family: &amp;amp; font-size: 10pt; mso-no-proof: yes;"> <span style="color: gray;">+</span> @SourceDir <span style="color: gray;">+</span> @FileName <span style="color: gray;">+</span> <span style="color: red;">'"'</span><span style="color: gray;">;</span><span style="mso-spacerun: yes;">     </span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 0pt; mso-layout-grid-align: none;">

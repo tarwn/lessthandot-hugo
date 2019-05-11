@@ -25,7 +25,7 @@ tags:
   - tracking data
 
 ---
-Many times as a database administrator, you're going to find yourself being asked, “When did this change?” In fact, it is a common question that can come in so often, if you don't have the answer readily available, the business will quickly become frustrated with you. This can have an adverse effect on your reputation of being able to manage the databases in question. 
+Many times as a database administrator, you're going to find yourself being asked, "When did this change?" In fact, it is a common question that can come in so often, if you don't have the answer readily available, the business will quickly become frustrated with you. This can have an adverse effect on your reputation of being able to manage the databases in question. 
 
 Some databases (and software packages) simply do not track changes in the database. The job of the system is to do what the business wants and that typically does not initially include data tracking. Logging takes time and precious performance away from the systems. That performance hit can make a software vendor look bad. Is it worth the performance cost and cost to develop the tracking solution to them? I think we know the answer to that question in most cases. I'm on their side in the case of where you put your money for the product you provide to a point. 
 
@@ -219,7 +219,7 @@ Putting that into perspective: almost triple the cost!
   <img src="/wp-content/uploads/blogs/DataMgmt/cdc_4.gif" alt="" title="" width="486" height="348" />
 </div>
 
-So CDC has an enormous cost with it, but in a database where logging is absent and development is out of our hands along with the question of, “Why and who changed this?” being asked often, CDC will be an option that should be brought into play to manage the change control of the database.
+So CDC has an enormous cost with it, but in a database where logging is absent and development is out of our hands along with the question of, "Why and who changed this?" being asked often, CDC will be an option that should be brought into play to manage the change control of the database.
 
 Some things that should be considered are ETL loads. I would absolutely disable CDC on tables where you load large amounts of data and then enable it after the load is completed. The time for loading could be double to triple after enabling tables for CDC. That may not be acceptable in the activity of the table. 
 

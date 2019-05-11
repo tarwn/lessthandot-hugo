@@ -36,7 +36,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  A few weeks later I was on my first BI project and my first assignment was: make some SSIS packages. I dreaded the task, but trying to make the most of it I dove into SSIS. And after I made my hands dirty with it and got over the initial learning curve, I suddenly fell in love with SSIS! I saw the possibilities the product has to offer and what amazing stuff you can do with it and I lost all the prejudices I had earlier. After some time I really wanted to expand my knowledge on SSIS, so I had the idea of answering questions about SSIS on forums. Because you learn the most about a subject by “teaching” it. By chance I noticed the SQLServerCentral newsletter in one of my colleagues' inbox, so I thought: “Why not that forum? Let's try it out.” I went to SSC, registered myself and started answering questions.
+  A few weeks later I was on my first BI project and my first assignment was: make some SSIS packages. I dreaded the task, but trying to make the most of it I dove into SSIS. And after I made my hands dirty with it and got over the initial learning curve, I suddenly fell in love with SSIS! I saw the possibilities the product has to offer and what amazing stuff you can do with it and I lost all the prejudices I had earlier. After some time I really wanted to expand my knowledge on SSIS, so I had the idea of answering questions about SSIS on forums. Because you learn the most about a subject by "teaching" it. By chance I noticed the SQLServerCentral newsletter in one of my colleagues' inbox, so I thought: "Why not that forum? Let's try it out." I went to SSC, registered myself and started answering questions.
 </p>
 
 <p style="text-align: justify;">

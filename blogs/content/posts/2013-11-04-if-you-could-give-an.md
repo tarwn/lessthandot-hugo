@@ -4,14 +4,14 @@ author: Ted Krueger (onpnt)
 type: post
 date: -001-11-30T00:00:00+00:00
 ID: 2191
-excerpt: "Wow, let's think about this question.  I mean, really think about it.  In a career that some could consider kind of successful, I'm looking back and thinking, “What could be the best piece of advice I could possibly give that would make or break an aspi&hellip;"
+excerpt: "Wow, let's think about this question.  I mean, really think about it.  In a career that some could consider kind of successful, I'm looking back and thinking, \"What could be the best piece of advice I could possibly give that would make or break an aspi&hellip;"
 draft: true
 url: /?p=2191
 categories:
   - Professional Development
 
 ---
-Wow, let's think about this question.  I mean, really think about it.  In a career that some could consider kind of successful, I'm looking back and thinking, “What could be the best piece of advice I could possibly give that would make or break an aspiring DBA?”  As the flood of ideas pour in, I tried to set a predicate on the concept of the word _advice._
+Wow, let's think about this question.  I mean, really think about it.  In a career that some could consider kind of successful, I'm looking back and thinking, "What could be the best piece of advice I could possibly give that would make or break an aspiring DBA?"  As the flood of ideas pour in, I tried to set a predicate on the concept of the word _advice._
 
 Advice could mean: use this tool because it will help you save a few hundred hours a year.  Let's look at SQL Sentry's Plan Explorer.  Damn fine product and a company I'm really liking being connected to in some way.  This one tool can save you, estimated, a few hundred hours a year.  But is that sound advice?  Again, advice for someone aspiring or setting aspirations to set a career path cannot be restricted to a tool.  Would that tool truly follow them everywhere, be allowed in every installations or really make their career fly above and beyond even mine?  I'm not sure.
 

@@ -17,7 +17,7 @@ categories:
 ---
 July 1, 2011. Dang. It's a gorgeous summer morning here in Wisconsin. With the amazing first half of the year I've had, I'm looking forward to the second half even more. 
 
-Normally, this time of the year I'd say something like, “I can't believe how fast this year is flying by!” But this year, things are different. I've been busy, but I've taken breaks too. I've been able to enjoy my successes, and learn from the failures. 
+Normally, this time of the year I'd say something like, "I can't believe how fast this year is flying by!" But this year, things are different. I've been busy, but I've taken breaks too. I've been able to enjoy my successes, and learn from the failures. 
 
 How awesome has 2011 been so far? 
 
@@ -25,7 +25,7 @@ How awesome has 2011 been so far?
 
 I have written a couple very solid, in-depth technical blogs. I'm proud of them. But I'm not blogging a lot. This week, I realized why: I've been trying to blog about _things I have no interest in_. That was dumb. I love SSRS, and T-SQL, and solving problems. I was trying to write blogs about BULK INSERT and FILESTREAM. Why? 
 
-My focus for the next quarter is shifting. I want one blog a week. I'm going to shoot for one high-quality, in-depth technical blog a month. I also want one “I learned this and its awesome!” post. I want to keep writing about community projects I'm working on, presentations I've given, etc. 
+My focus for the next quarter is shifting. I want one blog a week. I'm going to shoot for one high-quality, in-depth technical blog a month. I also want one "I learned this and its awesome!" post. I want to keep writing about community projects I'm working on, presentations I've given, etc. 
 
 **Presenting:** 
 
@@ -47,7 +47,7 @@ I'm very involved with [MADPASS][2]. We're holding our first official elections 
 
 The [PASS WIT virtual chapter][3] is hard at work on planning the WIT lunch for PASS Summit. I'm excited that I will get to moderate the excellent panel. Yet another reason I'm looking forward to October! 
 
-Have I said “no”? Yes! I have turned down a couple of opportunities that came my way because I didn't have the time and energy. And you know what? People didn't say, “Jes, I'm never speaking to you again. You've disappointed me forever.” No, the world did not end. It was liberating. 
+Have I said "no"? Yes! I have turned down a couple of opportunities that came my way because I didn't have the time and energy. And you know what? People didn't say, "Jes, I'm never speaking to you again. You've disappointed me forever." No, the world did not end. It was liberating. 
 
 **Help Others:** 
 

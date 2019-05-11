@@ -39,7 +39,7 @@ Building a product in my spare time meant I was working within some tight constr
 
 ### Get the distractions out of my head
 
-One of the biggest barriers was all of the cool things I wanted to do with the system once it was built. Faced with “how do I make this database migration work” versus “how can I use machine learning to do that cool thing”, I would get sucked into daydreaming about the cool thing.
+One of the biggest barriers was all of the cool things I wanted to do with the system once it was built. Faced with "how do I make this database migration work" versus "how can I use machine learning to do that cool thing", I would get sucked into daydreaming about the cool thing.
 
 <div id="attachment_9050" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/03/launchreadypost_11-600x320.png" alt="Early UI Sketches for User Scenarios + Test Results" width="600" height="320" class="size-medium-width wp-image-9050" srcset="/wp-content/uploads/2018/03/launchreadypost_11-600x320.png 600w, /wp-content/uploads/2018/03/launchreadypost_11-300x160.png 300w, /wp-content/uploads/2018/03/launchreadypost_11-562x300.png 562w, /wp-content/uploads/2018/03/launchreadypost_11.png 695w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -69,7 +69,7 @@ Some of the things I needed were so undefined I couldn't figure out how to build
   <img src="/wp-content/uploads/2018/02/launchreadypost_04-600x124.png" alt="Push the Button: TeamCity deployment pipeline for LaunchReady (4 servers )" width="600" height="124" class="size-medium-width wp-image-8945" srcset="/wp-content/uploads/2018/02/launchreadypost_04-600x124.png 600w, /wp-content/uploads/2018/02/launchreadypost_04-300x62.png 300w, /wp-content/uploads/2018/02/launchreadypost_04-768x158.png 768w, /wp-content/uploads/2018/02/launchreadypost_04-1024x211.png 1024w, /wp-content/uploads/2018/02/launchreadypost_04.png 1100w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
-    Push the Button: TeamCity deployment pipeline for LaunchReady (4+ “servers”)
+    Push the Button: TeamCity deployment pipeline for LaunchReady (4+ "servers")
   </p>
 </div>
 

@@ -36,15 +36,15 @@ Select the DFT, and go to Data Flow designer page.
   
 Add a OLE DB Source to the package.
   
-Double-click the OLE DB Source, click “New” > “New” to create a connection to Visual FoxPro.
+Double-click the OLE DB Source, click "New" > "New" to create a connection to Visual FoxPro.
   
-In the Connection Manager, please select “Microsoft OLE DB Provider for Visual FoxPro”
+In the Connection Manager, please select "Microsoft OLE DB Provider for Visual FoxPro"
   
 Type the file path of a Visual FoxPro database(e.g. C:Address.dbc).
   
-Test the connection by clicking button “Test Connection”
+Test the connection by clicking button "Test Connection"
   
-Click “OK” > “OK” to apply.
+Click "OK" > "OK" to apply.
   
 Now, we can select a table from the Visual FoxPro database in the OLE DB Source editor.
   
@@ -60,19 +60,19 @@ Select the DFT, and go to Data Flow designer page.
   
 Add an ADO NET Souce to the package. Please note, ADO NET is started to support from SSIS 2008. In other words, in SSIS 2005, there is no ADO NET source.
   
-Double-click the OLE DB Source, click “New” > “New” to create a connection to Visual FoxPro.
+Double-click the OLE DB Source, click "New" > "New" to create a connection to Visual FoxPro.
   
-In the Connection Manager, please select “Odbc Data Provider”
+In the Connection Manager, please select "Odbc Data Provider"
   
 Select the DSN we created before, and then test the connection, make sure it is successful.
   
-Click “OK” > “OK” to apply.
+Click "OK" > "OK" to apply.
   
 Now, we can select a table from the Visual FoxPro database in the ADO NET Source editor. If it is fail, please try using SQL Command mode.
   
 Additionally, we strongly recommend using the Visual FoxPro OLE DB provider as a replacement. Also, in design-time, pleaes set the package to run in 32-bit mode, otherwise the package will fail to run.
   
-Right-click the project > “Properties” > “Debugging” > Set “Run64Runtime” to be “False”.
+Right-click the project > "Properties" > "Debugging" > Set "Run64Runtime" to be "False".
 
 The two drivers can be downloaded from:
   
@@ -86,9 +86,9 @@ See also this very helpful blog post by Todd McDermid
 
 Also important suggestion by Scott Stauffer from the comments
   
-If you run the package interactively in BIDS, right click the project and choose properties, choose Debugging on the left of the properties dialogue box, then change Run64BitRuntime from “True” to “False”. I would suspect this should work. 
+If you run the package interactively in BIDS, right click the project and choose properties, choose Debugging on the left of the properties dialogue box, then change Run64BitRuntime from "True" to "False". I would suspect this should work. 
 
-To run the package from a SQLAgent Job, go to the properties of the step of a type SQL Server Integration Services Package, and click on the Execution Options tab, then choose “Use 32 bit runtime”
+To run the package from a SQLAgent Job, go to the properties of the step of a type SQL Server Integration Services Package, and click on the Execution Options tab, then choose "Use 32 bit runtime"
 
 This is also an important [relevant thread][3] 
 

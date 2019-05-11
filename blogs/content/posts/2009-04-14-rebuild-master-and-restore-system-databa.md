@@ -89,7 +89,7 @@ http://support.microsoft.com/kb/264474
   
 This is actually kind of true. It will work without going up, but not safe!!!
 
-After you are up on the build level, start SQL Server in single user mode now. I like command prompt just by using NET START “MSSQLSERVER” /m just for simple use of it.
+After you are up on the build level, start SQL Server in single user mode now. I like command prompt just by using NET START "MSSQLSERVER" /m just for simple use of it.
 
 Now if you use SSMS to restore your master there is a catch. When you use SSMS and the restore wizard it will restore master fine. Of course it will not be in the drop down but if you manually type is, then it will restore. However when master is restored it will issue a stop to the services so the GUI will die on you and error out. The restore was successful though. Net start SQL Server again and check it out. Database listing should be back and any other changes you made. Now restore model and msdb. Just remember, msdb holds you security settings so when you restore it, that new password we gave sa will revert back to the old. Don't forget to validate orphaned logins, update statistics and all that fun rebuild tasks you should do. Of course tell them you saved the day first.
 

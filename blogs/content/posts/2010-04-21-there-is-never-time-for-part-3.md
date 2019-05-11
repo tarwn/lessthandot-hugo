@@ -87,7 +87,7 @@ Normally people would look at the situation and ask if we could simplify the for
 
 #### Example 2) Generating the PO
 
-The process of generating a PO currently takes 3 days. We identify the value of this process as having the funds to purchase the requested PC. Unfortunately we have over-simplified the process of generating a PO by making it only one step in our diagram and I am sure the person responsible for generating them would have a few words to say about that. Instead of trying to guess, walk down and have a conversation with them. If possible map out the process they are going through, from receiving a request to completion of the PO. If you can get them on board and reduce the process, then you will be making a company wide improvement and I expect to see “Cross-Functional Process Improvement reduced processing of Purchase Orders by 50% company-wide” on your year end list of achievements. For the mean time, lets put this one to the side, as we won't be able to fix it until management sees some good savings from process improvement and we've built up a little credit.
+The process of generating a PO currently takes 3 days. We identify the value of this process as having the funds to purchase the requested PC. Unfortunately we have over-simplified the process of generating a PO by making it only one step in our diagram and I am sure the person responsible for generating them would have a few words to say about that. Instead of trying to guess, walk down and have a conversation with them. If possible map out the process they are going through, from receiving a request to completion of the PO. If you can get them on board and reduce the process, then you will be making a company wide improvement and I expect to see "Cross-Functional Process Improvement reduced processing of Purchase Orders by 50% company-wide" on your year end list of achievements. For the mean time, lets put this one to the side, as we won't be able to fix it until management sees some good savings from process improvement and we've built up a little credit.
 
 #### Example 2b) Generating the PO
 
@@ -130,7 +130,7 @@ There Is Never Time For ... _Part 3: Process Improvement_
  [1]: http://en.wikipedia.org/wiki/W._Edwards_Deming "More on Dr Deming at Wikipedia"
  [2]: http://en.wikipedia.org/wiki/Lean_manufacturing#Types_of_wastes "Seven Wastes at Wikipedia"
  [3]: http://www.amazon.com/Lean-Six-Sigma-Service-Transactions/dp/0071418210 "View book at Amazon"
- [4]: http://lssacademy.com/2010/01/10/introducing-the-5-why-“so-what”-test/ "View the article at LSS Academy"
+ [4]: http://lssacademy.com/2010/01/10/introducing-the-5-why-"so-what"-test/ "View the article at LSS Academy"
  [5]: http://dailykaizen.org/archives/792 "How do you calculate ROI? You don't!"
  [6]: /index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-1 "Read the first article in the series"
  [7]: /index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-2 "Read the second article in the series"

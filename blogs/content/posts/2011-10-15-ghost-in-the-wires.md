@@ -31,7 +31,7 @@ It is also pretty funny to see all the [crazy myths][5]. Below is the list of so
 
 1) Kevin was on the FBI's Most Wanted List
   
-2) Kevin was accused of stealing “billions of dollars” in secrets and software.
+2) Kevin was accused of stealing "billions of dollars" in secrets and software.
   
 3) Kevin used stolen credit card information.
   
@@ -41,7 +41,7 @@ It is also pretty funny to see all the [crazy myths][5]. Below is the list of so
   
 6) Kevin's story has inspired two books.
   
-7) Kevin has inspired a “Rabid internet cult”.
+7) Kevin has inspired a "Rabid internet cult".
   
 8) He is thought to have damaged computers and stolen millions of dollars of software from high-tech companies.
   

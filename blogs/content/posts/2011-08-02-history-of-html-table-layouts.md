@@ -24,7 +24,7 @@ The argument over table vs non-table layouts has been going on for years. I reme
 
 Table layouts are still in use and in some places they are still the default. They are easy to implement and the browser and standards wars of the late 90's and early 00's have left behind a lot of people who remember how impossible it sometimes felt to make a non-tabular layout. However, while there are still browser inconsistencies and delays in standards adoptions, sometimes I wonder if we have forgotten just how long it has been since we started down this non-tabular path.
 
-## Table-free Layout is “New”
+## Table-free Layout is "New"
 
 Tables have existed as part of web standards since the [HTML 3.2 standard][1] (January 1997). The standard referenced an earlier RFC and was intended to be compliant with the table tags Netscape had already added to their browser, but this was their official addition to the HTML standard.
 
@@ -34,9 +34,9 @@ The standard pointed out that tables could be used for tabular data or layout pu
   Browsers, 1996-1997: MS IE3/4, NCSA Mosaic 2.1/3, Netscape 4, Opera 2/3
 </div>
 
-In [HTML 4][2] (April 1998), this warning was strengthened to “Tables should not be used purely as a means to layout document content”, and we were pointed to the addition of CSS1 to help accommodate this. It was noted, however, that using deprecated features was expected to continue for a little while in order to support older browsers (browser listed above).
+In [HTML 4][2] (April 1998), this warning was strengthened to "Tables should not be used purely as a means to layout document content", and we were pointed to the addition of CSS1 to help accommodate this. It was noted, however, that using deprecated features was expected to continue for a little while in order to support older browsers (browser listed above).
 
-In [HTML 4.01][3] (Dec 1999), this warning was strengthened to the following directive: “Tables should not be used purely as a means to layout document content”.
+In [HTML 4.01][3] (Dec 1999), this warning was strengthened to the following directive: "Tables should not be used purely as a means to layout document content".
 
 <div style="margin: 0px 2em; font-style: italic; background-color: #eeeeee; padding: 4px;">
   Browsers, 1998-1999: MS IE5, Netscape 4.5/4.6, Opera 3.5/3.6
@@ -92,7 +92,7 @@ There were exceptions and they got fewer every year. As IE 5.5 and NS 4.6 faded 
 
 Resorting to table layout immediately means you aren't treating it as an exception. It's more likely you need to sit down with your manager or business and help them understand the ongoing costs involved with table layouts, some of the benefits available with newer techniques (ie, 2000 forward), and why it's important to start making the switch. Luckily there are [resources][9] out there to help.
 
-## There's “No Time”
+## There's "No Time"
 
 I understand deadlines, the pressure from the business to deliver, and the fact that many companies simply don't bother to grow their people. As we mentioned before, it can be difficult to convince our managers and business to understand why we need to go the, initially at least, slower route of non-tabular layout.
 

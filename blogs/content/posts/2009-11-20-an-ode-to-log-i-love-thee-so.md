@@ -24,7 +24,7 @@ Hey Everyone,
 ### The Environment Provider
 
 <p style="text-indent: 30pt;">
-  The Environment Provider does exactly what its title suggests: It provides an environment, or more specifically, all of the meta-data an application needs to exist in a specific configuration. Connection strings, end points, application configurations, etc. There is one single database that holds all of this data. This data is identified by a “context”. For example, the KBay webservices can exist on a local developer's PC, a Development Server, a Staging Server, and a Production Server. Each of these locations can connect to either the Development or Production database. So a combination of the location of the application and the desired data environment gives us a context for which a set of environment parameters to use. In the case of KBay, the structure is pretty simple. We have some other apps, international apps with multiple data sources, well, they get a bit crazy, but we have an app just for managing all these settings:
+  The Environment Provider does exactly what its title suggests: It provides an environment, or more specifically, all of the meta-data an application needs to exist in a specific configuration. Connection strings, end points, application configurations, etc. There is one single database that holds all of this data. This data is identified by a "context". For example, the KBay webservices can exist on a local developer's PC, a Development Server, a Staging Server, and a Production Server. Each of these locations can connect to either the Development or Production database. So a combination of the location of the application and the desired data environment gives us a context for which a set of environment parameters to use. In the case of KBay, the structure is pretty simple. We have some other apps, international apps with multiple data sources, well, they get a bit crazy, but we have an app just for managing all these settings:
 </p>
 
 ### The EP Tree
@@ -32,7 +32,7 @@ Hey Everyone,
 <img src="http://ringdev.com/images/EnvironmentProvider.JPG" alt="Environment Provider Tree" title="Environment Provider Tree" style="margin-left:50px;" />
 
 <p style="text-indent: 30pt;">
-  It started off as a proof of concept for organizing Environment Provider data when someone mentioned a “Tree” controller and someone (probably Adam!) put it to a Silverlight challenge. Different types of parameters (leaves) are color coded, and if connection strings are detected that point to databases other than their context (branches) would imply, they turn red. And yes, the sun and sky are also animated. Although it started off as a joke, we actually found some bad configurations with the color-coded leaves.
+  It started off as a proof of concept for organizing Environment Provider data when someone mentioned a "Tree" controller and someone (probably Adam!) put it to a Silverlight challenge. Different types of parameters (leaves) are color coded, and if connection strings are detected that point to databases other than their context (branches) would imply, they turn red. And yes, the sun and sky are also animated. Although it started off as a joke, we actually found some bad configurations with the color-coded leaves.
 </p>
 
 ### Accessing the Meta-Data

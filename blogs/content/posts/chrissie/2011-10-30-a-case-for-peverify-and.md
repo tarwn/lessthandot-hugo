@@ -190,9 +190,9 @@ namespace ConsoleApplication1
 
 I then mailed Lucian, who confirmed this to be a bug. He also said this.
 
-> VS2008SP1 &#8212; the generated exe fails PEVerify and crashes at runtime with an “Unable to load type” error
+> VS2008SP1 &#8212; the generated exe fails PEVerify and crashes at runtime with an "Unable to load type" error
 > 
-> VS2010SP1 &#8212; the generated exe fails PEVerify and crashes at runtime with an “Unable to load type” error
+> VS2010SP1 &#8212; the generated exe fails PEVerify and crashes at runtime with an "Unable to load type" error
 > 
 > VS.Next (Dev11) &#8212; the generated exe fails PEVerify, but succeeds at runtime
 
@@ -232,7 +232,7 @@ That way the compiler doesn&#8217;t have to look for it.
 
 From Lucian.
 
-Another workaround: you could also fix it with “AddressOf CType(task, MiddleClass(Of DerivedType)).Go” to tell it explicitly which class declared the “Go” method.
+Another workaround: you could also fix it with "AddressOf CType(task, MiddleClass(Of DerivedType)).Go" to tell it explicitly which class declared the "Go" method.
 
 And this workaround also from Lucian.
 
@@ -242,7 +242,7 @@ or
 
 ```vbnet
 Dim c As New Callback(Of FunctionArgs)(Sub(x) task.Go(x))```
-This makes avoids the faulty “AddressOf” by instead using a lambda.
+This makes avoids the faulty "AddressOf" by instead using a lambda.
 
 ## Conclusion
 

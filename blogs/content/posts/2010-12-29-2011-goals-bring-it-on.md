@@ -38,13 +38,13 @@ This is the year I go and take PASS Summit by storm. The last two years, I had a
 **Support Cool Community Projects:**  
 The SQL community is full of SQL People with amazing ideas. I've been honored to be asked to participate in a couple of them. I'll be a [SQL University][4] professor, be a [SQL Person][5], storm the internets for the [SQL Denali News Team][6], and help the [PASS WIT chapter][7]. I can't wait to see what other ideas are born this year. 
 
-On that topic, my goal is also to say “**no**” this year. It is fun and exciting to be asked to help with a project. However, one person can't do everything, and I am beginning to understand this. If I am asked to help with something, and I don't have the time for it or interest in it, I will politely decline. This will be a big step for me, because I hate saying no. 
+On that topic, my goal is also to say "**no**" this year. It is fun and exciting to be asked to help with a project. However, one person can't do everything, and I am beginning to understand this. If I am asked to help with something, and I don't have the time for it or interest in it, I will politely decline. This will be a big step for me, because I hate saying no. 
 
 **Help Others:**  
 Nothing is more exciting to me than to help someone else realize a goal. Whether I am editing a blog post or reviewing a resume, answering questions about Twitter or connecting two people who have a common goal, I love to help. 
 
 **Help Myself:**  
-All of those seem very soft-skill, community-oriented goals. I don't want to pick any hard-and-fast goals for myself, like “be the master of such-and-such feature or technology.” I do, however, need to increase my technical knowledge, of SQL Server and beyond. I want to get two certifications this year. I'm currently studying for the 70-432, and take the exam January 24. I want to get a second certification later in the year. I'm also going to write a PowerShell script. I really am, I promise, Aaron. 
+All of those seem very soft-skill, community-oriented goals. I don't want to pick any hard-and-fast goals for myself, like "be the master of such-and-such feature or technology." I do, however, need to increase my technical knowledge, of SQL Server and beyond. I want to get two certifications this year. I'm currently studying for the 70-432, and take the exam January 24. I want to get a second certification later in the year. I'm also going to write a PowerShell script. I really am, I promise, Aaron. 
 
 **Personal Goals  
 **   

@@ -36,11 +36,11 @@ Here we go!
 
 Starting on SFNode0, I [download the package][1]. There is a brief struggle through the overly strict IE security settings (did you know docs.microsoft.com uses google-analytics?).
 
-Unpack the downloaded archive and make a copy of the ClusterConfig.X509.MultiMachine.json so we can modify a copy without changing the original. I've named this “ClusterConfig.LaunchReady.LocalCluster.json” for my cluster.
+Unpack the downloaded archive and make a copy of the ClusterConfig.X509.MultiMachine.json so we can modify a copy without changing the original. I've named this "ClusterConfig.LaunchReady.LocalCluster.json" for my cluster.
 
 ## Step 2: Cluster Configuration File
 
-The configuration (or “manifest”) is explained in detail in [Microsoft Docs][2]. I'll call out the specifics of what I'm changing as I go.
+The configuration (or "manifest") is explained in detail in [Microsoft Docs][2]. I'll call out the specifics of what I'm changing as I go.
 
 <div id="attachment_8718" style="width: 1034px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/SFNode0ConfigScreen.png" alt="Initial Cluster Configuration" width="1024" height="768" class="size-full wp-image-8718" srcset="/wp-content/uploads/2017/07/SFNode0ConfigScreen.png 1024w, /wp-content/uploads/2017/07/SFNode0ConfigScreen-300x225.png 300w, /wp-content/uploads/2017/07/SFNode0ConfigScreen-768x576.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
@@ -110,11 +110,11 @@ First, switch to a system that has the ServiceFabric SDK installed. It won't be 
 
 Next copy the CertSetup.ps1 file to your desktop or another location that will allow you to edit the file (we don't want to replace one the SDK relies on and Windows security will prevent you from saving over it in the current location).
 
-Next, follow the instructions to generate a cluster/server certificate and a client certificate (I named mine “LaunchReadyLocalClusterCert” and “LaunchReadyLocalClientCert”). This requires editing the names in CertSetup.ps1 on line 22 (Cleanup-Cert function), line 96, and line 163.
+Next, follow the instructions to generate a cluster/server certificate and a client certificate (I named mine "LaunchReadyLocalClusterCert" and "LaunchReadyLocalClientCert"). This requires editing the names in CertSetup.ps1 on line 22 (Cleanup-Cert function), line 96, and line 163.
 
 Launch PowerShell as an Administrator, then run the altered script `.\CertSetup.ps1 -Install`. When it completes, edit the script to enter the second certificate subject name and run it a second time.
 
-Opening “Manage computer certificates” from the Start menu, I can see my two certificates listed in Personal/Certificates:
+Opening "Manage computer certificates" from the Start menu, I can see my two certificates listed in Personal/Certificates:
 
 <div id="attachment_8719" style="width: 769px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/Certificates.png" alt="Certificates Successfully Generated" width="759" height="155" class="size-full wp-image-8719" srcset="/wp-content/uploads/2017/07/Certificates.png 759w, /wp-content/uploads/2017/07/Certificates-300x61.png 300w" sizes="(max-width: 759px) 100vw, 759px" />
@@ -161,7 +161,7 @@ On each node, I copy the 4 files, run the Install script, then run the Permissio
   </p>
 </div>
 
-Finally, I return to SFNode0 and enter the thumbprints in the “Security” section of my cluster configuration, removing the ThumbprintSecondary properties, the ClientCertificateCommonNames property, and the ReverseProxyCertificate property that I don't intend to use.
+Finally, I return to SFNode0 and enter the thumbprints in the "Security" section of my cluster configuration, removing the ThumbprintSecondary properties, the ClientCertificateCommonNames property, and the ReverseProxyCertificate property that I don't intend to use.
 
 ## Step 3: Test the Configuration</h3> 
 
@@ -174,30 +174,30 @@ Before testing, there are some notable prerequisites buried in the [Environment 
 To test the configuration, I opened a powershell console on SFNode0 and run `.\TestConfiguration.ps1 -ClusterConfigFilePath .\ClusterConfig.LaunchReady.LocalCluster.json`
 
 <div style="background-color: #FFFFCC; padding: 1em; margin: 1em;">
-  Tip: open a powershell console to the current folder in Windows Explorer by typing “powershell” in the address bar!
+  Tip: open a powershell console to the current folder in Windows Explorer by typing "powershell" in the address bar!
 </div>
 
 Here are the errors as I work through them:
 
 ### Name Resolution Failure
 
-**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: No such host is known”
+**Error:** "Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: No such host is known"
 
 **Fix:** Name resolution failed to find the host on my local network, so I switched my `iPAddress` properties to actual IP Addresses.
 
 ### Missing Firewall Rule
 
-**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: A connection attempt failed because the conncted party did not properly respond...” (classic timeout error)
+**Error:** "Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: A connection attempt failed because the conncted party did not properly respond..." (classic timeout error)
 
 **Fix:** Add the Firewall rule I mentioned above to allow traffic on 135, 137, 138, 139, and 445.
 
 ### SMB? Reboot all the things
 
-**Error:** “Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: The connection was actively refused”
+**Error:** "Machine 'SFNode2' is not reachable on port 445. Check connectivity/open ports. Error: The connection was actively refused"
 
 **Fix:**
   
-1. Open the Network Adapter properties and make sure “File and Printer Sharing for Microsoft Networks” is enabled (or netstat -ao and make sure you're listening on 445)
+1. Open the Network Adapter properties and make sure "File and Printer Sharing for Microsoft Networks" is enabled (or netstat -ao and make sure you're listening on 445)
   
 2. Reboot <- It's like Windows NT all over again! (I don't know why this fixed it, but it did) <img src="/wp-content/uploads/2017/07/SuccessfulConfigTest.png" alt="Successful Configuration Test" width="517" height="258" class="size-full wp-image-8721" srcset="/wp-content/uploads/2017/07/SuccessfulConfigTest.png 517w, /wp-content/uploads/2017/07/SuccessfulConfigTest-300x150.png 300w" sizes="(max-width: 517px) 100vw, 517px" />
 
@@ -236,11 +236,11 @@ Use https instead and use something like Chrome instead of IE. Chrome will popup
   </p>
 </div>
 
-Because the certificate is self-generated, it will be treated as insecure by the browser and may require you to also go through a “no, really, I trust this certificate” routine.
+Because the certificate is self-generated, it will be treated as insecure by the browser and may require you to also go through a "no, really, I trust this certificate" routine.
 
 ## Step 6: Publish a ServiceFabric Project from VisualStudio
 
-Switching to Visual Studio, your ServiceFabric project should have a folder named “PublishProfiles”. Make a copy of the default “Cloud.xml” profile and rename it to “LocalCluster.xml”. 
+Switching to Visual Studio, your ServiceFabric project should have a folder named "PublishProfiles". Make a copy of the default "Cloud.xml" profile and rename it to "LocalCluster.xml". 
 
 There is an example for connecting via X509 certificates in a comment in the xml file, so replace the current content with that example and edit appropriately. Use the Thumbprint from the Server certificate above (also can be found in the cluster manifest screen at https://(ip address):19080/Explorer/index.html#/tab/manifest).
 
@@ -250,7 +250,7 @@ My file now looks like this:<pre lang = "xml">
 
 Add the new profile file to the project in Visual Studio.
 
-Right click the project and select “Publish”. In the Publish dialog, select your new Profile file from the first dropdown. The dialog will verify it can connect to the Cluster:
+Right click the project and select "Publish". In the Publish dialog, select your new Profile file from the first dropdown. The dialog will verify it can connect to the Cluster:
 
 <div id="attachment_8723" style="width: 648px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/PublishPackage.png" alt="VS 2017 - Publish Package for Service Fabric" width="638" height="434" class="size-full wp-image-8723" srcset="/wp-content/uploads/2017/07/PublishPackage.png 638w, /wp-content/uploads/2017/07/PublishPackage-300x204.png 300w" sizes="(max-width: 638px) 100vw, 638px" />

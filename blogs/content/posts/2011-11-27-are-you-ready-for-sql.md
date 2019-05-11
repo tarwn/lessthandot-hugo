@@ -19,7 +19,7 @@ tags:
   - sql server 2012
 
 ---
-SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don't qualify for SQL Server 2012 upgrades.. Even though most people are on SQL Server 2005 or higher these days, I see plenty of database code that is being written today in SQL Server 2000 syntax; I guess old habits are hard to break indeed! In the next 25 days I want to take a stab to identify 25 of these habits and see if we can bring them to this century. Think of it as the “SQL Server upgrade your code” advent calendar.
+SQL Server 2012 is around the corner, perhaps you are ready to upgrade and perhaps you are not. Maybe you just have upgraded to SQL Server 2008 R2 without software assurance and thus you don't qualify for SQL Server 2012 upgrades.. Even though most people are on SQL Server 2005 or higher these days, I see plenty of database code that is being written today in SQL Server 2000 syntax; I guess old habits are hard to break indeed! In the next 25 days I want to take a stab to identify 25 of these habits and see if we can bring them to this century. Think of it as the "SQL Server upgrade your code" advent calendar.
 
 Another reason I want to do is because some of the 2000 syntax or pre 2000 syntax won't work anymore in SQL Server 2012 Are you still using old style left joins with \*= and =\*? If so then you will be greeted with the following message: Incorrect syntax near '*'.
 

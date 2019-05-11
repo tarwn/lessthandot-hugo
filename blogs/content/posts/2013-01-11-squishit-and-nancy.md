@@ -31,7 +31,7 @@ Once installed, there is a little bit of setup work we need to do.
 
 ### Configuring Nancy's View Engine
 
-This was infinitely more complex than using a referenced library in a razor view with MVC. Translation: this was as simple as adding a “razor” section to the web.config:
+This was infinitely more complex than using a referenced library in a razor view with MVC. Translation: this was as simple as adding a "razor" section to the web.config:
 
 ```xml
 <configSections>
@@ -139,7 +139,7 @@ protected void Application_Start(object sender, EventArgs e)
 }
 ```
 
-The second parameter here is called filePath, but actually represents the path to the assets controller, including the “name” parameter. This is what gets used in the src attribute of the rendered tag.
+The second parameter here is called filePath, but actually represents the path to the assets controller, including the "name" parameter. This is what gets used in the src attribute of the rendered tag.
 
 Finally we can add a view. Note that the cached bundle is rendered by name into the page:
 

@@ -130,6 +130,6 @@ WHERE ObjectName = 'Junked'
 
  
 
-From the illustration above, we can see that the table “Junked” was created, altered and then deleted.  This information can be invaluable in the event a table was dropped or altered, in the event that change caused a severe problem to the functionality of the table.  The time that the table was changed can show a specific set of events that may have led up to it, or reasoning they occurred.  Further value is seen in audit reporting on production systems that require change control. 
+From the illustration above, we can see that the table "Junked" was created, altered and then deleted.  This information can be invaluable in the event a table was dropped or altered, in the event that change caused a severe problem to the functionality of the table.  The time that the table was changed can show a specific set of events that may have led up to it, or reasoning they occurred.  Further value is seen in audit reporting on production systems that require change control. 
 
  

@@ -38,7 +38,7 @@ SELECT <published_columns> FROM [Person].[Person] WHERE [LoginAccount] = SUSER_S
 ```
 
 
-This configuration in the publication will automatically or manually force a data partition to be generated for any valid domain user with a listing in the publication access list when they initially connect to the publication.  For example, a publication that is based on Person.Person with a filter on SUSER_SNAME() and setting of “A row from this table will go to only one subscription” would reveal the Data Partitions page in the publications properties.  Note: Selecting either one or multiple subscriptions availability for partitions will be discussed later.  The data partitions page shows all data partitions that have been created manually or by a subscriber that has connected to the publication.
+This configuration in the publication will automatically or manually force a data partition to be generated for any valid domain user with a listing in the publication access list when they initially connect to the publication.  For example, a publication that is based on Person.Person with a filter on SUSER_SNAME() and setting of "A row from this table will go to only one subscription" would reveal the Data Partitions page in the publications properties.  Note: Selecting either one or multiple subscriptions availability for partitions will be discussed later.  The data partitions page shows all data partitions that have been created manually or by a subscriber that has connected to the publication.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-67.png?mtime=1323215615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-67.png?mtime=1323215615" width="381" height="342" /></a>

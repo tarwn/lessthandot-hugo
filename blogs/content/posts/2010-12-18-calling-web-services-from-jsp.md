@@ -36,7 +36,7 @@ Open Eclipse and create a new Dynamic Web Project:
 
 ![][3]
 
-Give your project a name (JSPWSClient will do) and click “New” to add a New Server Runtime Environment. Select Apache Tomcat v6.0 and locate the directory you extracted to earlier. 
+Give your project a name (JSPWSClient will do) and click "New" to add a New Server Runtime Environment. Select Apache Tomcat v6.0 and locate the directory you extracted to earlier. 
 
 ![][4]
 
@@ -46,7 +46,7 @@ The client will use the Local Time Web Service from http://ripedevelopment.com/t
 
 ![][5]
 
-If the server isn't already running the wizard will prompt you to “Start server”, do this and, when prompted to generate a Web Service Client Test, accept the defaults to use Web Service Sample JSPs.
+If the server isn't already running the wizard will prompt you to "Start server", do this and, when prompted to generate a Web Service Client Test, accept the defaults to use Web Service Sample JSPs.
 
 Eclipse will then generate a Web Service client and sample JSP files to test it. Once they are generated Eclipse will open the sample JSP client. Using this page the service methods can be tested to ensure connectivity with the service. Examining the source of these files in Project->WebContent->sampleLocalTimeSoapProxy can show us the methods we need to use. 
 

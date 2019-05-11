@@ -94,9 +94,9 @@ The Slowly Changing Dimension transformation provides the following functionalit
 
 **Explain the functionality of: Union All transformation.**
 
-**What is the “Lookup” transformation used for?**
+**What is the "Lookup" transformation used for?**
 
-**What is the use of “package configurations” in SSIS?**
+**What is the use of "package configurations" in SSIS?**
 
 **What are the different ways in which configuration details can be stored?**
 

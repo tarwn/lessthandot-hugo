@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-08-28T13:16:00+00:00
 ID: 1690
-excerpt: 'This is a follow-up article to, “Index Seek on LOB Columns”.  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that&hellip;'
+excerpt: 'This is a follow-up article to, "Index Seek on LOB Columns".  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that&hellip;'
 url: /index.php/datamgmt/dbadmin/lob-logical-reads-twice-the/
 views:
   - 42724
@@ -16,15 +16,15 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-This is a follow-up article to, “[Index Seek on LOB Columns][1]”.  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that the queries were being executed on.  For example, the exact row count of PerfLOB was 100.  When running the query shown in listing 1, the statistics IO show exactly 200 lob logical reads.
+This is a follow-up article to, "[Index Seek on LOB Columns][1]".  While working on the demonstration for the computed column method to achieve index seeks on a LOB data type, I noticed the lob logical reads were exactly twice the row count in the table that the queries were being executed on.  For example, the exact row count of PerfLOB was 100.  When running the query shown in listing 1, the statistics IO show exactly 200 lob logical reads.
 
 ```sql
 SELECT LEN(LOBVAL), SUB_CONTENT FROM PerfLOB WITH (INDEX=IDX_LOGSTRING)
 ```
 
 
-> Note: To follow the examples in this article, please refer to the scripts in Index Seek on LOB Columns and utilize the Word document available for download, “[Columnstore Index Basics][2]”.</p>
-I recalled reading an article by Paul White, “[Beware Sneaky Reads with Unique Indexes][3]” that explains the reasoning to why these reads were coming in higher.  As always, Paul's deep understanding of and ability to explain the optimizer's internals are shown in the article.
+> Note: To follow the examples in this article, please refer to the scripts in Index Seek on LOB Columns and utilize the Word document available for download, "[Columnstore Index Basics][2]".</p>
+I recalled reading an article by Paul White, "[Beware Sneaky Reads with Unique Indexes][3]" that explains the reasoning to why these reads were coming in higher.  As always, Paul's deep understanding of and ability to explain the optimizer's internals are shown in the article.
 
 To understand the query in listing 1 and the read counts, let's investigate the pages.
 
@@ -100,9 +100,9 @@ GO
 ```
 
 
-The above DBCC IND command will return the information on the index ID 2; index IDX_LOGSTRING. For more information on DBCC IND, read Paul Randal's article, “[Inside the Storage Engine: Using DBCC PAGE and DBCC IND to find out if the page splits ever roll back][4]”
+The above DBCC IND command will return the information on the index ID 2; index IDX_LOGSTRING. For more information on DBCC IND, read Paul Randal's article, "[Inside the Storage Engine: Using DBCC PAGE and DBCC IND to find out if the page splits ever roll back][4]"
 
-To read further on DBCC IND and the page types that can be returned in the results, read “[Inside the Storage Engine: The Anatomy of a page][5]”, by Paul Randal.
+To read further on DBCC IND and the page types that can be returned in the results, read "[Inside the Storage Engine: The Anatomy of a page][5]", by Paul Randal.
 
 Before looking too deep into the DBCC IND results, do a direct select on the IND_Results table to return all the information returned.
 
@@ -155,7 +155,7 @@ GO
 
 (Code example written by Paul White ([B][6] | [T][7]) – Thanks again, Paul!)
 
-The code example above creates a testing table, “Test” and inserts enough data into the variable max column to exceed the 32KB size.  Once LOB data exceeds 32KB in size, this causes the page to require the pointers discussed earlier.  A text pointer from the data row is created and then follows through to the text root (page type 4) structure.  As stated, the text tree then points down through to the LOB data stored on one or more text pages (page type 3).
+The code example above creates a testing table, "Test" and inserts enough data into the variable max column to exceed the 32KB size.  Once LOB data exceeds 32KB in size, this causes the page to require the pointers discussed earlier.  A text pointer from the data row is created and then follows through to the text root (page type 4) structure.  As stated, the text tree then points down through to the LOB data stored on one or more text pages (page type 3).
 
 With SQL Server 2012 a new undocumented DMV can be used to look further into the page storage and types, sys.dm\_db\_database\_page\_allocations.
 

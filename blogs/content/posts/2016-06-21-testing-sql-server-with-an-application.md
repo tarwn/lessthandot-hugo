@@ -16,7 +16,7 @@ categories:
 ---
 I've been blogging about SQL Server for years. Most of these blogs are designed for the database administrator or developer, and thus use SQL Server Management Studio exclusively. (Back in the day, I'd show SSRS a lot, too.)
 
-But one of the questions that's always been at the back of my mind is, “What does this look like from an application perspective?” I've been asking this question even more lately, as I work with Azure SQL Database and SQL Server 2016 features like Data Masking and Row Level Security. I'm used to having high-level permissions and executing queries in SSMS; what does it look like to a user that doesn't have those permissions or tools?
+But one of the questions that's always been at the back of my mind is, "What does this look like from an application perspective?" I've been asking this question even more lately, as I work with Azure SQL Database and SQL Server 2016 features like Data Masking and Row Level Security. I'm used to having high-level permissions and executing queries in SSMS; what does it look like to a user that doesn't have those permissions or tools?
 
 I decided to dust off the programmings skills from that AAS – Programmer/Analyst degree I earned a few years ago. I've used Visual Studio to create a web application, connect that to my database, and show what would appear to a user. I don't know if I did it the easy way, or the best way, and it's definitely not a way that I would use for any real-world application. But it helps me get a sense of what it takes to implement a feature beyond the database.
 
@@ -76,15 +76,15 @@ Visual Studio Community 2015 is a free version that can be downloaded from <http
 
 This hasn't changed much from my days of using Visual Studio 2005/2008, or has it? I'm about to find out.
 
-I click on New Project. On the left menu, I choose Templates > Visual Basic > Web. In the middle I choose ASP.NET Web Application. At the bottom I name it and click OK. The Template window should open. Choose Web Forms. If you don't want to use Azure to host the app, uncheck the “Host in the cloud box”. Click OK. (If you left “Host in the cloud” checked, you'll be prompted to enter information about your Azure account.)
+I click on New Project. On the left menu, I choose Templates > Visual Basic > Web. In the middle I choose ASP.NET Web Application. At the bottom I name it and click OK. The Template window should open. Choose Web Forms. If you don't want to use Azure to host the app, uncheck the "Host in the cloud box". Click OK. (If you left "Host in the cloud" checked, you'll be prompted to enter information about your Azure account.)
 
 When I'm using Visual Studio for app development, I keep the Toolbox pinned on the left side and the Solution Explorer pinned on the left.
 
 # Step 3: Making a Web App
 
-What I want to do is create a new “web page” where a user can enter some information and results will be returned. At the top, I select Project > Add New Item. On the left menu, I choose Visual Basic > Web > Web Form. At the bottom, I enter a name and click Add. (It should open in the middle pane, but if not, find it in the Solution Explorer, right-click, and select Open.)
+What I want to do is create a new "web page" where a user can enter some information and results will be returned. At the top, I select Project > Add New Item. On the left menu, I choose Visual Basic > Web > Web Form. At the bottom, I enter a name and click Add. (It should open in the middle pane, but if not, find it in the Solution Explorer, right-click, and select Open.)
 
-I see HTML in the middle pane. I want to view the designer, so at the bottom of the window I choose “Split”. My VS now looks like this.
+I see HTML in the middle pane. I want to view the designer, so at the bottom of the window I choose "Split". My VS now looks like this.
 
 [<img class="aligncenter size-medium wp-image-4567" src="/wp-content/uploads/2016/06/VS-view-300x188.png" alt="VS view" width="300" height="188" srcset="/wp-content/uploads/2016/06/VS-view-300x188.png 300w, /wp-content/uploads/2016/06/VS-view-1024x644.png 1024w, /wp-content/uploads/2016/06/VS-view.png 1493w" sizes="(max-width: 300px) 100vw, 300px" />][2]
 
@@ -114,9 +114,9 @@ I want to use a stored procedure to show Purchase Order information. I'm going t
   <br style="clear: both" />
 </div>
 
-I need to connect it to my data source. Next to Choose Data Source, I click the drop-down arrow and the Data Source Configuration window appears. I choose “Database” and name the data source, then click OK.
+I need to connect it to my data source. Next to Choose Data Source, I click the drop-down arrow and the Data Source Configuration window appears. I choose "Database" and name the data source, then click OK.
 
-The next step is creating the connection. I click “New Connection” and fill in the server information, click OK, then Next. I give my connection string a name and click Next. Now I have to choose what data I'll show. I choose the option to “Specify a custom SQL statement or stored procedure” and click Next. I already created a stored procedure, GetPurchaseOrder, which I select. My stored proc has a parameter, StockItemID. I'm going to pass a value in from a text box. However, I haven't added that to the form yet, so I can't choose it. I leave Parameter source as None and click Next. I click the Test Query button and enter a parameter value. I get the results I expect. I click Finish.
+The next step is creating the connection. I click "New Connection" and fill in the server information, click OK, then Next. I give my connection string a name and click Next. Now I have to choose what data I'll show. I choose the option to "Specify a custom SQL statement or stored procedure" and click Next. I already created a stored procedure, GetPurchaseOrder, which I select. My stored proc has a parameter, StockItemID. I'm going to pass a value in from a text box. However, I haven't added that to the form yet, so I can't choose it. I leave Parameter source as None and click Next. I click the Test Query button and enter a parameter value. I get the results I expect. I click Finish.
 
 <div id='gallery-4' class='gallery galleryid-4555 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
@@ -125,7 +125,7 @@ The next step is creating the connection. I click “New Connection” and fill 
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4580'>
-      Choose “Database”
+      Choose "Database"
     </dd>
   </dl>
   

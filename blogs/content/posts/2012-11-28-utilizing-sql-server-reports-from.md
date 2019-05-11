@@ -33,7 +33,7 @@ This will run the packages dashboard to show the high level configurations and s
 
 ![][2]
 
-Notice that the “Non Default Configuration Options” section has been expanded.  This exposes a few values that show best practice points.  In my image above, you'll see that the max server memory has been re-configured from the default of 2TB.  This would be important to know as all the information would be.
+Notice that the "Non Default Configuration Options" section has been expanded.  This exposes a few values that show best practice points.  In my image above, you'll see that the max server memory has been re-configured from the default of 2TB.  This would be important to know as all the information would be.
 
 Getting the information back to you
 

@@ -63,7 +63,7 @@ Or something like that.
   
 This was in a baseclass from which testclasses inherit (so you can pass some much needed parameters to them and then you just call execute and BAM! tests run. 
 
-This however only works for “simple” tests. As soon as you start to use testcase you are in trouble and a world of much code. Much code means much work and I don't like to work. But I don't have too. Because I can run the tests another way, with nunit.engine. 
+This however only works for "simple" tests. As soon as you start to use testcase you are in trouble and a world of much code. Much code means much work and I don't like to work. But I don't have too. Because I can run the tests another way, with nunit.engine. 
 
 Just nuget the NUnit.Engine package and make sure everyone of those files is in your outputfolder
 

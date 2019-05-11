@@ -16,7 +16,7 @@ categories:
 ---
 There are five days left yet, but I can say now: 2010 has been the most extraordinary year of my life. 365 days ago, I could not have dreamed the places I would go, the adventures I would have, the things I would do, the races I would run, and, most of all, the people I would meet. I am amazed by how far I have come, and grateful to all the people that have helped me get here.
 
-**One year ago:** I was “Decision Support Tech” at a small company, writing reports and monitoring six servers. I'd written a handful of blogs and attended a couple user group meetings. I had run two 5K races. I was just finishing my term as President of the Oshkosh Jaycees. I cooked and baked a lot.
+**One year ago:** I was "Decision Support Tech" at a small company, writing reports and monitoring six servers. I'd written a handful of blogs and attended a couple user group meetings. I had run two 5K races. I was just finishing my term as President of the Oshkosh Jaycees. I cooked and baked a lot.
 
 **Today:** I am a Database Administrator at Kimberly Clark, working on hundreds of servers all over the world. I blog on my own site, I blog at LessThanDot.com, I have blogged for SQL University, I have not only attended but spoken at user groups and SQL Saturdays, and I am helping to lead the PASS WIT group. I have run almost 300 miles this year, including five 5Ks, a five-mile, and a 10K. For the Jaycees, I've chaired two events, including a first-year masquerade ball, collected school supplies, collected hats and mittens, and enjoyed every event. I am a much better cook and now I blog about that too.
 

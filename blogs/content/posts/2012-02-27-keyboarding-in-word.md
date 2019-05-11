@@ -23,13 +23,13 @@ I was recently asked to go manually update a bunch of Word documents with specif
   <a href="/wp-content/uploads/blogs/DesktopDev/WordKeyboard1.JPG?mtime=1330380437"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/WordKeyboard1.JPG?mtime=1330380437" width="429" height="477" /></a>
 </div>
 
-On this menu list, click on the “Word Options” button at the bottom right of the menu list. On the list on the left-hand side, click on “Customize”. You will then see the following:
+On this menu list, click on the "Word Options" button at the bottom right of the menu list. On the list on the left-hand side, click on "Customize". You will then see the following:
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DesktopDev/WordKeyboard2.JPG?mtime=1330351484"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/WordKeyboard2.JPG?mtime=1330351484" width="840" height="685" /></a>
 </div>
 
-At the bottom, click on “Customize” next to “Keyboard shortcuts:” in order to view all of the menu items and to enable the creation/modification of keyboard shortcuts. That will bring up the option to customize any keyboard commands. Below, you can see that I've updated the Highlight to use the default setting (Alt-Ctrl-H) which I found didn't work as I wanted and the Alt-Q that I added and which is easier for me to use. The same, obviously, can be done for any changes that you may also wish to make.
+At the bottom, click on "Customize" next to "Keyboard shortcuts:" in order to view all of the menu items and to enable the creation/modification of keyboard shortcuts. That will bring up the option to customize any keyboard commands. Below, you can see that I've updated the Highlight to use the default setting (Alt-Ctrl-H) which I found didn't work as I wanted and the Alt-Q that I added and which is easier for me to use. The same, obviously, can be done for any changes that you may also wish to make.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DesktopDev/WordKeyboard3.JPG?mtime=1330351825"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/WordKeyboard3.JPG?mtime=1330351825" width="574" height="441" /></a>

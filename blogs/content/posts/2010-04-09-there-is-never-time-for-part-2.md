@@ -23,7 +23,7 @@ _This is the second article in a three part series on major gaps that we never s
 
 It's always easy to put off little tasks until later. Labeling new equipment, updating a diagram of a wiring cabinet or server rack, creating monitors for performance and temperatures, testing your backups. Ok, some of these are less than small, and yet we continue to put them off.
   
-Take a moment and list two or three items you would like to make part of your process for deploying new code, new servers, new databases, new (whatever you do all day long). Ok, now open up your calendar and look forward to the next month, two months, 6 months...where is the reminder that your going to start doing that task, that your going to go back and do it for all the work you have completed to date? Yeah, thought so. This isn't a “one day” task, it's a “Never would have done it” task. Remember, I've been there too. 
+Take a moment and list two or three items you would like to make part of your process for deploying new code, new servers, new databases, new (whatever you do all day long). Ok, now open up your calendar and look forward to the next month, two months, 6 months...where is the reminder that your going to start doing that task, that your going to go back and do it for all the work you have completed to date? Yeah, thought so. This isn't a "one day" task, it's a "Never would have done it" task. Remember, I've been there too. 
 
 ### Step 1: Make a Standard
 
@@ -37,7 +37,7 @@ After building your simple standard you should have a list of X things you alrea
 
 ### Step 2: Revise your Standard, Review your Process
 
-Next add a recurring appointment (once a month or once a quarter) to your calendar to spend 15 minutes reviewing your standard. During this scheduled time you will first assess how well you are following the standard. If there are lines you are skipping then try to root cause the issue and figure out why you are skipping them. If you end up back at “there is never time for..” then go back and review the reasoning for why you wanted to do it in the first place. If a 5 minute task for each server is going to prevent outages and millions in losses, it's going to be a little harder to make a case for not doing it.
+Next add a recurring appointment (once a month or once a quarter) to your calendar to spend 15 minutes reviewing your standard. During this scheduled time you will first assess how well you are following the standard. If there are lines you are skipping then try to root cause the issue and figure out why you are skipping them. If you end up back at "there is never time for.." then go back and review the reasoning for why you wanted to do it in the first place. If a 5 minute task for each server is going to prevent outages and millions in losses, it's going to be a little harder to make a case for not doing it.
   
 After reviewing how well your doing each line, remove any lines you have determined were wasteful or are no longer necessary and add some additional items to the list. Again, keep your standard in a list format so you can easily use it as a check list to make sure your following your standard process, but also make sure there is enough description that a co-worker would be able to duplicate your process.
 

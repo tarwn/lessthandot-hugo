@@ -57,7 +57,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 1.0] Operator Overloading
   * [C# 1.0] Inheritance: extends base
   * [C# 1.0] Hiding: new
-  * [C# 1.0] Access modifiers: public protected private internal “protected internal”
+  * [C# 1.0] Access modifiers: public protected private internal "protected internal"
   * [C# 1.0] Modifiers – static instance const virtual overrides sealed extern
   * [C# 1.0] Property Declaration
   * [C# 1.0] Constructors
@@ -84,18 +84,18 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 2.0] Preprocessor Region: #pragma warning
   * [C# 2.0] Generics – Usage
   * [C# 2.0] Generic Class Declaration
-  * [C# 2.0] Generic Constraints: “where T”
+  * [C# 2.0] Generic Constraints: "where T"
   * [C# 2.0] Anonymous methods (inline delegates, closures)
   * [C# 2.0] Iterators: yield
   * [C# 2.0] Static Classes
-  * [C# 2.0] Partial types: “public partial class XYZ”
-  * [C# 2.0] Nullable types: “int? x = null”
-  * [C# 2.0] namespace aliases: “using xyz = System.IO;”
+  * [C# 2.0] Partial types: "public partial class XYZ"
+  * [C# 2.0] Nullable types: "int? x = null"
+  * [C# 2.0] namespace aliases: "using xyz = System.IO;"
   * [C# 2.0] Default value expression: default()
   * [C# 2.0] Conditional attribute
   * [C# 2.0] Fixed size buffers
   * [C# 2.0] Delegate Covariance/Contravariance
-  * [C# 2.0] Friend Assemblies: aka “oops we made everything internal”
+  * [C# 2.0] Friend Assemblies: aka "oops we made everything internal"
   * [C# 3.0] Implicitly Typed Local Variables: var
   * [C# 3.0] Extension Methods
   * [C# 3.0] Lambda expressions
@@ -104,7 +104,7 @@ Based on their relevance in our team, I left some grouped together (like unsafe 
   * [C# 3.0] Anonymouse types
   * [C# 3.0] Implicitly typed arrays
   * [C# 3.0] Query Expressions: from into in join let orderby group select
-  * [C# 3.0] Automatically implemented properties: “public int X { get; set; }”
+  * [C# 3.0] Automatically implemented properties: "public int X { get; set; }"
   * [C# 3.0] Partial method declaration
   * [C# 4.0] Covariance, Contravariance
   * [C# 4.0] Dynamic Dispatch: dynamic

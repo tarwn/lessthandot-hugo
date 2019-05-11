@@ -44,7 +44,7 @@ The main sticking point here is $rootScope.$apply(). We can also call $rootScope
 
 > When an external event (such as a user action, timer or XHR) is received, the associated expression must be applied to the scope through the $apply() method so that all listeners are updated correctly. 
 
-When running a full blown angular application, we don't need to worry about this – it happens in the background and we can get on with our lives. But testing is a different story. As an application gets larger you find mysterious calls to $rootScope.$apply() or $rootScope.$digest() (or both) littered throughout your tests, in seemingly arbitrary places. If you have multiple promises in play, you might have several in a single test. In many tests (possibly even “most” tests if you use the controllerAs style) this might be your only reason to capture the injected scopoe. There must be a better way.
+When running a full blown angular application, we don't need to worry about this – it happens in the background and we can get on with our lives. But testing is a different story. As an application gets larger you find mysterious calls to $rootScope.$apply() or $rootScope.$digest() (or both) littered throughout your tests, in seemingly arbitrary places. If you have multiple promises in play, you might have several in a single test. In many tests (possibly even "most" tests if you use the controllerAs style) this might be your only reason to capture the injected scopoe. There must be a better way.
 
 ## 'AutoQ' Approach
 
@@ -96,7 +96,7 @@ So now we don't have to call $rootScope.$apply(), but we do have to call the aut
 
 ## Making it useful
 
-When trying to figure out how to make this available to our tests, a trick we had been using to test the config phase of our application came to mind. Essentially what you do is declare a module upstream from your tests, and you can initialize it to capture dependencies taken in during the config phase (or anywhere in the module initialization process really). That “anywhere in the module initialization process” is where this gets interesting for our current problem. Any dependencies mutated or introduced through this dummy module will be available **in their modified state** to modules instantiated downstream. We had primarily done this as a way to set up spies for methods called during the config phase of our application, but the possibilities are endless. What we ended up doing was using this dummy module approach to register an 'autoQ' service that is only available in tests.
+When trying to figure out how to make this available to our tests, a trick we had been using to test the config phase of our application came to mind. Essentially what you do is declare a module upstream from your tests, and you can initialize it to capture dependencies taken in during the config phase (or anywhere in the module initialization process really). That "anywhere in the module initialization process" is where this gets interesting for our current problem. Any dependencies mutated or introduced through this dummy module will be available **in their modified state** to modules instantiated downstream. We had primarily done this as a way to set up spies for methods called during the config phase of our application, but the possibilities are endless. What we ended up doing was using this dummy module approach to register an 'autoQ' service that is only available in tests.
 
 ```javascript
 //need to call angular.module here, NOT the module method exposed by angular mocks
@@ -166,7 +166,7 @@ beforeEach(function () {
 ```
 ## Wrapping it up
 
-So now, we have an “autoQ” service that is available for testing. So our example test now looks like this:
+So now, we have an "autoQ" service that is available for testing. So our example test now looks like this:
 
 ```javascript
 it('should simulate promise', inject(function(autoQ) {
@@ -184,7 +184,7 @@ it('should simulate promise', inject(function(autoQ) {
     expect(resolvedValue).toEqual(123);
 }));
 ```
-This will really improve the signal to noise ratio in our tests, and hopefully help new developers get up to speed more quickly. Another nice benefit of this approach is that it does not modify $q – or anything in our “live” module – at all. So if we want finer grained control over promise resolution we can simply consume $q and $rootScope in our tests and use them as before. I'm not sure we'll ever need to do this, but its good to know we have the option.
+This will really improve the signal to noise ratio in our tests, and hopefully help new developers get up to speed more quickly. Another nice benefit of this approach is that it does not modify $q – or anything in our "live" module – at all. So if we want finer grained control over promise resolution we can simply consume $q and $rootScope in our tests and use them as before. I'm not sure we'll ever need to do this, but its good to know we have the option.
 
  [1]: https://docs.angularjs.org/api/ng/service/$http "$http service"
  [2]: https://docs.angularjs.org/api/ng/service/$q "$q"

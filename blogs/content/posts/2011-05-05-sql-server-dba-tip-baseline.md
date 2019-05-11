@@ -26,7 +26,7 @@ This tip has covered briefly what a baseline is, why to create baselines and som
 
   * When normal spikes occur in SQL Server resource consumption
   * When wait statistics may show longer waits than normal (wait statistics is a wide range of reasons or resources being used that may make performance slower)
-  * What “normal” performance is for given SQL Server instance
+  * What "normal" performance is for given SQL Server instance
 
 When we know the answers to these three items, we can make a more informed decision on when a problem is a problem.  Without a baseline, a 20% average in CPU for an hour timespan may concern us.  That could take time for a DBA to research and troubleshoot, and then start down a path that may end without a solid answer.  In some extreme cases, a DBA may make the decision to start running resource intense operations during normal business hours.  That decision itself could cause a performance problem while the problem it was intended to solve was not a problem at all. 
 
@@ -52,9 +52,9 @@ Using the assistance of a third party solution to gather statistics on SQL Serve
 
 **Notable**
 
-A few months before writing this article I attended, presented and help organize [SQL Saturday in Chicago][5].  During that event I sat in on Erin Stellato's ([Twitter][6] | [Blog][7]) session, “[Baseline First, Troubleshooting Second][8]”.  This presentation was excellent and went over this very topic.  Being a strong believer that you can become far more stable and efficient as a DBA by taking the necessary steps, like baselines, first in an environment, I thoroughly enjoyed the session.
+A few months before writing this article I attended, presented and help organize [SQL Saturday in Chicago][5].  During that event I sat in on Erin Stellato's ([Twitter][6] | [Blog][7]) session, "[Baseline First, Troubleshooting Second][8]".  This presentation was excellent and went over this very topic.  Being a strong believer that you can become far more stable and efficient as a DBA by taking the necessary steps, like baselines, first in an environment, I thoroughly enjoyed the session.
 
-If you have the opportunity to have Erin come near your area and she is presenting this session, or any other, I strongly encourage attending.  You will see the tools that this “Tip” did not go in-depth over.  Tools such as, PerfMon, PAL, Profiler, RMLUtils and on were mentioned, used and demonstrated. 
+If you have the opportunity to have Erin come near your area and she is presenting this session, or any other, I strongly encourage attending.  You will see the tools that this "Tip" did not go in-depth over.  Tools such as, PerfMon, PAL, Profiler, RMLUtils and on were mentioned, used and demonstrated. 
 
 Thanks to Erin and all the other presenters for sharing their knowledge on this and many other topics we otherwise would learn the hard way. 
 

@@ -76,13 +76,13 @@ On the HTML side, the ng-app attribute defines the main module for the page and 
 	</ul>
 </div>
 ```
-As I modify an input wired to a property in $scope, other elements bound to the same property update automatically (as will the property itself). Besides the straightforward “for loop”-like behavior of ng-repeat in this example, they also offer other variants, which are covered in detail in the [documentation][3]. 
+As I modify an input wired to a property in $scope, other elements bound to the same property update automatically (as will the property itself). Besides the straightforward "for loop"-like behavior of ng-repeat in this example, they also offer other variants, which are covered in detail in the [documentation][3]. 
 
 ## Knockout Binding
 
-Knockout's bindings are different from Angular's in a few ways. With Knockout, you can data bind to regular fields or to special “observable” properties. When binding to regular fields, the value is only read once and changes are not tracked. Observables track their changes, updating bound elements and referencing calculated observables when they are changed. 
+Knockout's bindings are different from Angular's in a few ways. With Knockout, you can data bind to regular fields or to special "observable" properties. When binding to regular fields, the value is only read once and changes are not tracked. Observables track their changes, updating bound elements and referencing calculated observables when they are changed. 
 
-Knockout bindings are defined on elements using a single “data-bind” attribute or without elements using a container-less style that depends on comments (not covered here). All of the bindings for an element go in that attribute, and are evaluated from left to right. Where Angular uses the presence of the [ng-app][4] and [ng-controller][5] directives to initialize the application, Knockout relies on an explicit “ko.applyBindings(_viewmodel_)” call.
+Knockout bindings are defined on elements using a single "data-bind" attribute or without elements using a container-less style that depends on comments (not covered here). All of the bindings for an element go in that attribute, and are evaluated from left to right. Where Angular uses the presence of the [ng-app][4] and [ng-controller][5] directives to initialize the application, Knockout relies on an explicit "ko.applyBindings(_viewmodel_)" call.
 
 ### Knockout Binding Example
 

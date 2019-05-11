@@ -24,7 +24,7 @@ One of the great things about Diagnostic Manager is the ability to create custom
 
 The example that we'll walk through is something that would actually make a great built in alert.  We will create an alert based on the time of our oldest current database backup.
 
-To start off, click on “Administration” in the bottom right hand corner:
+To start off, click on "Administration" in the bottom right hand corner:
 
 <p style="text-align: left;">
   <a href="/media/users/kconan/DM - Administration Menu.JPG?mtime=1332527611"><img src="/wp-content/uploads/users/kconan/DM - Administration Menu.JPG?mtime=1332527611" alt="" width="302" height="203" /></a>

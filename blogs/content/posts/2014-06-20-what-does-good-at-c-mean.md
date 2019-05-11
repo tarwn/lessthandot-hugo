@@ -1,5 +1,5 @@
 ---
-title: 'What does “good at C#” mean?'
+title: 'What does "good at C#" mean?'
 author: Eli Weinstock-Herman (tarwn)
 type: post
 date: 2014-06-20T12:15:41+00:00

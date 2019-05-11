@@ -44,7 +44,7 @@ If you would like to build a sample project of your own and follow along, here's
     Remove the Diagnostics entry in the web.config or add storage settings
   </li>
   <li>
-    In the Project References, select “Microsoft.Web.Infrastructure” and set “Copy Local” to “True”
+    In the Project References, select "Microsoft.Web.Infrastructure" and set "Copy Local" to "True"
   </li>
   <li>
     Create a Hosted Service in the Azure Dashboard
@@ -89,13 +89,13 @@ Select-AzureSubscription $subscriptionName -Current
 ```
 _$publishSettingsPath, $subscriptionName, and $storageAccountName are parameters I have passed into my script_
 
-We load the Azure module from the Microsoft SDKs folder (this is where it installs from Web PI). We then use the *.publishsettings file to “log in” to the Azure subscription, set the storage account we will be using by default, and set this subscription as the default one for our current powershell session.
+We load the Azure module from the Microsoft SDKs folder (this is where it installs from Web PI). We then use the *.publishsettings file to "log in" to the Azure subscription, set the storage account we will be using by default, and set this subscription as the default one for our current powershell session.
 
 <div style="background-color: #eeeeee; padding: .5em 1em; margin: .5em .5em 1.5em .5em;">
-  <a href="http://msdn.microsoft.com/en-us/library/dn722512.aspx" title="Import-AzurePublishSettingsFile on MSDN">Import-AzurePublishSettingsFile</a> basically logs into your Azure account using the supplied publishsettings file, storing a management certificate and a subscription data file. Once we're “logged in”, we can use the rest of the Azure cmdlets to interact with our Azure resources.</p> 
+  <a href="http://msdn.microsoft.com/en-us/library/dn722512.aspx" title="Import-AzurePublishSettingsFile on MSDN">Import-AzurePublishSettingsFile</a> basically logs into your Azure account using the supplied publishsettings file, storing a management certificate and a subscription data file. Once we're "logged in", we can use the rest of the Azure cmdlets to interact with our Azure resources.</p> 
 
 <p>
-  <a href="http://msdn.microsoft.com/en-us/library/dn722501.aspx" title="Set-AzureSubscription on MSDN">Set-AzureSubscription</a> sets the “current” storage account for the subscription, basically defining a default so we don't have to specify it throughout the script. Another option would be to use <a href="http://msdn.microsoft.com/en-us/library/dn495246.aspx" title="New-AzureStorageContext on MSDN">New-AzureStorageContext</a> to create context for the Storage Account and pass this to the calls that interact with Storage.
+  <a href="http://msdn.microsoft.com/en-us/library/dn722501.aspx" title="Set-AzureSubscription on MSDN">Set-AzureSubscription</a> sets the "current" storage account for the subscription, basically defining a default so we don't have to specify it throughout the script. Another option would be to use <a href="http://msdn.microsoft.com/en-us/library/dn495246.aspx" title="New-AzureStorageContext on MSDN">New-AzureStorageContext</a> to create context for the Storage Account and pass this to the calls that interact with Storage.
 </p>
 
 <p>
@@ -106,7 +106,7 @@ We load the Azure module from the Microsoft SDKs folder (this is where it instal
 </h3>
 
 <p>
-  Now that we have access to Azure, we can move on to upload the package. This package can be generated from Visual Studio by right clicking on the Cloud Project and choosing “Package”. In an automated process, we can use MSBuild to create this package before calling this script to upload and deploy it.
+  Now that we have access to Azure, we can move on to upload the package. This package can be generated from Visual Studio by right clicking on the Cloud Project and choosing "Package". In an automated process, we can use MSBuild to create this package before calling this script to upload and deploy it.
 </p>
     
 ```powershell
@@ -140,7 +140,7 @@ First we create the container if it doesn't already exist, then we upload the pa
 </p>
 
 <p>
-<a href="http://msdn.microsoft.com/en-us/library/dn495279.aspx" title="Set-AzureStorageBlobContent on MSDN">Set-AzureStorageBlobContent</a> uploads the contents of a file specified by -File to the given -Container value with a final name specified by the -Blob property. The -Force overrides any questions the command might have, like “are you sure you want to do that”.
+<a href="http://msdn.microsoft.com/en-us/library/dn495279.aspx" title="Set-AzureStorageBlobContent on MSDN">Set-AzureStorageBlobContent</a> uploads the contents of a file specified by -File to the given -Container value with a final name specified by the -Blob property. The -Force overrides any questions the command might have, like "are you sure you want to do that".
 </p>
 
 <p>
@@ -283,7 +283,7 @@ Performing the VIP swap is a simple command and the Powershell cmdlet turns that
 </p>
 
 <p>
-<a href="http://msdn.microsoft.com/en-us/library/dn722529.aspx" title="Remove-AzureAccount on MSDN">Remove-AzureAccount</a> is used to remove the Azure subscription data from the Powershell session, basically the “logout” equivalent to Import-AzurePublishSettingsFile's “login” </div> 
+<a href="http://msdn.microsoft.com/en-us/library/dn722529.aspx" title="Remove-AzureAccount on MSDN">Remove-AzureAccount</a> is used to remove the Azure subscription data from the Powershell session, basically the "logout" equivalent to Import-AzurePublishSettingsFile's "login" </div> 
 
 <h2>
   And we're deployed...

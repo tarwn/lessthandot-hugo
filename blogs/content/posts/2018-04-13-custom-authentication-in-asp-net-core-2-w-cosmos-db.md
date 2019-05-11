@@ -66,7 +66,7 @@ ASP.Net Core 2 ships with built-in modules for a variety of use cases: [MSDN: AS
   Be aware that most the MSDN examples mix the concepts of the Authentication middleware with the <code>Identity</code> model. ASP.net is not required and is, in my opinion, a fairly clumsy abstraction. Even the article on <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers">custom authentication</a> assumes you want to use Identity for the business logic and will just be supplying data store implementations that are lightly documented and much wider than needed.</p> 
   
   <p>
-    We will be using Principals and Identities for HttpContext, these are standard HttpContext concepts that are not related to “ASP.Net Core Identity”.
+    We will be using Principals and Identities for HttpContext, these are standard HttpContext concepts that are not related to "ASP.Net Core Identity".
   </p>
 </div>
 
@@ -77,7 +77,7 @@ The purpose of the Authentication modules are to interact with the outside world
   * Sign In/Out: Persisting claims information back out into the world (writing a cookie)
   * External behavior for Unauthenticated/Forbidden requests: Sending a 401 Response
 
-`Authentication Schemes` uniquely identify each Authentication module, for instance a request that comes in with two cookies would show two sets of Claims, each identified by an `AuthenticationScheme` from the Authentication module that read it. The `AuthenticationScheme` can also be used to enforce authentication to a specific `Scheme` for an endpoint (ignore claims from other modules, does this `Scheme` say they are allowed in?). A `DefaultAuthenticationScheme` configuration tell the system which Authentication module to challenge un-authentication users with. Or you can can have an endpoint explicitly issue a Challenge by `Scheme`, “Twitter” for example:
+`Authentication Schemes` uniquely identify each Authentication module, for instance a request that comes in with two cookies would show two sets of Claims, each identified by an `AuthenticationScheme` from the Authentication module that read it. The `AuthenticationScheme` can also be used to enforce authentication to a specific `Scheme` for an endpoint (ignore claims from other modules, does this `Scheme` say they are allowed in?). A `DefaultAuthenticationScheme` configuration tell the system which Authentication module to challenge un-authentication users with. Or you can can have an endpoint explicitly issue a Challenge by `Scheme`, "Twitter" for example:
 
 **Starting a Twitter OAuth Sign-in**
 
@@ -122,7 +122,7 @@ public interface ICustomMembership
 ```
 This reflects the basic set of behaviors we intend to perform, with an options object that includes a `DefaultPathAfterLogin` and `AuthenticationType` to use when interacting with Claims and HttpContext SignIn/SignOut methods.
 
-Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembership` class for this interface, register the default scheme (“Cookies”), and configure a Cookie authentication module for the “Cookies” scheme:
+Next, we switch to the `Startup.cs` and register the concrete `CosmosDBMembership` class for this interface, register the default scheme ("Cookies"), and configure a Cookie authentication module for the "Cookies" scheme:
 
 [SampleCosmosCore2App/Startup.cs][6]
 
@@ -173,13 +173,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 	app.UseMvc();
 }
 ```
-_Note: While I refer to the “Cookies” scheme by name, you'll note above I actually use the constant CookieAuthenticationDefaults.AuthenticationScheme_
+_Note: While I refer to the "Cookies" scheme by name, you'll note above I actually use the constant CookieAuthenticationDefaults.AuthenticationScheme_
 
 **#1 – services.AddCustomMembership:** Register CosmosDBMembership as a Transient dependency for ICustomMembership vi an [extension method (github)][7].
 
-**#2 – services.AddAuthentication:** Set the Default Authentication Scheme to our “Cookies” scheme to tell the system to use the “Cookies” module for challenging Unauthorized users.
+**#2 – services.AddAuthentication:** Set the Default Authentication Scheme to our "Cookies" scheme to tell the system to use the "Cookies" module for challenging Unauthorized users.
 
-**#3 – .AddCookie:** Lightly configure a Cookies module to use the “Cookies” scheme and provide the “LoginPath” used for challenging a user. (I don't recall why I included “LogoutPath”). Wire an event in for `OnValidatePrincipal` that gets the registered Membership object and asks it if the user is valid according to our business logic.
+**#3 – .AddCookie:** Lightly configure a Cookies module to use the "Cookies" scheme and provide the "LoginPath" used for challenging a user. (I don't recall why I included "LogoutPath"). Wire an event in for `OnValidatePrincipal` that gets the registered Membership object and asks it if the user is valid according to our business logic.
 
 **#4 – app.UseAuthentication:** Include the configured authentication middleware in the application
 
@@ -361,7 +361,7 @@ private async Task SignInAsync(LoginUser user)
 	await _context.HttpContext.SignInAsync(new ClaimsPrincipal(identity));
 }
 ```
-Behind the scenes, ASP.Net is calling the `SignIn` method on the “Cookies” authentication module. The Cookies module will take the ClaimsPrincipal we just passed it and write it as a cookie on the outgoing Response (and then read it back in on subsequent Requests). This is how we'll know who the user is later. Which brings us to ValidateLoginAsync, which is called from our custom OnValidatePrincipal logic.
+Behind the scenes, ASP.Net is calling the `SignIn` method on the "Cookies" authentication module. The Cookies module will take the ClaimsPrincipal we just passed it and write it as a cookie on the outgoing Response (and then read it back in on subsequent Requests). This is how we'll know who the user is later. Which brings us to ValidateLoginAsync, which is called from our custom OnValidatePrincipal logic.
 
 [SampleCosmosCore2App/Membership/CosmosDBMembership.cs – ValidateLoginAsync][14]
 
@@ -383,7 +383,7 @@ public async Task<bool> ValidateLoginAsync(ClaimsPrincipal principal)
 	return true;
 }
 ```
-We attempt to read the “sessionId” claim from the passed Principal and associate it with a saved `LoginSession` in the database, with a basic verification check to make sure the user has not logged out. In the event that we call false, our OnValidatePrincipal call will reject this principal (ensure it's not flagged as “Authenticated”).
+We attempt to read the "sessionId" claim from the passed Principal and associate it with a saved `LoginSession` in the database, with a basic verification check to make sure the user has not logged out. In the event that we call false, our OnValidatePrincipal call will reject this principal (ensure it's not flagged as "Authenticated").
 
 Finally, we have the last step for a user: Logging out.
 

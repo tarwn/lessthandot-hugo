@@ -20,7 +20,7 @@ It's almost here! It's almost here! The [world's largest SQL Server conference][
   <img src="/wp-content/uploads/users/grrlgeek/PASS_2012_SpeakingButton_250x250_blue.jpg?mtime=1351017369" alt="" />
 </p>
 
-I realized this morning that I'll have to start packing in a few days. Yes, I try to do this a few days in advance, instead of the night before, just in case I forget something. Then, I started thinking, “I should probably tell my First Timers what I'm bringing, so they don't forget something important.” Then I had a better thought: “I could blog it and share it with the world.”
+I realized this morning that I'll have to start packing in a few days. Yes, I try to do this a few days in advance, instead of the night before, just in case I forget something. Then, I started thinking, "I should probably tell my First Timers what I'm bringing, so they don't forget something important." Then I had a better thought: "I could blog it and share it with the world."
 
 Here's my PASS Summit packing list. Did I forget something important? Please leave me a comment!
 

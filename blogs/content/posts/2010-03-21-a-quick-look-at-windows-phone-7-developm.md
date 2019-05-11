@@ -77,21 +77,21 @@ If you pick XNA Game Studio 4.0 then the following templates are available
 
 I decided to pick the Silverlight Windows Phone List Application.
   
-After messing around with it for 15 minutes or so I managed to create the following “app”. I put app in quotes because it really doesn't do anything yet, it is all static. Hopefully I will be able to grab all the XML feeds we have on this site and plug it into the app. I myself have a Zune HD and I have heard that these apps should also work on the Zune HD.
+After messing around with it for 15 minutes or so I managed to create the following "app". I put app in quotes because it really doesn't do anything yet, it is all static. Hopefully I will be able to grab all the XML feeds we have on this site and plug it into the app. I myself have a Zune HD and I have heard that these apps should also work on the Zune HD.
 
-Below is an image of the “app” in action
+Below is an image of the "app" in action
 
 <img src="/wp-content/uploads/blogs/ITProfessionals//PhoneApp.png" alt="" title="" width="292" height="570" />
   
 
 
-I also shot a 2 minute and 11 second video where I play around with the “app” and also click around in Visual Studio to show you some of the stuff.
+I also shot a 2 minute and 11 second video where I play around with the "app" and also click around in Visual Studio to show you some of the stuff.
 
-Below is a video of the “app” in action [video:youtube:e7SHq4w17D0] 
+Below is a video of the "app" in action [video:youtube:e7SHq4w17D0] 
 
 ## Learning about Windows Phone 7 development
 
-I did all the stuff in this post without having looked at any documentation at all, I have never done any Silverlight development. To me it seems that developing for Windows Phone is not that difficult. Here are some resources for you if you want to learn more about Windows Phone 7 development. I will take a look at these also over the next couple of weeks and hopefully that “app” I created will be able to pull in real live data.
+I did all the stuff in this post without having looked at any documentation at all, I have never done any Silverlight development. To me it seems that developing for Windows Phone is not that difficult. Here are some resources for you if you want to learn more about Windows Phone 7 development. I will take a look at these also over the next couple of weeks and hopefully that "app" I created will be able to pull in real live data.
   
 Charles Petzold is writing a book titled Programming Windows Phone 7 Series, right now you can download the draft preview of that book.
 

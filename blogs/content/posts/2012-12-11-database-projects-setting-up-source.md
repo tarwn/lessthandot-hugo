@@ -40,7 +40,7 @@ Many companies I've worked for struggle with their database lifecycle management
   * DBA's spend too much time doing the copy operations
   * Backup chains are broken because of the lack of use of the WITH COPY_ONLY option
   * Changes are made by the DBA executing individual scripts, sometimes breaking because the development database and production database were out of sync.
-  * Bugs are “Emergency” fixed in the production database so the schemas of the development and production database are out of sync
+  * Bugs are "Emergency" fixed in the production database so the schemas of the development and production database are out of sync
   * ...
 
 **Possible solution**

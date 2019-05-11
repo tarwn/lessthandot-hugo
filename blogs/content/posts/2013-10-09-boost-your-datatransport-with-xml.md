@@ -68,7 +68,7 @@ Public Class Address
     Public Property Code As String
     Public Property State As String
 ```
-This gives us the means to trim resulting XML in such a way that the final result may feel like being “acceptable”. Our classes we could then expand with functionality to serialize any instance at any moment as well as deserialize back into them. Typically we use XmlSerializer objects for this. 
+This gives us the means to trim resulting XML in such a way that the final result may feel like being "acceptable". Our classes we could then expand with functionality to serialize any instance at any moment as well as deserialize back into them. Typically we use XmlSerializer objects for this. 
 
 ```vbnet
 Public Class Address

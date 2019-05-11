@@ -25,9 +25,9 @@ When teaching at a Microsoft Learning Partner Center I usually use the standard 
   <a href="http://www.flickr.com/photos/elycefeliz/3262326159/"><img alt="" src="/wp-content/uploads/users/axel8s/ChooseTrain1.jpg?mtime=1337691082" width="647" height="584" /></a>
 </div>
 
-First there is the Partner Centers' website where you can book the training, they all list the official numbers and most of them have also the complete description. Otherwise you can check the [Microsoft Learning site][1]. Fill in the course number and make sure you read the Course Details and Prerequisites! If you don't match the prerequisites for let's say 60% and don't think _“hmm interesting”_ for 75% of the chapters, maybe this is not the ideal training for you.
+First there is the Partner Centers' website where you can book the training, they all list the official numbers and most of them have also the complete description. Otherwise you can check the [Microsoft Learning site][1]. Fill in the course number and make sure you read the Course Details and Prerequisites! If you don't match the prerequisites for let's say 60% and don't think _"hmm interesting"_ for 75% of the chapters, maybe this is not the ideal training for you.
 
-What happens when you're in the “wrong training”?
+What happens when you're in the "wrong training"?
   
 Well it depends, if you don't meet the prerequisites, you'll lose interest, get bored, and miss some essential information so you completely can't follow anymore,... You just wasted you're time and money. The same happens when you already have too much knowledge. It's good that you have some working experience before you come follow a course. But if you work for 5 years with the previous release you shouldn't follow the complete basic course of the next release. You will get the same result.
   

@@ -21,7 +21,7 @@ tags:
 ---
 _This is the third article in a multi-article set that describes the basics of Kanban and explores applying Kanban to IT Processes. [Part one][1] provides a basic overview of Kanban and how it is used in manufacturing. The remaining parts explore sample scenarios to help generate ideas for your own environment._
 
-In this, part 3 of the “Applying Kanban to IT Processes” series, we are exploring the use of Kanban to manage a short-term functional project. This example focuses on using Kanban to create a transparent process to track the flow of equipment through a number of complex steps, without incurring additional costs for tracking software, complex processes and training, or duplication of effort. Improved uniformity or quality of the deployment process will also help improve efficiencies in troubleshooting and repair times as well as ensure a document-ably high level of conformance to software and licensing standards.
+In this, part 3 of the "Applying Kanban to IT Processes" series, we are exploring the use of Kanban to manage a short-term functional project. This example focuses on using Kanban to create a transparent process to track the flow of equipment through a number of complex steps, without incurring additional costs for tracking software, complex processes and training, or duplication of effort. Improved uniformity or quality of the deployment process will also help improve efficiencies in troubleshooting and repair times as well as ensure a document-ably high level of conformance to software and licensing standards.
 
 ## Welcome to DEF's Annual PC Deployment
 

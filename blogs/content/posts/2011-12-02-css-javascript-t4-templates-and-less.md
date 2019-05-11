@@ -25,7 +25,7 @@ For the past few months, I have been looking for a way to define some JS and CSS
 
 ## The Shared Project
 
-Yesterday the best solution I was also the best one I had thought of on my own, which was to create a shared project and use pre- or post-build commands to copy the common files to the relevant web projects. Unfortunately this doesn't solve the “let me edit a file without rebuilding” unless I then edit the copied file, test, and remember to paste the changes back into the source without first building and wiping out my temporary changes.
+Yesterday the best solution I was also the best one I had thought of on my own, which was to create a shared project and use pre- or post-build commands to copy the common files to the relevant web projects. Unfortunately this doesn't solve the "let me edit a file without rebuilding" unless I then edit the copied file, test, and remember to paste the changes back into the source without first building and wiping out my temporary changes.
 
 Yuck.
 
@@ -58,7 +58,7 @@ Referencing the Assembly
 Unfortunately Visual Studio 2010's T4 implementation no longer accesses assemblies through the project references, but this still leaves us with <a href="http://weblogs.asp.net/lhunt/archive/2010/05/04/t4-template-error-assembly-directive-cannot-locate-referenced-assembly-in-visual-studio-2010-project.aspx" title="T4 Template error - Assembly Directive cannot locate referenced assembly in Visual Studio 2010 project">a few options</a>. Given that I want to share this among several projects, I put the dotless.Core DLL in a folder at my solution level and updated the path in the T4 template to use the solution path macro. </div> 
 
 <p>
-  Next I created a sample file to play with, which I called test.less.css (fancy, I know). I also modified the settings section of the T4CSS.tt file, setting _runOnBuild and _useCssExtension to “true”. This will cause the template to run on each build, as well as when I trigger it, and it will look for files ending in “.less.css” instead of just “.less”. This gives us some CSS intellisense with minimal hassle, though Mindscape's Web Workbench apparently handles this out of the box and there is <a href="http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923" title="CSS Is Less">an extension</a> to make VS treat the less extension as a CSS format.
+  Next I created a sample file to play with, which I called test.less.css (fancy, I know). I also modified the settings section of the T4CSS.tt file, setting _runOnBuild and _useCssExtension to "true". This will cause the template to run on each build, as well as when I trigger it, and it will look for files ending in ".less.css" instead of just ".less". This gives us some CSS intellisense with minimal hassle, though Mindscape's Web Workbench apparently handles this out of the box and there is <a href="http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923" title="CSS Is Less">an extension</a> to make VS treat the less extension as a CSS format.
 </p>
 
 <div style="font-size: .9em; background-color: #eeeeee; padding: .5em;">
@@ -70,7 +70,7 @@ Unfortunately Visual Studio 2010's T4 implementation no longer accesses assembli
 </p>
 
 <p>
-  <i>Note: There is also the “Transform All Templates” button on the top of the solution explorer if I don't feel like double-saving. I could also add a shortcut in the keyboard commands list (Tools -> Options -> Environment -> Keyboard) for “TextTransformation.TransformAllTemplates</i>
+  <i>Note: There is also the "Transform All Templates" button on the top of the solution explorer if I don't feel like double-saving. I could also add a shortcut in the keyboard commands list (Tools -> Options -> Environment -> Keyboard) for "TextTransformation.TransformAllTemplates</i>
 </p>
 
 <h2>
@@ -78,11 +78,11 @@ Unfortunately Visual Studio 2010's T4 implementation no longer accesses assembli
 </h2>
 
 <p>
-  This solution hasn't quite given me the “save the file and refresh the page” ease of use of a static CSS file. This means if you are editing a less file that more than one template references, and you don't have all the templates open, you could get out of sync. To help keep things clean in source control, this means you should run a complete build (to let all the transforms run) or use.
+  This solution hasn't quite given me the "save the file and refresh the page" ease of use of a static CSS file. This means if you are editing a less file that more than one template references, and you don't have all the templates open, you could get out of sync. To help keep things clean in source control, this means you should run a complete build (to let all the transforms run) or use.
 </p>
 
 <p>
-  To make this work for multiple projects we can add a folder at the solution level with our less files and use the @import statement to pull them in. Except now we can't do the .less.css trick anymore because less doesn't process @import's ending in CSS, assuming they are intended to be regular css imports. At this point, it's probably time to stop fighting it, apply the “Less is CSS” extension I mentioned above, and change back to using .less instead of .less.css. Fun times.
+  To make this work for multiple projects we can add a folder at the solution level with our less files and use the @import statement to pull them in. Except now we can't do the .less.css trick anymore because less doesn't process @import's ending in CSS, assuming they are intended to be regular css imports. At this point, it's probably time to stop fighting it, apply the "Less is CSS" extension I mentioned above, and change back to using .less instead of .less.css. Fun times.
 </p>
 
 <p>

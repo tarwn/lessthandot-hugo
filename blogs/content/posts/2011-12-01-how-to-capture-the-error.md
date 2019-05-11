@@ -87,6 +87,6 @@ Output
   
 Divide BY zero ERROR encountered. 8134
 
-What is better for the end user 8134 or “Divide BY zero ERROR encountered.”?
+What is better for the end user 8134 or "Divide BY zero ERROR encountered."?
 
  [1]: http://stackoverflow.com/questions/8171359/capture-the-error-output-from-a-stored-procedure-when-calling-another-stored-pro/8171572#8171572

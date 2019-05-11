@@ -30,7 +30,7 @@ Remapper (Configuration configuration) {
 }
 ```
 
-Once you get this property, you should be able to resolve whatever you need. You could also get it from the “connection.driver_class” property but this seemed more sensible for me.
+Once you get this property, you should be able to resolve whatever you need. You could also get it from the "connection.driver_class" property but this seemed more sensible for me.
 
 Once you've got the platform, the fun of remapping begins. For our purposes we are interested in two collections hanging off the configuration, the class mappings (for adjusting primary table names and removing sequences) and the collection mappings (for adjusting cross-reference table names). The method will look something like this:
 
@@ -61,7 +61,7 @@ void FixOracleName (Table table) {
 }
 ```
 
-Not rocket science. Remapping the sequences was a bit trickier. We need to remove the sequence property specified in the mappings for SQL Server, but getting to it proved to be a bit difficult. There is an Identifier on the ClassMap that seemed to be (and actually was) what we needed, but we had to do some work to do to get it in a form we could use. The key ended up being casting the Identifier property to a SimpleValue, which NHibernate defines as “Any value that maps to columns”. Once we had a SimpleValue, we were able to access a dictionary called IdentifierGeneratorProperties that lets us remove the sequence element. The method to remap the sequences ends up looking like this:
+Not rocket science. Remapping the sequences was a bit trickier. We need to remove the sequence property specified in the mappings for SQL Server, but getting to it proved to be a bit difficult. There is an Identifier on the ClassMap that seemed to be (and actually was) what we needed, but we had to do some work to do to get it in a form we could use. The key ended up being casting the Identifier property to a SimpleValue, which NHibernate defines as "Any value that maps to columns". Once we had a SimpleValue, we were able to access a dictionary called IdentifierGeneratorProperties that lets us remove the sequence element. The method to remap the sequences ends up looking like this:
 
 ```csharp
 void RemapSequence (PersistentClass classMap) {

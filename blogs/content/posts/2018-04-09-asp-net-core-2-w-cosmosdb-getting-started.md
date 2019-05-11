@@ -45,7 +45,7 @@ I'm not 100% how far this series is going to go, but I need this foundation for 
   * Ensure forms are safe from [Cross site request forgery][2]
   * ...And maybe: Solid error handling, generic error pages, basic instrumentation, API token authentication, CI/CD, unit tests, and more
 
-We will do this all without letting the standard templates steer us into using bootstrap, Entity Framework, “install all the things” authentication checkboxes, buttons that manually deploy completely unrepeatable local builds, or any other magic that would get in the way of learning how these things work. 
+We will do this all without letting the standard templates steer us into using bootstrap, Entity Framework, "install all the things" authentication checkboxes, buttons that manually deploy completely unrepeatable local builds, or any other magic that would get in the way of learning how these things work. 
 
 Ready? Awesome, let's go!
 
@@ -85,7 +85,7 @@ We started with an API project template, but unlike prior versions of ASP.Net it
   Another alternative would have been <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?tabs=visual-studio">Razor Pages</a>. I chose MVC because I have more extensive experience with past versions, reducing the number of unknowns I'll be working with in this project.
 </div>
 
-Following the expected conventions, let's add a “Controllers” folder to the project. Then we can use the right-click context menu from there to “Add New Item” and pick an ASP.Net Core `Controller Class`:
+Following the expected conventions, let's add a "Controllers" folder to the project. Then we can use the right-click context menu from there to "Add New Item" and pick an ASP.Net Core `Controller Class`:
 
 <div id="attachment_9091" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png" alt="ASP.Net Core 2: Add New Item - Controller Class" width="600" height="418" class="size-medium-width wp-image-9091" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-300x209.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-768x535.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-431x300.png 431w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003.png 948w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -95,9 +95,9 @@ Following the expected conventions, let's add a “Controllers” folder to the 
   </p>
 </div>
 
-Like earlier versions, a `Controller Class` is a standard C# class that inherits from `Controller`, so you also have the option of just creating a basic class and adding the “Controller” suffix and inheritance yourself, for a few less clicks.
+Like earlier versions, a `Controller Class` is a standard C# class that inherits from `Controller`, so you also have the option of just creating a basic class and adding the "Controller" suffix and inheritance yourself, for a few less clicks.
 
-The default for routing with this project is attribute routing rather than the global route registered in most earlier MVC versions. Add a `[Route("")]` attribute above the class declaration to route base level “/” paths to this controller.
+The default for routing with this project is attribute routing rather than the global route registered in most earlier MVC versions. Add a `[Route("")]` attribute above the class declaration to route base level "/" paths to this controller.
 
 [SampleCosmosCore2App/Controllers/HomeController.cs][3]
 
@@ -117,7 +117,7 @@ namespace SampleCosmosCore2App.Controllers
     }
 }
 ```
-Next we'll add a `Layout.cshtml` file that to serve as the general HTML layout for the site. Again we want to match the standard ASP.Net MVC conventions, so first create a top-level folder named `Views`, then create a folder under this named `Shared`, then finally right-click this folder to “Add View”, ensure you have Empty Model and no layout selected, with the name “Layout”
+Next we'll add a `Layout.cshtml` file that to serve as the general HTML layout for the site. Again we want to match the standard ASP.Net MVC conventions, so first create a top-level folder named `Views`, then create a folder under this named `Shared`, then finally right-click this folder to "Add View", ensure you have Empty Model and no layout selected, with the name "Layout"
 
 <div id="attachment_9092" style="width: 603px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png" alt="ASP.Net Core 2 - Add View Dialog" width="593" height="347" class="size-full wp-image-9092" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png 593w, /wp-content/uploads/2018/04/aspnetcore2cosmos_004-300x176.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_004-513x300.png 513w" sizes="(max-width: 593px) 100vw, 593px" />
@@ -128,7 +128,7 @@ Next we'll add a `Layout.cshtml` file that to serve as the general HTML layout f
 </div>
 
 <div class="note-area">
-  Note: if you can't edit the name of the folder you just added, see if you're still running in “Debug” and press Stop <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_003.5.png" alt="Press &quot;Stop&quot; to stop debugging" width="82" height="31" class="aligncenter size-full wp-image-9090" /> I've used more than 10 versions of Visual Studio and still do this 🙂
+  Note: if you can't edit the name of the folder you just added, see if you're still running in "Debug" and press Stop <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_003.5.png" alt="Press &quot;Stop&quot; to stop debugging" width="82" height="31" class="aligncenter size-full wp-image-9090" /> I've used more than 10 versions of Visual Studio and still do this 🙂
 </div>
 
 Once created, edit the `Layout.cshtml` file to look like this:
@@ -145,7 +145,7 @@ Once created, edit the `Layout.cshtml` file to look like this:
 
 
 ```
-Finally, we'll create the first view for `HomeController`. Create a `Home` subfolder under `Views`, then right-click and “Add View” again. This time select “Layout.cshtml” as the layout, but continue to leave Model empty.
+Finally, we'll create the first view for `HomeController`. Create a `Home` subfolder under `Views`, then right-click and "Add View" again. This time select "Layout.cshtml" as the layout, but continue to leave Model empty.
 
 <div class="note-area">
   Note: If you haven't done much MVC in the past, the naming is important because MVC, by convention, will automatically look for views in /Views/<i>ControllerName</i>/<i>ActionName</i>.cshtml when we don't provide a full path.
@@ -244,16 +244,16 @@ Download the emulator here: [Cosmos DB Emulator][11]
 
 Next, I'm going to insist on creating a new project to house my database logic. In some cases this is too early to make architectural decisions like this, but I know from vast personal experience that I have never, ever enjoyed the experience of having this type of logic mixed into my ASP.Net project.
 
-This new project is going to be called “SampleCosmosCore2App.Core”. If you haven't added many projects to solutions, the usual procedure is:
+This new project is going to be called "SampleCosmosCore2App.Core". If you haven't added many projects to solutions, the usual procedure is:
 
-  * Right click the Solution and select “Add”, “New Project”
-  * Select “Class Library (.NET Core)”
+  * Right click the Solution and select "Add", "New Project"
+  * Select "Class Library (.NET Core)"
   * Give it a name and continue
 
 Then reference the new project from the ASP.Net one:
 
   * Right click the MVC project
-  * Select “Add”, “Reference” and check the box next to the “*.Core” project
+  * Select "Add", "Reference" and check the box next to the "*.Core" project
 
 <div id="attachment_9095" style="width: 610px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png" alt="ASP/.Net Core - Adding Project Reference" width="600" height="415" class="size-medium-width wp-image-9095" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-300x207.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-768x531.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-434x300.png 434w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007.png 794w" sizes="(max-width: 600px) 100vw, 600px" />
@@ -271,7 +271,7 @@ At this point, I don't know what I don't know, so my aim is simplistic, working 
 
 I'm going to work with a data class named `Sample`, so I'll create a `Sample.cs` class file and a `Persistence.cs` class file. The first will be a serializable document, the second the class that handles reading and writing that document to Cosmos DB.
 
-Add the Microsoft.Azure.DocumentDB.Core nuget package to your “*.Core” project:
+Add the Microsoft.Azure.DocumentDB.Core nuget package to your "*.Core" project:
 
 <div id="attachment_9096" style="width: 528px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_008.png" alt="Add Microsoft.Azure.DocumentDB.Core package" width="518" height="83" class="size-full wp-image-9096" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_008.png 518w, /wp-content/uploads/2018/04/aspnetcore2cosmos_008-300x48.png 300w" sizes="(max-width: 518px) 100vw, 518px" />
@@ -281,7 +281,7 @@ Add the Microsoft.Azure.DocumentDB.Core nuget package to your “*.Core” proje
   </p>
 </div>
 
-Right click the “Dependencies” folder of the “*.Core” project and search for it, or use the Package Manager Console and type `Install-Package Microsoft.Azure.DocumentDB.Core SampleCosmosCore2App.Core` (use your project name, not mine).
+Right click the "Dependencies" folder of the "*.Core" project and search for it, or use the Package Manager Console and type `Install-Package Microsoft.Azure.DocumentDB.Core SampleCosmosCore2App.Core` (use your project name, not mine).
 
 Next, in the `SamplePersistence` object, we'll add functions to setup the Sample `DocumentCollection` in Cosmos and perform common CRUD operations for documents in that collection:
 
@@ -463,12 +463,12 @@ Here are the notable changes:
 
   * We've added `Persistence` as a necessary dependency in the Controller
   * We've switched all Actions to `async` to support the `Persistence` methods
-  * `IndexAsync` gets the list of `Sample`s and displays them in the “Index” view
-  * `Create` constructs a new `Sample` and displays it in the editable “Get” view
+  * `IndexAsync` gets the list of `Sample`s and displays them in the "Index" view
+  * `Create` constructs a new `Sample` and displays it in the editable "Get" view
   * `GetAsync` does the same thing, but loads the `Sample` from `Persistence` for the passed `{id}` in the route
   * `PostAsync` accepts a modified `Sample`, saves it via `Persistence`, and redirects back to showing the whole list
 
-You can easily generate a scaffolded view for these by right-clicking in an Action above and selecting “New View”. Pick the `List` or `Edit` templates as a starting point, with the model class set to the Sample object.
+You can easily generate a scaffolded view for these by right-clicking in an Action above and selecting "New View". Pick the `List` or `Edit` templates as a starting point, with the model class set to the Sample object.
 
 Because we started from a blank slate, these templates won't work directly out of the box ([stackoverflow][19]). Add a file _ViewImports.cshtml to register the tag helpers:
 

@@ -37,7 +37,7 @@ CREATE TABLE  `my_site`.`log` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ```
 
-The only interesting thing here is the “ExecutionTime” column. I added this because in this case I am logging to MySQL, and MySQL doesn't store the millisecond portion of Date/Times. Seems it would be easier anyway to just log the time rather than try to connect start and finish entries (you could also do it in a single entry, as shown [here][2]). The reason I didn't do this is because I wanted to be able to split the table into 3 (start, finish, and exception entries) to get as good an idea as I could what is happening at any given time. 
+The only interesting thing here is the "ExecutionTime" column. I added this because in this case I am logging to MySQL, and MySQL doesn't store the millisecond portion of Date/Times. Seems it would be easier anyway to just log the time rather than try to connect start and finish entries (you could also do it in a single entry, as shown [here][2]). The reason I didn't do this is because I wanted to be able to split the table into 3 (start, finish, and exception entries) to get as good an idea as I could what is happening at any given time. 
 
 Another thing to note here is that I added a column for parameter name/value combinations and the method name. log4net has a built-in conversion pattern for determining the method name, but it will not work for me because I plan to wrap log4net in a separate static helper class, in case I ever want to change the logging solution behind the scenes. I also read on log4net's [Pattern Layout][3] docs that getting any kind of information about the caller from log4net is very slow, because it generates a call stack to read the information from. That is one hell of a warning, they might as well just put police tape around those methods. So I will take my chances getting this info from PostSharp!
 
@@ -135,7 +135,7 @@ Next is to configure log4net. Added an xml file called log4net.config to the top
 </log4net>
 ```
 
-Nothing really special there, except for the additional parameters we added that I didn't see on most of the vanilla demos. One thing to note is the conversionPattern we used for the custom properties, “%property{PROPERTY_NAME}” as it can be very handy if you want to set custom parameters. There's also a special “ErrorLog” that writes to a flat file without using a buffer, for errors only. This is so that if there is a fatal error in the application, the exceptions leading up to it are not lost. Onward. Next thing we need to do is ensure that log4net is configured when we start up the application. There are two ways to do this:
+Nothing really special there, except for the additional parameters we added that I didn't see on most of the vanilla demos. One thing to note is the conversionPattern we used for the custom properties, "%property{PROPERTY_NAME}" as it can be very handy if you want to set custom parameters. There's also a special "ErrorLog" that writes to a flat file without using a buffer, for errors only. This is so that if there is a fatal error in the application, the exceptions leading up to it are not lost. Onward. Next thing we need to do is ensure that log4net is configured when we start up the application. There are two ways to do this:
 
 I first used AssemblyInfo.cs like so:
 
@@ -233,7 +233,7 @@ public static class Logging
 }
 ```
 
-Ok so now we know how we are going to do the logging. Now, time to go through and add calls to this logging code throughout our application right? Not exactly. Lets take a look how post sharp comes in. We'll want to extend the class “OnMethodBoundaryAspect” found in PostSharp.Laos. Use of this class will allow us to weave code into our application at compile time that will execute at various points during method execution (if the class has been tagged with the attribute we are about to create). For this exercise we are concerned with overriding the OnEntry, OnExit, and OnException methods. Their purposes ought to be pretty straight forward. I also added a method to take the method's parameter values and build it into a string like “\[param1 = A\]\[param2 = B\]”. The code for this looks like so:
+Ok so now we know how we are going to do the logging. Now, time to go through and add calls to this logging code throughout our application right? Not exactly. Lets take a look how post sharp comes in. We'll want to extend the class "OnMethodBoundaryAspect" found in PostSharp.Laos. Use of this class will allow us to weave code into our application at compile time that will execute at various points during method execution (if the class has been tagged with the attribute we are about to create). For this exercise we are concerned with overriding the OnEntry, OnExit, and OnException methods. Their purposes ought to be pretty straight forward. I also added a method to take the method's parameter values and build it into a string like "\[param1 = A\]\[param2 = B\]". The code for this looks like so:
 
 ```csharp
 using System;
@@ -317,7 +317,7 @@ public class HomeController : Controller
 }
 ```
 
-Now, the “[Loggable]” attribute is all that you need to add to any class that you want logging to take place on the three method boundaries that we wrote code for (there may be some limitations, but I'm not aware of them yet). You can add it on a method-by-method basis as well. If you want to stop logging a certain class/method, just remove the attribute. Its' really that easy.
+Now, the "[Loggable]" attribute is all that you need to add to any class that you want logging to take place on the three method boundaries that we wrote code for (there may be some limitations, but I'm not aware of them yet). You can add it on a method-by-method basis as well. If you want to stop logging a certain class/method, just remove the attribute. Its' really that easy.
 
 I'm sure I will find some problems with this approach eventually (first try and all), and I will update with those as I find them. Or if anything is immediately apparent, please point it out in the comments!
 

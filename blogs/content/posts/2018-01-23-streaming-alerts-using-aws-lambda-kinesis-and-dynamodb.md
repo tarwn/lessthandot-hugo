@@ -57,7 +57,7 @@ The idea is based on one that is used frequently in CQRS and I'm far from the fi
 </div>
 
 <p>
-  I would use a fake front-end to manage some fake “machines” for 2 “clients”, that would change state occasionally and publish those events. The fake site would push those events into the beginning of my real prototype, an <a href="https://aws.amazon.com/kinesis/">Amazon Kinesis</a> stream for events. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function, the “Rule Processor”, would be triggered by a batch of events on the stream. It would load the appropriate rules out of <A href="https://aws.amazon.com/dynamodb/">DynamoDB</a> for each client, evaluate which rules each event applies to, then combine that with previously cached events from DynamoDB and evaluate whether the rule is satisfied. If so, an alert would be published to the Kinesis Alerts Stream. Further downstream, an “Alerts Processor” function would receive those alerts and, in a real system, decide what types of notifications were necessary.
+  I would use a fake front-end to manage some fake "machines" for 2 "clients", that would change state occasionally and publish those events. The fake site would push those events into the beginning of my real prototype, an <a href="https://aws.amazon.com/kinesis/">Amazon Kinesis</a> stream for events. An <a href="https://aws.amazon.com/lambda/">AWS Lambda</a> function, the "Rule Processor", would be triggered by a batch of events on the stream. It would load the appropriate rules out of <A href="https://aws.amazon.com/dynamodb/">DynamoDB</a> for each client, evaluate which rules each event applies to, then combine that with previously cached events from DynamoDB and evaluate whether the rule is satisfied. If so, an alert would be published to the Kinesis Alerts Stream. Further downstream, an "Alerts Processor" function would receive those alerts and, in a real system, decide what types of notifications were necessary.
 </p>
 
 <h2>
@@ -120,7 +120,7 @@ new Rule({
 </p>
 
 <p>
-  The core of the system is the “Rule Processor”:
+  The core of the system is the "Rule Processor":
 </p>
 
 <div id="attachment_8901" style="width: 463px" class="wp-caption aligncenter">
@@ -165,7 +165,7 @@ new Rule({
 </ul>
 
 <p>
-  Each of the “Event x Rule” result buckets can be thought of as the results of a query we're running continuously as events flow in (which is about the time I realized I was duplicating work a bunch of much smarter folks had put into stream analytics packages above). So if I have 6 rules that care about machine events and 1 event comes in for “machineStatusChange” on “machine-01”, then I'll add that event to all 6 buckets individually (storage is cheap).
+  Each of the "Event x Rule" result buckets can be thought of as the results of a query we're running continuously as events flow in (which is about the time I realized I was duplicating work a bunch of much smarter folks had put into stream analytics packages above). So if I have 6 rules that care about machine events and 1 event comes in for "machineStatusChange" on "machine-01", then I'll add that event to all 6 buckets individually (storage is cheap).
 </p>
 
 <p>

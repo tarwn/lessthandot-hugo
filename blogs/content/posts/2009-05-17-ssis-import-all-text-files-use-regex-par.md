@@ -13,7 +13,7 @@ categories:
   - Data Modelling and Design
 
 ---
-I'm spawning off a thread that I helped out in on SQLServerCentral for this article. The basic need in the task is, import a bunch of text files, parse out all email address and insert them delimited by “;” into a relational table.
+I'm spawning off a thread that I helped out in on SQLServerCentral for this article. The basic need in the task is, import a bunch of text files, parse out all email address and insert them delimited by ";" into a relational table.
 
 This is going to cover a few common things you will need to know how to do in order to successfully build ETL tasks.
 
@@ -21,7 +21,7 @@ This is going to cover a few common things you will need to know how to do in or
   * Import a directory of files using the SqlBulkCopy method in Script Tasks. 
   * Use Script Component transformations type asynchronously. 
 
-I'm going to show how to import a text file into a varchar(max) field although I think the better choice in performance and maintainability is to have the path to the file stored as a pointer and leave the files as is in the directory system. Many cases, DBAs are not very fond of storing file contents in databases as it causes performance issues and the data types need to be large enough to handle the, “big ones”. This means planning and choosing a data type to optimize storage is difficult. 
+I'm going to show how to import a text file into a varchar(max) field although I think the better choice in performance and maintainability is to have the path to the file stored as a pointer and leave the files as is in the directory system. Many cases, DBAs are not very fond of storing file contents in databases as it causes performance issues and the data types need to be large enough to handle the, "big ones". This means planning and choosing a data type to optimize storage is difficult. 
 
 There is also a requirement to know a few ways of reading text files into tables even if not used here.
 
@@ -62,7 +62,7 @@ ALTER TABLE ResumeDetail WITH CHECK ADD CONSTRAINT fk_ResumeText FOREIGN KEY(Res
 REFERENCES ResumeText(ident)
 Go
 ```
-First step in our SSIS package is to create your import task. Create a variable named ResumeFilePath and give it a location local to you machine for testing. I made mine C:Resumes. Bring over a script task to the control flow tab. Open up the task and add the variable to your read only variables. No other configurations other than the coding are needed for the task. Open the designer, “edit script” and paste the following code into it.
+First step in our SSIS package is to create your import task. Create a variable named ResumeFilePath and give it a location local to you machine for testing. I made mine C:Resumes. Bring over a script task to the control flow tab. Open up the task and add the variable to your read only variables. No other configurations other than the coding are needed for the task. Open the designer, "edit script" and paste the following code into it.
 
 ```CSHARP
 using System;
@@ -140,7 +140,7 @@ FROM
 	dbo.ResumeText 
 WHERE processed = 0
 ```
-In a real life situation, be sure to configure your error output always. Now bring over a script component and when prompted, select transformation component type. Connect the flow from the source to this script component. There are a few things that need to be done in the script components input and output columns before coding it. Select Input Columns and tick the columns from the input we see from the source. Make sure these are ReadOnly. Go to Input and Outputs next. Add two output columns. Name them, emailout and identout. Use DT\_I4 for the ident sense we used INT for the seed and key. Then all we need out for this task is the email string so use DT\_STR as the type for the emailout type. Highlight Ouput 0 again and change SynchronousInputID to None. Go back to the script section and click the edit script button to open the designer. The following code is pretty self explaining as the first script task we created was. The first thing we do is find all the emails in the contents column and build a string delimited by “;”. This returns and then builds the new row for inserting into the ResumeDetail table while retaining the key. The regular expression patter is a typical email pattern. There are dozens of these out there on the net. I would try a few and see which fits your requirements the best. One thing you'll see in the code is, I set the email column to “No emails found” if there are none. I wouldn't do this in real life and would use a Boolean value to keep with using the correct data type per need. In this example I'm testing only so if you use this, please change this so you do not cause senseless performance gains by misusing data types in the table designs.
+In a real life situation, be sure to configure your error output always. Now bring over a script component and when prompted, select transformation component type. Connect the flow from the source to this script component. There are a few things that need to be done in the script components input and output columns before coding it. Select Input Columns and tick the columns from the input we see from the source. Make sure these are ReadOnly. Go to Input and Outputs next. Add two output columns. Name them, emailout and identout. Use DT\_I4 for the ident sense we used INT for the seed and key. Then all we need out for this task is the email string so use DT\_STR as the type for the emailout type. Highlight Ouput 0 again and change SynchronousInputID to None. Go back to the script section and click the edit script button to open the designer. The following code is pretty self explaining as the first script task we created was. The first thing we do is find all the emails in the contents column and build a string delimited by ";". This returns and then builds the new row for inserting into the ResumeDetail table while retaining the key. The regular expression patter is a typical email pattern. There are dozens of these out there on the net. I would try a few and see which fits your requirements the best. One thing you'll see in the code is, I set the email column to "No emails found" if there are none. I wouldn't do this in real life and would use a Boolean value to keep with using the correct data type per need. In this example I'm testing only so if you use this, please change this so you do not cause senseless performance gains by misusing data types in the table designs.
 
 ```CSHARP
 using System;

@@ -21,7 +21,7 @@ categories:
 ---
 Realizing I was lucky enough to attend PASS Summit 2011, I've decided a blog post is de rigueur. So, here goes.
 
-Jeremiah Peschka's session _Rewrite Your T-SQL for Great Good !_ kept me in stitches. His statement “We need standards like a Lego whale needs a bicycle” still cracks me up. I wanna use that line myself, only it probably won't be as effective without the photo that Jeremiah used in his slides. I'm still scratching my head about his suggestion that code should be tested in Production, though. I wish he'd included a methodology for this. Of course, I may have misunderstood him completely...
+Jeremiah Peschka's session _Rewrite Your T-SQL for Great Good !_ kept me in stitches. His statement "We need standards like a Lego whale needs a bicycle" still cracks me up. I wanna use that line myself, only it probably won't be as effective without the photo that Jeremiah used in his slides. I'm still scratching my head about his suggestion that code should be tested in Production, though. I wish he'd included a methodology for this. Of course, I may have misunderstood him completely...
 
 Only Rob Farley's session _Joins, SARGability and the Evils of Residualiciousness_ rivaled Jeremiah's in terms of entertainment value. And this had nothing to do with the fact that Rob was wearing a kilt. Rob is just a funny guy. I'm half-disappointed he didn't pull out the guitar during his talk, though. We all could have broken out in song and it would have come as great relief after thinking so many deep thoughts. 
 
@@ -33,7 +33,7 @@ It was a hoot to see Erik Veerman in the flesh at his session _Anger Management:
 
 These are just a few of the highlights. All the speakers were good. But, most importantly, two good things came out of PASS...
 
-I've started a Lunch 'n Learn where I work so that I can share what I've learned at PASS with my colleagues. Although I'm not a big presenter, I'm excited about the new 'tricks' I've learned. I even want to share the esoteric stuff that went over my head, like workspace memory and resource semaphore queues, because if someone else “gets it” it's a win-win. I'm hoping my enthusiasm for SQL Server is contagious. Maybe some of the team will even get to go next year.
+I've started a Lunch 'n Learn where I work so that I can share what I've learned at PASS with my colleagues. Although I'm not a big presenter, I'm excited about the new 'tricks' I've learned. I even want to share the esoteric stuff that went over my head, like workspace memory and resource semaphore queues, because if someone else "gets it" it's a win-win. I'm hoping my enthusiasm for SQL Server is contagious. Maybe some of the team will even get to go next year.
 
 The second good thing that came out of PASS is that I attended #passprayers for the first time. Shocking that I got up at 5:00 am to meet for prayers at 6:00. I'm not a morning person ! But I did. And I'm glad.
 

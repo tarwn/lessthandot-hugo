@@ -17,7 +17,7 @@ categories:
 ---
 While I may use PHP here at the LessThanDot site, I've been using Visual Studio and .Net since the first .Net release (and bribery in the form of scotch may convince me to share some of my pre-.Net experiences as well). While I have tried a few .Net plugins over time, my standard Visual Studio layout is actually only a very lightly customized version of the standard out-of-the-box settings. Perhaps I change the settings for recent projects to display a longer list, add some additional User Task types, and tweak other small settings, but overall my experience is pretty vanilla.
 
-About a week ago I decided to try a small plugin and, based on my fairly vanilla .Net existence, expected it to be an interesting week that would end in me uninstalling the little guy. The plugin purported to make the scrollbar more useful by using it to “provide a graphical representation of the source code”. I have to admit that I was more intrigued about someone customizing the scrollbar to be useful than I was in visualizing my sourcecode (after all, I stare at this stuff all day long as it is).
+About a week ago I decided to try a small plugin and, based on my fairly vanilla .Net existence, expected it to be an interesting week that would end in me uninstalling the little guy. The plugin purported to make the scrollbar more useful by using it to "provide a graphical representation of the source code". I have to admit that I was more intrigued about someone customizing the scrollbar to be useful than I was in visualizing my sourcecode (after all, I stare at this stuff all day long as it is).
 
 ## About MetalScroll
 

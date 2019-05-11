@@ -137,7 +137,7 @@ WHERE PA.object_id =
   <a href="/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416"><img alt="" src="/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416" width="215" height="78" /></a>
 </div>
 
-I cannot move the table only. That is simply not part of the ALTER TABLE syntax. According to [BOL][2], MOVE TO “Specifies a location to move the data rows currently in the leaf level of the clustered index.” 
+I cannot move the table only. That is simply not part of the ALTER TABLE syntax. According to [BOL][2], MOVE TO "Specifies a location to move the data rows currently in the leaf level of the clustered index." 
 
 Note: It is possible to create a table in a secondary filegroup, move the data from the first filegroup to the second, and then drop the table from the primary. Be aware that these types of operations cause a high level of transaction log entries. Ensure that the transaction log is properly sized to prevent a large amount of growth in the logs or inadvertently affect things that rely on the transaction logs such as log shipping or mirroring. 
 

@@ -79,7 +79,7 @@ This is by design due to the algorithms used within the SQL Engine. If you creat
 
 In some cases you do not want to pre create the log file with a size that might make your VLF's unmanageable like a 64GB log. A 64GB log will create 16 VLF's with a size of 4GB. This can be problematic because a VLF is only cleared after it has been filled, but the same account to having VLF's which is too small.
 
-“Why don't you create multiple log files to ensure that transactions are split?” is a popular question, with a simple answer. The T-Log works sequentially and in a round robin fashion. The only benefit in adding multiple log files is redundancy, in case the drive or RAID configuration fails for the particular log file.
+"Why don't you create multiple log files to ensure that transactions are split?" is a popular question, with a simple answer. The T-Log works sequentially and in a round robin fashion. The only benefit in adding multiple log files is redundancy, in case the drive or RAID configuration fails for the particular log file.
 
  
 

@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-12-10T15:14:00+00:00
 ID: 1841
-excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consulting&hellip;'
+excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, "Successful Consulting&hellip;'
 url: /index.php/itprofessionals/professionaldevelopment/successful-consulting-series-estimating-work/
 views:
   - 49189
@@ -16,7 +16,7 @@ categories:
 ---
 </p> 
 
-> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, “[Successful Consulting Series][1]” for a full listing of each part in this series.
+> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, "[Successful Consulting Series][1]" for a full listing of each part in this series.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751" width="379" height="324" /></a>

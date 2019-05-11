@@ -34,7 +34,7 @@ The source code is on github: [https://github.com/tarwn/CloudPixiesAndGhosts][1]
 
 ## Azure Website
 
-Once I had a basic “hello World” page and a github repository, it was time to create the Azure Website that would be the deployment target.
+Once I had a basic "hello World" page and a github repository, it was time to create the Azure Website that would be the deployment target.
 
 <div id="attachment_2373" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep1.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep1-300x199.png" alt="Create Azure Web Site - Step 1" width="300" height="199" class="size-medium wp-image-2373" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep1-300x199.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep1.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -44,7 +44,7 @@ Once I had a basic “hello World” page and a github repository, it was time t
   </p>
 </div>
 
-The wizard has a github option, but due to the way github permissions work, it ends up needing far more permissions than I want to provide. Instead I have chosen to use the generic “External Repository” option. 
+The wizard has a github option, but due to the way github permissions work, it ends up needing far more permissions than I want to provide. Instead I have chosen to use the generic "External Repository" option. 
 
 <div id="attachment_2374" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep2.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep2-300x198.png" alt="Create Azure Web Site - Step 2" width="300" height="198" class="size-medium wp-image-2374" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep2-300x198.png 300w, /wp-content/uploads/2014/02/01_CreateSiteStep2.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -86,7 +86,7 @@ And my basic little web page is picked up by Azure Websites and deployed to the 
   </p>
 </div>
 
-Giving us the “cloud” portion of the project name:
+Giving us the "cloud" portion of the project name:
 
 <div id="attachment_2378" style="width: 398px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_CreateSiteStep6.png"><img src="/wp-content/uploads/2014/02/01_CreateSiteStep6.png" alt="It&#039;s in the cloud!" width="388" height="165" class="size-full wp-image-2378" srcset="/wp-content/uploads/2014/02/01_CreateSiteStep6.png 388w, /wp-content/uploads/2014/02/01_CreateSiteStep6-300x127.png 300w" sizes="(max-width: 388px) 100vw, 388px" /></a>
@@ -96,11 +96,11 @@ Giving us the “cloud” portion of the project name:
   </p>
 </div>
 
-There is one last step, though. Because I used the generic “External Repository” option, my code is not being deployed immediately when I commit it.
+There is one last step, though. Because I used the generic "External Repository" option, my code is not being deployed immediately when I commit it.
 
 Luckily Azure Websites exposes a deployment trigger URL that we can plug into github to notify when a new commit is received.
 
-In the Azure Website settings, we copy that “Deployment Trigger URL”:
+In the Azure Website settings, we copy that "Deployment Trigger URL":
 
 <div id="attachment_2371" style="width: 310px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2014/02/01_AutoDeploymentStep1.png"><img src="/wp-content/uploads/2014/02/01_AutoDeploymentStep1-300x72.png" alt="Configuring the Build triggering - Step 1" width="300" height="72" class="size-medium wp-image-2371" srcset="/wp-content/uploads/2014/02/01_AutoDeploymentStep1-300x72.png 300w, /wp-content/uploads/2014/02/01_AutoDeploymentStep1.png 700w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -280,7 +280,7 @@ As I mentioned before, I originally had set out to get CassiniDev, Selenium, and
   </p>
 </div>
 
-During the setup of the test, CassiniDev's StartServer command receives an “Access Denied” exception.
+During the setup of the test, CassiniDev's StartServer command receives an "Access Denied" exception.
 
 This is the [/CloudPixiesTests][4] project in the solution, if you're curious. The Selenium + CassiniDev (ie, the magix pixies part of the repository name) runs fine locally. 
 

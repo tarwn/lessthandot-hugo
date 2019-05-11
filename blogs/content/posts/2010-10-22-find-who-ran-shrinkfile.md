@@ -25,7 +25,7 @@ Since the default trace is enabled by default, the chances of this logging mecha
 
 **Take the following scenario:**
 
-Company's database team consists of six DBAs and each of these DBAs is in charge of specific SQL Server instances. Although each is assigned a specific group of the total number of instances, when the need arises, they will take care of each other's instances. One of the DBAs noticed that a transaction log file on one of their database servers has been truncated and a shrink file run on it. The question came up, “My log file was truncated, shrunk and blown to the wind. Who did it?” 
+Company's database team consists of six DBAs and each of these DBAs is in charge of specific SQL Server instances. Although each is assigned a specific group of the total number of instances, when the need arises, they will take care of each other's instances. One of the DBAs noticed that a transaction log file on one of their database servers has been truncated and a shrink file run on it. The question came up, "My log file was truncated, shrunk and blown to the wind. Who did it?" 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/shrinkfile_1.gif" alt="" title="" width="307" height="203" />
@@ -73,7 +73,7 @@ FROM
 WHERE TextData LIKE '%SHRINKFILE%'; 
 ```
 
-The query above has the condition filtering on TextData to search for any event that has the string, “SHIRNKFILE”. This will filter out any events but the SHRINKFILE event that we are most interested in finding. Executing this statement on a default trace file that has one SHRINKFILE event results in the following display.
+The query above has the condition filtering on TextData to search for any event that has the string, "SHIRNKFILE". This will filter out any events but the SHRINKFILE event that we are most interested in finding. Executing this statement on a default trace file that has one SHRINKFILE event results in the following display.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/shrinkfile_2.gif" alt="" title="" width="889" height="235" />

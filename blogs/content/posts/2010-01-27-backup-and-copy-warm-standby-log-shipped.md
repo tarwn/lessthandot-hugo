@@ -26,7 +26,7 @@ When you go to make a backup of a database in standby, you will be presented wit
   
 
   
-<span class="MT_red">The database “bah” is in warm-standby state (set by executing RESTORE WITH STANDBY) and cannot be backed up until the entire restore sequence is completed.</span>
+<span class="MT_red">The database "bah" is in warm-standby state (set by executing RESTORE WITH STANDBY) and cannot be backed up until the entire restore sequence is completed.</span>
   
 
   
@@ -50,7 +50,7 @@ NOUNLOAD,  REPLACE,  STATS = 10
 GO
 ```
 
-We should now have, “bah (Standby /Read-Only) listed in our database tree.
+We should now have, "bah (Standby /Read-Only) listed in our database tree.
 
 The regular Copy Database with either detaching or SMO is not ideal for us at this point. We can however take this database offline, grab the mdf, ndf's and ldf's to bring to the other instance we want to restore them to. 
 
@@ -78,7 +78,7 @@ We should see the database has come back up in standby mode and log shipping can
 
 Next, we only need to attach the files to a new instance given the following commands or using SSMS attach/detach wizard. 
 
-> Note: You cannot bring these files up on the same instance. This is due to being required to leave the database “as is” and with the same file names. When the database was taken offline, it was in standby mode and will be the same when attached again during the initial loading. Once on the new instance, you can bring the database into any state you require and move it back to the other instance is required.
+> Note: You cannot bring these files up on the same instance. This is due to being required to leave the database "as is" and with the same file names. When the database was taken offline, it was in standby mode and will be the same when attached again during the initial loading. Once on the new instance, you can bring the database into any state you require and move it back to the other instance is required.
 
 On the secondary instance do the following steps
 

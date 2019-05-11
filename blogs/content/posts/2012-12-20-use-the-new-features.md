@@ -81,7 +81,7 @@ Now that you know you are still using some of these features in your code, it is
 
 ## You are not keeping your skills up to date
 
-In the [Stay relevant and marketable][3] post I already explained why it is important to use the latest version. However just using the latest version doesn't mean you are also using the latest T-SQL features or the latest Java or .NET libraries. So you might be “using” SQL Server 2012 but if all your code in the database was restored from a 2005 backup you are not using any SQL Server 2012 code. Now when you go for an interview and they ask you about some of the new things that they added like the MERGE statement.
+In the [Stay relevant and marketable][3] post I already explained why it is important to use the latest version. However just using the latest version doesn't mean you are also using the latest T-SQL features or the latest Java or .NET libraries. So you might be "using" SQL Server 2012 but if all your code in the database was restored from a 2005 backup you are not using any SQL Server 2012 code. Now when you go for an interview and they ask you about some of the new things that they added like the MERGE statement.
 
 Here are some of my posts about the new stuff that has been added to SQL Server since version 2005
 

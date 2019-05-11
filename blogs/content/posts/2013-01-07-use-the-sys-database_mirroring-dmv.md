@@ -34,7 +34,7 @@ Database mirroring is inactive for database 'YourDB'. This is an informational m
 
 Message
   
-The mirroring connection to “TCP://SomeServer.SomeNetwork:5022” has timed out for database “YourDB” after 10 seconds without a response. Check the service and network connections.</em>
+The mirroring connection to "TCP://SomeServer.SomeNetwork:5022" has timed out for database "YourDB" after 10 seconds without a response. Check the service and network connections.</em>
 
 I myself like the sys.database_mirroring dynamic management view. This view will give you the state that the mirror is in, the partner name, mirror role, what the safety level is, the connection timeout and more. Here is a query I like to run
 

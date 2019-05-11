@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-28T18:49:00+00:00
 ID: 1808
-excerpt: "Sometimes, as a speaker, the best sessions I've presented or co-presented are the ones that are non-technical in nature.  One I've been fortunate to co-present with Hope Foley is “Consulting - The Good, The Bad, The Ugly”.  I've receiv&hellip;"
+excerpt: "Sometimes, as a speaker, the best sessions I've presented or co-presented are the ones that are non-technical in nature.  One I've been fortunate to co-present with Hope Foley is \"Consulting - The Good, The Bad, The Ugly\".  I've receiv&hellip;"
 url: /index.php/itprofessionals/professionaldevelopment/successful-consulting-series/
 views:
   - 11407
@@ -15,13 +15,13 @@ categories:
   - Professional Development
 
 ---
-Sometimes, as a speaker, the best sessions I've presented or co-presented are the ones that are non-technical in nature.  One I've been fortunate to co-present with Hope Foley ([B][1] | [@Hope_Foley][2]) is “[Consulting – The Good, The Bad, The Ugly][3]”.  I've received a ton of positive feedback from that session, as well as many questions expanding on the topics.
+Sometimes, as a speaker, the best sessions I've presented or co-presented are the ones that are non-technical in nature.  One I've been fortunate to co-present with Hope Foley ([B][1] | [@Hope_Foley][2]) is "[Consulting – The Good, The Bad, The Ugly][3]".  I've received a ton of positive feedback from that session, as well as many questions expanding on the topics.
 
 Being a successful consultant involves much more than being a successful DBA or Developer.  There are many areas that are critical aside from the high level of skills that are needed in the technical areas you are selling your services for.  Presentation, gaining trust, relationships, managing your time, efficiency and overall productivity, all become a foundation.  Without them and many more, a consulting career can be met with stress and overall poor performance and lost objectives/goals.
 
 **Points...What's the Point?**
 
-This post isn't to scare anyone away or to throw a bunch of, “you need this and this and without it, you lose”.  My intentions are to do a series similar to the [DBA Tip Series][4] I wrote.  The series will not have a formal agenda but will be published in its entirety by the end of 2012.  My expectations of myself in these posts and hopes for you as a reader; take away some tips and real-life experiences from an experienced consultant (focused on SQL Server).
+This post isn't to scare anyone away or to throw a bunch of, "you need this and this and without it, you lose".  My intentions are to do a series similar to the [DBA Tip Series][4] I wrote.  The series will not have a formal agenda but will be published in its entirety by the end of 2012.  My expectations of myself in these posts and hopes for you as a reader; take away some tips and real-life experiences from an experienced consultant (focused on SQL Server).
 
 The Series Titles
 

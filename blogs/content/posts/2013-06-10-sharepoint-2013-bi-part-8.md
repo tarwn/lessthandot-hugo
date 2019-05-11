@@ -48,7 +48,7 @@ tags:
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_21.png?mtime=1370375950"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_21.png?mtime=1370375950" alt="" width="498" height="233" /></a>
 </p>
 
-<span style="text-align: justify;">This can be caused by a multitude of reasons, of which a bunch are listed in </span><a style="text-align: justify;" href="http://support.microsoft.com/kb/2361559">this KB</a><span style="text-align: justify;">. The example I used probably suffered from the problem described in point 7: “The workbook might contain more than one data source. If so, a thumbnail will not be generated.” I uploaded another PowerPivot workbook with a simple pivot on AdventureWorks, and this one worked immediately:</span>
+<span style="text-align: justify;">This can be caused by a multitude of reasons, of which a bunch are listed in </span><a style="text-align: justify;" href="http://support.microsoft.com/kb/2361559">this KB</a><span style="text-align: justify;">. The example I used probably suffered from the problem described in point 7: "The workbook might contain more than one data source. If so, a thumbnail will not be generated." I uploaded another PowerPivot workbook with a simple pivot on AdventureWorks, and this one worked immediately:</span>
 
 <p style="text-align: justify;">
   <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_22.png?mtime=1370375951"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part8/VerifyPowerPivot_22.png?mtime=1370375951" alt="" width="994" height="448" /></a>

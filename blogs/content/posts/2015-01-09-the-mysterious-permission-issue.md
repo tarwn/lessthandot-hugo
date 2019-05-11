@@ -27,13 +27,13 @@ The SSIS catalog report _All Executions_ gave me the following wonderfull error
 
 > Error: FF_DST Write to Flat file failed the pre-execute phase and returned error code 0xC020200E.
   
-> DFT Export to Flat File:Error: Cannot open the datafile “\\myServer\c$\rootfolder\myExport\myFlatFile.txt”.
+> DFT Export to Flat File:Error: Cannot open the datafile "\\myServer\c$\rootfolder\myExport\myFlatFile.txt".
 
 There was also a little warning with a more useful message:
 
 > DFT Export to Flat File:Warning: Access is denied.
 
-I immediately thought: “Haha, no proxy is used in the SQL Server Agent job step!”
+I immediately thought: "Haha, no proxy is used in the SQL Server Agent job step!"
   
 However, when I checked the job step there was a proxy configured. OK then, they must have forgot to assign permissions to the folder. Alas, permissions were correctly set as well. The plot thickens!
 

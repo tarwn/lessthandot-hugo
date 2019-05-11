@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-In the previous article, “**[Estimating Mean Uptime for Team-based uptime measurements][1]**” uptime planning was discussed in some detail.  The calculation you could use to set team goals was provided.  All of these goals in general are for helping gauge how we are doing and where we have growth areas, but how do we even use something like database mirroring with our applications?
+In the previous article, "**[Estimating Mean Uptime for Team-based uptime measurements][1]**" uptime planning was discussed in some detail.  The calculation you could use to set team goals was provided.  All of these goals in general are for helping gauge how we are doing and where we have growth areas, but how do we even use something like database mirroring with our applications?
 
 In most .NET-driven development, and when a SQL Server database is behind the application, a connection string is involved.  In particular, ADO.NET connection strings are commonly used to connect to SQL Server.  One thing that the ADO.NET connection string offers an application is the Failover Partner property.  The Failover Partner property provides an application or service the ability to automatically decide to look to a secondary source if the primary is unavailable.  In conjunction with SQL Server's database mirroring, this can be very powerful and provide the ability to help us meet our projected uptime goals.
 
@@ -38,7 +38,7 @@ The application's interface consists of a grid view, a button to load the grid v
   <a href="/wp-content/uploads/blogs/DataMgmt/-98.png?mtime=1327284878"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-98.png?mtime=1327284878" width="432" height="184" /></a>
 </div>
 
-The design of this form allows a connection string with the Failover Partner setting and without.  If the “User Mirror Connection String?” check box is checked, the connection string will use the Failover Partner property.  The code to determine this is as follows.
+The design of this form allows a connection string with the Failover Partner setting and without.  If the "User Mirror Connection String?" check box is checked, the connection string will use the Failover Partner property.  The code to determine this is as follows.
 
 ```csharp
 string strconn;
@@ -85,7 +85,7 @@ SqlConnection conn = new SqlConnection(strconn);
 
 This code is not complex and better methods may exist.  For demonstration purposes, this code will help us see the Failover Partner usage in action.
 
-The database AdventureWorks has been configured for mirroring to a secondary instance acting as the mirror.  If you need help setting up mirroring, refer to, “[Mirroring Hands On with Developer Edition][2]”.
+The database AdventureWorks has been configured for mirroring to a secondary instance acting as the mirror.  If you need help setting up mirroring, refer to, "[Mirroring Hands On with Developer Edition][2]".
 
 There are a few tests to run.
 
@@ -123,7 +123,7 @@ This confirms that the connection string, even with the Failover Partner configu
 
 **Results and Conclusions**
 
-The Failover Partner configuration in an ADO.NET or SQL Native Client connection can be invaluable when Database Mirroring is configured.  The tests run in this article show that the connection is stable on several events that are present in the mirroring partnership and also exposes what happens if that partnership is broken.  Keep this in mind if taking your mirror configuration down for any reason.  It is more reliable to use the Pause Mirror commands when the need for maintenance on a mirroring session is needed.  You can read more about pausing database mirroring in this article, “[Stop Mirroring for server reboot][3]”.
+The Failover Partner configuration in an ADO.NET or SQL Native Client connection can be invaluable when Database Mirroring is configured.  The tests run in this article show that the connection is stable on several events that are present in the mirroring partnership and also exposes what happens if that partnership is broken.  Keep this in mind if taking your mirror configuration down for any reason.  It is more reliable to use the Pause Mirror commands when the need for maintenance on a mirroring session is needed.  You can read more about pausing database mirroring in this article, "[Stop Mirroring for server reboot][3]".
 
 Even if you have an application in development, design, or an existing application, requesting this change to a connection string is a critical planning step.  If the application in question is external and database mirroring is configured locally, contact the vendor to request a change to their connection string, or request the steps that you and the vendor may take to work together to add the functionality.  In most cases, the vendor will work with you and even put this option into their applications and systems as a beneficial option to other customers.
 

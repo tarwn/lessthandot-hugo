@@ -46,7 +46,7 @@ If you load the site in the secondary window and drag the width around, you will
 
 ### Images
 
-I cheated a bit on images. Any image with the “imglow” CSS class will be hidden above 480 px screen width and replaced with ones that with a class “imghi”. Since many small browsers would load the large image even if it is hidden, I put the actual image source in a data attribute and use a bit of javascript to populate the src value.
+I cheated a bit on images. Any image with the "imglow" CSS class will be hidden above 480 px screen width and replaced with ones that with a class "imghi". Since many small browsers would load the large image even if it is hidden, I put the actual image source in a data attribute and use a bit of javascript to populate the src value.
 
 <code lang="html"><br />
 <img src="_n_images/logo_sm.png" alt="Eli Weinstock-Herman | Tarwn" border="0" class="imglow" /><br />

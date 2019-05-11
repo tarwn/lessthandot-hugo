@@ -1,5 +1,5 @@
 ---
-title: Series of “Bad habits to kick” by Aaron Bertrand
+title: Series of "Bad habits to kick" by Aaron Bertrand
 author: Ted Krueger (onpnt)
 type: post
 date: 2009-10-18T21:10:03+00:00
@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-I commend Aaron Bertrand ([blog][1] and [twitter][2]) for his latest series of blogs titled, “[Bad habits to kick][3]“. These types of blogs are always good for even the experienced groups. I say that because I can pretty much guarantee that some of you are doing the things he points out in this series. You may not know you do them or even understand the fact they are bad habits but I can say for sure, this is a great way to find out what they are and the explanations needed to get you out of the habits. 
+I commend Aaron Bertrand ([blog][1] and [twitter][2]) for his latest series of blogs titled, "[Bad habits to kick][3]". These types of blogs are always good for even the experienced groups. I say that because I can pretty much guarantee that some of you are doing the things he points out in this series. You may not know you do them or even understand the fact they are bad habits but I can say for sure, this is a great way to find out what they are and the explanations needed to get you out of the habits. 
 
 It's always good to remind ourselves of some of the things we may be doing in our daily jobs that really are bad habits.
 

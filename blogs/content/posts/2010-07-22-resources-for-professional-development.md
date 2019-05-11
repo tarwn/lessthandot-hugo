@@ -73,7 +73,7 @@ I can't afford Tech-Ed or the PASS Summit, but I can afford:
 
 Plus there are events like [SQLSaturday][1], [Code Camps][2], and user groups galore that don't cost $1000's to attend.
 
-If you need more ideas, Ted ([blog][3] | [twitter][4]) posted an article with more SQL Resources [here][5] and I presented a list of ideas in <a href="/index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-1" title="Read Part 1 of the "There is Never Time For..." series">Part 1</a> of the “There is Never Time For...” series.
+If you need more ideas, Ted ([blog][3] | [twitter][4]) posted an article with more SQL Resources [here][5] and I presented a list of ideas in <a href="/index.php/ITProfessionals/ITProcesses/there-is-never-time-for-part-1" title="Read Part 1 of the "There is Never Time For..." series">Part 1</a> of the "There is Never Time For..." series.
 
 Have more ideas or links for resources? Add them to the comments below. I'm always on the lookout for more ideas and I'm sure others would appreciate them as well.
 

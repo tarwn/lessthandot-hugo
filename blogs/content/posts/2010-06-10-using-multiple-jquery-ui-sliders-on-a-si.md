@@ -38,7 +38,7 @@ $("#slider").slider({
 });
 $("#amount").val('$' + $("#slider").slider("value"));
 ```
-My problem was, I couldn't find a way to derive the underlying element's id from the “ui” parameter in the callback specified for “slide”. The way I ended up handling this was using the jquery's .each function to configure the sliders one by one. Its' not ideal, but its' also not that much more code, and I doubt many pages I'll be working on have so many sliders that it will become an issue.
+My problem was, I couldn't find a way to derive the underlying element's id from the "ui" parameter in the callback specified for "slide". The way I ended up handling this was using the jquery's .each function to configure the sliders one by one. Its' not ideal, but its' also not that much more code, and I doubt many pages I'll be working on have so many sliders that it will become an issue.
 
 ```javascript
 $('.RatingSlider').each(function(idx, elm) {

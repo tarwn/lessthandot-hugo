@@ -56,7 +56,7 @@ When we run it against a `*.sln` file, NuGet.exe will find and run against each 
 
 **Issue #4: TeamCity only supports NuGet Restore of *.sln files**
 
-TeamCity restricts the built-in NuGet Restore command to only run against files that end in “.sln”. A separate flaw in this restriction was [pointed out to JetBrains in 2015][5], but has not been fixed as of TeamCity 2017.1.
+TeamCity restricts the built-in NuGet Restore command to only run against files that end in ".sln". A separate flaw in this restriction was [pointed out to JetBrains in 2015][5], but has not been fixed as of TeamCity 2017.1.
 
 This restriction prevents me from doing a clean NuGet Restore of my solution-level packages.json from issue #3.
 
@@ -82,7 +82,7 @@ I used the built-in Nuget Installer with the Restore option and the name of my s
 
 **2. Restore from PackageReferences**
 
-For PackageReference, I used the MSBuild task in TeamCity with my Solution file as the Build file path and a target of “Restore” (same as running `msbuild /t:Restore`).
+For PackageReference, I used the MSBuild task in TeamCity with my Solution file as the Build file path and a target of "Restore" (same as running `msbuild /t:Restore`).
 
 **3. Restore Solution-level packages**
 

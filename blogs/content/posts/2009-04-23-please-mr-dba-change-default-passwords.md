@@ -18,7 +18,7 @@ It's your job to make sure security is not compromised. Part of that job is to m
 
 Example: I can't tell you what the system is of course but I can say the system holds highly sensitive data. The group managing the software installed it and got off running. A week later my network scan of instances picked up a SQL Express edition running on the server in which this software was installed. When I logged into the instance, BUILTINAdmins was enabled. SA at least had a password even knowing it took me 3 guesses to figure it out. What kind of got me in a bunch was a user I noticed set in the sysadmin server role. I am firm in believing this role has only one place and that is for either the DBAs SQL account or more securely handled, an AD group named DBA and so managed that way. The software didn't think so though and the odd user was in the sysadmin role. I'm guessing some developer wasn't smart enough to figure out any kind of security model for the software they were writing and instead of look like complete idiots by using SA, they created a user and gave them sysadmin. \*sigh\*
 
-So why is this such a big problem? Here is how I cracked the password to this super user in under 10 seconds. Open google, type “default password {username}”, hit enter.
+So why is this such a big problem? Here is how I cracked the password to this super user in under 10 seconds. Open google, type "default password {username}", hit enter.
 
 First hit I got back was another idiot posting in a forum begging for help. That doesn't make them an idiot other than the fact they posted their DNS-Less connection string in the thread. When I tried the password they had in the string with my instance I was in and dropping objects. Well, I didn't drop anything, but you get the idea.
 

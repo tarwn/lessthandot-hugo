@@ -22,7 +22,7 @@ Server.GetLastError() is accessible only at two places – 1. Page\_Error event 
 In this article, we'll trap the unhandled errors in Application_Error event.
 
 ```csharp
-<%Import Namespace= “System.Diagnostics”%>
+<%Import Namespace= "System.Diagnostics"%>
 
 void Application_Error(object sender, EventArgs e) 
     { 
@@ -56,7 +56,7 @@ void Application_Error(object sender, EventArgs e)
 Note in the above code, Server.ClearError() is commented. This brings the customErrors section of the web.config into play. Once the error occurs, the error is logged into the event log and then redirected to a custom error page. Therefore make sure the customErrors section of the web.config file has an entry like this
 
 ```csharp
-<customErrors mode= “On” defaultRedirect= “AppError.htm”></customErrors>
+<customErrors mode= "On" defaultRedirect= "AppError.htm"></customErrors>
 ```
 
 Continuing with the creation of Eventlog, create a sample page on your site to generate application error and then follow the below steps.

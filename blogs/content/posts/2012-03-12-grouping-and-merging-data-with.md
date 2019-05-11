@@ -54,7 +54,7 @@ The result looks like this:
   <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply1.png?mtime=1331554009"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply1.png?mtime=1331554009" width="488" height="284" /></a>
 </div>
 
-Now if you look at the data you'll see we have 3 lines per course each with a different date. The request was to have 1 line per course with all the dates in one field. To do this I'm “joining” the table to itself by using it as a normal table once and as XML the second time. Using the DISTINCT clause on the left side filters out the duplicate records. The FOR XML on the right side is used to make a dummy list of the dates the courses start. With the CROSS APPLY operator I'm joining the two results in a result set like requested by the customer:
+Now if you look at the data you'll see we have 3 lines per course each with a different date. The request was to have 1 line per course with all the dates in one field. To do this I'm "joining" the table to itself by using it as a normal table once and as XML the second time. Using the DISTINCT clause on the left side filters out the duplicate records. The FOR XML on the right side is used to make a dummy list of the dates the courses start. With the CROSS APPLY operator I'm joining the two results in a result set like requested by the customer:
 
 ```sql
 SELECT DISTINCT CourseCode, CourseName, Datelist 

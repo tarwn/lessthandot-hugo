@@ -111,11 +111,11 @@ WHERE spatial_reference_id = 4326
 
 Here is the meta data
 
-GEOGCS[“WGS 84”, DATUM[“World Geodetic System 1984”,
+GEOGCS["WGS 84", DATUM["World Geodetic System 1984",
   
-ELLIPSOID[“WGS 84”, 6378137, 298.257223563]], PRIMEM[“Greenwich”, 0],
+ELLIPSOID["WGS 84", 6378137, 298.257223563]], PRIMEM["Greenwich", 0],
   
-UNIT[“Degree”, 0.0174532925199433]]
+UNIT["Degree", 0.0174532925199433]]
 
 Back to our code, in order to have this data in our table
 

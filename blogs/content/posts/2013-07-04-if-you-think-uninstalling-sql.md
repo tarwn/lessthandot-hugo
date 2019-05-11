@@ -135,5 +135,5 @@ Will update the Enterprise Manager configuration for the following database(s):<
 ORCL</p></blockquote>
 <p>First time I ran this it failed, when I rain it again it succeeded but I still have these services on my laptop</p>
 <div class="image_block"><a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveServices.PNG?mtime=1372947653"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleRemoveServices.PNG?mtime=1372947653" width="720" height="209" /></a></div>
-<p>When I posted that I was uninstalling Oracle, I got a reply from Tim Ford ” Its easier to just rebuild the server.”  Maybe he is right??</p>
+<p>When I posted that I was uninstalling Oracle, I got a reply from Tim Ford " Its easier to just rebuild the server."  Maybe he is right??</p>
 <p>Here is also a link to someone's post about a last resort method http://www.oracle-base.com/articles/misc/manual-oracle-uninstall.php</p>

@@ -115,7 +115,7 @@ The SQL Azure Migration Wizard (SQLAzureMW) gives you the options to analyzes, g
 
 It will also analyze SQL Profiler trace files and TSQL script for compatibility issues with SQL Azure. 
 
-  1. If your source is a SQL Server database, SQLAzureMW will list all of the object types (i.e. Tables, Stored Procedures, Views, etc.) and let you decide which ones you want analyzed / scripted. Using the “Advanced” options you can tell SQLAzureMW which compatibility checks to perform and if the data should be migrated.
+  1. If your source is a SQL Server database, SQLAzureMW will list all of the object types (i.e. Tables, Stored Procedures, Views, etc.) and let you decide which ones you want analyzed / scripted. Using the "Advanced" options you can tell SQLAzureMW which compatibility checks to perform and if the data should be migrated.
   2. If your source is a file containing TSQL, then you will be given the option to have SQLAzureMW check the TSQL for incompatibilities and fix where possible or just run the script without any compatibility checking.
   3. You can specify a SQL Profiler trace file for analysis.
 

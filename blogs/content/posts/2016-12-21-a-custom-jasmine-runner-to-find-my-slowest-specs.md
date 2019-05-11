@@ -19,7 +19,7 @@ tags:
 ---
 I've been playing around lately with a pure command-line Jasmine runner that doesn't rely on a SpecRunner file to run tests. I work daily with a largish application that is well over 100K lines of front-end code and greater than 7000 front-end tests. Over time as the codebase and test count has grown, our Continuous Integration environment has continued to get slower. While build servers like Jenkins and TeamCity provide some analytics around slow tests, there is still some digging involved to identify the best targets for improvement, something I'm hoping a local runner can make easier.
 
-Sample code for this post: [tools/jasmine2-runner/jasmine2-runner.js][1] (embedded in a sample project named “townthing”).
+Sample code for this post: [tools/jasmine2-runner/jasmine2-runner.js][1] (embedded in a sample project named "townthing").
 
 I've taken a very small project I've used in prior posts on [Karma][2] and [WallabyJS][3] and written a reusable Jasmine console runner, relying on Phantom 2, that creates a set of statistics as it runs and tries to identify the slowest set of tests in the set without pushing it to a remote server.
 
@@ -213,12 +213,12 @@ Runner.execute(function(result){
     Customizing this for other projects is relatively easy, and I'll probably work on making it easier to reuse as a I have more time. Right now the main things you need to do are:
     
       * Replace the jasmine paths with ones that make sense for your project
-      * Replace the “inject additional required files” section with the additional dependencies you need
-      * Update the “execute provided spec list” section to match how you run tests
+      * Replace the "inject additional required files" section with the additional dependencies you need
+      * Update the "execute provided spec list" section to match how you run tests
     
     You will also want to download the runner, console-reporter, and jasmine bootloader from [github][5].
     
-    For instance, if you are using a basic SpecRunner.html file with the spec and source files listed in script tags, you could drop these in the “inject additional required files” section and replace the “execute provided spec list” with just a single call to “windows.executeTests()”.
+    For instance, if you are using a basic SpecRunner.html file with the spec and source files listed in script tags, you could drop these in the "inject additional required files" section and replace the "execute provided spec list" with just a single call to "windows.executeTests()".
 
  [1]: https://github.com/tarwn/townthing/blob/master/tools/jasmine2-runner/jasmine2-runner.js
  [2]: /index.php/webdev/uidevelopment/javascript/continuous-javascript-testing-with-karma/ "Continuous Javascript Testing with Karma "

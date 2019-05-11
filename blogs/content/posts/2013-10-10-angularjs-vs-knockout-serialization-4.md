@@ -72,7 +72,7 @@ The controller and form is based on ones I used in prior examples, but I found I
 
 The first issue was that it will not serialize $scope, so I had to move the properties I want to serialize to an object inside scope. This seems reasonable, as the top level is unlikely to be an object I have read or want to write over the wire. It's likely to have one or more data models attached to it and a variety of front-end specific values, so this limitation shouldn't have any real world impact.
 
-The second issue I ran into is the calculation I was using was a function rather than a property, so it isn't serialized. I worked around this by adding a watch for the function result and a field to store the result of the function, using the watch to update the field. This works fine for my overly simplistic “plus 5” function, but I don't know how well it would scale to watching several functions with multiple variables and calls out to complex sub-calculations, conditional operations, etc.
+The second issue I ran into is the calculation I was using was a function rather than a property, so it isn't serialized. I worked around this by adding a watch for the function result and a field to store the result of the function, using the watch to update the field. This works fine for my overly simplistic "plus 5" function, but I don't know how well it would scale to watching several functions with multiple variables and calls out to complex sub-calculations, conditional operations, etc.
 
 ## Knockout Serialization
 
@@ -135,7 +135,7 @@ var SerializationModel = function () {
     }, this);
 };
 ```
-In this case I am serializing the top level viewmodel instead of sub-object. I am filtering out the “json” property and masking the content of the “soonToBeFake” property.
+In this case I am serializing the top level viewmodel instead of sub-object. I am filtering out the "json" property and masking the content of the "soonToBeFake" property.
 
 ## Some Difference
 

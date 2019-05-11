@@ -13,9 +13,9 @@ categories:
   - Microsoft SQL Server
 
 ---
-Sometimes you have to “empty” the database, meaning you have to keep everything except data.
+Sometimes you have to "empty" the database, meaning you have to keep everything except data.
 
-One way is to script “everything”, drop DB and create it again.
+One way is to script "everything", drop DB and create it again.
 
 Another way is to delete data table by table, taking care of FK constraints, or to drop all FKs, then to remove data and at the end to restore FKs.
 
@@ -106,4 +106,4 @@ Select 'Delete from ['+ object_schema_name(tblID) + '].[' + object_name(tblId) +
 Order by Max(lvl),1
 ```
 
-Note. Don't forget to modify max column display size parameter in SSMS and preferably execute it in “result in text” mode (Ctrl-T)
+Note. Don't forget to modify max column display size parameter in SSMS and preferably execute it in "result in text" mode (Ctrl-T)

@@ -39,13 +39,13 @@ Next, in your LayoutRoot_Loaded method, add a handler:
 AddHandler Me.MyVisualState.Storyboard.Completed, AddressOf SomeStoryBoard_Completed
 ```
 
-Where “MyVisualState” is the name of the visual state you are trying to work with.
+Where "MyVisualState" is the name of the visual state you are trying to work with.
 
 Nothing too fancy there. You just have to know that a VisualState contains a story board and that you can wire up that story board's completed event. 
 
 There is another way, that is even more simple, but it appears to not be working as intended. If you have any idea's why the following doesn't work, I'd love to hear about it.
 
-Start by going into the XAML and finding the Storyboard in the Visual State you are trying to work with. Once you've found it, give the Storyboard a name (x:Name=”sbSearchOpen” on line 11 in the following example)
+Start by going into the XAML and finding the Storyboard in the Visual State you are trying to work with. Once you've found it, give the Storyboard a name (x:Name="sbSearchOpen" on line 11 in the following example)
 
 ```XAML
 <VisualStateManager.VisualStateGroups>

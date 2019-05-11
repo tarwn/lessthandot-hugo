@@ -46,7 +46,7 @@ My story is not about a hack in its purest definition, but it is about a nice al
 </p>
 
 <p style="text-align: justify;">
-  <em>=iif((Fields!Result) < 70,”O”,”P”))</em>
+  <em>=iif((Fields!Result) < 70,"O","P"))</em>
 </p>
 
 <p style="text-align: justify;">
@@ -60,7 +60,7 @@ My story is not about a hack in its purest definition, but it is about a nice al
 <span style="text-align: justify;">Since the report now just had to evaluate a simple expression and display a simple text for each cell instead of a single chart for each cell, the report performance went through the roof.</span>
 
 <p style="text-align: justify;">
-  In conclusion: using something “goofy” can sometimes lead to extraordinary results.
+  In conclusion: using something "goofy" can sometimes lead to extraordinary results.
 </p>
 
  [1]: http://www.dataogre.com/2013/09/02/t-sql-tuesday-46-rube-goldberg-machine/

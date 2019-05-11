@@ -91,7 +91,7 @@ DELETE TestTable
 
 _Msg 3906, Level 16, State 1, Line 1
   
-Failed to update database “TestSnapshot” because the database is read-only.
+Failed to update database "TestSnapshot" because the database is read-only.
   
 _ 
   

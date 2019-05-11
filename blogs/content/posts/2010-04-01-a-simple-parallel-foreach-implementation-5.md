@@ -94,7 +94,7 @@ public static void Accept<T>(T to_be_indexed)
 }
 ```
 
-The problem we ran into was the lambda expression grabbing whatever “current” was defined as **_at execution time_**, causing the same index to be written to twice (and others not at all) in many cases. This is what forced us to add the line
+The problem we ran into was the lambda expression grabbing whatever "current" was defined as **_at execution time_**, causing the same index to be written to twice (and others not at all) in many cases. This is what forced us to add the line
   
 <code class="codespan">var captured = current;</code>
   

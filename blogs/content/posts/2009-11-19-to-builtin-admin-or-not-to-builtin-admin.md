@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-A while back I wrote, “[To SA or not to SA][1]”. That blog touched my security side that I take very seriously in my database server landscape. I'm glad to have seen so many read the blog in hopes it brought attention to the SA account where it may have been overlooked. In a reply to one of the comments I touched on another default setting for SQL Server regarding the BUILTIN Administrators group. BUILTINAdministrators is created by default on windows operating systems. This group has little to no limitations on the OS and application installations on the server.
+A while back I wrote, "[To SA or not to SA][1]". That blog touched my security side that I take very seriously in my database server landscape. I'm glad to have seen so many read the blog in hopes it brought attention to the SA account where it may have been overlooked. In a reply to one of the comments I touched on another default setting for SQL Server regarding the BUILTIN Administrators group. BUILTINAdministrators is created by default on windows operating systems. This group has little to no limitations on the OS and application installations on the server.
 
 So to put it as slightly as I did with SA...
 

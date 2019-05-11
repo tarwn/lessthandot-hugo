@@ -72,9 +72,9 @@ it("will be detected. It uses the runs() and waitsFor latch to wait for the asyn
 	});
 });
 ```
-Now the test will wait until we set our “done” variable to true (or 5000ms, the default timeout that I didn't override on the waitsFor() call). As you can see, though, this also added some extra noise to the test, both in terms of extra characters to visually parse and extra function layers. It's also quite a bit different then the pattern mocha follows, and if you're going back and forth between mocha and jasmine you'll have that moment where you have to shift mental gears.
+Now the test will wait until we set our "done" variable to true (or 5000ms, the default timeout that I didn't override on the waitsFor() call). As you can see, though, this also added some extra noise to the test, both in terms of extra characters to visually parse and extra function layers. It's also quite a bit different then the pattern mocha follows, and if you're going back and forth between mocha and jasmine you'll have that moment where you have to shift mental gears.
 
-This is was an excellent time to add [jasmine.async][3]. Jasmine.async introduces an AsyncSpec object with beforeEach(), it(), and afterEach() calls with a “done” wait handle parameter:
+This is was an excellent time to add [jasmine.async][3]. Jasmine.async introduces an AsyncSpec object with beforeEach(), it(), and afterEach() calls with a "done" wait handle parameter:
 
 ```javascript
 var async = new AsyncSpec(this);
@@ -91,7 +91,7 @@ async.it("will be detected. It uses the jasmine.async library to wait for the re
 	.always(done);
 });
 ```
-This looks very much like the initial, flawed version as we would implement it in mocha. The only change to the test logic is the single always() call at the end that will execute the “done” wait handle that the async.it() call provided. The test logic is still just as clean as the original at the cost of a single additional script include.
+This looks very much like the initial, flawed version as we would implement it in mocha. The only change to the test logic is the single always() call at the end that will execute the "done" wait handle that the async.it() call provided. The test logic is still just as clean as the original at the cost of a single additional script include.
 
 ## Async in Jasmine 2.0.0
 

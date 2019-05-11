@@ -37,7 +37,7 @@ CREATE TABLE [dbo].[XMLImportWT](
 ) ON [PRIMARY]
 GO
 ```
-Basically they are identical but one I have plans to ship offsite for recovery purposes. The path parameter is important for archiving the files. This way they go to normal tape backups and can be restored with the slower process of file backup services. The basic task is to ensure a structure exists of, “[archive directory]YYYYMM”. All the files will be moved accordingly to these folders once they are imported into our table and any other needed processing performed. You can manage that directory structure simply by doing ...
+Basically they are identical but one I have plans to ship offsite for recovery purposes. The path parameter is important for archiving the files. This way they go to normal tape backups and can be restored with the slower process of file backup services. The basic task is to ensure a structure exists of, "[archive directory]YYYYMM". All the files will be moved accordingly to these folders once they are imported into our table and any other needed processing performed. You can manage that directory structure simply by doing ...
 
 ```CSHARP
 public static void ImportFileAttributes(string dest_path,string source_path, string insert_Table)
@@ -113,7 +113,7 @@ http://www.sqlskills.com/resources/Whitepapers/SQL%20Server%20DBA%20Guide%20to%2
   
 This is a great overview of SQL CLR and a must read.
 
-Second, read Adam Machanic blog from a few years ago title “Writing SQL Server CLR routines”.
+Second, read Adam Machanic blog from a few years ago title "Writing SQL Server CLR routines".
   
 http://searchsqlserver.techtarget.com/tip/0,289483,sid87_gci1165410,00.html
 
@@ -144,7 +144,7 @@ join (select ROW_NUMBER() OVER (ORDER BY filenm ASC) AS ROWID, * from [XMLImport
 ```
 This only gives me looping structure and the column really isn't required but one thing it does, is tell me what was batched together and inserted given any execution. 
 
-Next I want to grab all the XML data and get it into the XML type column “xmldata”
+Next I want to grab all the XML data and get it into the XML type column "xmldata"
   
 Create my supporting variables in order to process everything along with the ability to utilize an existing SQL CLR procedure I've used to move files around. That procedure is nothing more than a File.Move method call.
 

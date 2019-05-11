@@ -19,7 +19,7 @@ tags:
   - xaml
 
 ---
-Kaxaml is a lightweight XAML editor that gives you a “split view” so you can see both your XAML and your rendered content (kind of like XamlPad but without the gigabyte of SDK).
+Kaxaml is a lightweight XAML editor that gives you a "split view" so you can see both your XAML and your rendered content (kind of like XamlPad but without the gigabyte of SDK).
 
 First watch the video on channel 9 to see what it looks like. Here is what is covered:
 

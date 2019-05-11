@@ -51,7 +51,7 @@ I could present every day. I am already working on where I will try to present n
 
 I'm almost ready to let the cat out of the bag about my latest project. Almost. Stay tuned for details. 
 
-Note to self: get better at saying “no”. That's hard for me. 
+Note to self: get better at saying "no". That's hard for me. 
 
 **Help Others** 
 

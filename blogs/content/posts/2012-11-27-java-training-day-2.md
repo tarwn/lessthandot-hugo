@@ -100,7 +100,7 @@ byte x =128;
 System.out.println(x);
 ```
 
-Exception in thread “main” java.lang.Error: Unresolved compilation problem:
+Exception in thread "main" java.lang.Error: Unresolved compilation problem:
   
 Type mismatch: cannot convert from int to byte
   
@@ -114,7 +114,7 @@ int z = s;
 System.out.println(z);
 ```
 
-Exception in thread “main” java.lang.Error: Unresolved compilation problem:
+Exception in thread "main" java.lang.Error: Unresolved compilation problem:
   
 Type mismatch: cannot convert from String to int
 

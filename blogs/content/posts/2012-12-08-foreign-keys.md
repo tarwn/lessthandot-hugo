@@ -103,7 +103,7 @@ INSERT TestForeignConstraint  VALUES(2)
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignConstraint\_TestUniqueConstraint”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueConstraint”, column 'id'.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK\_TestForeignConstraint\_TestUniqueConstraint". The conflict occurred in database "tempdb", table "dbo.TestUniqueConstraint", column 'id'.
   
 The statement has been terminated._
 
@@ -177,7 +177,7 @@ INSERT TestForeignIndex  VALUES(2)
 
 _Msg 547, Level 16, State 0, Line 1
   
-The INSERT statement conflicted with the FOREIGN KEY constraint “FK\_TestForeignIndex\_TestUniqueIndex”. The conflict occurred in database “tempdb”, table “dbo.TestUniqueIndex”, column 'id'.
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK\_TestForeignIndex\_TestUniqueIndex". The conflict occurred in database "tempdb", table "dbo.TestUniqueIndex", column 'id'.
   
 The statement has been terminated._
 

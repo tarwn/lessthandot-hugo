@@ -41,6 +41,6 @@ A new project type packages database schema with application requirements while 
   
 DBAs will be able to deploy application packages to available servers that meet deployment criteria, helping streamline deployments, moves and changes.
 
-More info and new things including “Project Gemini” can be found here: http://www.microsoft.com/sqlserver/2008/en/us/r2.aspx
+More info and new things including "Project Gemini" can be found here: http://www.microsoft.com/sqlserver/2008/en/us/r2.aspx
 
 You can also sign up to get notified when the SQL Server 2008 R2 Community Technology Preview (CTP) starts this summer

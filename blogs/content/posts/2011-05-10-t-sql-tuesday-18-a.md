@@ -20,7 +20,7 @@ categories:
 
 Welcome to T-SQL Tuesday #18, hosted by Bob Pusateri ([blog][3] | [twitter][4]). Bob, thanks for hosting. From past experience, I know it takes time and effort. 
 
-Bob asked us to write about something I embraced many years ago: Common Table Expressions (CTEs). “Have you ever solved or created a problem by using CTEs? Got a tip, trick, or something nifty to share? I'd love to see your posts about any of the above.” 
+Bob asked us to write about something I embraced many years ago: Common Table Expressions (CTEs). "Have you ever solved or created a problem by using CTEs? Got a tip, trick, or something nifty to share? I'd love to see your posts about any of the above." 
 
 I've used CTEs for many things, but always avoided learning a recursive CTE. So, I challenged myself to sit down, find a use for one, write the code for it, and blog it. Challenge met. 
 
@@ -122,7 +122,7 @@ The final piece is a query, which is the result of all sets returned by the UNIO
 
 Because I don't have a WHERE clause in my second query, this could be an infinite loop. (Unless you believe the world is going to end on December 21, 2012. But that wasn't coded into SQL Server.) How do I prevent this? I use the query hint OPTION (MAXRECURSION X). 
 
-What I learned while writing this post: if not explicitly specified, the default MAXRECURSION is 100. The range is 0 – 32,767. 0 indicates “no limit”. Also, and I quote from [Books Online][6], “When the specified or default number for MAXRECURSION limit is reached during query execution, the query is ended and an error is returned. Because of this error, all effects of the statement are rolled back. If the statement is a SELECT statement, partial results or no results may be returned. Any partial results returned may not include all rows on recursion levels beyond the specified maximum recursion level.” This will come back to haunt me later, as you will see. 
+What I learned while writing this post: if not explicitly specified, the default MAXRECURSION is 100. The range is 0 – 32,767. 0 indicates "no limit". Also, and I quote from [Books Online][6], "When the specified or default number for MAXRECURSION limit is reached during query execution, the query is ended and an error is returned. Because of this error, all effects of the statement are rolled back. If the statement is a SELECT statement, partial results or no results may be returned. Any partial results returned may not include all rows on recursion levels beyond the specified maximum recursion level." This will come back to haunt me later, as you will see. 
 
 ```sql
 SELECT CalendarDate, DateYear, DateQuarter, DateMonth, DateWeek, DateDayOfWeek, DateDay, DateDayOfYear

@@ -128,10 +128,10 @@ from dbo.tblENTERPRISE_ISSUES a
 where prProjectStatus='Active'
 	and a.Priority>=1
 ```
-So I hit execute, and it works fine, except that it's now taking 6 seconds to execute, instead of 1 second like the previous version. I thought to myself “WTF?! This is better! This should be even faster!” I looked at the execution plan and see some clustered index scans that are pretty high, so I make a couple of indexes. No dice. 
+So I hit execute, and it works fine, except that it's now taking 6 seconds to execute, instead of 1 second like the previous version. I thought to myself "WTF?! This is better! This should be even faster!" I looked at the execution plan and see some clustered index scans that are pretty high, so I make a couple of indexes. No dice. 
 
 Now I'm thinking that there must be something in the new query that I'm over looking. It then struck me that the main thing I changed was the subquery for the max date. I then take the coalesce statement out of the subquery because there's no nulls in that column (I had just carried it over from the last one). I then rerun the query and voila! It ran in about 1 second with the exact same dataset as before.
 
-I now understand what was happening, or at least sort of. Before the subquery could do the group by on the wassnid sql server had to go and check if all the wasnid's were null, and if so change them to ”. Removing the coalesce removed that extra step.
+I now understand what was happening, or at least sort of. Before the subquery could do the group by on the wassnid sql server had to go and check if all the wasnid's were null, and if so change them to ". Removing the coalesce removed that extra step.
 
 So now I've got some updated code and I learned something new (or learned something to keep in mind in sub-queries). I'd call today a good day!

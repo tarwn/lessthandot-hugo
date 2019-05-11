@@ -19,7 +19,7 @@ categories:
 ---
 Availability Groups were introduced in SQL Server 2012 and have quickly become the forefront of high availability for the SQL Server Database Engine Services.  In prior versions of SQL Server, true high availability was not a complete solution packaged with the native installation and feature set.  While mirroring was introduced in SQL Server 2005 and provided a much-needed advance towards achieving highly available data services, mirroring still required much customization to effectively provide a true high availability solution.
 
-It's important to define high availability as it pertains to database level services – database high availability requires the means of retaining data services to users, applications and services within a defined allowable interruption of data services.  This equates simply as, are data services available to _any_ connection within a given tolerance.  The _nines_ has always been the flavor of measuring availability in the way of uptime.  “_My database server achieved four nines availability last year!”_  This achievement is essentially stating the database services were not available for an estimated .01% of the total operating hours in a year or, 52 minutes.  Remember, this achievement is based on service level agreements that can have vast variations.  While even Full Clustered Instances of SQL Server implement a level of high availability, there is still the single point of failure that is of highest importance to the data services – the database.  Points of failure and focusing on where they may occur, begins allowing a visual representation of how availability achievements can be achieved.
+It's important to define high availability as it pertains to database level services – database high availability requires the means of retaining data services to users, applications and services within a defined allowable interruption of data services.  This equates simply as, are data services available to _any_ connection within a given tolerance.  The _nines_ has always been the flavor of measuring availability in the way of uptime.  "_My database server achieved four nines availability last year!"_  This achievement is essentially stating the database services were not available for an estimated .01% of the total operating hours in a year or, 52 minutes.  Remember, this achievement is based on service level agreements that can have vast variations.  While even Full Clustered Instances of SQL Server implement a level of high availability, there is still the single point of failure that is of highest importance to the data services – the database.  Points of failure and focusing on where they may occur, begins allowing a visual representation of how availability achievements can be achieved.
 
 Points of Failure
 
@@ -95,7 +95,7 @@ Setup of the Availability Groups in the structure covers one or more databases.�
       * KB2494036 
           * A hotfix is available to let you configure a cluster node that does not have quorum votes in Windows Server 2008 and in Windows Server 2008 R2
       * KB2687741 
-          * A hotfix that improves the performance of the “AlwaysOn Availability Group” feature in SQL Server 2012 is available for Windows Server 2008 R2
+          * A hotfix that improves the performance of the "AlwaysOn Availability Group" feature in SQL Server 2012 is available for Windows Server 2008 R2
 
 <h3 style="padding-left: 30px">
   Server names
@@ -254,7 +254,7 @@ Connect to each server or open Server Manager for remote access to each server. 
 [<img class="size-full wp-image-2689 aligncenter" src="/wp-content/uploads/2014/06/ag2.png" alt="ag2" width="624" height="156" srcset="/wp-content/uploads/2014/06/ag2.png 624w, /wp-content/uploads/2014/06/ag2-300x75.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][2]
 
 <p style="text-align: center">
-  In the Select Features wizard, check “Failover Clustering” and click Install.
+  In the Select Features wizard, check "Failover Clustering" and click Install.
 </p>
 
 [<img class="size-full wp-image-2690 aligncenter" src="/wp-content/uploads/2014/06/ag3.png" alt="ag3" width="519" height="377" srcset="/wp-content/uploads/2014/06/ag3.png 519w, /wp-content/uploads/2014/06/ag3-300x217.png 300w" sizes="(max-width: 519px) 100vw, 519px" />][3]
@@ -376,11 +376,11 @@ Enter the name chosen for the Availability Groups and click Next.
 
 [<img class="alignnone size-full wp-image-2706" src="/wp-content/uploads/2014/06/ag19.png" alt="ag19" width="624" height="287" srcset="/wp-content/uploads/2014/06/ag19.png 624w, /wp-content/uploads/2014/06/ag19-300x137.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][19]
 
-Ensure each database that will take part in the Availability Group passes validations.  If a database does not pass the validation process that is required to be added to an Availability Group, the list to the right of each database will show what is required.  For example: if a full backup was not performed, the link will read, “Full backup is required”.
+Ensure each database that will take part in the Availability Group passes validations.  If a database does not pass the validation process that is required to be added to an Availability Group, the list to the right of each database will show what is required.  For example: if a full backup was not performed, the link will read, "Full backup is required".
 
 [<img class="alignnone size-full wp-image-2707" src="/wp-content/uploads/2014/06/ag20.png" alt="ag20" width="624" height="92" srcset="/wp-content/uploads/2014/06/ag20.png 624w, /wp-content/uploads/2014/06/ag20-300x44.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][20]
 
-After performing the required prerequisites, click Refresh to re-validate the databases.  Once the validation process states, “Meets prerequisites”, check each database that is required and click Next.
+After performing the required prerequisites, click Refresh to re-validate the databases.  Once the validation process states, "Meets prerequisites", check each database that is required and click Next.
 
 [<img class="alignnone size-full wp-image-2708" src="/wp-content/uploads/2014/06/ag21.png" alt="ag21" width="567" height="361" srcset="/wp-content/uploads/2014/06/ag21.png 567w, /wp-content/uploads/2014/06/ag21-300x191.png 300w" sizes="(max-width: 567px) 100vw, 567px" />][21]
 
@@ -390,7 +390,7 @@ Make the configuration changes as shown below
 
   1. Primary 01 – check Automatic failover, Synchronous Commit
   2. Secondary 02 – check Automatic failover, Synchronous Commit
-  3. Secondary 03 – check synchronous Commit and select Readable Secondary option “Read-intent only”
+  3. Secondary 03 – check synchronous Commit and select Readable Secondary option "Read-intent only"
   4. Secondary 04 – Leave all options as default
 
 [<img class="alignnone size-full wp-image-2709" src="/wp-content/uploads/2014/06/ag22.png" alt="ag22" width="624" height="179" srcset="/wp-content/uploads/2014/06/ag22.png 624w, /wp-content/uploads/2014/06/ag22-300x86.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][22]
@@ -407,7 +407,7 @@ Check Secondary only option for backup preferences and check the checkbox for Re
 
 [<img class="alignnone size-full wp-image-2711" src="/wp-content/uploads/2014/06/ag24.png" alt="ag24" width="624" height="361" srcset="/wp-content/uploads/2014/06/ag24.png 624w, /wp-content/uploads/2014/06/ag24-300x173.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][24]
 
-Click the Listener tab.  If the listener was created prior to configuring the Availability Group, leave “Do not create an Availability Group listener now”.  If a listen should be created, check the “Create an Availability Group listener” and enter the required information.  Note: domain admin privileges are required to create the domain name if choosing to create the listener at this time.
+Click the Listener tab.  If the listener was created prior to configuring the Availability Group, leave "Do not create an Availability Group listener now".  If a listen should be created, check the "Create an Availability Group listener" and enter the required information.  Note: domain admin privileges are required to create the domain name if choosing to create the listener at this time.
 
 [<img class="alignnone size-full wp-image-2712" src="/wp-content/uploads/2014/06/ag25.png" alt="ag25" width="624" height="283" srcset="/wp-content/uploads/2014/06/ag25.png 624w, /wp-content/uploads/2014/06/ag25-300x136.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][25]
 
@@ -451,7 +451,7 @@ The process will execute in this order
 
 [<img class="alignnone size-full wp-image-2717" src="/wp-content/uploads/2014/06/ag30.png" alt="ag30" width="624" height="269" srcset="/wp-content/uploads/2014/06/ag30.png 624w, /wp-content/uploads/2014/06/ag30-300x129.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][30]
 
-Given the even number of node votes in this wizard driven setup, we will need to configure the voting weight of the nodes at a later point.  With the even number the warning is shown as “Validating WSFC quorum vote configuration”.
+Given the even number of node votes in this wizard driven setup, we will need to configure the voting weight of the nodes at a later point.  With the even number the warning is shown as "Validating WSFC quorum vote configuration".
 
 ## Configure the Listener
 
@@ -475,7 +475,7 @@ Note: Assign the IP as needed in this step.  This is the IP that will translate
 
 ## Configure Read Routing for Read-Intent Connections
 
-Multiple replicas can be configured for read-intent only connections.  This configuration is used to route connections that specify in the connection string the “read-intent” setting.  For example: the following connection string is set for read-intent and will be routed to a read-only secondary replica.
+Multiple replicas can be configured for read-intent only connections.  This configuration is used to route connections that specify in the connection string the "read-intent" setting.  For example: the following connection string is set for read-intent and will be routed to a read-only secondary replica.
 
 <div>
   <p>
@@ -635,7 +635,7 @@ The overall health of the Availability Group, databases and replicas will be sho
 
 [<img class="alignnone size-full wp-image-2683" src="/wp-content/uploads/2014/06/ag42.png" alt="ag42" width="624" height="336" srcset="/wp-content/uploads/2014/06/ag42.png 624w, /wp-content/uploads/2014/06/ag42-300x161.png 300w" sizes="(max-width: 624px) 100vw, 624px" />][42]
 
-To review the extended health events, click the “View AlwaysOn Health Events” link.
+To review the extended health events, click the "View AlwaysOn Health Events" link.
 
 [<img class="alignnone size-full wp-image-2684" src="/wp-content/uploads/2014/06/ag43.png" alt="ag43" width="250" height="123" />][43]
 

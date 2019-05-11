@@ -19,7 +19,7 @@ categories:
 ---
 ![T-SQL Tuesday][1]
   
-One day, Adam Machanic ([Twitter][2] | [Blog][3]) had the most brilliant idea of his life to that point: [T-SQL Tuesday][4]. (That _may_ be a slight exaggeration.) This is “a recurring, revolving blog party”, hosted by a guest blogger on the second Tuesday of each month. We've had [15 fantastic parties so far][5]. I am lucky enough to host T-SQL Tuesday #016 on **March, 8, 2011**! 
+One day, Adam Machanic ([Twitter][2] | [Blog][3]) had the most brilliant idea of his life to that point: [T-SQL Tuesday][4]. (That _may_ be a slight exaggeration.) This is "a recurring, revolving blog party", hosted by a guest blogger on the second Tuesday of each month. We've had [15 fantastic parties so far][5]. I am lucky enough to host T-SQL Tuesday #016 on **March, 8, 2011**! 
 
 **The Topic: Aggregation**
 
@@ -27,7 +27,7 @@ No, not aggravation (although I've used the two interchangably before). I want t
 
 Let's SUM(thoughts), COUNT(ways we've done things), and set MAX(awesome) on our posts! 
 
-Remember: “any post that is related to both SQL Server and the theme is fair game. So feel free to post about SSIS, SSRS, Java integration, or whatever other technologies you're working with in conjunction with SQL Server. Even if your post includes no T-SQL we still want to see it.” 
+Remember: "any post that is related to both SQL Server and the theme is fair game. So feel free to post about SSIS, SSRS, Java integration, or whatever other technologies you're working with in conjunction with SQL Server. Even if your post includes no T-SQL we still want to see it." 
 
 **The Rules** 
 
@@ -39,7 +39,7 @@ The first rule of T-SQL Tuesday is: talk about T-SQL Tuesday!
 
 **Bonus Points** 
 
-  * In the post title, include “T-SQL Tuesday #016”. 
+  * In the post title, include "T-SQL Tuesday #016". 
   * Tweet your blog post with the hash tag #tsql2sday. 
   * Consider hosting in the future, and contact Adam if you're interested. 
 

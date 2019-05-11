@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-09-04T17:49:00+00:00
 ID: 1712
-excerpt: 'Recently the question was raised, “If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?”  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for&hellip;'
+excerpt: 'Recently the question was raised, "If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?"  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for&hellip;'
 url: /index.php/datamgmt/dbadmin/plan-cache-effects-when-dropping/
 views:
   - 20149
@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Recently the question was raised, “If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?”  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for the column that is dropped on the table.  For the plan cache and any plans that relate back to either the statistics or the column, the answer isn't quite as easy.
+Recently the question was raised, "If you drop a column on a table, does it also drop the statistics and remove the cached plans that relates to the column?"  To answer the question on statistics directly, yes.  SQL Server will remove any statistics for the column that is dropped on the table.  For the plan cache and any plans that relate back to either the statistics or the column, the answer isn't quite as easy.
 
 <p style="padding-left: 30px;">
   1)      SQL Server will remove, in the plan that is cached, the reference to the statistics

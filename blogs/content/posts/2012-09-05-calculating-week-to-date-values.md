@@ -70,7 +70,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: courier new,courier;"> =FORMAT('Dates'[ActualDate], “dddd”)</span>
+  <span style="font-family: courier new,courier;"> =FORMAT('Dates'[ActualDate], "dddd")</span>
 </p>
 
 <p class="MsoNormal">
@@ -90,7 +90,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: courier new,courier;"><span style="font-size: 9pt; line-height: 115%;">=CALCULATE(<br /> MAX(Dates[ActualDate]),<br /> FILTER(ALL(Dates), <br /> Dates[DayNameOfWeek]=”Tuesday” && <br /> Dates[ActualDate] <= EARLIER(Dates[ActualDate])<br /> )<br /> )</span></span>
+  <span style="font-family: courier new,courier;"><span style="font-size: 9pt; line-height: 115%;">=CALCULATE(<br /> MAX(Dates[ActualDate]),<br /> FILTER(ALL(Dates), <br /> Dates[DayNameOfWeek]="Tuesday" && <br /> Dates[ActualDate] <= EARLIER(Dates[ActualDate])<br /> )<br /> )</span></span>
 </p>
 
 <p class="MsoNormal">

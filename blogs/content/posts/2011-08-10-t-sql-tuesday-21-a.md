@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-08-10T18:04:00+00:00
 ID: 1297
-excerpt: "This month's T-SQL Tuesday Wednesday topic is all about failure.  To be exact, Crap Code.  I'm not going to post any code but instead post the problem, solution and coding initiative that were taken.  Code was the “crap” part that in all was the failure&hellip;"
+excerpt: "This month's T-SQL Tuesday Wednesday topic is all about failure.  To be exact, Crap Code.  I'm not going to post any code but instead post the problem, solution and coding initiative that were taken.  Code was the 'crap' part that in all was the failure&hellip;"
 url: /index.php/datamgmt/dbprogramming/t-sql-tuesday-21-a/
 views:
   - 43001
@@ -22,7 +22,7 @@ categories:
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">This month's </span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><span style="font-family: Calibri; color: #0000ff; font-size: small;">T-SQL Tuesday Wednesday topic is all about failure</span></a><span style="font-family: Calibri; font-size: small;">.<span style="mso-spacerun: yes;">  </span>To be exact, Crap Code.<span style="mso-spacerun: yes;">  </span>I'm not going to post any code but instead post the problem, solution and coding initiative that were taken.<span style="mso-spacerun: yes;">  </span>Code was the “crap” part that in all was the failure in this real-life event.<span style="mso-spacerun: yes;">  </span>For the record, the story I am about to tell everyone in this post, is a real-life story that I did early on in my career.<span style="mso-spacerun: yes;">  </span>Although it is my hope to always teach in order to prevent things like this particular failure to happen to all of you, I also have the belief that we learn from failure.<span style="mso-spacerun: yes;">  </span>Sometimes, a person just needs to have the reaction and heart pumping feeling from a complete failure that affects thousands of users, in order to harden how we need to approach anything.</span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"></a><em style="mso-bidi-font-style: normal;"><span style="line-height: 115%; font-family: Tahoma; font-size: 9.5pt;"> </span></em>
+  <span style="font-family: Calibri; font-size: small;">This month's </span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><span style="font-family: Calibri; color: #0000ff; font-size: small;">T-SQL Tuesday Wednesday topic is all about failure</span></a><span style="font-family: Calibri; font-size: small;">.<span style="mso-spacerun: yes;">  </span>To be exact, Crap Code.<span style="mso-spacerun: yes;">  </span>I'm not going to post any code but instead post the problem, solution and coding initiative that were taken.<span style="mso-spacerun: yes;">  </span>Code was the "crap" part that in all was the failure in this real-life event.<span style="mso-spacerun: yes;">  </span>For the record, the story I am about to tell everyone in this post, is a real-life story that I did early on in my career.<span style="mso-spacerun: yes;">  </span>Although it is my hope to always teach in order to prevent things like this particular failure to happen to all of you, I also have the belief that we learn from failure.<span style="mso-spacerun: yes;">  </span>Sometimes, a person just needs to have the reaction and heart pumping feeling from a complete failure that affects thousands of users, in order to harden how we need to approach anything.</span><a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"></a><em style="mso-bidi-font-style: normal;"><span style="line-height: 115%; font-family: Tahoma; font-size: 9.5pt;"> </span></em>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -34,7 +34,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <em style="mso-bidi-font-style: normal;"><span style="font-size: small;"><span style="font-family: Calibri;">The first meeting is in session and you get all the requirements in front of you.<span style="mso-spacerun: yes;">  </span>As you see all the requirements you recall recently using a trigger for the first time to handle data in and data out of a table.<span style="mso-spacerun: yes;">  </span>Immediately you spout out, “We could do this in a trigger in a weeks' time”.<span style="mso-spacerun: yes;">  </span></span></span></em>
+  <em style="mso-bidi-font-style: normal;"><span style="font-size: small;"><span style="font-family: Calibri;">The first meeting is in session and you get all the requirements in front of you.<span style="mso-spacerun: yes;">  </span>As you see all the requirements you recall recently using a trigger for the first time to handle data in and data out of a table.<span style="mso-spacerun: yes;">  </span>Immediately you spout out, "We could do this in a trigger in a weeks' time".<span style="mso-spacerun: yes;">  </span></span></span></em>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -102,7 +102,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">Second, if you read closely, you would have caught this line, “<em style="mso-bidi-font-style: normal;">The trigger was lengthy due to some business logic that was required</em>”.<span style="mso-spacerun: yes;">  </span>OK, what's the issue here?</span>
+  <span style="font-family: Calibri; font-size: small;">Second, if you read closely, you would have caught this line, "<em style="mso-bidi-font-style: normal;">The trigger was lengthy due to some business logic that was required</em>".<span style="mso-spacerun: yes;">  </span>OK, what's the issue here?</span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -146,7 +146,7 @@ categories:
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-size: small;"></span><span style="font-size: small;"><span style="font-family: Calibri;"><span style="mso-spacerun: yes;"> </span>I learned very quickly to keep my mouth shut when it comes to me “thinking” I have the answer.<span style="mso-spacerun: yes;">  </span>Discuss potential solutions and paths that can be reviewed as possible solutions.<span style="mso-spacerun: yes;">  </span>Research other possible solutions that may be in place already.<span style="mso-spacerun: yes;">  </span>Do the work and don't commit to something as a solution simply because you were excited you recently learned it.<span style="mso-spacerun: yes;">  </span></span></span>
+  <span style="font-size: small;"></span><span style="font-size: small;"><span style="font-family: Calibri;"><span style="mso-spacerun: yes;"> </span>I learned very quickly to keep my mouth shut when it comes to me "thinking" I have the answer.<span style="mso-spacerun: yes;">  </span>Discuss potential solutions and paths that can be reviewed as possible solutions.<span style="mso-spacerun: yes;">  </span>Research other possible solutions that may be in place already.<span style="mso-spacerun: yes;">  </span>Do the work and don't commit to something as a solution simply because you were excited you recently learned it.<span style="mso-spacerun: yes;">  </span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

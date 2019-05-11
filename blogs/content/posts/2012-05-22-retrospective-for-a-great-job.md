@@ -42,7 +42,7 @@ Finally, a team needs to have something in place to reflect on their process and
 
 ## Conclusion
 
-I guess I should stop rambling at some point, and now seems as good a time as any.  From a technical perspective I learned a lot at this last job, but it pales in comparison to what it taught me about process.  I've been on teams that were pretty well oiled machines in the past, but never one that managed to stay operating at a high level for quite so long.  While I want to credit the people, and some of the truly special elements of our environment for the amount of success we had, I truly believe it is our discipline when it comes to the more mundane parts of our process that enabled us to stay successful.  Hopefully I'll be able to remember this if I'm unfortunate enough to be in a more “normal” environment in the future.
+I guess I should stop rambling at some point, and now seems as good a time as any.  From a technical perspective I learned a lot at this last job, but it pales in comparison to what it taught me about process.  I've been on teams that were pretty well oiled machines in the past, but never one that managed to stay operating at a high level for quite so long.  While I want to credit the people, and some of the truly special elements of our environment for the amount of success we had, I truly believe it is our discipline when it comes to the more mundane parts of our process that enabled us to stay successful.  Hopefully I'll be able to remember this if I'm unfortunate enough to be in a more "normal" environment in the future.
 
  [1]: http://buildbroke.com/2011/02/10/pairing-and-interviewing/
  [2]: https://twitter.com/#!/rhanekom

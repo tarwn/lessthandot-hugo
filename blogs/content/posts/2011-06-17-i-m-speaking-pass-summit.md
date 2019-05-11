@@ -28,7 +28,7 @@ It couldn't have been hard for only me, though. Thank you to everyone that submi
 
 The gamble paid off, though! On Wednesday, I was notified that **Reporting Services 201: From Basic To WOW!** was selected as a regular session! The abstract: 
 
-> You have mastered the art of linking a dataset to a table in SQL Server Reporting Services. You have solid, reliable reports that you and others depend on. Learn how to take them from basic to “wow”, using features such as tablix, lists, images, and charts. At the end of this session, you will be familiar with:
+> You have mastered the art of linking a dataset to a table in SQL Server Reporting Services. You have solid, reliable reports that you and others depend on. Learn how to take them from basic to "wow", using features such as tablix, lists, images, and charts. At the end of this session, you will be familiar with:
   
 > – Report properties such as headers, footers and backgrounds
   

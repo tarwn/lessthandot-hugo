@@ -38,7 +38,7 @@ There is an overview of three not-as-common index types here – XML, spatial, a
 
 **Index Myths and Best Practices**
 
-There are a lot of misconceptions about how to use indexes in SQL Server. Myths such as “primary keys are always clustered” and “fill factor is applied to indexes during inserts” are broken down in this chapter. It's a great look at how these things actually work. Best practices for indexes are also covered in this chapter.
+There are a lot of misconceptions about how to use indexes in SQL Server. Myths such as "primary keys are always clustered" and "fill factor is applied to indexes during inserts" are broken down in this chapter. It's a great look at how these things actually work. Best practices for indexes are also covered in this chapter.
 
 **Index Maintenance**
 

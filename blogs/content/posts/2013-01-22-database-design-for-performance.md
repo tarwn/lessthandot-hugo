@@ -32,7 +32,7 @@ These two questions are truly one and the same.  The first, OLTP or OLAP, dicta
 
 [Normalization][3] is the standard process of reducing redundancy in a database.  Although there are many levels of normalization, called normalized form, we're going to focus on a simplistic level of normalization and a secondary level or 2NF for the example shown in this article.  In this state of normalization, we will still see a high benefit in performance enhancements.
 
-In the following two table structures, an ordering system was needed.  Both table structures meet the needs of an order header, details and shipment storage.  As shown in figure 1, the non-normalized structure has the word “poor” in the naming convention.
+In the following two table structures, an ordering system was needed.  Both table structures meet the needs of an order header, details and shipment storage.  As shown in figure 1, the non-normalized structure has the word "poor" in the naming convention.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/All/design_perf_1.gif?mtime=1358783965"><img alt="" src="/wp-content/uploads/blogs/All/design_perf_1.gif?mtime=1358783965" width="419" height="417" /></a>

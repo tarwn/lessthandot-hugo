@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-10-02T19:41:00+00:00
 ID: 1335
-excerpt: "I'm very excited to announce that the book, “Troubleshooting SQL Server: A guide for the Accidental DBA” will be at the PASS Summit this year.  Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publ&hellip;"
+excerpt: "I'm very excited to announce that the book, 'Troubleshooting SQL Server: A guide for the Accidental DBA' will be at the PASS Summit this year.  Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publ&hellip;"
 url: /index.php/datamgmt/dbprogramming/troubleshooting-sql-server-a-guide/
 views:
   - 10218
@@ -18,7 +18,7 @@ categories:
 
 ---
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">I'm very excited to announce that the book, “</span><a href="http://www.simple-talk.com/books/sql-books/troubleshooting-sql-server-a-guide-for-the-accidental-dba/"><span style="font-family: Calibri; font-size: small;">Troubleshooting SQL Server: A guide for the Accidental DBA</span></a><span style="font-size: small;"><span style="font-family: Calibri;">” will be at the PASS Summit this year.<span style="mso-spacerun: yes;">  </span>Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publication is always valued.<span style="mso-spacerun: yes;">  </span>This book is composed of some of the most common problems and real-life experiences that go into resolving them.<span style="mso-spacerun: yes;">  E</span>ven the thought of the caliber of the names on this book putting on paper all they have in steps to resolving some of the worst problems out there, holds a lot of value that can prove, priceless.<span style="mso-spacerun: yes;">  </span>It gets better.<span style="mso-spacerun: yes;">  </span>Gail Shaw has also contributed as the editor and contributor on this book.<span style="mso-spacerun: yes;">  </span>The addition of Gail in this book rounds it out as, in my opinion, one of the best DBA books that you can have on your shelf.<span style="mso-spacerun: yes;">  One that you can turn to in any event you are in need of determining resolutions to many problems that may happen with SQL Server.</span></span></span>
+  <span style="font-family: Calibri; font-size: small;">I'm very excited to announce that the book, "</span><a href="http://www.simple-talk.com/books/sql-books/troubleshooting-sql-server-a-guide-for-the-accidental-dba/"><span style="font-family: Calibri; font-size: small;">Troubleshooting SQL Server: A guide for the Accidental DBA</span></a><span style="font-size: small;"><span style="font-family: Calibri;">" will be at the PASS Summit this year.<span style="mso-spacerun: yes;">  </span>Jonathan Kehayias is well known as one of the best all-around SQL Server Professionals out there and any publication is always valued.<span style="mso-spacerun: yes;">  </span>This book is composed of some of the most common problems and real-life experiences that go into resolving them.<span style="mso-spacerun: yes;">  E</span>ven the thought of the caliber of the names on this book putting on paper all they have in steps to resolving some of the worst problems out there, holds a lot of value that can prove, priceless.<span style="mso-spacerun: yes;">  </span>It gets better.<span style="mso-spacerun: yes;">  </span>Gail Shaw has also contributed as the editor and contributor on this book.<span style="mso-spacerun: yes;">  </span>The addition of Gail in this book rounds it out as, in my opinion, one of the best DBA books that you can have on your shelf.<span style="mso-spacerun: yes;">  One that you can turn to in any event you are in need of determining resolutions to many problems that may happen with SQL Server.</span></span></span>
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -42,7 +42,7 @@ categories:
 </p>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
-  <span style="font-family: Calibri; font-size: small;">Read Chapter 1 “</span><a href="http://www.simple-talk.com/sql/performance/a-performance-troubleshooting-methodology-for-sql-server/"><span style="font-family: Calibri; font-size: small;">A Performance Troubleshooting Methodology for SQL Server</span></a><span style="font-size: small;"><span style="font-family: Calibri;">”.<span style="mso-spacerun: yes;">  </span>This first chapter sets you up for the remaining chapters that cover all of the most common problems that you may run into.</span></span>
+  <span style="font-family: Calibri; font-size: small;">Read Chapter 1 "</span><a href="http://www.simple-talk.com/sql/performance/a-performance-troubleshooting-methodology-for-sql-server/"><span style="font-family: Calibri; font-size: small;">A Performance Troubleshooting Methodology for SQL Server</span></a><span style="font-size: small;"><span style="font-family: Calibri;">".<span style="mso-spacerun: yes;">  </span>This first chapter sets you up for the remaining chapters that cover all of the most common problems that you may run into.</span></span>
 </p>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
@@ -54,7 +54,7 @@ categories:
     </div>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
-      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Memory mismanagement – the advent of 64-bit SQL Server removes the memory allocation “shackles” placed on its 32-bit predecessors, but issues arising from incorrect memory configuration are still common </span>
+      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Memory mismanagement – the advent of 64-bit SQL Server removes the memory allocation "shackles" placed on its 32-bit predecessors, but issues arising from incorrect memory configuration are still common </span>
     </div>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
@@ -74,7 +74,7 @@ categories:
     </div>
 
   * <div class="MsoNormal" style="text-align: justify; line-height: normal; text-indent: -0.25in; margin: 0in 0in 10pt 37.25pt; background: white; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l0 level1 lfo1; tab-stops: list .5in;">
-      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Accidentally-lost data – “oops, wrong database!” Let's hope you've got backups!</span>
+      <span style="font-family: &amp;quot; color: black; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';">Accidentally-lost data – "oops, wrong database!" Let's hope you've got backups!</span>
     </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

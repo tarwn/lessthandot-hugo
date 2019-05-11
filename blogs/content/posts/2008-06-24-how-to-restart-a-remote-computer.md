@@ -21,7 +21,7 @@ That will restart your computer
 
 Here is the basic usage of the shutdown command 
 
-Usage: shutdown \[-i -l -s -r -a\] \[-f\] \[-m \computername\] \[-t xx\] \[-c “comment”\] \[-d up:xx:yy\] 
+Usage: shutdown \[-i -l -s -r -a\] \[-f\] \[-m \computername\] \[-t xx\] \[-c "comment"\] \[-d up:xx:yy\] 
 
 No args Display this message (same as -?)
   
@@ -39,7 +39,7 @@ No args Display this message (same as -?)
   
 -t xx Set timeout for shutdown to xx seconds
   
--c “comment” Shutdown comment (maximum of 127 characters)
+-c "comment" Shutdown comment (maximum of 127 characters)
   
 -f Forces running applications to close without warning
   

@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Fact: every SQL Server database has an “owner”. You can check the owner of a database by running this query: 
+Fact: every SQL Server database has an "owner". You can check the owner of a database by running this query: 
 
 ```sql
 SELECT NAME, SUSER_SNAME(owner_sid) 
@@ -37,7 +37,7 @@ When you log into SQL Server Management Studio, right-click the database, and se
   <a href="/wp-content/uploads/users/grrlgeek/DBOwnerError.JPG?mtime=1296767797"><img alt="" src="/wp-content/uploads/users/grrlgeek/DBOwnerError.JPG?mtime=1296767797" width="626" height="198" /></a>
 </div>
 
-Without a database owner, you can't view the database properties. You may run into issues executing sp_helpdb. You may get an error using “EXECUTE AS OWNER”. How do you fix this? 
+Without a database owner, you can't view the database properties. You may run into issues executing sp_helpdb. You may get an error using "EXECUTE AS OWNER". How do you fix this? 
 
 **The Old Way: sp_changedbowner** 
 
@@ -61,7 +61,7 @@ The BOL syntax is:
     | XML SCHEMA COLLECTION<br />
     }`
 
-So, to use this: My “class\_type” is DATABASE, my “entity\_name” is the database name, and my “principal name” is my login. My complete statement looks like this:
+So, to use this: My "class\_type" is DATABASE, my "entity\_name" is the database name, and my "principal name" is my login. My complete statement looks like this:
 
 ```sql
 ALTER AUTHORIZATION ON DATABASE::AdventureWorks TO grrlgeek

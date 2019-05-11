@@ -27,7 +27,7 @@ To access this property go to the Report properties. Choose Description.
   <img src="/wp-content/uploads/users/grrlgeek/Description 1.png?mtime=1359727836" alt="" width="288" height="403" />
 </p>
 
-**Example**: I have a report that shows sales per year by product category. I've given my report the description, “Sales by category, summed by year and month.”
+**Example**: I have a report that shows sales per year by product category. I've given my report the description, "Sales by category, summed by year and month."
 
 After I deploy the report, I can see the report description underneath the title in Report Manager.
 

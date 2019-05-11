@@ -25,13 +25,13 @@ tags:
 
 Microsoft Corp. today provided the first look at the next version of its developer tools and platform, which will be named Visual Studio 2010 and the .NET Framework 4.0. Microsoft described the next release through the following five focus areas: riding the next-generation platform wave, inspiring developer delight, powering breakthrough departmental applications, enabling emerging trends such as cloud computing, and democratizing application life-cycle management (ALM).
 
-Today's announcement included an in-depth look at how Visual Studio Team System (VSTS) 2010 (code-named “Rosario”) will help democratize ALM with a unique solution that brings all the members of a development organization into the application development life cycle, and removes many of the existing barriers to integration. Additional details on the other focus areas will be disclosed over the product development cycle.
+Today's announcement included an in-depth look at how Visual Studio Team System (VSTS) 2010 (code-named "Rosario") will help democratize ALM with a unique solution that brings all the members of a development organization into the application development life cycle, and removes many of the existing barriers to integration. Additional details on the other focus areas will be disclosed over the product development cycle.
 
 Some details:
   
 **Modeling tools.**
    
-With VSTS 2010 Architecture, Microsoft will enable both technical and nontechnical users to create and use models to collaborate and to define business and system functionality graphically. The new version supports both Unified Modeling Language and Domain Specific Language support, so development organizations will have the right tool for right job. The new modeling capabilities in VSTS 2010 are a core part of the larger Microsoft modeling platform, which will also include the “Oslo” repository, tools and language.
+With VSTS 2010 Architecture, Microsoft will enable both technical and nontechnical users to create and use models to collaborate and to define business and system functionality graphically. The new version supports both Unified Modeling Language and Domain Specific Language support, so development organizations will have the right tool for right job. The new modeling capabilities in VSTS 2010 are a core part of the larger Microsoft modeling platform, which will also include the "Oslo" repository, tools and language.
 
 **Improved efficiency throughout the test cycle.** With VSTS 2010, Microsoft has made a significant investment in testing features and dramatically simplifying the tools required to integrate testing across the life cycle. New features include the ability to eliminate nonreproducible bugs, fast setup and deployment of tests to ensure the highest degree of completeness of test, focused test planning and progress tracking, and ensuring that all code changes are properly tested.
 

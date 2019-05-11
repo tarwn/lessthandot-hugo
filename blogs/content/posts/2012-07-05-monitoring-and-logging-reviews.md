@@ -20,12 +20,12 @@ Keep in mind, I have extremely high hopes for these types of services, due to my
 
 In any case, let's see what we're going to be looking at:
 
-  * <a href="http://www.loggly.com/" title="Visit Loggly" target="_blank">Loggly</a> – “It's fast, fun and easy to use”
-  * <a href="http://www.datadoghq.com/" title="Visit DataDog" target="_blank">DataDog</a> – “On a mission to bring sanity to IT Management”
-  * <a href="https://www.splunkstorm.com/" title="Visit Splunk Storm" target="_blank">Splunk Storm</a> – “Your data has the answers, we help you find them.”
-  * <a href="http://www.sumologic.com/" title="Visit Sumologic" target="_blank">Sumo Logic</a> – “Make Your Applications Run Longer & Stronger”
-  * <a href="http://www.logentries.com/" title="Visit logentries" target="_blank">logentries</a> – “We make your life easier”
-  * <a href="https://papertrailapp.com/" title="Visit papertrail" target="_blank">papertrail</a> – “Get back to work.”
+  * <a href="http://www.loggly.com/" title="Visit Loggly" target="_blank">Loggly</a> – "It's fast, fun and easy to use"
+  * <a href="http://www.datadoghq.com/" title="Visit DataDog" target="_blank">DataDog</a> – "On a mission to bring sanity to IT Management"
+  * <a href="https://www.splunkstorm.com/" title="Visit Splunk Storm" target="_blank">Splunk Storm</a> – "Your data has the answers, we help you find them."
+  * <a href="http://www.sumologic.com/" title="Visit Sumologic" target="_blank">Sumo Logic</a> – "Make Your Applications Run Longer & Stronger"
+  * <a href="http://www.logentries.com/" title="Visit logentries" target="_blank">logentries</a> – "We make your life easier"
+  * <a href="https://papertrailapp.com/" title="Visit papertrail" target="_blank">papertrail</a> – "Get back to work."
 A few of these were non-starters, but I'll record what I know about them. The rest I'll present in similar formats for comparison.
 
 ## Loggly
@@ -74,7 +74,7 @@ They did email me a few days later to ask if I had any difficulties getting sign
 
 ### Highlights: 
 
-**Input Support:** HTTP with raw text, syslog, netcat, and “any other application that transmits via TCP or UDP”
+**Input Support:** HTTP with raw text, syslog, netcat, and "any other application that transmits via TCP or UDP"
   
 **Ease of Setup:** Easy enough. API tokens are already available for use but error reporting on individual HTTP posts can sometimes be useless (501s for instance)
   
@@ -86,7 +86,7 @@ They did email me a few days later to ask if I had any difficulties getting sign
 
 I have been using Splunk Storm for longer than any of the other services. The service itself is very promising. It offers a really good search capability with a great drilldown capability and setup was easy. Often it will give mini-help boxes when typing terms into the search and suggest similar searches I have done recently, details on commands, and suggestions for commands I may want to use.
 
-Unfortunately they are using the bad definition of “beta”, instead of the “it's relatively stable but not feature complete” definition. There have been at least two occurrences where I was locked out of the system while they performed maintenance, on one occasion an update actually locked me out of the main account for 4-5 days (with a constant friendly reminder that service would be back momentarily). Documentation links are present throughout the application but most of them lead to 404 pages. The fact that charts throw away portions of the dataset when you ask them to chart too much can be incredibly frustrating (when you figure out what it's doing). 
+Unfortunately they are using the bad definition of "beta", instead of the "it's relatively stable but not feature complete" definition. There have been at least two occurrences where I was locked out of the system while they performed maintenance, on one occasion an update actually locked me out of the main account for 4-5 days (with a constant friendly reminder that service would be back momentarily). Documentation links are present throughout the application but most of them lead to 404 pages. The fact that charts throw away portions of the dataset when you ask them to chart too much can be incredibly frustrating (when you figure out what it's doing). 
 
 After the initial exposure I started to find that I was spending more and more time in the splunk documentation (once you figure out how to get there) simply trying to learn their command-line language because the interface only gets you so far. The power of the tool is impressive, but the level of effort I would have to spend learning how to use their tool is a common annoyance that reminds me of Loggly's command-line tool. I've also seen more of their 404 narwhal page then I ever expected to see, as apparently any page that is left open for too long refreshes and drops you there (session time out perhaps?).
 
@@ -94,7 +94,7 @@ After the initial exposure I started to find that I was spending more and more t
 
 Clone a copy of the sample application from [tarwn/InstrumentationSampleCode on github][3]. Go to the <a href="http://www.splunkstorm.com" target="_blank">splunkstorm.com website</a> and sign up for an account (all accounts are free while it is in beta).
 
-In the inputs section of the project there is a tab called “API” that has the access token and project id. Add or edit the _sensitive.config_ file at the root of the .Net solution, substituting your values where appropriate:
+In the inputs section of the project there is a tab called "API" that has the access token and project id. Add or edit the _sensitive.config_ file at the root of the .Net solution, substituting your values where appropriate:
 
 **sensitive.config**
 
@@ -109,7 +109,7 @@ Load up the sample app, click some buttons, then switch over to Splunk Storm and
 
 ## Sumo Logic (Could Not Review)
 
-<a href="http://www.sumologic.com" title="Visit Sumo Logic" target="_blank">Sumo Logic</a> claims to provide “the first cloud-based log management and analytics solution”. The demo video shows a product that has similar capabilities to Splunk in the search area with additions of automatic pattern detection and monitoring. Initially I did not demo the product because they don't offer unattended demos, you have to sign up and wait for someone to contact you to hold your hand while you demo their service. Later, as I was reading their FAQ, I found that they do not offer an API, accepting data only via collectors that are installed on your local system. The collector idea isn't bad, manufacturing historians have been doing this for a couple decades after all, but without demoing I couldn't tell how easy or hard it would be to install them and automate that installation for those of us with large numbers of servers or elastic infrastructure.
+<a href="http://www.sumologic.com" title="Visit Sumo Logic" target="_blank">Sumo Logic</a> claims to provide "the first cloud-based log management and analytics solution". The demo video shows a product that has similar capabilities to Splunk in the search area with additions of automatic pattern detection and monitoring. Initially I did not demo the product because they don't offer unattended demos, you have to sign up and wait for someone to contact you to hold your hand while you demo their service. Later, as I was reading their FAQ, I found that they do not offer an API, accepting data only via collectors that are installed on your local system. The collector idea isn't bad, manufacturing historians have been doing this for a couple decades after all, but without demoing I couldn't tell how easy or hard it would be to install them and automate that installation for those of us with large numbers of servers or elastic infrastructure.
 
 ## logentries
 
@@ -137,7 +137,7 @@ With one exception, if I was looking for a log monitoring and alerting system I 
 
 Clone a copy of the sample application from [tarwn/InstrumentationSampleCode on github][3]. Go to the <a href="http://www.logentries.com" target="_blank">logentries.com website</a> and sign up for an account (there is a free account with limited storage).
 
-Add a new Host entry, then inside that host add a new Log with a type of “API Library/HTML”. Add or edit the _sensitive.config_ file at the root of the .Net solution, substituting your values where appropriate:
+Add a new Host entry, then inside that host add a new Log with a type of "API Library/HTML". Add or edit the _sensitive.config_ file at the root of the .Net solution, substituting your values where appropriate:
 
 **sensitive.config**
 

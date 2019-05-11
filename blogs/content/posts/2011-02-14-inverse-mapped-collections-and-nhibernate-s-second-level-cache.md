@@ -45,7 +45,7 @@ class IngredientUseMap : ClassMap<IngredientUse> {
 }
 ```
 
-This is pretty straightforward, but it does do a little bit of magic behind the scenes. For example, even though the IngredientUse entity is not referencing the Recipe, NHibernate will expect a column called “Recipe_id” on the IngredientUse table in the database that it can use to maintain the relationship between the two entities. 
+This is pretty straightforward, but it does do a little bit of magic behind the scenes. For example, even though the IngredientUse entity is not referencing the Recipe, NHibernate will expect a column called "Recipe_id" on the IngredientUse table in the database that it can use to maintain the relationship between the two entities. 
 
 When using an inverse relationship, a few changes are needed. First, you map the collection (from the Recipe's perspective) using the inverse attribute. Also, you need to reference the Recipe from the Ingredient (and the associated mapping). So the inverse mappings look like this:
 
@@ -96,9 +96,9 @@ void Save (IngredientUse ingredientUse, long recipeId) {
 }
 ```
 
-The difference between Load and Get in this case is worth noting. Load will NEVER return null, it will get your entity or throw an exception. Get on the other hand can return null. So when you use Load, you are essentially telling NHibernate “this entity IS in the database, trust me”. That enables NHibernate to use a proxy instead of going out to make sure your entity actually exists. And since we only need the Id, that proxy will never need to go out and load any of the actual object data. I found this especially useful when saving an IngredientUse at the end of an HTTP request.
+The difference between Load and Get in this case is worth noting. Load will NEVER return null, it will get your entity or throw an exception. Get on the other hand can return null. So when you use Load, you are essentially telling NHibernate "this entity IS in the database, trust me". That enables NHibernate to use a proxy instead of going out to make sure your entity actually exists. And since we only need the Id, that proxy will never need to go out and load any of the actual object data. I found this especially useful when saving an IngredientUse at the end of an HTTP request.
 
-A perfectly logical side effect (that I didn't consider) to this change is the presence of stale results in NHibernate's second level cache. Because the Recipe's associated collections are cached in relation to the Recipe, and the Recipe is never saved, the collection does not get updated in the cache. I thought I was stuck for a bit, until I found the Session Factory's [“EvictCollection”][1] method. This is one of those “use at your own risk” methods, so consider yourself warned. If abused, this could get pretty ugly (leading to a situation where you'd be better off not caching your collections at all). However, I've got an app where I expect far more reads than writes, and I don't think I'll be using it all over the place, so I think this method can be leveraged to solve my problem.
+A perfectly logical side effect (that I didn't consider) to this change is the presence of stale results in NHibernate's second level cache. Because the Recipe's associated collections are cached in relation to the Recipe, and the Recipe is never saved, the collection does not get updated in the cache. I thought I was stuck for a bit, until I found the Session Factory's ["EvictCollection"][1] method. This is one of those "use at your own risk" methods, so consider yourself warned. If abused, this could get pretty ugly (leading to a situation where you'd be better off not caching your collections at all). However, I've got an app where I expect far more reads than writes, and I don't think I'll be using it all over the place, so I think this method can be leveraged to solve my problem.
 
 The EvictCollection method's overload that we are interested in takes a string representing the fully qualified collection name, and an object representing the Id of the **parent object** (in this case the Recipe). So the call we need to make looks something like this:
 

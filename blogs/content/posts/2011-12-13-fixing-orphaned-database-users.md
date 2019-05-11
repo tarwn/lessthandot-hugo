@@ -4,10 +4,10 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2011-12-13T11:40:00+00:00
 ID: 1438
-excerpt: 'This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic.  This month, my good friend Allen White (Blog | Twitter) is hosting the challenge.  The topic he has chosen is, “What T-SQL tricks do you use today&hellip;'
+excerpt: 'This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic.  This month, my good friend Allen White (Blog | Twitter) is hosting the challenge.  The topic he has chosen is, "What T-SQL tricks do you use today&hellip;'
 url: /index.php/datamgmt/dbprogramming/fixing-orphaned-database-users/
 aliases: 
-  - /index.php/DataMgmt/DBAdmin/fixing-orphaned-database-users/
+  - /index.php/datamgmt/dbadmin/fixing-orphaned-database-users/
 views:
   - 64275
 rp4wp_auto_linked:
@@ -23,7 +23,7 @@ categories:
   <a href="http://sqlblog.com/blogs/allen_white/archive/2011/12/05/t-sql-tuesday-025-invitation-to-share-your-tricks.aspx"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1323611029" width="154" height="154" align="left" /></a>
 </div>
 
-This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic. This month, my good friend Allen White ([Blog][1] | [Twitter][2]) is hosting the challenge. The topic he has chosen is, “What T-SQL tricks do you use today to make your job easier?” I enjoy this topic and understand why he chose it. As our experience grows, we compose dozens if not hundreds of methods in order to get our job done quickly or simply. We've all been faced with challenges and found the trick to resolving them given our own unique installations of SQL Server. This is a great way to get a compilation of everyone's tricks and see how we may share them with the community. 
+This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic. This month, my good friend Allen White ([Blog][1] | [Twitter][2]) is hosting the challenge. The topic he has chosen is, "What T-SQL tricks do you use today to make your job easier?" I enjoy this topic and understand why he chose it. As our experience grows, we compose dozens if not hundreds of methods in order to get our job done quickly or simply. We've all been faced with challenges and found the trick to resolving them given our own unique installations of SQL Server. This is a great way to get a compilation of everyone's tricks and see how we may share them with the community. 
 
 The orphaned user script can be used to resolve database user disconnections from SQL Server logins after a restore is performed.  There are other applications for this script but the restore problem with user to logins is the one that will be focused on today.
 
@@ -33,7 +33,7 @@ A common misconception is that database users and logins are the same objects. 
 
  
 
-In SQL Server 2012 and the AdventureWorks database, right click the SecurityàUsers nodes and click New User...  Drop the list down and notice the “SQL user without login”.  If this choice is utilized, there will be an orphaned database login, since there is no valid SQL login tied to it.
+In SQL Server 2012 and the AdventureWorks database, right click the SecurityàUsers nodes and click New User...  Drop the list down and notice the "SQL user without login".  If this choice is utilized, there will be an orphaned database login, since there is no valid SQL login tied to it.
 
  
 

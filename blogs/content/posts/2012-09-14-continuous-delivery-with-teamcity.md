@@ -124,7 +124,7 @@ Then the last step is to define the build parameters. TeamCity automatically det
   <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_07.png" alt="TeamCity - Build Parameters" /><br /> Team City – Build Parameters
 </div>
 
-Once I have finished setting up this build, I can return to the main dashboard and run it on demand by pressing the “Run” button.
+Once I have finished setting up this build, I can return to the main dashboard and run it on demand by pressing the "Run" button.
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_08_sm.png" alt="TeamCity - Dashboard" /><br /> </a><br /> Team City – Dashboard
@@ -152,7 +152,7 @@ Next I add a build trigger to run after a successful build of the CI stage and f
   <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_11.png" alt="TeamCity - Build Parameters" /><br /> Team City – Build Parameters
 </div>
 
-And the last step is to return to the project screen and define the Artifacts for this stage as “PriorArtifacts/*” so it will pass on all of the artifacts it pulled in from the prior stage.
+And the last step is to return to the project screen and define the Artifacts for this stage as "PriorArtifacts/*" so it will pass on all of the artifacts it pulled in from the prior stage.
 
 Running this build reminded me that Firefox has a nasty habit of downloading updates when you least want them, as the interface tests started timing out because they couldn't quit. A quick tweak to the Firefox settings and I have a successful interface test step running, with the test results showing in the summary just like the CI stage.
 
@@ -182,7 +182,7 @@ Those 5 builds compromise the core of the pipeline and show up in the TeamCity d
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_13_sm.png" alt="TeamCity - Full Dashboard" /><br /> </a><br /> Team City – Full Dashboard
 </div>
 
-To get to the build chains view, go into the Project page and click the last tab to the right, titled “Build Chains”.
+To get to the build chains view, go into the Project page and click the last tab to the right, titled "Build Chains".
 
 <div style="text-align: center; font-size: 90%; color: #666666;">
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14.png" target="_blank"><br /> <img style="border: 1px solid #999999" src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/TeamCity_14_sm.png" alt="TeamCity - Build Chains" /><br /> </a><br /> Team City – Build Chains

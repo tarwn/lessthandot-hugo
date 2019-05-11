@@ -32,7 +32,7 @@ I think there are quite a few reasons we should engage in handling something oth
 
  
 
-**Inform calling process of situation: ** I'm going to pretend, just for a short moment, that I'm a developer.  Let's say I'm tasked with the job of writing some new functionality in an existing system.  I want to be efficient and reuse some of the existing stored procedures already written in the system.  So I start looking at some of the logic with the procs and I realize that I can't tell what the business rules are for a given process because there isn't any controls, error handling, that helps me understand what is acceptable as far as data values are concerned.  So the calling process that I would be writing would only know about the happy path and not the so called “roads less traveled”.
+**Inform calling process of situation: ** I'm going to pretend, just for a short moment, that I'm a developer.  Let's say I'm tasked with the job of writing some new functionality in an existing system.  I want to be efficient and reuse some of the existing stored procedures already written in the system.  So I start looking at some of the logic with the procs and I realize that I can't tell what the business rules are for a given process because there isn't any controls, error handling, that helps me understand what is acceptable as far as data values are concerned.  So the calling process that I would be writing would only know about the happy path and not the so called "roads less traveled".
 
  
 
@@ -60,7 +60,7 @@ If these two UPDATE statements are run without any transaction or error handling
 
  
 
-**Alert user there is a problem:**  One thing that I think unnerves a user more than anything is to receive an error that is totally cryptic to them.  And I can't think of any couple of errors that sounds worse than “a constraint has been violated” or how about the ever popular, “you've been chosen as a deadlock victim”.  Sounds pretty impressive and could only end in disaster for the user.  They have no idea whether or not what they just did became permanent in the database or not.  With providing error logic in cases like this will give the user some idea of what just happened and what they need to do to correct the situation.  They would probably much rather see something like, “The customer you are trying to add already exists” or “System error – please resubmit your change”.  These are more descriptive and give the user answer to what happened and to what their next steps are going to be in order to correct the situation.
+**Alert user there is a problem:**  One thing that I think unnerves a user more than anything is to receive an error that is totally cryptic to them.  And I can't think of any couple of errors that sounds worse than "a constraint has been violated" or how about the ever popular, "you've been chosen as a deadlock victim".  Sounds pretty impressive and could only end in disaster for the user.  They have no idea whether or not what they just did became permanent in the database or not.  With providing error logic in cases like this will give the user some idea of what just happened and what they need to do to correct the situation.  They would probably much rather see something like, "The customer you are trying to add already exists" or "System error – please resubmit your change".  These are more descriptive and give the user answer to what happened and to what their next steps are going to be in order to correct the situation.
 
  
 
@@ -90,7 +90,7 @@ There are a lot of constructs in SQL that help to assist us with handing errors.
 
  
 
-To see more details on these error handling techniques you can catch my new presentation on error handling titled “We ain't affraid of no errors”, at the St. Louis SQL Server User Group meeting on June 14<sup>th</sup>, 2011 and after the presentation my slide deck will be available at [http://www.stlssug.org][1] Hope to see you there!
+To see more details on these error handling techniques you can catch my new presentation on error handling titled "We ain't affraid of no errors", at the St. Louis SQL Server User Group meeting on June 14<sup>th</sup>, 2011 and after the presentation my slide deck will be available at [http://www.stlssug.org][1] Hope to see you there!
 
  
 

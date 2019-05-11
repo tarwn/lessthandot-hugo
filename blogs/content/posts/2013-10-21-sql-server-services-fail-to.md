@@ -70,7 +70,7 @@ Using SQLCMD, query with dedicated admin connection, parameter –A, so we can l
 
 ![][5]
 
-As shown above, the configured maximum memory setting is only set to 128MB.  After reviewing, it came to light that this setting was intended to be 12800, or 12.5GB.  The _“typo”_ was made and the individual that made the change assumed SQL Server required a restart from that change.  Note, the restart is not required to change max memory settings.  It does have problematic performance impacts while memory is managed from the change, but a restart is not required.
+As shown above, the configured maximum memory setting is only set to 128MB.  After reviewing, it came to light that this setting was intended to be 12800, or 12.5GB.  The _"typo"_ was made and the individual that made the change assumed SQL Server required a restart from that change.  Note, the restart is not required to change max memory settings.  It does have problematic performance impacts while memory is managed from the change, but a restart is not required.
 
 When the SQL Server was restarted, the startup process was found, as shown from the ERRORLOG above, to not have enough memory to complete the allocation process and thus, resulting in a FAIL\_PAGE\_ALLOCATION.
 

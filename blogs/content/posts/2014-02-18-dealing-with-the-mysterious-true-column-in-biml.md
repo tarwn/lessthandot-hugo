@@ -1,5 +1,5 @@
 ---
-title: Dealing with the mysterious “True” column in BIML
+title: Dealing with the mysterious "True" column in BIML
 author: Koen Verbeeck
 type: post
 date: 2014-02-18T14:41:34+00:00

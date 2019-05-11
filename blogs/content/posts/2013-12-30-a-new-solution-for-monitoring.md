@@ -15,7 +15,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-Monitoring a SQL Server environment is one of the many tasks a DBA should be performing on a regular basis. However, you need to know more than “Is my SQL Server still running? Did my backups complete?” You should know what your average performance is over time – baselines. You should be able to get notifications if there is a long-running query, or if a disk is running low on space, or if there is blocking.
+Monitoring a SQL Server environment is one of the many tasks a DBA should be performing on a regular basis. However, you need to know more than "Is my SQL Server still running? Did my backups complete?" You should know what your average performance is over time – baselines. You should be able to get notifications if there is a long-running query, or if a disk is running low on space, or if there is blocking.
 
 There are a lot of data points on any one SQL Server to monitor, and writing the tools to do so is time-consuming, tedious – and unnecessary. Lots of companies have done the work for you – no need to reinvent the wheel.
 

@@ -24,7 +24,7 @@ I wrote this short CLR split function awhile back based on a few other articles 
 
 Let's get the basics out of the way on SQL CLR. SQL CLR is only good once it's in memory. The CLR function split basically won over the T-SQL split functions after it was cached. This is a critical variable to consider when thinking CLR vs. T-SQL options on coding. If you are doing heavy manipulation of data and heavy math, CLR will typically help you, but you should be very careful with CLR and memory management. You can run your server resources out and literally stop functionality. I highly recommend reading MrDenny's blog on CLR [here][1]. Denny touches on important topics on when to use CLR and why you shouldn't. After that, look into how SQL Server 32bit, 32bit with AWE and 64bit versions handle memory. Each handles memory differently. AWE enalbed instances will probably be the one that will cause you more headaches then the rest. I had severe memory issues a few months ago on a production database server that forced restarts nightly until I fixed the problem. I analyzed the problem and it came to be several factors that caused it and SQL CLR memory was one of those factors. Here is my chance to thank mrdenny and ptheriault again for the assisatnce on that strange problem.
 
-I went out and google'd “fast split function t-sql”. Found a few and tested them against the CLR split method. I found a dozen or so split functions that looked good. I still went with a numbers table one after testing them out next to each other. Here is one of the functions I used. If you have a better one, post it in the comments and I can edit the post. 
+I went out and google'd "fast split function t-sql". Found a few and tested them against the CLR split method. I found a dozen or so split functions that looked good. I still went with a numbers table one after testing them out next to each other. Here is one of the functions I used. If you have a better one, post it in the comments and I can edit the post. 
 
 ```sql
 ALTER FUNCTION [dbo].[Split] ( 
@@ -75,7 +75,7 @@ public partial class UserDefinedFunctions
     }
 };
 ```
-I loaded a text file with a huge amount of delimited data to really get a gauge on time this would take. The string is basically, “data%data%data%data%data” and on. Around 600 indexes. I restarted my local instance of SQL Server 2005 that I did these on to ensure you can see CLR before cache and after. 
+I loaded a text file with a huge amount of delimited data to really get a gauge on time this would take. The string is basically, "data%data%data%data%data" and on. Around 600 indexes. I restarted my local instance of SQL Server 2005 that I did these on to ensure you can see CLR before cache and after. 
 
 So on a fresh restart you can see by checking type MEMORYCLERK\_SQLCLR from dm\_os\_memory\_clerks that we are clear
 

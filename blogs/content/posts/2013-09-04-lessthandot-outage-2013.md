@@ -23,7 +23,7 @@ Over the past couple weeks you may have noticed that LessThanDot was completely 
 
 Cue jokes about how a group with professional developers, architects, project managers, managers, consultants, etc didn't have a DR plan.
 
-Rest assured, this site means a lot to us (the founders), us (the people who blog here), and us (the people who get information or look up resources here). Along with updates to the “holy crap where did the site go” plan, this may be the jab we need to get back to some other feature-y changes we had lost steam on.
+Rest assured, this site means a lot to us (the founders), us (the people who blog here), and us (the people who get information or look up resources here). Along with updates to the "holy crap where did the site go" plan, this may be the jab we need to get back to some other feature-y changes we had lost steam on.
 
 During the outage, I kept a temporary Azure website up with some information about the outage and a link to the monitoring (that I finally implemented an hour into the outage, oh well). We'll have additional details and reactions posted in the blogs about the outage in the near future, but here is the content of that post for those that had not yet had a chance to see it:
 
@@ -63,7 +63,7 @@ Good news, our host has informed us they recovered some of their servers! Well, 
 
 ## Updated, No SLA, No ETA, 2013-09-03 {#updated}
 
-After prodding them again, our 'host' has admitted they have no ETA on getting the remaining servers (ours included). We have also noticed that dedicated servers are specifically excluded from the SLA, so in essence the policy of our host is “downtime? sucks to be you”. We also found out that we forgot to finish setting up backups when we set up the server with them, so our most recent backup is March. They have told us our options are to setup a new server from our backups or “wait indefinitely” for our server to be located and brought online. 
+After prodding them again, our 'host' has admitted they have no ETA on getting the remaining servers (ours included). We have also noticed that dedicated servers are specifically excluded from the SLA, so in essence the policy of our host is "downtime? sucks to be you". We also found out that we forgot to finish setting up backups when we set up the server with them, so our most recent backup is March. They have told us our options are to setup a new server from our backups or "wait indefinitely" for our server to be located and brought online. 
 
 We will likely have to go the new server setup route, the next question we will have to consider is whether to do it with this host (who is paid through the end of the year), or find another and raise funds early for another year. 
 

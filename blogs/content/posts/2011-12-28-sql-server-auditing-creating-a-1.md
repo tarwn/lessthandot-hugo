@@ -88,7 +88,7 @@ I receive the following results:
   <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650" width="1099" height="130" /></a>
 </div>
 
-_One thing to note on the output is under “audit\_file\_offset”. All three values are 6144, which indicates that the three statements where executed in the same query._
+_One thing to note on the output is under "audit\_file\_offset". All three values are 6144, which indicates that the three statements where executed in the same query._
 
 As with the Server Audits, use the following query to retrieve the audit information as it is displayed above:
 

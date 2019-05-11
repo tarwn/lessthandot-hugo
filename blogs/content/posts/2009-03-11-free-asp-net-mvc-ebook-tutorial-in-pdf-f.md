@@ -18,7 +18,7 @@ tags:
   - mvc
 
 ---
-Scott Guthrie (AKA The man!) has posted on his blog that you can download a free ASP.NET MVC eBook Tutorial in pdf format. The book is licensed under a “Creative Commons Attribution No Derivatives” license – this means you can share, distribute, print, or hand it out to anyone.
+Scott Guthrie (AKA The man!) has posted on his blog that you can download a free ASP.NET MVC eBook Tutorial in pdf format. The book is licensed under a "Creative Commons Attribution No Derivatives" license – this means you can share, distribute, print, or hand it out to anyone.
 
 This is what is covered in the book
 

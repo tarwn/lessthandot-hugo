@@ -26,11 +26,11 @@ The book covers four main areas – the basics of failover clustering, clusterin
 
 ### High Availability 101
 
-The basics of high availability are covered in the first chapter. Why do you need HA? What HA methods and technologies are available? Failover clustering, log shipping, database mirroring, and replication are discussed here, with great illustrations. It's important to understand the differences between the methods. A comparison of these methods can help you determine, “Is this right for my company, my application, and my budget?”
+The basics of high availability are covered in the first chapter. Why do you need HA? What HA methods and technologies are available? Failover clustering, log shipping, database mirroring, and replication are discussed here, with great illustrations. It's important to understand the differences between the methods. A comparison of these methods can help you determine, "Is this right for my company, my application, and my budget?"
 
 ### Clustering Windows Server
 
-The next section is all about clustering Windows Server. If you're a DBA thinking, “I don't worry about that, I let my server administration team take care of it”, you have the wrong attitude. You will not succeed in today's technological landscape with a narrow focus. You need to have at least a basic understanding of how all the parts of your applications, your servers, and your network work together. This is even more important because SQL Server failover clustering is entirely dependent on Windows Server clustering. If you don't cluster Windows, you can't cluster SQL Server.
+The next section is all about clustering Windows Server. If you're a DBA thinking, "I don't worry about that, I let my server administration team take care of it", you have the wrong attitude. You will not succeed in today's technological landscape with a narrow focus. You need to have at least a basic understanding of how all the parts of your applications, your servers, and your network work together. This is even more important because SQL Server failover clustering is entirely dependent on Windows Server clustering. If you don't cluster Windows, you can't cluster SQL Server.
 
 Allan takes a comprehensive look at what is involved in server clustering. You need to choose supported hardware. You have to set up accounts. The networking components must be configured. The concept of quorum is explained – and Windows Server 2008 includes new models, so even if you're familiar with disk or majority node set, there are new things to learn.
 

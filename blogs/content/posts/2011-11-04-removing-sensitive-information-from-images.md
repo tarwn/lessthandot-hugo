@@ -18,7 +18,7 @@ categories:
 ---
 One of the things that is fairly important when writing articles, blogs, whitepapers or even authoring books is ensuring you do not share any personal information in your screen captures.  This is even more important when you are using company property to make your screen captures.
 
-Now, on some occasions, leaving connections to SQL Server or Security context is ok.  For example, I've used Fred and God commonly as SQL Authenticated Logins to my instances.  Those two accounts are something I picked and kept to over the years.  This can be done with named instances also.  You can install and name a SQL Server something comical, meaningful or encrypted.  _“Connect to your instance named, SomeCrasyMessedUpMachineHolySmokesSQLIsCool”._
+Now, on some occasions, leaving connections to SQL Server or Security context is ok.  For example, I've used Fred and God commonly as SQL Authenticated Logins to my instances.  Those two accounts are something I picked and kept to over the years.  This can be done with named instances also.  You can install and name a SQL Server something comical, meaningful or encrypted.  _"Connect to your instance named, SomeCrasyMessedUpMachineHolySmokesSQLIsCool"._
 
 But getting back to topic; you really want to make sure you never leave a trace of anything that you do not purposely intend to use, like above.
 

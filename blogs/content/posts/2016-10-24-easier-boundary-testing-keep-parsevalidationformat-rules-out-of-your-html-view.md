@@ -83,7 +83,7 @@ In English, we are exposing the following properties from the underlying OrderLi
   * Total – total for the line that is formatted as a Currency type
   * IsValid – A property that reflects whether all of the inputs have valid values
 
-The “type” objects are used during the read/write pipelines:
+The "type" objects are used during the read/write pipelines:
 
 <div id="attachment_4415" style="width: 510px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2016/02/PresentationModel.png"><img src="/wp-content/uploads/2016/02/PresentationModel.png" alt="Presentation Model - Read/Write Pipelines" width="500" height="220" class="size-full wp-image-4415" srcset="/wp-content/uploads/2016/02/PresentationModel.png 500w, /wp-content/uploads/2016/02/PresentationModel-300x132.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
@@ -96,7 +96,7 @@ The “type” objects are used during the read/write pipelines:
   * On Read: Run the raw Model value through the Formatter to produce output
   * On Write/Input: Run the input through tryParse and then tryValidate (and then custom validation properties), only writing it to the underlying Model property if it passes both steps
 
-Here is what one of those “type” objects looks like as a literal:
+Here is what one of those "type" objects looks like as a literal:
 
 ```javascript
 return {
@@ -141,7 +141,7 @@ Using a knockout extension, we can ensure all writes pass through the parse and 
 
 ## Adding Boundary Tests
 
-So we have two options for boundary testing, we can test each available “type” with some common boundary settings or we can test each PresentationModel's inputs with the defined ones. The intent of the test is to make sure we handle boundaries the way we think we do, so I lean towards the more target “type” tests as getting the most bang for the buck.
+So we have two options for boundary testing, we can test each available "type" with some common boundary settings or we can test each PresentationModel's inputs with the defined ones. The intent of the test is to make sure we handle boundaries the way we think we do, so I lean towards the more target "type" tests as getting the most bang for the buck.
 
 <div id="attachment_4703" style="width: 810px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2016/10/FasterBoundaryTests1.png"><img src="/wp-content/uploads/2016/10/FasterBoundaryTests1.png" alt="Testing Model Inputs" width="800" class="size-full wp-image-4703" srcset="/wp-content/uploads/2016/10/FasterBoundaryTests1.png 943w, /wp-content/uploads/2016/10/FasterBoundaryTests1-300x133.png 300w" sizes="(max-width: 943px) 100vw, 943px" /></a>

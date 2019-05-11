@@ -18,7 +18,7 @@ tags:
   - structuremap
 
 ---
-StructureMap is a Dependency Injection tool written in C# for .NET development. StructureMap is also a generic “Plugin” mechanism for flexible and extensible .NET applications.
+StructureMap is a Dependency Injection tool written in C# for .NET development. StructureMap is also a generic "Plugin" mechanism for flexible and extensible .NET applications.
 
 **The new functionality in StructureMap 2.5:** 
 

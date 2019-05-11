@@ -64,7 +64,7 @@ My build pipeline for this project will be a single CI stage that runs the tests
   </p>
 </div>
 
-This is my “good enough for now” setup. If I run into versioning issues, I can come back and add some backwards compatibility tests between the packages after CI and run the deployments serially instead of in parallel.
+This is my "good enough for now" setup. If I run into versioning issues, I can come back and add some backwards compatibility tests between the packages after CI and run the deployments serially instead of in parallel.
 
 <div id="attachment_8756" style="width: 310px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/DeployScript-300x172.png" alt="Service Fabric Deploy Script" width="300" height="172" class="size-medium wp-image-8756" srcset="/wp-content/uploads/2017/07/DeployScript-300x172.png 300w, /wp-content/uploads/2017/07/DeployScript.png 520w" sizes="(max-width: 300px) 100vw, 300px" />
@@ -82,7 +82,7 @@ The first step is testing the script locally to make sure I know how to use it.
 
 <ol style="padding-left: 40px">
   <li>
-    Right click the Service Fabric project and select “Package”
+    Right click the Service Fabric project and select "Package"
   </li>
   <li>
     Open a powershell console and direct it to the Scripts folder in the Service Fabric project
@@ -98,7 +98,7 @@ I had to do this several times, so I also got to learn how to update versions:
   <li>
     Add UpgradeDeployment to your PublishProfile: <ul style="padding-left: 40px">
       <li>
-        Option 1: Right click in Visual Studio, select Publish, use the link near the bottom to edit your deployment options and then close the dialog, choose “yes” when it asks if you want to save the profile”
+        Option 1: Right click in Visual Studio, select Publish, use the link near the bottom to edit your deployment options and then close the dialog, choose "yes" when it asks if you want to save the profile"
       </li>
       <li>
         Option 2: Open the relevant PublishProfile XML file and add this to the bottom for the default Unmonitored Upgrade settings <pre lang="xml">
@@ -152,7 +152,7 @@ So now we have a working command locally, now we just have to get TeamCity to up
 
 Building the package is straightforward. We just need to build the package in release mode, then configure Archiving to capture the bin/Release folder and PublishProfiles folder.
 
-The Build Step in my “Package Stage” configuration looks like this:
+The Build Step in my "Package Stage" configuration looks like this:
 
 <div id="attachment_8757" style="width: 1034px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/BuildPackageStage-1024x730.png" alt="TeamCity Package Stage" width="1024" height="730" class="size-large wp-image-8757" srcset="/wp-content/uploads/2017/07/BuildPackageStage-1024x730.png 1024w, /wp-content/uploads/2017/07/BuildPackageStage-300x214.png 300w, /wp-content/uploads/2017/07/BuildPackageStage-768x548.png 768w, /wp-content/uploads/2017/07/BuildPackageStage.png 1491w" sizes="(max-width: 1024px) 100vw, 1024px" />
@@ -164,7 +164,7 @@ The Build Step in my “Package Stage” configuration looks like this:
 
 Once I have the package built, I am going to replace the versions with a value that ties to the TeamCity version number.
 
-In the “General” tab in TeamCity, I use the build number token from my CI step as the version for this step:
+In the "General" tab in TeamCity, I use the build number token from my CI step as the version for this step:
 
 <div id="attachment_8758" style="width: 1034px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-1024x51.png" alt="TeamCity Package Build Number" width="1024" height="51" class="size-large wp-image-8758" srcset="/wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-1024x51.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-300x15.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_BuildNumber-768x38.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
@@ -196,7 +196,7 @@ Then in a new build step, I replace the versions in my two manifest files with t
   </p>
 </div>
 
-Finally, I add entries to the “Artifact Paths” back in the “General” tab to zip up the package for use by the next step:
+Finally, I add entries to the "Artifact Paths" back in the "General" tab to zip up the package for use by the next step:
 
 <div id="attachment_8761" style="width: 1034px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-1024x104.png" alt="TeamCity Package Artifacts" width="1024" height="104" class="size-large wp-image-8761" srcset="/wp-content/uploads/2017/07/TeamCity_Package_Artifacts-1024x104.png 1024w, /wp-content/uploads/2017/07/TeamCity_Package_Artifacts-300x30.png 300w, /wp-content/uploads/2017/07/TeamCity_Package_Artifacts-768x78.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
@@ -228,7 +228,7 @@ Running the build, I can verify everything is successful by opening up the archi
 
 ### Deploy
 
-Now that I have a step building the files I need, I'll add a new Build Configuration named “Deploy to Service Fabric”. I'll set Snapshot and Artifact Dependencies to the prior Build Configuration and update the Build Number to use the value from that config (which is in turn using the one from CI).
+Now that I have a step building the files I need, I'll add a new Build Configuration named "Deploy to Service Fabric". I'll set Snapshot and Artifact Dependencies to the prior Build Configuration and update the Build Number to use the value from that config (which is in turn using the one from CI).
 
 <div id="attachment_8764" style="width: 922px" class="wp-caption aligncenter">
   <img src="/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies.png" alt="TeamCity Deploy Dependencies" width="912" height="406" class="size-full wp-image-8764" srcset="/wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies.png 912w, /wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies-300x134.png 300w, /wp-content/uploads/2017/07/TeamCity_Deploy_Dependencies-768x342.png 768w" sizes="(max-width: 912px) 100vw, 912px" />

@@ -24,7 +24,7 @@ The last month has done nothing but solidify the fact that joining BlueMetal was
 
 With the successful move to BlueMetal and the overwhelming excitement that I'm hoping you get from this blog, I'd like everyone to take the points made and use them as part in being a successful consultant.  This directly relates to the reasons I started the successful consulting series.  As we all know, the company we chose to work for can make us that much more successful by standing behind each consultant.  BlueMetal does just that.
 
-Something of a quote I have that says it all: “_Working for BlueMetal is: People, energy, brilliance and exceptionally high-end architecture that leaves you so excited about waking up the next day to get to work, every day is better than the next.”_
+Something of a quote I have that says it all: "_Working for BlueMetal is: People, energy, brilliance and exceptionally high-end architecture that leaves you so excited about waking up the next day to get to work, every day is better than the next."_
 
 [BlueMetal is always looking for the best people that stand out in their fields.][7]
 

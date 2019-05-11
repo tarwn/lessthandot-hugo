@@ -18,7 +18,7 @@ I believe I have discovered a deadlock situation that SQL Server is not able to 
 
 A deadlock is nothing more than mutual blocking. Blocking is when a process is forced to wait for a resource while another process exclusively accesses it (where the exclusivity is managed through locks). Mutual blocking is when both processes have a lock on a resource the other is asking for. Neither can proceed, but neither will release its lock.
 
-Normally, when SQL server detects this kind of mutual block, it picks one process as the “victim” and kills it, rolling back its work. This also releases any locks it had and allows the other process to acquire its previously blocked request, resolving the deadlock.
+Normally, when SQL server detects this kind of mutual block, it picks one process as the "victim" and kills it, rolling back its work. This also releases any locks it had and allows the other process to acquire its previously blocked request, resolving the deadlock.
 
 But what if the two resources in question are on separate servers? For SQL Server to detect deadlocks, it has to have enough information to see that a pattern of blocks is mutual.
 
@@ -44,6 +44,6 @@ Locks are not granted all at once, nor can one assume that the final lock used f
 
 Given the above hypothetical lock order, when each query's process requests a lock on the other table to perform its update, it will be blocked. But each server involved only has half the picture and can only see a simple block, without knowing it's mutual (because the other half is occurring on the other side of the linked server). So it is a perpetual mutual block and no deadlock is detected.
 
-The next time I am working heavily with linked servers you can be sure I'll be thinking about this and coming up with a way to test if such a “distributed deadlock” really can occur, and if so, what to do about it.
+The next time I am working heavily with linked servers you can be sure I'll be thinking about this and coming up with a way to test if such a "distributed deadlock" really can occur, and if so, what to do about it.
 
 In closing, I confess that it's possible that DTC could have provisions for sharing lock information, so perhaps a distributed deadlock will be properly detected. But I have my doubts about that.

@@ -31,9 +31,9 @@ In the [first post][1] we created a basic Windows 2008 R2 virtual machine to ser
   <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_files.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_files.png" alt="Files for VM" /></a><br /> VM Folder and Files
 </div>
 
-TO keep things consistent, we will rename the vmx and vmxf files to match the new server name as well. Once we have edited the names we need to open the vmx file in using our favorite editor (mine is EditPlus) and edit the values for “displayName” and “extendedConfigFile” to reflect the new file names. It's possible to rename the other files but requires editing a larger number of configurations and I prefer to leave them with their original name to reflect the system I used as a template.
+TO keep things consistent, we will rename the vmx and vmxf files to match the new server name as well. Once we have edited the names we need to open the vmx file in using our favorite editor (mine is EditPlus) and edit the values for "displayName" and "extendedConfigFile" to reflect the new file names. It's possible to rename the other files but requires editing a larger number of configurations and I prefer to leave them with their original name to reflect the system I used as a template.
 
-To add the new, copied system to VMWare we open the menu and select the option to “Add Virtual Machine to Inventory”. 
+To add the new, copied system to VMWare we open the menu and select the option to "Add Virtual Machine to Inventory". 
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_AddVirtualMachine.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_AddVirtualMachine.png" alt="Add Virtual Machine, Step 0" /></a><br /> Adding a Virtual Machine, Step 0
@@ -46,7 +46,7 @@ A dialog is presented with the list of stores that are set up on the local syste
 </div>
 
 <div class="hint">
-  The “standard” store corresponds to the initial folder that VMWare generates when you first install it. By default this is “C:Virtual Machines” for Windows.
+  The "standard" store corresponds to the initial folder that VMWare generates when you first install it. By default this is "C:Virtual Machines" for Windows.
 </div>
 
 The next step, once the VM is added, is to modify some of the settings. This basic VM was created with 4GB of memory, bridged networking, and an optical disk pointing to the Windows 2008 R2 ISO. These settings were to optimize the installation process, but now we should modify them to fit the needs of our new system. The optical disk will be pointed to the ISO for the SQL Server installation disk and the memory will be reduced to a more reasonable value. The network will remain in bridged mode until virtual network management is addressed in a later post.
@@ -65,14 +65,14 @@ The last step is to add a virtual drive for database storage. In later articles 
 
 Once the Virtual Machine is prepped, it's time to boot into our system for the first time and prepare it for the SQL Server installation.
 
-When we first attempt to start the new virtual machine, the below error message is displayed prominently on the VMWare interface and we have to select either the “Copied” or “Moved” option to continue.
+When we first attempt to start the new virtual machine, the below error message is displayed prominently on the VMWare interface and we have to select either the "Copied" or "Moved" option to continue.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/0_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/0_startup.png" alt="VM Error Message" /></a><br /> VM Startup Error Message
 </div>
 
 <div class="hint">
-  VMWare has detected that the files have moved from their original location and is asking whether to treat this as a Move or a Copy. If you select the “copied” option, as I did, then some virtual hardware will be assigned new id's to ensure they aren't duplicates of the original system. This is particularly important for the MAC address of the network card. The downside is that enough id's are changed that Windows will require one of it's ten reactivations.
+  VMWare has detected that the files have moved from their original location and is asking whether to treat this as a Move or a Copy. If you select the "copied" option, as I did, then some virtual hardware will be assigned new id's to ensure they aren't duplicates of the original system. This is particularly important for the MAC address of the network card. The downside is that enough id's are changed that Windows will require one of it's ten reactivations.
 </div>
 
 Before going too far with the new server, lets start by providing it with it's new name and executing the obligatory reboot.
@@ -82,10 +82,10 @@ Before going too far with the new server, lets start by providing it with it's n
 </div>
 
 <div class="mylab">
-  While going through this process I found more “features” between VMWare and Windows 7. I initially had difficulties with the network connections because the VMWare adapters kept getting assigned to the Unidentified Network. Following the registry editing instructions in this <a href="http://aspoc.net/archives/2008/10/30/unidentified-network-issue-with-vmwares-virtual-nics-in-vista/" title="Unidentified network in Vista" target="_blank">Windows Vista article</a> appears to have corrected that.
+  While going through this process I found more "features" between VMWare and Windows 7. I initially had difficulties with the network connections because the VMWare adapters kept getting assigned to the Unidentified Network. Following the registry editing instructions in this <a href="http://aspoc.net/archives/2008/10/30/unidentified-network-issue-with-vmwares-virtual-nics-in-vista/" title="Unidentified network in Vista" target="_blank">Windows Vista article</a> appears to have corrected that.
 </div>
 
-Next up is mounting the new virtual drive. We can access the “Server Management” snap-in by right-clicking on the Computer in Explorer and selecting “Manage” or by typing “Manage” into the Start menu search and selecting “Server Manager”. In the left column is a treeview with a number of options. Expand the Storage option and select “Disk Management” to see the available disks. 
+Next up is mounting the new virtual drive. We can access the "Server Management" snap-in by right-clicking on the Computer in Explorer and selecting "Manage" or by typing "Manage" into the Start menu search and selecting "Server Manager". In the left column is a treeview with a number of options. Expand the Storage option and select "Disk Management" to see the available disks. 
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/2_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/2_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management – Adding a Disk
@@ -97,13 +97,13 @@ Initially the disk is listed as Offline (bottom of center column). Right-clickin
   When initializing the drive the system will ask whether you want to use a master boot record or GPT. Not knowing what GPT means (yet), I decided to use a master boot record. This is not a recommendation, simply an expression of my own ignorance and the addition of a new item to my list of things to be learned (GPT).
 </div>
 
-Once the drive reports a status of “Initialized” we can allocate it by right clicking on the volume and selecting “New Simple Volume”.
+Once the drive reports a status of "Initialized" we can allocate it by right clicking on the volume and selecting "New Simple Volume".
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/3_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/3_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management – Adding a Disk
 </div>
 
-Windows provides a wizard to walk through the drive allocation process. For the sake of this article we will select all of the defaults it provides, which should net a brand new 10237MB “E:” drive formatted for NTFS. Once the wizard is complete, the Server Management console will update the drive status and a dialog will appear with Windows asking if it can now format the new drive.
+Windows provides a wizard to walk through the drive allocation process. For the sake of this article we will select all of the defaults it provides, which should net a brand new 10237MB "E:" drive formatted for NTFS. Once the wizard is complete, the Server Management console will update the drive status and a dialog will appear with Windows asking if it can now format the new drive.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/FirstSQL/orig/4_startup.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/FirstSQL/4_startup.png" alt="Adding the new virtual disk" /></a><br /> Server Management – Adding a Disk
@@ -113,7 +113,7 @@ Windows provides a wizard to walk through the drive allocation process. For the 
   (This is more along the lines of experienced advice)<br /> If something is complex enough to have a wizard and configuration system, it's generally complex enough for the defaults to give you an evenly rounded, mediocre set of settings. This is why system/storage/database admins cringe when they find systems installed with the defaults, the equivalent of carefully configuring the system to perform equally poorly for all possible situations.
 </div>
 
-When the Format screen appears, Windows provides several values and offers some defaults. Since this drive is going to be used primarily for SQL Server, we will change the “Allocation Unit Size” from 4K to 64K. 
+When the Format screen appears, Windows provides several values and offers some defaults. Since this drive is going to be used primarily for SQL Server, we will change the "Allocation Unit Size" from 4K to 64K. 
 
 <div class="hint">
   SQL Server works in request sizes of 8k and 64K. Selecting allocation unit sizes for a drive (or stripe sizes for an array) is going to be based on two factors:</p> 
@@ -135,7 +135,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <p>
-      And finally the last step in our OS setup is to create a new administrative account for the future SQL Server services. While the Server Management console is still open, expand the Configuration option in the right column, expand “Local Users and Groups”, and select the “Users” option.
+      And finally the last step in our OS setup is to create a new administrative account for the future SQL Server services. While the Server Management console is still open, expand the Configuration option in the right column, expand "Local Users and Groups", and select the "Users" option.
     </p>
     
     <div class="screenshot">
@@ -151,7 +151,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <p>
-      Elevating the user's permissions is fairly straightforward. After creating the user, we right click them and select “Properties”. We select the “Member Of” tab and add the user to the local Administrators group.
+      Elevating the user's permissions is fairly straightforward. After creating the user, we right click them and select "Properties". We select the "Member Of" tab and add the user to the local Administrators group.
     </p>
     
     <div class="screenshot">
@@ -171,11 +171,11 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <p>
-      As we begin the installation process, the installer is going to check our prerequisites right away (unlike some prior versions that seemed to require everything from dog trainers to fiery hoops to get the job done). Press “Ok” and let the setup installer do it's thing.
+      As we begin the installation process, the installer is going to check our prerequisites right away (unlike some prior versions that seemed to require everything from dog trainers to fiery hoops to get the job done). Press "Ok" and let the setup installer do it's thing.
     </p>
     
     <p>
-      Once this check passes (or we potentially go through the process of installing the .Net Framework and a newer version of Windows Installer), the setup process will present us with a “SQL Server Installation Center” window. If you haven't installed SQL Server recently, you are probably going to be surprised by the number of links that are available. Compared to the 5 menu options available on the SQL Server 2000 dialog, this one is almost a book.
+      Once this check passes (or we potentially go through the process of installing the .Net Framework and a newer version of Windows Installer), the setup process will present us with a "SQL Server Installation Center" window. If you haven't installed SQL Server recently, you are probably going to be surprised by the number of links that are available. Compared to the 5 menu options available on the SQL Server 2000 dialog, this one is almost a book.
     </p>
     
     <h3>
@@ -183,7 +183,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </h3>
     
     <p>
-      First things first, lets make sure we have everything that SQL Server wants. The 5th option on the first screen is for the “System Configuration Checker”. Selecting this option will start a dialog/wizard process that is going to go through and verify we have any additional prerequisites (such as being logged in with administrative rights) that the installer will need.
+      First things first, lets make sure we have everything that SQL Server wants. The 5th option on the first screen is for the "System Configuration Checker". Selecting this option will start a dialog/wizard process that is going to go through and verify we have any additional prerequisites (such as being logged in with administrative rights) that the installer will need.
     </p>
     
     <div class="screenshot">
@@ -191,7 +191,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <p>
-      Once everything in the configuration checker is green, we can move on to the Installation. Selecting “Installation” from the right sidebar presents us with a new set of options to select from. As we are installing a new server from scratch, lets select the first option “New Installation or Add features”. After another Configuration Check, the setup presents a wizard for installing the Support Files.
+      Once everything in the configuration checker is green, we can move on to the Installation. Selecting "Installation" from the right sidebar presents us with a new set of options to select from. As we are installing a new server from scratch, lets select the first option "New Installation or Add features". After another Configuration Check, the setup presents a wizard for installing the Support Files.
     </p>
     
     <div class="screenshot">
@@ -207,7 +207,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <p>
-      Once the Support Files have installed, we are presented with a dialog asking us to select whether we are trying to install SQL Server or PowerPivot for Sharepoint. Leaving SQL Server selected and pressing next will present us with a series of checkboxes to allow us to pick exactly which components we would like to install. Select the boxes the conform with what you intend to use the system for and press “Next”.
+      Once the Support Files have installed, we are presented with a dialog asking us to select whether we are trying to install SQL Server or PowerPivot for Sharepoint. Leaving SQL Server selected and pressing next will present us with a series of checkboxes to allow us to pick exactly which components we would like to install. Select the boxes the conform with what you intend to use the system for and press "Next".
     </p>
     
     <div class="screenshot">
@@ -239,7 +239,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <p>
-      Next we are setting up the accounts used for the system services. Press the “Use the Same Account for all SQL Services” button, select “browse” and find the NT User we created earlier. Enter the password for the user and press “Ok” to assign it.
+      Next we are setting up the accounts used for the system services. Press the "Use the Same Account for all SQL Services" button, select "browse" and find the NT User we created earlier. Enter the password for the user and press "Ok" to assign it.
     </p>
     
     <div class="screenshot">
@@ -271,7 +271,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <p>
-      Continuing on through the next few screens, we should finally arrive at the “Ready to Install” screen. Pressing the “Install” button grants us one free coffee break, after which we will continue on with the initial configuration.
+      Continuing on through the next few screens, we should finally arrive at the "Ready to Install" screen. Pressing the "Install" button grants us one free coffee break, after which we will continue on with the initial configuration.
     </p>
     
     <p>
@@ -320,7 +320,7 @@ When the Format screen appears, Windows provides several values and offers some 
     
     <ol style="margin-left: 3em">
       <li>
-        Pin the “SQL Server Configuration Manager” to the Taskbar
+        Pin the "SQL Server Configuration Manager" to the Taskbar
       </li>
       <li>
         Open SQL Server Management Studio (SSMS) and let it go through it's first time initialization

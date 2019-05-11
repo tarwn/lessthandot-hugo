@@ -41,7 +41,7 @@ Upon executing the job again, it is successful.
 
 Security is handled differently when steps such as CmdExec are used, or other steps that start a new level of access and impersonation.   Steps such as CmdExec type are executed by the SQL Server Agent Account or a proxy account.  Unless ownership is explicitly changed, this typically is not a problem due to only members of the system administrator role (sysadmin) being capable of creating these steps.  However, there is no warning if membership is altered on a pre-existing step.  This allows for the situation to be encountered.
 
-For example: The job that was explained earlier has a new step type of CmdExec added by a sysadmin.  The step calls a VBScript file that writes the system date to a logging file.  This can be done by adding a CmdExec step with a command of, “cscript.exe C:SystemDate.vbs” and then set the logging file output to C:textfile.txt.
+For example: The job that was explained earlier has a new step type of CmdExec added by a sysadmin.  The step calls a VBScript file that writes the system date to a logging file.  This can be done by adding a CmdExec step with a command of, "cscript.exe C:SystemDate.vbs" and then set the logging file output to C:textfile.txt.
 
 This job will execute successfully under the system administrator account that created it and as long as the owner of the job is a sysadmin.  If the ownership is changed to fred, who only has SELECT for the first two steps, the job will fail with the following error.
 

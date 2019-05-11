@@ -13,7 +13,7 @@ categories:
   - ASP.NET
 
 ---
-[DevExpress][1] have released a collection of free ASP.NET controls that you can use “without royalties or distribution costs”. The applications you create with these controls can be distributed royalty free and all the controls are are fully supported by both Visual Studio 2005 and Visual Studio 2008.
+[DevExpress][1] have released a collection of free ASP.NET controls that you can use "without royalties or distribution costs". The applications you create with these controls can be distributed royalty free and all the controls are are fully supported by both Visual Studio 2005 and Visual Studio 2008.
 
 Some of the ones I think stand out as potentially being very useful are the:
 

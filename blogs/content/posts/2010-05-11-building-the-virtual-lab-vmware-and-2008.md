@@ -157,7 +157,7 @@ First we need to build our virtual machine. Opening the VMWare Server Host and l
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmware_beginning.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmware_beginning.png" title="VMWare, Freshly Installed" /></a><br /> VMWare, Freshly Installed
 </div>
 
-Clicking the “Virtual Machine” menu provides an option to “Create Virtual Machine” and a wizard to walk us through the creation of our virtual machine.
+Clicking the "Virtual Machine" menu provides an option to "Create Virtual Machine" and a wizard to walk us through the creation of our virtual machine.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vmware_create_vm.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vmware_create_vm.png" title="VMWare Menu, Create VM" /></a><br /> Create a new VM
@@ -175,7 +175,7 @@ In my case I intend to use Windows 2008 R2 as my main server environment, so thi
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step2.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step2.png" title="Creating a new VM, Step 2" /></a><br /> New VM – OS Selection
 </div>
 
-For this first server I am going to allocate 4GB of RAM for use during the installation process. When making later copies of the system we will tune these values accordingly. As I intend to use these systems in a lab environment and may need the images to be portable to another single core system, I'm going to select the 1 CPU option. For later articles we may create 2- or 4-CPU options, but for most of our non-production needs a 1-CPU system will be sufficient. While technically it would be possible to “tune” the CPU setting at a later time, since we really only care about the hard-drive file at this point, changing CPU architectures on a system after installation ranges from tricky to absurdly-painful-with-no-hope-of-working.
+For this first server I am going to allocate 4GB of RAM for use during the installation process. When making later copies of the system we will tune these values accordingly. As I intend to use these systems in a lab environment and may need the images to be portable to another single core system, I'm going to select the 1 CPU option. For later articles we may create 2- or 4-CPU options, but for most of our non-production needs a 1-CPU system will be sufficient. While technically it would be possible to "tune" the CPU setting at a later time, since we really only care about the hard-drive file at this point, changing CPU architectures on a system after installation ranges from tricky to absurdly-painful-with-no-hope-of-working.
 
 <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
   <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/vm_step3.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/vm_step3.png" title="Creating a new VM, Step 2" /></a><br /> New VM – RAM and CPU Settings
@@ -190,7 +190,7 @@ The final lasting decision (though not the last step) is how large we want to ma
 The final options, optical drive access and network method, are only going to be used for this image during the Windows installation process. Later copies will again have values assigned based on the project or technology that's being installed. For the purposes of the installation we will use an ISO file for the optical drive and bridged networking.
 
 <div class="hint">
-  When you install VMWare initially it will ask for a folder for your standard store (default is “C:Virtual Machines” on Windows). ISOs placed in this folder will be available for mounting in VMWare or you can create a new store that points to a folder elsewhere. Having a dedicated drive for software storage, I created an 'MSDN Library' store and pointed it to that location.
+  When you install VMWare initially it will ask for a folder for your standard store (default is "C:Virtual Machines" on Windows). ISOs placed in this folder will be available for mounting in VMWare or you can create a new store that points to a folder elsewhere. Having a dedicated drive for software storage, I created an 'MSDN Library' store and pointed it to that location.
 </div>
 
 <div class="hint">
@@ -234,7 +234,7 @@ The first decision the installer requires is selection between the various versi
     </p>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/setup_dashboard.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/setup_dashboard.png" title="Server Dashboard" /></a><br /> Windows Server “Configuration” Dashboard
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/setup_dashboard.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/setup_dashboard.png" title="Server Dashboard" /></a><br /> Windows Server "Configuration" Dashboard
     </div>
     
     <div class="hint">
@@ -262,7 +262,7 @@ The first decision the installer requires is selection between the various versi
     </p>
     
     <div style="text-align: center; font-size: .8em; margin-bottom: 1em;">
-      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/bginfo_background.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/bginfo_background.png" title="Server Dashboard" /></a><br /> Windows Server “Configuration” Dashboard
+      <a href="http://www.tiernok.com/LTDBlog/labsetup/orig/bginfo_background.png" target="_new"><img src="http://www.tiernok.com/LTDBlog/labsetup/bginfo_background.png" title="Server Dashboard" /></a><br /> Windows Server "Configuration" Dashboard
     </div>
     
     <div class="mylab">

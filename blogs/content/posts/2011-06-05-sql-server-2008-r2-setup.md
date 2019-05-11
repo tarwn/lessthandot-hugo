@@ -25,7 +25,7 @@ New installation started from the SQL Server 2008 R2 media and goes through the 
 
 All the log files in the bootstrap folders were all clean and no errors appeared on the system anywhere (including the normal event viewer logs).
 
-After some digging to see the state of the machine including the registry, old files and old files left form the original uninstallation, I removed the actual setup files installation from the ARP as well. In ARP, this is specifically listed as “Microsoft SQL Server 2008 Setup Support Files”. Removing the support files requires the original location of the SqlSupport.msi. This is the msi that seems to perform the installation of the support files.
+After some digging to see the state of the machine including the registry, old files and old files left form the original uninstallation, I removed the actual setup files installation from the ARP as well. In ARP, this is specifically listed as "Microsoft SQL Server 2008 Setup Support Files". Removing the support files requires the original location of the SqlSupport.msi. This is the msi that seems to perform the installation of the support files.
 
 Once uninstalled and rerunning the normal installation of SQL Server 2008 R2, the setup support files were installed again and the setup100.exe came up this time and allowed the configuration of the installation to proceed successfully.
 

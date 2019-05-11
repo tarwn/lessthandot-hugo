@@ -20,7 +20,7 @@ After reading this, I was curious. Does that follow with char and nchar also? Ho
 
 ## Results
 
-The results are based on 4 runs of each query against 1,000,000 rows with explicitly limited parallelism. The name identifies the type, which operation was used (equals or LIKE), and the size of the field. All data was 36 characters, so “(36)” tests are fully populated values and “(72)” tests are half-full values.
+The results are based on 4 runs of each query against 1,000,000 rows with explicitly limited parallelism. The name identifies the type, which operation was used (equals or LIKE), and the size of the field. All data was 36 characters, so "(36)" tests are fully populated values and "(72)" tests are half-full values.
 
 <div style="font-size: 80%; color: #666666; text-align: center">
   <img src="http://www.tiernok.com/LTDBlog/nchar_all.png" title="Graph of all Results" /><br /> All Results, Normalized to Shortest Value (Char 32 – Equals)

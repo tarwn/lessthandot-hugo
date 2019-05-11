@@ -23,7 +23,7 @@ categories:
 
 Yes, absolutely!  I strongly feel that all SQL Server Database Administrators and Developers should not only learn the basics and fundamental internals of Oracle, but should expand that to others such as DB2 and Sybase.  Why?  SQL Server is my mojo after all.  There shouldn't be much reason to venture into Klingon territory and maybe start a database server uprising.  There actually is one major reason it should be a requirement to know more than SQL Server: Not everyone runs SQL Server. (Although they may want to)
 
-So today we are going to focus on some very basic Oracle setup steps and commands to get us started on merging SQL Server skills into Oracle skills.  By the end of this series, we should be better prepared when the word, “Oracle” comes up in meetings and project discussions.  We really can all get along in the SQL Server and Oracle world.
+So today we are going to focus on some very basic Oracle setup steps and commands to get us started on merging SQL Server skills into Oracle skills.  By the end of this series, we should be better prepared when the word, "Oracle" comes up in meetings and project discussions.  We really can all get along in the SQL Server and Oracle world.
 
 **Oracle for the SQL Server Pro wanting to learn**
 
@@ -48,7 +48,7 @@ _Any use of the Oracle Database Express Edition is subject to the following limi
 
 Setting up Oracle Express
 
-If using Windows; there are two downloads you will need.  I picked the Oracle Universal and then, the pain we all know, the Oracle Client.  We'll step over the basic setup process of Oracle Express Universal.  Essentially, you can click “_Next”_ for every step with a basic Windows OS to get the install going.  Ensure that the port selections that Oracle installer wants to use are open on your machine.  You can alter them but it is far easier when learning this process to allow the ports and leave the defaults in the installer.
+If using Windows; there are two downloads you will need.  I picked the Oracle Universal and then, the pain we all know, the Oracle Client.  We'll step over the basic setup process of Oracle Express Universal.  Essentially, you can click "_Next"_ for every step with a basic Windows OS to get the install going.  Ensure that the port selections that Oracle installer wants to use are open on your machine.  You can alter them but it is far easier when learning this process to allow the ports and leave the defaults in the installer.
 
 After the installation is complete, launch the Home Page for your Oracle Express Instance to start working with Oracle. 
 
@@ -62,7 +62,7 @@ The home page is straight forward.  The Administration area has with it the abi
 
 At this point Oracle Express is running and you can create tables and have all kinds of database fun.  Showing how we can interact with Oracle can be done from the SQL Commands page, which is located in the SQL area from the Home Page.   Let's send a statement through the SQL Commands tool to show how it works.
 
-In the panel where you can add commands, enter “SELECT * FROM SYSTEM.HELP”.  This shows all the rows in the system help table. 
+In the panel where you can add commands, enter "SELECT * FROM SYSTEM.HELP".  This shows all the rows in the system help table. 
 
  
 
@@ -98,7 +98,7 @@ This is seen from the target of the shortcut:
 
 C:oraclexeapporacleproduct10.2.0serverBINsqlplus.exe /nolog
 
-Once SQL*PLUS is open, login with the account you created for yourself.  This is done by sending, “connect <username>” and then your password.  To show the definition of the table we created earlier, run the following command.
+Once SQL*PLUS is open, login with the account you created for yourself.  This is done by sending, "connect <username>" and then your password.  To show the definition of the table we created earlier, run the following command.
 
 DESCRIBE imports
 

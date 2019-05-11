@@ -30,13 +30,13 @@ Below is the interview.
 
 **What level of competence should a reader have before reading this book? Is this book good for accidental DBAs?**
 
-It's interesting that you ask about the “accidental DBA”. I recently blogged [The Great DBA Schism][3] in which I noted that these types of DBAs are becoming much more common. My book is perfect for these DBAs as they're typically bright people with experience in other areas who want to quickly learn DBA best practices without having to wade through lots of text. 
+It's interesting that you ask about the "accidental DBA". I recently blogged [The Great DBA Schism][3] in which I noted that these types of DBAs are becoming much more common. My book is perfect for these DBAs as they're typically bright people with experience in other areas who want to quickly learn DBA best practices without having to wade through lots of text. 
 
 A lot of books patronize their readers and drag them through painful reproductions of simple tasks. Worse still, these books often reproduce information that is easily accessible from other free sources, for example, Books Online. As a result, the page count blows out, and most of the book goes unread.
 
 With my book, I've avoided reproducing such information and spent more time on explaining why things are important, and where appropriate, directed the reader to the appropriate resource for more information should they need it. The end result is a concise book, and one that concentrates on best practices. 
 
-I've had great feedback from both experienced and new DBAs, and although the book has “SQL Server 2008” in its title, its major themes are applicable to earlier versions as well.
+I've had great feedback from both experienced and new DBAs, and although the book has "SQL Server 2008" in its title, its major themes are applicable to earlier versions as well.
 
 **What are some of the pitfalls that catch DBAs over and over again?**
 
@@ -86,7 +86,7 @@ My hope is that DBAs will also read Appendix A, Top 25 DBA worst practices, and 
 
 Yes. Manually clicking through wizards is possibly ok for managing one or two small servers, but automation is crucial for managing large and complex environments. Anything that occurs more than once should be scripted and scheduled with appropriate monitoring and alerting systems.
 
-One of the nice things about SQL Server 2008 (also included in 2005) is that most dialog boxes include a “script” button that converts what you've just done in the dialog box into a T-SQL script. This is a great way of learning how to use T-SQL, as well as understanding what SQL Server is doing behind the scenes.
+One of the nice things about SQL Server 2008 (also included in 2005) is that most dialog boxes include a "script" button that converts what you've just done in the dialog box into a T-SQL script. This is a great way of learning how to use T-SQL, as well as understanding what SQL Server is doing behind the scenes.
 
 **What new features in Sql Server 2008 are you most excited about as a DBA?**
 
@@ -98,7 +98,7 @@ The list goes on; backup compression, transparent data encryption and automatic 
 
 **Which chapter was the hardest to write and can you explain why?**
 
-The first chapter (which doesn't exist anymore) 🙂 I wrote that chapter about 9 times in various different ways as I searched around for the best “feel” for the book.
+The first chapter (which doesn't exist anymore) 🙂 I wrote that chapter about 9 times in various different ways as I searched around for the best "feel" for the book.
 
 Writing a (good) book is hard work. You need to engage the reader, gain their trust, and hopefully teach them something as well. I hope I've succeeded in that task.
 

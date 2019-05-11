@@ -80,7 +80,7 @@ END CATCH
 PRINT 'TEST'
 ```
 
-_OLE DB provider “SQLNCLI10” for linked server “TestLinkedServer” returned message “Deferred prepare could not be completed.”.
+_OLE DB provider "SQLNCLI10" for linked server "TestLinkedServer" returned message "Deferred prepare could not be completed.".
   
 Msg 8180, Level 16, State 1, Line 1
   
@@ -126,7 +126,7 @@ END CATCH
 PRINT 'TEST'
 ```
 
-_OLE DB provider “SQLNCLI10” for linked server “TestLinkedServer” returned message “Deferred prepare could not be completed.”.
+_OLE DB provider "SQLNCLI10" for linked server "TestLinkedServer" returned message "Deferred prepare could not be completed.".
   
 Invalid object name 'tempdb..sysobjects2'.
   
@@ -161,13 +161,13 @@ As you can see it is possible to trap a problem with linked servers if you wrap 
 
 Here are some of the error messages I trapped on my boxes
 
-Cannot fetch a row from OLE DB provider “MSDASQL” for linked server “Test”.
+Cannot fetch a row from OLE DB provider "MSDASQL" for linked server "Test".
   
-Cannot initialize the data source object of OLE DB provider “MSDASQL” for linked server “Test”.
+Cannot initialize the data source object of OLE DB provider "MSDASQL" for linked server "Test".
   
-The OLE DB provider “MSDASQL” for linked server “Test” could not INSERT INTO table “[MSDASQL]”.
+The OLE DB provider "MSDASQL" for linked server "Test" could not INSERT INTO table "[MSDASQL]".
   
-The OLE DB provider “MSDASQL” for linked server “Test” reported an error committing the current transaction.
+The OLE DB provider "MSDASQL" for linked server "Test" reported an error committing the current transaction.
 
 Hope you learned something and hopefully this will help you in your troubles with linked servers
 

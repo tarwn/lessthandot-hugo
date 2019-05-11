@@ -25,7 +25,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  When it comes to importing data from an Excel sheet with SSIS, Excel has quite a reputation. And not a terribly good one. Well deserved, to be honest, because numerous issues can rise when dealing with this piece of software. This blog post will deal with the issue I encounter the most on forums, which is the issue of the mixed data types in one column, also known as <em>“Why is some of my data read as NULL?”</em>.
+  When it comes to importing data from an Excel sheet with SSIS, Excel has quite a reputation. And not a terribly good one. Well deserved, to be honest, because numerous issues can rise when dealing with this piece of software. This blog post will deal with the issue I encounter the most on forums, which is the issue of the mixed data types in one column, also known as <em>"Why is some of my data read as NULL?"</em>.
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -51,7 +51,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: justify;">
-  The postal code in Belgium usually consists of 4 digits. However, sometimes it is prefixed with “<em>B-</em>“, which makes the data alphanumeric. The house number column has a value containing the word “bus”, so it becomes alphanumeric as well. When we pull this data into the SSIS dataflow, we get the following:
+  The postal code in Belgium usually consists of 4 digits. However, sometimes it is prefixed with "<em>B-</em>", which makes the data alphanumeric. The house number column has a value containing the word "bus", so it becomes alphanumeric as well. When we pull this data into the SSIS dataflow, we get the following:
 </div>
 
 <div class="image_block">
@@ -87,7 +87,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="margin-left: 35.4pt; text-align: left;">
-  <strong><em><span lang="EN-US">Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:MyExcel.xls;Extended Properties=”Excel 8.0;HDR=Yes;IMEX=1″;</span></em></strong>
+  <strong><em><span lang="EN-US">Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:MyExcel.xls;Extended Properties="Excel 8.0;HDR=Yes;IMEX=1″;</span></em></strong>
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
@@ -167,11 +167,11 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <span lang="EN-US">A very similar issue is when you have a text column in your Excel sheets that sometimes has more than 255 characters in a single cell. A common example is a “comments” column. When you try to import this, you can get this error in SSIS:</span>
+  <span lang="EN-US">A very similar issue is when you have a text column in your Excel sheets that sometimes has more than 255 characters in a single cell. A common example is a "comments" column. When you try to import this, you can get this error in SSIS:</span>
 </p>
 
 <p class="MsoNormal" style="text-align: left;">
-  <em><span lang="EN-US">[Excel Source [5]] Error: There was an error with Excel Source.Outputs[Excel Source Output].Columns[Comments] on Excel Source.Outputs[Excel Source Output]. The column status returned was: “Text was truncated or one or more characters had no match in the target code page.”.</span></em>
+  <em><span lang="EN-US">[Excel Source [5]] Error: There was an error with Excel Source.Outputs[Excel Source Output].Columns[Comments] on Excel Source.Outputs[Excel Source Output]. The column status returned was: "Text was truncated or one or more characters had no match in the target code page.".</span></em>
 </p>
 
 <p class="MsoNormal">

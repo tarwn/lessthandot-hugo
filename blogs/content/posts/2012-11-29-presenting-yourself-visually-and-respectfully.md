@@ -4,7 +4,7 @@ author: Ted Krueger (onpnt)
 type: post
 date: 2012-11-29T14:27:00+00:00
 ID: 1812
-excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, “Successful Consulting&hellip;'
+excerpt: 'The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives.  Please visit, "Successful Consulting&hellip;'
 url: /index.php/itprofessionals/runningmybusiness/presenting-yourself-visually-and-respectfully/
 views:
   - 22521
@@ -15,7 +15,7 @@ categories:
   - Running My Own IT Business
 
 ---
-> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, “[Successful Consulting Series][1]” for a full listing of each part in this series.
+> The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, "[Successful Consulting Series][1]" for a full listing of each part in this series.
 
 Presenting yourself as a consultant is the first stage in being successful in terms of clients and your team.  Most times, the client will be the critical variable in the equation to your overall success rate as a consultant.  Let's face it, if the client is not happy with how you've presented yourself and skills, both you and possibly the consulting company you work for are at a complete loss.  However, your team is just as critical to the success rate.
 
@@ -45,7 +45,7 @@ As a consultant in a team-oriented structure, presentation of yourself and your 
 
 _Consulting – The I in Team_
 
-The everlasting phrase, “_There is no I in Team_” has much merit in what we're discussing today.  The definition of a team doesn't necessarily mean you will find two or five consultants always on the same client and the same project.  In fact, often there will be one consultant leading the way with a client while the resources, _the team,_ are backing that lead fully with support, skills and direction.  If at any time the complete disconnection is made purposely by a consultant based on how they present themselves to the entirety of the team, failure, if not on the current engagement but future engagements, will undoubtedly occur.
+The everlasting phrase, "_There is no I in Team_" has much merit in what we're discussing today.  The definition of a team doesn't necessarily mean you will find two or five consultants always on the same client and the same project.  In fact, often there will be one consultant leading the way with a client while the resources, _the team,_ are backing that lead fully with support, skills and direction.  If at any time the complete disconnection is made purposely by a consultant based on how they present themselves to the entirety of the team, failure, if not on the current engagement but future engagements, will undoubtedly occur.
 
 This concept flows into almost any area in life.  You rely on a team even when you go to the grocery store.  The team is the consumer (client), the employees stocking the shelves, the management scheduling the employees and then the checkout employee.  As hard as it may be to compare them, even a transaction can be seen as a project that involves a team.  Imagine for a minute if the checkout employee presents himself in a way that upsets the consumer.  The consumer may seek out a new checkout employee located in a different lane or, in the worst case, leave their goods and seek out a new store with better employee representation.  In this example, the team broke down due to the presentation of the checkout employee.  Given this loss, the team breaks down and the other members start to have ill feelings towards the failed team member.  Essentially, this is the starting point of the team's ongoing ability to succeed.
 

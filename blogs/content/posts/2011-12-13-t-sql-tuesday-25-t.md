@@ -4,7 +4,7 @@ author: Jes Borland
 type: post
 date: 2011-12-13T11:15:00+00:00
 ID: 1439
-excerpt: "The twenty-fifth installation of T-SQL Tuesday is brought to us by Allen White. This month's topic is “T-SQL Tricks”."
+excerpt: "The twenty-fifth installation of T-SQL Tuesday is brought to us by Allen White. This month's topic is 'T-SQL Tricks'."
 url: /index.php/datamgmt/dbadmin/t-sql-tuesday-25-t/
 views:
   - 8820
@@ -18,9 +18,9 @@ categories:
 ---
 [![][1]][2]
   
-The twenty-fifth installation of T-SQL Tuesday is brought to us by Allen White ([twitter][3] | [blog][4]). The topic is [“T-SQL Tricks”][2]. 
+The twenty-fifth installation of T-SQL Tuesday is brought to us by Allen White ([twitter][3] | [blog][4]). The topic is ["T-SQL Tricks"][2]. 
 
-As a database administrator, one of the most common calls I receive from developers is, “I'm getting an error saying the log is full.” This could happen for a variety of reasons:
+As a database administrator, one of the most common calls I receive from developers is, "I'm getting an error saying the log is full." This could happen for a variety of reasons:
 
 • Data was being loaded into the database.
   
@@ -69,7 +69,7 @@ DBCC SQLPERF
 
 sys.databases will provide information about each database on a SQL Server instance. Just a few of the things you can view are the compatibility level, collation, recovery model, and state. Here, I'm returning the database name, the recovery model, and what the log is waiting on. If a user can connect to a database, they can view the sys.databases information for that database. 
 
-A great reference (and one of my inspirations for this script) was Gail Shaw's blog, [“Why is my transaction log full?”][5] With this information, I could choose to change the recovery model, expand the log, or wait for the next transaction log backup. 
+A great reference (and one of my inspirations for this script) was Gail Shaw's blog, ["Why is my transaction log full?"][5] With this information, I could choose to change the recovery model, expand the log, or wait for the next transaction log backup. 
 
 If the database was in full recovery mode, and the users did not need point-in-time recovery (perhaps it's a development environment), I could choose to set it to simple recovery. If there would be valid reasons for the expansion – frequent data loads, or long-running queries – I could expand the log to a reasonable size. If the database was in full recovery, and this was a one-time operation, I could issue a transaction log backup to clear space. Knowing why a transaction log is expanding, and if it will happen again, is an important part of your job as a DBA. 
 

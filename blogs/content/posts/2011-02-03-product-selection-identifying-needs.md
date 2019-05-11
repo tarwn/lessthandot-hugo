@@ -53,7 +53,7 @@ The following post is the first of four outlining a four step selection process 
   <img src="http://www.tiernok.com/LTDBlog/ProductSelection/AorB.jpg" alt="Option A or Option B?" />
 </div>
 
-It often starts with “I need an IDE” or “I need ABC, Inc's IDE”. On the one hand, when we pre-select a product we then measure all other potential solutions against that product instead of against our needs. On the other, a vague category fails to provide anything but the most general criterion. Despite their differences, they tent to both lead to a very similar outcome: highly opinionated, emotional selection processes where groups of people end up rallying behind the product they like the best. These methods are extremely variable and, beside creating a lot of dissension and wasted time, often leave us with a product that is missing a number of critical features or capabilities and requires far too long to integrate into our environment. This method may seem faster, but it has a lot of additional costs and can actually take far longer.
+It often starts with "I need an IDE" or "I need ABC, Inc's IDE". On the one hand, when we pre-select a product we then measure all other potential solutions against that product instead of against our needs. On the other, a vague category fails to provide anything but the most general criterion. Despite their differences, they tent to both lead to a very similar outcome: highly opinionated, emotional selection processes where groups of people end up rallying behind the product they like the best. These methods are extremely variable and, beside creating a lot of dissension and wasted time, often leave us with a product that is missing a number of critical features or capabilities and requires far too long to integrate into our environment. This method may seem faster, but it has a lot of additional costs and can actually take far longer.
 
 ## Step 1: Identification
 
@@ -65,17 +65,17 @@ Rarely are we asked to look at a product simply because someone wants one more p
 
 By using [Root cause analysis][1] methods we can dig into the reasons behind the project and determine then actual barriers or needs the business is trying to address. These are often not very clear to the person who initiated the product request, but determining the root need will take us a long way towards succeeding in filling that need.
 
-### “The CEO Said So”
+### "The CEO Said So"
 
 <div style="float: right; margin: .5em; padding: .45em; border: 1px solid #dddddd; color: #666666; font-size: 80%; text-align: center;">
   <img src="http://www.tiernok.com/LTDBlog/ProductSelection/dashboard.jpg" alt="Dreaming of a dashboard" style="max-width: 200px" /><br /> Are they really asking for<br />more software?
 </div>
 
-Often we will run into reasons such as “because the CEO said so” or “because we budgeted for it” as needs. We can these items, but we don't want to let the position or invocation of a budget keep us from digging into the root cause. Often when a CEO says “we need a new dashboarding system” what he is actually doing is communicating a need such as “I don't feel that I have visibility of X and in my past company product Y gave me that visibility”. While he thinks he is asking us to buy a specific product, what he is actually doing is asking us to to solve his visibility problem using the solution that satisfied him the last time he had this problem. If we determine which capabilities or features he most greatly misses, we can then determine what those features provided at the CEO's last job and likely what they feel they are missing now. 
+Often we will run into reasons such as "because the CEO said so" or "because we budgeted for it" as needs. We can these items, but we don't want to let the position or invocation of a budget keep us from digging into the root cause. Often when a CEO says "we need a new dashboarding system" what he is actually doing is communicating a need such as "I don't feel that I have visibility of X and in my past company product Y gave me that visibility". While he thinks he is asking us to buy a specific product, what he is actually doing is asking us to to solve his visibility problem using the solution that satisfied him the last time he had this problem. If we determine which capabilities or features he most greatly misses, we can then determine what those features provided at the CEO's last job and likely what they feel they are missing now. 
 
 Note that this is the same reasoning that our new IT manager uses when he joins the company and starts buying all of the software he used at his last one. He is uneasy or has a need and knows what products made him feel comfortable or worked in a previous environment, so those are what he purchases. Unfortunately, this isn't his last position and environments can vary drastically under the surface. Like the CEO, we want to dig into what need or uneasiness they are trying to resolve and use the root needs as criteria or as leads to follow-up with other business owners.
 
-### “We Always Use Vendor X”
+### "We Always Use Vendor X"
 
 Not uncommon, many companies like to use a single vendor or a selection from a known set of vendors. The advantages include the presence of an existing relationship, potential for extra savings, and simpler support plans (the same number and people we already call).
 

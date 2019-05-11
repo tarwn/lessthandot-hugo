@@ -18,7 +18,7 @@ categories:
 
 Magenic has turned into a great home for me and a company that is respected as well as known for having some of the most skilled people in the profession.  I'm looking forward to being able to catch up with the Minnesota area co-workers just as much as the event itself.
 
-Good friend, Steve Hughes ([Blog][2] | [Twitter][3]), asked me today if I would be interested in moderating the “SQL Community and Social Networking – Roundtable” session also.  There was little chance to me turning this opportunity down.  The members of the community that will be on this panel are, to say the least, brilliant minds in the SQL Community.  I'm looking forward to giving them all my best heckling as a moderator.
+Good friend, Steve Hughes ([Blog][2] | [Twitter][3]), asked me today if I would be interested in moderating the "SQL Community and Social Networking – Roundtable" session also.  There was little chance to me turning this opportunity down.  The members of the community that will be on this panel are, to say the least, brilliant minds in the SQL Community.  I'm looking forward to giving them all my best heckling as a moderator.
 
 The session is being held at 9:45 AM and in the Professional Development track.  I think this track is a great idea and may have to see if using the same concept for future SQL Saturday I help organize is a possibility.
 

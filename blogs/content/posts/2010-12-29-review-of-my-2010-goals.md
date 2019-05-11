@@ -101,7 +101,7 @@ A fun book if you want to escape from reality.
 
 **Frank W. Abagnale**: [The Art of the Steal: How to Protect Yourself and Your Business from Fraud, America's #1 Crime][18]
   
-Frank Abagnale is the person who wrote “Catch me if you can”. This book details how fraud happens and what can be done to stop it. Now more important than ever with identity theft and lost data all over the place. A must read.
+Frank Abagnale is the person who wrote "Catch me if you can". This book details how fraud happens and what can be done to stop it. Now more important than ever with identity theft and lost data all over the place. A must read.
 
 **Ron Suskind**: [The Way of the World: A Story of Truth and Hope in an Age of Extremism][19]
   

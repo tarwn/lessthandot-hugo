@@ -18,7 +18,7 @@ In the last few months I started working on my first ASP.NET MVC project. I alre
 
 I also first want to thank people who helped me to get where I am now with this project: Viv Phillips and Paul Mrozowski from UniversalThread, Darin Dimitrov from stackoverflow, Alex Ullrich and Sergey Kosik and also Jazzen Chen from MS. I also want to thank authors of many blogs and articles I read while working on this project.
 
-I started my project from defining my models using Entity Framework Code first pattern since I already had the database defined. I am going to discuss only one model “Client” for the Clients table.
+I started my project from defining my models using Entity Framework Code first pattern since I already had the database defined. I am going to discuss only one model "Client" for the Clients table.
 
 This is how the table looks in the database:
 

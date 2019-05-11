@@ -22,7 +22,7 @@ Missing index suggestion – Duplicate Index
 
 The missing index feature, while tuning or checking estimated and actual plans, is very helpful.  Something that is key in that sentence is the word, helpful.  Don't run out and simply create all of them.  Make sure it is a viable solution that does not implement the three major faults in index strategies: duplicates, overlapping and misalignment.
 
-In SQL Server 2008 and previous versions, the missing index suggestions had a little feature (read as bug) that would suggest an identical index to what was already on the table.  In fact, in some cases, it would use the index that was a duplicate and still suggest to create it.  You can see a great article on this from Paul Randal, “[Missing index DMV bug that could cost your sanity...”.][1]
+In SQL Server 2008 and previous versions, the missing index suggestions had a little feature (read as bug) that would suggest an identical index to what was already on the table.  In fact, in some cases, it would use the index that was a duplicate and still suggest to create it.  You can see a great article on this from Paul Randal, "[Missing index DMV bug that could cost your sanity...".][1]
 
 With SQL Server 2012, this was thought to be resolved but we still can end up with the same situation.
 

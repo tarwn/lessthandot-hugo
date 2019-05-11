@@ -34,13 +34,13 @@ There were [6 tracks of events][1], which were balanced more towards the BI and 
   <img src="http://www.tiernok.com/LTDBlog/sqlsat46_2010/grant.png" alt="Grant Fritchey starting his session" /><br /> Grant Fritchey getting <br /> started on his session
 </div>
 
-I started my morning off with Geoff Hiten's ([blog][3] | [twitter][4]) “Clustering for Mere Mortals” session, which gave me enough basic knowledge that there may be a clustering blog article in the near future. Geoff did an excellent job of communicating a complex task to his audience, balancing just enough background knowledge, direct examples, and good practices from his own experience.
+I started my morning off with Geoff Hiten's ([blog][3] | [twitter][4]) "Clustering for Mere Mortals" session, which gave me enough basic knowledge that there may be a clustering blog article in the near future. Geoff did an excellent job of communicating a complex task to his audience, balancing just enough background knowledge, direct examples, and good practices from his own experience.
 
 I expanded my CDC knowledge in Chris Skorlinski's ([blog][5]) first session, but unfortunately wasn't able to make his SSIS + CDC session later in the afternoon (the disadvantage to being in my home town, had to run home to feed the cats). He provided an excellent overview of how CDC works, how to interact with it, and some of the internals behind the magic.
 
-After lunch, I attended Grant Fritchey's ([blog][6] | [twitter][7]) “Identifying and Fixing Performance Problems using” presentation and had a blast (I'm using the SQL Saturday site-ized version of his presentation name). Despite some demo issues, Grant managed to balance delivery of his presentation with good audience feedback, even taking a 2 minute break in the middle to get everyone up on their feet and fight the post-lunch effects. 
+After lunch, I attended Grant Fritchey's ([blog][6] | [twitter][7]) "Identifying and Fixing Performance Problems using" presentation and had a blast (I'm using the SQL Saturday site-ized version of his presentation name). Despite some demo issues, Grant managed to balance delivery of his presentation with good audience feedback, even taking a 2 minute break in the middle to get everyone up on their feet and fight the post-lunch effects. 
 
-After Grant's session I caught Andy Leonard's ([blog][8] | [twitter][9]) “SSIS Design Patterns” session. I was completely out of my depth here, being far more of a beginner in SSIS (it doesn't get much more beginner), but I was still able to take away quite a bit of information from the session, including some ideas I will likely try to put into practice in an upcoming project.
+After Grant's session I caught Andy Leonard's ([blog][8] | [twitter][9]) "SSIS Design Patterns" session. I was completely out of my depth here, being far more of a beginner in SSIS (it doesn't get much more beginner), but I was still able to take away quite a bit of information from the session, including some ideas I will likely try to put into practice in an upcoming project.
 
 <div style="margin: .5em 2em .5em 0px; color: #666666; font-size: 80%; text-align: center;">
   <img src="http://www.tiernok.com/LTDBlog/sqlsat46_2010/andyquote.png" alt="Andy Leonard Quote" />

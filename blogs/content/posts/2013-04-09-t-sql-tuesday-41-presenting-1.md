@@ -22,7 +22,7 @@ It's the second Tuesday of the month, and you know what that means: it's <a href
 
 Standing up in front of a room of people and talking, especially on a technical topic, can induce nightmares. Think about everything that could go wrong. Your laptop could stop working. Your demos could fail. You could forget everything you were going to say. You could fall off the stage. (Oh, no, that's just me.)
 
-But once you get past the fear, you'll realize that presenting is pure joy. You get to teach other people. You get to share your knowledge. You get to see people's eyes light up when they “get it”. It's very rewarding.
+But once you get past the fear, you'll realize that presenting is pure joy. You get to teach other people. You get to share your knowledge. You get to see people's eyes light up when they "get it". It's very rewarding.
 
 The best way to deal with the nerves and the fears is to follow the Boy Scout motto: Be Prepared. Presenting is about more than the 60 or 75 minutes you are on stage. It takes preparation.
 

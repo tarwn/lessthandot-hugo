@@ -19,7 +19,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-“_I see a ton of parallelism in my execution plan I'm tuning.  I read something online and I'm going to alter the value in Maximum Degree of Parallelism (MAXDOP) so they go away.”_
+"_I see a ton of parallelism in my execution plan I'm tuning.  I read something online and I'm going to alter the value in Maximum Degree of Parallelism (MAXDOP) so they go away."_
 
 This is a very common problem and a very common solution that is found on the great wide internet of SQL and Google search results.  The first thing is, don't blanket change MAXDOP simply because you read it somewhere or someone says they did it or always do it.  This isn't a good _default_ thing to set typically.  Some specific database servers can take this type of change but it is more of a diagnosed and specific change. 
 
@@ -96,7 +96,7 @@ Executing the query again shows a much cleaner plan
 
 Don't believe everything you read or are told on the internet.  Even this blog should be verified by official documentation and highly skilled experts in the field.  The results shown here is the MAXDOP setting should not be an easy setting to run to when parallelism is shown in execution plans.  Tune the plan and when that is accomplished and if parallelism is truly an issue on your highly active OLTP SQL Server installations, then take a look at MAXDOP.
 
-Two resources that will assist on this topic greatly are the new book [Troubleshooting SQL Server: A Guide for the Accidental DBA][1], specifically the chapter on CPU and SQL Server.  Also, highly recommend fellow SQL Server MVP Paul White's paper, “[Understanding and Using Parallelism in SQL Server][2]” to read more on effects and why, how SQL Server uses Parallelism. 
+Two resources that will assist on this topic greatly are the new book [Troubleshooting SQL Server: A Guide for the Accidental DBA][1], specifically the chapter on CPU and SQL Server.  Also, highly recommend fellow SQL Server MVP Paul White's paper, "[Understanding and Using Parallelism in SQL Server][2]" to read more on effects and why, how SQL Server uses Parallelism. 
 
  [1]: http://www.simple-talk.com/books/sql-books/troubleshooting-sql-server-a-guide-for-the-accidental-dba/
  [2]: http://www.simple-talk.com/sql/learn-sql-server/understanding-and-using-parallelism-in-sql-server/

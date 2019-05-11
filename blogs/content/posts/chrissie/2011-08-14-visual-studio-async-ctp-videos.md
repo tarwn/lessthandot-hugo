@@ -55,11 +55,11 @@ And this is on page one.
 
 > Iterator and Async Methods in Visual Basic
 > 
-> The “Microsoft Visual Studio Async CTP” introduces async methods and iterator methods to Visual Basic, along with their four new contextual keywords: Async, Await, Iterator, Yield.
+> The "Microsoft Visual Studio Async CTP" introduces async methods and iterator methods to Visual Basic, along with their four new contextual keywords: Async, Await, Iterator, Yield.
 > 
 > Async methods are used for long-running computations. This language specification does not aim to teach asynchrony – the best place for that is through watching Anders Hejlsberg’s PDC 2010 talk, and then by working through the walkthrough and samples. Unfortunately there is not yet a large body of further training material: VB’s form of asynchrony was largely inspired by F# Async Workflows in Visual Studio 2010 and had not been widely used before then. I want to stress just one point:
   
-> Asynchrony is NOT the same as “running on a background thread”. In computing, as the word’s etymology suggests, asynchronous merely means “not [a-] at the same time [-synchronous]”. In other words you can invoke a function, and promptly get back a placeholder for the result, but the actual result of the function will be given to you not immediately but at some other later time. Background threads are one way to achieve asynchrony, but they’re not the only way, and are often not even the best way.
+> Asynchrony is NOT the same as "running on a background thread". In computing, as the word’s etymology suggests, asynchronous merely means "not [a-] at the same time [-synchronous]". In other words you can invoke a function, and promptly get back a placeholder for the result, but the actual result of the function will be given to you not immediately but at some other later time. Background threads are one way to achieve asynchrony, but they’re not the only way, and are often not even the best way.
   
 > What we are delivering in this Async CTP is a compositional (easy) way to make asynchronous calls in the Visual Basic language.
 > 

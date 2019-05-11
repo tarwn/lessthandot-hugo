@@ -133,7 +133,7 @@ Inside I laughed my head off while outside I calmly explained, to her great conf
 
 And I'm glad to say that to this day she only runs whole SQL query files supplied as part of a predefined procedure that she has specifically been instructed to run.
 
-Three cheers for “I've taken a class in SQL” woman!
+Three cheers for "I've taken a class in SQL" woman!
 
 Emtucifor [Blog][20]
 
@@ -177,13 +177,13 @@ Naomi Nosonovsky ([@NaomiNos][25]), [Blog][26], [Beyond Relationa][27]l, [Guest 
 
 Jes Borland ([@grrl_geek][29]), [Blog][30]
 
-* * *I started as an application developer and my back-end was Access. However, once I learned how to actually write SQL code, I could not go back to the GUI of Access and prefer it even to some of the front-end development that I still have to do sometimes. There is something that is intrinsically more “real” to me with SQL and data than other aspects of development. After all, at the end of the day, the data is still the primary factor behind almost all development and the ability to work well with it is important – at least to me. And I would be remiss if I didn't point out the great help that my friends at LessThanDot have offered that allowed me to learn what I have.</p> 
+* * *I started as an application developer and my back-end was Access. However, once I learned how to actually write SQL code, I could not go back to the GUI of Access and prefer it even to some of the front-end development that I still have to do sometimes. There is something that is intrinsically more "real" to me with SQL and data than other aspects of development. After all, at the end of the day, the data is still the primary factor behind almost all development and the ability to work well with it is important – at least to me. And I would be remiss if I didn't point out the great help that my friends at LessThanDot have offered that allowed me to learn what I have.</p> 
 
 Chopstik ([@Chopstik][31]), [Blog][32]
 
 * * *My first foray into SQL Server I was fresh from MySQL and MS Access and couldn't see past the first couple layers of tables and queries. Fast forward a few years and I was working with procedures and views and just starting to understand indexing. A few more years and I was working with SSRS and learning a lot more about tuning and topics like SARGability. SSAS, SSIS, the power of system views, backup and restore strategies, monitoring, ... The deeper and further I go, the more there is to learn, and it doesn't seem to be ending any time soon.</p> 
 
-Funny anecdote/story: I was once performing destructive maintenance on a server (detaching and removing old databases) as well as rearranging data files for some active databases. I cleaned up all the stale Dbs and finished moving them from the old location to the new one with time to spare in my outage window. About an hour afterwards I received a phone call from the shipping office, who had tried all the normal troubleshooting steps (reboot, reboot again, etc) to figure out why their MS Access app was having problems. Halfway through walking them through checking their ethernet outlet, while literally saying something like “wiggle the cable and then try again”, I realized that there was one obscure database that a single form in their app relied on. I quickly reattached the forgotten DB just in time for them to connect properly. The rest of my time with the company the shipping office always wiggled their ethernet cable before calling me, and I haven't forgotten to reattach a database since. Sometimes it's the lessons from when we screw up that stick with us the longest.
+Funny anecdote/story: I was once performing destructive maintenance on a server (detaching and removing old databases) as well as rearranging data files for some active databases. I cleaned up all the stale Dbs and finished moving them from the old location to the new one with time to spare in my outage window. About an hour afterwards I received a phone call from the shipping office, who had tried all the normal troubleshooting steps (reboot, reboot again, etc) to figure out why their MS Access app was having problems. Halfway through walking them through checking their ethernet outlet, while literally saying something like "wiggle the cable and then try again", I realized that there was one obscure database that a single form in their app relied on. I quickly reattached the forgotten DB just in time for them to connect properly. The rest of my time with the company the shipping office always wiggled their ethernet cable before calling me, and I haven't forgotten to reattach a database since. Sometimes it's the lessons from when we screw up that stick with us the longest.
 
 Eli Weinstock-Herman ([@tarwn][33]), [Blog][34]
 

@@ -24,7 +24,7 @@ Recollating ended up being more trouble than expected, because the collation aff
 
 Because of the time this can take and the cost of regenerating statistics, recollation in a production environment would introduce additional concerns. After getting sufficiently frustrated with manually fixing each column as we discovered issues, a colleague and I wrote a script to handle this for us. Figured it would be worth sharing here both because it can be useful, and it provides a little bit of a glimpse into SQL Server's system tables.
 
-We started with a script that Lowell Izaguirre contributed at [SQL Server Central (requires login)][1] that scripts all indexes as CREATE STATEMENTS. All we needed to do here was tweak the end output to populate a table full of “drop index” statements as well. From there we were able to loop over all the indexes in the database, dropping each one. With a few modifications it would be possible to limit what is dropped/recreated further but we did not need to do so.
+We started with a script that Lowell Izaguirre contributed at [SQL Server Central (requires login)][1] that scripts all indexes as CREATE STATEMENTS. All we needed to do here was tweak the end output to populate a table full of "drop index" statements as well. From there we were able to loop over all the indexes in the database, dropping each one. With a few modifications it would be possible to limit what is dropped/recreated further but we did not need to do so.
 
 From there we just needed to populate a table variable with information about the columns to recollate. We can limit this to the columns that need recollation very easily, by checking the COLLATION\_NAME column value in INFORMATION\_SCHEMA.COLUMNS.
 

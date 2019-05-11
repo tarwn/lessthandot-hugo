@@ -110,7 +110,7 @@ Create the remaining variables that are required.
 
 DynoDestination as a string
 
-ZipLoc as a string and evaluate as an expression of, @[User::DynoDestination] + “.zip”
+ZipLoc as a string and evaluate as an expression of, @[User::DynoDestination] + ".zip"
 
  
 
@@ -118,7 +118,7 @@ Bring a script task over into the partition loop container and name it, Determin
 
 After bringing an Execute SQL Task and naming it, Execute sp\_job\_start, configure the SQL task to execute a property expression with the following expression.
 
-“exec msdb.dbo.sp\_start\_job @job_id = '” + @[User::JobID]  + “'”
+"exec msdb.dbo.sp\_start\_job @job_id = '" + @[User::JobID]  + "'"
 
 This will be evaluated to the current partitions snapshot job and start the job.  Nothing else is needed in the SQL task. 
 
@@ -135,7 +135,7 @@ public void Main()
             DateTime current = System.DateTime.Now;
             conn = (SqlConnection)(Dts.Connections[1].AcquireConnection(Dts.Transaction) as SqlConnection);
             DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("exec msdb.dbo.sp_help_job @job_id = '” + Dts.Variables["JobID"].Value.ToString() + “',@job_aspect = N'JOB'", conn);
+            SqlCommand cmd = new SqlCommand("exec msdb.dbo.sp_help_job @job_id = '" + Dts.Variables["JobID"].Value.ToString() + "',@job_aspect = N'JOB'", conn);
             Thread.Sleep(5000);
             bool watcher = false;
 

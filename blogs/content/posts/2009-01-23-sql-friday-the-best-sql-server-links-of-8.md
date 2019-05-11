@@ -25,7 +25,7 @@ Kalen Delaney shows us that each table in SQL Server 2008 can contain a maximum 
 
 **[Back To Basics: Heaps][2]**
   
-The official Microsoft definition of a HEAP is “a table without a clustered index.” As simple as it can get. It doesn't matter if the table has 0 or 10 non-clustered indexes, as long as there is no clustered index on the table, it's called a HEAP. And let me say it another way “any table that is not associated with a clustered index is called heap”
+The official Microsoft definition of a HEAP is "a table without a clustered index." As simple as it can get. It doesn't matter if the table has 0 or 10 non-clustered indexes, as long as there is no clustered index on the table, it's called a HEAP. And let me say it another way "any table that is not associated with a clustered index is called heap"
 
 **[How to ask a Forums Question][3]**
   
@@ -33,15 +33,15 @@ I enjoyed this post because I myself have to deal with people like this every da
 
 **[Index columns, selectivity and equality predicates][4]**
   
-Gail Shaw writes “There's a common piece of advice given about columns in an index key that says that the most selective column should go first. I'm not going to say that's incorrect, because it's not. The problem is that it's often given without any explanation as to why the most selective column should go first, nor are the other considerations for index key order mentioned.
+Gail Shaw writes "There's a common piece of advice given about columns in an index key that says that the most selective column should go first. I'm not going to say that's incorrect, because it's not. The problem is that it's often given without any explanation as to why the most selective column should go first, nor are the other considerations for index key order mentioned.
 
-This can lead to misunderstandings like, in the extreme case, where one person after hearing that advice went and added the primary key column as the leading column of every single nonclustered index (because it's highly selective), and then wondered why his database performance decreased dramatically.”
+This can lead to misunderstandings like, in the extreme case, where one person after hearing that advice went and added the primary key column as the leading column of every single nonclustered index (because it's highly selective), and then wondered why his database performance decreased dramatically."
 
-**[Breaking a String into “Words”][5]**
+**[Breaking a String into "Words"][5]**
   
-Aaron Alton writes: “Occasionally on the MSDN forums, someone has the requirement to break out a string into words, one word per line. The poster usually says “I have the requirement to break out a string into words, one word per line”.”
+Aaron Alton writes: "Occasionally on the MSDN forums, someone has the requirement to break out a string into words, one word per line. The poster usually says "I have the requirement to break out a string into words, one word per line"."
 
-**[Breaking a String into “Words” the CLR way][6]**
+**[Breaking a String into "Words" the CLR way][6]**
   
 Jonathan Kehayias uses the CLR to break a string into words
 
@@ -55,7 +55,7 @@ Sarah Henwood and Bob Dorr explain SQL Server Sparse Files
 
 **[How It Works: sys.dm\_os\_buffer_descriptors][9]**
   
-Answer to the question: I am counting pages in the buffer pool using 'Select count(*) from sys.dm\_os\_buffer_descriptors' and I get 6,460 buffers but when when I look at the Buffer Node:Database pages counter it shows 6,599. Why the difference?”
+Answer to the question: I am counting pages in the buffer pool using 'Select count(*) from sys.dm\_os\_buffer_descriptors' and I get 6,460 buffers but when when I look at the Buffer Node:Database pages counter it shows 6,599. Why the difference?"
 
 **[RML Utilities – ReadTrace and how to workaround MARS][10]**
   

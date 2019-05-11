@@ -118,7 +118,7 @@ In the Database Properties dialog, select Mirroring.
   <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_1.gif" alt="" title="" width="525" height="469" />
 </div>
 
-To set mirroring up we must go into the “Configure Security” wizard. This is slightly off on what it means. In this wizard we will in all, setup security, endpoints and the location of the instances.
+To set mirroring up we must go into the "Configure Security" wizard. This is slightly off on what it means. In this wizard we will in all, setup security, endpoints and the location of the instances.
 
 The first tab will ask if we want a witness or not. A witness can be located on the mirror if needed but given the \*free\* status of SQL Express, it is a good choice to use as a witness. This is best located off both the principal and mirror instances. 
 
@@ -175,7 +175,7 @@ select * from sys.database_mirroring where mirroring_guid is not null
   <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_9.gif" alt="" title="" width="628" height="127" />
 </div>
 
-In the real world, the mirroring\_state\_desc will say “Synchronizing” much longer than the amount of time it takes to execute this query. The initial startup of the mirroring requires it to catch up, and with larger databases that are active, the synchronizing status can last minutes.
+In the real world, the mirroring\_state\_desc will say "Synchronizing" much longer than the amount of time it takes to execute this query. The initial startup of the mirroring requires it to catch up, and with larger databases that are active, the synchronizing status can last minutes.
   
 We now have a mirroring running in High Protection. 
 

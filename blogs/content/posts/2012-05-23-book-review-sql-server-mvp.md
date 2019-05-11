@@ -36,47 +36,47 @@ I found this section relevant when I opened this book because I was starting two
 
 **Part 2 – Database Development   
 **    
-The “Error Handling in SQL Server applications” chapter by Bill Graziano was immediately useful and impactful. Using “Try...Catch” and RAISERROR are often overlooked, but shouldn't be, when writing T-SQL. 
+The "Error Handling in SQL Server applications" chapter by Bill Graziano was immediately useful and impactful. Using "Try...Catch" and RAISERROR are often overlooked, but shouldn't be, when writing T-SQL. 
 
-“Introduction to XQuery” by Michael Coles also caught my attention, as learning it is one of my goals for 2012.
+"Introduction to XQuery" by Michael Coles also caught my attention, as learning it is one of my goals for 2012.
 
-“Full-text searching” by Robert C. Cain is an awesome chapter. It covers how to set up, use, and maintain full-text catalogs and indexes. I've read about it before, but this had some of the best real-world examples. I had been looking at implementing it in a project at that time, so it was great timing.
+"Full-text searching" by Robert C. Cain is an awesome chapter. It covers how to set up, use, and maintain full-text catalogs and indexes. I've read about it before, but this had some of the best real-world examples. I had been looking at implementing it in a project at that time, so it was great timing.
 
-Reading “Why every SQL developer needs a tools database” by LessThanDot's very own Denis Gobo was cool. (You guys! I get to blog with authors and MVPs and really smart, amazing people!) Denis makes a great case for a separate database to hold shared functions. He also emphasizes the need for a numbers table, which I've recently re-acquainted myself with. Trust us, you want one.
+Reading "Why every SQL developer needs a tools database" by LessThanDot's very own Denis Gobo was cool. (You guys! I get to blog with authors and MVPs and really smart, amazing people!) Denis makes a great case for a separate database to hold shared functions. He also emphasizes the need for a numbers table, which I've recently re-acquainted myself with. Trust us, you want one.
 
-I learned something brand new! (At 5:55 am, no less!) “Deprecation feature” by Cristian Lefter showed how to track the use of deprecated features through perfmon, a trace, or (my favorite) extended events. How did I NOT know about this? What a great audit tool. Now, how to effectively implement this...
+I learned something brand new! (At 5:55 am, no less!) "Deprecation feature" by Cristian Lefter showed how to track the use of deprecated features through perfmon, a trace, or (my favorite) extended events. How did I NOT know about this? What a great audit tool. Now, how to effectively implement this...
 
 I like the fact that non-SQL MVPs are also contributing. Even a (gasp) Access MVP.
 
 **Part 3: Database Administration   
 **    
-“My favorite DMVs, and why” by Aaron Bertrand is one of my favorite chapters. DMVs are great. What I learned is that Aaron made his own sp_who! I wish I was still in a large corporate environment to test that. He also shows an uptime function that he created in his utility database, which he uses in almost all DMV queries. Good idea!
+"My favorite DMVs, and why" by Aaron Bertrand is one of my favorite chapters. DMVs are great. What I learned is that Aaron made his own sp_who! I wish I was still in a large corporate environment to test that. He also shows an uptime function that he created in his utility database, which he uses in almost all DMV queries. Good idea!
 
-Ron Talmage wrote “Some practical issues in table partitioning”. It covered the basics – usually writing about this topic is overwhelming. I know I don't fully understand partitioning yet. One thing I know: I think LEFT is easier to understand.
+Ron Talmage wrote "Some practical issues in table partitioning". It covered the basics – usually writing about this topic is overwhelming. I know I don't fully understand partitioning yet. One thing I know: I think LEFT is easier to understand.
 
-Scott Stauffer wrote “Successfully implementing Kerberos delegation”. In February, I had the pleasure of meeting Scott in Redmond, WA. I remember many Kerberos issues from my previous job. I never had a solid understanding of all the pieces until now. He provides a great great list of resources. I would love to see more people understand Active Directory and related services. (As Argenis Fernandez once tweeted, you can't be really good at SQL Server until you get AD.) 
+Scott Stauffer wrote "Successfully implementing Kerberos delegation". In February, I had the pleasure of meeting Scott in Redmond, WA. I remember many Kerberos issues from my previous job. I never had a solid understanding of all the pieces until now. He provides a great great list of resources. I would love to see more people understand Active Directory and related services. (As Argenis Fernandez once tweeted, you can't be really good at SQL Server until you get AD.) 
 
 **Part 4 – Performance Tuning and Optimization   
 **    
 There are a few chapters on indexes here, because they are that important.
 
-“How to optimize tempdb performance” by Brad McGehee includes many useful tips. Some are very basic, like splitting it into multiple files and having the files located on a different disk than data files. He also talks about pre-allocating space and how TDE affects tempdb.
+"How to optimize tempdb performance" by Brad McGehee includes many useful tips. Some are very basic, like splitting it into multiple files and having the files located on a different disk than data files. He also talks about pre-allocating space and how TDE affects tempdb.
 
-Kevin Kline's chapter, “Correlating SQL Profiler with Windows Performance Monitor”, blew me away. I always knew you could do it, but didn't realize how easy it was. I wish I'd known this a year ago. 
+Kevin Kline's chapter, "Correlating SQL Profiler with Windows Performance Monitor", blew me away. I always knew you could do it, but didn't realize how easy it was. I wish I'd known this a year ago. 
 
-“How to use Dynamic Management Views” by Glenn Berry is immediately useful, just like the ebook “[SQL Server DVM Starter Pack][2]” he wrote with Louis Davidson and Tim Ford. This chapter includes lots of queries you can run, work with, and edit further. DMVs continue to be one of the features I use most in SQL Server.
+"How to use Dynamic Management Views" by Glenn Berry is immediately useful, just like the ebook "[SQL Server DVM Starter Pack][2]" he wrote with Louis Davidson and Tim Ford. This chapter includes lots of queries you can run, work with, and edit further. DMVs continue to be one of the features I use most in SQL Server.
 
-Cristian Lefter talks about Xevents in “XEVENT: the next event infrastructure for SQL Server”. I agree, these are the future of monitoring. It's a good overview that summarizes key points. There are also a couple of easy-to-follow examples.
+Cristian Lefter talks about Xevents in "XEVENT: the next event infrastructure for SQL Server". I agree, these are the future of monitoring. It's a good overview that summarizes key points. There are also a couple of easy-to-follow examples.
 
 **Part 5: Business Intelligence** 
 
-Erin Welker's “BI for the relational guy” gives a good overview of how OLTP differs from OLAP. She discusses what Microsoft products are BI-related. There's also a list of further reading material. (More books to put on my list...)
+Erin Welker's "BI for the relational guy" gives a good overview of how OLTP differs from OLAP. She discusses what Microsoft products are BI-related. There's also a list of further reading material. (More books to put on my list...)
 
-William Vaughn's writing style for “U nlocking the secrets of SQL Server 2008 Reporting Services” had me giggling from start to finish. He gives a thorough overview of the many often -overlapping parts of SSRS. He also makes note of things like IIS no longer being required. 
+William Vaughn's writing style for "U nlocking the secrets of SQL Server 2008 Reporting Services" had me giggling from start to finish. He gives a thorough overview of the many often -overlapping parts of SSRS. He also makes note of things like IIS no longer being required. 
 
-“Expressions in SQL Server Integration Services” by Matthew Roche was an interesting read for me. I'm familiar with expressions in SSRS and thought this might be similar. Not really. Expressions are powerful, because they allow you to offer more than one option for some properties.
+"Expressions in SQL Server Integration Services" by Matthew Roche was an interesting read for me. I'm familiar with expressions in SSRS and thought this might be similar. Not really. Expressions are powerful, because they allow you to offer more than one option for some properties.
 
-The book closes with an excellent chapter by Andy Leonard, “Incremental Loads using T-SQL and SSIS”. The first sentence had me giggling. The comparison between the two options is thorough and interesting.
+The book closes with an excellent chapter by Andy Leonard, "Incremental Loads using T-SQL and SSIS". The first sentence had me giggling. The comparison between the two options is thorough and interesting.
 
 This section made me realize how little I know about SSIS, SSAS, and data mining.
 

@@ -39,7 +39,7 @@ The meeting space was easy-to-find, convenient, and dare I say: not big enough? 
 
 We started with a welcome from our President, Tim, and an introduction of all our board members. Then, rather than a 30-minute presentation and dinner, we had networking time and dinner. I think this was invaluable for the first meeting. 
 
-The excellent presentation we had was “Microsoft BI Overview”, by Dave DuVarney. He covered the history of Microsoft and its BI tools, the current offerings, and the future. Things that he mentioned which I am excited about: SSRS subscriptions being available as Atom feeds, the awesomeness that is known as PowerPivot, and SharePoint 2010 Fast Search. 
+The excellent presentation we had was "Microsoft BI Overview", by Dave DuVarney. He covered the history of Microsoft and its BI tools, the current offerings, and the future. Things that he mentioned which I am excited about: SSRS subscriptions being available as Atom feeds, the awesomeness that is known as PowerPivot, and SharePoint 2010 Fast Search. 
 
 The meeting concluded with a rundown of the upcoming PASS events, a raffle for swag, and having to actually leave. This meeting was definitely worth the hour-and-a-half drive! 
 

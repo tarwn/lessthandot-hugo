@@ -142,7 +142,7 @@ Make sure that a query window is open with the context as a user that is in the 
 </p>
 
 <p>
-  Cannot execute as the database principal because the principal “dbo” does not exist, this type of principal cannot be impersonated, or you do not have permission.
+  Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.
 </p>
 
 <p>

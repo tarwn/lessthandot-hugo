@@ -7,7 +7,7 @@ ID: 2119
 excerpt: |
    
   
-  It's been a bit longer than a month, back when I posted “A Month with BlueMetal”.  I'm going on several months now and have started a building process in my own professional development that is down a path that fits right into where I wanted for al&hellip;
+  It's been a bit longer than a month, back when I posted "A Month with BlueMetal".  I'm going on several months now and have started a building process in my own professional development that is down a path that fits right into where I wanted for al&hellip;
 url: /index.php/itprofessionals/professionaldevelopment/bluemetal-architects-chicago-and-the/
 views:
   - 3539
@@ -23,7 +23,7 @@ categories:
   <a href="/media/blogs/All/index.png?mtime=1372254455"><img src="/wp-content/uploads/blogs/All/index.png?mtime=1372254455" alt="" width="380" height="51" align="left" /></a>
 </div>
 
-It's been a bit longer than a month, back when I posted “<a href="/index.php/ITProfessionals/ProfessionalDevelopment/a-month-with-bluemetal" target="_blank">A Month with BlueMetal</a>”.  I'm going on several months now and have started a building process in my own professional development that is down a path that fits right into where I wanted for all the goals I've made.  Standing by my own quote of, “_The last month has done nothing but solidify the fact that joining BlueMetal was, to say the least, a great decision_” the feeling is as strong as ever.  The best part of all of this is, the opportunity is there for someone else to reach the same goal of finding a place that has the model and potential as BlueMetal Architects does.
+It's been a bit longer than a month, back when I posted "<a href="/index.php/ITProfessionals/ProfessionalDevelopment/a-month-with-bluemetal" target="_blank">A Month with BlueMetal</a>".  I'm going on several months now and have started a building process in my own professional development that is down a path that fits right into where I wanted for all the goals I've made.  Standing by my own quote of, "_The last month has done nothing but solidify the fact that joining BlueMetal was, to say the least, a great decision_" the feeling is as strong as ever.  The best part of all of this is, the opportunity is there for someone else to reach the same goal of finding a place that has the model and potential as BlueMetal Architects does.
 
  
 
@@ -40,7 +40,7 @@ I'm not asking for much of myself, right?  I have a feeling that many of you wi
 
 With all of this, I'm extending the visibility of the addition BlueMetal Architects in Chicago is looking to gain.  But, I don't want you to just click the link and go look at a job description.  I'd rather have you, like I did, read about BlueMetal Architects first, and then go check out the description.  As with what I've said in many of my seminars and sessions, the best companies find the best people.  This also extends to a job description in the fact that, if they don't match your expertise or mindset exactly, the company still wants to hear from you if you have the same level of skills and ambition to succeed.
 
-As always, my favorite line from BlueMetal is, “<a href="http://www.bluemetal.com/#people" target="_blank">We wrote the book(s)</a>”
+As always, my favorite line from BlueMetal is, "<a href="http://www.bluemetal.com/#people" target="_blank">We wrote the book(s)</a>"
 
 <a href="http://www.bluemetal.com/#story" target="_blank">Who is BlueMetal?</a>
 

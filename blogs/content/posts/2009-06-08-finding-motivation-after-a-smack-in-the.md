@@ -21,6 +21,6 @@ Next are the social tools around us. Twitter has become a nice tool I use and al
 
 Sometimes you have to be reminded what you know and should be using in your own systems by sharing with others your knowledge. I always find it amazing how many people preaching the song literally never sing it. 
 
-So there is my brief Monday morning, “finding motivation” snapshot. I recommend Twitter and Blogging to everyone. It doesn't matter who you are and how much you know. I feel everyone can learn from blogs and things like conversation on Twitter. Even if bad advice is thrown up from time to time, the best thing we can do is learn from it and help the authors learn from it. No one gains from egotistical remarks of being more knowledge about any topic. We however do learn from helpful remarks on how to better ourselves. 
+So there is my brief Monday morning, "finding motivation" snapshot. I recommend Twitter and Blogging to everyone. It doesn't matter who you are and how much you know. I feel everyone can learn from blogs and things like conversation on Twitter. Even if bad advice is thrown up from time to time, the best thing we can do is learn from it and help the authors learn from it. No one gains from egotistical remarks of being more knowledge about any topic. We however do learn from helpful remarks on how to better ourselves. 
 
 Now that this blog is done I feel better no matter which side of my face was recently smacked at work. I'm now off to fix some log shipping issues I very well could have ignored given motivational issues.

@@ -30,9 +30,9 @@ I have lots of ideas. I just need the time to write. And, I need to focus on mor
   
 I am blown away by my experiences presenting already this year.
   
-February – presented “Reporting Services 201” for WI SSUG.
+February – presented "Reporting Services 201" for WI SSUG.
   
-March – presented “Reporting Services 201” for 24 Hours of PASS and “Make Your Voice Heard” for SQL Saturday 67 Chicago.
+March – presented "Reporting Services 201" for 24 Hours of PASS and "Make Your Voice Heard" for SQL Saturday 67 Chicago.
   
 I will be the speaker for MADPASS in April. I'm considering submitting for SQL Saturday 75 Columbus. I'm trying to work out a date to present to ONSSUG. I have committed to submitting abstracts for PASS Summit.
   
@@ -48,7 +48,7 @@ Status: Seattle, you better get ready for me.
   
 I'm on the board for [MADPASS][2] and [PASS WIT][3]. I was a professor for [SQL University][4] SSRS week and WIT week. I hosted [T-SQL Tuesday][5]. I have other projects coming up.
   
-I'm still working on “no”, though. I have to get better at that. While a fun month, March didn't leave me much time for sleep or my friends.
+I'm still working on "no", though. I have to get better at that. While a fun month, March didn't leave me much time for sleep or my friends.
   
 Status: the SQL community is awesome. I'm excited to be part of it, every day. 
 

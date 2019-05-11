@@ -33,7 +33,7 @@ tags:
   - sql server 2008
 
 ---
-In my last post, “[Baseline, Performance Reporting and being a proactive DBA][1]“, I touched on baselines and using them to set thresholds for actively monitoring performance problems on SQL Server. I briefly discussed that every database server is unique when the databases we attach to SQL Server are packaged installations from third party applications (like SAP, Dynamics etc...). I received feedback from my good friend Aaron Lowe ([Twitter][2] | [Blog][3]) on this topic and had a very good conversation on how we create these baselines. Aaron had a great point regarding there not being much out there on exactly how to do this so I thought I'd write up a follow-up to the article and some points you can use to create your own baselines.
+In my last post, "[Baseline, Performance Reporting and being a proactive DBA][1]", I touched on baselines and using them to set thresholds for actively monitoring performance problems on SQL Server. I briefly discussed that every database server is unique when the databases we attach to SQL Server are packaged installations from third party applications (like SAP, Dynamics etc...). I received feedback from my good friend Aaron Lowe ([Twitter][2] | [Blog][3]) on this topic and had a very good conversation on how we create these baselines. Aaron had a great point regarding there not being much out there on exactly how to do this so I thought I'd write up a follow-up to the article and some points you can use to create your own baselines.
 
 **So why aren't there a ton of posts on creating baselines?**
 
@@ -75,7 +75,7 @@ Take the following example to start from
 
 In this control flow we can see WMI reader tasks executing to collect OS, IO and Memory information. This all then goes into a DBA database and tables to collect the data over time.
 
-> <span class="MT_red">Note: before going on, let's talk about WMI reader task. WMI reader task exposes WMI to read in and directly into a flat file or variable. I like to use the flat file option to minimize memory usage so when doing this, ensure you “append” to the files and not leave the default, Keep original</span>
+> <span class="MT_red">Note: before going on, let's talk about WMI reader task. WMI reader task exposes WMI to read in and directly into a flat file or variable. I like to use the flat file option to minimize memory usage so when doing this, ensure you "append" to the files and not leave the default, Keep original</span>
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/create_base_2.gif" alt="" title="" width="524" height="179" />
@@ -99,7 +99,7 @@ Once the baseline data is collected (typically a week during all hours of operat
 
 **Estimating, requesting and begging for more**
 
-When creating a baseline and then further estimating the resources you need to maintain that level of performance, overestimating is your best friend. There is a reason when you ask a DBA, “How much disk space do you need?” you will always be given the answer, “All of it”. This is because, before the database server is set in place and growth analytics have been collected, we're planning for the worst and fastest growth path. There is nothing wrong with that method of going about resources other than budget planning.
+When creating a baseline and then further estimating the resources you need to maintain that level of performance, overestimating is your best friend. There is a reason when you ask a DBA, "How much disk space do you need?" you will always be given the answer, "All of it". This is because, before the database server is set in place and growth analytics have been collected, we're planning for the worst and fastest growth path. There is nothing wrong with that method of going about resources other than budget planning.
 
 Baseline should give you the starting point to also base your reporting performance over time and estimating resources required for growth and scaling the database server.
 

@@ -59,7 +59,7 @@ Choose the type of server installation. We'll make life easy and choose for the 
 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_07.png?mtime=1369927220" alt="" width="379" height="283" />][7]
 
-Read the license terms (ha-ha) and select the “_I accept the license terms”_ checkbox. Click _Next_.
+Read the license terms (ha-ha) and select the "_I accept the license terms"_ checkbox. Click _Next_.
 
 [<img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part3/InstallOS_08.png?mtime=1369927220" alt="" width="379" height="285" />][8]
 
@@ -85,8 +85,8 @@ The login page appears. Login and behold the beauty of Windows Server 2012.
 
 Next we'll give some components friendlier names. Start up the PowerShell command window as an administrator (right-click on the icon in the start menu and select _Run As Administrator_ at the bottom). Execute the following commands:
 
-_Rename-NetAdapter -Name “Ethernet” -NewName “EXTLAN”   
-Rename-NetAdapter -Name “Ethernet 2” -NewName “INTLAN”   
+_Rename-NetAdapter -Name "Ethernet" -NewName "EXTLAN"   
+Rename-NetAdapter -Name "Ethernet 2" -NewName "INTLAN"   
 Rename-Computer -NewName **SP2013BI** -Restart –Force_
 
 The two statements will rename the network adapters. The external and internal LAN might be in another order, depending on how you added them to the VM. The third statement will rename the server to SP2013BI and restart the server.

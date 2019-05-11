@@ -40,7 +40,7 @@ categories:
 
 5. <a href="https://twitter.com/sqllensman" target="_blank">Patrick Flynn</a> is an Ironman!
 
-6. During Office Hours, one cruiser asked, “How do you do \*it\* – keeping up with the community/speaking/blogging, while having a family and a job?” That turned into one of the most honest discussions I've been part of on that topic. It's not easy – for any of us. It requires balance. Those conversations are what Office Hours is all about.
+6. During Office Hours, one cruiser asked, "How do you do \*it\* – keeping up with the community/speaking/blogging, while having a family and a job?" That turned into one of the most honest discussions I've been part of on that topic. It's not easy – for any of us. It requires balance. Those conversations are what Office Hours is all about.
 
 7. Running a 5K in Charlotte Amalie, St Thomas, is a lot of work. Those hills! Those 99 Stairs! But having two fellow cruisers along makes it a lot more fun. (Thanks Jared and Drew!)
 
@@ -64,6 +64,6 @@ categories:
 
 9. <a href="https://twitter.com/kleegeek" target="_blank">David Klee</a> of <a href="http://heraflux.com/" target="_blank">Heraflux Technologies </a>is an amazing resource for anything infrastructure related, and has great resources on his website.
 
-10. Not that we didn't know, but <a href="https://twitter.com/DBArgenis" target="_blank">Argenis Fernandez</a> reminded us, “Security is not easy”...as he hacked SQL Server data from packets and read through dlls for dangerous data.
+10. Not that we didn't know, but <a href="https://twitter.com/DBArgenis" target="_blank">Argenis Fernandez</a> reminded us, "Security is not easy"...as he hacked SQL Server data from packets and read through dlls for dangerous data.
 
 11. The 2017 itineraries are going to be amazing. Keep an eye on <a href="http://sqlcruise.com/" target="_blank">http://sqlcruise.com/</a> for the details!

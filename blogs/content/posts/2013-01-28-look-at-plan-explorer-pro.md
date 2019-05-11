@@ -58,7 +58,7 @@ SET customerName = 'Deadlock'
 WHERE ordernum = 4688235
 ```
 
-Go back to session 60 (first query window opened) and execute the statement. Then execute the statement in 59 and 58 in sequential order.  At this point, 60 is blocking the other statements from completing and would remain so if the sessions were left as is.  To force a deadlock, all that is needed is to COMMIT session 60.  To do this, go to session 60's query window and type “COMMIT”, highlight COMMIT and execute the statement.
+Go back to session 60 (first query window opened) and execute the statement. Then execute the statement in 59 and 58 in sequential order.  At this point, 60 is blocking the other statements from completing and would remain so if the sessions were left as is.  To force a deadlock, all that is needed is to COMMIT session 60.  To do this, go to session 60's query window and type "COMMIT", highlight COMMIT and execute the statement.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373" width="370" height="156" /></a>

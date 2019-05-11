@@ -24,11 +24,11 @@ If you previously downloaded the original version of SQLCop, you should manually
   
 1. This version of SQL Cop works with databases that have a binary collation.
 
-2. There was a “load nodes” problem that occurred when your firewall was blocking your connection to our site. This version of the application does require an internet connection the first time it is run so that an XML file can be downloaded. After this first download, you no longer need an internet connection. Without a connection to the internet, you will not see the blog or wiki article that explains the problems, but you will still be able to list the occurrences of the problem in your database.
+2. There was a "load nodes" problem that occurred when your firewall was blocking your connection to our site. This version of the application does require an internet connection the first time it is run so that an XML file can be downloaded. After this first download, you no longer need an internet connection. Without a connection to the internet, you will not see the blog or wiki article that explains the problems, but you will still be able to list the occurrences of the problem in your database.
 
 3. A database connection parameter was changed which will allow SQL Cop to run quicker.
 
-4. Some people were seeing “stub” instead of “No Problems Found”. This item has been corrected.
+4. Some people were seeing "stub" instead of "No Problems Found". This item has been corrected.
 
 **Updates**
   

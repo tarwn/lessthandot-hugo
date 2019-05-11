@@ -35,7 +35,7 @@ Here is one example from the book
   
 
 
-When getting started with your design, bear in mind the key principles that will help you to create architecture that meets “best practices,” minimizes costs and maintenance requirements, and promotes usability and extendibility. The key principles are: 
+When getting started with your design, bear in mind the key principles that will help you to create architecture that meets "best practices," minimizes costs and maintenance requirements, and promotes usability and extendibility. The key principles are: 
 
   * **Separation of concerns**. Break your application into distinct features that overlap in functionality as little as possible.
   * **Single Responsibility Principle**. Each component or a module should be responsible for only a specific feature or functionality.

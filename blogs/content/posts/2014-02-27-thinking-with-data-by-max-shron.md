@@ -29,7 +29,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  They do encourage you to do honest reviews, so don't expect every review to go like “OMG this is the bestest most awesomesauce book I have ever read!”. It might though if it is an actual great book, but if it isn't, I will surely mention it in the review.
+  They do encourage you to do honest reviews, so don't expect every review to go like "OMG this is the bestest most awesomesauce book I have ever read!". It might though if it is an actual great book, but if it isn't, I will surely mention it in the review.
 </p>
 
 <p style="text-align: justify">

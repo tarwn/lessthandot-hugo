@@ -43,7 +43,7 @@ Now let's bring back what we just inserted
 
 Here is the result
   
-{ “_id” : ObjectId(“50f1778ea5ec290b7773303b”), “name” : “Denis1” }
+{ "_id" : ObjectId("50f1778ea5ec290b7773303b"), "name" : "Denis1" }
 
 Just a warning, the ObjectId which is 50f1778ea5ec290b7773303b here will be different on your system.
 
@@ -59,7 +59,7 @@ If instead you use Denis2, you will get the row back
 
 <pre>db.things.find({name : "Denis2"})</pre>
 
-{ “_id” : ObjectId(“50f1778ea5ec290b7773303b”), “name” : “Denis2” }
+{ "_id" : ObjectId("50f1778ea5ec290b7773303b"), "name" : "Denis2" }
 
 Just to make sure that you have only one thing in the collection run the following
 
@@ -67,7 +67,7 @@ Just to make sure that you have only one thing in the collection run the followi
 
 You should back one thing only
   
-{ “_id” : ObjectId(“50f1778ea5ec290b7773303b”), “name” : “Denis2” }
+{ "_id" : ObjectId("50f1778ea5ec290b7773303b"), "name" : "Denis2" }
 
 Time to look at the upsert command
   
@@ -79,7 +79,7 @@ If you do a search for Denis6, you will get it back from the collection
 
 <pre>db.things.find({name : "Denis6"})</pre>
 
-{ “_id” : ObjectId(“50f1793d41c33bd2459aafeb”), “name” : “Denis6” }
+{ "_id" : ObjectId("50f1793d41c33bd2459aafeb"), "name" : "Denis6" }
 
 Instead of just specifying true in the options you can also name it to make it more clear, it will look like this { upsert: true }
 
@@ -89,7 +89,7 @@ Run this command, it will update Denis6 to Denis7
 
 <pre>db.things.find({name : "Denis7"})</pre>
 
-{ “_id” : ObjectId(“50f1793d41c33bd2459aafeb”), “name” : “Denis7” }
+{ "_id" : ObjectId("50f1793d41c33bd2459aafeb"), "name" : "Denis7" }
 
 ## Upsert example with an incremented counter
 
@@ -105,7 +105,7 @@ Now if we look in the collection
 
 Here is what is returned, as you can see hits is 1
   
-{ “_id” : ObjectId(“50f17b4541c33bd2459aafed”), “BlogPost” : “How To Do Upserts”, “Hits” : 1 }
+{ "_id" : ObjectId("50f17b4541c33bd2459aafed"), "BlogPost" : "How To Do Upserts", "Hits" : 1 }
   
 Let's run that same update statement two more times
 
@@ -116,7 +116,7 @@ Now if we look in the collection again
 
 <pre>db.things.find({BlogPost : "How To Do Upserts"})</pre>
 
-{ “_id” : ObjectId(“50f17b4541c33bd2459aafed”), “BlogPost” : “How To Do Upserts”, “Hits” : 3 }
+{ "_id" : ObjectId("50f17b4541c33bd2459aafed"), "BlogPost" : "How To Do Upserts", "Hits" : 3 }
 
 As you can see the hits counter has now increased to 3.
 

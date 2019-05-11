@@ -31,9 +31,9 @@ A while back someone posted on the ITKE forum asking what Indexes where, and wha
 
 In the basic view, an Index is a subset of columns from a table. This subset of columns is stored in a sorted order so that the SQL Server can more quickly find the records based on the data in the index.
 
-**[New Vendor Interview with an “annoying” DBA][4]**
+**[New Vendor Interview with an "annoying" DBA][4]**
   
-Once you have been a DBA for any length of time, you will encounter the situation of a new vendor coming in with software that has a database back end. Wherever I am working or helping, I like to interject the idea of “DBA Input” as early into the process as possible and I go through a discussion with them.
+Once you have been a DBA for any length of time, you will encounter the situation of a new vendor coming in with software that has a database back end. Wherever I am working or helping, I like to interject the idea of "DBA Input" as early into the process as possible and I go through a discussion with them.
 
 **[When did DBCC CHECKDB last run on my databases?][5]**
   
@@ -51,7 +51,7 @@ Interesting post make sure you read the comments
   
 I'd be willing to place a bet that on any given week, I'll field at least one question on the MSDN Forums that reads a bit like this:
 
-“I need to create a unique key for a table using a Stored Procedure|User-Defined Function. Please do NOT suggest IDENTITY.”
+"I need to create a unique key for a table using a Stored Procedure|User-Defined Function. Please do NOT suggest IDENTITY."
 
 
 

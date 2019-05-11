@@ -93,7 +93,7 @@ SQL Server 2008 R2 Express Edition CTP (x86) – (English)
 
 There is a lot more coming, from the [SQL Server news blog][2]
 
-> SQL Server 2008 R2 August CTP is only the first in a string of CTPs launching this month. In the coming weeks we'll also launch CTPs for low latency complex event processing now called StreamInsight, the first CTP for SQL Azure Database, a limited preview of Project “Gemini” Excel and SharePoint add-ins and a private technology preview of Project Madison, Microsoft's massively scalable data warehousing solution, with a select group of customers. Stay tuned to this page, where we'll be announcing new CTPs as they become available.
+> SQL Server 2008 R2 August CTP is only the first in a string of CTPs launching this month. In the coming weeks we'll also launch CTPs for low latency complex event processing now called StreamInsight, the first CTP for SQL Azure Database, a limited preview of Project "Gemini" Excel and SharePoint add-ins and a private technology preview of Project Madison, Microsoft's massively scalable data warehousing solution, with a select group of customers. Stay tuned to this page, where we'll be announcing new CTPs as they become available.
 > 
 > We're very excited about the progress toward the big launch of SQL Server 2008 R2 next year and are looking forward to your feedback to help us get there!
 

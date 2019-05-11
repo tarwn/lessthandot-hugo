@@ -30,13 +30,13 @@ Features like [SQL Server Integration Services have limitations][2] in regards t
 
 **AWE** 
 
-Since the choice between 32 bit and 64 bit is much less of a problem, this tip includes the question, “Should AWE be enabled on 64 bit SQL Server installations?”
+Since the choice between 32 bit and 64 bit is much less of a problem, this tip includes the question, "Should AWE be enabled on 64 bit SQL Server installations?"
 
 Enabling AWE on 64 bit installations of SQL Server essentially does nothing.  Another consideration is that AWE will be [removed in Denali][3].  This removes the question of enabling it or not. 
 
-The better question is, “Should Locked Pages be set?”  [Lock Pages in Memory][4] may help improve performance on 64 bit platforms greatly by preventing memory from being paged out from the buffer pool.  Should you configure lock pages in memory?  If SQL Server is logging sever paged out error, maybe.  There are many things that could cause it.  Other applications installed on the server, large file copies and etc...  Should SQL Server be the only thing installed on the server? Yes.  Sometimes limited resources say otherwise though.
+The better question is, "Should Locked Pages be set?"  [Lock Pages in Memory][4] may help improve performance on 64 bit platforms greatly by preventing memory from being paged out from the buffer pool.  Should you configure lock pages in memory?  If SQL Server is logging sever paged out error, maybe.  There are many things that could cause it.  Other applications installed on the server, large file copies and etc...  Should SQL Server be the only thing installed on the server? Yes.  Sometimes limited resources say otherwise though.
 
-If you see errors containing, “A significant part of sql server process memory has been paged out. This may result in a performance degradation.” in the SQL Server Error Log, you should start you investigation quickly.  Even if the errors were only logged one timespan, the cause must be identified so future performance is not affected.
+If you see errors containing, "A significant part of sql server process memory has been paged out. This may result in a performance degradation." in the SQL Server Error Log, you should start you investigation quickly.  Even if the errors were only logged one timespan, the cause must be identified so future performance is not affected.
 
 If working on a preexisting installation and lock pages in memory is not configured, determine if there is a need by using Performance Monitor, monitoring for errors noted in the SQL Server Log and guidance from [this CSS article][5].
 

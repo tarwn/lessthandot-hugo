@@ -18,7 +18,7 @@ categories:
   - SSRS
 
 ---
-I don't know how to describe how awesome and amazing my first PASS Summit was. I'm normally verbose, but don't know where to start. Perhaps “a picture is worth a thousand words” will help me here. 
+I don't know how to describe how awesome and amazing my first PASS Summit was. I'm normally verbose, but don't know where to start. Perhaps "a picture is worth a thousand words" will help me here. 
 
 **Monday, October 10** 
 
@@ -42,7 +42,7 @@ Eating lunch at a Russian restaurant Buck Woody recommended.
   
 ![][6]
 
-I “squeeeeeeeeeeeed” myself hoarse in the registration area. 
+I "squeeeeeeeeeeeed" myself hoarse in the registration area. 
 
 I ate dinner at Lowell's with Steve Jones, Andy Warren, and several hundred of our closest SQL friends. 
 
@@ -94,7 +94,7 @@ I walked around the vendor show. I talked to cool people. I collected cool swag.
 
 I attended the chapter lunch. I met people interested in attending and speaking at my user group, MADPASS. 
 
-Drumroll please...I was giving my first PASS Summit presentation, “Reporting Services 201”.
+Drumroll please...I was giving my first PASS Summit presentation, "Reporting Services 201".
   
 ![][14]
 
@@ -146,7 +146,7 @@ I woke up sick. Really, really sick. Yuck. #nerdflu sucks.
 
 I attended the Birds of a Feather Lunch and sat at Aaron Nelson's PowerShell table. 
 
-I watched Jessica Moss present “Preventing the “Oh Poop!” Reporting Services Situation”. 
+I watched Jessica Moss present "Preventing the "Oh Poop!" Reporting Services Situation". 
 
 I watched Lightning Talks. If you've never had David Stein explain database lessons learned from The Godfather, well, you ought to. Also, if you've never heard Doug Lane explain why, with both donkeys and dashboards, framing matters, you ought to. 
 

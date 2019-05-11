@@ -347,7 +347,7 @@ The problem is to find the overlapped regions (or ranges) and these overlapped r
   
 I saw this problem at ~11pm on Wednesday night, thought I solved it and that's when the idea of this blog came to my mind.
 
-The next day, however, based on Hunchback's (Alejandro Mesa) comment I realized, that my “solution” worked only for a single overlapping range for the same chromosome. If we have multiple overlapping ranges, that solution will not work. I spent ~ an hour trying to fix my idea for multiple overlapping ranges, but gave up at the end, as I had work to do. So, I will show two ingenious solutions of this problem presented in that thread by (Peso) Peter Larsson.
+The next day, however, based on Hunchback's (Alejandro Mesa) comment I realized, that my "solution" worked only for a single overlapping range for the same chromosome. If we have multiple overlapping ranges, that solution will not work. I spent ~ an hour trying to fix my idea for multiple overlapping ranges, but gave up at the end, as I had work to do. So, I will show two ingenious solutions of this problem presented in that thread by (Peso) Peter Larsson.
 
 First let's create the test table with 100K records:
 

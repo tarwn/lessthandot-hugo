@@ -17,7 +17,7 @@ If you ever replicate tables that have identity seeds on columns you're more tha
 
 There are a few catches to mention. The first is not to use the drop option in the @pre\_creation\_cmd parameter of the sp_addarticle execution if you want to retain the last set seed on the subscriber table. I say this because if you go on your subscriber after initializing it and check your seed, it will be set to NULL. This is normal for how the drop and even the truncate option handles the seed. You'll see the same results if you use truncate on a table that has a identity column. What you'll want to do is use the delete in this option to retain the seed where it is at the subscriber level.
   
-The second catch is identity_insert issues. If you change the creation command and then initilize your subscriber, you will soon find that the replication job is failing misserably upon inserts. This is due to more than likely to you having the “not for replication” setting on the subscriber table set to No. Best way to see all of this is to show you.
+The second catch is identity_insert issues. If you change the creation command and then initilize your subscriber, you will soon find that the replication job is failing misserably upon inserts. This is due to more than likely to you having the "not for replication" setting on the subscriber table set to No. Best way to see all of this is to show you.
 
 To create the scenario I'm trying to show let's create a few databases and setup replication.
 

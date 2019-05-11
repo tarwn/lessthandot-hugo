@@ -131,7 +131,7 @@ oracle.com/opensource.
 
 **Will Oracle continue Sun's virtualization strategy?**
   
-Yes, Oracle plans to continue Sun's “desktop to datacenter virtualization”
+Yes, Oracle plans to continue Sun's "desktop to datacenter virtualization"
   
 strategy and integrate with Oracle's virtualization products. By unifying
   

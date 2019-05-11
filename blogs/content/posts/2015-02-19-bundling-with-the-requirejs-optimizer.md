@@ -76,7 +76,7 @@ You can feed the optimizer either command-line options or an options file, I sug
     ]
 }
 ```
-The optimizer produces a new “app.js” file for me in the js-built folder and I can copy that over my existing source file. Notice how I did not have to define every single file, the optimizer will take the two modules in the “include” and trace all of their dependencies for me. There is also an option to exclude individual files or other defined bundles.
+The optimizer produces a new "app.js" file for me in the js-built folder and I can copy that over my existing source file. Notice how I did not have to define every single file, the optimizer will take the two modules in the "include" and trace all of their dependencies for me. There is also an option to exclude individual files or other defined bundles.
 
 Config Translation:
 
@@ -90,7 +90,7 @@ Config Translation:
 As I worked with this smaller example and a much larger one, here are some issues I ran into:
 
   * appDir: I ran into problems defining appDir too deeply and had to define it at the shared higher level (but only on the larger project, so this may be a side effect of the next item)
-  * paths: On the larger project I had a number of paths defined with a starting slash, which works fine for a site but the optimizer translates as “look on the root of the drive”, not seeing any reason for those to be root paths, I fixed them in my main RequireJS config to be relative
+  * paths: On the larger project I had a number of paths defined with a starting slash, which works fine for a site but the optimizer translates as "look on the root of the drive", not seeing any reason for those to be root paths, I fixed them in my main RequireJS config to be relative
   * fileExclusionRegExp: I attempted to invert this into an opt-in list using negative lookaheads, but was unable to get it to match more than one value for lookaheads, despite testing the expression elsewhere
   * optimize: can be used to turn off minification, which was necessary before I figured out how to filter out some 3rd party files that the optimizer would exit with an error over
 
@@ -98,7 +98,7 @@ I did run into some other issues, here and there, but unfortunately was not keep
 
 ## Results
 
-To work around the “localhost is crazy fast” issue, we can use Chrome to load sites with throttled connections (Dev Tools, Toggle Device mode with the phone icon, change the Network dropdown). For these results I used the 3G option (100 RTT), which is only about 10% slower than the ping from my house to my personal website and at 750kbps, matches the type of shared bandwidth people might see if their company is keeping costs low and over-utilizing a cheaper internet connection. Improvements we make for our slower visitors only makes the experience that much better for our faster ones.
+To work around the "localhost is crazy fast" issue, we can use Chrome to load sites with throttled connections (Dev Tools, Toggle Device mode with the phone icon, change the Network dropdown). For these results I used the 3G option (100 RTT), which is only about 10% slower than the ping from my house to my personal website and at 750kbps, matches the type of shared bandwidth people might see if their company is keeping costs low and over-utilizing a cheaper internet connection. Improvements we make for our slower visitors only makes the experience that much better for our faster ones.
 
 ### Sample Site Results
 

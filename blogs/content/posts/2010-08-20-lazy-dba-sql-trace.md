@@ -26,7 +26,7 @@ tags:
   <img src="/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
 </div>
 
-SQL Trace (and use of profiler as a front end to SQL Trace procedures) is far from a secret. Performance tuning in the days of 2005/2008 has become much easier with the advent of DMVs but SQL Trace still has its place in the realm of, “Why is this happening”. Performance tuning becomes almost easy while watching exactly what is going on with the batches hitting our database servers. The only downfall is the impact SQL Trace plays on an active database server. This can be done strategically and with minimal impact from a well thought through plan of attack. 
+SQL Trace (and use of profiler as a front end to SQL Trace procedures) is far from a secret. Performance tuning in the days of 2005/2008 has become much easier with the advent of DMVs but SQL Trace still has its place in the realm of, "Why is this happening". Performance tuning becomes almost easy while watching exactly what is going on with the batches hitting our database servers. The only downfall is the impact SQL Trace plays on an active database server. This can be done strategically and with minimal impact from a well thought through plan of attack. 
 
 So what does SQL Trace have to do with being a lazy DBA?
 

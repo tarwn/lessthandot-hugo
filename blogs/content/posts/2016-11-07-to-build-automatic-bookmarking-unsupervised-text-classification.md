@@ -106,7 +106,7 @@ Word: tests, TF-IDF: 0.00962
 Word: false, TF-IDF: 0.00812
 Word: isusingwallaby, TF-IDF: 0.00609
 ```
-Apparently I didn't use explicit “false” values frequently enough in the prior posts (or at least not as frequently as I used the word Javascript). 
+Apparently I didn't use explicit "false" values frequently enough in the prior posts (or at least not as frequently as I used the word Javascript). 
 
 This bring us to the reasons it won't fit for what I'm doing:
 

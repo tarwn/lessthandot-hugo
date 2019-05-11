@@ -1,5 +1,5 @@
 ---
-title: No need for a “for loop” when you have linq
+title: No need for a "for loop" when you have linq
 author: Christiaan Baes (chrissie1)
 type: post
 date: 2011-11-13T07:25:00+00:00

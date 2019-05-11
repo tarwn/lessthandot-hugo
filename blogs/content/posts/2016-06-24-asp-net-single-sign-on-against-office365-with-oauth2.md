@@ -99,7 +99,7 @@ The examples did not fit well with what I already know about the mechanics of OA
 </p>
 
 <p>
-  Step 2: <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually">Register your application in Azure AD</a> (Follow the “Register your web server app with the Azure Management Portal” instructions)
+  Step 2: <a href="https://msdn.microsoft.com/en-us/office/office365/howto/add-common-consent-manually">Register your application in Azure AD</a> (Follow the "Register your web server app with the Azure Management Portal" instructions)
 </p>
 
 <p>
@@ -194,7 +194,7 @@ public ActionResult Office365Callback()
 ```
 
 <p>
-  The response fields are defined in the response section of the <a href="https://msdn.microsoft.com//en-us/library/azure/dn645542.aspx#Anchor_2" title="MSDN - Authorization Code Grant Flow - Request an authorization code">“Request an authorization code” MSDN article above</a>.
+  The response fields are defined in the response section of the <a href="https://msdn.microsoft.com//en-us/library/azure/dn645542.aspx#Anchor_2" title="MSDN - Authorization Code Grant Flow - Request an authorization code">"Request an authorization code" MSDN article above</a>.
 </p>
 
 <p>
@@ -226,7 +226,7 @@ public ActionResult Office365Callback()
 ```
 
 <p>
-  Resource: The resource “https://graph.windows.net” is the Azure AD directory (which no documentation I read anywhere made particularly clear). I had a lot of confusion about this from early on because the documentation is just a little too generic for it's own good.
+  Resource: The resource "https://graph.windows.net" is the Azure AD directory (which no documentation I read anywhere made particularly clear). I had a lot of confusion about this from early on because the documentation is just a little too generic for it's own good.
 </p>
 
 <p>
@@ -238,7 +238,7 @@ public ActionResult Office365Callback()
 </p>
 
 <p>
-  “code” is the code we extracted from the querystring above that we received in the Callback from Office365.
+  "code" is the code we extracted from the querystring above that we received in the Callback from Office365.
 </p>
 
 <p>
@@ -406,7 +406,7 @@ public void ParseToken()
 </h2>
 
 <p>
-  To lock the application down to a security group, go back to your Azure AD application configuration and select the option to require unique users, then add the Security Group on the “Users and Groups” tab.
+  To lock the application down to a security group, go back to your Azure AD application configuration and select the option to require unique users, then add the Security Group on the "Users and Groups" tab.
 </p>
 
 <h2>
@@ -414,5 +414,5 @@ public void ParseToken()
 </h2>
 
 <p>
-  I ran into a long list of errors during this process, hopefully you wil have bypassed most or all of them if you followed this far. Most of those errors were not knowing that that resource for the second URL is expected to be “https://graph.windows.net” and not your own application.
+  I ran into a long list of errors during this process, hopefully you wil have bypassed most or all of them if you followed this far. Most of those errors were not knowing that that resource for the second URL is expected to be "https://graph.windows.net" and not your own application.
 </p>

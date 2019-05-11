@@ -14,7 +14,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-This falls under DBA scripting and automation. I am going to try to key on these things in the next few weeks after reading Dan's blog titled, “Scripting DBA Actions” here http://blogs.msdn.com/dtjones/archive/2008/11/23/scripting-dba-actions.aspx
+This falls under DBA scripting and automation. I am going to try to key on these things in the next few weeks after reading Dan's blog titled, "Scripting DBA Actions" here http://blogs.msdn.com/dtjones/archive/2008/11/23/scripting-dba-actions.aspx
 
 If you have a landscape that is of some size then on most of your instances you're going to find yourself mixed into dozens of SQL Agents Jobs that can become a daily task to ensure they ran correctly. Again this is on the basis you have no monitoring tools that will already notify you of problems and failures. Now we all know there is the Notifications option on all jobs. This is great for basic failures, successful runs and completions but if you've ever had to write a job that really did something other than a backup task you're going to find the need for more options in notifying you when certain things fail and or complete. This is also helpful when you don't want large SQL Tasks to stop an entire job but in the same event let you know one update may have not been successful.
 
@@ -40,7 +40,7 @@ GO
 sp_configure 'show advanced options', 0
 GO
 ```
-Now you're going to need a profile and account. Out of scope for me to go step by step through this process and there are hundreds of articles out there on how to do it. Probably hundreds on doing what I'm talking about also but what's the internet if it isn't full of repeated articles stating the same thing 😉 One thing I do like to do is create a profile named “DBA {instance name}” and an account to match that naming. This way I know where it comes from and which aspect of the instance is sending it without even opening the mail. At least it gets me to open it quicker than most that is.
+Now you're going to need a profile and account. Out of scope for me to go step by step through this process and there are hundreds of articles out there on how to do it. Probably hundreds on doing what I'm talking about also but what's the internet if it isn't full of repeated articles stating the same thing 😉 One thing I do like to do is create a profile named "DBA {instance name}" and an account to match that naming. This way I know where it comes from and which aspect of the instance is sending it without even opening the mail. At least it gets me to open it quicker than most that is.
 
 So now that you have that all running you can test it by this simple little script
 
@@ -162,7 +162,7 @@ QuitWithRollback:
 IF (@@TRANCOUNT > 0) ROLLBACK TRANSACTION
 EndSave:
 ```
-You can test this job to see how it works by running as is and also changing the mail “Caller Task” so something like select 1/0.
+You can test this job to see how it works by running as is and also changing the mail "Caller Task" so something like select 1/0.
 
 Obviously I like the right click script option. The important things you need to know here is the workflow sense I'm sure if you're reading this you know how to create a SQL Job already and don't need me to tell you how.
 

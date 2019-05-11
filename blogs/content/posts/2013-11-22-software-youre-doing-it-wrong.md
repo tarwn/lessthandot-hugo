@@ -24,7 +24,7 @@ I spend most of my waking day on a computer, using software. Then I get on twitt
 
 Because most software sucks.
 
-Most software seems to have lost sight of what it is trying to achieve or has chosen mediocrity in order to kick something out the door and label the work “done”. Unfortunately this is the kind of “done” that ends in contract and scope arguments, with overtime paid to the developers and a customer unable to do critical parts of their business. That kind of “done”.
+Most software seems to have lost sight of what it is trying to achieve or has chosen mediocrity in order to kick something out the door and label the work "done". Unfortunately this is the kind of "done" that ends in contract and scope arguments, with overtime paid to the developers and a customer unable to do critical parts of their business. That kind of "done".
 
 The purpose of software is to do work for systems or people. 
 
@@ -60,7 +60,7 @@ Systems software is typically considered to be easier and free of all that peopl
 
 But at least we have the technical, people-free portion of the work handled, right? 
 
-That depends on your definition of actually “working”, which has two key issues: honesty and understanding.
+That depends on your definition of actually "working", which has two key issues: honesty and understanding.
 
 ### Understanding the Work
 

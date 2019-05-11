@@ -20,7 +20,7 @@ There was no way I was going to do it. Me, present, when there are speakers like
 
 I don't know if I'll be presenting. That's up to the community, when the voting takes place. I do know that I am terrified I will get picked, and terrified of presenting to an unknown number of people worldwide, but I still did it. 
 
-Why? Because people in the community are supporting me. Because people read my blogs, and listen to my Twitter chatter, and IM me with questions, and they think I have something to say that they can learn from. This thought floors me. I do not consider myself an “expert”, but people still want to learn from me. So I humor them. 
+Why? Because people in the community are supporting me. Because people read my blogs, and listen to my Twitter chatter, and IM me with questions, and they think I have something to say that they can learn from. This thought floors me. I do not consider myself an "expert", but people still want to learn from me. So I humor them. 
 
 When I first heard of this idea, I sat down and made a list of women in the SQL community that I respect and admire and would love to listen to. I figured they had all submitted their abstracts already, because these women are awesome.Today, I found out less than 20 abstracts have been submitted so far. 
 

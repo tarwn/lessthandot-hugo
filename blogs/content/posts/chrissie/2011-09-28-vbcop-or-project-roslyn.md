@@ -57,7 +57,7 @@ Do you have any suggestions?
 
 At [Build Anders Hejlsberg also talked about this][8], so it is no secret project.
 
-> In this talk, Technical Fellow Anders Hejlsberg will share project plans for the future directions of C# and Visual Basic, including a discussion of what trends are influencing and shaping the direction of programming languages. Anders will talk about asynchronous programming and Windows 8 programming, coming in the next version of Visual Studio. He will also discuss the long-lead project “Roslyn”, including object models for code generation, analysis, and refactoring, and upcoming support for scripting and interactive use of C# and Visual Basic.
+> In this talk, Technical Fellow Anders Hejlsberg will share project plans for the future directions of C# and Visual Basic, including a discussion of what trends are influencing and shaping the direction of programming languages. Anders will talk about asynchronous programming and Windows 8 programming, coming in the next version of Visual Studio. He will also discuss the long-lead project "Roslyn", including object models for code generation, analysis, and refactoring, and upcoming support for scripting and interactive use of C# and Visual Basic.
 
  [1]: http://www.wischik.com/lu/
  [2]: http://channel9.msdn.com/Blogs/matthijs/How-do-we-do-Language-Design-at-Microsoft-VB-and-C-by-Lucian-Wischik

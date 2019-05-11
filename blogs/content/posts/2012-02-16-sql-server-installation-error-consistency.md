@@ -6,7 +6,7 @@ date: 2012-02-16T11:39:00+00:00
 ID: 1530
 excerpt: |
   I was installing an instance of SQL Server on a VM this afternoon and ran into the following error
-  Rule “Consistency validation for SQL Server registry keys” failed.
+  Rule "Consistency validation for SQL Server registry keys" failed.
    
   The error isn't very common, that I knew of.  Before we go about why this error di&hellip;
 url: /index.php/datamgmt/datadesign/sql-server-installation-error-consistency/
@@ -23,7 +23,7 @@ categories:
 ---
 I was installing an instance of SQL Server on a VM this afternoon and ran into the following error
 
-Rule “Consistency validation for SQL Server registry keys” failed.
+Rule "Consistency validation for SQL Server registry keys" failed.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052" width="624" height="344" /></a>
@@ -39,11 +39,11 @@ Each log directory will be named as follows
 
 Yyyymmdd_hhmmss
 
-In the case of the error regarding the registry key validations, the log that was created was, “C:Program FilesMicrosoft SQL Server100Setup BootstrapLog20120214\_121951”.  Within this directory, there are two logs that can be focused on at first, Detail.txt and Detail\_GlobalRules.txt.
+In the case of the error regarding the registry key validations, the log that was created was, "C:Program FilesMicrosoft SQL Server100Setup BootstrapLog20120214\_121951".  Within this directory, there are two logs that can be focused on at first, Detail.txt and Detail\_GlobalRules.txt.
 
 If you have installed SQL Server, you will have one or more directories in the Log folder already.  Focus on those to follow along with this troubleshooting exercise.
 
-Open the Detail_GlobalRules.txt and search for the word, “Registry”.
+Open the Detail_GlobalRules.txt and search for the word, "Registry".
 
 In the Detail_GlobalRules.txt file that relates to the error noted in the beginning of this article, the lines that show the rules validation error and related information are found.
 
@@ -53,7 +53,7 @@ The information found here is valuable but in reality, it is only a review of wh
   <a href="/wp-content/uploads/blogs/DataMgmt/-114.png?mtime=1329268053"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-114.png?mtime=1329268053" width="624" height="359" /></a>
 </div>
 
-Open the Details.txt file next and search for the same keyword.  In the case below, the keyword was expanded to “Registry Key” to help refine the search.
+Open the Details.txt file next and search for the same keyword.  In the case below, the keyword was expanded to "Registry Key" to help refine the search.
 
 Here we can see that the actual registry keys that failed the validation are shown.  This is invaluable information!  One of the common fixes to this error that was found on searching related errors on MSDN, was security related.  In some cases, opening regedit to edit the registry and applying security access to the keys listed, resolved the errors.
 

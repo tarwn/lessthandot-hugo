@@ -47,7 +47,7 @@ INCLUDE ([DueDate],
 GO
 ```
 
-This “should” allow the index creation to complete.  It will take longer for the creation but, the importance of having indexing is without a doubt, not something you can give up.  Unless the data is simply a DR strategy or some sort of backup.
+This "should" allow the index creation to complete.  It will take longer for the creation but, the importance of having indexing is without a doubt, not something you can give up.  Unless the data is simply a DR strategy or some sort of backup.
 
  [1]: https://www.google.com/search?safe=off&biw=1920&bih=962&q=loading+data+in+batch+t-sql+prevent+log+growth
  [2]: http://msdn.microsoft.com/en-us/library/ms191261.aspx

@@ -47,7 +47,7 @@ $server, $instance, $job, and $path are the variables.
 
 Get-ChildItem –Path will look for all the objects in the current directory, which is the $path variable. 
 
--Filter will narrow those results down to only the files with “log” in the name. 
+-Filter will narrow those results down to only the files with "log" in the name. 
 
 That output is sent to the Sort-Object –Descending LastWriteTime command, which is sorting the files, in descending order, by the last write date. I only want to view the latest file. 
 

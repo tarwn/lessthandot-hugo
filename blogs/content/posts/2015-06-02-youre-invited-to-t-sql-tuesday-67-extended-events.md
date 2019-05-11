@@ -21,7 +21,7 @@ categories:
 
 The June 2015 topic is Extended Events. I want to know (and others do, too) how you've solved problems with Extended Events. What sessions have you created? What unique way have you used predicates or targets? What challenges have you overcome?
 
-If you're thinking, “I haven't used Extended Events!” or “I don't know enough about Extended Events to write a blog about it!”, perfect! I want you to write a blog that lists the questions you have. That way, other contributors can leave comments with suggestions, or link to their blogs that give you answers. Don't be shy! We all started out knowing nothing about this new feature.
+If you're thinking, "I haven't used Extended Events!" or "I don't know enough about Extended Events to write a blog about it!", perfect! I want you to write a blog that lists the questions you have. That way, other contributors can leave comments with suggestions, or link to their blogs that give you answers. Don't be shy! We all started out knowing nothing about this new feature.
 
 ### The Rules
 
@@ -35,7 +35,7 @@ In the body of the blog, you must include the T-SQL Tuesday logo, with a link ba
 
 ### Bonus Points
 
-In the post title, include “T-SQL Tuesday #67″.
+In the post title, include "T-SQL Tuesday #67″.
   
 Tweet your blog post with the hash tag #tsql2sday.
   

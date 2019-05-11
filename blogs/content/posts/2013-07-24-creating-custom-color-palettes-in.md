@@ -17,7 +17,7 @@ categories:
 ---
 Charts in SSRS are invaluable – they allow you to view data graphically. It is much easier to tell a story with pictures than with text and numbers.
 
-SSRS has a default set of color combinations for charts. Let's face it, they aren't pretty. Here's a sample line chart. The default color palette is “BrightPastel”.
+SSRS has a default set of color combinations for charts. Let's face it, they aren't pretty. Here's a sample line chart. The default color palette is "BrightPastel".
 
 <p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/custom color 1.png?mtime=1374677952" alt="" width="692" height="396" />

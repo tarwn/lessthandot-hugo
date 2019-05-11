@@ -50,7 +50,7 @@ I created a package.json file for my project:
 	}
 }
 ```<div style="background-color: #eeeeee; padding: .5em;">
-  <b>Important Note:</b> Be careful with your versions. I've found out the hard way that karma keeps their dependencies wide open “*” until they are ready to move versions, then they lock them down to something that may not actually be the latest version. Karma 0.10 worked fine with karma-jasmine 0.2 until they released 0.10.10 which locked in a requirement for karma-jasmine ~0.1. More recently the karma-phantomjs-launcher has revved to 1.3, which somehow broke a perfectly working 0.12 karma against 1.2 despite there being no actual code changes (I suspect a versioning side-effect mixed with their *-version acceptance).
+  <b>Important Note:</b> Be careful with your versions. I've found out the hard way that karma keeps their dependencies wide open "*" until they are ready to move versions, then they lock them down to something that may not actually be the latest version. Karma 0.10 worked fine with karma-jasmine 0.2 until they released 0.10.10 which locked in a requirement for karma-jasmine ~0.1. More recently the karma-phantomjs-launcher has revved to 1.3, which somehow broke a perfectly working 0.12 karma against 1.2 despite there being no actual code changes (I suspect a versioning side-effect mixed with their *-version acceptance).
 </div>
 
 And then go through the steps to create my karma configuration:
@@ -152,7 +152,7 @@ I was getting errors about missing timestamps when Squire loads some of the depe
   </p>
 </div>
 
-I was able to correct the issue from switching my test-main.js require basePath from “base/src” to “/base/src”, I'm still digging into why this worked.
+I was able to correct the issue from switching my test-main.js require basePath from "base/src" to "/base/src", I'm still digging into why this worked.
 
 # My Thoughts
 

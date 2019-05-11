@@ -30,7 +30,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  At least, that's the theory. It's been known that the communication from Microsoft can be improved. For example: bugs that are closed as “by design” of “not reproducible” without any  (or very little) feedback from Microsoft. Don't get me wrong, also a lot of good stuff happens on that site. But two of these “miscommunications” got a bit on my nerve the last few days.
+  At least, that's the theory. It's been known that the communication from Microsoft can be improved. For example: bugs that are closed as "by design" of "not reproducible" without any  (or very little) feedback from Microsoft. Don't get me wrong, also a lot of good stuff happens on that site. But two of these "miscommunications" got a bit on my nerve the last few days.
 </p>
 
 <p style="text-align: justify;">

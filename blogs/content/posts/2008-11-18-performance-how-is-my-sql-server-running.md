@@ -29,15 +29,15 @@ http://www.microsoft.com/downloads/details.aspx?FamilyId=1d3a4a0d-7e0c-4730-8204
 
 I'm assuming you at least have SSRS installed on your PC but preferably you've talked your management into a designated SSRS server by now.
 
-When you run the msi all it does is decompress some rdl's and a .sql script to the typical folder location of “C:Program FilesMicrosoft SQL Server90ToolsPerformanceDashboard”
+When you run the msi all it does is decompress some rdl's and a .sql script to the typical folder location of "C:Program FilesMicrosoft SQL Server90ToolsPerformanceDashboard"
 
-First thing is you need to put the procedures in the msdb on the instance you want to monitor. Microsoft has the scrip tin the folder you just added name, “setup.sql”. creative huh? Open ths script on the instance and run it. Don't worry because if you are a smart DBA you have a backup of the sys databases ;). Really though all this does is install some MS_PerfDashboard... procedures to the msdb. Yes make your sys backups if you haven't first though. 
+First thing is you need to put the procedures in the msdb on the instance you want to monitor. Microsoft has the scrip tin the folder you just added name, "setup.sql". creative huh? Open ths script on the instance and run it. Don't worry because if you are a smart DBA you have a backup of the sys databases ;). Really though all this does is install some MS_PerfDashboard... procedures to the msdb. Yes make your sys backups if you haven't first though. 
 
-Now open up VS.NET or BIDS and create a new Report Server Project named “SQL Server DBA”. In the fresh project right click the Reports folder and go to Add, Existing Item.
+Now open up VS.NET or BIDS and create a new Report Server Project named "SQL Server DBA". In the fresh project right click the Reports folder and go to Add, Existing Item.
 
 In the dialog browse to the location the rdl files are and select them all and click Add. Now right click the Shared Data Sources folder and click Add New Data Source. leave DataSource1 name as is unless you want to change all the datasets in the rdl files. Personally I do that because I control my data sources critically but it's up to you. My job is to get it running for you and then you make your own choices. So now click Edit and enter your server name, leave windows authentication and the then any db.
 
-Now double click the “performace\_dashbaord\_main.rdl” and hit preview. You were probably shown either permissions errors or a nasty datatime overflow error like this, “Difference of two datetime columns caused overflow at runtime”. First, permissions you can handle. You need server view state and access to sys views. The overflow is a bit different. There is an easy fix for it. Basically it's from sessions over 24 hours in time. To fix this go into the msdb and modify the procedure MS\_PerfDashboard.usp\_Main_GetSessionInfo to this
+Now double click the "performace\_dashbaord\_main.rdl" and hit preview. You were probably shown either permissions errors or a nasty datatime overflow error like this, "Difference of two datetime columns caused overflow at runtime". First, permissions you can handle. You need server view state and access to sys views. The overflow is a bit different. There is an easy fix for it. Basically it's from sessions over 24 hours in time. To fix this go into the msdb and modify the procedure MS\_PerfDashboard.usp\_Main_GetSessionInfo to this
 
 ```sql
 USE [msdb]

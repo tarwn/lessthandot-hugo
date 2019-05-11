@@ -22,7 +22,7 @@ First of all, let me assure you that I did not fall prey to some sort of SPAM. I
   
 
   
-Although I had known since about the middle of September, it all became real about mid-morning on October 1st when I received the official email with the subject line “**Congratulations 2013 Microsoft MVP!**“. 
+Although I had known since about the middle of September, it all became real about mid-morning on October 1st when I received the official email with the subject line "**Congratulations 2013 Microsoft MVP!**". 
 
 So me, a Microsoft SQL Server MVP? To be honest, it's still a little weird to say and even weirder to be introduced as such. I knew that I had been nominated and had already been through a number of award cycles without hearing from Microsoft. My nomination was not something I shared with anyone other than my wife, and although it sounds cliché, it really was an amazing honor to have just been nominated. When I looked at the list of current MVPs and those who everyone thinks are/should be, well, it is humbling to even be thought of in that same light.
 
@@ -32,7 +32,7 @@ When I was contacted over the summer by Microsoft and asked to submit a list of 
 **Some Influential Folk**
   
 <img style="float: right;" src="/wp-content/uploads/users/mndba/OtherSQLFamily1.jpg" width="150" height="96" alt="" />  
-<u>My “Other SQL Family” </u>– I would not get to do the cool things I do without the support of my wife Jen and two young boys, Darren and Joe. They get me. It's that simple. Knowing that I love my work with the SQL Server Community, they support me unconditionally. Upon arriving home from PASS Summit 2012, I found them at baggage claim, holding this sign. They are that awesome. 
+<u>My "Other SQL Family" </u>– I would not get to do the cool things I do without the support of my wife Jen and two young boys, Darren and Joe. They get me. It's that simple. Knowing that I love my work with the SQL Server Community, they support me unconditionally. Upon arriving home from PASS Summit 2012, I found them at baggage claim, holding this sign. They are that awesome. 
 
 <u>A Unicorn and a Teacher </u>– I first met Jason Strate (<a href="http://www.jasonstrate.com/" target="_blank">B</a> | <a href="https://twitter.com/stratesql" target="_blank">T</a>) in 2011 during his final year as Chair of PASSMN, a position I would one day hold myself. I met Sarah (<a href="http://sarahsjolander.wordpress.com/" target="_blank">B</a> | <a href="https://twitter.com/Dancem0m" target="_blank">T</a>) a few months later during my first SQL Saturday volunteer gig at SQL Saturday 99. Jason sets a great example of what it means to be an MVP and together he and Sarah personify <a href="https://twitter.com/search?q=%23SQLFamily&src=typd" target="_blank">#SQLFamily</a>.
 
@@ -46,4 +46,4 @@ When I was contacted over the summer by Microsoft and asked to submit a list of 
 
 There are many other people I could add to this list, but think I can summarize it best by saying the SQL Server Community is the best, most supportive technical community there is.
 
-I now commonly get asked what I am going to do to stay an MVP. I haven't given it a lot of thought and not sure that I will, but I would assume the answer is “more of the same”. Sure there will be a little more of some things and maybe a little less of others, but I remain committed to giving back to this community that has given me so much, regardless of my award status.
+I now commonly get asked what I am going to do to stay an MVP. I haven't given it a lot of thought and not sure that I will, but I would assume the answer is "more of the same". Sure there will be a little more of some things and maybe a little less of others, but I remain committed to giving back to this community that has given me so much, regardless of my award status.

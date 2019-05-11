@@ -24,7 +24,7 @@ AlwaysOn takes the throne now.  Yes, there can be the same principles applied t
 
 When I reviewed the deprecated list and saw that MS finally said whether mirroring was deprecated (they did and it is) I was overcome by a bit of frustration.  That frustration came from this line.
 
-_“If your edition of SQL Server does not support AlwaysOn Availability Groups, use log shipping”_
+_"If your edition of SQL Server does not support AlwaysOn Availability Groups, use log shipping"_
 
 You may ask why that line bothers me so much.  Log shipping in no way, shape, or form is a High Availability feature.  I am OK with the deprecation of database mirroring to a point.  That point is when the cost starts to force the inability of upgrades and overall more stable solutions.  As it is now, AlwaysOn is an Enterprise only solution.  We, as SQL Server professionals, were jumping for joy when database mirroring was made available in Standard edition.  There was a solid solution for high availability for the lower needed spending on licensing of the standard edition.  The other issue we have to take into account is the massive change to licensing in SQL Server 2012.  Essentially, SQL Server allowed us to license to the physical CPU up until SQL Server 2012.  Now, logical CPU licensing has taken effect.  Don't get me wrong.  Everyone is licensing this way and it really didn't bother me that it was changed.  Yes, I'll have a hard time selling the upgrade for this one major fact but that is our jobs; show why SQL Server is as good or a better choice and worth the cost.  Can everyone afford that cost?  No, which brings me back to log shipping.
 

@@ -203,7 +203,7 @@ And then we get to RequireJS, which has no focus on unit testing and the couple 
 
 Usually AngularJS is the one that leaves me confused and forcing myself to reread the documentation. In this case, there are a lot of great posts out there that allowed me to ignore the documentation until I got it working (at which point I went back and started rereading it). Did I mention [Ben's posts][12]?
 
-Mocking modules for RequireJS was much more sparse. To the point where I started recognizing their page titles in google as I was searching alternative terms to try and get more information. There are a very small number of posts on Squire, a few on testr.js, etc. I think the new secret phrase for people looking into this should be “hurp durp example”. If you have spent any time looking into this topic, you not only know what I'm talking about, you've also read it like 40 times in case you missed something.
+Mocking modules for RequireJS was much more sparse. To the point where I started recognizing their page titles in google as I was searching alternative terms to try and get more information. There are a very small number of posts on Squire, a few on testr.js, etc. I think the new secret phrase for people looking into this should be "hurp durp example". If you have spent any time looking into this topic, you not only know what I'm talking about, you've also read it like 40 times in case you missed something.
 
 ## Final Thoughts
 

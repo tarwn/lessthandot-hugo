@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-At [SQL Saturday #75 Columbus, OH][1], on June 11, I had the distinct pleasure of moderating the Women in Technology lunch. **The topic**: “Energizing the Next Generation”. **The panel**: Jen Myers ([blog][2] | [twitter][3]), Sarah Barela ([blog][4] | [twitter][5]), and Erin Stellato ([blog][6] | [twitter][7]). **The room**: packed. **The audience**: awesome. 
+At [SQL Saturday #75 Columbus, OH][1], on June 11, I had the distinct pleasure of moderating the Women in Technology lunch. **The topic**: "Energizing the Next Generation". **The panel**: Jen Myers ([blog][2] | [twitter][3]), Sarah Barela ([blog][4] | [twitter][5]), and Erin Stellato ([blog][6] | [twitter][7]). **The room**: packed. **The audience**: awesome. 
 
 If you haven't been to one of our lunch panels yet, this is what you need to know: a group of women in technology sit up at the front of a room, talk about their experiences, and answer questions and foster discussions with the audience. The goal is to have an honest discussion about what women bring to technology, what challenges they have, and how to encourage women and girls to get involved in technology. 
 
@@ -26,7 +26,7 @@ If you haven't been to one of our lunch panels yet, this is what you need to kno
 
 I started by having each of the panelists talk about what they are currently doing in technology, and how they got into the field. Who would have thought Erin, who has a master's degree in Kinesiology, would be a Database Engineer? Jen decided to get into web development because she saw it as a challenge. 
 
-One of the first questions I posed, and opened up for dicussion, was, “What are ways we can get girls and boys interested in technology?” A few suggestions were given.
+One of the first questions I posed, and opened up for dicussion, was, "What are ways we can get girls and boys interested in technology?" A few suggestions were given.
   
 Alice – <http://www.alice.org/> – A free 3-D program that teaches object-oriented programming.
   
@@ -48,9 +48,9 @@ One interesting question that a woman in the audience posed: she was a coach on 
 
 One man at the back of the room had some interesting points as well. He said that in the 1980's, there were a large number of TV shows dedicated to lawyers. In the 1990's, law schools saw the number of applicants and graduates increase. But, there are no high-profile, strong technology characters that people are exposed to right now. We need to market IT to kids, and other adults. 
 
-He also mentioned that the word he would use for the one girl that showed up to the FLL team meeting, alone, is “courageous”. We had a great discussion about that. 
+He also mentioned that the word he would use for the one girl that showed up to the FLL team meeting, alone, is "courageous". We had a great discussion about that. 
 
-Another person asked why women in technology wanted to be treated differently. A different audience member said, “There's a difference between being treated differently and being treated fairly.” I think this is a point that we can all take to heart. Men and women are different, as are people with kids and those without, or new college grads and people close to retirement. We will be treated differently, but we are really just striving to be treated fairly. 
+Another person asked why women in technology wanted to be treated differently. A different audience member said, "There's a difference between being treated differently and being treated fairly." I think this is a point that we can all take to heart. Men and women are different, as are people with kids and those without, or new college grads and people close to retirement. We will be treated differently, but we are really just striving to be treated fairly. 
 
 And with that, we had to wrap up the entirely too-short hour we had. This was a great discussion that I hope energized people and made them think. The one thing I wish I'd had at the lunch was someone else to live blog it, or at least takes notes for us. I feel like I missed so many important points and resources! 
 

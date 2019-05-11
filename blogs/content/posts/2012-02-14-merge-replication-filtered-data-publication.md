@@ -118,7 +118,7 @@ Click Next when the selection are made (or leave the default if the same version
 
 In the Articles window, check the boxes next to Person, SalesOrderHeader SalesOrderDetail and TransactionHistory.
 
-Highlight the SalesOrderHeader table and dropdown the list for Article Properties.  Select, Set Properties of Highlighted Table Articles”.  This will allow the changes for Row and Column Tracking.
+Highlight the SalesOrderHeader table and dropdown the list for Article Properties.  Select, Set Properties of Highlighted Table Articles".  This will allow the changes for Row and Column Tracking.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-5.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-5.png?mtime=1329263428" width="596" height="253" /></a>
@@ -132,9 +132,9 @@ In the window that appears to alter the properties of the article, scroll down t
 
 Next, click the Resolver tab in the same article properties window.
 
-Choose “Use a custom resolver (registered at the Distributor) and select the “Microsoft SQL Server DATETIME (later Wins) Conflict Resolver”.
+Choose "Use a custom resolver (registered at the Distributor) and select the "Microsoft SQL Server DATETIME (later Wins) Conflict Resolver".
 
-Enter, “DueDate” in the box below the resolver list and click OK to close and save the article properties for SalesOrderHeader.
+Enter, "DueDate" in the box below the resolver list and click OK to close and save the article properties for SalesOrderHeader.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-7.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-7.png?mtime=1329263428" width="455" height="377" /></a>
@@ -150,9 +150,9 @@ Select Add Filter from the list box.
 
 In the initial screen, the Person table should be selected, if it is not, drop the list down and select it.  The only changes needed to use the Person table as a parameterized filter is to edit the Filter statement.
 
-Add to the filter statement, “[LoginAccount]=SUSER_SNAME()”
+Add to the filter statement, "[LoginAccount]=SUSER_SNAME()"
 
-Click the radio button to specify “A row from this table will go to only one subscriber” in the How many subscriptions will receive data area.
+Click the radio button to specify "A row from this table will go to only one subscriber" in the How many subscriptions will receive data area.
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-9.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-9.png?mtime=1329263429" width="558" height="466" /></a>
@@ -160,7 +160,7 @@ Click the radio button to specify “A row from this table will go to only one s
 
 Click OK to save the filter on Person.
 
-Click the Add list again and select “Add Join to Extend the Selected Filter...”
+Click the Add list again and select "Add Join to Extend the Selected Filter..."
 
 <div class="image_block">
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429" width="624" height="141" /></a>
@@ -176,7 +176,7 @@ Leave Use the builder to create the statement selected.  For Filtered table col
 
 Click OK to close and add the join filter.
 
-Back in the article properties window, click the Add list again and select “Add Join to Extend the Selected Filter...”
+Back in the article properties window, click the Add list again and select "Add Join to Extend the Selected Filter..."
 
 Drop down the Joined table and select Sales.SalesOrderDetail.  In the join statement step 2, use SalesOrderID (int) for the filtered table column and SalesOrderID (int) in the joined table column.
 
@@ -192,7 +192,7 @@ The filter window should appear as shown below.
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430" width="624" height="204" /></a>
 </div>
 
-Back in the article properties window, click the Add list again and select “Add Join to Extend the Selected Filter...”
+Back in the article properties window, click the Add list again and select "Add Join to Extend the Selected Filter..."
 
 Drop down the Joined table and select Production.TransationHistory.  In the join statement step 2, use SalesOrderID (int) for the filtered table column and ReferenceOrderID (int) in the joined table column.
 
@@ -214,7 +214,7 @@ For this setup, the defaults are left for the snapshot agent.
   <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-16.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-16.png?mtime=1329263430" width="497" height="271" /></a>
 </div>
 
-Click Next to move to the Agent Security window.  Click the browse button in the Connection to Subscriber box.  In the Snapshot Agent Security settings window that appears, Select, “Run under the SQL Server Agent service account” so the snapshot utilizes the agent account to perform the tasks.
+Click Next to move to the Agent Security window.  Click the browse button in the Connection to Subscriber box.  In the Snapshot Agent Security settings window that appears, Select, "Run under the SQL Server Agent service account" so the snapshot utilizes the agent account to perform the tasks.
 
 (If your security does not allow the agent to access the file system, enter an account that can)
 

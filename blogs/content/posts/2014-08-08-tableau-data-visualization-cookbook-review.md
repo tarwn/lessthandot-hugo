@@ -27,7 +27,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  The book promises “Over 70 recipes for creating visual stories with your data using Tableau”. That sounds like a lot and it is, because the book (the actual content, not counting preface, indexes ...) is about 150 pages long. In other words, a little over 2 pages per recipe. In fact, I actually counted them (I have apparently nothing better to do). There are 74 recipes spread out over 147 pages, so 1.986 pages per recipe. Those are not long recipes. Some other numbers: the shortest recipe is 2 bullet points. It's about adding a wildcard filter on a worksheet, but it actually builds upon a previous recipe, so it doesn't count. The following scatter plot (created with Tableau of course) gives an overview of the various lengths of the recipes encountered in the book:
+  The book promises "Over 70 recipes for creating visual stories with your data using Tableau". That sounds like a lot and it is, because the book (the actual content, not counting preface, indexes ...) is about 150 pages long. In other words, a little over 2 pages per recipe. In fact, I actually counted them (I have apparently nothing better to do). There are 74 recipes spread out over 147 pages, so 1.986 pages per recipe. Those are not long recipes. Some other numbers: the shortest recipe is 2 bullet points. It's about adding a wildcard filter on a worksheet, but it actually builds upon a previous recipe, so it doesn't count. The following scatter plot (created with Tableau of course) gives an overview of the various lengths of the recipes encountered in the book:
 </p>
 
 <p style="text-align: justify">

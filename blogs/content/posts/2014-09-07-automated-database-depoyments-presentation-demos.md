@@ -16,9 +16,9 @@ tags:
   - continuous integration
 
 ---
-This is an outline of the tools and scripts I used while demonstrating conversion of a sample “we make all our changes in production” database into a basic pipeline to verify and deploy changes automatically, as well as verify restores on a nightly basis.
+This is an outline of the tools and scripts I used while demonstrating conversion of a sample "we make all our changes in production" database into a basic pipeline to verify and deploy changes automatically, as well as verify restores on a nightly basis.
 
-This post contains all of the steps, software, and scripts that I used during the “Automated Deployments” talk at SQL Saturday 320.
+This post contains all of the steps, software, and scripts that I used during the "Automated Deployments" talk at SQL Saturday 320.
 
 There aren't any pictures, if I did that than what would be the point of presenting it? 🙂
 
@@ -26,11 +26,11 @@ There aren't any pictures, if I did that than what would be the point of present
 
 When I started the demo, I had some previously installed software already in place to help the demos move quickly. Everything I used was free or covered under an MSDN subscription.
 
-**Database VM** – “PLC026-DB01” – The demo database “server” was running Windows 2012 R2 and SQL Server 2012 developer edition. The database was a sample database from a ASP.Net Music Store tutorial that I happened to have sitting around; the backup I used during the demo is available [here][1] (press the “Raw” button to download).
+**Database VM** – "PLC026-DB01" – The demo database "server" was running Windows 2012 R2 and SQL Server 2012 developer edition. The database was a sample database from a ASP.Net Music Store tutorial that I happened to have sitting around; the backup I used during the demo is available [here][1] (press the "Raw" button to download).
 
-**Build Server VM** – “PLC026-Build01” – The “build server” was running Windows 2012 R2 and included a free git server named [Bonobo Git Server][2] and the build server [TeamCity][3]. I also installed the SQL Management Objects for Powershell following the instructions [here][4].
+**Build Server VM** – "PLC026-Build01" – The "build server" was running Windows 2012 R2 and included a free git server named [Bonobo Git Server][2] and the build server [TeamCity][3]. I also installed the SQL Management Objects for Powershell following the instructions [here][4].
 
-**Laptop** – on my “local” system I was using SQL Server 2012, Powershell 3, Chrome, and [git][5]. I was using a GUI for git named [SmartGit][6], which was the only-non-free/non-MSDN tool in the mix.
+**Laptop** – on my "local" system I was using SQL Server 2012, Powershell 3, Chrome, and [git][5]. I was using a GUI for git named [SmartGit][6], which was the only-non-free/non-MSDN tool in the mix.
 
 ## Server Setup
 
@@ -40,7 +40,7 @@ Installation for the Build Server VM was a little more advanced. I had to instal
 
 The last step was to add a shared folder on the database server for the backups that could be accessed by the build server. The restore script uses a share named \\PLC026-DB01\Backups to access this folder, locally it was C:\Database\Backups on my DB VM.
 
-The only additional setup I performed at this point was to restore a copy of my sample database as “PROD_DeployPresentation” to serve as the sample “production” database.
+The only additional setup I performed at this point was to restore a copy of my sample database as "PROD_DeployPresentation" to serve as the sample "production" database.
 
 Demo Resources: All demo scripts are located here: [tarwn/AutomatedDBDeploymentTalk on github.com][7]
 
@@ -57,11 +57,11 @@ The first step is to start tracking your changes using version control.
 
 1. We reviewed the script [00000_DayOfWeekSalesReport.sql][8] as one we would have previously applied manually
 
-2. I created a folder locally, with a sub-folder named “Changes” and added the script to the “Changes” folder
+2. I created a folder locally, with a sub-folder named "Changes" and added the script to the "Changes" folder
 
-3. I initialized the top folder as a git repository by right clicking in the folder and choosing “Git init repo” from the context menu
+3. I initialized the top folder as a git repository by right clicking in the folder and choosing "Git init repo" from the context menu
 
-Note: There are other ways to initialize the repository, this option was available to me because I chose the “include cheetah” option when installing git, which provides some context menu items for git that wouldn't be available otherwise
+Note: There are other ways to initialize the repository, this option was available to me because I chose the "include cheetah" option when installing git, which provides some context menu items for git that wouldn't be available otherwise
 
 4. I then opened smart git and created a new project from that repository so I could start using the GUI tool
 
@@ -71,21 +71,21 @@ Note: There are other ways to initialize the repository, this option was availab
 
 7. We copied the URL for the repository, switched back to our local git repository and added that URL as a Remote location we could Push to 
 
-Note: In SmartGit this was the Remote folder, Push To, add the URL in the dialog, add credentials, a Push button, and then a dialog that we chose to Configure Tracking between that remote repository and our local one so we could track changes from our local “master” branch against the remote “master” branch. This can also be done via command line using the “git remote” command and if you are using a service like github.com or bitbucket.org they will show you the 2-3 commands you can paste and run via command-line to perform the same actions.
+Note: In SmartGit this was the Remote folder, Push To, add the URL in the dialog, add credentials, a Push button, and then a dialog that we chose to Configure Tracking between that remote repository and our local one so we could track changes from our local "master" branch against the remote "master" branch. This can also be done via command line using the "git remote" command and if you are using a service like github.com or bitbucket.org they will show you the 2-3 commands you can paste and run via command-line to perform the same actions.
 
 8. We reviewed the changes in the Remote repository to see they matched our local ones
 
-9. We switched to TeamCity and selected the “Administration” link in the top right
+9. We switched to TeamCity and selected the "Administration" link in the top right
 
-10. I clicked the “+ Create Project” button to create the project our build configurations would live in
+10. I clicked the "+ Create Project" button to create the project our build configurations would live in
 
-11. I clicked the “Create Build Configuration” and entered a name to start creating our “Continuous Integration” build configuration
+11. I clicked the "Create Build Configuration" and entered a name to start creating our "Continuous Integration" build configuration
 
-12. I created a VCS setting by leaving the dropdown on “Guess from repository URL” and pasting in the same remote URL from the Bonobos git repository that we used locally and entering my username and password
+12. I created a VCS setting by leaving the dropdown on "Guess from repository URL" and pasting in the same remote URL from the Bonobos git repository that we used locally and entering my username and password
 
 Note: On a production system you would want to have separate credentials or use a private certificate for authentication. This is possible with TeamCity, I only left it out in the interest of time for the demo. You can also modify the time interval TeamCity will check for changes in the advanced settings for the VCS.
 
-13. I then switched back to my local folder and added a “Tools” folder.
+13. I then switched back to my local folder and added a "Tools" folder.
 
 14. We reviewed the [CreateDatabaseUpdates.ps1][9] and the [ApplyDatabaseUpdates.ps1][10] powershell scripts
 
@@ -122,10 +122,10 @@ Note: On a production system you would want to have separate credentials or use 
       Script file: Tools/CreateDatabaseUpdates.ps1
     </li>
     <li>
-      Script execution mode: Execute *.ps1 with “-File” argument
+      Script execution mode: Execute *.ps1 with "-File" argument
     </li>
     <li>
-      Script Arguments: -UpdatesFolder “Changes” -UpdatesFile “UpdatesBatch.sql”
+      Script Arguments: -UpdatesFolder "Changes" -UpdatesFile "UpdatesBatch.sql"
     </li>
   </ul>
   
@@ -163,10 +163,10 @@ Note: On a production system you would want to have separate credentials or use 
       Script file: Tools/ApplyDatabaseUpdates.ps1
     </li>
     <li>
-      Script execution mode: Execute *.ps1 with “-File” argument
+      Script execution mode: Execute *.ps1 with "-File" argument
     </li>
     <li>
-      Script Arguments: -UpdatesFile “UpdatesBatch.sql” -Server “PLC026-DB01” -Database “CI_DeployPresentation” -AdminUserName “USERNAME_HERE” -AdminPassword “PASSWORD_HERE”
+      Script Arguments: -UpdatesFile "UpdatesBatch.sql" -Server "PLC026-DB01" -Database "CI_DeployPresentation" -AdminUserName "USERNAME_HERE" -AdminPassword "PASSWORD_HERE"
     </li>
   </ul>
   
@@ -175,25 +175,25 @@ Note: On a production system you would want to have separate credentials or use 
   </p>
 </div>
 
-Note: I also included a “-Trusted” option for the Apply script, if you specify this switch in the script arguments you can leave out the username/password and it will use a trusted connection instead.
+Note: I also included a "-Trusted" option for the Apply script, if you specify this switch in the script arguments you can leave out the username/password and it will use a trusted connection instead.
 
-17. I selected Triggers from the Build Configuration Settings menu and added a trigger of type “VCS trigger” (no options necessary). This ensured new changes that show up in the Version Control System would cause a new build to automatically trigger.
+17. I selected Triggers from the Build Configuration Settings menu and added a trigger of type "VCS trigger" (no options necessary). This ensured new changes that show up in the Version Control System would cause a new build to automatically trigger.
 
-18. I selected Failure Conditions from the menu and checked the “an error message is logged by build runner” so that error messages from Powershell would cause the build to register as failed even if the script exited with a success exit code.
+18. I selected Failure Conditions from the menu and checked the "an error message is logged by build runner" so that error messages from Powershell would cause the build to register as failed even if the script exited with a success exit code.
 
 19. We went back to the top level (I click the logo as a shortcut) and pressed the run button for the build
 
-20. When it was complete, we looked at the log (by clicking the success message) and when we expanded the steps we saw it had applied the “00000_DayOfWeekSalesReport” script
+20. When it was complete, we looked at the log (by clicking the success message) and when we expanded the steps we saw it had applied the "00000_DayOfWeekSalesReport" script
 
-21. We reviewed the database and saw that the procedure from “00000_DayOfWeekSalesReport” was present, as well as the new UpdateTracking table
+21. We reviewed the database and saw that the procedure from "00000_DayOfWeekSalesReport" was present, as well as the new UpdateTracking table
 
-22. I edited the build configuration (“Edit Settings” from the dropdown next to the “Continuous Integration” build name on the dashboard)
+22. I edited the build configuration ("Edit Settings" from the dropdown next to the "Continuous Integration" build name on the dashboard)
 
-23. In the “General” settings, I added UpdatesBatch.sql to the artifacts list as a file we wanted to keep after every build
+23. In the "General" settings, I added UpdatesBatch.sql to the artifacts list as a file we wanted to keep after every build
 
-24. We ran the build again from the dashboard, then reviewed the “UpdatesBatch.sql” file available from the Artifacts menu that showed up
+24. We ran the build again from the dashboard, then reviewed the "UpdatesBatch.sql" file available from the Artifacts menu that showed up
 
-25. I added two new scripts, [00001\_A\_SeparateUserTable_Schema.sql][11] and [00001\_B\_SeparateUserTable_Data.sql][12] to my local “Changes” folder and Commit and Pushed these
+25. I added two new scripts, [00001\_A\_SeparateUserTable_Schema.sql][11] and [00001\_B\_SeparateUserTable_Data.sql][12] to my local "Changes" folder and Commit and Pushed these
 
 26. We ran the build and watched it fail, reading the error by clicking on it in the TeamCity dashboard
 
@@ -203,25 +203,25 @@ Note: I also included a “-Trusted” option for the Apply script, if you speci
 
 Achieved: At this point we had added version control and automated verification of changes to our process and talked about the benefit of it a bit
 
-29. I returned to TeamCity and selected “Edit Settings” from the overall project so we could add a new production build configuration
+29. I returned to TeamCity and selected "Edit Settings" from the overall project so we could add a new production build configuration
 
-30. I used the “+ Create Build Configuration” button to add a new Build Configuration, which I named “Apply to Production!!”
+30. I used the "+ Create Build Configuration" button to add a new Build Configuration, which I named "Apply to Production!!"
 
 31. I chose the same VCS settings I had previously created in the Continuous Integration step
 
-32. I jumped ahead to the Failure Conditions menu and checked the “an error message is logged by build runner”
+32. I jumped ahead to the Failure Conditions menu and checked the "an error message is logged by build runner"
 
-33. I then selected the “Dependencies” menu option from the Build Configuration Stetings menu
+33. I then selected the "Dependencies" menu option from the Build Configuration Stetings menu
 
-34. I used the “+ Add new snapshot dependency” and selected my “Continuous Integration” step, to tie the Production step to run the same changes as the Continuous Integration step
+34. I used the "+ Add new snapshot dependency" and selected my "Continuous Integration" step, to tie the Production step to run the same changes as the Continuous Integration step
 
-35. I used the “+ Add new artifact dependency” button and selected the “Continuous Integration” step, selected to get artifacts from “Build from the same chain”, and typed in “UpdatesBatch.sql” so we could get the batch file that the corresponding CI build step had produced
+35. I used the "+ Add new artifact dependency" button and selected the "Continuous Integration" step, selected to get artifacts from "Build from the same chain", and typed in "UpdatesBatch.sql" so we could get the batch file that the corresponding CI build step had produced
 
-36. I switched back to the Continuous Integration build configuration, went to Build Steps, and form the “More” menu for the “Apply” step, I chose to copy the step to the “Apply to Production” build configuration
+36. I switched back to the Continuous Integration build configuration, went to Build Steps, and form the "More" menu for the "Apply" step, I chose to copy the step to the "Apply to Production" build configuration
 
-37. I edited my new “Apply” build step in the “Apply to Production” build configuration and changed the target database in the powershell parameters from CI\_DeployPresentation to PROD\_DeployPresentation
+37. I edited my new "Apply" build step in the "Apply to Production" build configuration and changed the target database in the powershell parameters from CI\_DeployPresentation to PROD\_DeployPresentation
 
-38. We edited the “General” settings, added “UpdatesBatch,sql” to the artifacts and set the Version Number to the CI step's build number: %dep.DBDeployPres1_CiStep.build.number% (this may vary on your system depending on what you named your project and build configuration, type a % and look at the dropdown that appears)
+38. We edited the "General" settings, added "UpdatesBatch,sql" to the artifacts and set the Version Number to the CI step's build number: %dep.DBDeployPres1_CiStep.build.number% (this may vary on your system depending on what you named your project and build configuration, type a % and look at the dropdown that appears)
 
 39. We verified that the Production database still only had the original 7 tables
 
@@ -237,13 +237,13 @@ We skipped this demo, but the purpose was to take that initial pipeline we had b
 
 This addition is going to add a MaintenanceMode table to the database and log before and after each attempted deployment. An application would then be able to look at the latest entry in this table and know whether we were online or in maintenance mode and deploying changes.
 
-1. Copy the [SetMaintenanceMode.ps1][13] script into the local Tools folder, Copy the [00005_MaintenanceTable.sql][14] file into the “Changes” folder, Commit and Push them
+1. Copy the [SetMaintenanceMode.ps1][13] script into the local Tools folder, Copy the [00005_MaintenanceTable.sql][14] file into the "Changes" folder, Commit and Push them
 
-2. Run the “Continuous Integration” and “Apply to Production” steps of the build to ensure the new table is in both systems
+2. Run the "Continuous Integration" and "Apply to Production" steps of the build to ensure the new table is in both systems
 
-3. Edit the Settings for the “Continuous Integration” build configuration so we can add a new Build Step
+3. Edit the Settings for the "Continuous Integration" build configuration so we can add a new Build Step
 
-4. Create a Build Step named “Start Maintenance Mode”
+4. Create a Build Step named "Start Maintenance Mode"
 
 <div style="margin: .5em 1em; padding: .5em; background-color: #eeeeee">
   <b>Start Maintenance Mode Build Step</b></p> 
@@ -274,10 +274,10 @@ This addition is going to add a MaintenanceMode table to the database and log be
       Script file: Tools/SetMaintenanceMode.ps1
     </li>
     <li>
-      Script execution mode: Execute *.ps1 with “-File” argument
+      Script execution mode: Execute *.ps1 with "-File" argument
     </li>
     <li>
-      Script Arguments: -SetOffline -Notes “Applying Build %build.number%” -Server “PLC026-DB01” -Database “CI_DeployPresentation” -AdminUserName “USERNAME_HERE” -AdminPassword “PASSWORD_HERE”
+      Script Arguments: -SetOffline -Notes "Applying Build %build.number%" -Server "PLC026-DB01" -Database "CI_DeployPresentation" -AdminUserName "USERNAME_HERE" -AdminPassword "PASSWORD_HERE"
     </li>
   </ul>
   
@@ -286,25 +286,25 @@ This addition is going to add a MaintenanceMode table to the database and log be
   </p>
 </div>
 
-5. Click the “Reorder Build Steps” button and drag this step above the “Apply” step so it runs before we apply the changes
+5. Click the "Reorder Build Steps" button and drag this step above the "Apply" step so it runs before we apply the changes
 
-6. Use the “More” button on the “Start Maintenance Mode” step to Copy the step (keep it in the same build Configuration)
+6. Use the "More" button on the "Start Maintenance Mode" step to Copy the step (keep it in the same build Configuration)
 
-7. Edit the copied step, changing the name to “End Maintenance Mode” and the script parameters to: -Notes “Done Build %build.number%” -Server “PLC026-DB01” -Database “CI\_DeployPresentation” -AdminUserName “USERNAME\_HERE” -AdminPassword “PASSWORD_HERE”
+7. Edit the copied step, changing the name to "End Maintenance Mode" and the script parameters to: -Notes "Done Build %build.number%" -Server "PLC026-DB01" -Database "CI\_DeployPresentation" -AdminUserName "USERNAME\_HERE" -AdminPassword "PASSWORD_HERE"
 
-8. Also edit the “Execute Step” setting, selecting “Even if some of the previous steps failed” so that even if applying the script fails, we will still switch back out of maintenance mode. 
+8. Also edit the "Execute Step" setting, selecting "Even if some of the previous steps failed" so that even if applying the script fails, we will still switch back out of maintenance mode. 
 
-9. Save the build step and then use the “Reorder Build Steps” button and drag this new step to the last slot after the “Apply” step
+9. Save the build step and then use the "Reorder Build Steps" button and drag this new step to the last slot after the "Apply" step
 
-10. Run the “Continuous Integration” build configuration form the dashboard
+10. Run the "Continuous Integration" build configuration form the dashboard
 
-11. Look in the database and ensure that the new “MaintenanceMode” table has two new entries that correspond to the build you just ran (it will have the build number in the notes since we used that token in the scripts above)
+11. Look in the database and ensure that the new "MaintenanceMode" table has two new entries that correspond to the build you just ran (it will have the build number in the notes since we used that token in the scripts above)
 
 12. Add a bad script, Commit and Push it, run CI, verify that we still had two maintenance mode entries even though the build failed
 
-13. Open the “Continuous Integration” build configuration settings again, switch to the Build Steps, and use the “More” link on each of the Maintenance Mode rows to copy them over to the “Apply to Production” build configuration
+13. Open the "Continuous Integration" build configuration settings again, switch to the Build Steps, and use the "More" link on each of the Maintenance Mode rows to copy them over to the "Apply to Production" build configuration
 
-14. Use the “Reorder” button to correct the order in the “Apply to Production” build
+14. Use the "Reorder" button to correct the order in the "Apply to Production" build
 
 15. Edit each of the Maintenance Mode steps to switch from the CI\_DeployPresentation to the PROD\_DeployPresentation database
 
@@ -316,23 +316,23 @@ Achieved: We have started converting our checklist of manual steps into somethin
 
 The last demo focused on the other side of our change deployment process, bringing fresh versions of the database down to test changes against (and co-incidentally testing our backups far more frequently then we do manually).
 
-1. I added the [SqlRestore.ps1][15] script to my local “Tools” folder and Commit and Pushed it
+1. I added the [SqlRestore.ps1][15] script to my local "Tools" folder and Commit and Pushed it
 
-2. I created a new Build Configuration in TeamCity named “Database Restore”
+2. I created a new Build Configuration in TeamCity named "Database Restore"
 
 3. I attached the same VCS we used in the prior build configurations
 
-4. I selected Triggers from the Build Configuration Settings menu and added a trigger of type “Schedule Trigger”, selected 2 AM, and unchecked the box “Trigger build only if there are pending changes” (wording differs depending on version of TeamCity – the intent is that we want to run every night even if there aren't new changes in VCS)
+4. I selected Triggers from the Build Configuration Settings menu and added a trigger of type "Schedule Trigger", selected 2 AM, and unchecked the box "Trigger build only if there are pending changes" (wording differs depending on version of TeamCity – the intent is that we want to run every night even if there aren't new changes in VCS)
 
-5. I added a Snapshot dependency just like the “Apply to Production” build configuration
+5. I added a Snapshot dependency just like the "Apply to Production" build configuration
 
-6. I added an Artifact Dependency like the “Apply to Production” build configuration, but I chose to get Artifacts From “Last successful” build instead of the chain, as there may be a failing script in CI right now and we want to catch up with the last successful one that ran whether that was the most recent one or not
+6. I added an Artifact Dependency like the "Apply to Production" build configuration, but I chose to get Artifacts From "Last successful" build instead of the chain, as there may be a failing script in CI right now and we want to catch up with the last successful one that ran whether that was the most recent one or not
 
-7. I selected Failure Conditions from the menu and checked the “an error message is logged by build runner” so that error messages from Powershell would cause the build to register as failed even if the script exited with a success exit code.
+7. I selected Failure Conditions from the menu and checked the "an error message is logged by build runner" so that error messages from Powershell would cause the build to register as failed even if the script exited with a success exit code.
 
-8. (optional) In the General settings, change the version number and add the batch script to Artifacts like we did in the “Apply to Production” build configuration
+8. (optional) In the General settings, change the version number and add the batch script to Artifacts like we did in the "Apply to Production" build configuration
 
-9. Add a Build Step named “Restore DB”
+9. Add a Build Step named "Restore DB"
 
 <div style="margin: .5em 1em; padding: .5em; background-color: #eeeeee">
   <b>Restore DB Build Step</b></p> 
@@ -363,10 +363,10 @@ The last demo focused on the other side of our change deployment process, bringi
       Script file: Tools/SqlRestore.ps1
     </li>
     <li>
-      Script execution mode: Execute *.ps1 with “-File” argument
+      Script execution mode: Execute *.ps1 with "-File" argument
     </li>
     <li>
-      Script Arguments: -Server “PLC026-DB01” -Database “CI_DeployPresentation” -AdminUserName “USERNAME_HERE” -AdminPassword “PASSWORD_HERE” -RemoteBackupsDir “\\PLC026-DB01\Backups” -LocalBackupsDir “C:\Database\Backups” -DbFileBasePath “C:\Database\DATA” -SourceDbBaseFileName “MvcMusicStoreGen”
+      Script Arguments: -Server "PLC026-DB01" -Database "CI_DeployPresentation" -AdminUserName "USERNAME_HERE" -AdminPassword "PASSWORD_HERE" -RemoteBackupsDir "\\PLC026-DB01\Backups" -LocalBackupsDir "C:\Database\Backups" -DbFileBasePath "C:\Database\DATA" -SourceDbBaseFileName "MvcMusicStoreGen"
     </li>
   </ul>
   
@@ -375,13 +375,13 @@ The last demo focused on the other side of our change deployment process, bringi
   </p>
 </div>
 
-Note: The “SourceDbBaseFileName” is actually the logical name that I will use in the Restore SQL script to rename the database and log file, I didn't rename this in my backups and the script parameter could have been named better.
+Note: The "SourceDbBaseFileName" is actually the logical name that I will use in the Restore SQL script to rename the database and log file, I didn't rename this in my backups and the script parameter could have been named better.
 
-8. Copy the “Apply DB Changes” from the “Continuous Integration” build configuration
+8. Copy the "Apply DB Changes" from the "Continuous Integration" build configuration
 
-9. We then disabled the “Apply” step and ran this once without it to verify that it restored the CI database back to where we started the session
+9. We then disabled the "Apply" step and ran this once without it to verify that it restored the CI database back to where we started the session
 
-10. I enabled the “Apply” step and re-ran the build and verified we were now matching the last successful CI UpdatesBatch.sql
+10. I enabled the "Apply" step and re-ran the build and verified we were now matching the last successful CI UpdatesBatch.sql
 
 Achieved: We now can freshen our CI database regularly and on demand. We have nightly verification of part of our DR plan (restores) and know that every single backups is in working condition (or receive an email the first time one fails). We also have the basis for producing sanitized versions of the database if needed.
 

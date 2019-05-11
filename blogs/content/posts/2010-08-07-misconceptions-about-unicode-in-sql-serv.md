@@ -24,7 +24,7 @@ tags:
 ---
 I was browsing around last night on the internet and a person wanted to know what data type to use to store a course name. Here is an answer he got:
 
-> I would recommend nvarchar or varchar for the name. Use nvarchar if you anticipate there ever being a point in the future that you will need to support foreign languages that might contain unicode characters that are not supported by varchar. **I would look at the longest name I anticipate needing, double it's length and then round up to the nearest 50. So if “Introduction to Partial Differential Equations” at 48 then I would make it varchar(100)**
+> I would recommend nvarchar or varchar for the name. Use nvarchar if you anticipate there ever being a point in the future that you will need to support foreign languages that might contain unicode characters that are not supported by varchar. **I would look at the longest name I anticipate needing, double it's length and then round up to the nearest 50. So if "Introduction to Partial Differential Equations" at 48 then I would make it varchar(100)**
 
 Okay so that part in bold is completely wrong, Nvarchar uses 2 bytes per character for storage but you do not specify that. So if you want to store the character &#25991; you need nchar(1) not nchar(2).
 

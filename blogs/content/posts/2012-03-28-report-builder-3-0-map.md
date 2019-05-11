@@ -91,7 +91,7 @@ Choose Single color map and Display labels. Select the label #COUNTYNAME.
 
 When you click Finish, you'll be taken to the Report Builder main screen.
 
-You can click on “Map Title” to change this.
+You can click on "Map Title" to change this.
 
 When you click anywhere on the map, the Map Layers screen will pop up. Here, you can add a layer; delete a layer; access properties; shift the map view up, down, left, or right; and adjust the zoom level.
 
@@ -145,7 +145,7 @@ I am going to use my pre-configured AdvWorks2008R2 dataset.
 
 _Design a query_
 
-(I covered this screen in-depth in my [Table or Matrix Wizard][7] blog.) Select “Edit as Text” and add the following query:
+(I covered this screen in-depth in my [Table or Matrix Wizard][7] blog.) Select "Edit as Text" and add the following query:
 
 SELECT NYS.Name, NYS.City, NYS.TotalDue, ADDR.SpatialLocation FROM NYStoreSales AS NYS INNER JOIN Person.Address AS ADDR ON ADDR.AddressID = NYS.addressid;
 
@@ -156,7 +156,7 @@ _Choose spatial data and map view options_
   * Spatial field – Make sure this is set to the field in the query that contains the spatial data, SpatialLocation. 
   * Layer type – Choose Point, to display one point. A polygon would outline and area, and line could be used to mark a path. 
 
-You won't “Embed map data” or “Add a Bing Maps layer” on this layer, in this example.
+You won't "Embed map data" or "Add a Bing Maps layer" on this layer, in this example.
 
  
 
@@ -178,9 +178,9 @@ Pick the dataset you created earlier, which has the spatial data in it.
 
 _Choose color theme and data visualization_ 
 
-  * “Use marker types” will add pin shapes at the points on the map. 
-  * “Use marker sizes” will size the points differently, based on the data. 
-  * “Use marker colors” will color the points on the map differently. 
+  * "Use marker types" will add pin shapes at the points on the map. 
+  * "Use marker sizes" will size the points differently, based on the data. 
+  * "Use marker colors" will color the points on the map differently. 
 
 Use marker types, based on City, and marker colors, for the SUM(Sales).
 

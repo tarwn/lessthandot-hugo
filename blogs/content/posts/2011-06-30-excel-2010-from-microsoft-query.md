@@ -1,5 +1,5 @@
 ---
-title: Excel 2010 Data Source “From Microsoft Query” Missing DSNs
+title: Excel 2010 Data Source "From Microsoft Query" Missing DSNs
 author: Jes Borland
 type: post
 date: 2011-06-30T14:42:00+00:00

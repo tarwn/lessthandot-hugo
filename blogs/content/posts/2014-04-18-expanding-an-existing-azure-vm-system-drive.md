@@ -23,7 +23,7 @@ While I was trying the longer process though, I found a series of smaller tools 
 
 ## The Quicker Process
 
-So, with a big fat “this worked on my machine and might blow up yours” disclaimer, here's that process:
+So, with a big fat "this worked on my machine and might blow up yours" disclaimer, here's that process:
 
 1. Stop the server
 2. Delete the server (but keep the drives) 
@@ -42,7 +42,7 @@ _Reference: <http://michaelwasham.com/2012/08/07/copying-vhds-and-other-blobs-be
     * Azure Dashboard – Virtual Machines
     * Select Disks at top
     * Select the drive + press Delete
-    * Select the “Delete and retain associated VHD” option
+    * Select the "Delete and retain associated VHD" option
 * Resize the Disk 
     * Download WindowsAzureDiskResizer:
 
@@ -70,14 +70,14 @@ Copyright 2013 Maarten Balliauw
 
   * Re-Create the Disk 
       * Azure Dashboard – Virtual Machines – Disks
-      * Select “Create” at the bottom
+      * Select "Create" at the bottom
       * Name the drive
       * Select the VHD you just resized
-      * Check the “this contains an OS” box and select “Windows”
+      * Check the "this contains an OS" box and select "Windows"
   * Re-create the VM 
       * Azure Dashboard
       * New – Compute – Virtual Machine – From Gallery
-      * Select “My Disks”
+      * Select "My Disks"
       * Select the new drive you just re-created
       * Finish the wizard to setup the VM like it originally was
       * Attach any other drives it originally had (reboot?)
@@ -88,7 +88,7 @@ Copyright 2013 Maarten Balliauw
       * Open Server Manager
       * Select Storage, then Disk Management
       * Select the drive you resized
-      * Right click and select “Expand”
+      * Right click and select "Expand"
       * Wizard!
   * Hurrah, the disk is embiggened!
   

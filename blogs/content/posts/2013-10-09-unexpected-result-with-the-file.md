@@ -23,7 +23,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  Recently I ran across a forum thread where someone encountered an unexpected result when creating a directory using the File System Task in Integration Services. He used a variable to specify the name of the directory to be created and this variable was populated by a parent package configuration. If the configuration failed, he didn't want the package to create the directory specified during design time, so he entered “invalid” in the variable value, expecting the package to fail as it is not a correct path to a directory. This is a common practice to make sure the package doesn't change your development environment if the configuration in production fails. If you get for example an error from a flat file source saying: “cannot find file invalid”, you immediately know the problem lies with the package configurations.
+  Recently I ran across a forum thread where someone encountered an unexpected result when creating a directory using the File System Task in Integration Services. He used a variable to specify the name of the directory to be created and this variable was populated by a parent package configuration. If the configuration failed, he didn't want the package to create the directory specified during design time, so he entered "invalid" in the variable value, expecting the package to fail as it is not a correct path to a directory. This is a common practice to make sure the package doesn't change your development environment if the configuration in production fails. If you get for example an error from a flat file source saying: "cannot find file invalid", you immediately know the problem lies with the package configurations.
 </p>
 
 <p style="text-align: justify;">

@@ -33,7 +33,7 @@ This is an example of such a use case. Found [here.][3]
   
 > Scenario A:
   
-> 1. MP selects “Search Events” on MP home page
+> 1. MP selects "Search Events" on MP home page
   
 > 2. System presents a page with choice of dates for the current month
   

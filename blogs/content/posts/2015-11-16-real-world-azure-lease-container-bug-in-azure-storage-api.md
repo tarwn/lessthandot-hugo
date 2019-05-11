@@ -32,7 +32,7 @@ Recently we've been working with the raw Azure Storage API to try and get to a m
   </p>
 </div>
 
-The prior “real world azure” post (September 2013) was a [Azure API Queue bug][1] that is still present today. 
+The prior "real world azure" post (September 2013) was a [Azure API Queue bug][1] that is still present today. 
 
 This newer bug is more minor, unless you are relying on the error codes to be correct, in which case it's kind of painful. It's also concerning because, while we don't build Storage APIs and SDKs for a living, we caught this in our integration tests relatively quickly, but it appears to have been missed in Microsoft testing thus far.
 

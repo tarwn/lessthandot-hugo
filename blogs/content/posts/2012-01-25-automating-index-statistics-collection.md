@@ -92,7 +92,7 @@ To complete the shredding of the variable process, a Foreach Loop Container is u
 
  
 
-For a detailed article on shredding variables, read “[Using Variables as a source in a Data Flow Component][4]” by Josef Richberg ([Blog][5] | [Twitter][6]).
+For a detailed article on shredding variables, read "[Using Variables as a source in a Data Flow Component][4]" by Josef Richberg ([Blog][5] | [Twitter][6]).
 
  
 
@@ -184,7 +184,7 @@ Add a configuration file to the package to complete the dynamic and mobile setup
 
  
 
-For detailed information on using and setting up configuration files, refer to “[Making SSIS Dynamic: Configuration Management][7]”
+For detailed information on using and setting up configuration files, refer to "[Making SSIS Dynamic: Configuration Management][7]"
 
  
 

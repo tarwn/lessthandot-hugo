@@ -121,7 +121,7 @@ A few things should be prepared prior to configuring Log Shipping.
   * Share location for the log backups to be copied to on the subscribers
   * Security setup for accessing these shares (Agent account by default)
 
-Log Shipping can be setup completely using T-SQL, but in the push for the “point, click and run” theory of SSMS, we will use it to setup, configure and get our lab running.
+Log Shipping can be setup completely using T-SQL, but in the push for the "point, click and run" theory of SSMS, we will use it to setup, configure and get our lab running.
 
 Log shipping is available in every edition of SQL Server but Express. In order to show our setup we will be using Developer Edition. Developer Edition is available for a very low cost and is identical in features to Enterprise. We will be using the AdventureWorks database to setup Log Shipping. If you do not have this database, you can download it here. 
 
@@ -132,18 +132,18 @@ Log shipping is available in every edition of SQL Server but Express. In order t
   <img src="/wp-content/uploads/blogs/DataMgmt/logship_1.gif" alt="" title="" width="628" height="561" />
 </div>
 
-By default, Log Shipping is disabled on each database. In order to go further, we need to check “Enable this as a primary database in a log shipping configuration”. This will set the transaction log backups available for us to open and configure.
+By default, Log Shipping is disabled on each database. In order to go further, we need to check "Enable this as a primary database in a log shipping configuration". This will set the transaction log backups available for us to open and configure.
 
 > <span class="MT_red">Note: If you have other transaction log backups running, they should be turned off prior to starting the new Log Shipping plans.</span>
 
-  4. Click the “Backup Settings” button to open the configuration wizard.
+  4. Click the "Backup Settings" button to open the configuration wizard.
 Earlier we mentioned preparing for Log Shipping and the shares required. You can use admin shares (e.g. \onpnt_xpsd$) but this isn't recommended as the admin shares should be for administrative purposes only. For our setup we will be using the following for processing backups:
 
 \onpnt\_xpspub\_logs
   
 \onpnt\_xpssub\_logs
 
-  5. Enter your share into the “Network path to backup folder” field
+  5. Enter your share into the "Network path to backup folder" field
 For now, we will leave the default 72 hours to retain log backups. 
 
 > <span class="MT_red">Note: the retention of the log backups must be taken into consideration for recovery from backups. Take into consideration the retention of other Full and Differential backups when setting this removal option. You do not want to delete log backups that could be required to recover to a point in time by restores.</span>
@@ -156,7 +156,7 @@ The next step is to determine the interval of the log backups. The default 15 mi
 
 Leave the default 15 minutes for now. If you want to alter this schedule, click the Schedule button and the SQL Agent scheduling window will come up. 
 
-To show compression, next to “Set backup compression”, select Compress Backup. If you are on an earlier version than 2008 R2 and any edition other than Enterprise or Developer, this option will not be available. SQL Server 2008 R2 allows compression in Standard and Enterprise (including Developer). Pre-R2, only Enterprise and Developer have this option. 
+To show compression, next to "Set backup compression", select Compress Backup. If you are on an earlier version than 2008 R2 and any edition other than Enterprise or Developer, this option will not be available. SQL Server 2008 R2 allows compression in Standard and Enterprise (including Developer). Pre-R2, only Enterprise and Developer have this option. 
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/logship_2.gif" alt="" title="" width="628" height="646" />
@@ -167,7 +167,7 @@ The next step in the process is to set any subscribers and monitoring servers if
 
   7. Click Add under the Secondary databases
   8. Click Connect and connect to the instance you want to Log Ship to
-  9. On the Initialize Secondary Database tab, select “Yes, generate a full backup of the primary...”
+  9. On the Initialize Secondary Database tab, select "Yes, generate a full backup of the primary..."
 This will back the AdventureWorks database up and restore it as the database we specify to be the subscriber. Ensure if you do this lab on a single SQL Server to change the name of the Secondary database to something other than the default of the primary. 
 
  10. Click the restore options and ensure the data and log files go into the correct directories per your disk configurations. 
@@ -218,7 +218,7 @@ Results:
   
 > Starting transaction log copy. Secondary ID: '07af9839-f962-40db-9392-2107e9cc2053'</none>
 
-Another extremely practical usage of these tables is, in the event of a disaster, being able to later analyze data that may have been lost in log backups that did not get copied to secondary servers. The log\_shipping\_secondary has a column, “last\_copied\_file”. This column has helped me determine exactly where a subscribing database is at in the restores several times in the past. 
+Another extremely practical usage of these tables is, in the event of a disaster, being able to later analyze data that may have been lost in log backups that did not get copied to secondary servers. The log\_shipping\_secondary has a column, "last\_copied\_file". This column has helped me determine exactly where a subscribing database is at in the restores several times in the past. 
 
 SSMS and built in reporting already available also provides us with a great way to monitor conditions of log shipping. Right click the database server in SSMS, scroll to reports and in standard reports, click the Transaction Log Shipping Status.
 

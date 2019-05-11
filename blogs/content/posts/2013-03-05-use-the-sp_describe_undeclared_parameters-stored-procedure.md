@@ -48,7 +48,7 @@ Here is the error.
   
 _Msg 137, Level 15, State 2, Line 2
   
-Must declare the scalar variable “@Type”._
+Must declare the scalar variable "@Type"._
 
 What if there was something that could help you find these kind of problems? There is, in SQL Server 2012 we now have the sp\_describe\_undeclared_parameters stored procedure 
 
@@ -88,7 +88,7 @@ Running that will give you the following error
 
 _Msg 137, Level 15, State 2, Line 3
   
-Must declare the scalar variable “@name”._
+Must declare the scalar variable "@name"._
 
 Here is how to quickly test that as well, take the code from above and grab everything except for this part ,@id = 1,@name = 'sysobjects'
 

@@ -29,7 +29,7 @@ A perfect example of editions in SQL Server that provide us the means to better 
 
 Snapshots are the key in this article because they provide us with the ability to not only create views of data easily accessed at a point in time, but they give us the ability to read from a secondary database in mirroring. 
 
-> <span class="MT_red">Note: snapshots are just that, “snapshots”. They do not give us a real-time active ability to read data as it is committed to the database.</span>
+> <span class="MT_red">Note: snapshots are just that, "snapshots". They do not give us a real-time active ability to read data as it is committed to the database.</span>
 
 Typically in most installations you will never be able to remove all reporting from OLTP databases. There is still business rules that require the user community to see the state of the data as it is at the time of report execution. This is also not a bad thing and with proper indexing and tuning, you can be very affective at limiting the foot print your reports and query executions leave on the database. Looking over my career, I came up with an 80/20 basis of reports on OLTP databases. This equates to, 80% point in time reporting to 20% real-time reporting. 
 
@@ -57,7 +57,7 @@ AS SNAPSHOT OF NEEDTOMOVE
 ```
 </p> 
 
-Once you have done this the snapshot is available as a read-only, point in time representation of the mirror. You can locate the snapshot in SSMS under the “database snapshots” tree located directly under the system databases section.
+Once you have done this the snapshot is available as a read-only, point in time representation of the mirror. You can locate the snapshot in SSMS under the "database snapshots" tree located directly under the system databases section.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/DataMgmt/snaps.gif" alt="" title="" width="290" height="224" />

@@ -21,7 +21,7 @@ I've used a number of test frameworks and runners over the years, but my first c
 
 In a prior post, I used gulp to keep my static assets up to date while running a self-hosted website: [Self-Hosted Web – Updating assets without restarting the debugger][1]
 
-This post will use a similar approach, using gulp “watch” to watch for changes to *.spec.js files in the filesystem and rebuilding a list of specs in a RequireJS define statement, so we automatically will have an up-to-date spec list every time we add or remove a spec file, with no manual editing required.
+This post will use a similar approach, using gulp "watch" to watch for changes to *.spec.js files in the filesystem and rebuilding a list of specs in a RequireJS define statement, so we automatically will have an up-to-date spec list every time we add or remove a spec file, with no manual editing required.
 
 _Note: Examples all use Jasmine and RequireJS throughout the post_
 
@@ -39,7 +39,7 @@ Here's a sample SpecRunner file that's relying on RequireJS to define the specs:
 
 
 ```
-This SpecRunner directly includes only Jasmine, RequireJS, and a set of Require configs in main.js, everything else is loaded from the “allSpecs.js” file. The custom bootloader and window.executeTests() method replace the vanilla bootloader so we can make sure we load our spec files and their dependencies before running the tests (see [Unit Testing with Jasmine 2.0 and Require.JS][2] for more info).
+This SpecRunner directly includes only Jasmine, RequireJS, and a set of Require configs in main.js, everything else is loaded from the "allSpecs.js" file. The custom bootloader and window.executeTests() method replace the vanilla bootloader so we can make sure we load our spec files and their dependencies before running the tests (see [Unit Testing with Jasmine 2.0 and Require.JS][2] for more info).
 
 The allSpecs file is simply a list of spec files in a RequireJS define() statement (currently only the first spec file for this tiny sample project)
 
@@ -49,7 +49,7 @@ The allSpecs file is simply a list of spec files in a RequireJS define() stateme
 define(['spec/siteWideViewModel.spec.js',
 ], function(){ });
 ```
-The advantage of doing this as a separate file is that we keep the change history for the mechanics of how we run the tests (SpecRunner) and the actual list of spec files (allSpecs) from crossing and greatly simplify future updates to the SpecRunner as newer versions of Jasmine come out as well as keep the text content we have to manage in our gulpfile to a minimum. Additionally, we can now use this “allSpecs” file in other test runners, like Karma or via a PhantomJS script, to ensure we're running exactly the same set of tests locally and in CI.
+The advantage of doing this as a separate file is that we keep the change history for the mechanics of how we run the tests (SpecRunner) and the actual list of spec files (allSpecs) from crossing and greatly simplify future updates to the SpecRunner as newer versions of Jasmine come out as well as keep the text content we have to manage in our gulpfile to a minimum. Additionally, we can now use this "allSpecs" file in other test runners, like Karma or via a PhantomJS script, to ensure we're running exactly the same set of tests locally and in CI.
 
 All we need now is to be able to build and maintain that allSpecs file. Using [Gulp][3], we can setup a task to watch the file system for any changes to files that match a pattern of *.spec.js. When we see a change, we can grab a full list of the spec files and concatenate that into a new define statement, overwriting the allSpecs file with an updated list.
 

@@ -43,7 +43,7 @@ Expression of a supported data type to format.</p>
   
 nvarchar format pattern.
 
-The format argument must contain a valid .NET Framework format string, either as a standard format string (for example, “C” or “D”), or as a pattern of custom characters for dates and numeric values (for example, “MMMM dd, yyyy (dddd)”). Composite formatting is not supported. For a full explanation of these formatting patterns, please consult the.NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, “[Formatting Types.][1]”
+The format argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM dd, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, please consult the.NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types.][1]"
 
 **culture**
   

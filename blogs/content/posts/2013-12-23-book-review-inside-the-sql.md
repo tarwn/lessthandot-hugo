@@ -21,11 +21,11 @@ categories:
     </p>
     
     <p>
-      This book is supposed to take the “magic black box” feel out of the query optimizer. Chapters range from an introduction to optimization, to index selection, to hints.
+      This book is supposed to take the "magic black box" feel out of the query optimizer. Chapters range from an introduction to optimization, to index selection, to hints.
     </p>
     
     <p>
-      I remember my first introduction to the parts of the query optimizer – I was at SQL Saturday Chicago and <a href="http://scarydba.com">Grant Fritchey</a> was giving a presentation to a packed room. He mentioned terms like “parsing” and “binding”. I thought it was interesting, but most of my work with queries was more practical – how do I make them suck less? (Fortunately, in the past four years, I've gotten a lot better at making queries run better.) Now, I'm interested in more details around this process.
+      I remember my first introduction to the parts of the query optimizer – I was at SQL Saturday Chicago and <a href="http://scarydba.com">Grant Fritchey</a> was giving a presentation to a packed room. He mentioned terms like "parsing" and "binding". I thought it was interesting, but most of my work with queries was more practical – how do I make them suck less? (Fortunately, in the past four years, I've gotten a lot better at making queries run better.) Now, I'm interested in more details around this process.
     </p>
     
     <p>

@@ -22,7 +22,7 @@ As I said, this is a great example for hundreds of systems out there.
 
 ## Who is at fault?
 
-I've been on a few projects in the past that had similar problems. We operated in one of two modes, super extremely careful or push-and-pray. Both cases depend on after hours deployments and take the fragility of the deployment process as a given. We accept and live with the fact that builds are dangerous and assume danger is inherent to all build processes. In the poorer cases, we actually “blamestormed”, trying to determine who was to blame when a build went wrong.
+I've been on a few projects in the past that had similar problems. We operated in one of two modes, super extremely careful or push-and-pray. Both cases depend on after hours deployments and take the fragility of the deployment process as a given. We accept and live with the fact that builds are dangerous and assume danger is inherent to all build processes. In the poorer cases, we actually "blamestormed", trying to determine who was to blame when a build went wrong.
 
 The problem wasn't the inherent complexity of builds or even a specific individual, but the process we were using to do those deployments.
 

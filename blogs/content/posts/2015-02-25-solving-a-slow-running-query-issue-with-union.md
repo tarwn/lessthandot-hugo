@@ -84,7 +84,7 @@ The execution plan of the first query is a bit different:
 
 The nested loops now gives a warning that there is no join predicate. This results in about 5 million rows, which are filtered later on with the Filter operator to the desired 90,000 rows. A bit of unnecessary overhead it seems. So the execution plan of the first query is a bit silly, since it calculates the date columns for the inner select after the join (in the Compute Scalar operator between the Filter and the Nested Loops). In the second query, these columns are calculated before the join and so the Nested Loops can use them as join predicates.
 
-The question is why does SQL Server change behavior? Well, the second query has a UNION operator in the inner query. This means that SQL Server has to compare the two result sets which each other, so the date columns have to be calculated directly in the inner query. Knowing this, we can easily optimize the first query by adding a “dummy UNION”:
+The question is why does SQL Server change behavior? Well, the second query has a UNION operator in the inner query. This means that SQL Server has to compare the two result sets which each other, so the date columns have to be calculated directly in the inner query. Knowing this, we can easily optimize the first query by adding a "dummy UNION":
 
 ```sql
 WITH CTE_Contracts AS

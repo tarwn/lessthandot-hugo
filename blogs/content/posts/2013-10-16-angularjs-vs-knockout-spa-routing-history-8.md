@@ -22,7 +22,7 @@ tags:
   - spa
 
 ---
-I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. Let's talk Single Page applications, and more specifically, Routing and History. While AngularJS doesn't have the word “SPA” on their front page, the tutorial jumps straight into building one. How hard is it to give Knockout the same routing capability? Does it end up worse? 
+I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. Let's talk Single Page applications, and more specifically, Routing and History. While AngularJS doesn't have the word "SPA" on their front page, the tutorial jumps straight into building one. How hard is it to give Knockout the same routing capability? Does it end up worse? 
 
 <div style="background-color: #eeeeee; padding: 1em;">
   This is the eighth of <del>eight</del> nine posts looking at the capabilities of knockout and Angular. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-introduction-1" title="AngularJS vs Knockout - Introduction">introduction post</a>, I outlined the capabilities that I am evaluating for. In the <a href="/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-automated-testing-7" title="AngularJS vs Knockout - Automated Testing">seventh post</a>, I looked at unit testing. This post explores routing and history.
@@ -87,7 +87,7 @@ sampleApp.config(['$routeProvider', function (routeProvider) {
     routeProvider.otherwise({ redirectTo: '/ListOfStuff' });
 }]);
 ```
-To translate, the URL <code class="codespan">routing.html#/ListOfStuff</code> will show us the ListOfStuff.html template, the URL <code class="codespan">routing.html#/StuffDetail/123</code> will show us the StuffDetail template and pass along a parameter named “id” with 123 in it, and if no route matches, redirect to the first one.
+To translate, the URL <code class="codespan">routing.html#/ListOfStuff</code> will show us the ListOfStuff.html template, the URL <code class="codespan">routing.html#/StuffDetail/123</code> will show us the StuffDetail template and pass along a parameter named "id" with 123 in it, and if no route matches, redirect to the first one.
 
 The HTML templates then look like this:
 
@@ -202,7 +202,7 @@ And the HTML for the page and the viewmodels looks like this:
 </script>
 </body>
 ```
-So far, the only major addition over the Angular example above is that outer viewmodel and the HTML to conditionally render it above. That “if” binding means that Knockout will not evaluate/display that area's contents when the bound value is falsey. 
+So far, the only major addition over the Angular example above is that outer viewmodel and the HTML to conditionally render it above. That "if" binding means that Knockout will not evaluate/display that area's contents when the bound value is falsey. 
 
 I've made the examples slightly more complex than they needed to be because I'm still using [RequireJS][9] throughout them. This wasn't necessary and probably serves as a little extra noise, but oh well.
 
@@ -242,13 +242,13 @@ require(['knockout', 'ko-app', 'sammy'], function (ko, AppViewModel, sammy) {
     routing.run();
 });
 ```
-Using the Sammy library, I've defined the same three cases I had in Angular. Each route has a callback that it calls when the route is matched, which I used to create the appropriate ViewModel and assign it to my main “app” viewmodel, causing the template to be changed. If the empty route is matched, I explicitly run the ListOfStuff route.
+Using the Sammy library, I've defined the same three cases I had in Angular. Each route has a callback that it calls when the route is matched, which I used to create the appropriate ViewModel and assign it to my main "app" viewmodel, causing the template to be changed. If the empty route is matched, I explicitly run the ListOfStuff route.
 
 ### Knockout Routing w/ Finch.js
 
 Full source available at [Knockout/Routing.FinchJS.html][11].
 
-The tagline for [FinchJS][12] is “Powerfully Simple Javascript Routing”, and I have to agree that the library meets expectations. Implementing the same routes as the last two exmaples:
+The tagline for [FinchJS][12] is "Powerfully Simple Javascript Routing", and I have to agree that the library meets expectations. Implementing the same routes as the last two exmaples:
 
 ```javascript
 // define route and outer ko viewmodel
@@ -328,7 +328,7 @@ As I mentioned above, all of these examples were really easy to put together, so
 
 Man that was easy.There are a ton of good routing libraries out there and it seems like even if you made the wrong decision when you picked one, it would be relatively easy to switch to a different one later. I personally liked Finch.js the best, but if I was using AngularJS I'd probably ride the default library as long as I could (and may never have a reason to change).
 
-Using the dynamic template to change “pages” was also easy. I banged on the links a while and Chrome said I was using a lot of memory, but as soon as I let the GC clean up, it all cleared up. Banging on AngularJS also used memory, but it had GC's occurring along the way too, so I suspect if I were to use the knockout 'sorta-SPA' viewmodel in a production environment, I would actually want to use a method that delete()-ed the oold model as the new one was assigned.
+Using the dynamic template to change "pages" was also easy. I banged on the links a while and Chrome said I was using a lot of memory, but as soon as I let the GC clean up, it all cleared up. Banging on AngularJS also used memory, but it had GC's occurring along the way too, so I suspect if I were to use the knockout 'sorta-SPA' viewmodel in a production environment, I would actually want to use a method that delete()-ed the oold model as the new one was assigned.
 
 ## Post 8 of <del>8</del> 9
 

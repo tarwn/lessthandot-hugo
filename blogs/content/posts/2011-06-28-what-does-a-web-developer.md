@@ -217,7 +217,7 @@ Advanced: Knows almost everything on the list
     </td>
     
     <td>
-      Purpose and use of “media”
+      Purpose and use of "media"
     </td>
   </tr>
   

@@ -1,5 +1,5 @@
 ---
-title: Dealing with The multi-part identifier “dbo.Table.Column” could not be bound. error in an update statement
+title: Dealing with The multi-part identifier "dbo.Table.Column" could not be bound. error in an update statement
 author: SQLDenis
 type: post
 date: 2010-09-01T22:33:18+00:00
@@ -34,7 +34,7 @@ and db1Alias.IndividualId = db2Alias.IndividualId
 Can you tell what is wrong with the code? If you try to run that you will get the following error
 
 <div style="border:1px solid black;background-color:#444;color:white;margin:0 20px;padding:0 5px 0 5px;">
-  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier “DB2.dbo.Table1.Column1” could not be bound.
+  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier "DB2.dbo.Table1.Column1" could not be bound.
 </div>
 
 
@@ -68,7 +68,7 @@ JOIN tempdb.dbo.BlaTest2 a on b.id =a.id
 Here is the error
 
 <div style="border:1px solid black;background-color:#444;color:white;margin:0 20px;padding:0 5px 0 5px;">
-  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier “tempdb.dbo.BlaTest2.id” could not be bound.
+  Msg 4104, Level 16, State 1, Line 2<br /> The multi-part identifier "tempdb.dbo.BlaTest2.id" could not be bound.
 </div>
 
 

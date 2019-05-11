@@ -177,7 +177,7 @@ Listing 3
 
 Figure 5
 
-I don't want to dive too far into the PAGE output as it is out of scope.  What I will point out is the row outlined being the slot and the offset.  To really dig into PAGE, read, “[Inside the Storage Engine: Anatomy of a page][1]” by Paul Randal.
+I don't want to dive too far into the PAGE output as it is out of scope.  What I will point out is the row outlined being the slot and the offset.  To really dig into PAGE, read, "[Inside the Storage Engine: Anatomy of a page][1]" by Paul Randal.
 
 For the HEAP table and the nonclustered index, there is a need for the extra step, unlike the step utilizing a key in the clustered table, to utilize the row indicator directly back to the data rows in the HEAP structure.  Since this is not an actual column, that would not show in statistics.
 

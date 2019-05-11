@@ -22,7 +22,7 @@ I got tagged by Denny Cherry ([@mrdenny][1] on twitter) to [create an image of t
 
 As you can see SQL rules here, I wonder why????
 
-So how did I create this image? I used [Wordle][4], Wordle is a toy for generating “word clouds” from text that you provide. The clouds give greater prominence to words that appear more frequently in the source text. You can tweak your clouds with different fonts, layouts, and color schemes
+So how did I create this image? I used [Wordle][4], Wordle is a toy for generating "word clouds" from text that you provide. The clouds give greater prominence to words that appear more frequently in the source text. You can tweak your clouds with different fonts, layouts, and color schemes
 
  [1]: http://twitter.com/mrdenny
  [2]: http://itknowledgeexchange.techtarget.com/sql-server/i-was-bouncing-around-the-net-and-found-wordlenet/

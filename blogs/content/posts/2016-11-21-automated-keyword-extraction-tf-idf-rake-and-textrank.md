@@ -23,7 +23,7 @@ tags:
 After initially playing around with text processing in [my prior post][1], I added an additional algorithm and cleaned up the logic to make it easier to perform test runs and reuse later. I tweaked the RAKE algorithm implementation and added TextRank into the mix, with full sample code and links to sources available. I'm also using a read-through cache of the unprocessed and processed files so I can see the content and tweak the cleanse logic. 
 
 <div style="margin: 1em 0; padding: 1em; background-color: #FFFFCC">
-  Context: The ultimate goal is to build a script that could process through 6 years of my bookmarked reading and extract out keywords, so I could do some trend analysis on how my reading has changed over time and maybe later build a supervised model with that data to analyze new online posts and produce a “worth my time or not” score.
+  Context: The ultimate goal is to build a script that could process through 6 years of my bookmarked reading and extract out keywords, so I could do some trend analysis on how my reading has changed over time and maybe later build a supervised model with that data to analyze new online posts and produce a "worth my time or not" score.
 </div>
 
 The first step was to increase my hands-on knowledge of text processing and identify potential algorithms. I used Python as the programming language, 5 sample posts from my own website, and two algorithms: TF-IDF and RAKE. I learned how these algorithms work, that data cleansing is an incredibly important step, and that python package management has trailed significantly behind most of the other languages I use day-to-day.
@@ -203,7 +203,7 @@ TextRank provided the best results for what I'm trying to do, but seemed the slo
 
 **Time:** At 50 documents the RAKE and TF-IDF implementations took about 2 seconds each, while TextRank took over 6.5 <u>minutes</u>. This is a comparison of three implementations I downloaded from the internet, though, so I'm going to dig deeper or write my own implementation of TextRank to see if I can locate the bottleneck.
 
-**Best fit for my goal:** For the purposes of identifying longer term trends (common subjects across all of my documents, “C#” or “JavaScript”), TextRank or RAKE is going to generally be the best choice, as TF-IDF will likely score common words across many documents lower (Inverse Document Frequency).
+**Best fit for my goal:** For the purposes of identifying longer term trends (common subjects across all of my documents, "C#" or "JavaScript"), TextRank or RAKE is going to generally be the best choice, as TF-IDF will likely score common words across many documents lower (Inverse Document Frequency).
 
 **Other Alternative:** I also evaluated the Text Analytics option for [Azure Cognitive Services][11]. It was quick to get running and has a free tier that would be plenty for me (1000 calls/month). Unfortunately the [Key Phrases API][12] surfaces only the keywords (1/3rd of the phrases, at a guess) and not the associated scores, so it wouldn't work for this use (which is unfortunate, parallel cloud execution would be nice to have for this project).
 

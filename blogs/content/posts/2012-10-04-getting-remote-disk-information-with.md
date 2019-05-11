@@ -47,7 +47,7 @@ This looks better:
   <a href="/wp-content/uploads/users/axel8s/PSDiskInfo2.png?mtime=1349357671"><img alt="" src="/wp-content/uploads/users/axel8s/PSDiskInfo2.png?mtime=1349357671" width="964" height="110" /></a>
 </div>
 
-Next step is to see the percentage free space. Using @{Name=””,Expression={}}:
+Next step is to see the percentage free space. Using @{Name="",Expression={}}:
 
 ```PowerShell
 Get-WmiObject win32_logicaldisk -computer <computername> | select-object DeviceID, VolumeName,Size,FreeSpace,@{Name="PCTFreeSpace";Expression={$_.FreeSpace/$_.Size*100}}

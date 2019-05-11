@@ -23,7 +23,7 @@ I've lived with this in the past, but the regular delay became annoying so I dec
 
 ## Why don't the new files show up?
 
-Web Projects run directly out of the project folder, so they are serving up the same version of the files we are editing, allowing real-time editing to be possible. With console applicaitons, we are editing the file in the project and relying on it being set to “Content” and “Copy Always” so the compiler will copy that content when we build. Since the application runs out of the bin folder, it's limited to that out of date copy of the files.
+Web Projects run directly out of the project folder, so they are serving up the same version of the files we are editing, allowing real-time editing to be possible. With console applicaitons, we are editing the file in the project and relying on it being set to "Content" and "Copy Always" so the compiler will copy that content when we build. Since the application runs out of the bin folder, it's limited to that out of date copy of the files.
 
 <div id="attachment_4601" style="width: 624px" class="wp-caption aligncenter">
   <a href="/wp-content/uploads/2016/06/AssetsFolder.png"><img src="/wp-content/uploads/2016/06/AssetsFolder.png" alt="Example Assets Folder" width="614" height="234" class="size-full wp-image-4601" srcset="/wp-content/uploads/2016/06/AssetsFolder.png 614w, /wp-content/uploads/2016/06/AssetsFolder-300x114.png 300w" sizes="(max-width: 614px) 100vw, 614px" /></a>
@@ -60,12 +60,12 @@ I only have two tasks, and both are related to building or debugging my project,
   }
 }
 ```
-The key ingredient is <a href="https://www.npmjs.com/package/gulp-watch" title="gulp-watch on npmjs.com" target="_blank">gulp-watch</a>. The “watch” task takes a wildcard path and watches the filesystem for changes to that path. When a file matching the path is changed, it calls the provided gulp tasks or function callback.
+The key ingredient is <a href="https://www.npmjs.com/package/gulp-watch" title="gulp-watch on npmjs.com" target="_blank">gulp-watch</a>. The "watch" task takes a wildcard path and watches the filesystem for changes to that path. When a file matching the path is changed, it calls the provided gulp tasks or function callback.
 
 I have two tasks for gulp: 
 
-  * “less” – transpiles all *.less files in my assets folder and concatenates them into a single stylesheet.css file
-  * “watch” – watches the contents of my assets folder and either runs them through the “less” task or copies them to the bin/Debug/Assets folder
+  * "less" – transpiles all *.less files in my assets folder and concatenates them into a single stylesheet.css file
+  * "watch" – watches the contents of my assets folder and either runs them through the "less" task or copies them to the bin/Debug/Assets folder
 
 **gulpfile.json**: Configuration
 
@@ -82,9 +82,9 @@ var config = { };
 config.assetsPath = "Assets";
 config.assetsOutputPath = (argv.output || "bin/Debug/") + config.assetsPath;
 ```
-I set a few configurations at the top of the file, including the name of the local Assets folder and an overridable path to the target Assets folder (which defaults to “bin/Debug/”).
+I set a few configurations at the top of the file, including the name of the local Assets folder and an overridable path to the target Assets folder (which defaults to "bin/Debug/").
 
-**gulpfile.json**: “less” Task
+**gulpfile.json**: "less" Task
 
 ```javascript
 gulp.task('less', function() {
@@ -99,11 +99,11 @@ gulp.task('less', function() {
         .pipe(gulp.dest(config.assetsPath))
 });
 ```
-The “less” task picks up all *.less files in the assets path, performs the LESS transpile on them, adds a prefix on the top of each file (this is a handy way to dynamically add copyright statements too), then concatenates to a single file.
+The "less" task picks up all *.less files in the assets path, performs the LESS transpile on them, adds a prefix on the top of each file (this is a handy way to dynamically add copyright statements too), then concatenates to a single file.
 
-In VisualStudio, I have a pre-build event that runs this command so I am executing my LESS transpile the same exact way if I do a Visual Studio build or the “watch” call later (the output stylesheet.css is ignored in my “.gitignore”, so my build process can use this same command as well).
+In VisualStudio, I have a pre-build event that runs this command so I am executing my LESS transpile the same exact way if I do a Visual Studio build or the "watch" call later (the output stylesheet.css is ignored in my ".gitignore", so my build process can use this same command as well).
 
-**gulpfile.json**: “watch” Task
+**gulpfile.json**: "watch" Task
 
 ```javascript
 // Task: watch

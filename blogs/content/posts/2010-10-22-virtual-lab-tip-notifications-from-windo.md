@@ -31,7 +31,7 @@ Windows Vista, 7, and 2008 have a built-in option that allows us to attach actio
 
 First we need an example of the event and, being lazy, I'm going to generate one the easy way. Shutting down a SQL Server service generates the first event I want to track (and makes SQL admins everywhere cringe a little, mission accomplished). Later in the post we'll cover creating tasks without restarting our server, since people tend to get upset when we do things like that in production.
 
-When we open the Event Log from Administrative Tools menu in Windows, there are several logs available. SQL Server and other service log entries are logged to the Application log. To create my new event-driven task, I locate the entry I just created, right click it, and select “Attach Task to This Event...”.
+When we open the Event Log from Administrative Tools menu in Windows, there are several logs available. SQL Server and other service log entries are logged to the Application log. To create my new event-driven task, I locate the entry I just created, right click it, and select "Attach Task to This Event...".
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/EventMonitor/orig/01_screen.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/EventMonitor/01_screen.png" alt="Attach Task to Event Dialog" /></a><br /> Attach Task to Event – Dialog
@@ -53,15 +53,15 @@ The second step doesn't require (or allow) an input and the third step presents 
   <a href="http://www.tiernok.com/LTDBlog/EventMonitor/orig/03_screen.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/EventMonitor/03_screen.png" alt="Email Info" /></a><br /> Information for Email
 </div>
 
-After filling the email options out we continue to the last tab to review the task information before finishing. At this point we will want to check the “open properties” checkbox and press “Finish”.
+After filling the email options out we continue to the last tab to review the task information before finishing. At this point we will want to check the "open properties" checkbox and press "Finish".
 
-After completing the wizard, we now have the full properties dialog for the task. Perhaps the most critical item here is to change the radio selection on the first tab to “Run whether user is logged in or not”. There is also an OS configuration box that I changed to Windows 2008 R2/Windows 7, but I am not sure whether this provides an addition features or simply satisfaction from making such an important decision.
+After completing the wizard, we now have the full properties dialog for the task. Perhaps the most critical item here is to change the radio selection on the first tab to "Run whether user is logged in or not". There is also an OS configuration box that I changed to Windows 2008 R2/Windows 7, but I am not sure whether this provides an addition features or simply satisfaction from making such an important decision.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/EventMonitor/orig/04_screen.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/EventMonitor/04_screen.png" alt="Change Summary - Finished" /></a><br /> Summary before Finishing
 </div>
 
-I have enough of the task filled in now that we can now press the OK button and try it out. We open Server Manager from the pinned icon on the taskbar (or via the search mechanism in the Start menu). On expanding “Configuration/Task Scheduler/Task Scheduler Libary” and selecting “Event Viewer Tasks” we should see the task we created. Right clicking the task and pressing “Run” will force the task to run once (again, just like testing a scheduled task). We can select the History tab to see the details of the run or wait patiently for an email to show up in our inbox.
+I have enough of the task filled in now that we can now press the OK button and try it out. We open Server Manager from the pinned icon on the taskbar (or via the search mechanism in the Start menu). On expanding "Configuration/Task Scheduler/Task Scheduler Libary" and selecting "Event Viewer Tasks" we should see the task we created. Right clicking the task and pressing "Run" will force the task to run once (again, just like testing a scheduled task). We can select the History tab to see the details of the run or wait patiently for an email to show up in our inbox.
 
 <div class="screenshot">
   <a href="http://www.tiernok.com/LTDBlog/EventMonitor/orig/05_screen.png" title="View Fullsize" target="_blank"><img src="http://www.tiernok.com/LTDBlog/EventMonitor/05_screen.png" alt="Event Viewer Tasks view" /></a><br /> Event Viewer Tasks view

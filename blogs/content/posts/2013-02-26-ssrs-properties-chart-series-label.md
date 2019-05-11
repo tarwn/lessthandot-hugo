@@ -45,7 +45,7 @@ I go to the Design tab, select the series on the chart, expand Label, and set Vi
   <img src="/wp-content/uploads/users/grrlgeek/label visible 3.png?mtime=1361883851" alt="" width="634" height="396" />
 </p>
 
-I want this to look more readable. I set Font Size to 8, Format to “c” (currency), and Position to Top.
+I want this to look more readable. I set Font Size to 8, Format to "c" (currency), and Position to Top.
 
 <p style="text-align: center;">
   <img src="/wp-content/uploads/users/grrlgeek/label visible 4.png?mtime=1361883851" alt="" width="271" height="335" />

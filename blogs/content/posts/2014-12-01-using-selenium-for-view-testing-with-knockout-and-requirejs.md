@@ -32,7 +32,7 @@ Something I have been considering lately is to use Selenium to test just the Vie
 
 # UI Testing without the Backend
 
-To try this out, I needed a sample application. I wrote a simple application using [knockout][6] and [RequireJS][7]. There is a basic search screen that allows you to “search” against a slow WebApi endpoint, get further details about a product from that endpoint, and add items to a local cart. 
+To try this out, I needed a sample application. I wrote a simple application using [knockout][6] and [RequireJS][7]. There is a basic search screen that allows you to "search" against a slow WebApi endpoint, get further details about a product from that endpoint, and add items to a local cart. 
 
 Note: The WebApi actions are slow to reflect performance from larger, more complex applications that have to worry about things like authentication, databases, accessing network stores, logging, contention and retry policies, business logic, etc. 
 
@@ -104,7 +104,7 @@ While playing with this, I looked at 4 different methods of testing with Seleniu
 
 The 4 methods are:
 
-  * [IndexTests.FullIntegration][11] – launch the site locally and run my UI tests against it, with the “real” WebAPI service
+  * [IndexTests.FullIntegration][11] – launch the site locally and run my UI tests against it, with the "real" WebAPI service
   * [IndexTests.ClientSideInjection][12] – Execute a script to stub the itemService.js logic to run locally
   * [IndexTests.NancyServer][13] – Self-host a Nancy server with fake versions of the server-side API
   * [IndexTests.NancyServer][14] – Self-host a Nancy server that serves a stubbed itemService.js file

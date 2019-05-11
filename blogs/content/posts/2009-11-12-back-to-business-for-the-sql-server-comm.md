@@ -49,7 +49,7 @@ The call for speakers is open so get out there and submit an abstract. The line 
 
 One and still an awesome compilation of blogs, is Aaron Bertrand's ([@AaronBertrand][1]) listing of bad habits to kick. I'd review them again just to make sure you didn't ignore at least one that you may be doing.
 
-[Series of “Bad habits to kick” by Aaron Bertrand][2]
+[Series of "Bad habits to kick" by Aaron Bertrand][2]
   
 
 
@@ -74,7 +74,7 @@ Let's not forget [SQL University][3] put together by Jorge Segarra and accompani
   <img src="/wp-content/uploads/blogs/DataMgmt//line.gif" alt="" title="" width="500" height="2" />
 </div>
 
-George over here at LessThanDot has been putting together a “best Practices” set of blogs. These are turning out to be really good. I would expect nothing short of expert advice from George. His SQL skills have helped me in my career and I know they can help you. Here is a quick link back to the ones up so far. Look for new ones to come as well
+George over here at LessThanDot has been putting together a "best Practices" set of blogs. These are turning out to be really good. I would expect nothing short of expert advice from George. His SQL skills have helped me in my career and I know they can help you. Here is a quick link back to the ones up so far. Look for new ones to come as well
 
 [Best Practice: Do not cluster on UniqueIdentifier when you use NewId][4] 
   

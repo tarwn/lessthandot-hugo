@@ -29,7 +29,7 @@ In order to use the Data Profiling Task in SSIS you need to do a couple of thing
   <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task1.PNG?mtime=1364472826"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task1.PNG?mtime=1364472826" width="173" height="73" /></a>
 </div>
 
-Once you do that you will see a red circle with an x, if you hover over this icon, you will see the following text: _The “Destination” property is invalid: Missing destination for profile output._ Double click on the Data Profiling Task, leave DestinationType as FileConnection, click on Destination, in the pop up window, choose New File from the Usage Type option, navigate to the folder where you want the file and give the file a name.
+Once you do that you will see a red circle with an x, if you hover over this icon, you will see the following text: _The "Destination" property is invalid: Missing destination for profile output._ Double click on the Data Profiling Task, leave DestinationType as FileConnection, click on Destination, in the pop up window, choose New File from the Usage Type option, navigate to the folder where you want the file and give the file a name.
 
 Next we have to look what profile requests we want to include. Here is what is available according to Books On Line
 

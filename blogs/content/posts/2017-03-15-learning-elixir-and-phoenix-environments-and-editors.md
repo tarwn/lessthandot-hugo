@@ -20,7 +20,7 @@ tags:
   - vs code
 
 ---
-Recently I started down the path to learn Elixir and the Phoenix framework. This is a language and framework I intend to use quite a bit, so my goal is to get from “barely able to read it” to “able to ship readable, idiomatic, testable apps”. 
+Recently I started down the path to learn Elixir and the Phoenix framework. This is a language and framework I intend to use quite a bit, so my goal is to get from "barely able to read it" to "able to ship readable, idiomatic, testable apps". 
 
 Having learned a fairly large number of languages, libraries, and frameworks over the years, I know the best way I learn is by combining reading or videos with writing and debugging actual code (some intersection of chasing book smarts + street smarts). This also lets me combine my own experience and expectations with folks that are smarter about the given topic (and bring a different context), which sometimes results in learning things neither of us intended.
 
@@ -48,7 +48,7 @@ I've tried this two ways on the Mac, one global version via Homebrew and one pro
 
 Homebrew Approach (global install): <http://elixir-lang.org/install.html#mac-os-x>
 
-“asdf” Approach (project-specific versioning):
+"asdf" Approach (project-specific versioning):
 
   * [Install asdf][2]
   * [Install asdf-erlang plugin][3]

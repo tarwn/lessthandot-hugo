@@ -41,7 +41,7 @@ For an example, I'm going to create a new package to run off a small subset of I
   
 First task bring over two send email tasks which will act as our success and failure notifications. Add the SMTP connection to the connection manager and go ahead and configure the tasks to point to your local or remote SMTP server.
   
-Second task, bring over two script tasks. First will be named “Call up SQLPing”, and the second, “Validate SQLPing Run and file output”.
+Second task, bring over two script tasks. First will be named "Call up SQLPing", and the second, "Validate SQLPing Run and file output".
   
 Go into the designer of the first script task and add IO and Diagnostics in so we can access the files and also call a new process. I created a folder on my root c drive as C:instance_search where the files for this example will be written. 
 
@@ -70,7 +70,7 @@ Replace the xx with your own structure. There are some things I need to point ou
 
 This is the working command for directory paths other than the root:
 
-c: sqlping3cl.exe “-scantype range -startIP 192.168.xx.xx -EndIP 192.168.xx.xx -Output instance\_searchcorporate\_location.csv
+c: sqlping3cl.exe "-scantype range -startIP 192.168.xx.xx -EndIP 192.168.xx.xx -Output instance\_searchcorporate\_location.csv
 
 Next step in the SSIS package is to edit the second script task. This step will validate the file creation by SQL Ping and base the flow for the next step on the existence of the file. 
 
@@ -116,7 +116,7 @@ Configure the flat file source with the flat file connection. Verify the mapping
   <img src="/wp-content/uploads/blogs/DataMgmt//mapp_view.gif" alt="" title="" />
 </div>
 
-This ensures they will pump to SQL accurately and without issues. Connect the conversion to the OLEDB destination and open the destination editor. Select the SQL connection you created earlier and then in the table listing find your table. Verify in mappings then that your converted values are mapped. By default you will probably get the original columns. I typically check “Keep nulls” for these types of tasks also. Sense we rely on external processes that are out of our control the opportunity for null values is more probable. 
+This ensures they will pump to SQL accurately and without issues. Connect the conversion to the OLEDB destination and open the destination editor. Select the SQL connection you created earlier and then in the table listing find your table. Verify in mappings then that your converted values are mapped. By default you will probably get the original columns. I typically check "Keep nulls" for these types of tasks also. Sense we rely on external processes that are out of our control the opportunity for null values is more probable. 
 
 Go back the control flow tab and connect all your steps to the email tasks so notifications go out on success and failures. You should end up with something similar to 
 

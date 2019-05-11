@@ -42,16 +42,16 @@ _Note 2: I suspect the simulations below will make this a mobile-unfriendly post
 
 Before we start answering the questions above, lets extract some details from those dense articles to set the stage. 
 
-There are actually several layers of systems involved in SQL Azure, this post is going to focus just on the database operations. I'll point out when the “fabric” is involved, but it won't be part of the simulations. That being said, here's the key details for the database:
+There are actually several layers of systems involved in SQL Azure, this post is going to focus just on the database operations. I'll point out when the "fabric" is involved, but it won't be part of the simulations. That being said, here's the key details for the database:
 
   * There are a minimum of 3 database replicas at all times
-  * All incoming traffic goes to the Primary replica (elected by the “fabric”)
-  * Replicas exist on different physical servers (created/managed by the “fabric”)
+  * All incoming traffic goes to the Primary replica (elected by the "fabric")
+  * Replicas exist on different physical servers (created/managed by the "fabric")
   * Database Writes require a quorum of 2 of the 3 replicas acknowledging the write in order to COMMIT
   * Database Reads return directly from the Primary replica
   * There is support for both transactional and full restores
 
-Each “data node” in the network includes the SQL Server processes involved in the items above as well asservices for failure detection, re-establishing nodes after failure, throttling, and so on. I won't be diving into those today, this is all about the database replica.
+Each "data node" in the network includes the SQL Server processes involved in the items above as well asservices for failure detection, re-establishing nodes after failure, throttling, and so on. I won't be diving into those today, this is all about the database replica.
 
 Some Warnings:
 
@@ -63,14 +63,14 @@ Some Warnings:
 Writes in SQL Azure come through a TDS gateway that, transparent to us, passes our queries to the Primary replica. The replica determines what the change will be from our operation, assigns a Change Sequence Number (CSN) to it, then replicates it to the secondary replicas. The Primary replica only commits the changes after it has received at least one acknowledgement back from the secondaries, ensuring the data now is now on at least two replicas (the Primary and one secondary). 
 
 <div style="margin: 1em 3em; padding: 1em; text-align: center; border: 1px solid #dddddd; background-color: #eeeeee; border-radius: 6px;">
-  Press the “Run” button below to start sending writes from the “gateway” into the replicas.
+  Press the "Run" button below to start sending writes from the "gateway" into the replicas.
 </div>
 
 <iframe src="http://tarwn.github.io/DistributedSamples/Javascript/blog/azure_w.html" style="width: 800px; height: 600px; border: 2px solid #eeeeee"></iframe>
 
-What you're seeing is a simulation of the writes I described above. Each replica has a set of data that has been stored and a short transaction log and indicates whether it is the “PRIMARY” or “secondary” in it's title bar. 
+What you're seeing is a simulation of the writes I described above. Each replica has a set of data that has been stored and a short transaction log and indicates whether it is the "PRIMARY" or "secondary" in it's title bar. 
 
-The “gateway” in the top left sends each write to the PRIMARY replica. The PRIMARY replica calculates the storage change of the write, assigns it a CSN, and sends it to the two secondary replicas. These secondaries apply the change locally and send back an acknowledgement, at which point the PRIMARY commits the change (more on this in a moment). Once the PRIMARY commits the change, it returns a success response back to the person that sent that particular INSERT or UPDATE statement.
+The "gateway" in the top left sends each write to the PRIMARY replica. The PRIMARY replica calculates the storage change of the write, assigns it a CSN, and sends it to the two secondary replicas. These secondaries apply the change locally and send back an acknowledgement, at which point the PRIMARY commits the change (more on this in a moment). Once the PRIMARY commits the change, it returns a success response back to the person that sent that particular INSERT or UPDATE statement.
 
 Keep in mind, this is a simulation. The model for the COMMIT above is based on what I found in the articles above, but is probably not quite right (and I would love it if someone has more definitive information about this so i could improve it).
 
@@ -79,14 +79,14 @@ Keep in mind, this is a simulation. The model for the COMMIT above is based on w
 Reads are easy. Since the TDS gateway directs all queries to the Primary replica and it always has the most up to date data, it can respond with the values it has locally without seeking a quorum from the other replicas. 
 
 <div style="margin: 1em 3em; padding: 1em; text-align: center; border: 1px solid #dddddd; background-color: #eeeeee; border-radius: 6px;">
-  Press the “Run” button to send some quick writes and then watch how reads work.
+  Press the "Run" button to send some quick writes and then watch how reads work.
 </div>
 
 <iframe src="http://tarwn.github.io/DistributedSamples/Javascript/blog/azure_r.html" style="width: 800px; height: 600px; border: 2px solid #eeeeee"></iframe>
 
-As “Read” messages come in from the gateway, the PRIMARY replica looks the value up locally and returns it directly. 
+As "Read" messages come in from the gateway, the PRIMARY replica looks the value up locally and returns it directly. 
 
-In the real SQL Azure replicas, this means that the PRIMARY replica has more work to do then the secondaries. This is where the “fabric” behind the scenes becomes critical, as it is responsible for trying to maintain a good balance of primary (read and write load) and secondaries (writes) across each server. When a new replica is created or a new PRIMARY is elected from the existing replicas, the “fabric” has to adjust things behind the scenes to balance out the work.
+In the real SQL Azure replicas, this means that the PRIMARY replica has more work to do then the secondaries. This is where the "fabric" behind the scenes becomes critical, as it is responsible for trying to maintain a good balance of primary (read and write load) and secondaries (writes) across each server. When a new replica is created or a new PRIMARY is elected from the existing replicas, the "fabric" has to adjust things behind the scenes to balance out the work.
 
 ## Weathering Outages
 
@@ -95,22 +95,22 @@ The point of the 3 node replica setup is to get high levels of resiliency from s
 To help show both short outage cases, the simulated replicas only keep their last 4 transactions. This way a replica missing only a couple transactions will restore from transactions but a replica offline for more than 4 transactions will require a full restore.
 
 <div style="margin: 1em 3em; padding: 1em; text-align: center; border: 1px solid #dddddd; background-color: #eeeeee; border-radius: 6px;">
-  Press the “Run” button to watch a shorter and longer outage while writing.
+  Press the "Run" button to watch a shorter and longer outage while writing.
 </div>
 
 <iframe src="http://tarwn.github.io/DistributedSamples/Javascript/blog/azure_o.html" style="width: 800px; height: 600px; border: 2px solid #eeeeee"></iframe>
 
 This is running a scripted loop of operations to show both restore cases. The script presses the turbo button during write transactions so we can skip ahead to the restore operations. When a replica's border turns red, this means it has gone offline.
 
-1) We prime the network with a couple writes, take replica “B” offline, send a couple more writes, then bring replica “B” back online. This results in a restore from transaction log.
+1) We prime the network with a couple writes, take replica "B" offline, send a couple more writes, then bring replica "B" back online. This results in a restore from transaction log.
   
-2) After a couple more writes, we take replica “B” offline again, wait for 5 more writes to occur, then bring replica “B” back online. This results in a full restore.
+2) After a couple more writes, we take replica "B" offline again, wait for 5 more writes to occur, then bring replica "B" back online. This results in a full restore.
 
 When a replica comes online, it sends a restore request to the other replicas and identifies the latest CSN it applied. If the other replicas have that CSN in their log, they send back the log and the restoring replica can use the latest of those two logs to catch up. if neither of the replicas can send back a log, then the restoring replica asks for a full restore. This isn't heavily detailed in the documentation, so this is another place that matches the document but may not quite match the reality.
 
-When the PRIMARY replica goes down, the documentation outlines monitoring that occurs that causes the “fabric” to elect a new PRIMARY replica. From my own experience, one or more types of failures are actually monitored on a 5-10 minute poll and this will result in a short outage (remainder of the 5-10 minute poll loop) before it is noticed and the “fabric” elects a new PRIMARY from the remaining secondaries.
+When the PRIMARY replica goes down, the documentation outlines monitoring that occurs that causes the "fabric" to elect a new PRIMARY replica. From my own experience, one or more types of failures are actually monitored on a 5-10 minute poll and this will result in a short outage (remainder of the 5-10 minute poll loop) before it is noticed and the "fabric" elects a new PRIMARY from the remaining secondaries.
 
-For longer replica outages, not included in this simulation, the “fabric” will provision a new replica from a full restore and add it to the cluster as a new secondary, replacing the bad node. 
+For longer replica outages, not included in this simulation, the "fabric" will provision a new replica from a full restore and add it to the cluster as a new secondary, replacing the bad node. 
 
 Now that we have Writes, Reads, and an IT Person stumbling over power cords, it's time to put it all together and play a little.
 
@@ -136,7 +136,7 @@ There are a few things that either did not match reality or for which I couldn't
 
 Things I simplified:
 
-  * Monitoring: I didn't model the fabric or neighbor-based monitoring, instead servers will magically come back online every time and monitoring is performed by the generic “network” simulation.
+  * Monitoring: I didn't model the fabric or neighbor-based monitoring, instead servers will magically come back online every time and monitoring is performed by the generic "network" simulation.
   * Writes/Commits: I simplified this to single insert commits
   * HTTP Error Messages: I used HTTP status codes in messages because I don't know the internal communications and it seemed good/simple enough
 

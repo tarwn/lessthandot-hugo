@@ -156,7 +156,7 @@ GO
 
 Msg 916, Level 14, State 1, Line 1
   
-The server principal “TestLogin” is not able to access the database “TestLogin” under the current security context.
+The server principal "TestLogin" is not able to access the database "TestLogin" under the current security context.
 
 Leave that query window open for now, we will get back to it later.
   
@@ -243,7 +243,7 @@ GO
 
 Msg 916, Level 14, State 1, Line 1
   
-The server principal “TestLogin” is not able to access the database “TestLogin” under the current security context.
+The server principal "TestLogin" is not able to access the database "TestLogin" under the current security context.
 
 Here is how to do the same thing with ALTER USER as with sp\_change\_users_login 
 

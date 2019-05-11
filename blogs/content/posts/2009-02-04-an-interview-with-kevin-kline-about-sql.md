@@ -27,7 +27,7 @@ Most of the database developers these days don't work with just one RDBMS, a lar
 
 **Denis: Is the book geared towards a beginner/intermediate level user or do you have to be an advanced user to really utilize the information in this book?**
 
-KK> This book is more of an intermediate + book, since it is a syntax reference. For example, the book assumes you know what command you want to look up and doesn't spend a lot of time educating you as to which command you should use for a given business requirement, as is the case with most O'Reilly books from the “In a Nutshell” series. For beginning SQL, I recommend “Learning SQL” also published by O'Reilly & Associates.
+KK> This book is more of an intermediate + book, since it is a syntax reference. For example, the book assumes you know what command you want to look up and doesn't spend a lot of time educating you as to which command you should use for a given business requirement, as is the case with most O'Reilly books from the "In a Nutshell" series. For beginning SQL, I recommend "Learning SQL" also published by O'Reilly & Associates.
 
 **Denis: What are the most important things a person can do to master SQL?**
 

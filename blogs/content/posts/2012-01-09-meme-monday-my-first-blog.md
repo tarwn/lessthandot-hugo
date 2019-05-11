@@ -17,7 +17,7 @@ categories:
   - Professional Development
 
 ---
-Denis started us off earlier with his [Meme Monday][1] post, “Meme Monday: what is the first blogpost you wrote and when did you write it?”.
+Denis started us off earlier with his [Meme Monday][1] post, "Meme Monday: what is the first blogpost you wrote and when did you write it?".
 
 This is a tricky question for me, mostly because my memory is poor and I'm having difficulty bending google's time search to my will.
 
@@ -25,7 +25,7 @@ This is a tricky question for me, mostly because my memory is poor and I'm havin
 
 <img src="http://www.tiernok.com/LTDBlog/rant.png" alt="Ranty pic" style="float: left; margin: .5em 1em .5em 0px;" />
   
-My first LessThanDot post was a [wall of text][2] in April 2009 that talked about bringing transparency and a definition of success to all projects, no matter how small. Since then I have added 78 more posts, finding out along the way that if you write a post with the word [“Model”][3] in it, you will get enough traffic to bring the poor LessThanDot server to its knees (and a whole lot of disappointed readers) and that apparently [standing at one's desk][4] is far more interesting than [sarcasm and cat pictures][5].
+My first LessThanDot post was a [wall of text][2] in April 2009 that talked about bringing transparency and a definition of success to all projects, no matter how small. Since then I have added 78 more posts, finding out along the way that if you write a post with the word ["Model"][3] in it, you will get enough traffic to bring the poor LessThanDot server to its knees (and a whole lot of disappointed readers) and that apparently [standing at one's desk][4] is far more interesting than [sarcasm and cat pictures][5].
 
 I think the last one was the most surprising.
 

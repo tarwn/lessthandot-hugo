@@ -17,11 +17,11 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-SQL Server baseline collection is an important task that is too frequently overlooked.  Collecting information on how SQL Server is both providing data services and reacting to how those data services are being utilized, creates a foundation for efficient troubleshooting and predicting growth.  Take a typical problem in which a customer (anyone you are providing data services to internally or externally) comes to you and states something is slow and they think it is the data services.  In most situations, this would lead to a drawn out process of looking into the health of the instance directly related to the situation.  What if we can first ask – and answer – the question, “What is normal performance for the period in which the data services seem to be slow?”
+SQL Server baseline collection is an important task that is too frequently overlooked.  Collecting information on how SQL Server is both providing data services and reacting to how those data services are being utilized, creates a foundation for efficient troubleshooting and predicting growth.  Take a typical problem in which a customer (anyone you are providing data services to internally or externally) comes to you and states something is slow and they think it is the data services.  In most situations, this would lead to a drawn out process of looking into the health of the instance directly related to the situation.  What if we can first ask – and answer – the question, "What is normal performance for the period in which the data services seem to be slow?"
 
 In reality, troubleshooting is a methodology that has an equation simply stated as – problem * identification / normal operations = solution.  This means that the problem must have an identity in order for a solution to be developed.  The solution cannot be sound or stable without identifying the problem.  Furthering this, we can ascertain that a solution can be an evolving equation as well.  A solution required, in many cases, forms a further problem in the form of changing the data services as they are at the time the initial identified problem was uncovered.  This can be in the form of growth, maintenance, introduction of new variables and so on.
 
-As we can see, this question of “what is normal” is hard to answer as an overall solution without identification and more so, a basis of what is a normal running status.
+As we can see, this question of "what is normal" is hard to answer as an overall solution without identification and more so, a basis of what is a normal running status.
 
 **Baseline Collection** 
 

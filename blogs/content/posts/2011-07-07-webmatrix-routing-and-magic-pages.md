@@ -59,7 +59,7 @@ The most specific file match wins, without the need for setting up routing ahead
 
 Any trailing portion of the URL is then stored in an array for easy access (which we will see later). What this allows us to do is create very easy, semantic URLs. 
 
-Example: my application will show me the list of all activities when I go to http://notmyrealurl.com/Activities but will filter the list for the “razor” tag when I go to http://notmyrealurl.com/Activities/razor.
+Example: my application will show me the list of all activities when I go to http://notmyrealurl.com/Activities but will filter the list for the "razor" tag when I go to http://notmyrealurl.com/Activities/razor.
 
 The exception is files that begin with underscores. Underscored files are not accessible, as they are used to protect our Magic Files in the next section.
 
@@ -90,7 +90,7 @@ Layout files allow us to define a common layout that we want to apply to our web
 </body>
 </html>
 ```
-A basic page that includes a header file, an optional section named “SidePane”, and body of the original page, and finally an included footer file. In this sample I am keeping my \_Header, \_Footer, and _MainLayout files in a subfolder called Shared. To use this layout, I could make a sample page like this:
+A basic page that includes a header file, an optional section named "SidePane", and body of the original page, and finally an included footer file. In this sample I am keeping my \_Header, \_Footer, and _MainLayout files in a subfolder called Shared. To use this layout, I could make a sample page like this:
 
 ```cshtml
 @{

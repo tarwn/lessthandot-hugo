@@ -262,7 +262,7 @@ Now we are ready to fire up NUnit and run our tests. And now is when we'll see t
 NHibernate.InvalidProxyTypeException : The following types may not be used as proxies:<br />
 RecipeTracker.Model.Recipe: method AlcoholByWeight should be virtual</code>
 
-As it turns out we need to implement all of the methods and properties as virtual so that NHibernate can create subclasses from our object. Well, we can do this or specify lazy = “false” for our classes. But I like the lazy initialization, so I will make them virtual. After doing this, the tests should run just fine.
+As it turns out we need to implement all of the methods and properties as virtual so that NHibernate can create subclasses from our object. Well, we can do this or specify lazy = "false" for our classes. But I like the lazy initialization, so I will make them virtual. After doing this, the tests should run just fine.
 
  [1]: /index.php/DesktopDev/MSTech/the-path-to-nhibernate-aamp-tdd-part-1-t
  [2]: /index.php/DesktopDev/MSTech/my-path-to-the-dark-side-part-2-the-doma

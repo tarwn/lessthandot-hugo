@@ -37,7 +37,7 @@ Create a new package to start adding and editing some tasks. In the package, cre
   <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_1.gif" alt="" title="" width="319" height="227" />
 </div>
 
-Click the check box to “Enable package configurations” and then click, Add.
+Click the check box to "Enable package configurations" and then click, Add.
 
 Clicking the add button will launch the Package Configuration Wizard (PCW). The Wizard and many others in SSIS cover all the settings very well without having to go through a lot of manual work. Remember, we want to be efficient. Don't be afraid of using the wizards for configuring SSIS. 
 

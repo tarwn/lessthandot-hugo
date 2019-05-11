@@ -20,7 +20,7 @@ Not all systems can correctly accommodate Unicode data. Therefore, it's not unco
 
 Usually, when Unicode is encoded in an ASCII format, the Unicode value is somehow embedded within it. For example, the Greek letter Omega &#937;, has a Unicode value of 937. It may be encoded like this: &#937;
 
-Usually, non Unicode data will not be encoded. So you may see a string like this: “&#937;mega”
+Usually, non Unicode data will not be encoded. So you may see a string like this: "&#937;mega"
 
 Converting from an encoded string to a real Unicode string is more difficult than it may seem. There are 65,535 possible Unicode characters (the first 255 match ASCII characters). The example I showed has 3 digit Unicode values, but we should also be able to accommodate 4 and 5 digit Unicode characters too.
 

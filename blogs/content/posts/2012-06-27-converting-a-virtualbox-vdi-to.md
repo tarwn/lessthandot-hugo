@@ -20,7 +20,7 @@ tags:
   - vmware
 
 ---
-Today I was “gifted” a Virtualbox VDI file with a setup I need to use to give some custom training. I tried Virtualbox once but it was not a success and also this time the machine failed to boot. It kept complaining about some video settings and the boot sequence was interrupted. Time to convert the VDI to a good old VMWare VMDK, but how? The first hit in Google showed me an easy way to do this on a Linux, the second showed a complex one with third party tools on Windows. So here's the easy one on Windows:
+Today I was "gifted" a Virtualbox VDI file with a setup I need to use to give some custom training. I tried Virtualbox once but it was not a success and also this time the machine failed to boot. It kept complaining about some video settings and the boot sequence was interrupted. Time to convert the VDI to a good old VMWare VMDK, but how? The first hit in Google showed me an easy way to do this on a Linux, the second showed a complex one with third party tools on Windows. So here's the easy one on Windows:
   
 First of all you need to have [VirtualBox][1] installed. Now open a command prompt and use the following VboxManage syntax:
 

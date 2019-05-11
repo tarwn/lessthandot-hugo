@@ -64,7 +64,7 @@ _Note: Jenkins somehow magically set itself up as a service on my system (or I w
   <a href="http://www.tiernok.com/LTDBlog/ContinuousDelivery/dashboard_lg.png" title="Larger picture" target="_blank"><img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/dashboard.png" title="Jenkins Dashboard" /></a><br /> Jenkins Dashboard (unfortunately a later shot as I misplaced some of my earlier screenshots)
 </div>
 
-The side menu offers a link to the server settings (Manage Jenkins), and from there I get a list of sub-menus in the main area that includes “Plugins”. To start with I'll install the plugins for Mercurial, Twitter, and MS Build from the “Available” tab on the plugins screen. After installing, system-wide options for the plugins are added in the system configuration screen (Manage Jenkins – Configure System). 
+The side menu offers a link to the server settings (Manage Jenkins), and from there I get a list of sub-menus in the main area that includes "Plugins". To start with I'll install the plugins for Mercurial, Twitter, and MS Build from the "Available" tab on the plugins screen. After installing, system-wide options for the plugins are added in the system configuration screen (Manage Jenkins – Configure System). 
 
 ### Mercurial
 
@@ -94,18 +94,18 @@ As I pointed out in the first post, I decided I would use twitter for status not
 
 With the server configured, I can move on to setup the initial CI build job. Initially, this job will be responsible for picking up changes from mercurial, executing the build, and reporting the results.
 
-  1. Select “New Job” from top left menu
-  2. Select “Build a free-style software project”
+  1. Select "New Job" from top left menu
+  2. Select "Build a free-style software project"
   3. Enter a Name
   4. Enter Details 
       1. Select Mercurial for SCM and enter URL for the repository (I am using bitbucket for this example) as well as selecting repository browser (bitbucket)
       2. Initially I'll leave build triggers not defined
       3. Configure MS Build by specifying the <code class="codespan">*.sln</code> 
-      4. check the “twitter” checkbox at bottom
-      5. Run build by clicking “Build Now” at top left
+      4. check the "twitter" checkbox at bottom
+      5. Run build by clicking "Build Now" at top left
   5. Start debugging build problems
 
-_Note: Though I didn't show it here, there is also an advanced option under the mecurial settings called “Clean Build”. This will clean the workspace before each build so binaries and test results won't pollute later builds_
+_Note: Though I didn't show it here, there is also an advanced option under the mecurial settings called "Clean Build". This will clean the workspace before each build so binaries and test results won't pollute later builds_
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_dashboard_failed.png" title="Jenkins Configuration - Failed Build on Dashboard" /><br /> Dashboard View of Failed Build
@@ -124,7 +124,7 @@ Here are the errors I had to work through in order to get the initial build to w
       * I rebooted to finish windows update, installed tortoisehg, rebooted to have clean startup (and paths), and the issue was corrected
   2. Failure – In the console log it complained about not being able to find the MS Build executable 
       * Returned to project settings and switched MS Build option from (default) to the one I had configured above in global settings
-  3. Error MSB4019: The imported project “C: ... Microsoft.WebApplication.targets” was not found 
+  3. Error MSB4019: The imported project "C: ... Microsoft.WebApplication.targets" was not found 
       * Options: 
           * Install VS 2010 Shell (http://www.microsoft.com/download/en/details.aspx?id=115)
           * Install Visual Studio
@@ -144,7 +144,7 @@ After getting the initial build setup, it's time to add some refinements. First 
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_rel.png" title="Jenkins Configuration - Adding Release to Build Args" /><br /> Jenkins Configuration – Adding Release to Build Args
 </div>
 
-Now that I have it working, I also want to add the option to automatically run when new changes are committed to source control. The Build Triggers section of the job configuration controls how jobs are triggered, so I'll select the “Poll SCM” option to poll my source control repository. A value of <code class="codespan">"*/5 * * * *"</code> will set it to check every 5 minutes (which may be overkill given how few updates I will be making over the course of this project, but oh well).
+Now that I have it working, I also want to add the option to automatically run when new changes are committed to source control. The Build Triggers section of the job configuration controls how jobs are triggered, so I'll select the "Poll SCM" option to poll my source control repository. A value of <code class="codespan">"*/5 * * * *"</code> will set it to check every 5 minutes (which may be overkill given how few updates I will be making over the course of this project, but oh well).
 
 <div style="text-align: center; font-size: .9em; color: #666666;">
   <img src="http://www.tiernok.com/LTDBlog/ContinuousDelivery/config_buildchanges_poll.png" title="Jenkins Configuration - Polling for Build Trigger" /><br /> Jenkins Configuration – Defining Polling for Build Trigger
@@ -160,7 +160,7 @@ _Note: \***Web Deploy has made this really easy IN THEORY. This is the topic of 
 
 By default, when I create a deployment package I will get a folder of all the cshtml, dll, and so on files I need to run the site. In the project properties for the website, there is a build option to zip these files as a package after building it, which will simplify archival even further.
 
-_Project properties, select the tab for “Package/Publish Web” and check the “Create deployment package as zip” option_
+_Project properties, select the tab for "Package/Publish Web" and check the "Create deployment package as zip" option_
 
 The last piece is to tell MSBuild I want to build the web deployment package. In the MSBuild step of the CI job, I add the command-line flag of <code class="codespan">"/p:DeployOnBuild=True"</code>, which will be passed on to the individual projects in the solution to act on if they understand it (which the web project will and the unit test project will not, handy).
 

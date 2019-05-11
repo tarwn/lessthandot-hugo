@@ -114,7 +114,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  But back on-topic: where's my Power Map? Luckily, after installing the “streaming” version of Office, Power Map was where it belongs: in the Insert tab.
+  But back on-topic: where's my Power Map? Luckily, after installing the "streaming" version of Office, Power Map was where it belongs: in the Insert tab.
 </p>
 
 <p style="text-align: justify">

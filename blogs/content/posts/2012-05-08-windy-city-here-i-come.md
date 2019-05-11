@@ -20,7 +20,7 @@ categories:
 
 <span style="text-align: left;">My first stop will be the <a href="http://sqlfriends.org/2012/03/sqlfriends-lunch-take-2/">SQL Friends lunch</a> at Buca di Beppo on Friday, May 18. The star of the show, who I may have a list of 20 questions for, is none other than fellow LTD blogger Ted Krueger. There are still spots available, so register today! </span>
 
-<span style="text-align: left;">I'll be presenting “Reporting Services: From Basic to WOW!” after lunch. I've given this session many times, including PASS Summit last year, and every time it is fun and both I and the attendees learn something! </span>
+<span style="text-align: left;">I'll be presenting "Reporting Services: From Basic to WOW!" after lunch. I've given this session many times, including PASS Summit last year, and every time it is fun and both I and the attendees learn something! </span>
 
 <span style="text-align: left;"><a href="http://sqlsaturday.com/119/register.aspx">Register now for SQL Saturday #119 Chicago 2012</a>! </span>
 

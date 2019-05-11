@@ -48,7 +48,7 @@ I caught part of the WIT lunch session, between waiting in a long line for [Port
 
 **My Session** 
 
-I presented my “Reporting Services: From Basic to WOW!” session after lunch. I always like the challenge of keeping people awake after a good lunch (and Portillo's was a _good_ lunch). I had a packed, energetic room that I really had a great time presenting to. About half the attendees were at their very first SQL Saturday, which was exciting for me.
+I presented my "Reporting Services: From Basic to WOW!" session after lunch. I always like the challenge of keeping people awake after a good lunch (and Portillo's was a _good_ lunch). I had a packed, energetic room that I really had a great time presenting to. About half the attendees were at their very first SQL Saturday, which was exciting for me.
 
 <p style="text-align: center;">
   <img src="http://farm8.staticflickr.com/7231/7228783742_b07cb28466.jpg" alt="" />

@@ -125,7 +125,7 @@ The data is as shown in figure 5
   <a href="/wp-content/uploads/blogs/DataMgmt/-173.png?mtime=1355031678"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-173.png?mtime=1355031678" width="624" height="237" /></a><br /> Figure 5
 </div>
 
-If the following query was executed against this table to return all the rows in column bla1 that are similar to the parameter string of “data”
+If the following query was executed against this table to return all the rows in column bla1 that are similar to the parameter string of "data"
 
 ```sql
 SELECT bla1 FROM dbo.[tempdb_usage]
@@ -193,7 +193,7 @@ The above query could effectively be sorted in the final tool to eliminate the O
 
 How a query is written and the supporting indexes that are in place to assist in the queries can have a major impact on how many pages are read into memory by SQL Server. Lowering the number of pages needed should always be an area to focus on when tuning efforts are made. This can be done on queries that are not implemented and queries that are monitored in the plan cache of SQL Server by monitoring and creating baselines of the usage over time. 
 
-To monitor cached pages, the Cache Pages counter can be utilized. To test a query by tuning it after it is found to be suffering or during review, DMV sys.dm\_os\_buffer_descriptions and sys.indexes catalog view can be utilized. Refer to “[Adding nonclustered index on primary keys][3]” for a query that is used in the results for pages allocated in figure 12.
+To monitor cached pages, the Cache Pages counter can be utilized. To test a query by tuning it after it is found to be suffering or during review, DMV sys.dm\_os\_buffer_descriptions and sys.indexes catalog view can be utilized. Refer to "[Adding nonclustered index on primary keys][3]" for a query that is used in the results for pages allocated in figure 12.
 
 Executing the query from listing 1 results in the following buffer allocations
 
