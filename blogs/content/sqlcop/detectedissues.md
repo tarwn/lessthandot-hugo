@@ -2,7 +2,8 @@
 title: SQLCop Detected Issues
 type: sqlcop
 date: 2008-02-08T02:04:36+00:00
-url: /sqlcop/detectedissues.php
+url: /sqlcop/detectedissues.html
+
 ---
 
 

@@ -2,7 +2,8 @@
 title: SQLCop Instructions
 type: sqlcop
 date: 2008-02-08T02:04:36+00:00
-url: /sqlcop/sqlcop.php
+url: /sqlcop/sqlcop.html
+
 ---
 
 # Instructions

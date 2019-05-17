@@ -14,9 +14,9 @@
 <!-- <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom" href="<?php bloginfo('atom_url'); ?>" /> -->
 
-<link rel="stylesheet" href="/css/wordpress.css" type="text/css" />
-<link rel="stylesheet" href="/css/allsite.css" type="text/css" />
-<link rel="stylesheet" href="/css/allsiteprint.css" media="print" type="text/css" />
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/wordpress.css" type="text/css" />
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/allsite.css" type="text/css" />
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/allsiteprint.css" media="print" type="text/css" />
 
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github-gist.css" />
 
@@ -28,3 +28,4 @@
     <link rel="canonical" href="{{ .Permalink }}" />
 {{ end }}
 
+{{ partial "headerScripts.html" }}

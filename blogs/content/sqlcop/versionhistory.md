@@ -2,7 +2,8 @@
 title: SQLCop Version History
 type: sqlcop
 date: 2008-02-08T02:04:36+00:00
-url: /sqlcop/versionhistory.php
+url: /sqlcop/versionhistory.html
+draft: false
 ---
 # Version History
 

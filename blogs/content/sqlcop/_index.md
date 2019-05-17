@@ -2,7 +2,7 @@
 title: SQLCop
 type: sqlcop
 date: 2008-02-08T02:04:36+00:00
-url: /sqlcop/index.php
+url: /sqlcop/index.html
 ---
 
 # SQLCop
@@ -11,7 +11,7 @@ Welcome to the LessThanDot SQLCop website.
 
 ## Introduction
 
-The purpose of SQL Cop is to highlight potential problems in your SQL Server database. [SQL Cop detects many different issues](detectedissues.php), some of which may not be a problem for you, and therefore can be ignored. However, it is recommended that you investigate each item displayed by SQL
+The purpose of SQL Cop is to highlight potential problems in your SQL Server database. [SQL Cop detects many different issues](detectedissues.html), some of which may not be a problem for you, and therefore can be ignored. However, it is recommended that you investigate each item displayed by SQL
 Cop and carefully decide whether or not it should be corrected.
 
 ![SQLCop screenshot](http://sqlcop.lessthandot.com/screenshots/sqlcop3.png)
@@ -29,7 +29,7 @@ application, please reach out to us on [twitter](https://twitter.com/lessthandot
 
 ## Additional information
 
-* [Instructions](sqlcop.php)
-* [Version History](versionhistory.php)
-* [Screenshots](screenshots.php)
-* [Frequently asked questions](faq.php)
+* [Instructions](sqlcop.html)
+* [Version History](versionhistory.html)
+* [Screenshots](screenshots.html)
+* [Frequently asked questions](faq.html)

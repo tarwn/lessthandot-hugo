@@ -3,7 +3,7 @@
 <div class="userInfo">
     <h2>About {{ $authorData.name }}</h2>
     {{ if $authorData.image }}
-    <img class="bioPic" src="/images/author/{{ $authorData.image }}" alt="User bio image">
+    <img class="bioPic" src="{{ .Site.BaseURL }}/images/author/{{ $authorData.image }}" alt="User bio image">
     {{ end }}
     {{ if $authorData.bio }}
         {{ $authorData.bio }}

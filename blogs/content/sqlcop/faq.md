@@ -2,7 +2,8 @@
 title: SQLCop - FAQ
 type: sqlcop
 date: 2008-02-08T02:04:36+00:00
-url: /sqlcop/faq.php
+url: /sqlcop/faq.html
+
 ---
 
 # Frequently asked questions

@@ -2,7 +2,7 @@
 title: SQLCop - Screenshots
 type: sqlcop
 date: 2008-02-08T02:04:36+00:00
-url: /sqlcop/screenshots.php
+url: /sqlcop/screenshots.html
 ---
 
 # Videos and Screenshots

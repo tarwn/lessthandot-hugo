@@ -2,26 +2,3 @@
 <script>
     hljs.initHighlightingOnLoad();
 </script>
-
-<script type="text/javascript">
-function loadScript(url,callback){
-    var script = document.createElement("script");// <-- here 
-    script.type = 'text/javascript'; 
-    script.async = true;
-    script.src = url;
-    // here we do callback
-    if (callback){
-        script.onload = callback;
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(script, s);
-}
-
-async.push(["ready", function() {
-    loadScript("//code.jquery.com/jquery-1.10.1.min.js", function(){
-        loadScript("//code.jquery.com/jquery-migrate-1.2.1.min.js");
-        loadScript("/js/wtooltip.min.js");
-        loadScript("/js/allsite.js");
-    });
-}]);
-</script>
