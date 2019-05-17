@@ -17,7 +17,7 @@ tags:
   - sql server
 
 ---
-> I want to first apologize to anyone that regularly reads my [blog][1] and some of the babble I throw on ltd.local while I learn SQL Server and grow as a DBA. My family recently moved into our new house and time has been very limited. Things are going well and the hectic schedule I call the SQL Pump is slowly coming back into its normal stride.
+> I want to first apologize to anyone that regularly reads my [blog][1] and some of the babble I throw on lessthandot.com while I learn SQL Server and grow as a DBA. My family recently moved into our new house and time has been very limited. Things are going well and the hectic schedule I call the SQL Pump is slowly coming back into its normal stride.
 
 ## Why don't you know this?
 
@@ -71,7 +71,7 @@ Another resource that is a great starting point was put together on the PASS (Pr
  [14]: http://twitter.com/dyfhid
  [15]: http://dyfhid.wordpress.com/2010/01/07/twitter-sqlhelp-works/
  [16]: http://social.msdn.microsoft.com/Forums/en-US/category/sqlserver
- [17]: http://ltd.local/
+ [17]: http://lessthandot.com/
  [18]: http://www.sqlservercentral.com/
  [19]: http://www.databaseweekly.com/
  [20]: http://www.brentozar.com/archive/2009/12/i-need-sqlhelp/

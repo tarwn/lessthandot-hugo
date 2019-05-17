@@ -112,7 +112,7 @@ For some reason I never needed to pass the N or the P in the previous version. B
 I like to thank the person(s) that made sharpzebra, it helped me a lot in solving this problem. And I hope the above will help someone else.
 
  [1]: /index.php/DesktopDev/MSTech/VBNET/printing-to-a-zebra-printer-from-vb-net?highlight=zebra&sentence=
- [2]: http://forum.ltd.local/viewtopic.php?f=39&t=3478
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=39&t=3478
  [3]: http://sharpzebra.codeplex.com/
  [4]: http://www.zebra.com/id/zebra/na/en/index/products/printers/desktop/tlp2844.html
  [5]: http://social.msdn.microsoft.com/Forums/en-IE/vblanguage/thread/d6fbaecf-0737-49a9-979c-a9c3c0094768

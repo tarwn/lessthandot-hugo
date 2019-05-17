@@ -36,4 +36,4 @@ Yearly
 
 Leave me a comment, include any links that have some good scrips also, I will link to those
 
- [1]: http://wiki.ltd.local/index.php/What_does_a_DBA_need_to_check_for_daily%2C_weekly%2C_monthly%2C_quarterly_and_yearly
+ [1]: http://wiki.lessthandot.com/index.php/What_does_a_DBA_need_to_check_for_daily%2C_weekly%2C_monthly%2C_quarterly_and_yearly

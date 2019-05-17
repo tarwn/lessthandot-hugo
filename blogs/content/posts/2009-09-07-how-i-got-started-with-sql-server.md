@@ -65,5 +65,5 @@ I will also tag some people, the list is below
  [6]: /index.php/All/?disp=authdir&author=68
  [7]: http://sqlfool.com/
  [8]: http://www.straightpathsql.com/blog
- [9]: http://forum.ltd.local/viewforum.php?f=17
- [10]: http://forum.ltd.local/viewforum.php?f=22
+ [9]: http://forum.lessthandot.com/viewforum.php?f=17
+ [10]: http://forum.lessthandot.com/viewforum.php?f=22

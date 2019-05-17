@@ -321,7 +321,7 @@ By capturing the end users expectations in this way, we have some structure that
 All of the code for this project is available in [BitBucket][11].
 
  [1]: http://specflow.org/ "Visit http://specflow.org/"
- [2]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Visit the Wiki page on my Continuous Delivery project"
+ [2]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Visit the Wiki page on my Continuous Delivery project"
  [3]: https://github.com/cucumber/cucumber/wiki/Gherkin "GitHub page for Gherkin"
  [4]: http://martinfowler.com/bliki/BusinessReadableDSL.html "Martin Fowler on Business-Readable DSLs"
  [5]: https://bitbucket.org/tarwn/mvcmusicstore.interfacetests "tarwn/mvcmusicstore.interfacetests on BitBucket"

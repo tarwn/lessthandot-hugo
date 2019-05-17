@@ -756,49 +756,49 @@ The pages with the hacks, tips and tricks are still number one
 
 <ol start='1'>
   <li>
-    <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a>  (33,646 views)
+    <a href="http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List" title="SQL Server Programming Hacks - 100+ List">SQL Server Programming Hacks – 100+ List</a>  (33,646 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a>  (27,922 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET_Hacks" title="ASP.NET Hacks">ASP.NET Hacks</a>  (27,922 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a>  (10,841 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Access_Master_Page_controls_from_the_Content_Page" title="ASP.NET: Access Master Page controls from the Content Page">ASP.NET: Access Master Page controls from the Content Page</a>  (10,841 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a>  (9,259 views)
+    <a href="http://wiki.lessthandot.com/index.php/5_ways_to_return_rows_from_one_table_not_in_another_table" title="5 ways to return rows from one table not in another table">5 ways to return rows from one table not in another table</a>  (9,259 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a>  (8,159 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Add_a_total_row_to_a_GridView" title="ASP.NET: Add a total row to a GridView">ASP.NET: Add a total row to a GridView</a>  (8,159 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a>  (7,918 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Convert_HTML_tables_to_a_DataSet" title="ASP.NET: Convert HTML tables to a DataSet">ASP.NET: Convert HTML tables to a DataSet</a>  (7,918 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a>  (7,893 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Insert_data_into_SQL_Server" title="ASP.NET: Insert data into SQL Server">ASP.NET: Insert data into SQL Server</a>  (7,893 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a>  (7,242 views)
+    <a href="http://wiki.lessthandot.com/index.php/Concatenate_Values_From_Multiple_Rows_Into_One_Column_Ordered" title="Concatenate Values From Multiple Rows Into One Column Ordered">Concatenate Values From Multiple Rows Into One Column Ordered</a>  (7,242 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Row_To_Column_%28PIVOT%29" title="Row To Column (PIVOT)">Row To Column (PIVOT)</a>  (6,466 views)
+    <a href="http://wiki.lessthandot.com/index.php/Row_To_Column_%28PIVOT%29" title="Row To Column (PIVOT)">Row To Column (PIVOT)</a>  (6,466 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Strip_HTML_tags_from_a_string" title="ASP.NET: Strip HTML tags from a string">ASP.NET: Strip HTML tags from a string</a>  (6,156 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Strip_HTML_tags_from_a_string" title="ASP.NET: Strip HTML tags from a string">ASP.NET: Strip HTML tags from a string</a>  (6,156 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Drawing_images_and_bar_charts_with_System.Drawing" title="ASP.NET: Drawing images and bar charts with System.Drawing">ASP.NET: Drawing images and bar charts with System.Drawing</a>  (6,049 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Drawing_images_and_bar_charts_with_System.Drawing" title="ASP.NET: Drawing images and bar charts with System.Drawing">ASP.NET: Drawing images and bar charts with System.Drawing</a>  (6,049 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Read_and_display_a_text_file" title="ASP.NET: Read and display a text file">ASP.NET: Read and display a text file</a>  (6,004 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Read_and_display_a_text_file" title="ASP.NET: Read and display a text file">ASP.NET: Read and display a text file</a>  (6,004 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/ASP.NET:_Add_paging_to_a_repeater" title="ASP.NET: Add paging to a repeater">ASP.NET: Add paging to a repeater</a>  (5,706 views)
+    <a href="http://wiki.lessthandot.com/index.php/ASP.NET:_Add_paging_to_a_repeater" title="ASP.NET: Add paging to a repeater">ASP.NET: Add paging to a repeater</a>  (5,706 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>  (5,700 views)
+    <a href="http://wiki.lessthandot.com/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>  (5,700 views)
   </li>
   <li>
-    <a href="http://wiki.ltd.local/index.php/Column_To_Row_%28UNPIVOT%29" title="Column To Row (UNPIVOT)">Column To Row (UNPIVOT)</a>  (5,567 views)
+    <a href="http://wiki.lessthandot.com/index.php/Column_To_Row_%28UNPIVOT%29" title="Column To Row (UNPIVOT)">Column To Row (UNPIVOT)</a>  (5,567 views)
   </li>
 </ol>
 
@@ -817,7 +817,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=306">SQL Server Programming Hacks</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=306">SQL Server Programming Hacks</a>
     </td>
     
     <td>
@@ -827,7 +827,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1608">LTD Puzzle 1: Friday the Thirteenths</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1608">LTD Puzzle 1: Friday the Thirteenths</a>
     </td>
     
     <td>
@@ -837,7 +837,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2155">LTD Puzzle 6: split a filepath</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2155">LTD Puzzle 6: split a filepath</a>
     </td>
     
     <td>
@@ -847,7 +847,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2830">LTD Puzzle 14: FInd the match</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2830">LTD Puzzle 14: FInd the match</a>
     </td>
     
     <td>
@@ -857,7 +857,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2933">Do you prefix table names</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2933">Do you prefix table names</a>
     </td>
     
     <td>
@@ -867,7 +867,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2426">LTD Puzzle 9: Find it</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2426">LTD Puzzle 9: Find it</a>
     </td>
     
     <td>
@@ -877,7 +877,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=5874">Amazing surf shots</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=5874">Amazing surf shots</a>
     </td>
     
     <td>
@@ -887,7 +887,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2140">Fantasy Football 2008</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2140">Fantasy Football 2008</a>
     </td>
     
     <td>
@@ -897,7 +897,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=3245">Need help deciding SQL Version</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=3245">Need help deciding SQL Version</a>
     </td>
     
     <td>
@@ -907,7 +907,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1724">LTD Puzzle 2: Regular Pentagon</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1724">LTD Puzzle 2: Regular Pentagon</a>
     </td>
     
     <td>
@@ -917,7 +917,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2595">LTD Puzzle 11: Hello World! For Hackers</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2595">LTD Puzzle 11: Hello World! For Hackers</a>
     </td>
     
     <td>
@@ -927,7 +927,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2055">LTD Puzzle 5: Calculating the Fibonacci Sequence</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2055">LTD Puzzle 5: Calculating the Fibonacci Sequence</a>
     </td>
     
     <td>
@@ -937,7 +937,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1938">LTD Puzzle 4: Finding Prime Numbers</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1938">LTD Puzzle 4: Finding Prime Numbers</a>
     </td>
     
     <td>
@@ -947,7 +947,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=16">Classic ASP URL Rewriting – A Practical Example</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=16">Classic ASP URL Rewriting – A Practical Example</a>
     </td>
     
     <td>
@@ -957,7 +957,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1821">LTD Puzzle 3: ASCII Art Shapes</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1821">LTD Puzzle 3: ASCII Art Shapes</a>
     </td>
     
     <td>
@@ -967,7 +967,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=3045">Website Attacks</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=3045">Website Attacks</a>
     </td>
     
     <td>
@@ -977,7 +977,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=4675">Puzzle 23 – Distance to line segment</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=4675">Puzzle 23 – Distance to line segment</a>
     </td>
     
     <td>
@@ -987,7 +987,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2660">jQuery vs. ExtJS</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2660">jQuery vs. ExtJS</a>
     </td>
     
     <td>
@@ -997,7 +997,7 @@ The pages with the hacks, tips and tricks are still number one
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1506">Building Scalable Websites</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1506">Building Scalable Websites</a>
     </td>
     
     <td>
@@ -1010,7 +1010,7 @@ That is it, thank you for visiting and we will have lots of more content coming 
 
 If you are interested in the stats for our first year then visit this link: [Less Than Dot A Year In Review][4]
 
- [1]: http://ltd.local/
+ [1]: http://lessthandot.com/
  [2]: /index.php/WebDev/WebDesignGraphicsStyling/has-firefox-lost-its-mojo-are-firefox-us
- [3]: http://forum.ltd.local/
+ [3]: http://forum.lessthandot.com/
  [4]: /index.php/ITProfessionals/EthicsIT/less-than-dot-a-year-in-review

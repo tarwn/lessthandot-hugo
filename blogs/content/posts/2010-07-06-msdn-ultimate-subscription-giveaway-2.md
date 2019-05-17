@@ -37,7 +37,7 @@ To go over what the response should consist of again...
   2. What specific functionality that is only part of Ultimate are you going to use?
   3. You need to have a technical blog and provide the URL to that blog, if you are an active member of the technical community (stackoverflow, msdn forums etc etc) then also include those links.
 
-Leave a comment [here][3], you will also have to join the forums, that way I will have your email to contact you and I will able to ask you questions about your answers if needed. I created a thread in the forums here: http://forum.ltd.local/viewtopic.php?f=121&t=11456
+Leave a comment [here][3], you will also have to join the forums, that way I will have your email to contact you and I will able to ask you questions about your answers if needed. I created a thread in the forums here: http://forum.lessthandot.com/viewtopic.php?f=121&t=11456
 
 > <span class="MT_red">Note: Click, <a href="/index.php/Architect/HardwareInfrastructureDesign/msdn-ultimate-subscription-giveaway">here</a> to leave your comment on the original blog post and add a comment to the forums to indicate you have done so. Do not put your comment on this blog post</span>
 

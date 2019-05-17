@@ -173,7 +173,7 @@ With a functioning CI Build job and a triggered automated test job, we're in the
 
 <ul class="thelist">
   <li>
-    <a href="http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project" title="Wiki post for Eli's Continuous Delivery Project">Wiki Post</a>
+    <a href="http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project" title="Wiki post for Eli's Continuous Delivery Project">Wiki Post</a>
   </li>
   <li>
     <a href="/index.php/EnterpriseDev/application-lifecycle-management/starting-a-continuous-delivery-project" title="Starting a Continuous Delivery Project">Starting a Continuous Delivery Project</a>

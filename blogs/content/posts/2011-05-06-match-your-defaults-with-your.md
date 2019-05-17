@@ -374,5 +374,5 @@ As you can see you will get horrible page splits if your trigger expands the row
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.ltd.local/viewforum.php?f=17
- [2]: http://forum.ltd.local/viewforum.php?f=22
+ [1]: http://forum.lessthandot.com/viewforum.php?f=17
+ [2]: http://forum.lessthandot.com/viewforum.php?f=22

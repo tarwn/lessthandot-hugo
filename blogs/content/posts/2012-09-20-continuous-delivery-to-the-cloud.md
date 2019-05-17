@@ -109,7 +109,7 @@ _Note: It will probably load slowly. It's on a shared node and seems to go to sl
 Despite the fact that I chose the easiest possible target, as long as we can script the deployment we can easily add it into the pipeline and know that our deployment is taking exactly the same steps every time it deploys. Whether we were instead deploying to an Azure web role, deploying EC2 instances, or pushing to another provider, we have the framework to do so consistently and safely.
 
  [1]: /index.php/All/continuous+delivery: "Continuous Delivery posts"
- [2]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Continuous Delivery project wiki page"
+ [2]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Continuous Delivery project wiki page"
  [3]: https://www.windowsazure.com/en-us/home/scenarios/web-sites/ "About the Azure Websites Feature"
  [4]: https://www.windowsazure.com/en-us/ "WindowsAzure.com"
  [5]: https://bitbucket.org/tarwn/mvcmusicstore.main/src/1560a5fd57ea/Configs "Parameter files at tarwn/MVCMusicStore.Main"

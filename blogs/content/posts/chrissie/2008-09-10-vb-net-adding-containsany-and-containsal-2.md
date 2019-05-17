@@ -95,4 +95,4 @@ This one now takes IEnumerable as the type (since ICollection inherits from IEnu
 And how do I know that? Because of 24 Unittests I wrote. I won&#8217;t post them here, but I have them on the [wiki][2].
 
  [1]: /index.php/DesktopDev/MSTech/vb-net-adding-containsany-and-containsal
- [2]: http://wiki.ltd.local/index.php/VB.Net:_ContainsAny_and_ContainsAll_extension_methods
+ [2]: http://wiki.lessthandot.com/index.php/VB.Net:_ContainsAny_and_ContainsAll_extension_methods

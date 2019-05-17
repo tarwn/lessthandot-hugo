@@ -20,7 +20,7 @@ tags:
 
 ---
 <div class="acc_header">
-  A virtual database server provides you the ability to not only work on database-relate tools and services, but also to try out hundreds of vendor products throughout the market that require a database backend. This article will walk through a basic database setup for SQL Server 2008 R2 on a virtual machine using mostly standard installation options. This first installation will be limited to basic settings and a virtual harddrive, leaving us ready to customize the setup for later uses.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator, Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a></p>
+  A virtual database server provides you the ability to not only work on database-relate tools and services, but also to try out hundreds of vendor products throughout the market that require a database backend. This article will walk through a basic database setup for SQL Server 2008 R2 on a virtual machine using mostly standard installation options. This first installation will be limited to basic settings and a virtual harddrive, leaving us ready to customize the setup for later uses.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator, Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a></p>
 </div>
 
 ## Setting up the Virtual Machine
@@ -247,7 +247,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </div>
     
     <div class="hint">
-      I don't suggest changing the collation from the default for your first SQL instance and I can't offer much assistance if you do. if you do choose to change the collation, however, I have a great deal of experience dealing with the results of servers being set to strange collations and not getting along, plus the site has a number of experts that know way more than I do about SQL Server administration. So if you do get adventurous and hurt yourself, put a post up in the <a href="http://forum.ltd.local" target="_blank">forum</a> and someone should be able to help you out.
+      I don't suggest changing the collation from the default for your first SQL instance and I can't offer much assistance if you do. if you do choose to change the collation, however, I have a great deal of experience dealing with the results of servers being set to strange collations and not getting along, plus the site has a number of experts that know way more than I do about SQL Server administration. So if you do get adventurous and hurt yourself, put a post up in the <a href="http://forum.lessthandot.com" target="_blank">forum</a> and someone should be able to help you out.
     </div>
     
     <p>
@@ -363,7 +363,7 @@ When the Format screen appears, Windows provides several values and offers some 
     </p>
     
     <p>
-      <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+      <label>Additional Articles:</label><a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
     </p>
 
  [1]: /index.php/All/?p=830 "Read the first post"

@@ -41,4 +41,4 @@ So what do you think, could you answer these questions?
 
 And don't forget, if you have any tech questions then don't hesitate to ask in our [forums][1]
 
- [1]: http://forum.ltd.local/
+ [1]: http://forum.lessthandot.com/

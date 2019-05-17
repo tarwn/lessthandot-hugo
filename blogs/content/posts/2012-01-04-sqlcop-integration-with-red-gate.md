@@ -37,5 +37,5 @@ If you haven't done so already, I encourage you to download and install [SQLCop]
 I also encourage everyone to download and install [SQL Test][3] so that you can see for yourself how easy it is to run unit tests on your database.
 
  [1]: http://tSQLt.org
- [2]: http://sqlcop.ltd.local
+ [2]: http://sqlcop.lessthandot.com
  [3]: http://www.red-gate.com/products/sql-development/sql-test/

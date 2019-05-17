@@ -177,8 +177,8 @@ Results of above queries aren't always issues. They are just rare, you've to loo
 
 Follow me on Twitter! @[SamuelVanga][5]
 
- [1]: http://sqlcop.ltd.local/ "SQLCop"
- [2]: http://sqlcop.ltd.local/detectedissues.php "SQLCop detects these issues"
+ [1]: http://sqlcop.lessthandot.com/ "SQLCop"
+ [2]: http://sqlcop.lessthandot.com/detectedissues.php "SQLCop detects these issues"
  [3]: /index.php/DataMgmt/DataDesign/missing-foreign-key-constraints "missing foreign keys sql cop"
  [4]: /index.php/All/?disp=authdir&author=10 "George M"
  [5]: /twitter.com/SamuelVanga "SamuelVanga Twitter"

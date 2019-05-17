@@ -241,5 +241,5 @@ What does trace flag 1204 do_
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/answers-to-the-sql-server-quiz-can-you-a
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

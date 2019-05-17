@@ -178,5 +178,5 @@ All in all I think this book is good for any SQL Server developer/administrator.
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://www.amazon.com/gp/product/1935182048?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1935182048
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -43,7 +43,8 @@ Here is some more info about the book and the author
 
 The trailer for the book
   
-[video:youtube:ucyMBYg9RWU]
+{{< youtube id="ucyMBYg9RWU" autoplay="false" >}}
+
 
 [Mark Russinovich's interview for The Big Thrill][4]
   

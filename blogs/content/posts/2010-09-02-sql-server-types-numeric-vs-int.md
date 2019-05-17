@@ -317,4 +317,4 @@ WHERE C.DATA_TYPE IN ('numeric','decimal') AND NUMERIC_SCALE = 0 AND NUMERIC_PRE
  [3]: http://msdn.microsoft.com/en-us/library/ms190476.aspx "Precision, Scale, and Length article on MSDN"
  [4]: http://msdn.microsoft.com/en-us/library/ms186219.aspx "MSDN article on Simple Parameterization"
  [5]: http://support.microsoft.com/kb/198625 "KB article on SQL 7 Comparison Optimization"
- [6]: http://sqlcop.ltd.local/ "Download the SQLCop application"
+ [6]: http://sqlcop.lessthandot.com/ "Download the SQLCop application"

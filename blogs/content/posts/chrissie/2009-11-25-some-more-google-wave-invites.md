@@ -17,6 +17,6 @@ Since people still want to get one and I just got some new ones.
 
 Just post in here and read the question the first people giving a sensible anwser* 😉 get an invite. 
 
-http://forum.ltd.local/viewtopic.php?f=100&t=8859#p44414
+http://forum.lessthandot.com/viewtopic.php?f=100&t=8859#p44414
 
 <span class="MT_smaller">* Actually any answer will do but some people should learn to read the fineprint.</span>

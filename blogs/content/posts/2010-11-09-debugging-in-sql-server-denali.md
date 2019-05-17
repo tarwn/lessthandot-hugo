@@ -18,7 +18,9 @@ tags:
   - sql server denali
 
 ---
-Debugging has been improved in SQL Server Denali, here is a quick video that shows you how you can set a break point hit count and then while debugging it will stop when it hits that value. Of course stuff like this has been around forever in Visual Studio, I am glad that it now is also available in SSMS [video:youtube:eshmqji8Wso] 
+Debugging has been improved in SQL Server Denali, here is a quick video that shows you how you can set a break point hit count and then while debugging it will stop when it hits that value. Of course stuff like this has been around forever in Visual Studio, I am glad that it now is also available in SSMS
+
+{{< youtube id="eshmqji8Wso" autoplay="false" >}}
 
 Click on the [SQL Server Denali][1] tag to see all our SQL Server Denali related posts
 

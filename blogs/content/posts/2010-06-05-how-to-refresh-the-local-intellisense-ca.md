@@ -38,7 +38,7 @@ I also created a copy of this on our wiki here: [IntelliSense does not see new o
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 
- [1]: http://forum.ltd.local/viewtopic.php?f=17&t=11028
- [2]: http://wiki.ltd.local/index.php/IntelliSense_does_not_see_new_objects_in_SQL_Server_Management_Studio
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=11028
+ [2]: http://wiki.lessthandot.com/index.php/IntelliSense_does_not_see_new_objects_in_SQL_Server_Management_Studio
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

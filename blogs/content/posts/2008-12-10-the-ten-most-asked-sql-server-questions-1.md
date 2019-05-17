@@ -1216,7 +1216,7 @@ In case you want some more of this stuff we have over 80 hacks, tips and trick o
  [10]: /index.php/DataMgmt/DataDesign/the-ten-most-asked-sql-server-questions--1#10
  [11]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/190a0d12-840f-4ecb-8d32-b436743fdf4e
  [12]: /index.php/DataMgmt/DBProgramming/MSSQLServer/including-an-aggregated-column-s-related
- [13]: http://wiki.ltd.local/index.php/Column_To_Row_%28UNPIVOT%29
- [14]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
- [15]: http://forum.ltd.local/viewforum.php?f=17
- [16]: http://forum.ltd.local/viewforum.php?f=22
+ [13]: http://wiki.lessthandot.com/index.php/Column_To_Row_%28UNPIVOT%29
+ [14]: http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
+ [15]: http://forum.lessthandot.com/viewforum.php?f=17
+ [16]: http://forum.lessthandot.com/viewforum.php?f=22

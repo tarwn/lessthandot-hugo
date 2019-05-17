@@ -173,8 +173,8 @@ If you remove quName from the subquery, pivot doesn't have a third data point to
 
 You can play with the aggregate in the query a little bit. If you change it to avg, it'll average all the respondent ids. If you change it to min, it'll show you which respondent provided each answer for each question first.
 
- [1]: http://wiki.ltd.local/index.php/Row_To_Column_(PIVOT)
- [2]: http://wiki.ltd.local/index.php/Column_To_Row_(UNPIVOT)
+ [1]: http://wiki.lessthandot.com/index.php/Row_To_Column_(PIVOT)
+ [2]: http://wiki.lessthandot.com/index.php/Column_To_Row_(UNPIVOT)
  [3]: /wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot1.jpg
  [4]: /wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot2.jpg
  [5]: /wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot3.jpg

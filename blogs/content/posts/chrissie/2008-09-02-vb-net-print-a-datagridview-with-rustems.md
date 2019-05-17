@@ -39,5 +39,5 @@ I do have to say that this method is a bit slow but I am using an older version,
 
 You can always ask question about [VB.Net on the forums][2].
 
- [1]: http://wiki.ltd.local/index.php/VB.Net:_Print_a_DataGridView_with_RustemSoft_%27s_Print_Class_and_an_Extension_method
- [2]: http://forum.ltd.local
+ [1]: http://wiki.lessthandot.com/index.php/VB.Net:_Print_a_DataGridView_with_RustemSoft_%27s_Print_Class_and_an_Extension_method
+ [2]: http://forum.lessthandot.com

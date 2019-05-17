@@ -52,8 +52,8 @@ Here is an example of it at work in my home-made queryanalyser.
     <img src="/wp-content/uploads/blogs/DesktopDev/queryanalyserprintpreview.jpg" alt="" title="" width="428" height="331" /></div> 
     
     <p>
-      Don&#8217;t forget, you can always ask questions about this in our <a href="http://forum.ltd.local/viewforum.php?f=39">VB.Net Forum</a>
+      Don&#8217;t forget, you can always ask questions about this in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a>
     </p>
 
  [1]: http://msdn.microsoft.com/en-us/library/ms996492.aspx
- [2]: http://wiki.ltd.local/index.php/VB.Net:_Extension_method_Print_RichTextBox
+ [2]: http://wiki.lessthandot.com/index.php/VB.Net:_Extension_method_Print_RichTextBox

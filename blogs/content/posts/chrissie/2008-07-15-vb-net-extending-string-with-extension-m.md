@@ -259,7 +259,7 @@ Just in case you don&#8217;t believe me.
   <img src="/wp-content/uploads/blogs/DesktopDev//Unittestingextensionmethoodsleftandright.JPG" alt="" title="" width="494" height="348" />
 </div>
 
-<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.ltd.local/viewforum.php?f=39">VB.Net Forum</a></font>
+<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a></font>
 
  [1]: http://www.codinghorror.com/blog/archives/001151.html
  [2]: http://www.rocksthoughts.com/blog/archive/2008/03/11/extension-method-implementation-differences-between-c-and-vb.net.aspx

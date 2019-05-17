@@ -189,6 +189,6 @@ And now for the most important part. The Extension method
     End Function```
 And yes all the test pass. Cool huh! Perhaps not because it lacks some documentation, but then again that&#8217;s real life programming ;-).
 
-<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.ltd.local/viewforum.php?f=39">VB.Net Forum</a></font>
+<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a></font>
 
  [1]: /index.php/DesktopDev/MSTech/vb-net-extending-string-with-extension-m

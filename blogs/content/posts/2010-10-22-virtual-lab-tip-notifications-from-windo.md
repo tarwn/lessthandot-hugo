@@ -20,7 +20,7 @@ tags:
 
 ---
 <div class="acc_header">
-  There are a number of environments or situations where large-scale systems monitoring is either not cost effective or simply not available. Windows 7 and 2008 include a feature for sending notifications when specific events occur in the event log.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator, Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_intermediate.png" alt="Intermediate Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+  There are a number of environments or situations where large-scale systems monitoring is either not cost effective or simply not available. Windows 7 and 2008 include a feature for sending notifications when specific events occur in the event log.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator, Accidental Database Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_intermediate.png" alt="Intermediate Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
 </div>
 
 
@@ -87,4 +87,4 @@ This method of reporting from windows does not replace an external monitoring sy
 
 <label>Additional Articles:</label>[Virtual Lab entry on the LTD Wiki][1]
 
- [1]: http://wiki.ltd.local/index.php/Virtual_Lab "View the wiki entry"
+ [1]: http://wiki.lessthandot.com/index.php/Virtual_Lab "View the wiki entry"

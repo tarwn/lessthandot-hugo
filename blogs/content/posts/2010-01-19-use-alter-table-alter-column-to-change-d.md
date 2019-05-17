@@ -204,5 +204,5 @@ That is it for this post, as you can see it is pretty easy to change the data ty
 \*** **Remember, if you have a SQL related question try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://groups.google.com/group/microsoft.public.sqlserver.programming/browse_thread/thread/91c5da9982cfb1cf?hl=en#
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

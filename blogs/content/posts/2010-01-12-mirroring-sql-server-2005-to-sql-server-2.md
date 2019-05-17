@@ -143,4 +143,4 @@ All of these steps we went through added up to about 5 or 10 minutes of actual d
 
  [1]: /index.php/DataMgmt/DBAdmin/mirroring-sql-server-2005-to-sql-server-2008
  [2]: /index.php/DataMgmt/DBAdmin/move-databases-to-new-server-with-little-1
- [3]: http://wiki.ltd.local/index.php/Fix_Orphaned_Database_Users
+ [3]: http://wiki.lessthandot.com/index.php/Fix_Orphaned_Database_Users

@@ -127,5 +127,5 @@ Yes, I know, instead of having a player column I should have at least first and 
 
  [1]: http://stackoverflow.com/questions/5544269/tsql-if-else-statement-inside-table-valued-functions-cant-go-through/5544320#5544320
  [2]: http://stackoverflow.com/questions/5544269/tsql-if-else-statement-inside-table-valued-functions-cant-go-through
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -83,4 +83,4 @@ Here is the link to the file in plain text <http://www.mvps.org/winhelp2002/host
 
 What about you, do you use the host file to block bad sites?
 
- [1]: http://forum.ltd.local/viewtopic.php?f=139&t=9275
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=139&t=9275

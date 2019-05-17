@@ -43,7 +43,10 @@ This, they will tell you is proof that your machine is infected.
 
 After that they will tell you that to fix it you need to do the following. Go to the Run box and type www.ammyy.com. Ammyy Admin – is a popular config-zero free remote desktop sharing software. It's used for system administration, webinars and instant remote desktop access. So next they will take over your system by using this tool
 
-Here is a also a video that someone recorded [video:youtube:cueN1-2lANA] 
+Here is a also a video that someone recorded
+
+{{< youtube id="cueN1-2lANA" autoplay="false" >}}
+
 
 So if you or any of the people you know get any of these calls, just tell them to hung up.
 

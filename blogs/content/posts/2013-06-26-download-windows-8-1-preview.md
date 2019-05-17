@@ -28,10 +28,12 @@ You can download Windows 8.1 preview here http://windows.microsoft.com/en-us/win
 
 To see what is new in Windows 8.1, check out the [Windows 8.1 Preview Product Guide.][1]
 
-Here is also a video showing Windows 8.1 [video:youtube:VQb5caeSo00] 
+Here is also a video showing Windows 8.1
+
+{{< youtube id="VQb5caeSo00" autoplay="false" >}}
 
 Here is another video released today, this is is an ad really
   
-[video:youtube:7BN0W7CONpw]
+{{< youtube id="7BN0W7CONpw" autoplay="false" >}}
 
  [1]: http://go.microsoft.com/fwlink/p/?LinkId=302189

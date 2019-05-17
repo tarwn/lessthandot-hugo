@@ -34,4 +34,4 @@ Now tell me, are you really going to buy this? If you are interested is some SQL
 
  [1]: http://www.amazon.com/gp/product/1593271905?ie=UTF8&tag=sql08-20&linkCode=xm2&camp=1789&creativeASIN=1593271905
  [2]: http://ecx.images-amazon.com/images/I/51wkRQgwGFL._SL500_AA240_.jpg "The Manga Guide to Databases"
- [3]: http://wiki.ltd.local/index.php/SQL_Server_Books
+ [3]: http://wiki.lessthandot.com/index.php/SQL_Server_Books

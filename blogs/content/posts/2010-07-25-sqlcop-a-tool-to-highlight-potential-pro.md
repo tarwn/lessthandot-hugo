@@ -27,7 +27,7 @@ A big thanks to [George Mastros][2] for coding this tool, you can also thank him
 
 The tool will not modify any of your database, it will only check and if it finds issues it will list the objects if possible. It will also show you a blog post or wiki article explaining why something is a problem and how to remedy it.
 
-To run the tool you just download it from the download link at the SQLCop homepage here: http://sqlcop.ltd.local/index.php
+To run the tool you just download it from the download link at the SQLCop homepage here: http://sqlcop.lessthandot.com/index.php
 
 After that you run the tool, you will get the following login screen.
 
@@ -37,17 +37,17 @@ Enter the server name, database name and credentials (or windows authentication)
 
 After that you will see a screen similar to the one on the bottom. From the left side tree menu expand the node that you are interested in. When you click on an item the right part of the screen will show an html page showing you why the issue might be problematic and how to remedy it. Just remember that these issues might not be issues for you, maybe some of these objects are not used anymore but people are scared to drop them because they might break things down the road. So use your best judgement!
 
-<img src="http://sqlcop.ltd.local/screenshots/sqlcop4.png" alt="Issues" title="Issues" width="650" />
+<img src="http://sqlcop.lessthandot.com/screenshots/sqlcop4.png" alt="Issues" title="Issues" width="650" />
 
 Here is a video of the tool in action so that you can see how it works before you install it
   
-[video:youtube:MCIZDUu2kC4]
+{{< youtube id="MCIZDUu2kC4" autoplay="false" >}}
 
-More info about this tool can be found here, including where to post questions if you have any problems: http://sqlcop.ltd.local/index.php
+More info about this tool can be found here, including where to post questions if you have any problems: http://sqlcop.lessthandot.com/index.php
 
 You can also leave a comment here but we prefer you do it in the [SQLCop help forum][4] because the format is better suited for questions and answers
 
  [1]: /index.php/DataMgmt/DataDesign/sqlcop-fxcop-for-sql-server-would-you-be
  [2]: /index.php/All/?disp=authdir&author=10
- [3]: http://sqlcop.ltd.local/screenshots/sqlcop1.png "Login screen"
- [4]: http://forum.ltd.local/viewforum.php?f=145
+ [3]: http://sqlcop.lessthandot.com/screenshots/sqlcop1.png "Login screen"
+ [4]: http://forum.lessthandot.com/viewforum.php?f=145

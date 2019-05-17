@@ -200,7 +200,7 @@ SET @looper += 1
 END
 ```
 
-Reference: http://wiki.ltd.local/index.php/Sp\_refreshview\_for\_all\_views\_in\_a_database
+Reference: http://wiki.lessthandot.com/index.php/Sp\_refreshview\_for\_all\_views\_in\_a_database
 
 **Closing**
 

@@ -261,7 +261,7 @@ So dynamic sql isn&#8217;t all that bad after all :>
 
 * * *
 
-<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.ltd.local/viewforum.php?f=39">VB.Net Forum</a></font>
+<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a></font>
 
  [1]: /index.php/DesktopDev/MSTech/nhibernate-performance-against-stored-pr
  [2]: /index.php/DesktopDev/MSTech/nhibernate-performance-against-stored-pr-1

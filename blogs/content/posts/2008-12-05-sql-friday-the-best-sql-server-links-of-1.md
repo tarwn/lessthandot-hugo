@@ -86,5 +86,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [6]: http://sqlfool.com/2008/12/bcp-basics
  [7]: http://itknowledgeexchange.techtarget.com/sql-server/getting-rid-of-instant-file-initialization-or-enabling-it-if-that-strikes-your-fancy/#more-269
  [8]: http://www.brentozar.com/archive/2008/12/sql-server-and-cloud-links-for-the-week-3/
- [9]: http://forum.ltd.local/viewforum.php?f=17
- [10]: http://forum.ltd.local/viewforum.php?f=22
+ [9]: http://forum.lessthandot.com/viewforum.php?f=17
+ [10]: http://forum.lessthandot.com/viewforum.php?f=22

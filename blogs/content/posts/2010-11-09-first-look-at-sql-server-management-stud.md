@@ -86,7 +86,10 @@ Since this is just a high level post, I am not going in detail about the Integra
 
 I will leave you with a 3 minute video I took of me clicking around in the new SSMS. It has a HD version so make sure you click on that to get a better resolution
 
-## Video [video:youtube:hWGG0s_qVX0] 
+## Video
+
+{{< youtube id="hWGG0s_qVX0" autoplay="false" >}}
+
 
 Click on the [SQL Server Denali][14] tag to see all our SQL Server Denali related posts
 

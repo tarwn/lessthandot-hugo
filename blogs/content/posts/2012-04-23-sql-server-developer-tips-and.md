@@ -81,7 +81,7 @@ Play with this to find out what works best for you. At my organization we have w
 
 ## Make sure your relationships are set up
 
-One of the easiest things to do when setting up a new database is to forget to set up the relationships between tables. In a large database or during development of an application, it's easy to forget to set up the relationship for a new table. LessThanDot's SQLCop has a section for detecting missing foreign keys (as well as other nifty things). Get it for free here: http://sqlcop.ltd.local/
+One of the easiest things to do when setting up a new database is to forget to set up the relationships between tables. In a large database or during development of an application, it's easy to forget to set up the relationship for a new table. LessThanDot's SQLCop has a section for detecting missing foreign keys (as well as other nifty things). Get it for free here: http://sqlcop.lessthandot.com/
 
 ## Tools are your best friends
 
@@ -97,7 +97,7 @@ Gode generators are another tool that can vastly reduce the amount of time it ta
 
 One of the biggest mistakes a developer can do is not ask a question, no matter how small and trivial it may seem. There are numerous resources online for getting answer. Here's my personal list of where I go for answers:
 
-  * www.ltd.local
+  * www.lessthandot.com
   * www.stackoverflow.com
   * www.dba.stackexchange.com
   * www.sqlservercentral.com

@@ -52,4 +52,4 @@ And for those people who like to know why I did all this&#8230; LessThanDot now 
 
 Enjoy.
 
- [1]: http://ltd.local/donate.php
+ [1]: http://lessthandot.com/donate.php

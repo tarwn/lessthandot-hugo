@@ -46,7 +46,7 @@ Now you have to add a rel attribute to the link so that the tooltip knows where 
 For me it would now look something like this. 
 
 ```
-&lt;a class="cluetip" rel="/htsrv/call_plugin.php?plugin_ID=17&method=excerpt&params=a%3A1%3A%7Bs%3A6%3A%22postid%22%3Bs%3A3%3A%22628%22%3B%7D" title="Validating a domain model/objects" href="http://blogs.dev.ltd.local/index.php/All/?p=628"&gt;Validating a domain model/objects&lt;/a&gt;```
+&lt;a class="cluetip" rel="/htsrv/call_plugin.php?plugin_ID=17&method=excerpt&params=a%3A1%3A%7Bs%3A6%3A%22postid%22%3Bs%3A3%3A%22628%22%3B%7D" title="Validating a domain model/objects" href="http://blogs.dev.lessthandot.com/index.php/All/?p=628"&gt;Validating a domain model/objects&lt;/a&gt;```
 As you can see, the link also has a title which will be used as a title in the tooltip. 
 
 YOu can see it in action on my [authorslist][4].
@@ -77,7 +77,7 @@ BTW the authorslist uses the jTip theme and not the standard theme.
 
 All in all, very simple to use even for a noob like me. And instant wow factor to the site. Even more reason for people to think I&#8217;m awesome ;-).
 
- [1]: http://forum.ltd.local/viewtopic.php?f=53&t=9263
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=53&t=9263
  [2]: http://www.javascriptkit.com/script/script2/ajaxtooltip.shtml
  [3]: http://plugins.learningjquery.com/cluetip/
  [4]: /index.php/All/?disp=authdir&author=7

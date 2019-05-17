@@ -53,5 +53,5 @@ while @int <= (Select count(*) from @tbl)
 ```
 
 
- [1]: http://wiki.ltd.local/index.php/Main_Page
- [2]: http://wiki.ltd.local/index.php/Fix_Orphaned_Database_Users_All_SQL_Server_Versions
+ [1]: http://wiki.lessthandot.com/index.php/Main_Page
+ [2]: http://wiki.lessthandot.com/index.php/Fix_Orphaned_Database_Users_All_SQL_Server_Versions

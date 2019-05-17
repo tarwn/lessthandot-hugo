@@ -53,6 +53,6 @@ At LessThanDot, we've decided to release a series of articles, tips and tricks w
 
 We've decided to release these in the wiki so that anyone can contribute to them, so feel free to add anything else that you find useful.
 
-LessThanDot ASP.NET Hacks: http://wiki.ltd.local/index.php/ASP.NET_Hacks
+LessThanDot ASP.NET Hacks: http://wiki.lessthandot.com/index.php/ASP.NET_Hacks
 
- [1]: http://wiki.ltd.local/index.php/ASP.NET_Hacks
+ [1]: http://wiki.lessthandot.com/index.php/ASP.NET_Hacks

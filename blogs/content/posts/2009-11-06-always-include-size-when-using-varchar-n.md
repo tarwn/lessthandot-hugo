@@ -5,6 +5,8 @@ type: post
 date: 2009-11-06T13:33:50+00:00
 ID: 613
 url: /index.php/datamgmt/dbprogramming/always-include-size-when-using-varchar-n/
+aliases:
+  - /index.php/datamgmt/dbprogramming/mssqlserver/always-include-size-when-using-varchar-n/
 views:
   - 132341
 rp4wp_auto_linked:

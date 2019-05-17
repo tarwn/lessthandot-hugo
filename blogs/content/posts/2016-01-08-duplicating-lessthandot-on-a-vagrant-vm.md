@@ -112,7 +112,7 @@ mysql.webuser:     yourusername
 mysql.webpass:     yourpassword
 mysql.dbprefix:    ltd
 vagrant.ipaddress: 192.168.1.1
-vagrant.hostname:  ltd.local
+vagrant.hostname:  lessthandot.com
 backups.address:   192.168.1.2
 backups.username:  FTPUserNameHere
 backups.password:  PasswordHere

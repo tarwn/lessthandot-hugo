@@ -585,7 +585,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=306">SQL Server Programming Hacks</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=306">SQL Server Programming Hacks</a>
     </td>
     
     <td>
@@ -595,7 +595,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1608">LTD Puzzle 1: Friday the Thirteenths</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1608">LTD Puzzle 1: Friday the Thirteenths</a>
     </td>
     
     <td>
@@ -605,7 +605,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2155">LTD Puzzle 6: split a filepath</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2155">LTD Puzzle 6: split a filepath</a>
     </td>
     
     <td>
@@ -615,7 +615,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2830">LTD Puzzle 14: FInd the match</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2830">LTD Puzzle 14: FInd the match</a>
     </td>
     
     <td>
@@ -625,7 +625,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2426">LTD Puzzle 9: Find it</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2426">LTD Puzzle 9: Find it</a>
     </td>
     
     <td>
@@ -635,7 +635,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2933">Do you prefix table names</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2933">Do you prefix table names</a>
     </td>
     
     <td>
@@ -645,7 +645,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2055">LTD Puzzle 5: Calculating the Fibonacci Sequence</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2055">LTD Puzzle 5: Calculating the Fibonacci Sequence</a>
     </td>
     
     <td>
@@ -655,7 +655,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=2595">LTD Puzzle 11: Hello World! For Hackers</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=2595">LTD Puzzle 11: Hello World! For Hackers</a>
     </td>
     
     <td>
@@ -665,7 +665,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=3245">Need help deciding SQL Version</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=3245">Need help deciding SQL Version</a>
     </td>
     
     <td>
@@ -675,7 +675,7 @@ Now we go on to the content on this site.
   
   <tr>
     <td>
-      <a href="http://forum.ltd.local/viewtopic.php?t=1724">LTD Puzzle 2: Regular Pentagon</a>
+      <a href="http://forum.lessthandot.com/viewtopic.php?t=1724">LTD Puzzle 2: Regular Pentagon</a>
     </td>
     
     <td>
@@ -686,5 +686,5 @@ Now we go on to the content on this site.
 
 That is it, thank you for visiting and we will have lots of more content coming up in the year ahead. If you have any questions don't hesitate to ask in our [forums][2]
 
- [1]: http://ltd.local/
- [2]: http://forum.ltd.local/
+ [1]: http://lessthandot.com/
+ [2]: http://forum.lessthandot.com/

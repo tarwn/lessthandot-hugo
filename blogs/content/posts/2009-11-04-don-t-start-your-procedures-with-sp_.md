@@ -5,6 +5,8 @@ type: post
 date: 2009-11-04T13:16:28+00:00
 ID: 609
 url: /index.php/datamgmt/dbadmin/mssqlserveradmin/don-t-start-your-procedures-with-sp_/
+aliases:
+  - /index.php/datamgmt/dbprogramming/mssqlserver/don-t-start-your-procedures-with-sp_/
 views:
   - 69840
 rp4wp_auto_linked:

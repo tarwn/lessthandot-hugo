@@ -120,5 +120,5 @@ Hopefully this short blog is useful.
  [1]: /index.php/DataMgmt/DataDesign/parsing-the-address-field-to-its-individ
  [2]: http://bradsruminations.blogspot.com/2011/04/t-sql-tuesday-017-it-slices-it-dices-it.html
  [3]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/c31fe71b-2c51-497d-a322-0e7e17a861cd
- [4]: http://forum.ltd.local/viewforum.php?f=17
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [4]: http://forum.lessthandot.com/viewforum.php?f=17
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

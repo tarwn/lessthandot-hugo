@@ -67,4 +67,4 @@ Andy and I are honored to share this week with you and helping take the next ste
  [7]: http://sqlblog.com/blogs/jonathan_kehayias/
  [8]: http://technet.microsoft.com/en-us/sqlserver/ff977043
  [9]: http://search.twitter.com/search?q=%23sqlhelp
- [10]: http://ltd.local/
+ [10]: http://lessthandot.com/

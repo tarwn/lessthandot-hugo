@@ -48,5 +48,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [3]: http://blogs.msdn.com/psssql/archive/2009/03/04/sparse-file-errors-1450-or-665-due-to-file-fragmentation-fixes-and-workarounds.aspx
  [4]: http://feedproxy.google.com/~r/TheHobt/~3/AehfIxdP4uc/sql-server-and-null-values-revisited.html
  [5]: http://itknowledgeexchange.techtarget.com/sql-server/steps-to-troubleshoot-connections-to-your-sql-server/
- [6]: http://forum.ltd.local/viewforum.php?f=17
- [7]: http://forum.ltd.local/viewforum.php?f=22
+ [6]: http://forum.lessthandot.com/viewforum.php?f=17
+ [7]: http://forum.lessthandot.com/viewforum.php?f=22

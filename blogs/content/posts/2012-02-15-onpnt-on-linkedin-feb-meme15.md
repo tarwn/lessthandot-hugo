@@ -53,7 +53,7 @@ Microsoft SQL Server Certification Exams Author
 Finalist for the DBA of the Year 2010 Awards   
 PASS Regional Mentor – North Central Region   
 Co-founder and blog on LessThanDot.com   
-www.ltd.local   
+www.lessthandot.com   
 Simple-Talk DBA of the Day   
 Magenic Thought Leadership </em>
 

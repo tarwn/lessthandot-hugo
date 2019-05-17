@@ -74,4 +74,4 @@ What's important is that our site is representative of a lot of systems out ther
 
 Deployment is basically question-free now. We didn't wait to try and build an all-inclusive process that would solve all the problems we could think of, in fact I can think of several painful ones still waiting for us. We solved some of our critical pain points and have a foundation for further improvements. And what the heck, I just deployed to production again because I felt like it.
 
- [1]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "My Continuous Delivery Project posts"
+ [1]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "My Continuous Delivery Project posts"

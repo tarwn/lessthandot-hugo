@@ -217,5 +217,5 @@ CROSS APPLY	Data.nodes('v') AS n(v)
  [4]: http://www.sommarskog.se/arrays-in-sql.html
  [5]: http://sqlserver2000.databases.aspfaq.com/why-should-i-consider-using-an-auxiliary-calendar-table.html
  [6]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/165a4dc0-8d50-45c8-87b7-f34db50e6197
- [7]: http://forum.ltd.local/viewforum.php?f=17
- [8]: http://forum.ltd.local/viewforum.php?f=22
+ [7]: http://forum.lessthandot.com/viewforum.php?f=17
+ [8]: http://forum.lessthandot.com/viewforum.php?f=22

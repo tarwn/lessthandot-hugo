@@ -82,5 +82,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [9]: http://blogs.msdn.com/psssql/archive/2009/01/21/how-it-works-sys-dm-os-buffer-descriptors.aspx
  [10]: http://blogs.msdn.com/psssql/archive/2009/01/21/prb-rml-utilities-readtrace-and-how-to-workaround-mars.aspx
  [11]: http://itknowledgeexchange.techtarget.com/sql-server/viewing-sql-server-plan-guides/
- [12]: http://forum.ltd.local/viewforum.php?f=17
- [13]: http://forum.ltd.local/viewforum.php?f=22
+ [12]: http://forum.lessthandot.com/viewforum.php?f=17
+ [13]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -245,12 +245,12 @@ Here is what the output would look like
 
 Leave me a comment if you know of anything that you would like to add or if some of this stuff I listed would be useful
 
- [1]: http://sqlcop.ltd.local/
+ [1]: http://sqlcop.lessthandot.com/
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/don-t-start-your-procedures-with-sp_
  [3]: /index.php/DataMgmt/DBProgramming/MSSQLServer/always-include-size-when-using-varchar-n
  [4]: /index.php/DataMgmt/DBProgramming/always-include-precision-and-scale-with
  [5]: /index.php/DataMgmt/DataDesign/identify-procedures-that-call-sql-server
- [6]: http://wiki.ltd.local/index.php/6_Different_Ways_To_Get_The_Current_Identity_Value
+ [6]: http://wiki.lessthandot.com/index.php/6_Different_Ways_To_Get_The_Current_Identity_Value
  [7]: /index.php/DataMgmt/DBProgramming/do-not-use-spaces-or-other-invalid-chara
  [8]: /index.php/DataMgmt/DBProgramming/do-not-use-the-float-data-type
  [9]: /index.php/DataMgmt/DBProgramming/don-t-use-text-datatype-for-sql-2005-and
@@ -260,9 +260,9 @@ Leave me a comment if you know of anything that you would like to add or if some
  [13]: /index.php/DataMgmt/DataDesign/missing-foreign-key-constraints
  [14]: /index.php/DataMgmt/DBProgramming/best-practice-every-table-should-have-a
  [15]: /index.php/DataMgmt/DataDesign/create-a-sorted-view-in-sql-server-2005--2008
- [16]: http://wiki.ltd.local/index.php/Finding_Fragmentation_Of_An_Index_And_Fixing_It
+ [16]: http://wiki.lessthandot.com/index.php/Finding_Fragmentation_Of_An_Index_And_Fixing_It
  [17]: http://www.jasonstrate.com/index.php/2010/06/index-those-foreign-keys/
  [18]: /index.php/DataMgmt/DBProgramming/collation-conflicts-with-temp-tables-and
- [19]: http://wiki.ltd.local/index.php/Database_compatibilty_level
- [20]: http://wiki.ltd.local/index.php/Fix_Orphaned_Database_Users
+ [19]: http://wiki.lessthandot.com/index.php/Database_compatibilty_level
+ [20]: http://wiki.lessthandot.com/index.php/Fix_Orphaned_Database_Users
  [21]: http://www.mssqltips.com/tip.asp?tip=1675

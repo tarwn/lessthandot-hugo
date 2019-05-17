@@ -300,10 +300,10 @@ So that is it for all 10 questions
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][7] forum or our [Microsoft SQL Server Admin][8] forum**<ins></ins>
 
  [1]: /index.php/DataMgmt/DataDesign/sql-server-quiz-can-you-answer-all-these
- [2]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_Don%27t_Use_%28select_%2A%29%2C_but_List_Columns
- [3]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_No_Functions_on_Left_Side_of_Operator
+ [2]: http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_Don%27t_Use_%28select_%2A%29%2C_but_List_Columns
+ [3]: http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_No_Functions_on_Left_Side_of_Operator
  [4]: http://www.sommarskog.se/error-handling-II.html
  [5]: http://www.sommarskog.se/error-handling-I.html
- [6]: http://wiki.ltd.local/index.php/Integer_math
- [7]: http://forum.ltd.local/viewforum.php?f=17
- [8]: http://forum.ltd.local/viewforum.php?f=22
+ [6]: http://wiki.lessthandot.com/index.php/Integer_math
+ [7]: http://forum.lessthandot.com/viewforum.php?f=17
+ [8]: http://forum.lessthandot.com/viewforum.php?f=22

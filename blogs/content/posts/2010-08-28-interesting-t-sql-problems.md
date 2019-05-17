@@ -670,5 +670,5 @@ And perhaps you appreciate this topic as well
  [6]: /index.php/DataMgmt/DataDesign/how-to-get-information-about-all-databas
  [7]: http://beyondrelational.com/blogs/naomi/archive/2010/10/17/interesting-t-sql-problems.aspx
  [8]: http://beyondrelational.com/blogs/naomi/archive/2010/10/29/how-to-search-a-string-value-in-all-columns-in-the-table-and-in-all-tables-in-the-database.aspx
- [9]: http://forum.ltd.local/viewforum.php?f=17
- [10]: http://forum.ltd.local/viewforum.php?f=22
+ [9]: http://forum.lessthandot.com/viewforum.php?f=17
+ [10]: http://forum.lessthandot.com/viewforum.php?f=22

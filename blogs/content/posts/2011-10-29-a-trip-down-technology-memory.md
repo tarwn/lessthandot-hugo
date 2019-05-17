@@ -43,7 +43,8 @@ Enjoy the pics...scroll down to the bottom, I also have a video now
 
 [<img src="http://farm7.static.flickr.com/6060/6291348865_cab32ee4af_z.jpg" width="465" height="640" alt="TechHistory" />][10]
 
-Here is also a 3 minute video of the items [video:youtube:ZTiIfCV8WL8]
+Here is also a 3 minute video of the items
+{{< youtube id="ZTiIfCV8WL8" autoplay="false" >}}
 
  [1]: http://www.flickr.com/photos/denisgobo/6291350007/ "TechHistory10 by Denis Gobo, on Flickr"
  [2]: http://www.flickr.com/photos/denisgobo/6291870106/ "TechHistory9 by Denis Gobo, on Flickr"

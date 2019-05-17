@@ -52,7 +52,7 @@ The Test Script(s) describe the steps we want to take as we browse the site and 
 
 This test script is designed to verify the following path:
 
-  1. Open http://ltd.local
+  1. Open http://lessthandot.com
   2. Verify the title is correct and that we aren't logged in yet
   3. Click the "login" link in the nav bar
   4. Verify we're on the login page
@@ -79,16 +79,16 @@ var controller = new BrowserController('./pages', './browser', logger);
 Promise.resolve().then(function(){
 
 	logger.stdout('Step 1', 'Load the site, we won\'t be logged in');
-	return controller.goToUrl('http://ltd.local');
+	return controller.goToUrl('http://lessthandot.com');
 }).then(function(pageObject){
-	assert.equal(pageObject.getUrl(), 'http://ltd.local/');
+	assert.equal(pageObject.getUrl(), 'http://lessthandot.com/');
 	assert.equal(pageObject.getTitle(), 'Less Than Dot - Launchpad - Less Than Dot');
 	assert.ok(pageObject.getIsLoggedOut(), 'Logged out on initial visit');
 
 	logger.stdout('Step 2', 'Navigate to Login Page from menu');
 	return pageObject.pressLogin();
 }).then(function(pageObject){
-	assert.equal(pageObject.getUrl(), 'http://ltd.local/login.php?backtrack=http://ltd.local/index.php?');
+	assert.equal(pageObject.getUrl(), 'http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?');
 	assert.equal(pageObject.getTitle(), 'Less Than Dot - Launchpad - Less Than Dot - Login');
 
 	logger.stdout('Step 3', 'Perform login');
@@ -96,13 +96,13 @@ Promise.resolve().then(function(){
 	pageObject.typePassword(config.password);
 	return pageObject.clickLoginButton();
 }).then(function(pageObject){
-	assert.equal(pageObject.getUrl(), 'http://ltd.local/login.php?backtrack=http://ltd.local/index.php?');
+	assert.equal(pageObject.getUrl(), 'http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?');
 	assert.ok(pageObject.getIsLoggedIn(), 'Logged in now');
 
 	logger.stdout('Step 4', 'Wait for automatic redirect');
-	return pageObject.waitForRedirectTo('http://ltd.local');
+	return pageObject.waitForRedirectTo('http://lessthandot.com');
 }).then(function(pageObject){
-	assert.equal(pageObject.getUrl(), 'http://ltd.local/index.php?');
+	assert.equal(pageObject.getUrl(), 'http://lessthandot.com/index.php?');
 	assert.equal(pageObject.getTitle(), 'Less Than Dot - Launchpad - Less Than Dot');
 
 	logger.stdout('Success', 'We have logged in successfully.');
@@ -132,22 +132,22 @@ Example Output:
 
 ```text
 [OUT] [Step 1         ] Load the site, we won't be logged in
-[---] [goToUrl        ] http://ltd.local
-[---] [onUrlChanged   ] Going to http://ltd.local/
-[---] [onLoadFinished ] Page "http://ltd.local/" loaded with status success
-[---] [setLoaded      ] Page loaded in 2125ms :: http://ltd.local/
+[---] [goToUrl        ] http://lessthandot.com
+[---] [onUrlChanged   ] Going to http://lessthandot.com/
+[---] [onLoadFinished ] Page "http://lessthandot.com/" loaded with status success
+[---] [setLoaded      ] Page loaded in 2125ms :: http://lessthandot.com/
 [OUT] [Step 2         ] Navigate to Login Page from menu
-[---] [onUrlChanged   ] Going to http://ltd.local/login.php?backtrack=http://ltd.local/index.php?
-[---] [onLoadFinished ] Page "http://ltd.local/login.php?backtrack=http://ltd.local/index.php?" loaded with status success
-[---] [setLoaded      ] Page loaded in 965ms :: http://ltd.local/login.php?backtrack=http://ltd.local/index.php?
+[---] [onUrlChanged   ] Going to http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?
+[---] [onLoadFinished ] Page "http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?" loaded with status success
+[---] [setLoaded      ] Page loaded in 965ms :: http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?
 [OUT] [Step 3         ] Perform login
-[---] [onUrlChanged   ] Going to http://ltd.local/login.php?backtrack=http://ltd.local/index.php?
-[---] [onLoadFinished ] Page "http://ltd.local/login.php?backtrack=http://ltd.local/index.php?" loaded with status success
-[---] [setLoaded      ] Page loaded in 984ms :: http://ltd.local/login.php?backtrack=http://ltd.local/index.php?
+[---] [onUrlChanged   ] Going to http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?
+[---] [onLoadFinished ] Page "http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?" loaded with status success
+[---] [setLoaded      ] Page loaded in 984ms :: http://lessthandot.com/login.php?backtrack=http://lessthandot.com/index.php?
 [OUT] [Step 4         ] Wait for automatic redirect
-[---] [onUrlChanged   ] Going to http://ltd.local/index.php?
-[---] [onLoadFinished ] Page "http://ltd.local/index.php?" loaded with status success
-[---] [setLoaded      ] Page loaded in 4206ms :: http://ltd.local/index.php?
+[---] [onUrlChanged   ] Going to http://lessthandot.com/index.php?
+[---] [onLoadFinished ] Page "http://lessthandot.com/index.php?" loaded with status success
+[---] [setLoaded      ] Page loaded in 4206ms :: http://lessthandot.com/index.php?
 [OUT] [Success        ] We have logged in successfully.
 ```
 # BrowserController

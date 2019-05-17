@@ -54,5 +54,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [5]: http://blogs.msdn.com/sqlserverstorageengine/archive/2008/12/31/managing-tempdb-in-sql-server-tempdb-basics-version-store-logical-structure.aspx
  [6]: http://blogs.msdn.com/sqlserverstorageengine/archive/2009/01/01/managing-tempdb-in-sql-server-tempdb-basics-version-store-growth-and-removing-stale-row-versions.aspx
  [7]: http://sqlblog.com/blogs/alexander_kuznetsov/archive/2009/01/01/reproducing-deadlocks-involving-only-one-table.aspx
- [8]: http://forum.ltd.local/viewforum.php?f=17
- [9]: http://forum.ltd.local/viewforum.php?f=22
+ [8]: http://forum.lessthandot.com/viewforum.php?f=17
+ [9]: http://forum.lessthandot.com/viewforum.php?f=22

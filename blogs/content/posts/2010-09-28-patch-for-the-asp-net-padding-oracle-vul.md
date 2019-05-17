@@ -41,6 +41,6 @@ The Padding Oracle Exploit Tool is available here http://netifera.com/research/ 
 
 Here is a video of the attack in action
   
-[video:youtube:yghiC_U2RaM]
+{{< youtube id="yghiC_U2RaM" autoplay="false" >}}
 
 **Again, get the patch here:** http://www.microsoft.com/technet/security/bulletin/ms10-070.mspx

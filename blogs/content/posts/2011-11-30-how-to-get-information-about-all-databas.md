@@ -459,9 +459,9 @@ The possibilities are endless.
  [16]: /index.php/DataMgmt/DataDesign/how-to-get-information-about-all-databas#14
  [17]: /index.php/DataMgmt/DataDesign/how-to-get-information-about-all-databas#15
  [18]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/ab4b39b0-5bb2-4ffc-a25d-6bb8fe6124ef/#f3a3a011-4318-44e2-97c1-5bdadd7b2444
- [19]: http://wiki.ltd.local/index.php/Finding_Record_with_Last_Modified_date_in_all_tables
+ [19]: http://wiki.lessthandot.com/index.php/Finding_Record_with_Last_Modified_date_in_all_tables
  [20]: http://blogs.technet.com/b/heyscriptingguy/archive/2010/11/02/use-powershell-to-obtain-sql-server-database-sizes.aspx
  [21]: http://www.kodyaz.com/articles/list-database-size-using-sql-server-sp_msforeachdb.aspx
  [22]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/226bbffc-2cfa-4fa8-8873-48dec6b5f17f
- [23]: http://forum.ltd.local/viewforum.php?f=17
- [24]: http://forum.ltd.local/viewforum.php?f=22
+ [23]: http://forum.lessthandot.com/viewforum.php?f=17
+ [24]: http://forum.lessthandot.com/viewforum.php?f=22

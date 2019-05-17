@@ -79,7 +79,7 @@ Resources
 
  [1]: http://twitter.com/noelmckinney
  [2]: http://noelmckinney.com/
- [3]: http://wiki.ltd.local/index.php/Transfer_all_tables_to_different_schema
+ [3]: http://wiki.lessthandot.com/index.php/Transfer_all_tables_to_different_schema
  [4]: http://msdn.microsoft.com/en-us/library/ms189462.aspx
  [5]: http://msdn.microsoft.com/en-us/library/ms173423.aspx
  [6]: http://msdn.microsoft.com/en-us/library/ms187359.aspx

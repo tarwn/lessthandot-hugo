@@ -120,12 +120,12 @@ and DateCreated < '08/16/2008'
 
 And that solved that query. If you are interested in some more performance, I have written some [Query Optimization][1] items on the LessThanDot Wiki. Below are some direct links
 
-<pre><a href="http://wiki.ltd.local/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>
-<a href="http://wiki.ltd.local/index.php/No_Functions_on_Left_Side_of_Operator" title="No Functions on Left Side of Operator">No Functions on Left Side of Operator</a>
-<a href="http://wiki.ltd.local/index.php/Query_Optimizations_With_Dates" title="Query Optimizations With Dates">Query Optimizations With Dates</a>
-<a href="http://wiki.ltd.local/index.php/Optimization:_Set_Nocount_On" title="Optimization: Set Nocount On">Optimization: Set Nocount On</a>
-<a href="http://wiki.ltd.local/index.php/No_Math_In_Where_Clause" title="No Math In Where Clause">No Math In Where Clause</a>
-<a href="http://wiki.ltd.local/index.php/Don%27t_Use_%28select_%2A%29%2C_but_List_Columns" title="Don't Use (select *), but List Columns">Don't Use (select *), but List Columns</a>
+<pre><a href="http://wiki.lessthandot.com/index.php/Case_Sensitive_Search" title="Case Sensitive Search">Case Sensitive Search</a>
+<a href="http://wiki.lessthandot.com/index.php/No_Functions_on_Left_Side_of_Operator" title="No Functions on Left Side of Operator">No Functions on Left Side of Operator</a>
+<a href="http://wiki.lessthandot.com/index.php/Query_Optimizations_With_Dates" title="Query Optimizations With Dates">Query Optimizations With Dates</a>
+<a href="http://wiki.lessthandot.com/index.php/Optimization:_Set_Nocount_On" title="Optimization: Set Nocount On">Optimization: Set Nocount On</a>
+<a href="http://wiki.lessthandot.com/index.php/No_Math_In_Where_Clause" title="No Math In Where Clause">No Math In Where Clause</a>
+<a href="http://wiki.lessthandot.com/index.php/Don%27t_Use_%28select_%2A%29%2C_but_List_Columns" title="Don't Use (select *), but List Columns">Don't Use (select *), but List Columns</a>
 </pre>
 
 If you are interested in some blogposts about dates, take a look at these two which I wrote earlier
@@ -134,6 +134,6 @@ If you are interested in some blogposts about dates, take a look at these two wh
   
 [Do You Know How Between Works With Dates?][3]
 
- [1]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List#Query_Optimization
+ [1]: http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List#Query_Optimization
  [2]: /index.php/DataMgmt/DataDesign/how-are-dates-stored-in-sql-server
  [3]: /index.php/DataMgmt/DataDesign/how-does-between-work-with-dates-in-sql-

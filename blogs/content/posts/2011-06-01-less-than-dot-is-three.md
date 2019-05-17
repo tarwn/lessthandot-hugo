@@ -793,7 +793,7 @@ Nothing new here either, as expected for an English language site, the US is num
     
     <tr>
       <td>
-        http://ltd.local
+        http://lessthandot.com
       </td>
       
       <td>

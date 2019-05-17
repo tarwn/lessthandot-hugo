@@ -312,7 +312,7 @@ I also have the solution here. StructureMap sourcecode included, it&#8217;s the 
 
 Sorry for this extra long post.
 
-**<span class="MT_red">You can always ask question about this in our <a href="http://forum.ltd.local/viewforum.php?f=39">VB.Net forum</a>.</span>**
+**<span class="MT_red">You can always ask question about this in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net forum</a>.</span>**
 
  [1]: /index.php/DesktopDev/MSTech/structuremap-is-way-cool
  [2]: /wp-content/uploads/blogs/DesktopDev/Structuremap/Structuremaptrial.zip "Structuremaptrial.zip"

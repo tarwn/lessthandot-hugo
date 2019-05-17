@@ -122,7 +122,7 @@ That is all for day nineteen of the [SQL Advent 2012 series][1], come back tomor
  [1]: /index.php/DataMgmt/DBProgramming/sql-advent-2012-here-is
  [2]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/stay-relevant-and-marketable
  [3]: http://stackoverflow.com/questions
- [4]: http://forum.ltd.local/
+ [4]: http://forum.lessthandot.com/
  [5]: http://www.sqlservercentral.com/Forums/
  [6]: /index.php/DataMgmt/DataDesign/the-ten-most-asked-sql-server-questions--1
  [7]: http://www.amazon.com/gp/product/0201633612/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0201633612&linkCode=as2&tag=sql08-20

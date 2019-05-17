@@ -325,7 +325,7 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 </p>
 
 <p>
-  *** <strong>If you have a SQL related question try our <a href="http://forum.ltd.local/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.ltd.local/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
+  *** <strong>If you have a SQL related question try our <a href="http://forum.lessthandot.com/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.lessthandot.com/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins>
 </p>
 
  [1]: /index.php/DataMgmt/DataDesign/changing-exec-to-sp_executesql-doesn-t-p

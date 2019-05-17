@@ -61,5 +61,5 @@ SQL Server now only takes 6 seconds and you have one atomic block of code, eithe
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][2] forum or our [Microsoft SQL Server Admin][3] forum**<ins></ins>
 
  [1]: http://texastoo.com/post/2010/04/04/MongoDB-vs-SQL-Server-INSERT-comparison.aspx
- [2]: http://forum.ltd.local/viewforum.php?f=17
- [3]: http://forum.ltd.local/viewforum.php?f=22
+ [2]: http://forum.lessthandot.com/viewforum.php?f=17
+ [3]: http://forum.lessthandot.com/viewforum.php?f=22

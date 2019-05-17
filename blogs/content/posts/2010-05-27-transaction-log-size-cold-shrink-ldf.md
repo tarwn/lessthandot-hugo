@@ -109,4 +109,4 @@ Moving databases using backup/restore is a good method if your activity allows f
   * Do the full backup after the resize to prevent longer restores and maintaining the disk usage you really require.
   * A well maintained transaction log structure will prevent all of this. You will know precisely the sizing requirements at this level.
 
- [1]: http://forum.ltd.local/viewtopic.php?f=17&t=10917
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=10917

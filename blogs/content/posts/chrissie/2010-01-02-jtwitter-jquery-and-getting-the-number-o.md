@@ -277,6 +277,6 @@ Just look at what a twitter json object gives you:
 So I guess you can think of plenty of ways to use this.
 
  [1]: http://twittercounter.com
- [2]: http://www.ltd.local/statistics.php
+ [2]: http://www.lessthandot.com/statistics.php
  [3]: http://jquery-howto.blogspot.com/2009/11/jquery-twitter-plugin-update-jtwitter.html
  [4]: http://plugins.jquery.com/project/jtwitter

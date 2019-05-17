@@ -1,0 +1,12 @@
+{{ partial "head.html" . }}
+{{ partial "sqlcop/header.html" . }}
+
+{{ partial "sidebar.html" . }}
+
+<div class="content-main">
+    <div class="post-area postbody">
+        {{ .Content }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

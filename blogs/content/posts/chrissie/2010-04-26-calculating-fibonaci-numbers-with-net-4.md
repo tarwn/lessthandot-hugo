@@ -222,5 +222,5 @@ Sub Main()
 
     End Function```
 
- [1]: http://forum.ltd.local/viewtopic.php?f=102&t=2055
- [2]: http://forum.ltd.local/viewtopic.php?f=102&t=2055#p11845
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2055
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=102&t=2055#p11845

@@ -243,7 +243,7 @@ While the plotting portion of this project took longer than I expected, I still 
 Not every project needs to be the fastest, most responsive application on the planet, but given how cheaply you can add some basic numbers into your process, the net gain of knowing exactly how your application is performing and the heads up when you do something that really breaks performance are both valuable and fairly inexpensive to implement.
 
  [1]: /index.php/EnterpriseDev/application-lifecycle-management/implementing-wcat-for-load-testing "Using WCAT to Load Test"
- [2]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Continuous Delivery Wiki page"
+ [2]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Continuous Delivery Wiki page"
  [3]: https://wiki.jenkins-ci.org/display/JENKINS/Envfile+Plugin "Jenkins EnvFile Plugin"
  [4]: https://wiki.jenkins-ci.org/display/JENKINS/Copy+Artifact+Plugin "Jenkins Copy Artifact Plugin"
  [5]: /index.php/EnterpriseDev/application-lifecycle-management/continuous-delivery-project-deploy-and "Continuous Delivery - Deploy and Smoke Test"

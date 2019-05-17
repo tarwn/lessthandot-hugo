@@ -60,7 +60,7 @@ Embrace the SQL Community as a family like no other, as it is just that. Once yo
 Remember to place your questions in the levels that best suit them and the situation you are in. It will create cleaner online knowledge bases and allow the experts in your community to better share their knowledge by passing it on through you.
 
  [1]: http://msdn.microsoft.com/en-us/library/cc966540.aspx
- [2]: http://forum.ltd.local/
+ [2]: http://forum.lessthandot.com/
  [3]: http://social.msdn.microsoft.com/Forums/en-US/categories
  [4]: http://social.technet.microsoft.com/Forums/en-us/categories/
  [5]: http://search.twitter.com/search?q=%23sqlhelp

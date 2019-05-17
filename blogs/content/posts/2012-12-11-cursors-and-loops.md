@@ -239,7 +239,7 @@ That is all for day eleven of the [SQL Advent 2012 series][1], come back tomorro
  [2]: http://sqlblog.com/blogs/aaron_bertrand/archive/2012/01/26/the-fallacy-that-a-while-loop-isn-t-a-cursor.aspx
  [3]: /index.php/DataMgmt/DBProgramming/triggers-what-to-do-what
  [4]: http://sqlblog.com/blogs/adam_machanic/archive/2006/07/12/running-sums-redux.aspx
- [5]: http://wiki.ltd.local/index.php/Cursors_and_How_to_Avoid_Them
+ [5]: http://wiki.lessthandot.com/index.php/Cursors_and_How_to_Avoid_Them
  [6]: http://bradsruminations.blogspot.com/2010/05/truth-about-cursors-part-1.html
  [7]: http://bradsruminations.blogspot.com/2010/05/truth-about-cursors-part-2.html
  [8]: http://bradsruminations.blogspot.com/2010/05/truth-about-cursors-part-3.html

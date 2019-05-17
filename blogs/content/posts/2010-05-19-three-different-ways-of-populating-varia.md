@@ -137,5 +137,5 @@ C) Case statement (because you are still running NT 4.0 with SQL Server 2000 SP4
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.ltd.local/viewforum.php?f=17
- [2]: http://forum.ltd.local/viewforum.php?f=22
+ [1]: http://forum.lessthandot.com/viewforum.php?f=17
+ [2]: http://forum.lessthandot.com/viewforum.php?f=22

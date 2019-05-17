@@ -37,6 +37,6 @@ I put more work in after that playing with the opacity of the clouds and differe
 
 -Rick
 
- [1]: http://forum.ltd.local/viewtopic.php?f=7&t=5764&start=0&st=0&sk=t&sd=a
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=7&t=5764&start=0&st=0&sk=t&sd=a
  [2]: http://ringdev.com.web10.reliabledomainspace.com/images/tm_cloudwheel.png "Click for SL Demo"
  [3]: http://ringdev.com.web10.reliabledomainspace.com/code/spaceeffect/SL_CloudWheelTestPage.aspx

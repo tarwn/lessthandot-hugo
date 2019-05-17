@@ -5,6 +5,8 @@ type: post
 date: 2009-11-05T11:29:28+00:00
 ID: 610
 url: /index.php/datamgmt/dbprogramming/don-t-prefix-your-table-names-with-tbl/
+aliases: 
+  - /index.php/datamgmt/dbprogramming/mssqlserver/don-t-prefix-your-table-names-with-tbl/
 views:
   - 31481
 rp4wp_auto_linked:

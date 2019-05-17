@@ -31,9 +31,9 @@ Now start the debugger again, you will see now that it will stop at the breakpoi
 
 I also captured it in a video and uploaded it on YouTube, there is even a HD 720p format
   
-[video:youtube:VJrshV22MD4]
+{{< youtube id="VJrshV22MD4" autoplay="false" >}}
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins>
 
- [1]: http://forum.ltd.local/viewforum.php?f=17
- [2]: http://forum.ltd.local/viewforum.php?f=22
+ [1]: http://forum.lessthandot.com/viewforum.php?f=17
+ [2]: http://forum.lessthandot.com/viewforum.php?f=22

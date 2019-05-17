@@ -147,4 +147,4 @@ And yes this time it does exist since it's a global table
 
 I have also added this to our wiki, read it here: [Check If Temporary Table Exists][1]
 
- [1]: http://wiki.ltd.local/index.php/Check_If_Temporary_Table_Exists
+ [1]: http://wiki.lessthandot.com/index.php/Check_If_Temporary_Table_Exists

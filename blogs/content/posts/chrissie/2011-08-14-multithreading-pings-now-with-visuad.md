@@ -41,7 +41,7 @@ Partial Public Class Form1
         fgrid.Rows.Add()
         fgrid.Rows(0).Cells(0).Value = "google.com"
         fgrid.Rows.Add()
-        fgrid.Rows(1).Cells(0).Value = "ltd.local"
+        fgrid.Rows(1).Cells(0).Value = "lessthandot.com"
         fgrid.Rows.Add()
         fgrid.Rows(2).Cells(0).Value = "bing.com"
         fgrid.Rows.Add()
@@ -168,7 +168,7 @@ Public Class Form1
         fgrid.Rows.Add()
         fgrid.Rows(0).Cells(0).Value = "google.com"
         fgrid.Rows.Add()
-        fgrid.Rows(1).Cells(0).Value = "ltd.local"
+        fgrid.Rows(1).Cells(0).Value = "lessthandot.com"
         fgrid.Rows.Add()
         fgrid.Rows(2).Cells(0).Value = "bing.com"
         fgrid.Rows.Add()

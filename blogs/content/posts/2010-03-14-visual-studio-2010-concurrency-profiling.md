@@ -161,8 +161,7 @@ Instead of having 20 images embedded I decided that a video would be more useful
 
 Here is the HD Video version, I would suggest you click on the video and watch in on YouTube in 720P full screen format
   
-[video:youtube:Bofk3ecJOtk]
-
+{{< youtube id="Bofk3ecJOtk" autoplay="false" >}}
 
 
 ## Learning more about Concurrency Profiling and Parallel Programming

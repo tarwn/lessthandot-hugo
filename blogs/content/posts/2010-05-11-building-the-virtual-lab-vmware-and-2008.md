@@ -35,7 +35,7 @@ Lets get started.
   </h2>
   
   <p>
-    The purpose of today's article is to create a basic windows virtual machine that can serve as a template for later virtual machines. Having a basic image or set of images on hand can dramatically speed up production and non-production roll-outs as well as ensure standardization of systems across your environment.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+    The purpose of today's article is to create a basic windows virtual machine that can serve as a template for later virtual machines. Having a basic image or set of images on hand can dramatically speed up production and non-production roll-outs as well as ensure standardization of systems across your environment.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
   </p>
 </div>
 
@@ -286,7 +286,7 @@ The first decision the installer requires is selection between the various versi
     </p>
     
     <p>
-      Additional Links:<br /> <a href="/index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/virtual-lab-creating-a-basic-sql-2008-r2" title="Head to the Basic SQL 2008 R2 Install">Virtual Lab: Basic SQL 2008 R2 Virtual Machine</a><br /> <a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+      Additional Links:<br /> <a href="/index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/virtual-lab-creating-a-basic-sql-2008-r2" title="Head to the Basic SQL 2008 R2 Install">Virtual Lab: Basic SQL 2008 R2 Virtual Machine</a><br /> <a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
     </p>
 
  [1]: http://twitter.com/onpnt "Ted on Twitter"

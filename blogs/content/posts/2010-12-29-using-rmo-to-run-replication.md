@@ -40,10 +40,10 @@ As with anything published on LTD, if you know of more efficient methods or bett
   * [RMO Load Publisher Properties][6]
   * [RMO Synchronize subscription][7]
 
- [1]: http://wiki.ltd.local/index.php/Category:Microsoft_SQL_Server
- [2]: http://wiki.ltd.local/index.php/RMO_Enum_all_snapshot_agents "RMO Enum all snapshot agents"
- [3]: http://wiki.ltd.local/index.php/RMO_Enum_all_subscriptions "RMO Enum all subscriptions"
- [4]: http://wiki.ltd.local/index.php/RMO_Generate_snapshots "RMO Generate snapshots"
- [5]: http://wiki.ltd.local/index.php/RMO_Get_Array_of_publication_Thresholds "RMO Get Array of publication Thresholds"
- [6]: http://wiki.ltd.local/index.php/RMO_Load_Publisher_Properties "RMO Load Publisher Properties"
- [7]: http://wiki.ltd.local/index.php/RMO_Synchronize_subscription "RMO Synchronize subscription"
+ [1]: http://wiki.lessthandot.com/index.php/Category:Microsoft_SQL_Server
+ [2]: http://wiki.lessthandot.com/index.php/RMO_Enum_all_snapshot_agents "RMO Enum all snapshot agents"
+ [3]: http://wiki.lessthandot.com/index.php/RMO_Enum_all_subscriptions "RMO Enum all subscriptions"
+ [4]: http://wiki.lessthandot.com/index.php/RMO_Generate_snapshots "RMO Generate snapshots"
+ [5]: http://wiki.lessthandot.com/index.php/RMO_Get_Array_of_publication_Thresholds "RMO Get Array of publication Thresholds"
+ [6]: http://wiki.lessthandot.com/index.php/RMO_Load_Publisher_Properties "RMO Load Publisher Properties"
+ [7]: http://wiki.lessthandot.com/index.php/RMO_Synchronize_subscription "RMO Synchronize subscription"

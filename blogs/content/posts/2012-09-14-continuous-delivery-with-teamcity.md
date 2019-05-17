@@ -18,7 +18,7 @@ tags:
   - teamcity
 
 ---
-Over the series of 12 posts, I have built a <a href="http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project" title="Continuous Delivery wiki post" target="_blank">continuous delivery pipeline</a> around the MVC Music Store tutorial web site. The journey included making changes to support unit testing, creating a CI build, adding automated multi-environment deployment, automated interface testing, automated load testing stage, and static analysis. Up until now, this was entirely on <a href="http://jenkins-ci.org/" title="Jenkins CI website" target="_blank">Jenkins</a>, but today I intend to re-implement the pipeline on <a href="http://www.jetbrains.com/teamcity/" title="TeamCity by JetBrains" target="_blank">TeamCity</a>.
+Over the series of 12 posts, I have built a <a href="http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project" title="Continuous Delivery wiki post" target="_blank">continuous delivery pipeline</a> around the MVC Music Store tutorial web site. The journey included making changes to support unit testing, creating a CI build, adding automated multi-environment deployment, automated interface testing, automated load testing stage, and static analysis. Up until now, this was entirely on <a href="http://jenkins-ci.org/" title="Jenkins CI website" target="_blank">Jenkins</a>, but today I intend to re-implement the pipeline on <a href="http://www.jetbrains.com/teamcity/" title="TeamCity by JetBrains" target="_blank">TeamCity</a>.
 
 ## General Feelings
 

@@ -220,4 +220,4 @@ Public Class Form1
 End Class```
 and then of course it&#8217;s a mess to save it again ;-). Call me nuts :crazy: and tell me I should just pass the objects. But trust me I won&#8217;t. I&#8217;ll keep the interfaces and live with this kind of thing.
 
-<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.ltd.local/viewforum.php?f=39">VB.Net Forum</a></font>
+<font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a></font>

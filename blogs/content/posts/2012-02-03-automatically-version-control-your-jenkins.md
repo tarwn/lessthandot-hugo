@@ -83,4 +83,4 @@ Save the job and kick it off once to verify it does indeed work (after making a 
 
 As a last step I went back and added the backup jobs config.xml file to the repository, so now it not only backs up my other configurations but also itself.
 
- [1]: http://wiki.ltd.local/index.php/Eli's_Continuous_Delivery_Project "See the wiki post on the project"
+ [1]: http://wiki.lessthandot.com/index.php/Eli's_Continuous_Delivery_Project "See the wiki post on the project"

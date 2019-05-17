@@ -105,5 +105,5 @@ You can also checkout the book on Amazon for more reviews: [SQL Server 2008 Admi
  [1]: http://www.amazon.com/gp/product/193398872X?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=193398872X
  [2]: http://www.manning.com/colledge/SampleCh04.pdf
  [3]: http://www.manning.com/colledge/SampleCh10.pdf
- [4]: http://forum.ltd.local/viewforum.php?f=17
- [5]: http://forum.ltd.local/viewforum.php?f=22
+ [4]: http://forum.lessthandot.com/viewforum.php?f=17
+ [5]: http://forum.lessthandot.com/viewforum.php?f=22

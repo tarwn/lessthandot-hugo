@@ -118,7 +118,7 @@ That is all for day twenty-four of the [SQL Advent 2012 series][1], come back to
  [2]: http://www.flickr.com/photos/vicky-/7089908693/ "Help! by Vicky! <3, on Flickr"
  [3]: http://www.sqlsaturday.com/
  [4]: http://stackoverflow.com/questions
- [5]: http://forum.ltd.local/
+ [5]: http://forum.lessthandot.com/
  [6]: http://www.sqlservercentral.com/Forums/
  [7]: https://twitter.com/search/realtime?q=%23sqlhelp&src=typd
  [8]: https://twitter.com/hilarycotter

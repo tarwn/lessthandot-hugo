@@ -52,5 +52,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [3]: http://feedproxy.google.com/~r/BrentOzar-SqlServerDba/~3/iMGDbC6nyLE/
  [4]: http://blogs.msdn.com/psssql/archive/2009/03/30/sqldumper-unable-to-generate-mdmp-files-in-sql-server-2008-failover-clusters.aspx
  [5]: http://sqlblogcasts.com/blogs/tonyrogerson/archive/2009/04/01/sql-server-technical-rollup-lots-of-useful-documents-news-events-and-new-kb-articles.aspx
- [6]: http://forum.ltd.local/viewforum.php?f=17
- [7]: http://forum.ltd.local/viewforum.php?f=22
+ [6]: http://forum.lessthandot.com/viewforum.php?f=17
+ [7]: http://forum.lessthandot.com/viewforum.php?f=22

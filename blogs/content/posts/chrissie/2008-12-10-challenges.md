@@ -37,5 +37,5 @@ I will also tag 2 LTD members for whom (among others) I have much respect [AlexC
  [6]: http://www.ayende.com/Blog/
  [7]: http://codebetter.com/blogs/jeremy.miller/
  [8]: http://www.codinghorror.com/blog/
- [9]: http://forum.ltd.local/memberlist.php?mode=viewprofile&u=56
- [10]: http://forum.ltd.local/memberlist.php?mode=viewprofile&u=53
+ [9]: http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=56
+ [10]: http://forum.lessthandot.com/memberlist.php?mode=viewprofile&u=53

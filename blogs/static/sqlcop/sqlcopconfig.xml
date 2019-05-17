@@ -1,0 +1,9 @@
+<sqlcopconfig>
+	<application>
+		<major>1</major>
+		<minor>1</minor>
+	</application>
+	<issues>
+		<version>23</version>
+	</issues>
+</sqlcopconfig>

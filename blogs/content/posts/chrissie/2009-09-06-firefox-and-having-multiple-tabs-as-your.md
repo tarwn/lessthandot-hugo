@@ -20,7 +20,7 @@ Because when I clicked on the homepage button in Firefox, it opened 4 pages. App
 
 I don&#8217;t know and I don&#8217;t really think it is my favourite behaviour.
 
-Try adding this http://ltd.local||http://forum.ltd.local|http://wiki.ltd.local to the homepage.
+Try adding this http://lessthandot.com||http://forum.lessthandot.com|http://wiki.lessthandot.com to the homepage.
 
 <div class="image_block">
   <img src="/wp-content/uploads/blogs/WebDev/firefox1.png" alt="" title="" width="593" height="515" />

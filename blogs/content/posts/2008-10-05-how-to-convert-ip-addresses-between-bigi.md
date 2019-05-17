@@ -124,4 +124,4 @@ Thanks to [K. Brian Kelley][1] for the inspiration for this post, you can also c
 And also check out the related [Order IP Addresses][2] wiki article which I wrote a while ago
 
  [1]: http://www.sqlservercentral.com/blogs/brian_kelley/default.aspx
- [2]: http://wiki.ltd.local/index.php/Order_IP_Addresses
+ [2]: http://wiki.lessthandot.com/index.php/Order_IP_Addresses

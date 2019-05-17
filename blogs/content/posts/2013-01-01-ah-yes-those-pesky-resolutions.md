@@ -59,6 +59,6 @@ What about you, any goals or resolutions for this year?
  [2]: http://www.amazon.com/gp/product/1617290068/ref=as_li_ss_tl?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1617290068
  [3]: http://www.flickr.com/photos/ibm_media/6997862447/ "Big Data: The New Natural Resource by ibmphoto24, on Flickr"
  [4]: http://www.flickr.com/photos/jjpacres/3293117576/ "Writing by jjpacres, on Flickr"
- [5]: http://wiki.ltd.local/index.php/Main_Page
+ [5]: http://wiki.lessthandot.com/index.php/Main_Page
  [6]: http://www.flickr.com/photos/denisgobo/855559398/ "Amsterdam_Night_005 by Denis Gobo, on Flickr"
  [7]: http://www.flickr.com/photos/epsos/8099419727/ "Healthy Red Tomatoes are Wet and Organic by epSos.de, on Flickr"

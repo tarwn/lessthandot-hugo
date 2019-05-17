@@ -54,5 +54,5 @@ For Tritanope.
 All three seem to remain pretty readable to me. Go check your site and see if it is too, it is important.
 
  [1]: http://www.vischeck.com
- [2]: http://forum.ltd.local/viewtopic.php?f=7&t=13568
+ [2]: http://forum.lessthandot.com/viewtopic.php?f=7&t=13568
  [3]: http://www.vischeck.com/vischeck/vischeckURL.php

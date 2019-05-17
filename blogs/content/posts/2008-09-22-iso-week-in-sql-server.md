@@ -94,4 +94,4 @@ As you can see here also SQL Server's wk part returns 53 while isowk returns 1
 
 I have also added parts of this to the wiki here: [ISO Week In SQL Server][1]
 
- [1]: http://wiki.ltd.local/index.php/ISO_Week_In_SQL_Server
+ [1]: http://wiki.lessthandot.com/index.php/ISO_Week_In_SQL_Server

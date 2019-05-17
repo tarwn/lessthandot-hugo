@@ -269,7 +269,7 @@ $stream.Close()
 ```
 To recap, we started with some warning messages randomly scattered across the build log. We ended with the warning count automatically showing in the build status on the dashboard, a nice chart of the number over time, and three different ways to view the detailed list. I hope this proves useful to others as well, now I have to go and fix the sample warnings I added before I forget about them. 🙂
 
- [1]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Wiki writeup on my Continuous Delivery project"
+ [1]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Wiki writeup on my Continuous Delivery project"
  [2]: http://www.jetbrains.com/teamcity/ "TeamCity by JetBrains"
  [3]: http://confluence.jetbrains.net/display/TCD7/Build+Script+Interaction+with+TeamCity#BuildScriptInteractionwithTeamCity-ReportingBuildStatus "TeamCity documentation for Build Script Interaction"
  [4]: http://confluence.jetbrains.net/display/TCD7/Build+Script+Interaction+with+TeamCity#BuildScriptInteractionwithTeamCity-ReportingBuildStatistics "TeamCity documentation - reporting custom statistics"

@@ -46,7 +46,8 @@ OK Help
   
 —————————
 
-Here is also a small video I created [video:youtube:hdNeTWHiwW0] 
+Here is also a small video I created 
+{{< youtube id="hdNeTWHiwW0" autoplay="false" >}}
 
 Click on the [SQL Server Denali][3] tag to see all our SQL Server Denali related posts
 

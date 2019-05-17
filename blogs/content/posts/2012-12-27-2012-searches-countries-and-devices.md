@@ -62,7 +62,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://forum.ltd.local/search.php?search_id=active_topics">View active topics</a>
+        <a href="http://forum.lessthandot.com/search.php?search_id=active_topics">View active topics</a>
       </td>
       
       <td>
@@ -72,7 +72,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://ltd.local/">Launchpad</a>
+        <a href="http://lessthandot.com/">Launchpad</a>
       </td>
       
       <td>
@@ -82,7 +82,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://sqlcop.ltd.local/">SqlCop</a>
+        <a href="http://sqlcop.lessthandot.com/">SqlCop</a>
       </td>
       
       <td>
@@ -102,7 +102,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://ltd.local/">Index page</a>
+        <a href="http://lessthandot.com/">Index page</a>
       </td>
       
       <td>
@@ -202,7 +202,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/Kill_All_Active_Connections_To_A_Database">Kill All Active Connections To A Database – Wiki</a>
+        <a href="http://wiki.lessthandot.com/index.php/Kill_All_Active_Connections_To_A_Database">Kill All Active Connections To A Database – Wiki</a>
       </td>
       
       <td>
@@ -222,7 +222,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List">SQL Server Programming Hacks – 100+ List – Wiki</a>
+        <a href="http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List">SQL Server Programming Hacks – 100+ List – Wiki</a>
       </td>
       
       <td>
@@ -232,7 +232,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://forum.ltd.local/viewforum.php?f=102">View forum – Programmer Puzzles</a>
+        <a href="http://forum.lessthandot.com/viewforum.php?f=102">View forum – Programmer Puzzles</a>
       </td>
       
       <td>
@@ -262,7 +262,7 @@ Here are the top 25 most visited pages on this site during the year 2012.
     
     <tr>
       <td>
-        <a href="http://wiki.ltd.local/index.php/Cursors_and_How_to_Avoid_Them">Cursors and How to Avoid Them – Wiki</a>
+        <a href="http://wiki.lessthandot.com/index.php/Cursors_and_How_to_Avoid_Them">Cursors and How to Avoid Them – Wiki</a>
       </td>
       
       <td>

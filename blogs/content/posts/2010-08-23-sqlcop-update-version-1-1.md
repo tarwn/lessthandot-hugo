@@ -5,6 +5,8 @@ type: post
 date: 2010-08-23T12:51:00+00:00
 ID: 877
 url: /index.php/datamgmt/dbprogramming/sqlcop-update-version-1-1/
+aliases:
+  - /index.php/datamgmt/dbadmin/sqlcop-update-version-1-1
 views:
   - 7080
 rp4wp_auto_linked:
@@ -18,7 +20,7 @@ categories:
 ---
 This version of [SQLCop][1] contains several bug fixes as well as some new features. Many of the items changed in this version were based on feedback received by you, our users. We encourage people to post comments so that we can improve the application.
 
-If you previously downloaded the original version of SQLCop, you should manually download and install this new version: http://sqlcop.ltd.local/
+If you previously downloaded the original version of SQLCop, you should manually download and install this new version: http://sqlcop.lessthandot.com/
 
 **Fixes:**
   
@@ -73,4 +75,4 @@ A new category was added for Health with the following checks.
 
 This brings the total number of issues checked to 50 for SQL 2008 and 49 for SQL 2005.
 
- [1]: http://sqlcop.ltd.local/
+ [1]: http://sqlcop.lessthandot.com/

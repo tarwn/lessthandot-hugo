@@ -87,7 +87,8 @@ Below is an image of the "app" in action
 
 I also shot a 2 minute and 11 second video where I play around with the "app" and also click around in Visual Studio to show you some of the stuff.
 
-Below is a video of the "app" in action [video:youtube:e7SHq4w17D0] 
+Below is a video of the "app" in action
+{{< youtube id="e7SHq4w17D0" autoplay="false" >}}
 
 ## Learning about Windows Phone 7 development
 

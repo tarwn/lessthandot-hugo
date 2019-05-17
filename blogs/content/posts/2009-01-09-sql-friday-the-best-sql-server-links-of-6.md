@@ -74,5 +74,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [7]: http://sqlblog.com/blogs/louis_davidson/archive/2009/01/08/the-first-pillar-a-coherent-design.aspx
  [8]: http://feeds.feedburner.com/~r/TheHobt/~3/505937419/lesser-known-features-of-sql-server.html
  [9]: http://itknowledgeexchange.techtarget.com/sql-server/do-your-servers-take-for-ever-to-reboot/
- [10]: http://forum.ltd.local/viewforum.php?f=17
- [11]: http://forum.ltd.local/viewforum.php?f=22
+ [10]: http://forum.lessthandot.com/viewforum.php?f=17
+ [11]: http://forum.lessthandot.com/viewforum.php?f=22

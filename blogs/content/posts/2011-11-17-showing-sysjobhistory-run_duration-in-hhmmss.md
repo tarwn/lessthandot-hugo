@@ -72,5 +72,5 @@ GETUTCDATE
 
 Have fun
 
- [1]: http://forum.ltd.local/viewtopic.php?f=22&t=15776
- [2]: http://wiki.ltd.local/index.php/Ten_SQL_Server_Functions_That_You_Have_Ignored_Until_Now
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=22&t=15776
+ [2]: http://wiki.lessthandot.com/index.php/Ten_SQL_Server_Functions_That_You_Have_Ignored_Until_Now

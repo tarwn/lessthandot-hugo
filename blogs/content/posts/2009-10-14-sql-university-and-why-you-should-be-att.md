@@ -23,7 +23,7 @@ I can't say enough on how cool I think this is and how much it will give to the 
 
 Anyone that ever asked what it means when we say SQL Server internals or run profiler on that to find your problem, or anything that had you starring at SSMS for a few minutes before running to Google should get into SQLU. So far the pace has been perfect and keeping with the readings on each publication; I'm again, nothing short of impressed with the content and contributions.
 
-I'd like to thank Jorge for putting it together along with the contributors. All the readers of ltd.local should follow along with SQLU. Even after the basics are down in writing, I can see this turning into a great resource from basics to advanced levels of SQL Server knowledge. Even if you're a developer or in another part of IT, I think you'll benefit from everything that is taking place over there. This is content that will remain in the SQL Server community for a long time to come!
+I'd like to thank Jorge for putting it together along with the contributors. All the readers of lessthandot.com should follow along with SQLU. Even after the basics are down in writing, I can see this turning into a great resource from basics to advanced levels of SQL Server knowledge. Even if you're a developer or in another part of IT, I think you'll benefit from everything that is taking place over there. This is content that will remain in the SQL Server community for a long time to come!
 
 For more information on SQL University and following along, go to the following link
 

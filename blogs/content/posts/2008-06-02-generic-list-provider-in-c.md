@@ -86,4 +86,4 @@ namespace MyApp.Utilities
 ```
 I tried to remove most of the comments that didn't add much (parameter descriptions and what not) but I think its' still pretty easy to understand. As I said this is a work in progress (I just need to run into a reason to actually need the progress 😉 ) so don't be too rough on me. And feel free to <del>do my job for me</del> offer suggestions to make this better!
 
- [1]: http://wiki.ltd.local/index.php/Generic_List_Provider_in_CSharp
+ [1]: http://wiki.lessthandot.com/index.php/Generic_List_Provider_in_CSharp

@@ -49,4 +49,4 @@ I would sincerely like to thank the group that is LTD for allowing me to be a pa
 Thanks LTD!
 
  [1]: /index.php/ITProfessionals/EthicsIT/lessthandot-is-moving-to-a
- [2]: http://sqlcop.ltd.local/
+ [2]: http://sqlcop.lessthandot.com/

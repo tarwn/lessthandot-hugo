@@ -174,7 +174,7 @@ My next challenge is to incorporate this test run and its results into my build 
 
 The Past posts in my Continuous Delivery series or resulting build pipeline are listed on the [Continuous Delivery wiki page][1].
 
- [1]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Continuous Delivery project on the LessThanDot wiki"
+ [1]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Continuous Delivery project on the LessThanDot wiki"
  [2]: http://www.iis.net/community/default.aspx?tabid=34&g=6&i=1466 "Download from iis.net"
  [3]: http://www.iis.net/community/default.aspx?tabid=34&g=6&i=1467 "Download from iis.net"
  [4]: http://fiddler2.com/fiddler2/ "Fiddler, a Web Debugging Proxy"

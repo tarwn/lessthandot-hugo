@@ -42,7 +42,7 @@ Our host, [host4geek][1] responded 4-5 hours into the incident to let us know a 
 never got around to. That way I'd get an alert when it came back up (or a measurement if it did not). 
 
 <div style="text-align:  center; color:  #666666;">
-  <a href="http://stats.pingdom.com/0nt3y09cs5iy/935183"><img src="https://share.pingdom.com/banners/4931d952" alt="Uptime Report for http://ltd.local: Last 30 days" title="Uptime Report for http://ltd.local: Last 30 days" width="300" height="165" style="max-width:  300px" /></a><br /> Click image for the full status page
+  <a href="http://stats.pingdom.com/0nt3y09cs5iy/935183"><img src="https://share.pingdom.com/banners/4931d952" alt="Uptime Report for http://lessthandot.com: Last 30 days" title="Uptime Report for http://lessthandot.com: Last 30 days" width="300" height="165" style="max-width:  300px" /></a><br /> Click image for the full status page
 </div>
 
 Thank you [pingdom][3] for a slick and easy setup process. The stats will look funky since I set this up an hour or two into the outage, so there's no successful uptime recorded earlier in the month.

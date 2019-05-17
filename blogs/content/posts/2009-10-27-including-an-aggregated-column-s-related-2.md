@@ -396,5 +396,5 @@ Finally - compound key solution </p>
  [4]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/0217ddf4-bcab-4f2b-a81c-70841753cb23
  [5]: http://www.sqlmag.com/article/articleid/102883/102883.html
  [6]: http://forums.asp.net/p/1462968/3371370.aspx
- [7]: http://forum.ltd.local/viewforum.php?f=17
- [8]: http://forum.ltd.local/viewforum.php?f=22
+ [7]: http://forum.lessthandot.com/viewforum.php?f=17
+ [8]: http://forum.lessthandot.com/viewforum.php?f=22

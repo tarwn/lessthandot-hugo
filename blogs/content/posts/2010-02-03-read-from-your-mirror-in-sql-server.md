@@ -75,5 +75,5 @@ In the note I mentioned that the naming conventions typically use the date and t
 
 What we went over may weigh heavily on asking for the added budget to your new or upgrading strategies for SQL Server. I hope this will help in justifying those added costs when you take the task of licensing on with your own company.
 
- [1]: http://wiki.ltd.local/index.php/SQL_Server_Admin_Hacks
+ [1]: http://wiki.lessthandot.com/index.php/SQL_Server_Admin_Hacks
  [2]: /index.php/DataMgmt/DBAdmin/move-databases-to-new-server-with-little-1

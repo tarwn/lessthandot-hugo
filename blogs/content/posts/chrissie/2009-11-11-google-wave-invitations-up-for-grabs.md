@@ -13,7 +13,7 @@ tags:
   - google wave
 
 ---
-Post something in this topic http://forum.ltd.local/viewtopic.php?f=100&t=8683 (you will need to create an account on this site for that) and I will send you the invitation. No need to post your email, I will abuse my admin powers for that. 
+Post something in this topic http://forum.lessthandot.com/viewtopic.php?f=100&t=8683 (you will need to create an account on this site for that) and I will send you the invitation. No need to post your email, I will abuse my admin powers for that. 
 
 First in first invited.
 

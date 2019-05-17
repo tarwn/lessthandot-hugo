@@ -227,7 +227,7 @@ The addition of these tools to my project was done as part of the CI build, plac
 
 The results from these tests have helped me clean my code up, identify gaps in the test coverage when I accidentally created them, and given me a good amount of historical knowledge about the quality of the code itself. The setup time was not that expensive and I can continue to take advantage of the benefits in every future build I do.
 
- [1]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Wiki page on Eli's Continuous Delivery project"
+ [1]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Wiki page on Eli's Continuous Delivery project"
  [2]: https://bitbucket.org/tarwn/mvcmusicstore.main/changeset/b81657c2f260 "First style clean-up commit"
  [3]: http://www.ndepend.com/ "NDepend Homepage"
  [4]: https://wiki.jenkins-ci.org/display/JENKINS/Analysis+Collector+Plugin "Jenkins Analysis Collector Plugin"

@@ -61,5 +61,5 @@ I learned this CROSS APPLY technique from this excellent blog post by Brad Schul
 
  [1]: http://social.msdn.microsoft.com/Forums/en-US/transactsql/thread/2b9c377c-e5a8-4de6-accf-9e5a12051ea9
  [2]: http://bradsruminations.blogspot.com/2009/07/cool-cross-apply-tricks-part-2.html
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

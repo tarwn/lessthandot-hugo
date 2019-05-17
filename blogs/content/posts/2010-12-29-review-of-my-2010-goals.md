@@ -178,8 +178,8 @@ So now it is time to tag some people to see how they did with their goals. I am 
  [19]: http://www.amazon.com/gp/product/B001DYVL96?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B001DYVL96
  [20]: http://www.amazon.com/gp/product/B001HD8NZ8?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B001HD8NZ8
  [21]: http://www.amazon.com/gp/product/0060920084?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0060920084
- [22]: http://wiki.ltd.local/index.php/Store_More_SQL_Agent_Job_History_Than_The_Default
- [23]: http://wiki.ltd.local/index.php/How_to_prevent_a_trigger_from_firing_when_doing_an_insert_into_a_table_in_SQL_Server
+ [22]: http://wiki.lessthandot.com/index.php/Store_More_SQL_Agent_Job_History_Than_The_Default
+ [23]: http://wiki.lessthandot.com/index.php/How_to_prevent_a_trigger_from_firing_when_doing_an_insert_into_a_table_in_SQL_Server
  [24]: /index.php/All/?disp=authdir&author=68
  [25]: http://www.brentozar.com/
  [26]: http://sqlblog.com/blogs/aaron_bertrand/default.aspx

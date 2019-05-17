@@ -62,5 +62,5 @@ That is all for day fourteen of the [SQL Advent 2012 series][1], come back tomor
  [2]: /wp-content/uploads/blogs/DataMgmt/Denis/ADvent/DarthLumberg.PNG?mtime=1355422704
  [3]: /wp-content/uploads/blogs/DataMgmt/Denis/ADvent/design.PNG?mtime=1355424774
  [4]: /wp-content/uploads/blogs/DataMgmt/Denis/ADvent/officespace.PNG?mtime=1355496247
- [5]: http://forum.ltd.local/viewtopic.php?f=22&t=17865
+ [5]: http://forum.lessthandot.com/viewtopic.php?f=22&t=17865
  [6]: /index.php/DataMgmt/DataDesign/sql-advent-2011-recap

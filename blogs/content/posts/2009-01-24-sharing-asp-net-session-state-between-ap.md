@@ -102,4 +102,4 @@ Got a question on ASP.net? Check out our [ASP.net Forum][4]!
  [1]: /index.php/WebDev/ServerProgramming/ASPNET/sharing-asp-net-session-state-between-we
  [2]: http://www.sneal.net/blog/2007/06/27/SharingSessionBetweenWebAppsViaConfiguration.aspx
  [3]: /wp-content/uploads/blogs/WebDev//SessionTest.zip ""
- [4]: http://forum.ltd.local/viewforum.php?f=27
+ [4]: http://forum.lessthandot.com/viewforum.php?f=27

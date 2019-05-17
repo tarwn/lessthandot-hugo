@@ -108,7 +108,7 @@ That's the setup. I've created [a forum post][3] to discuss the whole process (a
 
 <ul class="thelist">
   <li>
-    <a href="http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project" title="Wiki post for Eli's Continuous Delivery Project">Wiki Post</a>
+    <a href="http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project" title="Wiki post for Eli's Continuous Delivery Project">Wiki Post</a>
   </li>
   <li class="cur">
     <a href="/index.php/EnterpriseDev/application-lifecycle-management/starting-a-continuous-delivery-project" title="Starting a Continuous Delivery Project">Starting a Continuous Delivery Project</a>
@@ -135,6 +135,6 @@ That's the setup. I've created [a forum post][3] to discuss the whole process (a
 
  [1]: http://www.informit.com/articles/article.aspx?p=1641923 "Continuous Delivery: The Value Proposition"
  [2]: http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ "Continuous Delivery at Amazon"
- [3]: http://forum.ltd.local/viewtopic.php?f=121&t=15760 "Forum post for discussion"
- [4]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Wiki post for Eli's Continuous Delivery Project"
+ [3]: http://forum.lessthandot.com/viewtopic.php?f=121&t=15760 "Forum post for discussion"
+ [4]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Wiki post for Eli's Continuous Delivery Project"
  [5]: http://twitter.com/TarwnBuildSrvr "Eli's Build Server on Twitter"

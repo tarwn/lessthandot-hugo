@@ -5,10 +5,8 @@ type: post
 date: 2011-06-01T22:23:00+00:00
 ID: 1199
 excerpt: |
-  Micosoft has uploaded a video on YouTube that explains how the built the UI for windows 
-  
-  [video:youtube:p92QfWOw88I]
-  
+  Microsoft has uploaded a video on YouTube that explains how the built the UI for windows 
+    
   Microsoft has also released a press release that highlights some of the new features. Here are some of them
   
   Fast launching of a&hellip;
@@ -23,9 +21,12 @@ tags:
   - windows 8
 
 ---
-Micosoft has uploaded a video on YouTube that explains how they built the UI for windows  [video:youtube:p92QfWOw88I] 
+Microsoft has uploaded a video on YouTube that explains how they built the UI for windows  
 
-Here is another video showing the OS in action [video:youtube:BHrcz7zcm_8] 
+{{< youtube id="p92QfWOw88I" autoplay="false" >}}
+
+Here is another video showing the OS in action
+{{< youtube id="BHrcz7zcm_8" autoplay="false" >}}
 
 Microsoft has also released a press release that highlights some of the new features. Here are some of them
 

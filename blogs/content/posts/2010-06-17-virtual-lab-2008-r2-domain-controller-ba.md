@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="acc_header">
-  In the <a href="/index.php/SysAdmins/OS/Windows/2008Server/virtual-lab-creating-a-2008-r2-domain-co" target="_blank" title="Virtual Lab: Creating a 2008 R2 Domain Controller">previous article</a> we covered the creation of a basic Domain Controller for our Virtual Lab. Using this basic domain controller and a basic SQL Server machine, we will look at the creation of a basic user account, creating a service account, and addition of a system to the domain.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+  In the <a href="/index.php/SysAdmins/OS/Windows/2008Server/virtual-lab-creating-a-2008-r2-domain-co" target="_blank" title="Virtual Lab: Creating a 2008 R2 Domain Controller">previous article</a> we covered the creation of a basic Domain Controller for our Virtual Lab. Using this basic domain controller and a basic SQL Server machine, we will look at the creation of a basic user account, creating a service account, and addition of a system to the domain.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
 </div>
 
 This post picks up where the [Virtual Lab: Creating a 2008 R2 Domain Controller][1] post left off. Now that we have a new domain up and running we need to add some systems and users.
@@ -117,7 +117,7 @@ After viewing the summary in the final step, we press Ok and create the new user
 
 ## Joining the Domain
 
-Joining a server to the domain is a fairly straightforward process. In this case we will join our database server from <a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="See the list of prior articles" target="_blank">prior articles</a> and then we will configure our domain account from the previous section to serve as the administrative account for the database services.
+Joining a server to the domain is a fairly straightforward process. In this case we will join our database server from <a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="See the list of prior articles" target="_blank">prior articles</a> and then we will configure our domain account from the previous section to serve as the administrative account for the database services.
 
 The first step will be to change the network properties of the virtual server. When we first created it we used DHCP and that means that it received a dynamic address and DNS entries other than our new controller. 
 
@@ -233,4 +233,4 @@ Now that we have the Domain Controller running, we've created some accounts, and
 
  [1]: /index.php/All/?p=845
  [2]: /index.php/All/?p=840 "Review the Basic SQL Virtual Machine post"
- [3]: http://wiki.ltd.local/index.php/Virtual_Lab "View the wiki entry"
+ [3]: http://wiki.lessthandot.com/index.php/Virtual_Lab "View the wiki entry"

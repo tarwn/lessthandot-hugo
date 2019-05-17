@@ -556,5 +556,5 @@ So, correctly identifying a known pattern helps to solve such problems very quic
 
  [1]: http://tek-tips.com/viewthread.cfm?qid=1654675&page=1
  [2]: http://pratchev.blogspot.com/2010/02/refactoring-ranges.html
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

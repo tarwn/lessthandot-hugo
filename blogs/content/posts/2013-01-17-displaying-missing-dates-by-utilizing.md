@@ -241,4 +241,4 @@ And here is the result
 
 That is it for this post, hopefully it will help out somebody and hopefully someone will be adding a calendar table today
 
- [1]: http://forum.ltd.local/viewtopic.php?f=17&t=18042
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=18042

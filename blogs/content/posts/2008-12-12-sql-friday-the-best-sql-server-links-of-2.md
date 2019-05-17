@@ -92,5 +92,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [9]: http://statisticsio.com/Home/tabid/36/articleType/ArticleView/articleId/302/Never-Index-a-BIT.aspx
  [10]: http://sqlcat.com/technicalnotes/archive/2008/12/09/diagnosing-transaction-log-performance-issues-and-limits-of-the-log-manager.aspx
  [11]: http://www.sqlskills.com/BLOGS/BOBB/post/Is-LINQ-the-next-OLE-DB-LINQ-ed-Server-as-a-rowset-source.aspx
- [12]: http://forum.ltd.local/viewforum.php?f=17
- [13]: http://forum.ltd.local/viewforum.php?f=22
+ [12]: http://forum.lessthandot.com/viewforum.php?f=17
+ [13]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -162,5 +162,5 @@ Edit: I will have to close the comments on this post but I will open [a topic in
 
 Edit2: I have a new blogpost to describe how to print your EPL commands when the printer is [connected to a windows 7 machine][2].
 
- [1]: http://forum.ltd.local/viewtopic.php?f=39&t=3478
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=39&t=3478
  [2]: /index.php/DesktopDev/MSTech/printing-to-a-zebra-printer

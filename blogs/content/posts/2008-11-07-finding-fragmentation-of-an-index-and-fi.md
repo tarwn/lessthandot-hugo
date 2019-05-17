@@ -329,6 +329,6 @@ DENY VIEW DATABASE STATE TO YourLoginName
 
 This post is also on our [SQL Server Admin Hacks][3]
 
- [1]: http://sqlcop.ltd.local/
+ [1]: http://sqlcop.lessthandot.com/
  [2]: /index.php/All/?disp=authdir&author=10
- [3]: http://wiki.ltd.local/index.php/SQL_Server_Admin_Hacks
+ [3]: http://wiki.lessthandot.com/index.php/SQL_Server_Admin_Hacks

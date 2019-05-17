@@ -38,6 +38,6 @@ Code is available [Here][4]
 -Rick
 
  [1]: http://oldschooldotnet.blogspot.com/2009/03/sudoku-in-silverlight.html
- [2]: http://forum.ltd.local/viewforum.php?f=102
+ [2]: http://forum.lessthandot.com/viewforum.php?f=102
  [3]: http://ringdev.com.web10.reliabledomainspace.com/code/sodukusolver/index.html
  [4]: http://ringdev.com.web10.reliabledomainspace.com/code/sodukusolver/SodukuSolver.zip

@@ -88,6 +88,8 @@ Now add some code to satisfy that test. As you make addition, NCrunch continues 
   <img src="http://www.tiernok.com/LTDBlog/AddressTDD/TestsAreGreen.png" alt="Tests Are Green" /><br /> Tests and code turn Green automatically
 </div>
 
-When you get to all green dots, you're done. No need to stop, just move right on to the next test. [video:youtube:E0PztmQQlOQ] 
+When you get to all green dots, you're done. No need to stop, just move right on to the next test.
+
+{{< youtube id="E0PztmQQlOQ" autoplay="false" >}}
 
 Enjoy the flow.

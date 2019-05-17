@@ -39,7 +39,7 @@ And the best bit was that all code examples were in VB.Net and C#, but it got a 
 So what do I think of this book? Although I have used NHibernate for a while now, you can always learn more. I learned a few little things and just for that, it was worth it. I learned that code generation is not for me (not in my situation anyway). I think this book is a good book for the beginning NHibernate user, both C# and VB.Net; you will learn a lot from it and you will have less frustrations than me to begin with. However, it is assumed that you know OO programming and that you know when to use it and when not. I can recommend it for seasoned NHibernate users as a quick read, you will perhaps not learn a lot from it &#8211; &#8220;the breadth of information presented may shed light on features of NHibernate that you&#8217;ve never had the opportunity to use before.&#8221; I learned what NHibernate Burrow was and what to use it for after having never looked into it before. And when and why to use MaxRequestLength.
 
  [1]: http://www.packtpub.com/
- [2]: http://www.packtpub.com/nhibernate-2-x-beginners-guide/book?utm_source=blogs.ltd.local&utm_medium=bookrev&utm_content=blog&utm_campaign=mdb_003492
+ [2]: http://www.packtpub.com/nhibernate-2-x-beginners-guide/book?utm_source=blogs.lessthandot.com&utm_medium=bookrev&utm_content=blog&utm_campaign=mdb_003492
  [3]: https://www.packtpub.com/authors/profiles/aaron-cure
  [4]: https://www.packtpub.com/sites/default/files/imagecache/productview/8907OS_MockupCover_Beginers%20guide.jpg "Bookcover NHibernate 2"
  [5]: http://en.wikipedia.org/wiki/Object-relational_mapping

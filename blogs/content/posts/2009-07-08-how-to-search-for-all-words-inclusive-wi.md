@@ -242,5 +242,5 @@ Optimized Nikola's  solution #2 79992</p>
 
  [1]: http://www.sommarskog.se/arrays-in-sql.html
  [2]: http://bradsruminations.blogspot.com/2009/08/all-any-and-some-three-stooges.html
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

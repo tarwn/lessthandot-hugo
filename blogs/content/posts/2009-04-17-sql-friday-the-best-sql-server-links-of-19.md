@@ -57,5 +57,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [4]: http://sqlblog.com/blogs/louis_davidson/archive/2009/04/12/requirements-vs-architecture.aspx
  [5]: http://sqlblog.com/blogs/aaron_bertrand/archive/2009/04/15/sql-server-2008-sp1-cumulative-update-1-is-available.aspx
  [6]: http://feedproxy.google.com/~r/SqlInTheWild/~3/mP2NcDDRCVw/
- [7]: http://forum.ltd.local/viewforum.php?f=17
- [8]: http://forum.ltd.local/viewforum.php?f=22
+ [7]: http://forum.lessthandot.com/viewforum.php?f=17
+ [8]: http://forum.lessthandot.com/viewforum.php?f=22

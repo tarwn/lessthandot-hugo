@@ -1,0 +1,23 @@
+<body>
+    <div id="contain">
+        <div id="subcontain">
+            <div id="ttl">
+                <div id="hdr">
+                    <div id="snav"></div>
+                    <a href="{{ .Site.BaseURL }}" title="LessThanDot Launchpad" id="logoc"><img src="{{ .Site.BaseURL }}images/logo_prod.png" alt="LessThanDot Site Logo" border="0" /></a>
+                    <h1>LessThanDot</h1>
+                    <div class="pgsttl">A decade of helpful technical content</div>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li><a href="#" title="LessThanDot Launchpad" id="h" class="disabled-menu-item"><span>Launchpad</span></a></li>
+                        <li><a href="{{ .Site.BaseURL }}" title="LessThanDot Blogs" id="b"><span>Blogs</span></a></li>
+                        <li><a href="#" title="LessThanDot Community Forums" id="f" class="disabled-menu-item"><span>Forum</span></a></li>
+                        <li><a href="#" title="LessThanDot Wiki Articles" id="w" class="disabled-menu-item"><span>Wiki</span></a></li>
+                        <li class="cur"><a href="http://sqlcop.lessthandot.com" title="LessThanDot SQLCop" id="a"><span>SQLCop</span></a></li>
+                        <li><a href="#" title="Your Account Settings" id="r" class="l_ie disabled-menu-item"><span>My Account</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                {{ partial "siteAboutBox.html" }}

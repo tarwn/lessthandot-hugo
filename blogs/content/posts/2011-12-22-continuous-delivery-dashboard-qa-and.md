@@ -130,7 +130,7 @@ It's been an interesting project, if a bit frustrating at times (thanks webdeplo
 
 <ul class="thelist">
   <li>
-    <a href="http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project" title="Wiki post for Eli's Continuous Delivery Project">Wiki Post</a>
+    <a href="http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project" title="Wiki post for Eli's Continuous Delivery Project">Wiki Post</a>
   </li>
   <li>
     <a href="/index.php/EnterpriseDev/application-lifecycle-management/starting-a-continuous-delivery-project" title="Starting a Continuous Delivery Project">Starting a Continuous Delivery Project</a>
@@ -159,4 +159,4 @@ It's been an interesting project, if a bit frustrating at times (thanks webdeplo
  [2]: http://www.tiernok.com/MVCMusicStore/ "MVCMusicStore on my personal site"
  [3]: http://www.centrumsystems.com.au/ "Centrum Systems"
  [4]: https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin "Build Pipeline Plugin page"
- [5]: http://wiki.ltd.local/index.php/Eli%27s_Continuous_Delivery_Project "Eli's COntinuous Deployment Project wiki entry"
+ [5]: http://wiki.lessthandot.com/index.php/Eli%27s_Continuous_Delivery_Project "Eli's COntinuous Deployment Project wiki entry"

@@ -25,4 +25,4 @@ I have no idea why these people think having much backlinks will help them if th
 
 And to the spammer your link was not spidered since I took it down seconds after you posted it. But I still respect all the effort you put in, perhaps you should put more effort in your site. And no I will not post the name or the link to your site in this post. Because it is people like you that ruin the internet.
 
- [1]: http://forum.ltd.local/viewtopic.php?f=100&t=2757&p=46860#p46860
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=100&t=2757&p=46860#p46860

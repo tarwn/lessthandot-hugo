@@ -181,7 +181,7 @@ I also updated the post on our wiki page: [Adding Leading Zeros To Integer Value
 
 \*** **If you have a SQL related question try our [Microsoft SQL Server Programming][3] forum or our [Microsoft SQL Server Admin][4] forum**<ins></ins>
 
- [1]: http://wiki.ltd.local/index.php/Adding_Leading_Zeros_To_Integer_Values
- [2]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [1]: http://wiki.lessthandot.com/index.php/Adding_Leading_Zeros_To_Integer_Values
+ [2]: http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22

@@ -333,9 +333,9 @@ Have a good one
  [2]: /index.php/ITProfessionals/EthicsIT/how-to-enable-godmode-on-windows-7
  [3]: /index.php/Architect/IntroductionArchitectureDesign/why-and-how-i-model
  [4]: /index.php/DataMgmt/DataDesign/the-ten-most-asked-sql-server-questions--1
- [5]: http://wiki.ltd.local/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
+ [5]: http://wiki.lessthandot.com/index.php/SQL_Server_Programming_Hacks_-_100%2B_List
  [6]: /index.php?p=334
- [7]: http://sqlcop.ltd.local/
+ [7]: http://sqlcop.lessthandot.com/
  [8]: /index.php?p=456
  [9]: /index.php/ITProfessionals/ITProcesses/trying-the-stand-up-desk
  [10]: /index.php/DataMgmt/DBAdmin/title-12

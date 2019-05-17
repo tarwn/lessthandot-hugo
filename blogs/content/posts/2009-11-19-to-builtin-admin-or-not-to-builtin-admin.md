@@ -59,7 +59,7 @@ This will show you all members of the sysadmin server roles. Very handy audit to
 
 For query abilities, Denis Gobo also has a handy query on the syslogins here
   
-http://wiki.ltd.local/index.php/Find\_Out\_Server\_Roles\_For\_a\_SQL\_Server\_Login
+http://wiki.lessthandot.com/index.php/Find\_Out\_Server\_Roles\_For\_a\_SQL\_Server\_Login
 
 In Denis's Wiki entry there is a query at the end that gives us exactly what we need here also
 

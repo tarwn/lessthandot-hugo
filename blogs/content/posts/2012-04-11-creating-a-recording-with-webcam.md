@@ -17,7 +17,8 @@ categories:
 I find that when I'm watching recorded presentations or webinars, they feel far more engaging when I can see the person speaking as well as the content. Recently I wanted to put together a 5 minute video with a webcam overlay, but I didn't want to spend a lot of money doing it. Something like this, in fact:
 
 <div style="text-align:center; font-size: 80%; color: #666666;">
-  [video:youtube:1AZuXK48GQ8]<br /> Sample Video Using Tools Below
+  {{< youtube id="1AZuXK48GQ8" autoplay="false" >}}
+  <br /> Sample Video Using Tools Below
 </div>
 
 Using a combination of free tools, I was able to record my short video with a webcam overlay, compress it for faster upload, and upload it to to YouTube for sharing. 

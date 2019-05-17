@@ -48,8 +48,8 @@ We appreciate everyone's feedback on SQLCop and any problems or suggestions that
 
  [1]: http://www.aaronlowe.net/
  [2]: http://twitter.com/Vendoran
- [3]: http://sqlcop.ltd.local/
- [4]: http://sqlcop.ltd.local/sqlcop.xml
- [5]: http://sqlcop.ltd.local/sqlcopconfig.xml
- [6]: http://forum.ltd.local/viewforum.php?f=145
- [7]: http://ltd.local/donate.php
+ [3]: http://sqlcop.lessthandot.com/
+ [4]: http://sqlcop.lessthandot.com/sqlcop.xml
+ [5]: http://sqlcop.lessthandot.com/sqlcopconfig.xml
+ [6]: http://forum.lessthandot.com/viewforum.php?f=145
+ [7]: http://lessthandot.com/donate.php

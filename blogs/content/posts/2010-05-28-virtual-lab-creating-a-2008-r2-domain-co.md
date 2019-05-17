@@ -16,7 +16,7 @@ categories:
 
 ---
 <div class="acc_header">
-  A virtual domain controller (DC) can be both a powerful and lightweight addition to your virtual lab. A central AD implementation not only gives you another set of services to work with, it also provides a more realistic environment with the power of domain accounts and policies that will be useful when you start working with multi-server setups. This article will walk through the creation of a basic 2008 R2 Domain Controller.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.ltd.local/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
+  A virtual domain controller (DC) can be both a powerful and lightweight addition to your virtual lab. A central AD implementation not only gives you another set of services to work with, it also provides a more realistic environment with the power of domain accounts and policies that will be useful when you start working with multi-server setups. This article will walk through the creation of a basic 2008 R2 Domain Controller.<br /> <br /> <label>Technical Area:</label> Accidental Systems Administrator<br /> <label class="diff">Level of Difficulty: </label><img src="http://www.tiernok.com/LTDBlog/dr_basic.png" alt="Basic Difficulty" /><br /> <label>Additional Articles:</label><a href="http://wiki.lessthandot.com/index.php/Virtual_Lab" title="View the wiki entry">Virtual Lab entry on the LTD Wiki</a>
 </div>
 
 
@@ -223,4 +223,4 @@ Our next post will cover basic administration topics for the domain, as we add o
 
  [1]: /index.php/SysAdmins/OS/building-the-virtual-lab-vmware-and-2008 "Building the Virtual Lab: VMWare and MS Windows 2008 R2"
  [2]: http://technet.microsoft.com/en-us/library/cc739022%28WS.10%29.aspx "Assess Hardware for AD on Windows 2003"
- [3]: http://wiki.ltd.local/index.php/Virtual_Lab "View the wiki entry"
+ [3]: http://wiki.lessthandot.com/index.php/Virtual_Lab "View the wiki entry"

@@ -42,7 +42,7 @@ So what is my advice for someone, like me, just starting out?  Throw yourself, 
 
 Thanks to Bob for hosting this topic.  As I said.... it is very timely for me!
 
- [1]: http://ltd.local/
+ [1]: http://lessthandot.com/
  [2]: http://www.bobpusateri.com/archive/2013/04/t-sql-tuesday-41-how-i-came-to-love-presenting/
  [3]: http://passmn.org/
  [4]: http://twitter.com/jasonhorner

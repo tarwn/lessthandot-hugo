@@ -111,5 +111,5 @@ Here is the data, of course on your machine the values for SomeID won't be the s
 
 That is it for this post, for some more OUTPUT examples take a look at [Using T-SQL OUTPUT and MERGE To Link Old and New Keys][2]
 
- [1]: http://forum.ltd.local/viewtopic.php?f=17&t=15344
+ [1]: http://forum.lessthandot.com/viewtopic.php?f=17&t=15344
  [2]: /index.php/DataMgmt/DBProgramming/MSSQLServer/using-t-sql-output-and-merge

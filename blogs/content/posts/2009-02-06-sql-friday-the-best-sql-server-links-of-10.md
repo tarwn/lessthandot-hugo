@@ -72,5 +72,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [7]: http://sqlfool.com/2009/02/bitwise-operations/
  [8]: http://sqlblog.com/blogs/denis_gobo/archive/2009/02/05/11743.aspx
  [9]: http://sqlinthewild.co.za/index.php/2009/02/06/index-columns-selectivity-and-inequality-predicates/
- [10]: http://forum.ltd.local/viewforum.php?f=17
- [11]: http://forum.ltd.local/viewforum.php?f=22
+ [10]: http://forum.lessthandot.com/viewforum.php?f=17
+ [11]: http://forum.lessthandot.com/viewforum.php?f=22

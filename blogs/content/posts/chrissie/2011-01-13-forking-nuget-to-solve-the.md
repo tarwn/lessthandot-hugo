@@ -104,7 +104,7 @@ namespace Nuget
         static void Main(string[] args)
         {
             var client = new HttpClient();
-            var webReq = client.CreateRequest(new Uri("http://wiki.ltd.local/index.php/Special:WikiFeeds/rss/newestarticles"));
+            var webReq = client.CreateRequest(new Uri("http://wiki.lessthandot.com/index.php/Special:WikiFeeds/rss/newestarticles"));
             try
             {
                 var stream = webReq.GetResponse().GetResponseStream();

@@ -67,5 +67,5 @@ That is it for this week, I will tag the weekly posts with **SQL Friday** in cas
  [6]: http://blogs.msdn.com/psssql/archive/2009/01/28/hot-it-works-sql-server-superlatch-ing-sub-latches.aspx
  [7]: http://sqlblog.com/blogs/greg_low/archive/2009/01/29/sql-server-certification-statistics.aspx
  [8]: http://feedproxy.google.com/~r/TheHobt/~3/nqVWQTDVS6s/identity-property-much-maligned.html
- [9]: http://forum.ltd.local/viewforum.php?f=17
- [10]: http://forum.ltd.local/viewforum.php?f=22
+ [9]: http://forum.lessthandot.com/viewforum.php?f=17
+ [10]: http://forum.lessthandot.com/viewforum.php?f=22

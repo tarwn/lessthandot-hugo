@@ -462,5 +462,5 @@ I have written a follow up to this post that explains how to avoid conversions. 
 
  [1]: http://www.sommarskog.se/dynamic_sql.html
  [2]: /index.php/DataMgmt/DataDesign/avoid-conversions-in-execution-plans-by
- [3]: http://forum.ltd.local/viewforum.php?f=17
- [4]: http://forum.ltd.local/viewforum.php?f=22
+ [3]: http://forum.lessthandot.com/viewforum.php?f=17
+ [4]: http://forum.lessthandot.com/viewforum.php?f=22
