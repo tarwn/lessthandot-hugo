@@ -24,7 +24,7 @@ The purpose of these properties is to allow a text box to grow or reduce in size
 To access the property, select a text box and go to CanGrow or CanShrink. The options for both are True or False.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/cangrow 1.png?mtime=1360935264" alt="" width="271" height="81" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/cangrow 1.png?mtime=1360935264" alt="" width="271" height="81" />
 </p>
 
 CanGrow
@@ -52,25 +52,25 @@ CanShrink
 Showing an order that has no comment, the text box will remain its default size.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/cangrow 2.png?mtime=1360935264" alt="" width="412" height="240" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/cangrow 2.png?mtime=1360935264" alt="" width="412" height="240" />
 </p>
 
 I have no order with a short comment. The text box remains the default size.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/cangrow 3.png?mtime=1360935264" alt="" width="426" height="216" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/cangrow 3.png?mtime=1360935264" alt="" width="426" height="216" />
 </p>
 
 I set CanShrink to True. The text box reduces in size to fit the shorter comment.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/cangrow 4.png?mtime=1360935264" alt="" width="410" height="182" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/cangrow 4.png?mtime=1360935264" alt="" width="410" height="182" />
 </p>
 
 I have another order with a longer comment. I set CanGrow to True. The text box enlarges in size to fix the longer comment.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/cangrow 5.png?mtime=1360935264" alt="" width="407" height="226" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/cangrow 5.png?mtime=1360935264" alt="" width="407" height="226" />
 </p>
 
 **Further Reading:** 

@@ -39,13 +39,13 @@ Cropping isn&#8217;t all that difficult with VB. As you can see from the followi
 Dim bmp As New Bitmap(newwidth,newheight)              
 Dim g = Graphics.FromImage(bmp)
 g.DrawImage(PictureBox1.Image,0,0, New Rectangle(newtop, newleft, newwidth, newheight), GraphicsUnit.Pixel)```<div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage1.png?mtime=1294047503"><img alt="" src="/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage1.png?mtime=1294047503" width="860" height="556" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage1.png?mtime=1294047503"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage1.png?mtime=1294047503" width="860" height="556" /></a>
 </div>
 
 First thing to do was show the image, since these are scanned pages from books they are going to be a rather large format. So the picturebox will have to be able to zoom to show the image. Now this is where it gets interesting. But I did ;-). The biggest problem was to detemine the zoomfactor used in the original so that the cutout would match. Perhaps I&#8217;m doing it all wrong but it works.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage.png?mtime=1294047492"><img alt="" src="/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage.png?mtime=1294047492" width="860" height="556" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage.png?mtime=1294047492"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage.png?mtime=1294047492" width="860" height="556" /></a>
 </div>
 
 And here is the not yet perfect code.
@@ -172,4 +172,4 @@ Here is the downloadable code in VS 2010 format.
 
 [CroppedImage.zip][1]
 
- [1]: /wp-content/uploads/users/chrissie1/croppedimage/CroppedImage.zip?mtime=1294047694
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/croppedimage/CroppedImage.zip?mtime=1294047694

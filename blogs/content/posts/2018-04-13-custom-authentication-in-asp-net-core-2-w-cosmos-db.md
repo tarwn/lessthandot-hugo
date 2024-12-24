@@ -29,7 +29,7 @@ If you want to follow along from the beginning, the series starts with [ASP.Net 
 Instead of grabbing a cup of coffee and pounding away at my keyboard until I'm done, I prefer to break work down into a smaller set of steps I can work on one at a time. This helps provide a sense of momentum, knowledge that each new step is starting at a known good state, and the safety to throw away a set of changes that isn't working out instead of backtracking manually.
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     3 Authentication Scenarios: User/Pass, Twitter, API Keys
@@ -49,7 +49,7 @@ This post will cover the first set: building standard username/password authenti
 This is going to be a long post, it may look a little formidable at first, but actual coding time took less than writing it up as a blog post, it's extensible (per the next two posts), and we have wide open freedom to apply any HTML and CSS we want and we can worry less about ASP.Net Core 2.1 releasing and breaking everything while we're in the middle.
 
 <div id="attachment_9173" style="width: 505px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_107.png" alt="These are the main changes, plus a few POCOs" width="495" height="746" class="size-full wp-image-9173" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_107.png 495w, /wp-content/uploads/2018/04/aspnetcore2cosmos_107-199x300.png 199w" sizes="(max-width: 495px) 100vw, 495px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_107.png" alt="These are the main changes, plus a few POCOs" width="495" height="746" class="size-full wp-image-9173" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_107.png 495w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_107-199x300.png 199w" sizes="(max-width: 495px) 100vw, 495px" />
   
   <p class="wp-caption-text">
     These are the main changes, plus a few POCOs
@@ -611,7 +611,7 @@ Add a new "Account" folder to "Views", then add a new "Register.cshtml" view to 
 And there we go!
 
 <div id="attachment_9137" style="width: 359px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_101.png" alt="Working Registration Form" width="349" height="300" class="size-full wp-image-9137" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_101.png 349w, /wp-content/uploads/2018/04/aspnetcore2cosmos_101-300x258.png 300w" sizes="(max-width: 349px) 100vw, 349px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_101.png" alt="Working Registration Form" width="349" height="300" class="size-full wp-image-9137" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_101.png 349w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_101-300x258.png 300w" sizes="(max-width: 349px) 100vw, 349px" />
   
   <p class="wp-caption-text">
     Working Registration Form
@@ -699,7 +699,7 @@ Next, create a "Login" view in the Views/Account folder like we did with the "Re
 And there we go, a new login form!
 
 <div id="attachment_9138" style="width: 362px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_102.png" alt="Working Login Form!" width="352" height="281" class="size-full wp-image-9138" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_102.png 352w, /wp-content/uploads/2018/04/aspnetcore2cosmos_102-300x239.png 300w" sizes="(max-width: 352px) 100vw, 352px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_102.png" alt="Working Login Form!" width="352" height="281" class="size-full wp-image-9138" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_102.png 352w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_102-300x239.png 300w" sizes="(max-width: 352px) 100vw, 352px" />
   
   <p class="wp-caption-text">
     Working Login Form!
@@ -742,7 +742,7 @@ Success, that's a fully functional Membership system! With a really poor passwor
 If you recall, back 60 pages ago, we passed the plain text password from the user straight into Cosmos DB and later relied on basic string comparison to validate user logins. This is something you never want to do in the real world, so the next step is to add a one-way cryptographic hash.
 
 <div id="attachment_9140" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_104-600x213.png" alt="CosmosDB User - Before Hashing" width="600" height="213" class="size-medium-width wp-image-9140" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_104-600x213.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_104-300x106.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_104-768x273.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_104-845x300.png 845w, /wp-content/uploads/2018/04/aspnetcore2cosmos_104.png 868w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_104-600x213.png" alt="CosmosDB User - Before Hashing" width="600" height="213" class="size-medium-width wp-image-9140" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_104-600x213.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_104-300x106.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_104-768x273.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_104-845x300.png 845w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_104.png 868w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     CosmosDB User - Before Hashing
@@ -813,7 +813,7 @@ public class CosmosDBMembership : ICustomMembership
 And now when we look at a registered user in the CosmosDB Data Explorer, we can see a nicely hashed password instead of plain text:
 
 <div id="attachment_9141" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_105-600x191.png" alt="Data Explorer view of User - Now with Hashed Password!" width="600" height="191" class="size-medium-width wp-image-9141" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_105-600x191.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_105-300x96.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_105-768x245.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_105.png 916w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_105-600x191.png" alt="Data Explorer view of User - Now with Hashed Password!" width="600" height="191" class="size-medium-width wp-image-9141" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_105-600x191.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_105-300x96.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_105-768x245.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_105.png 916w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Data Explorer view of User - Now with Hashed Password!

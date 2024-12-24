@@ -159,13 +159,13 @@ End Class```
 And now we can view the above in a browser.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta1.png?mtime=1349336274"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta1.png?mtime=1349336274" width="684" height="209" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta1.png?mtime=1349336274"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta1.png?mtime=1349336274" width="684" height="209" /></a>
 </div>
 
 Now if I go to the GoodOrBad page. I can still see my children.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422" width="551" height="264" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422" width="551" height="264" /></a>
 </div>
 
 And that was not the point. So what did I forget. 
@@ -186,7 +186,7 @@ End Namespace```
 And now when I try to go to GoodOrBad I get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta3.png?mtime=1349336694"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta3.png?mtime=1349336694" width="594" height="547" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta3.png?mtime=1349336694"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta3.png?mtime=1349336694" width="594" height="547" /></a>
 </div>
 
 So I need to login.
@@ -196,13 +196,13 @@ You can login by doing this auth?username=cbaes&password=test1
 And then you get the following response.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta4.png?mtime=1349336831"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta4.png?mtime=1349336831" width="468" height="252" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta4.png?mtime=1349336831"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta4.png?mtime=1349336831" width="468" height="252" /></a>
 </div>
 
 And now you can see your data again.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422" width="551" height="264" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta2.png?mtime=1349336422" width="551" height="264" /></a>
 </div>
 
 And to log back out you can use this /auth/logout

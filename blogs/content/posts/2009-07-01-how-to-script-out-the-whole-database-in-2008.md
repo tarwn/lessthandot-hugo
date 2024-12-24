@@ -33,7 +33,7 @@ Logically you would think that this would be the way: _Right click on the databa
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut1.png?mtime=1357605198"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut1.png?mtime=1357605198" width="614" height="365" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut1.png?mtime=1357605198"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut1.png?mtime=1357605198" width="614" height="365" /></a>
 </div>
 
 What that will do is just create the database and not much else, here is what the script might look like
@@ -62,13 +62,13 @@ GO
 What you have to do is actually this: _Right click on your database–>Tasks–>Generate Scripts_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut2.png?mtime=1357605211"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut2.png?mtime=1357605211" width="456" height="465" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut2.png?mtime=1357605211"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut2.png?mtime=1357605211" width="456" height="465" /></a>
 </div>
 
 Select the database you want to script and make sure you check the option at the bottom that says _Script all objects in the selected database_. See image below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut3.png?mtime=1357605224"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut3.png?mtime=1357605224" width="493" height="442" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut3.png?mtime=1357605224"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SCriptOut3.png?mtime=1357605224" width="493" height="442" /></a>
 </div>
 
 That is all, click next a couple of times and review your options and you are set

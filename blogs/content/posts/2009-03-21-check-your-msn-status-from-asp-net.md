@@ -24,19 +24,19 @@ http://settings.messenger.live.com/applications/WebSettings.aspx
 Then, check the box that says "Allow anyone on the web to see my presence and send me messages.":
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/MSN1.gif" alt="" title="" width="751" height="217" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/MSN1.gif" alt="" title="" width="751" height="217" />
 </div>
 
 Then, go to the "Create HTML" link on the left hand side of the page and choose "Status icon" from the "Choose which control you want to display on your page" section:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/MSN2.gif" alt="" title="" width="628" height="392" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/MSN2.gif" alt="" title="" width="628" height="392" />
 </div>
 
 You will then be shown a small snippet of HTML that you can use to enter onto your webpage:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/MSN3.gif" alt="" title="" width="713" height="134" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/MSN3.gif" alt="" title="" width="713" height="134" />
 </div>
 
 What we need to do is to use the URL from the "src" attribute in the above link, and in my case it looked like:

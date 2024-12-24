@@ -34,19 +34,19 @@ GO
 This table consists of a primary key and does not require any additional changes to be used in transactional replication. However, in a Merge Replication setup, this table would require a UNIQUEIDENTIFIER column. If you run the create publication wizard, you are warned about this directly after selecting the table as an article
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/leftover_1.gif?mtime=1350479616"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/leftover_1.gif?mtime=1350479616" width="504" height="289" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/leftover_1.gif?mtime=1350479616"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/leftover_1.gif?mtime=1350479616" width="504" height="289" /></a>
 </div>
 
 After the publication is created, review the MergeMe table definition again
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-169.png?mtime=1350479616"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-169.png?mtime=1350479616" width="292" height="109" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-169.png?mtime=1350479616"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-169.png?mtime=1350479616" width="292" height="109" /></a>
 </div>
 
 As shown, the rowguid column is created in the table as well as a unique nonclustered index.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/late.gif?mtime=1350519523"><img alt="" src="/wp-content/uploads/blogs/All/late.gif?mtime=1350519523" width="377" height="115" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/late.gif?mtime=1350519523"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/late.gif?mtime=1350519523" width="377" height="115" /></a>
 </div>
 
 Indexing the UNIQUEIDENTIFIER
@@ -65,7 +65,7 @@ Another common event is a code change related to the rowguid column. This happen
 A resulting problem from these types of modifications is that replication cannot be fully removed. For example, if we execute sp_removedbreplication on the QTuner database after creating the covering index, the following error will be thrown. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-170.png?mtime=1350479616"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-170.png?mtime=1350479616" width="618" height="153" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-170.png?mtime=1350479616"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-170.png?mtime=1350479616" width="618" height="153" /></a>
 </div>
 
 Object dependency is something we cannot get around. At this point, the only way to remove replication is to remove the index that was created on rowguid. 

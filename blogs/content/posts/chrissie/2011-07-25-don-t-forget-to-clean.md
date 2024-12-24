@@ -30,7 +30,7 @@ I use Teamcity 6.5.
 So I contacted myself and looked where all my diskspace went. And I found that I had a lot of these.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/teamcity1.png?mtime=1311593043"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/teamcity1.png?mtime=1311593043" width="817" height="341" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity1.png?mtime=1311593043"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity1.png?mtime=1311593043" width="817" height="341" /></a>
 </div>
 
 And those things add up.
@@ -38,19 +38,19 @@ And those things add up.
 Now why do I have so many of them?
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155" width="809" height="472" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155" width="809" height="472" /></a>
 </div>
 
 Yep that&#8217;s right, teamcity holds on to everything forever. But we can change that for the big offenders. We do this by editing the cleanup rules.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155" width="809" height="472" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity2.png?mtime=1311593155" width="809" height="472" /></a>
 </div>
 
 You can find them in Administration > Build History Clean-up.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/teamcity3.png?mtime=1311593332"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/teamcity3.png?mtime=1311593332" width="466" height="669" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity3.png?mtime=1311593332"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/teamcity3.png?mtime=1311593332" width="466" height="669" /></a>
 </div>
 
 ## Conclusion

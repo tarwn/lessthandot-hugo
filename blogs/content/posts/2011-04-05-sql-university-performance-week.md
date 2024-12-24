@@ -45,7 +45,7 @@ There are a few things we need to solve before designing our own compressed snap
 The three tasks bring us to a diagram shown in the figure below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-22.png?mtime=1301972711"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-22.png?mtime=1301972711" width="448" height="280" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-22.png?mtime=1301972711"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-22.png?mtime=1301972711" width="448" height="280" /></a>
 </div>
 
 The red X through the typical direct connection is what we want to avoid.  The green arrows represent the snapshot process that flows to another server used to offload the work of compressing the snapshots and then flows to the subscriber.
@@ -68,7 +68,7 @@ The flow of our design will incorporate SQL Server Integration Services to handl
 **The design flow that we will achieve**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-23.png?mtime=1301972712"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-23.png?mtime=1301972712" width="578" height="473" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-23.png?mtime=1301972712"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-23.png?mtime=1301972712" width="578" height="473" /></a>
 </div>
 
 Adding a partition can be a manual process, upon first time synchronizing or be done programmatically.  This will depend on the business process and standard operating procedures.  In T-SQL we can use sp_addmergepartition to accomplish this or, from C#, the AddMergePartition method.

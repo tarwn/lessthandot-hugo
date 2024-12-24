@@ -53,19 +53,19 @@ And these are the results.
 For C3.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/ILSpy1.png?mtime=1332876766"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/ILSpy1.png?mtime=1332876766" width="963" height="682" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/ILSpy1.png?mtime=1332876766"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/ILSpy1.png?mtime=1332876766" width="963" height="682" /></a>
 </div>
 
 For IL.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/ILSpy2.png?mtime=1332876779"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/ILSpy2.png?mtime=1332876779" width="963" height="682" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/ILSpy2.png?mtime=1332876779"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/ILSpy2.png?mtime=1332876779" width="963" height="682" /></a>
 </div>
 
 Fro VB.Net.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/ILSpy3.png?mtime=1332876792"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/ILSpy3.png?mtime=1332876792" width="963" height="682" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/ILSpy3.png?mtime=1332876792"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/ILSpy3.png?mtime=1332876792" width="963" height="682" /></a>
 </div>
 
 This one seemed slightly faster.

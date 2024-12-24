@@ -46,7 +46,7 @@ Product information is literally all the information you can find about the prod
 And multiply all the above with all the languages of all the countries a company is selling to. That's a lot to manage isn't it?
 
 <div class="image_block">
-  <a href="http://www.flickr.com/photos/jeannetteeatsspaghetti/8681772523/"><img src="/wp-content/uploads/blogs/DataMgmt/Axel8s/PIM.jpg?mtime=1379538337" alt="" width="471" height="500" /></a>
+  <a href="http://www.flickr.com/photos/jeannetteeatsspaghetti/8681772523/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/PIM.jpg?mtime=1379538337" alt="" width="471" height="500" /></a>
 </div>
 
 # Where is this information now?

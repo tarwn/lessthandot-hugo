@@ -34,7 +34,7 @@ To get going, let's look at one of the most common settings you will have intern
 Create a new package to start adding and editing some tasks. In the package, create an ADO.NET connection named, ServerSourceConnection. Set this connection to an available instance and save the connection. To configure this to be manipulated with a configuration file, right click an empty space in the Control Flow window and select, Package Configurations...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_1.gif" alt="" title="" width="319" height="227" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_1.gif" alt="" title="" width="319" height="227" />
 </div>
 
 Click the check box to "Enable package configurations" and then click, Add.
@@ -44,7 +44,7 @@ Clicking the add button will launch the Package Configuration Wizard (PCW). The 
 In the PCW, we want to select an XML configuration file as our type of configuration. Next, if you have a preexisting configuration file to add to, you can enter it into the configuration file name box. If you do not, simply enter a physical path and file name where you want the package stored for now.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_2.gif" alt="" title="" width="628" height="227" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_2.gif" alt="" title="" width="628" height="227" />
 </div>
 
 Click next to move onto the properties that can be set. For the example, we want to configure the connection ServerSourceConnection. To do this we need to know server name, default catalog, connection string and, if you are not using Windows authentication, the username and password. 
@@ -54,7 +54,7 @@ Click next to move onto the properties that can be set. For the example, we want
 In the properties dialog, expand Connection Managers and then expand into the ServerSourceConnection. This will expose the properties we can check that we want to be included in the configuration file. Check ConnectionString, InitialCatalog and Servername. Then click Next to exit the properties section. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_3.gif" alt="" title="" width="458" height="323" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_3.gif" alt="" title="" width="458" height="323" />
 </div></p> 
 
 After hitting next, all that remains is to set the name of the configuration and save the configuration file. We'll use, ServerSourceConfigFile and then hit Finish to save and exit the wizard.
@@ -64,7 +64,7 @@ So far we haven't changed anything as far as the connection goes. If you open th
 We want to show this in real-time though so let's change the XML configuration file to point to a different instance than the one we set in the Connection.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_4.gif" alt="" title="" width="628" height="209" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_4.gif" alt="" title="" width="628" height="209" />
 </div>
 
 Above we changed the values in the connection string to handle the instance name, the default catalog and the server name. Notice that we didn't change the default catalog in the connection string. This is to show that the catalog setting of the property outside the connection string will still override the actual value in the connection string itself. 
@@ -78,7 +78,7 @@ Of course we want to make sure this is all reading from the configuration file, 
 In your configuration file, enter a database that does not exist.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_5.gif" alt="" title="" width="610" height="82" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_5.gif" alt="" title="" width="610" height="82" />
 </div>
 
 Of course, if for some reason you decided last week to create a database named, IdoNotExist, try something else.
@@ -88,7 +88,7 @@ Now add logging to the package to capture the information as the execution of th
 Do this by right clicking an empty space in the Control Flow and selecting, Logging...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_6.gif" alt="" title="" width="351" height="126" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_6.gif" alt="" title="" width="351" height="126" />
 </div>
 
 Enable logging by selecting the Package container and click Add for a new Text File provider. In the Details tab of the logging provider, check Diagnostic. This will enable us to see log entries when the connection is read.
@@ -98,14 +98,14 @@ Now that we have logging setup, we can watch the connection being called.
 To test that, set the following basic Execute SQL Task up.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_7.gif" alt="" title="" width="628" height="324" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_7.gif" alt="" title="" width="628" height="324" />
 </div>
 
 > <span class="MT_red">Note: We are selecting from the sys.databases which requires heightened security rights on the server state. If you do not have these rights, SELECT from any table. The task and test here is to simply return a small amount of data to validate our configuration changes.</span></p>
 Execute the task and follow along in the Message panel
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_8.gif" alt="" title="" width="628" height="252" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_8.gif" alt="" title="" width="628" height="252" />
 </div>
 
 Reading our log, we can see that the incorrect catalog was used. If you open the configuration of the connection now from the connection manager window, the incorrect database would have been set there as well at run-time. 
@@ -117,7 +117,7 @@ Reading our log, we can see that the incorrect catalog was used. If you open the
 Switch the default catalog back to master or an existing database you have rights to connect to and run the package again
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dynossis_9.gif" alt="" title="" width="628" height="148" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dynossis_9.gif" alt="" title="" width="628" height="148" />
 </div>
 
 **Accomplishments**

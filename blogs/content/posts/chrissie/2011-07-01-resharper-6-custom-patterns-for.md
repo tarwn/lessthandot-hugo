@@ -42,37 +42,37 @@ So I set about to create custom patterns in Resharper 6.
 I made 3.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperCP1.png?mtime=1309529928"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperCP1.png?mtime=1309529928" width="820" height="600" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP1.png?mtime=1309529928"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP1.png?mtime=1309529928" width="820" height="600" /></a>
 </div>
 
 One for The IsTrue thing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperCP2.png?mtime=1309529938"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperCP2.png?mtime=1309529938" width="820" height="600" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP2.png?mtime=1309529938"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP2.png?mtime=1309529938" width="820" height="600" /></a>
 </div>
 
 One for the IsFalse thing
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperCP3.png?mtime=1309529948"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperCP3.png?mtime=1309529948" width="800" height="600" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP3.png?mtime=1309529948"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP3.png?mtime=1309529948" width="800" height="600" /></a>
 </div>
 
 One for the IsEmpty String.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperCP4.png?mtime=1309529958"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperCP4.png?mtime=1309529958" width="800" height="600" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP4.png?mtime=1309529958"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP4.png?mtime=1309529958" width="800" height="600" /></a>
 </div>
 
 I will now recieve a suggestion saying I should better use IsFalse, IsTrue or IsEmpty where appropriate. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperCP5.png?mtime=1309529967"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperCP5.png?mtime=1309529967" width="457" height="90" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP5.png?mtime=1309529967"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP5.png?mtime=1309529967" width="457" height="90" /></a>
 </div>
 
 And I can do the Alt+Enter thing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperCP6.png?mtime=1309529975"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperCP6.png?mtime=1309529975" width="527" height="93" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP6.png?mtime=1309529975"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperCP6.png?mtime=1309529975" width="527" height="93" /></a>
 </div>
 
 Rules are important in a team, a way to make it easier to enforce them is helpful.

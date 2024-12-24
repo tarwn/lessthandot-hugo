@@ -28,7 +28,7 @@ First of all we need a few new jars.
 I found out the hard way that I needed 4.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android7.png?mtime=1320523293"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android7.png?mtime=1320523293" width="202" height="95" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android7.png?mtime=1320523293"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android7.png?mtime=1320523293" width="202" height="95" /></a>
 </div>
 
 You can find the latest beta [on maven][3].
@@ -50,15 +50,15 @@ After that everything went just fine, not really. But I got it to work in the en
 You can find my test application on [github][7]. It&#8217;s a notes Application and looks something like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android6.png?mtime=1320524663"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android6.png?mtime=1320524663" width="507" height="835" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android6.png?mtime=1320524663"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android6.png?mtime=1320524663" width="507" height="835" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android8.png?mtime=1320524705"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android8.png?mtime=1320524705" width="509" height="827" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android8.png?mtime=1320524705"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android8.png?mtime=1320524705" width="509" height="827" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android9.png?mtime=1320524877"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android9.png?mtime=1320524877" width="513" height="829" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android9.png?mtime=1320524877"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android9.png?mtime=1320524877" width="513" height="829" /></a>
 </div>
 
 It uses 3 different Activities, an SQLite database and RoboGuice of course. It has no tests yet and I wouldn&#8217;t call it MVC either. I made it for android 2.2. 

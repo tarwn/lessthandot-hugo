@@ -38,7 +38,7 @@ If you have the resources and budget available, create a job server installation
 So even with my poor diagramming abilities, you can see the safety barrier between the two different systems. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//job_diagram.gif" alt="" title="" width="540" height="480" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//job_diagram.gif" alt="" title="" width="540" height="480" />
 </div>
 
 Don't get me wrong on everything I've written either. I am not an Oracle hatter. Yes, I have chosen the SQL Server DBA path because it's just that much better (:P). I have worked on DB2, Oracle and SQL Server. All have their strengths and all have weaknesses. 

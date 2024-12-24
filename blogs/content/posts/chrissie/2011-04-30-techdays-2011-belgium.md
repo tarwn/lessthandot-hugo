@@ -26,7 +26,7 @@ My techdays 2011 (Belgian edition) started on Monday evening with a small dinner
 The next day was a long day of presentations, [starting with the keynote in which someone mentioned my name][8]. So go look at the keynote. And the bribe was just a joke but it worked. VB.Net will take over the world, resistance is futile, and the first steps have been made. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/borg.jpg?mtime=1304148062"><img alt="" src="/wp-content/uploads/users/chrissie1/borg.jpg?mtime=1304148062" width="450" height="429" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/borg.jpg?mtime=1304148062"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/borg.jpg?mtime=1304148062" width="450" height="429" /></a>
 </div>
 
 ## Sessions

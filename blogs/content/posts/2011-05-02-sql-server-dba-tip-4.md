@@ -29,7 +29,7 @@ Licensing can be daunting, but also has many configurations to help with lowerin
 With licensing and hardware costs aside, the recommendation is to always separate the feature installations from the primary engine being used by the business.  Troubleshooting and optimizing these installations as single entities is much simpler.  This allows for quicker problem resolution and more proactive performance tuning, especially with limited DBA resources.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-45.png?mtime=1303501614"><img src="/wp-content/uploads/blogs/DataMgmt/-45.png?mtime=1303501614" alt="" width="476" height="256" /></a>
+  <a href="/media/blogs/DataMgmt/-45.png?mtime=1303501614"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-45.png?mtime=1303501614" alt="" width="476" height="256" /></a>
 </div>
 
 The physical setup above, with fully licensed models, also allows for workloads to be distributed <span style="text-decoration: line-through;">set</span> across the environment.  This can prevent unwanted waits on the business's primary database server(s).  Use time and internal features such as mirroring and database snapshots to move data between the servers.  This movement allows for optimal performance for the customer facing requests.

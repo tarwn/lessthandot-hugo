@@ -22,7 +22,7 @@ Scott Stauffer ([blog][1] | [twitter][2]) asked a question on #sqlhelp a few day
 Below is a snapshot of the tweet.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/buffer_1.gif" alt="" title="" width="313" height="99" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/buffer_1.gif" alt="" title="" width="313" height="99" />
 </div></p> 
 
 My first thought was to throw in a script component to transformation. With each row input into the buffer the row could be parsed to validate the header. If the unique pattern in the string was found, then lock a variable and assign the value to it
@@ -75,7 +75,7 @@ test
 Bring over a data flow task and let's name it, "DF Flat File Pump"
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/buffer_2.gif" alt="" title="" width="394" height="124" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/buffer_2.gif" alt="" title="" width="394" height="124" />
 </div>
 
 In the data flow task, bring over a flat file source and configure it to use our importer connection.
@@ -99,7 +99,7 @@ Add a new Output next, Output 1.
 In the new output change the ExclusionGroup group to 1 as well and set the SynchronousInputID to the Input 0 ID. This will be listed in the dropdown.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/buffer_3.gif" alt="" title="" width="543" height="287" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/buffer_3.gif" alt="" title="" width="543" height="287" />
 </div>
 
 Select the Script window and add into the ReadWriteVariables the variable, "global"
@@ -160,7 +160,7 @@ Execute the package.
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/buffer_4.gif" alt="" title="" width="458" height="403" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/buffer_4.gif" alt="" title="" width="458" height="403" />
 </div>
 
 The results are showing the output that we found as a header based on our regular expression pattern match flows to the headers destination. At the same time, the data we need flows to the data pump destination.
@@ -170,7 +170,7 @@ The results are showing the output that we found as a header based on our regula
 Querying this in SSMS shows 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/buffer_5.gif" alt="" title="" width="335" height="281" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/buffer_5.gif" alt="" title="" width="335" height="281" />
 </div></p> 
 
 The major problem with this process is the fact we are processing row by row while putting the row under a microscope. Imagine this in a 300M row import. It wouldn't go very well but would go if needed.

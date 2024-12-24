@@ -15,7 +15,7 @@ categories:
 ---
 I'm joining [this month's #tsql2sday blog party][1] as Andy Yun ([blog][1] | [Twitter][2]) has asked speakers to provide advice to new presenters.
 
-[<img class="alignright size-full wp-image-2241" src="/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" />][1]I've been presenting technical content for several years, and I think it's one of the best things I've done for my career. It's forced me to learn new things, given me self-confidence, and launched my career. I feel every person could benefit by sharing what they know with others.
+[<img class="alignright size-full wp-image-2241" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" />][1]I've been presenting technical content for several years, and I think it's one of the best things I've done for my career. It's forced me to learn new things, given me self-confidence, and launched my career. I feel every person could benefit by sharing what they know with others.
 
 I've had the opportunity to present hundreds of times – in-person to small user groups and at large conferences, online to one person or hundreds. As I present, I'm working with technology – the laptop I'm using, the projector I'm connected to, the SQL Server I'm running demos against. Technology can and will fail. As a speaker, this can be downright terrifying.
 

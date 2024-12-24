@@ -30,13 +30,13 @@ And Chocolatey also has [a GUI][3] if you like those kinds of things. Yeah I wro
 And now I added [sqlcop to chocolatey][4] which makes it dead easy to install.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey1.png?mtime=1321439578"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey1.png?mtime=1321439578" width="1039" height="629" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey1.png?mtime=1321439578"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey1.png?mtime=1321439578" width="1039" height="629" /></a>
 </div>
 
 Just type <code class="codespan">cinst sqlcop</code> in your favorite command prompt or use the GUI and sqlcop will be there for you. It will also place a shortcut on your desktop for you to have easy access to sqlcop.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey2.png?mtime=1321439592"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey2.png?mtime=1321439592" width="430" height="374" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey2.png?mtime=1321439592"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/sqlcopchocolatey2.png?mtime=1321439592" width="430" height="374" /></a>
 </div>
 
 So now you have no more excuse not to install chocolatey and sqlcop.

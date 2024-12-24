@@ -20,7 +20,7 @@ categories:
 I've been a Droid phone user for some time now and really, couldn't have imagined using anything else. One of the things that is always important to me is, efficiency in work. That being said, Droid has always been quick to find what I need, actually makes calls and has the tools I need to get the job done. So why would I even consider going to a Windows 8 Phone? Well, "Look, Shiny!!!!" No, really, that wasn't it. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/winphone_1.gif?mtime=1359380136"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/winphone_1.gif?mtime=1359380136" width="402" height="190" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/winphone_1.gif?mtime=1359380136"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/winphone_1.gif?mtime=1359380136" width="402" height="190" /></a>
 </div>
 
 **Total Package**
@@ -28,7 +28,7 @@ I've been a Droid phone user for some time now and really, couldn't have imagine
 I went out and purchased the HTC Windows 8X Phone a few days ago. The reason this diehard Droid guy went to Windows 8 Phone was the complete integration across devices and information. That's a mouthful so let me explain by showing you the devices I have, helping me get my job done, daily. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-26.png?mtime=1359380136"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-26.png?mtime=1359380136" width="107" height="72" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-26.png?mtime=1359380136"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-26.png?mtime=1359380136" width="107" height="72" align="left" /></a>
 </div>
 
 Currently I am running Windows 8 Pro on a ThinkPad W530. Since this W530 was right out of the box recently, I chose to not mess with the preinstalled Windows 7 image and stripped it of its glory right away and went to Windows 8 Pro. Why? Windows 8 Pro I believe has the efficiency pieces that help me eliminate many 1-second delays in the day. I haven't been let down at all with Windows 8 Pro either and can't imagine going back to Windows 7. In fact, I adapted so quickly to Windows 8 Pro and the tile, navigation and utilization changes, I'd say that is the single largest win of the new OS. However, this isn't a Windows 8 Pro review (maybe later). 
@@ -57,7 +57,7 @@ So, what's good about it? It's too early to give a down and dirty, pro vs. con, 
 **Activity Quick Glance**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-27.png?mtime=1359380136"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-27.png?mtime=1359380136" width="154" height="96" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-27.png?mtime=1359380136"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-27.png?mtime=1359380136" width="154" height="96" align="left" /></a>
 </div>
 
 That is what I've deemed the best thing about Windows 8 Phone. The one thing I don't think I'd want to give up in just two days of using the HTC Windows 8X phone is, I can see everything in one tile for activity across email, text, twitter and on. I open the tile, look at all the things that happened since last looking at it, and I'm up to date without opening 5 or 6 apps. That is really cool! Now, Droid may have been able to do that, in fact, I think I remember finding it once but it was horribly done. I can't go into details about Droid and that option because, well, I \*think\* I found that once. Windows 8 just gave it to me. I like just being handed what is useful. The other nice thing about the activity on the phone is, if I open the view and I don't read something, it doesn't persist to keep telling me I have new activity. I like that a lot too. My Droid would constantly think I had new emails even knowing I would open email and just read the subject lines. 

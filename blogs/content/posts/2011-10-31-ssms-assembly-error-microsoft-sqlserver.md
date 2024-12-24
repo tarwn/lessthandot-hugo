@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/ssms_error_2.gif?mtime=1320108550"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/ssms_error_2.gif?mtime=1320108550" width="150" height="150" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssms_error_2.gif?mtime=1320108550"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssms_error_2.gif?mtime=1320108550" width="150" height="150" align="left" /></a>
 </div>
 
 SQL Server Management Studio and SQL Server Tools alike can become unusable when other installations, multiple installations or even strange operating system level problems occur that remove critical supporting assemblies.  When these assemblies either become corrupted or missing, the fix it rather simple in most cases with a simple copy/paste of the assembly in error from the shared directories that were installed initially.
@@ -35,7 +35,7 @@ Specifically for this blog, the following error was presented while working in S
   7. SSMS dialog and wizard functions failed with the following error
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/ssms_error_1.GIF?mtime=1320108550"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/ssms_error_1.GIF?mtime=1320108550" width="611" height="177" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssms_error_1.GIF?mtime=1320108550"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssms_error_1.GIF?mtime=1320108550" width="611" height="177" /></a>
 </div>
 
 Essentially, this error came up every time properties were selected for any object in the tree in Object Explorer.  This included operations such as backup, restore, login, database user configurations as on.  Remember, those are all simply wizards and configuration windows executing T-SQL statements in the background.  So the Engine is still completely operational but the efficiency of performing tasks slowed greatly.  This requires a fix.  A planned fix!

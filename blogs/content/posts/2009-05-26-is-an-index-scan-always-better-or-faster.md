@@ -58,7 +58,7 @@ Here is what the plan looks like.
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/plan0.PNG?mtime=1357604160"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/plan0.PNG?mtime=1357604160" width="654" height="279" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/plan0.PNG?mtime=1357604160"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/plan0.PNG?mtime=1357604160" width="654" height="279" /></a>
 </div>
 
 
@@ -165,7 +165,7 @@ The difference between before and now is that parallelism is being used as you c
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan1.PNG?mtime=1357604252"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan1.PNG?mtime=1357604252" width="740" height="272" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan1.PNG?mtime=1357604252"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan1.PNG?mtime=1357604252" width="740" height="272" /></a>
 </div>
 
 Here is the text version of the execution plan
@@ -209,7 +209,7 @@ Here is the graphical plan
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan2.PNG?mtime=1357604265"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan2.PNG?mtime=1357604265" width="681" height="323" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan2.PNG?mtime=1357604265"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Plan2.PNG?mtime=1357604265" width="681" height="323" /></a>
 </div>
 
 Here is the text version of the plan

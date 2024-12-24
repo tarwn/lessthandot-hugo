@@ -22,7 +22,7 @@ This is a post I wanted to write for a while but I just didn't want my students 
 When teaching at a Microsoft Learning Partner Center I usually use the standard Microsoft Official Curriculum courses so there is plenty information about them on the internet. 
 
 <div class="image_block">
-  <a href="http://www.flickr.com/photos/elycefeliz/3262326159/"><img alt="" src="/wp-content/uploads/users/axel8s/ChooseTrain1.jpg?mtime=1337691082" width="647" height="584" /></a>
+  <a href="http://www.flickr.com/photos/elycefeliz/3262326159/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/ChooseTrain1.jpg?mtime=1337691082" width="647" height="584" /></a>
 </div>
 
 First there is the Partner Centers' website where you can book the training, they all list the official numbers and most of them have also the complete description. Otherwise you can check the [Microsoft Learning site][1]. Fill in the course number and make sure you read the Course Details and Prerequisites! If you don't match the prerequisites for let's say 60% and don't think _"hmm interesting"_ for 75% of the chapters, maybe this is not the ideal training for you.

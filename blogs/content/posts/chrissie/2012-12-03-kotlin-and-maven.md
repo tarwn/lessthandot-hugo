@@ -40,7 +40,7 @@ If you get this error
 then the above did not work. In Intellij go to File -> Settings -> Maven and copy the Maven directory in the Maven home directory field.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven1.png?mtime=1354533891"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven1.png?mtime=1354533891" width="981" height="497" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven1.png?mtime=1354533891"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven1.png?mtime=1354533891" width="981" height="497" /></a>
 </div>
 
 And now Maven works with Intellij 12. Oh joy.
@@ -52,19 +52,19 @@ It is now time to make our project.
 Make a new project and make it a Maven module.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven2.png?mtime=1354534102"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven2.png?mtime=1354534102" width="594" height="640" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven2.png?mtime=1354534102"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven2.png?mtime=1354534102" width="594" height="640" /></a>
 </div>
 
 use the quickstart archetype, or any other archetype since we are not going to use it anyway.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven3.png?mtime=1354534163"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven3.png?mtime=1354534163" width="594" height="640" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven3.png?mtime=1354534163"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven3.png?mtime=1354534163" width="594" height="640" /></a>
 </div>
 
 override the maven home directory if you did not set M2_HOME or if you so desire.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven4.png?mtime=1354534303"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven4.png?mtime=1354534303" width="594" height="640" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven4.png?mtime=1354534303"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven4.png?mtime=1354534303" width="594" height="640" /></a>
 </div>
 
 Now we can change the pom.xml file to this.
@@ -210,13 +210,13 @@ You might think this is the same class as in my previous blogpost but it isn&#82
 Anyway, your project should look like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven5.png?mtime=1354535218"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven5.png?mtime=1354535218" width="387" height="348" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven5.png?mtime=1354535218"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven5.png?mtime=1354535218" width="387" height="348" /></a>
 </div>
 
 And now when we open our Maven project view. we should see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven6.png?mtime=1354535357"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven6.png?mtime=1354535357" width="465" height="528" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven6.png?mtime=1354535357"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven6.png?mtime=1354535357" width="465" height="528" /></a>
 </div>
 
 you can now doubleclick on test and see the magic happen.
@@ -224,7 +224,7 @@ you can now doubleclick on test and see the magic happen.
 This should be the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven7.png?mtime=1354535495"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven7.png?mtime=1354535495" width="742" height="313" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven7.png?mtime=1354535495"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlinandmaven7.png?mtime=1354535495" width="742" height="313" /></a>
 </div>
 
 5 tests run and none faild. Woohoo.

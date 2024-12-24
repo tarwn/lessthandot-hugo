@@ -5,7 +5,7 @@ type: post
 date: 2018-03-01T18:36:25+00:00
 ID: 9033
 url: /index.php/uncategorized/north-to-alaska/
-featured_image: /wp-content/uploads/2018/03/tech-outbound-logo.jpg
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/03/tech-outbound-logo.jpg
 views:
   - 3217
 rp4wp_auto_linked:
@@ -14,7 +14,7 @@ categories:
   - Uncategorized
 
 ---
-[<img class="alignleft size-full wp-image-9036" style="float: left;margin: 1em 1em .5em 1em" src="/wp-content/uploads/2018/03/tech-outbound-logo.jpg" alt="tech-outbound-logo" width="200" height="200" srcset="/wp-content/uploads/2018/03/tech-outbound-logo.jpg 400w, /wp-content/uploads/2018/03/tech-outbound-logo-200x200.jpg 200w, /wp-content/uploads/2018/03/tech-outbound-logo-300x300.jpg 300w" sizes="(max-width: 200px) 100vw, 200px" />][1]
+[<img class="alignleft size-full wp-image-9036" style="float: left;margin: 1em 1em .5em 1em" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/03/tech-outbound-logo.jpg" alt="tech-outbound-logo" width="200" height="200" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/03/tech-outbound-logo.jpg 400w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/03/tech-outbound-logo-200x200.jpg 200w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/03/tech-outbound-logo-300x300.jpg 300w" sizes="(max-width: 200px) 100vw, 200px" />][1]
   
 I'm excited and privileged to announce that I'll be a Technical Lead on [Tech Outbound Alaska][1] this August! Tim and Amy Ford have been putting together high-quality SQL Cruise events since 2010. I've attended three, and each one has been better than the last. (Make sure to read about my experiences on [SQL Cruise Caribbean 2015][2] and [SQL Cruise Caribbean 2016][3]!)
 

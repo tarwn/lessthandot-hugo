@@ -66,7 +66,7 @@ Select the Advanced Tab
 On the user profiles section click on Settings
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/UserProfile.PNG?mtime=1367323923"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/UserProfile.PNG?mtime=1367323923" width="399" height="451" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/UserProfile.PNG?mtime=1367323923"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/UserProfile.PNG?mtime=1367323923" width="399" height="451" /></a>
 </div>
 
 Select the profile and hit Delete

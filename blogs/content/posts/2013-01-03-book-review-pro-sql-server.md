@@ -18,7 +18,7 @@ tags:
 While reading [Microsoft SQL Server 2012 T-SQL Fundamentals][1], I decided I should always have a book with me to read, learn and understand more about the technoligies and environments I'm working in. So when I finished the book I didn't had to look long. Since Jes is a co-blogger and I met Mladen Prajdic in person during the last Belgian SQL Server Days, I ordered [Pro SQL Server 2012 Practices][2].
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/BRProPra1.jpg?mtime=1357204924"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/BRProPra1.jpg?mtime=1357204924" width="300" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/BRProPra1.jpg?mtime=1357204924"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/BRProPra1.jpg?mtime=1357204924" width="300" height="300" /></a>
 </div>
 
 **Chapter 1: Be Your Developer's Best Friend By Jesper Johansen**

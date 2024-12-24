@@ -123,7 +123,7 @@ As you can see the hits counter has now increased to 3.
 Here is also the whole command window output in case you find it easier to follow along like that
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCOnsoleOutput.PNG?mtime=1358002899"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCOnsoleOutput.PNG?mtime=1358002899" width="682" height="507" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCOnsoleOutput.PNG?mtime=1358002899"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCOnsoleOutput.PNG?mtime=1358002899" width="682" height="507" /></a>
 </div>
 
 That is all for this post, in the next post we will look at some more interesting stuff

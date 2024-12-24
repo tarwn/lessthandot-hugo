@@ -44,7 +44,7 @@ CREATE TABLE Test(bla uniqueidentifier default newid())
 
 And then refresh and expand the tables folder, you will see the following
 
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AzureTable.PNG?mtime=1336007070" width="422" height="356" />][1]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AzureTable.PNG?mtime=1336007070" width="422" height="356" />][1]
 
 Now run the following
 
@@ -144,4 +144,4 @@ Overall I don't think that these are major issues and should be fairly easy to e
 
 What do you think, big pain in the neck or no big deal?
 
- [1]: /wp-content/uploads/blogs/DataMgmt/Denis/AzureTable.PNG?mtime=1336007070
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AzureTable.PNG?mtime=1336007070

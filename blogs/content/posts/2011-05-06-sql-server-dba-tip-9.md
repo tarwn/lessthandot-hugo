@@ -57,7 +57,7 @@ JOIN sys.trace_columns TraceData ON TraceInfo.columnid = TraceData.trace_column_
 The results of the unique event names
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-46.png?mtime=1303838288"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-46.png?mtime=1303838288" width="358" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-46.png?mtime=1303838288"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-46.png?mtime=1303838288" width="358" height="261" /></a>
 </div>
 
  
@@ -103,7 +103,7 @@ SELECT * FROM ::fn_trace_getinfo(default)
 Load the file that was represented in the property value 2 row returned.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-47.png?mtime=1303838288"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-47.png?mtime=1303838288" width="482" height="128" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-47.png?mtime=1303838288"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-47.png?mtime=1303838288" width="482" height="128" /></a>
 </div>
 
  
@@ -125,7 +125,7 @@ JOIN sys.trace_events TraceEvents ON TraceInfo.eventclass = TraceEvents.trace_ev
 WHERE ObjectName = 'Junked'
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-49.png?mtime=1303838526"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-49.png?mtime=1303838526" width="529" height="113" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-49.png?mtime=1303838526"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-49.png?mtime=1303838526" width="529" height="113" /></a>
 </div>
 
  

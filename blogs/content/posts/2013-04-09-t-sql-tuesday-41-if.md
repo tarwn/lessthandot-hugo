@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank"><img style="float: left;" src="/wp-content/uploads/users/mndba/TSQL2sDay150x150.jpg?mtime=1365522663" alt="" width="150" height="150" /></a>
+  <a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/mndba/TSQL2sDay150x150.jpg?mtime=1365522663" alt="" width="150" height="150" /></a>
 </div>
 
 I didn't think my first blog post on [LTD][1] would be for a T-SQL Tuesday, but this month's topic was so timely for me I had no choice but to participate.

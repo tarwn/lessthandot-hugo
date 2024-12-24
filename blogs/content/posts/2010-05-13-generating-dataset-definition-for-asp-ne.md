@@ -146,7 +146,7 @@ static void Main(string[] args)
 You can then use the app like so:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/generating-report-definition-for-asp-net/ReportDataSetDefinitionGenerator.PNG" alt="" title="" width="671" height="335" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/generating-report-definition-for-asp-net/ReportDataSetDefinitionGenerator.PNG" alt="" title="" width="671" height="335" />
 </div>
 
 And it would generate the output shown above in a file in /Output, all ready to paste into your .rdl(c) file. I've used this for 2008 .rdlc files (which correspond to 2005 .rdl files), not sure if there were any changes to DataSet definitions that would prevent this from being used with 2008 .rdl's.

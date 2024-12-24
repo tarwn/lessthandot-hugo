@@ -34,19 +34,19 @@ Or in my case I just used the GUI.
 Then I downloaded the [nugetpackages from ferventcoders github account][3] and copied the Chocolatey folder in the \_template folder to c:/CODE/\_templates which will give you something like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey11.png?mtime=1315639492"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey11.png?mtime=1315639492" width="905" height="348" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey11.png?mtime=1315639492"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey11.png?mtime=1315639492" width="905" height="348" /></a>
 </div>
 
 And now you can do the commandline thing and prepare your package easily.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey12.png?mtime=1315639610"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey12.png?mtime=1315639610" width="707" height="213" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey12.png?mtime=1315639610"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey12.png?mtime=1315639610" width="707" height="213" /></a>
 </div>
 
 You will now find that it has created a package in your user folder.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey13.png?mtime=1315639732"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey13.png?mtime=1315639732" width="905" height="418" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey13.png?mtime=1315639732"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey13.png?mtime=1315639732" width="905" height="418" /></a>
 </div>
 
 ## The package
@@ -92,17 +92,17 @@ try {
 After you have done all this. You have to pack it up with nuget.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey14.png?mtime=1315641116"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey14.png?mtime=1315641116" width="707" height="255" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey14.png?mtime=1315641116"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey14.png?mtime=1315641116" width="707" height="255" /></a>
 </div>
 
 and now we should be able to test our package.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey15.png?mtime=1315644145"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey15.png?mtime=1315644145" width="675" height="391" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey15.png?mtime=1315644145"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey15.png?mtime=1315644145" width="675" height="391" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey16.png?mtime=1315644166"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey16.png?mtime=1315644166" width="707" height="717" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey16.png?mtime=1315644166"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey16.png?mtime=1315644166" width="707" height="717" /></a>
 </div>
 
 And, woohoo, our program is installed.
@@ -114,7 +114,7 @@ Now I just need to upload the nupkg file to thocolatey.org and let you guys play
 [And here it is][4].
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey17.png?mtime=1315644515"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey17.png?mtime=1315644515" width="924" height="513" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey17.png?mtime=1315644515"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey17.png?mtime=1315644515" width="924" height="513" /></a>
 </div>
 
 ## Conclusion

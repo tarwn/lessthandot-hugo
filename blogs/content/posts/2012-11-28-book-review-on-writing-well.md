@@ -26,7 +26,7 @@ Writing well is not about putting words on a piece of paper (or typing them into
 
 I think the only way to do justice to this book is list my favorite quotes – and there are many.
 
-_<img style="vertical-align: text-top;" src="/wp-content/uploads/users/grrlgeek/words.JPG?mtime=1354110128" alt="" width="159" height="84" />_
+_<img style="vertical-align: text-top;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/words.JPG?mtime=1354110128" alt="" width="159" height="84" />_
 
 _On principles_: "I often find myself reading with interest about a topic I never thought would interest me – some scientific quest, perhaps. What holds me is the enthusiasm of the writer for his field."
 
@@ -62,7 +62,7 @@ _On the lead and the ending_: "The most important sentence in any article is the
 
 _On bits & pieces_: "Use active verbs unless there is no comfortable way to get around using a passive verb."
 
-"Most adverbs are unnecessary." <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/writing.JPG?mtime=1354110128" alt="" width="149" height="78" />
+"Most adverbs are unnecessary." <img style="float: right;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/writing.JPG?mtime=1354110128" alt="" width="149" height="78" />
 
 "Most adjectives are also unnecessary."
 

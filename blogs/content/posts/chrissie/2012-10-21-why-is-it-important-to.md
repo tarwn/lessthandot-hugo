@@ -53,7 +53,7 @@ Using s1 = New FileStream("test1", FileMode.Create)
 will throw an exception.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Using/Using1.png?mtime=1350809372"><img alt="" src="/wp-content/uploads/users/chrissie1/Using/Using1.png?mtime=1350809372" width="615" height="403" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Using/Using1.png?mtime=1350809372"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Using/Using1.png?mtime=1350809372" width="615" height="403" /></a>
 </div>
 
 ## The isnot nothing
@@ -72,7 +72,7 @@ Dim s2 = New FileStream("test2", FileMode.Create)
 would have given you this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Using/Using2.png?mtime=1350809728"><img alt="" src="/wp-content/uploads/users/chrissie1/Using/Using2.png?mtime=1350809728" width="581" height="418" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Using/Using2.png?mtime=1350809728"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Using/Using2.png?mtime=1350809728" width="581" height="418" /></a>
 </div>
 
 but the using statement does not cause this.

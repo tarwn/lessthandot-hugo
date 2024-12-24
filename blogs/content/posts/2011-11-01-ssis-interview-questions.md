@@ -24,7 +24,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <a href="http://msdn.microsoft.com/en-us/library/ms141026.aspx"><img src="/wp-content/uploads/blogs/DataMgmt/ssis_center.gif?mtime=1320114889" alt="" width="118" height="110" align="left" /></a>
+  <a href="http://msdn.microsoft.com/en-us/library/ms141026.aspx"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssis_center.gif?mtime=1320114889" alt="" width="118" height="110" align="left" /></a>
 </div>
 
 A while ago I had written some questions for an SSIS discussion. I happen to tweet that I was doing this and received some requests to post some of those questions. This was mostly out of curiosity of what I thought made really good SSIS questions. All but one or two of these questions I feel are more advanced questions that relate to SSIS and I have hopes they will indeed, test you. Then again, what I think is advanced may be extremely simple to others. In saying that, the shortened list of questions I thought were interesting for others to try answer (with or without BOL which you can open directly by clicking the diagram above [and can fully answer any of these. It is how I learned them]). It is up to you if you want to test yourself or not. I'm sure everyone will enjoy trying them out so post your answers in the comments. Don't be shy; this is how we learn from each other. My own answers may be worded as such that they are completely off too. I hope everyone that visits LTD would let me know so I don't make the mistake twice.

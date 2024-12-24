@@ -29,7 +29,7 @@ Now open SQL Server Profiler from the performance tools section located in the a
 Create a new trace and either save to a table or a file for the output. Saving to a table for this type of task is useful so we can query the results later and will not be a heavy performance issue as the trace will not be running long. Next, click the Event Selection so we can filter out most of the batch statements that we don't want to see. I put my filter to only show ApplicationName value of "Microsoft SQL Server Management Studio" and also LoginName of myself. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/am2.png" alt="" title="" width="480" height="315" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/am2.png" alt="" title="" width="480" height="315" />
 </div></p> 
 
 Once that is completely setup, hit Run to start the trace.
@@ -41,7 +41,7 @@ We can see that the queries are based on several DMV/DMF and are being inserted 
 Let's show this by grabbing the query that populates the file information in the "Data File I/O" section of the Activity Monitor. The query that does this should look like this in the beginning of the batch
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/am.gif" alt="" title="" width="555" height="177" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/am.gif" alt="" title="" width="555" height="177" />
 </div></p> 
 
 To use this query for ourselves, all we need to do is comment out the INSERT INTO #am_dbfilestats and we can either convert the INSERT INTO to a SELECT INTO statement with our own temporary table or simply use the query as a direct SELECT 

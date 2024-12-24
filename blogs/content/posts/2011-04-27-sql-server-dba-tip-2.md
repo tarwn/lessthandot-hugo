@@ -30,7 +30,7 @@ Before deciding on space required and configurations such as RAID levels, we hav
 _A general guideline to follow:_
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-44.png?mtime=1303501294"><img src="/wp-content/uploads/blogs/DataMgmt/-44.png?mtime=1303501294" alt="" width="700" height="213" /></a>
+  <a href="/media/blogs/DataMgmt/-44.png?mtime=1303501294"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-44.png?mtime=1303501294" alt="" width="700" height="213" /></a>
 </div>
 
 **System Databases**

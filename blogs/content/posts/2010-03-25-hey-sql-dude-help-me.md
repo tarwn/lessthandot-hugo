@@ -26,7 +26,7 @@ This is an extension of "[Finding SQL Server Support – Become an expert yourse
 Some have not even heard of community and support tools like LessThanDot.com, the MSDN forums, or even the SQL community on Twitter. Those who do know about them are hesitant to actively engage the community or the community's leaders. Reasons include shyness, fear, a bad experience with someone egotistical dude in a forum, or simply a reluctance to waste someone else's time. Guess what though, simply put, there's really nothing to fear. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/community.jpg" alt="" title="" width="534" height="368" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/community.jpg" alt="" title="" width="534" height="368" />
 </div>
 
 ## Get over the fear

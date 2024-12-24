@@ -25,7 +25,7 @@ tags:
 I use the acrobat reader activex control to show pdf&#8217;s in my winforms application. And yesterday I was bitching about it on twitter because it for some reason was blocking a folder on my buildserver every time I ran a build. At that point in time I could either choose to avoid the tests that made this happen or just use a hammer and get rid of the adobe acrobat reader at the end of my build. So I bitched about this on twitter, as one always does, and I got some very useful replies.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet.png?mtime=1320912937"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet.png?mtime=1320912937" width="508" height="727" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet.png?mtime=1320912937"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet.png?mtime=1320912937" width="508" height="727" /></a>
 </div>
 
 And did you see the suggestion by the ever brilliant [Jeremiah Peschka][1]. So I did what he said and checked that project out.
@@ -41,13 +41,13 @@ This is very easy and if you then open and run it you even get a little demo app
 I opened a pdf with it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623" width="790" height="640" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623" width="790" height="640" /></a>
 </div>
 
 And I did the OCR thing on that pdf file.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet3.png?mtime=1320913634"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet3.png?mtime=1320913634" width="496" height="964" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet3.png?mtime=1320913634"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet3.png?mtime=1320913634" width="496" height="964" /></a>
 </div>
 
 I must say that the sample app didn&#8217;t do the OCR. I had to change the click event for that button to this. But that was a minor thing.

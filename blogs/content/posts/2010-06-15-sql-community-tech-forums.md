@@ -24,7 +24,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/sqlu_tiny.gif" alt="" title="" width="54" height="60" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/sqlu_tiny.gif" alt="" title="" width="54" height="60" align="left" />
 </div>
 
 Welcome to another day of the Community Service week for [SQL University][1]. Jes Borland ([Blog][2] | [Twitter][3]) wrote an [excellent class][4] yesterday on the SQL Community and areas that help connect us all. Today we're going to move on into the service parts of the SQL community and show how we can keep building the community. I'd like to thank Jes again for helping author todays topic on technical forums. 
@@ -36,7 +36,7 @@ We're devoting an entire class to technical forums this week. Forums have been a
 **All bases covered**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/big _circle.gif" alt="" title="" width="645" height="504" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/big _circle.gif" alt="" title="" width="645" height="504" />
 </div>
 
 SQL Server has grown to cover a wide flavor of specialized fields over the last decade. Business Intelligence, CLR specialists, Tuning Experts, Mud Wrestling administrators, SAN Experts, Broker Experts, Full Text Search Experts, T-SQL Experts...the list goes on and on. A lot of these experts fit into groups such as the BI group, the SQL Programming group and the DBA group. In each of these groups you will find leaders that jump at the opportunity to throw what they know out into the public to help with any problems, new development or implementations. These members of the community often are referred to as answerers. And even the answerers turn to the others for help in the time of need, so we all become answerers in the community. 
@@ -68,7 +68,7 @@ It is absolutely critical to understand that the members in these forums do not 
 When every resource fails you: Books Online, real books, your secret cube buddy that knows how to write SELECT *, the help desk solution of reboot doesn't work – give the technical forums a try. When you get an answer and are sitting back relaxing, push the chair back to the keyboard and see if you can return the favor by helping on the next thread under yours.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/crazy_hair_puller.gif" alt="" title="" width="101" height="160" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/crazy_hair_puller.gif" alt="" title="" width="101" height="160" align="left" />
 </div>
 
 There is no need to pull your hair out at the roots; no need to call the CTO and tell them you quit before they fire you for not being able to fix it; no need to literally break down. Give it a try and post your situation on a SQL Server forum. I think you will be pleasantly surprised at the results you receive.

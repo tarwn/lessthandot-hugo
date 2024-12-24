@@ -17,7 +17,7 @@ categories:
 Saturday, April 21, 2012 will be an historic occasion: the first [SQL Saturday][1] will take place on Wisconsin soil!
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751" alt="" />
 </p>
 
 After attending many SQL Saturdays from Ohio to Portland over the past years, I decided we needed one in Wisconsin. We have a strong SQL community, with three user groups and many active professionals that want to learn and network. Madison, where "my" user group is based, seemed the perfect location – very central, and with great facilities. The planning began.

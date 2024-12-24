@@ -28,7 +28,7 @@ I have setup a consoleapplication with 2 folders and a file in each folder.
 Something like this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/path/Path.png" alt="" title="" width="157" height="129" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/path/Path.png" alt="" title="" width="157" height="129" />
 </div>
 
 I set the file properties of Class1.vb and Class2.vb to Build Action -> None and Copy to Output Directory -> Copy Always.

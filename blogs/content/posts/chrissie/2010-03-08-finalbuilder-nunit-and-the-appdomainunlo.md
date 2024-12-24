@@ -74,7 +74,7 @@ It is pretty easy to do in [finalbuilder][4] 5, once you know how ;-).
 You start by creating an **Execute Program** action from the Windows OS group. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder1.png" alt="" title="" width="558" height="499" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder1.png" alt="" title="" width="558" height="499" />
 </div>
 
 In **Program File** you fill in the location of your nunit-console. **Start In** is the location of the assembly you wanna test and **Parameters** will have the name of the assembly. As you can see, I disabled **Program exit code, must be** because I don&#8217;t need it.
@@ -82,7 +82,7 @@ In **Program File** you fill in the location of your nunit-console. **Start In**
 Then we add a **Define XML Document** action (XML group) to the Execute Program action we defined before. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder2.png" alt="" title="" width="560" height="499" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder2.png" alt="" title="" width="560" height="499" />
 </div>
 
 In **XML Document Name** we specify a name that we will use in later actions and we fill in the **Load document from file**. By default, Nunit will create an XML file in the assembly folder that is named TestResult.xml, so you use that.
@@ -90,7 +90,7 @@ In **XML Document Name** we specify a name that we will use in later actions and
 Now we add a variable that we will use in the next step.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder6.png" alt="" title="" width="714" height="530" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder6.png" alt="" title="" width="714" height="530" />
 </div>
 
 We call it TestFailures and leave all the other things default.
@@ -98,7 +98,7 @@ We call it TestFailures and leave all the other things default.
 Then we add a **Read XML value to Variable** action.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder3.png" alt="" title="" width="560" height="497" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder3.png" alt="" title="" width="560" height="497" />
 </div>
 
 In **XML File** we select **XML Document** and choose the one we just created from the list. We fill in the **XPath to Node** to start looking in //test-results and we **Read an attribute of the XPath Node** named failures. And in Variable To Set we pick the TestFailures variable we just created.
@@ -106,7 +106,7 @@ In **XML File** we select **XML Document** and choose the one we just created fr
 Nearly done. Last step is to add an if..Then action and add a Raise Exception action to that If .. Then Action. Both can be found in the Flow Control group.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder4.png" alt="" title="" width="559" height="498" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder4.png" alt="" title="" width="559" height="498" />
 </div>
 
 For the **Left-Hand Value** we type in %Test-Failures% which is the name of the variable we made earlier. **Operator** is greater than and **Right-Hand Value** is 0. Meaning that it will Raise an Exception if we get 1 or more failures.
@@ -114,7 +114,7 @@ For the **Left-Hand Value** we type in %Test-Failures% which is the name of the 
 We should then see the following.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder5.png" alt="" title="" width="907" height="86" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/finalbuilder/finalbuilder5.png" alt="" title="" width="907" height="86" />
 </div>
 
 You should add a variable and if then for errors too just to be sure.

@@ -81,7 +81,7 @@ The myOptions is the same as what property I added in my PlantsController.
 And tada.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/angularjs/angularjs4.png?mtime=1359918800"><img alt="" src="/wp-content/uploads/users/chrissie1/angularjs/angularjs4.png?mtime=1359918800" width="910" height="498" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs4.png?mtime=1359918800"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs4.png?mtime=1359918800" width="910" height="498" /></a>
 </div>
 
 But you might see that the date is not well formatted. Let&#8217;s fix that.
@@ -140,7 +140,7 @@ and the columndefinition then becomes this.
 And tada!!!!
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/angularjs/angularjs3.png?mtime=1359918693"><img alt="" src="/wp-content/uploads/users/chrissie1/angularjs/angularjs3.png?mtime=1359918693" width="910" height="498" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs3.png?mtime=1359918693"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs3.png?mtime=1359918693" width="910" height="498" /></a>
 </div>
 
 ## Conclusion

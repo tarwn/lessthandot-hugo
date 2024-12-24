@@ -35,13 +35,13 @@ These two questions are truly one and the same.  The first, OLTP or OLAP, dicta
 In the following two table structures, an ordering system was needed.  Both table structures meet the needs of an order header, details and shipment storage.  As shown in figure 1, the non-normalized structure has the word "poor" in the naming convention.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/design_perf_1.gif?mtime=1358783965"><img alt="" src="/wp-content/uploads/blogs/All/design_perf_1.gif?mtime=1358783965" width="419" height="417" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/design_perf_1.gif?mtime=1358783965"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/design_perf_1.gif?mtime=1358783965" width="419" height="417" /></a>
 </div>
 
 Figure 1 – Poor design showing lack of normalization
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-46.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-46.png?mtime=1358783966" width="624" height="355" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-46.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-46.png?mtime=1358783966" width="624" height="355" /></a>
 </div>
 
 Figure 2 – Better design moving to normalizing levels
@@ -63,7 +63,7 @@ SELECT TOP 1000 * FROM OrderHDR
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-47.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-47.png?mtime=1358783966" width="624" height="284" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-47.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-47.png?mtime=1358783966" width="624" height="284" /></a>
 </div>
 
 In the results above, we can see that the data in customerAddress, customerCity, customerRegion, and customerCountry is repeated.  This is a key indicator that normalizing the data is needed.  This has been done in the second structure shown in figure 2 with Contact and further with Carrier.
@@ -89,7 +89,7 @@ order by obj.name
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-48.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-48.png?mtime=1358783966" width="408" height="149" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-48.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-48.png?mtime=1358783966" width="408" height="149" /></a>
 </div>
 
 Figure 3 – Reviewing pages with catalog views
@@ -121,7 +121,7 @@ GO
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-49.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-49.png?mtime=1358783966" width="624" height="156" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-49.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-49.png?mtime=1358783966" width="624" height="156" /></a>
 </div>
 
 Figure 4 – Querying a poor design
@@ -136,7 +136,7 @@ GO
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-50.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-50.png?mtime=1358783966" width="426" height="146" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-50.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-50.png?mtime=1358783966" width="426" height="146" /></a>
 </div>
 
 Figure 5 – Plan after tuning
@@ -144,7 +144,7 @@ Figure 5 – Plan after tuning
 With the new plan after tuning with the indexing, the number of pages being pulled into the buffer are shown below in Figure 6.  Overall, the page count is not high.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-51.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-51.png?mtime=1358783966" width="624" height="82" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-51.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-51.png?mtime=1358783966" width="624" height="82" /></a>
 </div>
 
 Figure 6 – Buffer review after tuning
@@ -170,7 +170,7 @@ GO
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-52.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-52.png?mtime=1358783966" width="624" height="142" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-52.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-52.png?mtime=1358783966" width="624" height="142" /></a>
 </div>
 
 Figure 7 – normalizing and plan generated from same procedure
@@ -183,7 +183,7 @@ GO
 ```
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/All/urgh_1.gif?mtime=1358786105" width="437" height="143" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/urgh_1.gif?mtime=1358786105" width="437" height="143" />
 </div>
 
 Figure 8 – Plan after tuning
@@ -191,7 +191,7 @@ Figure 8 – Plan after tuning
 We do see a slight difference in the operational cost of the order header and detail tables.  This is effectively due to the cost associated with the size.  Looking at the buffer usage, we see a slightly lower number of pages from the header table.  Given the header table is the one holding the most redundancy in the non-normalized design, this was expected.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/All/urgh_2.gif?mtime=1358786105" width="624" height="97" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/urgh_2.gif?mtime=1358786105" width="624" height="97" />
 </div>
 
 Figure 9 – Review buffered page counts
@@ -215,7 +215,7 @@ GO
 From the above procedure, the following plan is generated and resulting buffer needs in page count.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/design_perf_21.gif?mtime=1358784827"><img alt="" src="/wp-content/uploads/blogs/All/design_perf_21.gif?mtime=1358784827" width="809" height="283" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/design_perf_21.gif?mtime=1358784827"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/design_perf_21.gif?mtime=1358784827" width="809" height="283" /></a>
 </div>
 
 Looking at the normalized design and the same needs, the following procedure can be used and executed.
@@ -236,7 +236,7 @@ GO
 Resulting in the following plan and buffer needs as page counts.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827"><img alt="" src="/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827" width="716" height="298" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/design_perf_20.gif?mtime=1358784827" width="716" height="298" /></a>
 </div>
 
 As we can see, there isn't a large difference.  So far we've looked at queries and plans that are similar in resource consumption, other than a slight variance in pages pulled into the buffer.  Let's take a look at the order header table now.  The order header table takes on a severe non-normalized factor.  The first thing that is obvious is the customer data.  In the poorly designed order header table, the customer data is not unique – it's repeated and redundancy starts to creep in.
@@ -291,7 +291,7 @@ GO
 Plan for the non-normalized design (note the sort operation due to poor statistics
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-58.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-58.png?mtime=1358783966" width="624" height="202" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-58.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-58.png?mtime=1358783966" width="624" height="202" /></a>
 </div>
 
 ```sql
@@ -306,7 +306,7 @@ GO
 Now a plan for the more normalized design.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-59.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-59.png?mtime=1358783966" width="624" height="197" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-59.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-59.png?mtime=1358783966" width="624" height="197" /></a>
 </div>
 
 These two plans take on a very different path and overall impact to the resource utilization for the server.  The first plan on the poor design, shows a small plan that is effectively performing two index seeks.  This, in many eyes, would be seen as okay and may be skipped over in a performance troubleshooting situation.  However, the overall execution time is 3062 milliseconds.  Again, this may not seem like a major issue but if this query was used in a normal operation that caused an execution count of 300 and hour, we are looking at a potential bottleneck in performance. Poor statistics are also in play here and selectivity. Altering the statistics by updating would generate a different but still, not memory effective plan. 
@@ -318,19 +318,19 @@ So what were the IO effects?  The cause behind the poor performance of the desi
 For the design that implemented more normalization, we pulled the following into the buffer.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-60.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-60.png?mtime=1358783966" width="624" height="119" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-60.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-60.png?mtime=1358783966" width="624" height="119" /></a>
 </div>
 
 For the design that has little to no normalization
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-61.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-61.png?mtime=1358783966" width="624" height="110" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-61.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-61.png?mtime=1358783966" width="624" height="110" /></a>
 </div>
 
 As we can see, the impact of these two designs and either normalizing or not, has a major impact on the overall IO needs relating to needs for the memory.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-62.png?mtime=1358783966"><img alt="" src="/wp-content/uploads/blogs/All/-62.png?mtime=1358783966" width="782" height="299" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-62.png?mtime=1358783966"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-62.png?mtime=1358783966" width="782" height="299" /></a>
 </div>
 
 The normalized procedure to insert a header row takes more effort with a lookup to the contact table to ensure there isn't a violation of the key constraint.  The resources used in the insert and the page level, all equating to more IO, cause this to still be slightly more efficient though.

@@ -29,13 +29,13 @@ I told you [how to install powerconsole in a previous post][1]. But you can also
 Here is where you can find the Powerconsoleuserprofile or at least that is where you are supposed to find it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole7.png?mtime=1298715741"><img alt="" src="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole7.png?mtime=1298715741" width="532" height="70" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole7.png?mtime=1298715741"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole7.png?mtime=1298715741" width="532" height="70" /></a>
 </div>
 
 If you try the notepad command and get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole8.png?mtime=1298715830"><img alt="" src="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole8.png?mtime=1298715830" width="861" height="307" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole8.png?mtime=1298715830"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole8.png?mtime=1298715830" width="861" height="307" /></a>
 </div>
 
 you better get your explorer open and create the file.
@@ -56,7 +56,7 @@ Function branch()
 after a restart of Visual Studio. I can now do this. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole9.png?mtime=1298716073"><img alt="" src="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole9.png?mtime=1298716073" width="298" height="91" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole9.png?mtime=1298716073"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole9.png?mtime=1298716073" width="298" height="91" /></a>
 </div>
 
 > <span class="MT_red">Big warning.<br /> If you have any syntax error anywhere in that ps1 file than the console will just ignore all functions in that file. Not just one ALL of them. I know I tried.</span>
@@ -79,7 +79,7 @@ Function commit($message)
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole10.png?mtime=1298716516"><img alt="" src="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole10.png?mtime=1298716516" width="863" height="496" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole10.png?mtime=1298716516"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole10.png?mtime=1298716516" width="863" height="496" /></a>
 </div>
 
 I have just save myself a gazilion number of keystrokes. I hope I saved you some too.

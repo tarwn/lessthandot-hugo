@@ -24,7 +24,7 @@ The purpose of this property is to allow you to filter the results of a dataset 
 To access the property, right-click a row or column group in the tablix and select Tablix Properties. Select Filters. The options are Expression, Operator, and Value.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/filter 1.png?mtime=1360071212" alt="" width="579" height="596" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/filter 1.png?mtime=1360071212" alt="" width="579" height="596" />
 </p>
 
 Expression – a field from the data set. You can also select the fx button to write an expression.
@@ -38,13 +38,13 @@ Value –  the value you want to compare the expression to. This can be a singl
 I add the Expression [OrderYear], I set the Operator to >, and I set the Value to 2006.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/filter 2.png?mtime=1360071212" alt="" width="578" height="599" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/filter 2.png?mtime=1360071212" alt="" width="578" height="599" />
 </p>
 
 When run, the report only shows totals for orders placed in 2007 and after.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/filter 3.png?mtime=1360071212" alt="" width="483" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/filter 3.png?mtime=1360071212" alt="" width="483" height="301" />
 </p>
 
 There are many ways to filter the data that will be shown on a report. You can filter the T-SQL, through the use of a WHERE clause. You can filter the dataset. You can filter a specific item. Why choose the latter? Two main use cases come to mind. You may have a stored procedure you cannot modify that returns more data than you need. You may also have one dataset for multiple report items, and you want to show different sets of data in each item.

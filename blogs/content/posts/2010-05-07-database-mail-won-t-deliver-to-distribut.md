@@ -30,6 +30,6 @@ I talked to the admin again, and he had an aha! moment. Apparently in our compan
 
 It worked! And he tested by sending an external email to the distribution group and the email was blocked. Success! Now I can email my distribution group internally and external emails are still blocked.
 
- [1]: /wp-content/uploads/blogs/DataMgmt/thirster42/DBMail/ProfileOld.JPG
- [2]: /wp-content/uploads/blogs/DataMgmt/thirster42/DBMail/ProfileNew.JPG
- [3]: /wp-content/uploads/blogs/DataMgmt/thirster42/DBMail/developers.JPG
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DBMail/ProfileOld.JPG
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DBMail/ProfileNew.JPG
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DBMail/developers.JPG

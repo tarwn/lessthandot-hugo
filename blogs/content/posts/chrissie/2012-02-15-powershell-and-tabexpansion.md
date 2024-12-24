@@ -22,7 +22,7 @@ To be clear tabexpansion is when you type something and then do tab and the IDE 
 Like that.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953"><img alt="" src="/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953" width="739" height="135" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953" width="739" height="135" /></a>
 </div>
 
 That&#8217;s cool, since us old people are not good at remembering things so we need these kinds of things to help us. 

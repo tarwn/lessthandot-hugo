@@ -70,7 +70,7 @@ SSIS has much more to it than being an ETL product. With baseline capture tasks,
 Take the following example to start from
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/create_base_1.gif" alt="" title="" width="628" height="451" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/create_base_1.gif" alt="" title="" width="628" height="451" />
 </div>
 
 In this control flow we can see WMI reader tasks executing to collect OS, IO and Memory information. This all then goes into a DBA database and tables to collect the data over time.
@@ -78,13 +78,13 @@ In this control flow we can see WMI reader tasks executing to collect OS, IO and
 > <span class="MT_red">Note: before going on, let's talk about WMI reader task. WMI reader task exposes WMI to read in and directly into a flat file or variable. I like to use the flat file option to minimize memory usage so when doing this, ensure you "append" to the files and not leave the default, Keep original</span>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/create_base_2.gif" alt="" title="" width="524" height="179" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/create_base_2.gif" alt="" title="" width="524" height="179" />
 </div>
 
 Executing all of the WMI reads then sets them into a Data Flow task that will consume the files, convert the data types and import them into a SQL Destination.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/create_base_3.gif" alt="" title="" width="331" height="217" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/create_base_3.gif" alt="" title="" width="331" height="217" />
 </div>
 
 Collecting perfmon will already have a set file given the perfmon setup done outside of SSIS. I recommend going over to Brent Ozar's ([Twitter][7] | [Blog][8]) blog on [perfmon setup][9]. It's detailed and well drawn up to get collection of the information going. 
@@ -118,7 +118,7 @@ Still no go on the money for those nice tools and development time? Performance 
 SQL Server 2005 and 2008 also have the Server Dashboard as part of the canned reports that can be run from SSMS.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/create_base_4.gif" alt="" title="" width="628" height="429" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/create_base_4.gif" alt="" title="" width="628" height="429" />
 </div>
 
 This is all very useful and valuable information about the state of your SQL Server and the databases.

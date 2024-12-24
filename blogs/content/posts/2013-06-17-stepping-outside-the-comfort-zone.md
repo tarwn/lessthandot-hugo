@@ -15,7 +15,7 @@ categories:
   - Professional Development
 
 ---
-<img style="vertical-align: top;" src="/wp-content/uploads/users/grrlgeek/your-comfort-zone.jpg?mtime=1322622240" alt="" width="380" height="220" />
+<img style="vertical-align: top;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/your-comfort-zone.jpg?mtime=1322622240" alt="" width="380" height="220" />
 
 I love and am very familiar with SQL Server. But, as a consultant, I need to step outside of that box pretty often, and advise people on applications, storage, and networking. I have general knowledge of those topics, gathered from many years in IT, seeing a lot of systems, and always being willing to learn.
 

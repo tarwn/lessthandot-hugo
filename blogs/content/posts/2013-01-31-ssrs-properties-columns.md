@@ -26,7 +26,7 @@ To access this property go to Report properties. Choose Columns.
 The options are Columns and Column Spacing.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 1.png?mtime=1359640987" alt="" width="286" height="249" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 1.png?mtime=1359640987" alt="" width="286" height="249" />
 </p>
 
 Columns: the number of columns the final report will have.
@@ -38,55 +38,55 @@ ColumnSpacing: the space between the columns.
 I set Columns to 3 and ColumnSpacing to .03125.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 1.png?mtime=1359640987" alt="" width="286" height="249" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 1.png?mtime=1359640987" alt="" width="286" height="249" />
 </p>
 
 The design pane shows 3 columns.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 2.png?mtime=1359640987" alt="" width="1231" height="175" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 2.png?mtime=1359640987" alt="" width="1231" height="175" />
 </p>
 
 I must set the margins for proper padding. I set left, right, and bottom to 0, and top to .1875.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 3.png?mtime=1359640987" alt="" width="302" height="91" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 3.png?mtime=1359640987" alt="" width="302" height="91" />
 </p>
 
 I can then drag an item on to the column. To create mailing labels, I need a list and a textbox. I place the list first, and set the width and height equal to that of the labels I'll be working with.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 4.png?mtime=1359640987" alt="" width="299" height="57" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 4.png?mtime=1359640987" alt="" width="299" height="57" />
 </p>
 
 I then add a text box width and height equal to the labels, and adjust the padding.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 5.png?mtime=1359640987" alt="" width="299" height="177" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 5.png?mtime=1359640987" alt="" width="299" height="177" />
 </p>
 
 Lastly, I need to set the width and height of the Body so the columns will be properly sized.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 6.png?mtime=1359640987" alt="" width="305" height="227" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 6.png?mtime=1359640987" alt="" width="305" height="227" />
 </p>
 
 I add my expression for the labels to the textbox. The design now looks like this.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 7.png?mtime=1359640987" alt="" width="735" height="179" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 7.png?mtime=1359640987" alt="" width="735" height="179" />
 </p>
 
 The preview of the report will only show one column.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 8.png?mtime=1359640987" alt="" width="682" height="322" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 8.png?mtime=1359640987" alt="" width="682" height="322" />
 </p>
 
 When rendered (in this example, as a PDF), the multiple columns will appear.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/columns 9.png?mtime=1359640987" alt="" width="933" height="240" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/columns 9.png?mtime=1359640987" alt="" width="933" height="240" />
 </p>
 
 Creating multi-column reports is easy, for the purposes of labels, nametags, lists, and more.

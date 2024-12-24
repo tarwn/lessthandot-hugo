@@ -329,7 +329,7 @@ code katas
 ## Countries
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/Countries.PNG?mtime=1355569906"><img alt="" src="/wp-content/uploads/blogs/All/Countries.PNG?mtime=1355569906" width="654" height="390" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/Countries.PNG?mtime=1355569906"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/Countries.PNG?mtime=1355569906" width="654" height="390" /></a>
 </div>
 
 Below is a list of the top 25 countries that visitors came from. Not surprisingly the United States is number 1, India is number 2. China is absent from this list, the other Asian country is the Philippines. The percentage are for the top 25 only not for the whole list.
@@ -699,7 +699,7 @@ Here is the breakdown by continent
 A map of the cities can bee seen below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/Cities.PNG?mtime=1356621539"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/Cities.PNG?mtime=1356621539" width="648" height="286" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/Cities.PNG?mtime=1356621539"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/Cities.PNG?mtime=1356621539" width="648" height="286" /></a>
 </div>
 
 Here is the list of the top 15 cities, you can also see those in the map above

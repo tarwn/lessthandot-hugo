@@ -37,7 +37,7 @@ Last but not least, I watched Paul Hiles ([twitter][12]) talk about "DMVs – Wh
 At that point, I think everyone's brains were full! We filtered into the main room where the organizers, volunteers and speakers were recognized. There was also plenty of swag to give away, thanks to the great sponsors. The grand prize was the iPad, given away by [Fusion-iO][13]. The crazy part? I WON. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/photo.JPG?mtime=1308055469"><img alt="" src="/wp-content/uploads/users/grrlgeek/photo.JPG?mtime=1308055469" width="484" height="648" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/photo.JPG?mtime=1308055469"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/photo.JPG?mtime=1308055469" width="484" height="648" /></a>
 </div>
 
 I think that picture says it all. Thank you! 

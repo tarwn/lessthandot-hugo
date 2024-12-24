@@ -23,23 +23,23 @@ Funnily enough you can&#8217;t take screenshots of Gadwin.
 But I made some anyways the old fashioned way, just because I love you my dear readers, yes I do.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin1.png?mtime=1299591047"><img alt="" src="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin1.png?mtime=1299591047" width="672" height="539" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin1.png?mtime=1299591047"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin1.png?mtime=1299591047" width="672" height="539" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin2.png?mtime=1299591056"><img alt="" src="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin2.png?mtime=1299591056" width="672" height="539" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin2.png?mtime=1299591056"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin2.png?mtime=1299591056" width="672" height="539" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin3.png?mtime=1299591066"><img alt="" src="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin3.png?mtime=1299591066" width="672" height="539" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin3.png?mtime=1299591066"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin3.png?mtime=1299591066" width="672" height="539" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin4.png?mtime=1299591076"><img alt="" src="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin4.png?mtime=1299591076" width="673" height="539" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin4.png?mtime=1299591076"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin4.png?mtime=1299591076" width="673" height="539" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin5.png?mtime=1299591086"><img alt="" src="/wp-content/uploads/users/chrissie1/Gadwin/Gadwin5.png?mtime=1299591086" width="674" height="539" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin5.png?mtime=1299591086"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Gadwin/Gadwin5.png?mtime=1299591086" width="674" height="539" /></a>
 </div>
 
 Just look at all the nice settings you get to play with. It&#8217;s amazing and free. Download it now and be productive.

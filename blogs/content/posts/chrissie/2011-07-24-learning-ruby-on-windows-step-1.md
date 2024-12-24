@@ -29,7 +29,7 @@ So I&#8217;m still using [Rubymine][1] (I guess until my trail runs out and I ha
 So first thing I did was create new class file. I called the file plant.rb and the classname was plant. And I got this error.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby9.png?mtime=1311491523"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby9.png?mtime=1311491523" width="489" height="127" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby9.png?mtime=1311491523"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby9.png?mtime=1311491523" width="489" height="127" /></a>
 </div>
 
 That&#8217;s strange, what does it mean? It means I should have started the name of my class with a capital. None of my tutorials I read mentioned this little fact. But good to know. I guess it is time to read up on Ruby naming conventions.
@@ -52,7 +52,7 @@ end```
 And of course it fails with a NoMethodError. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby10.png?mtime=1311492562"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby10.png?mtime=1311492562" width="1380" height="291" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby10.png?mtime=1311492562"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby10.png?mtime=1311492562" width="1380" height="291" /></a>
 </div>
 
 So I create one.
@@ -66,7 +66,7 @@ end```
 and run the test again. The test still fails but for a good reason. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby11.png?mtime=1311492794"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby11.png?mtime=1311492794" width="1378" height="289" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby11.png?mtime=1311492794"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby11.png?mtime=1311492794" width="1378" height="289" /></a>
 </div>
 
 So lets make the test pass shall we.
@@ -80,7 +80,7 @@ end```
 And it does pass.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby12.png?mtime=1311493032"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby12.png?mtime=1311493032" width="1376" height="288" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby12.png?mtime=1311493032"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby12.png?mtime=1311493032" width="1376" height="288" /></a>
 </div>
 
 Seems like we got the basics covered. Now I also want to test if I can set the name of my plant.
@@ -126,7 +126,7 @@ end```
 Which now results in the first test not passing and the second test passing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby13.png?mtime=1311493941"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby13.png?mtime=1311493941" width="1382" height="349" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby13.png?mtime=1311493941"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby13.png?mtime=1311493941" width="1382" height="349" /></a>
 </div>
 
 To mak the first test pass I need a constructor. In Ruby constructors are a method called initialize.

@@ -21,7 +21,7 @@ One of my goals with the chapter is to try out new, exciting ideas. One of my fa
 I didn't know how well this would go over. Getting up in front of a room full of people and presenting – especially on a technical topic – can be terrifying, and I didn't know if people would be up for it. I was delighted when five people signed up!
 
 <p style="text-align: center;">
-  <img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/FoxPASS April 2013 small.jpg?mtime=1365086759" alt="" width="408" height="306" />
+  <img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/FoxPASS April 2013 small.jpg?mtime=1365086759" alt="" width="408" height="306" />
 </p>
 
 <p style="text-align: center;">

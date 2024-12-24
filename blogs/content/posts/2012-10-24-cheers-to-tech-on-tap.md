@@ -17,7 +17,7 @@ categories:
 [Tech on Tap v1.3 PowerShell][1] was held on October 13. This was our third and final event for the year, and it was every bit as great as the first two.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" alt="" width="301" height="201" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" alt="" width="301" height="201" />
 </p>
 
 ### PowerShell

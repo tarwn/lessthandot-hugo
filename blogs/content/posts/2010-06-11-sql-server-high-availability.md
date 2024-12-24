@@ -29,7 +29,7 @@ tags:
 
 ---
 
-<img src="/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" /> 
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" /> 
 
 Welcome to the last class of HA / DR week for SQL University. It has been a great week discussing these topics with all of you. We [recapped][1] those classes in order to highlight the key points over the week yesterday. So far we've covered a great deal but really have only scratched the surface of SQL Server features for HA and DR. Today will be another scratch in the surface regarding the High Availability points for SQL Server. Be sure to check the resources links through this article. They will greatly add an extension to today and further build your knowledge of the vast amount of abilities we have at our disposal. 
 
@@ -46,7 +46,7 @@ administrators and teams set for their standards. The five nines level is a heig
 The table below illustrates the availability calculation. This table has been used for quite some time and has been adopted by IT teams as the measurement for downtime. Downtime equates to uptime (depends on if you are talking to a CTO, CEO or an IT manager how to phrase it). 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ha_1.gif" alt="" title="" width="547" height="310" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ha_1.gif" alt="" title="" width="547" height="310" />
 </div>
 
 <p align="center">
@@ -76,7 +76,7 @@ Database mirroring was introduced in SQL Server 2005 Standard and Enterprise edi
 Our landscape for data services can take on a new form for HA and exist without Windows Clustering as well.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ha_2.gif" alt="" title="" width="405" height="386" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ha_2.gif" alt="" title="" width="405" height="386" />
 </div>
 
 What this type of HA landscape provides is even more stripped down overhead in administrative burdens and we have cost savings opportunities to assist in providing a HA solution.

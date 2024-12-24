@@ -19,7 +19,7 @@ The first [Tech on Tap][1] was [so much fun][2] that we decided to do it again! 
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" alt="" />
 </p>
 
 **The Topic** 
@@ -55,7 +55,7 @@ It wouldn't be Tech on Tap without microbrews on tap! We'll be featuring [Stone 
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/AkRHuYgCQAEj5U4.jpg?mtime=1337691621" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/AkRHuYgCQAEj5U4.jpg?mtime=1337691621" alt="" />
 </p>
 
 <p style="text-align: center;">

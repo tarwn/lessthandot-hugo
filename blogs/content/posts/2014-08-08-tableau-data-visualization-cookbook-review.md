@@ -31,7 +31,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/08/scatterplot.png"><img class="alignnone wp-image-2898" src="/wp-content/uploads/2014/08/scatterplot.png" alt="scatterplot" width="500" height="598" srcset="/wp-content/uploads/2014/08/scatterplot.png 573w, /wp-content/uploads/2014/08/scatterplot-250x300.png 250w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/scatterplot.png"><img class="alignnone wp-image-2898" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/scatterplot.png" alt="scatterplot" width="500" height="598" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/scatterplot.png 573w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/scatterplot-250x300.png 250w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -39,7 +39,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/08/histogram.png"><img class="alignnone wp-image-2897" src="/wp-content/uploads/2014/08/histogram.png" alt="histogram" width="500" height="521" srcset="/wp-content/uploads/2014/08/histogram.png 725w, /wp-content/uploads/2014/08/histogram-288x300.png 288w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/histogram.png"><img class="alignnone wp-image-2897" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/histogram.png" alt="histogram" width="500" height="521" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/histogram.png 725w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/histogram-288x300.png 288w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -47,7 +47,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/08/boxwhiskerplot.png"><img class="alignnone wp-image-2899" src="/wp-content/uploads/2014/08/boxwhiskerplot.png" alt="boxwhiskerplot" width="800" height="146" srcset="/wp-content/uploads/2014/08/boxwhiskerplot.png 973w, /wp-content/uploads/2014/08/boxwhiskerplot-300x54.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/boxwhiskerplot.png"><img class="alignnone wp-image-2899" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/boxwhiskerplot.png" alt="boxwhiskerplot" width="800" height="146" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/boxwhiskerplot.png 973w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/08/boxwhiskerplot-300x54.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
 </p>
 
 <p style="text-align: justify">

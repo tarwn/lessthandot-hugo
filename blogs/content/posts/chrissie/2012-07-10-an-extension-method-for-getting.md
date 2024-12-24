@@ -49,7 +49,7 @@ End Class
 You will get this exception.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/crossthread/threading1.png?mtime=1341905293"><img alt="" src="/wp-content/uploads/users/chrissie1/crossthread/threading1.png?mtime=1341905293" width="965" height="137" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/crossthread/threading1.png?mtime=1341905293"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/crossthread/threading1.png?mtime=1341905293" width="965" height="137" /></a>
 </div>
 
 ## Good ugly code

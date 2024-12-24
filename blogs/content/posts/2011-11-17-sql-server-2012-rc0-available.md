@@ -25,4 +25,4 @@ SQL Server 2012 RC0 is available for download, you can download the bits here: h
 
 To read all my SQL Server 2012/Denali posts go here: /index.php/All/denali:
 
- [1]: /wp-content/uploads/blogs/DataMgmt/Denis/.evocache/sql2012.PNG/fit-400x320.PNG?mtime=1318434386 ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/sql2012.PNG/fit-400x320.PNG?mtime=1318434386 ""

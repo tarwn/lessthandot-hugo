@@ -29,7 +29,7 @@ tags:
 Managing objects in large and small installations of SQL Server can be a job in itself at times. In particular, for the DBA, objects we create on the instances we manage more often than not are found littered over the user and system databases. These objects more often are found in the master database in SQL Server. Really, why not put them there? We are the "masters" over the database server right? SSMS has this quality to it that when we connect to it, we get the master database glaring us in the face by default just like a booby. So of course that means we create our objects there. Right? 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/booby.gif" alt="" title="" width="460" height="504" /></p> 
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/booby.gif" alt="" title="" width="460" height="504" /></p> 
   
   <h3>
     Who's really the booby?

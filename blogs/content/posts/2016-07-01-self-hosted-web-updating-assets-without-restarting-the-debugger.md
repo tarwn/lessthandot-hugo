@@ -26,7 +26,7 @@ I've lived with this in the past, but the regular delay became annoying so I dec
 Web Projects run directly out of the project folder, so they are serving up the same version of the files we are editing, allowing real-time editing to be possible. With console applicaitons, we are editing the file in the project and relying on it being set to "Content" and "Copy Always" so the compiler will copy that content when we build. Since the application runs out of the bin folder, it's limited to that out of date copy of the files.
 
 <div id="attachment_4601" style="width: 624px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/06/AssetsFolder.png"><img src="/wp-content/uploads/2016/06/AssetsFolder.png" alt="Example Assets Folder" width="614" height="234" class="size-full wp-image-4601" srcset="/wp-content/uploads/2016/06/AssetsFolder.png 614w, /wp-content/uploads/2016/06/AssetsFolder-300x114.png 300w" sizes="(max-width: 614px) 100vw, 614px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/AssetsFolder.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/AssetsFolder.png" alt="Example Assets Folder" width="614" height="234" class="size-full wp-image-4601" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/AssetsFolder.png 614w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/AssetsFolder-300x114.png 300w" sizes="(max-width: 614px) 100vw, 614px" /></a>
   
   <p class="wp-caption-text">
     Example Assets Folder
@@ -139,7 +139,7 @@ I have two sets of files I want to handle, my LESS files and everything else.
 I already keep a powershell console window open in the background in my project folder, so it's no big deal to start the watch task and let it live back there in the background while I work (and it can continue running independent of starting and stopping the debugger, so I don't have to ever think about it). The project I'm working on is still fairly small (frontend with ~ 10 screens/viewmodels, 5-6 services) and at this time it can recreate and copy the stylesheet faster than I can Alt+Tab to my browser and press F5.
 
 <div id="attachment_4602" style="width: 541px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/06/CommandLine.png"><img src="/wp-content/uploads/2016/06/CommandLine.png" alt="Powershell Console" width="531" height="152" class="size-full wp-image-4602" srcset="/wp-content/uploads/2016/06/CommandLine.png 531w, /wp-content/uploads/2016/06/CommandLine-300x85.png 300w" sizes="(max-width: 531px) 100vw, 531px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/CommandLine.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/CommandLine.png" alt="Powershell Console" width="531" height="152" class="size-full wp-image-4602" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/CommandLine.png 531w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/CommandLine-300x85.png 300w" sizes="(max-width: 531px) 100vw, 531px" /></a>
   
   <p class="wp-caption-text">
     Powershell Console

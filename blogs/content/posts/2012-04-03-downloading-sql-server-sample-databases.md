@@ -23,7 +23,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/DownloadDB.PNG?mtime=1333503077"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/DownloadDB.PNG?mtime=1333503077" width="555" height="286" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/DownloadDB.PNG?mtime=1333503077"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/DownloadDB.PNG?mtime=1333503077" width="555" height="286" /></a>
 </div>
 
 Today Microsoft has improved the experience of downloading the sample databases for SQL server. As you can see from the image above, you can now quickly see all the different versions and all you have to do is click on the database that you are interested in. Gone are the days that you would have to search for the correct version, this is much improved..big thanks to Microsoft for this

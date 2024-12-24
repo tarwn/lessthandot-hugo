@@ -18,7 +18,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-40.png?mtime=1303401309"><img src="/wp-content/uploads/blogs/DataMgmt/-40.png?mtime=1303401309" alt="" width="78" height="75" align="left" /></a>
+  <a href="/media/blogs/DataMgmt/-40.png?mtime=1303401309"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-40.png?mtime=1303401309" alt="" width="78" height="75" align="left" /></a>
 </div>
 
 Yes, absolutely!  I strongly feel that all SQL Server Database Administrators and Developers should not only learn the basics and fundamental internals of Oracle, but should expand that to others such as DB2 and Sybase.  Why?  SQL Server is my mojo after all.  There shouldn't be much reason to venture into Klingon territory and maybe start a database server uprising.  There actually is one major reason it should be a requirement to know more than SQL Server: Not everyone runs SQL Server. (Although they may want to)
@@ -67,7 +67,7 @@ In the panel where you can add commands, enter "SELECT * FROM SYSTEM.HELP".  Th
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-41.png?mtime=1303401309"><img src="/wp-content/uploads/blogs/DataMgmt/-41.png?mtime=1303401309" alt="" width="366" height="347" /></a>
+  <a href="/media/blogs/DataMgmt/-41.png?mtime=1303401309"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-41.png?mtime=1303401309" alt="" width="366" height="347" /></a>
 </div>
 
  
@@ -83,7 +83,7 @@ The output is very similar to what you would see in SSMS.
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-42.png?mtime=1303401309"><img src="/wp-content/uploads/blogs/DataMgmt/-42.png?mtime=1303401309" alt="" width="220" height="168" /></a>
+  <a href="/media/blogs/DataMgmt/-42.png?mtime=1303401309"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-42.png?mtime=1303401309" alt="" width="220" height="168" /></a>
 </div>
 
  
@@ -105,7 +105,7 @@ DESCRIBE imports
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-43.png?mtime=1303401310"><img src="/wp-content/uploads/blogs/DataMgmt/-43.png?mtime=1303401310" alt="" width="624" height="313" /></a>
+  <a href="/media/blogs/DataMgmt/-43.png?mtime=1303401310"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-43.png?mtime=1303401310" alt="" width="624" height="313" /></a>
 </div>
 
  

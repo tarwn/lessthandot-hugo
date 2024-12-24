@@ -24,25 +24,25 @@ The purpose of this property is to display a specific message when no rows are r
 To access the property, select the data region and go to NoRowsMessage.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/NoRows 1.png?mtime=1360676751" alt="" width="249" height="83" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoRows 1.png?mtime=1360676751" alt="" width="249" height="83" />
 </p>
 
 **Example:** I have a report that shows sales by territory by year. It has a parameter for the order year. When a user inputs a year that has no orders, it currently displays a blank table. The users have indicated this is confusing and have suggested the report is "broken".
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/NoRows 2.png?mtime=1360676751" alt="" width="494" height="164" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoRows 2.png?mtime=1360676751" alt="" width="494" height="164" />
 </p>
 
 I go to NoRowsMessage and enter, "Year entered has no data. Enter another year."
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/NoRows 3.png?mtime=1360676751" alt="" width="352" height="101" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoRows 3.png?mtime=1360676751" alt="" width="352" height="101" />
 </p>
 
 When the report is run, if a user enters a year that has no orders, the message is displayed.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/NoRows 4.png?mtime=1360676751" alt="" width="397" height="157" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoRows 4.png?mtime=1360676751" alt="" width="397" height="157" />
 </p>
 
 **Further Reading:**

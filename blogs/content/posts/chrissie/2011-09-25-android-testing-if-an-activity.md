@@ -88,7 +88,7 @@ We know this works because we tested in out emulator. But testing it by clicking
 First we create a new Android test project.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android1.png?mtime=1316942131"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android1.png?mtime=1316942131" width="592" height="889" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android1.png?mtime=1316942131"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android1.png?mtime=1316942131" width="592" height="889" /></a>
 </div>
 
 We set the name of our project and we select the project to test.
@@ -96,7 +96,7 @@ We set the name of our project and we select the project to test.
 We should now create a jUnit test Case. Like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android2.png?mtime=1316942509"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android2.png?mtime=1316942509" width="556" height="635" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android2.png?mtime=1316942509"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android2.png?mtime=1316942509" width="556" height="635" /></a>
 </div>
 
 Give it a suitable name and set the superclass to <code class="codespan">android.test.ActivityUnitTestCase&lt;CloseButtonActivity&gt;</code>. After you made all the errors go away by pressing F2 a few times in Eclipse. You should end up with this.
@@ -179,19 +179,19 @@ And our ActivityUnitTestCase has a convenience method for us called isFinishCall
 When you run the tests via Run as -> Android jUnit test you will see that the emulator pops open and that the tests are run.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android3.png?mtime=1316943127"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android3.png?mtime=1316943127" width="996" height="900" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android3.png?mtime=1316943127"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android3.png?mtime=1316943127" width="996" height="900" /></a>
 </div>
 
 And all goes green.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android5.png?mtime=1316943532"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android5.png?mtime=1316943532" width="1600" height="900" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android5.png?mtime=1316943532"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android5.png?mtime=1316943532" width="1600" height="900" /></a>
 </div>
 
 If we want to make sure we can just delete the line this.activity.finish(); in our OnClickListener and see the second test go red.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/android4.png?mtime=1316943516"><img alt="" src="/wp-content/uploads/users/chrissie1/android/android4.png?mtime=1316943516" width="591" height="359" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android4.png?mtime=1316943516"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/android4.png?mtime=1316943516" width="591" height="359" /></a>
 </div>
 
 ## Conclusion

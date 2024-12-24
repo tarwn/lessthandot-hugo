@@ -41,19 +41,19 @@ I choose to install [TortoiseGit][5] to use as a client. But first you need to i
 Select the option Add "Git Bash here"
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github1.png" alt="" title="" width="513" height="398" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github1.png" alt="" title="" width="513" height="398" />
 </div>
 
 Select the option Run Git from the Windows Command Prompt
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github2.png" alt="" title="" width="513" height="398" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github2.png" alt="" title="" width="513" height="398" />
 </div>
 
 Select the option Use Windows style line endings
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github3.png" alt="" title="" width="513" height="398" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github3.png" alt="" title="" width="513" height="398" />
 </div>
 
 If it asks for PLink, locate plink.exe in your PuTTY install directory (e.g. C:Program FilesPuTTYplink.exe)
@@ -65,7 +65,7 @@ Then I installed TortoiseGit and rebooted.
 GitHub uses SSH and so you need to generate keys. That&#8217;s where PuTTy comes in. You use PuttyGen to Generate a key pair. Just click on the Generate button and move the mouse a little. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github4.png" alt="" title="" width="493" height="477" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github4.png" alt="" title="" width="493" height="477" />
 </div>
 
 Then Save the private key somewhere you can easily remember where you put it. And copy the text from the top textbox. Make sure you keep this text until you need it later on.
@@ -73,7 +73,7 @@ Then Save the private key somewhere you can easily remember where you put it. An
 Now also add the key to pageant. Just do add key and point it to the private key file you saved.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github5.png" alt="" title="" width="511" height="363" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github5.png" alt="" title="" width="511" height="363" />
 </div>
 
 ## GitHub
@@ -81,19 +81,19 @@ Now also add the key to pageant. Just do add key and point it to the private key
 Now you have to go to Github and create an account. Once you have your account you should first add the public key. You can add a public key in your account settings. You give it a name and you just copy in the public you copied a little earlier.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github6.png" alt="" title="" width="697" height="251" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github6.png" alt="" title="" width="697" height="251" />
 </div>
 
 Now that you have all this setup you can go to the http://github.com/structuremap/structuremap and click on the fork button. This will create a fork in your account. You can now go to you account and see the url you need to download it to you local repository. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github7.png" alt="" title="" width="930" height="230" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github7.png" alt="" title="" width="930" height="230" />
 </div>
 
 You should now create a directory where you want to save you sourcecode and then you right click on a directory somewhere and select TortoiseGit -> Settings. Then in Git -> config you set your name and emailaddress, the one you used to create your Github account.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github8.png" alt="" title="" width="709" height="474" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github8.png" alt="" title="" width="709" height="474" />
 </div>
 
 ## Clone
@@ -101,13 +101,13 @@ You should now create a directory where you want to save you sourcecode and then
 Then I decided to clone my github fork to my local repository. You give it the git url that you can copy paste from the github page. You set your local repository. And you point it to the private key file we created earlier.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github9.png" alt="" title="" width="485" height="364" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github9.png" alt="" title="" width="485" height="364" />
 </div>
 
 For NSubstitute I just used the read only url and did not fork it since I don&#8217;t really need to change that code for now.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/github/Github10.png" alt="" title="" width="485" height="364" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/github/Github10.png" alt="" title="" width="485" height="364" />
 </div>
 
 ## Conclusion

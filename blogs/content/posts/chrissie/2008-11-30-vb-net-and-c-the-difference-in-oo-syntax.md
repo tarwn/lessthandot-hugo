@@ -36,7 +36,7 @@ First we create a solution with 1 C# consoleapplication, 2 C# class libraries, 1
 The solution should look like this after you have done.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Beginners1.jpg" alt="" title="" width="308" height="422" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Beginners1.jpg" alt="" title="" width="308" height="422" />
 </div>
 
 ## Classes
@@ -66,7 +66,7 @@ Then we say that C# uses a namespace by default, in this case this is the projec
 Then we have the using statements. VB.Net doesn&#8217;t seem to have the corresponding Imports statements, this happens to have a simple explanation. Because VB.Net does have them, it just has project/assembly level imports for us, so we don&#8217;t have to type everything in every class.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Beginners2.jpg" alt="" title="" width="975" height="547" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Beginners2.jpg" alt="" title="" width="975" height="547" />
 </div>
 
 I couldn&#8217;t find this for C# so I guess it isn&#8217;t there. 

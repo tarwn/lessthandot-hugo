@@ -45,13 +45,13 @@ End Class
 As you can see in this screenshot.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen.png?mtime=1316441848"><img alt="" src="/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen.png?mtime=1316441848" width="547" height="437" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen.png?mtime=1316441848"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen.png?mtime=1316441848" width="547" height="437" /></a>
 </div>
 
 And the file is saved too.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen1.png?mtime=1316441927"><img alt="" src="/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen1.png?mtime=1316441927" width="848" height="734" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen1.png?mtime=1316441927"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/CopyFromScreen/copyfromscreen1.png?mtime=1316441927" width="848" height="734" /></a>
 </div>
 
 So I don&#8217;t know what the problem is the user is having but I know it works ;-).

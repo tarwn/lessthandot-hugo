@@ -25,7 +25,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlsat50.gif" alt="" title="" width="244" height="106" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlsat50.gif" alt="" title="" width="244" height="106" align="left" />
 </div>
 
 Last year I attended SQL Saturday in Iowa and enjoyed it immensely. I was glad to see a follow up for this year coming this Friday, September 18th. This year I'm very happy to announce that I will be attending [Iowa's second SQL Saturday][1] and also contributing as a speaker. If you have never been to a SQL Saturday event, I highly recommend attending this one or another in your area. These events are free and organized by people just like you and I. That means they know what you want to hear and how to present that information to you. (Not to mention the awesome prizes that sponsors give out in the raffle)

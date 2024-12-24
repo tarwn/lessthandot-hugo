@@ -33,7 +33,7 @@ tags:
 Researching and obtaining the knowledge and test cases for configuring mirroring is a large part in putting SQL Server mirroring to work for your High Availability (HA) solution. Before you start jumping into configuring mirroring, several questions should be researched and answered. This ensures that the HA solution and mirroring will work for your environment and your business. One of the highest achievements in mirroring is to ensure it will always be invisible to your user community. After all, as DBAs, our position is one that truly is successful when the phones are not ringing and users forget who we are. Our positions have little to no recognition from their view. It's a hard truth that we most of the time are far outside the spotlight, but one that is key to the role. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_plan_1.gif" alt="" title="" width="404" height="304" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_plan_1.gif" alt="" title="" width="404" height="304" />
 </div>
 
 ## The business
@@ -52,7 +52,7 @@ This is the utmost crucial point in why we put HA in the background. The busines
 ## The backbone
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_plan_2.gif" alt="" title="" width="369" height="278" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_plan_2.gif" alt="" title="" width="369" height="278" />
 </div>
 
   * Have in place the network backbone to handle the mirroring and full recovery
@@ -62,7 +62,7 @@ Now let's take a look at and even more critical part to the mirroring planning s
 ## Time to learn
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_plan_3.gif" alt="" title="" width="313" height="210" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_plan_3.gif" alt="" title="" width="313" height="210" />
 </div>
 
   * SQL Server mirroring research and knowledge
@@ -76,7 +76,7 @@ Principal, Mirror and Witness
 This solution will also require a synchronous mirroring mode. In short, this requires committing of transactions on the mirror (and principal) prior to the application being sent the "ok" to move on. If you are in a situation where that data being committed is large enough, the network comes back into contention as a major performance aspect. The application itself will also be required to handle this delay. Again, if the data and processing is extremely large in size or complex, timeouts can be more relevant than previously considered. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_plan_4.gif" alt="" title="" width="254" height="205" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_plan_4.gif" alt="" title="" width="254" height="205" align="left" />
 </div>
 
 Next we can move to a performance added mirroring solution that runs in asynchronous mode. High performance mirroring is only an option in Enterprise Editions. There are no future changes for adding Standard to this feature. Now cost is a major factor. We all want Enterprise, but do we really need it? With asynchronous (High Performance) mirroring, there is also no built in automatic failover options. Although there are methods to get around this with monitoring the state of mirroring and acting on your own scheduled jobs to handle "automatic failover", at this point it truly isn't automatic. In some cases asynchronous mirroring with your own failover scripts can be beneficial. Finding your mirror in a state that you require a failover of your applications allows you to start reconfiguring them as needed. Having the Failover switch in connection strings simply is not an option often. This requires either registry changes, custom provider reconfiguring and in some cases, security modifications to handle the mirror successfully being utilized.

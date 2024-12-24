@@ -29,7 +29,7 @@ tags:
  
 
 <div class="image_block">
-  <a href="/media/users/koenverbeeck/logo.png?mtime=1358861145"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/logo.png?mtime=1358861145" alt="" width="148" height="91" /></a>
+  <a href="/media/users/koenverbeeck/logo.png?mtime=1358861145"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/logo.png?mtime=1358861145" alt="" width="148" height="91" /></a>
 </div>
 
 <p style="text-align: justify;">

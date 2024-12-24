@@ -54,7 +54,7 @@ I then decompiled with dotpeek.
 This was the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/dotpeek1.png?mtime=1332870812"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/dotpeek1.png?mtime=1332870812" width="1034" height="778" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/dotpeek1.png?mtime=1332870812"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/dotpeek1.png?mtime=1332870812" width="1034" height="778" /></a>
 </div>
 
 So it decompiles just fine. However it only decompiles to C# and not IL. And it felt kind of slow.
@@ -64,7 +64,7 @@ I needed IL so I downloaded justdecompile.
 The install experience is very nice for justdecompile. Apart from the fact that it tries to install other software on my machine. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/justdecompile1.png?mtime=1332871045"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/justdecompile1.png?mtime=1332871045" width="840" height="641" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile1.png?mtime=1332871045"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile1.png?mtime=1332871045" width="840" height="641" /></a>
 </div>
 
 Look for &#8220;Why not try these&#8221; and uncheck them if you don&#8217;t want them.
@@ -72,7 +72,7 @@ Look for &#8220;Why not try these&#8221; and uncheck them if you don&#8217;t wan
 And then you have to fill in this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/justdecompile2.png?mtime=1332871279"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/justdecompile2.png?mtime=1332871279" width="840" height="641" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile2.png?mtime=1332871279"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile2.png?mtime=1332871279" width="840" height="641" /></a>
 </div>
 
 That&#8217;s really annoying.
@@ -82,19 +82,19 @@ But it installed. Now it was time to try it.
 This the C# code it produced.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/justdecompile3.png?mtime=1332871570"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/justdecompile3.png?mtime=1332871570" width="1054" height="799" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile3.png?mtime=1332871570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile3.png?mtime=1332871570" width="1054" height="799" /></a>
 </div>
 
 This is the IL.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/justdecompile4.png?mtime=1332871588"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/justdecompile4.png?mtime=1332871588" width="1054" height="799" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile4.png?mtime=1332871588"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile4.png?mtime=1332871588" width="1054" height="799" /></a>
 </div>
 
 And as an added bonus, this is the Visual basic.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/decompilers/justdecompile5.png?mtime=1332871603"><img alt="" src="/wp-content/uploads/users/chrissie1/decompilers/justdecompile5.png?mtime=1332871603" width="1054" height="799" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile5.png?mtime=1332871603"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/decompilers/justdecompile5.png?mtime=1332871603" width="1054" height="799" /></a>
 </div>
 
 Don&#8217;t think it was much faster than dotpeek but it had what I needed.

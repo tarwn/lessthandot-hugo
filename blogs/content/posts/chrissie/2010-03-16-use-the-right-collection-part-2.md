@@ -25,7 +25,7 @@ But I aim to please my fellow LTDers, so I did a little performance test. And le
 I made a form with 2 listboxes and 2 textboxes, to show the results. And 1 listbox to show the timings. And a button to start the process.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/queue/queue1.png" alt="" title="" width="1079" height="374" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/queue/queue1.png" alt="" title="" width="1079" height="374" />
 </div>
 
 And here is the code to go with it.
@@ -104,7 +104,7 @@ End Class
 Clicking on &#8220;run&#8221; gives me the following result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/queue/queue2.png" alt="" title="" width="1079" height="374" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/queue/queue2.png" alt="" title="" width="1079" height="374" />
 </div>
 
 And here are some more numbers.

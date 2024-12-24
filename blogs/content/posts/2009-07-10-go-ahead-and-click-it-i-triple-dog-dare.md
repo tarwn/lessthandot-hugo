@@ -22,13 +22,13 @@ As a DBA the word no comes out of us often. It's just the nature of our jobs tha
 Now what do you do when something happens out of your control? My first thought is, I hope you handled the situation well enough to prevent it in the first place. Here is a perfect example that happened recently. An email comes in stating one of the analysts needs permissions on a critical production database server. Permissions for what you say? Well this is the error they had attached
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//error_1.gif" alt="" title="" width="754" height="152" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//error_1.gif" alt="" title="" width="754" height="152" />
 </div>
 
 Yes, they tried to run a trace on the production server. I hope the thought of that scares the hell out of you as a DBA. This leads into why the analyst even had the option of opening profiler. Well, they need SQL Tools in order to manage simple reports out of the test systems. This is all very locked down on security even in the test systems and only specific rights are allowed given the position they are in. Yes, you should lock down your test and dev systems as well. If we took a poll on time spent troubleshooting production vs. test instances, my money would be on test taking the most time of your day. So why allow more havoc to be run on those servers when you can prevent it as much as you do in production. Needless to say the analyst had to have tools installed in order to perform their job. That's understandable of course. SQL tools installations fly all around a normal IT group and we all see little thought going into if we should be installing them. So what's the issue then? If they need it, why am I writing this? Well, I want to talk about the red button in front of my mother's face. See, my mother can't help herself from pushing that button. No matter how hard she tries, that damn button is getting pushed. One time she pushed the wrong button and paid the price. I can't go into details. She's my mother and I love her dearly and want to protect her from embarrassment. But, well...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//triple-dog-dare.jpg" alt="" title="" width="400" height="267" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//triple-dog-dare.jpg" alt="" title="" width="400" height="267" />
 </div>
 
 Should common sense of not knowing the consequences of that button being pushed have played an important role in not pushing it? Umm...yeah! So when the analyst had whatever support step that showed them the sweet path to open SQL Server Profiler, should they have even got to the point of clicking it? Honestly, I would hope not but that didn't happen here. They clicked away. 
@@ -36,7 +36,7 @@ Should common sense of not knowing the consequences of that button being pushed 
 Now how do you fix this problem after the damage is made? Probably around these lines...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//fixinf_it.gif" alt="" title="" width="537" height="355" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//fixinf_it.gif" alt="" title="" width="537" height="355" />
 </div>
 
 Let's take a look at the issue with that and what could have happened if they actually got that thing started. The options they chose were to write to a table and default events from Profiler. The table they were going to create and use was in the same database they were trying to mine out some code. Unfortunately they were not stopped at the table creation. This is due to horrible planning on the ERP systems side and having a database role that allows users to do just that. This database is part in log shipping and replication. First issue log growth. What happens when you insert a couple hundred thousand lines in a few minutes into a database? Now let's think about those log backups and sending them offsite to the other stand by instance. Not enough? How about IO when the log is growing and possibly the database, the CPU, Memory and other resources sucked down by the trace? Oh yeah, your mirror uncommit skyrockets and now you're vulnerable to failure and losing data even with your sweet high availability setup. Now you have 500 really angry users across your WAN and who are they calling? Here comes the Google search for truncate log files from the not so great DBA. 

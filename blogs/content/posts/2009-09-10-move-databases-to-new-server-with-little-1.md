@@ -159,7 +159,7 @@ So now you have a new server and much better hardware to handle your rapidly gro
 Here is what your configuration should appear in the mirroring section of the principle database after all of this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//mirror_prop.gif" alt="" title="" width="454" height="408" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//mirror_prop.gif" alt="" title="" width="454" height="408" />
 </div>
 
 Here is what your configuration should appear in the mirroring section of the principle database after all of we've done so far. 

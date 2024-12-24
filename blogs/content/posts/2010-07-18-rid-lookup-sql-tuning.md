@@ -27,7 +27,7 @@ tags:
 This is your query on a rollercoaster. Not a fun trip and sometimes bringing a paper bag with you is a necessity.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/rid_1.gif" alt="" title="" width="361" height="248" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/rid_1.gif" alt="" title="" width="361" height="248" />
 </div></p> 
 
 **It really happens**
@@ -124,7 +124,7 @@ GO
 We should be fine as the nonclustered index, "IDX_ITEMID" should be used in an index seek given the WHERE clause on ITEMCODE. However, when we run this query to check the estimated execution plan, we can see we have a lookup occurring.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/rid_2.gif" alt="" title="" width="624" height="368" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/rid_2.gif" alt="" title="" width="624" height="368" />
 </div>
 
 The lookup is caused by the fact that there is not a covering index to fulfill the entire needs of the query. The WHERE clause and columns returned combined equate to, "covering". In order to satisfy this query and remove the RID Lookup, we need to create a covering index or a clustered index on the ITEMCODE. Creating a clustered index physically orders the data under the conditions of the index and in some cases (like this) that was not possible. An effective solution in this case is a nonclustered index covering the entire query requirements.
@@ -144,7 +144,7 @@ GO
 After looking at our execution plan, we should see only the index seek operation being performed
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/rid_5.gif" alt="" title="" width="628" height="229" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/rid_5.gif" alt="" title="" width="628" height="229" />
 </div>
 
 Let's put things into perspective. We all know an index seek is optimal (in most cases). We do see our index seek in the execution plan prior to our resolution of a covering index but we have the handicap of the RID Lookup being performed in a nested loop with the index seek. This will result in the cost of the index seek operation plus essentially the same effect of a table scan under a nested loop operation. For each record we find in the index seek, we have to run out to the disk, find the remaining data we need in order to fulfill the needs of the query.
@@ -154,13 +154,13 @@ This is all reflected in a nested loop operation.
 What is shown below is the Index Seek retrieving the data directly based on the index pointers and requiring a need to loop back to the data to fulfill all of the data needed by the request. This causes the query to perform slowly and also increases the possibility for high CPU utilization and high IO. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/rid_4.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/rid_4.gif" alt="" title="" />
 </div></p> 
 
 Basic troubleshooting steps of query performance like this should be a daily part of database tuning and monitoring. Allowing changes to go directly into production database servers without the initiative of code reviews and heavy testing will allow these types of problems to happen. The best resolution of all is to prevent these types of problems by not bypassing those normal transport objectives.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/rid_grant.gif" alt="" title="" width="137" height="137" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/rid_grant.gif" alt="" title="" width="137" height="137" align="left" />
 </div>
 
 For learning more on Execution Plans, I highly recommend purchasing, [SQL Server Execution Plans][1] by Grant Fritchey. This book goes into each operation you will encounter in plans and some ways to resolve operations that are not optimal. Grant ([Twitter][2] | [Blog][3]) is also a widely known and respected expert on Execution Plans and database tuning. Reading his blog and following him will greatly benefit your daily work as a DBA or Developer on SQL Server.

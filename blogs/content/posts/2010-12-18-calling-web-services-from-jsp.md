@@ -86,6 +86,6 @@ The Time in New York is: 12/18/2010 11:26:22 AM
 
  [1]: http://tomcat.apache.org/download-60.cgi
  [2]: http://ubuntuforums.org/showthread.php?p=8541057
- [3]: /wp-content/uploads/users/robearl/DynamicWebProject.png ""
- [4]: /wp-content/uploads/users/robearl/Tomcat.png ""
- [5]: /wp-content/uploads/users/robearl/WebServiceClient.png ""
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/robearl/DynamicWebProject.png ""
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/robearl/Tomcat.png ""
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/robearl/WebServiceClient.png ""

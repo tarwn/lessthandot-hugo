@@ -198,13 +198,13 @@ Here are the screenshots. Look also at the url in the addressbarr.
 The plants.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/angularjs/angularjs1.png?mtime=1359902777"><img alt="" src="/wp-content/uploads/users/chrissie1/angularjs/angularjs1.png?mtime=1359902777" width="733" height="463" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs1.png?mtime=1359902777"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs1.png?mtime=1359902777" width="733" height="463" /></a>
 </div>
 
 And here the detail view.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/angularjs/angularjs2.png?mtime=1359902788"><img alt="" src="/wp-content/uploads/users/chrissie1/angularjs/angularjs2.png?mtime=1359902788" width="733" height="463" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs2.png?mtime=1359902788"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/angularjs/angularjs2.png?mtime=1359902788" width="733" height="463" /></a>
 </div>
 
 ## Conclusion

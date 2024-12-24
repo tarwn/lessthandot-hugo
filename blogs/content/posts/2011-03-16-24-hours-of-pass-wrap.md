@@ -41,7 +41,7 @@ Thank you all of the other women who presented. I could write an entire blog on 
 Most of all, thank you to the attendees. If no one wanted to listen to me, this wouldn't be half as much fun!
 
  [1]: http://www.sqlpass.org/24hours/Spring2011/
- [2]: /wp-content/uploads/users/grrlgeek/24HOP Reporting Services 201.zip?mtime=1300327555
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/24HOP Reporting Services 201.zip?mtime=1300327555
  [3]: http://www.dell.com
  [4]: http://www.sqlpass.org/sqlrally/2011/orlando/
  [5]: http://thomaslarock.com/

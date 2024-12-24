@@ -55,7 +55,7 @@ A query written this way is not as uncommon as you may think.  I've seen many i
 Looking at the plan as it is written above, we can see there is areas that can be improved.  One of those areas is the estimation versus the actual rows that are generated.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/card_compute_1.gif?mtime=1353089577"><img alt="" src="/wp-content/uploads/blogs/All/card_compute_1.gif?mtime=1353089577" width="814" height="463" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/card_compute_1.gif?mtime=1353089577"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/card_compute_1.gif?mtime=1353089577" width="814" height="463" /></a>
 </div>
 
 In a lot of cases, the major difference between estimated and actual rows can mean outdated or stale statistics.  However, in this particular case, the statistics were created at the time this query was executed, given the auto create statistics setting on the database.  The root cause of this difference in estimated versus actual rows is due to the use of corp_name + ' ' + city.  There are 500 rows in the corporation table so the 106 estimated rows is generated from the estimated 30% selectivity that is performed.
@@ -90,7 +90,7 @@ select corp_name + ' ' + city from corporation where
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-43.png?mtime=1353089577"><img alt="" src="/wp-content/uploads/blogs/All/-43.png?mtime=1353089577" width="624" height="98" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-43.png?mtime=1353089577"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-43.png?mtime=1353089577" width="624" height="98" /></a>
 </div>
 
  
@@ -115,13 +115,13 @@ The ALTER statements above will drop the computed column and add it back on the 
 Executing the same query to select on the corporation table results in the following plan.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-44.png?mtime=1353089577"><img alt="" src="/wp-content/uploads/blogs/All/-44.png?mtime=1353089577" width="460" height="166" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-44.png?mtime=1353089577"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-44.png?mtime=1353089577" width="460" height="166" /></a>
 </div>
 
 Given the computed column and persisted nature, the estimated versus actual rows now show a value of 1 for each.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-45.png?mtime=1353089578"><img alt="" src="/wp-content/uploads/blogs/All/-45.png?mtime=1353089578" width="417" height="88" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-45.png?mtime=1353089578"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-45.png?mtime=1353089578" width="417" height="88" /></a>
 </div>
 
 **Summary**

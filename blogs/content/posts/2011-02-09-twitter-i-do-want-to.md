@@ -23,7 +23,7 @@ After building up your twitter profile and getting out there, you'll start to ga
 2)      Profile: Write your profile it shines.  Let's look at my friend SQLSarg's ([Twitter][1] | [Blog][2]) profile
 
 <div class="image_block">
-  <a href="/media/blogs/All/-3.png?mtime=1297301765"><img src="/wp-content/uploads/blogs/All/-3.png?mtime=1297301765" alt="" width="318" height="210" align="left" /></a>
+  <a href="/media/blogs/All/-3.png?mtime=1297301765"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-3.png?mtime=1297301765" alt="" width="318" height="210" align="left" /></a>
 </div>
 
  
@@ -55,7 +55,7 @@ Don't take that as saying if you aren't a goofball you won't get followers.  Ju
 10)   Finally, no one will care that you are just starting out with SQL Server. We all start somewhere and I know that I for one, don't care where you are with learning SQL. I'll hang out with everyone, afterall I picked  @SQLSarg as my example here.  And he wears pink superman shirts while presenting! 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-5.png?mtime=1297303747"><img alt="" src="/wp-content/uploads/blogs/All/-5.png?mtime=1297303747" width="300" height="400" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-5.png?mtime=1297303747"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-5.png?mtime=1297303747" width="300" height="400" /></a>
 </div>
 
  [1]: http://twitter.com/sqlsarg

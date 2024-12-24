@@ -27,7 +27,7 @@ To start of with, I am going to talk a bit about charms. Charms is the new "navi
 This will bring up the following:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/Windows8Guide/Charms_Menu.jpg?mtime=1347266235"><img alt="" src="/wp-content/uploads/users/sqlarcher/Windows8Guide/Charms_Menu.jpg?mtime=1347266235" width="270" height="1079" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/Charms_Menu.jpg?mtime=1347266235"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/Charms_Menu.jpg?mtime=1347266235" width="270" height="1079" /></a>
 </div>
 
 In order they are:
@@ -49,13 +49,13 @@ Another handy feature is Flip-2D – better known as the 3D Aero flip in Windows
 It looks similar to this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView.jpg?mtime=1347266256"><img alt="" src="/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView.jpg?mtime=1347266256" width="441" height="524" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView.jpg?mtime=1347266256"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView.jpg?mtime=1347266256" width="441" height="524" /></a>
 </div>
 
 When it is fully expanded it will look like this (this one is cropped, at the bottom you will have the link to the Win8UI):
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView_2.jpg?mtime=1347267039"><img alt="" src="/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView_2.jpg?mtime=1347267039" width="187" height="374" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView_2.jpg?mtime=1347267039"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/QuickView_2.jpg?mtime=1347267039" width="187" height="374" /></a>
 </div>
 
 A big question would be why to use this one instead of ALT + Tab? While ALT + Tab cycles through both the desktop apps and your Win8 apps, the WIN + Tab allows you to select an individual application and pin it either side of your screen directly if you do not want to close your active application. Apart from this, the only other difference is that it does not cycle through desktop applications.
@@ -63,7 +63,7 @@ A big question would be why to use this one instead of ALT + Tab? While ALT + Ta
 The last quick feature is the poweruser menu, which is accessible by right clicking on the Win8UI shortcut on the bottom left of the screen:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/Windows8Guide/PowerUser.jpg?mtime=1347266245"><img alt="" src="/wp-content/uploads/users/sqlarcher/Windows8Guide/PowerUser.jpg?mtime=1347266245" width="351" height="395" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/PowerUser.jpg?mtime=1347266245"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/Windows8Guide/PowerUser.jpg?mtime=1347266245" width="351" height="395" /></a>
 </div>
 
 This gives you quick access to control panel, command line, etc. which is very useful.

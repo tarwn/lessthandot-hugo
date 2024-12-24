@@ -25,15 +25,15 @@ You can find the [apps on the market][1]. And you can find the [code on Github][
 Here are some screenshots.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/TDL/screenshot.png?mtime=1326009067"><img alt="" src="/wp-content/uploads/users/chrissie1/android/TDL/screenshot.png?mtime=1326009067" width="480" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/TDL/screenshot.png?mtime=1326009067"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/TDL/screenshot.png?mtime=1326009067" width="480" height="800" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/TDL/screenshot2.png?mtime=1326009084"><img alt="" src="/wp-content/uploads/users/chrissie1/android/TDL/screenshot2.png?mtime=1326009084" width="480" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/TDL/screenshot2.png?mtime=1326009084"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/TDL/screenshot2.png?mtime=1326009084" width="480" height="800" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/TDL/screenshot3.png?mtime=1326009102"><img alt="" src="/wp-content/uploads/users/chrissie1/android/TDL/screenshot3.png?mtime=1326009102" width="480" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/TDL/screenshot3.png?mtime=1326009102"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/TDL/screenshot3.png?mtime=1326009102" width="480" height="800" /></a>
 </div>
 
  [1]: https://market.android.com/developer?pub=Christiaan+Baes

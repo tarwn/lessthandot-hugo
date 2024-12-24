@@ -17,7 +17,7 @@ categories:
 It's almost here! It's almost here! The [world's largest SQL Server conference][1] kicks off in a few days. I'll be in Seattle with thousands of other database professionals, soaking up knowledge, meeting new people, and spending time with my #sqlfamily.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/PASS_2012_SpeakingButton_250x250_blue.jpg?mtime=1351017369" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/PASS_2012_SpeakingButton_250x250_blue.jpg?mtime=1351017369" alt="" />
 </p>
 
 I realized this morning that I'll have to start packing in a few days. Yes, I try to do this a few days in advance, instead of the night before, just in case I forget something. Then, I started thinking, "I should probably tell my First Timers what I'm bringing, so they don't forget something important." Then I had a better thought: "I could blog it and share it with the world."

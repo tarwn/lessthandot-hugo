@@ -31,7 +31,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/FileSystemTask/packagesetup.PNG?mtime=1381321257"><img src="/wp-content/uploads/users/koenverbeeck/FileSystemTask/packagesetup.PNG?mtime=1381321257" alt="" width="680" height="228" /></a>
+  <a href="/media/users/koenverbeeck/FileSystemTask/packagesetup.PNG?mtime=1381321257"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/FileSystemTask/packagesetup.PNG?mtime=1381321257" alt="" width="680" height="228" /></a>
 </p>
 
 <span style="text-align: justify;">When I run the package using SSIS 2012 in Windows 8, the folder </span>_HelloWorld!!!_ <span style="text-align: justify;">Is created in the same folder where the SSIS package is stored. On another computer – using SSIS 2008R2 in Windows XP – the folder is created in the My Documents folder. The guy from the forum thread mentioned his folder was created on his desktop. The documentation doesn't mention where a directory is created when there is no absolute path specified and a quick Internet search didn't yield an explanation either. It's also unclear if the choice where the directory is finally created is influenced by the version of SSIS, the OS version or some obscure setting no one knows about.</span>

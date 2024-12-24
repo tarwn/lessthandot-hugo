@@ -24,7 +24,7 @@ I'll be presenting one of those sessions, too! Join me for "<a href="https://ww
 I hope to see you around the campfire in August!
 
 <div id="attachment_4543" style="width: 310px" class="wp-caption aligncenter">
-  <img class="wp-image-4543 size-medium" src="/wp-content/uploads/2016/06/ThatConf-open-spaces-300x228.jpg" alt="I hosted a &quot;SQL Server AMA&quot; Open Space last year - so fun! " width="300" height="228" srcset="/wp-content/uploads/2016/06/ThatConf-open-spaces-300x228.jpg 300w, /wp-content/uploads/2016/06/ThatConf-open-spaces.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+  <img class="wp-image-4543 size-medium" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ThatConf-open-spaces-300x228.jpg" alt="I hosted a &quot;SQL Server AMA&quot; Open Space last year - so fun! " width="300" height="228" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ThatConf-open-spaces-300x228.jpg 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ThatConf-open-spaces.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />
   
   <p class="wp-caption-text">
     I hosted a "SQL Server AMA" Open Space last year – so fun!

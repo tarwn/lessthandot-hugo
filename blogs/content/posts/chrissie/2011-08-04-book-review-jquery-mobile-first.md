@@ -39,7 +39,7 @@ And about jQuery
 [jQuery Mobile First Look][2] by [Giulio Bai][9]
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/5900_jQuery mobile.png?mtime=1312474102"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/5900_jQuery mobile.png?mtime=1312474102" width="125" height="152" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/5900_jQuery mobile.png?mtime=1312474102"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/5900_jQuery mobile.png?mtime=1312474102" width="125" height="152" /></a>
 </div>
 
 >   * Easily create your mobile web applications from scratch with jQuery Mobile
@@ -67,7 +67,7 @@ And about jQuery
 First of all, this is what jQuery mobile looks like on an iPhone.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574" width="413" height="781" /></a>
 </div>
 
 You will note that jQuery mobile is in active development and so every book you look at will be out of date, and so is this one. But it is still helpful if you want to get started.

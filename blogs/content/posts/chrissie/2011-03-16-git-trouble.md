@@ -40,7 +40,7 @@ and then I learned
 which will give you a nice list of what you did. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/git/ScreenShot035.png?mtime=1300283503"><img alt="" src="/wp-content/uploads/users/chrissie1/git/ScreenShot035.png?mtime=1300283503" width="677" height="392" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/git/ScreenShot035.png?mtime=1300283503"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/git/ScreenShot035.png?mtime=1300283503" width="677" height="392" /></a>
 </div>
 
 And yes I made a mess of things.

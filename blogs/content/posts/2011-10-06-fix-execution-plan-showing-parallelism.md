@@ -63,7 +63,7 @@ SELECT [fk_id]
   FROM [XMLContent].[dbo].[LotsOhColumns]
 WHERE fk_id = NEWID() 
 ```<div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-28.png?mtime=1317924562"><img alt="" src="/wp-content/uploads/blogs/All/-28.png?mtime=1317924562" width="689" height="95" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-28.png?mtime=1317924562"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-28.png?mtime=1317924562" width="689" height="95" /></a>
 </div>
 
 Looking at this plan, tons of issues come up.  The first one that we insist on tuning is the parallelism and run out to change MAXDOP.  Not yet everyone!
@@ -89,7 +89,7 @@ INCLUDE
 Executing the query again shows a much cleaner plan
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-29.png?mtime=1317924562"><img alt="" src="/wp-content/uploads/blogs/All/-29.png?mtime=1317924562" width="376" height="92" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-29.png?mtime=1317924562"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-29.png?mtime=1317924562" width="376" height="92" /></a>
 </div></p> 
 
 **What did we learn here?**

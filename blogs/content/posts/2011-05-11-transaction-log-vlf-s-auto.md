@@ -57,7 +57,7 @@ DBCC LOGINFO(DB_Name)
 
 You should then see something similiar to this:
 
-[<img title="VLF Screen" src="/wp-content/uploads/users/sqlarcher/vlf.jpg?mtime=1305048340" alt="" width="593" height="368" />][1]
+[<img title="VLF Screen" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/vlf.jpg?mtime=1305048340" alt="" width="593" height="368" />][1]
 
 Columns of note are:
 

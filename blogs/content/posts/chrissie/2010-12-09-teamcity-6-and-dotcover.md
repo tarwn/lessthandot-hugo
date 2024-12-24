@@ -31,7 +31,7 @@ The new Teamcity 6 has dotcover support for absolutely free. So you should use i
 It&#8217;s insanely simple. In your Nunit build step go to the bottom and select JetBrains dotCover as your .Net Coverage tool. Select your runtime and version and you&#8217;re done.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/TeamCity/TeamCity6_dotcover_1.png" alt="" title="" width="733" height="651" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/TeamCity6_dotcover_1.png" alt="" title="" width="733" height="651" />
 </div>
 
 Simple as pie.
@@ -43,7 +43,7 @@ However mine did not create a report but it did add an error to the build log.
 You can find the Build log tab when you click on the build.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/TeamCity/TeamCity6_dotcover_2.png" alt="" title="" width="740" height="297" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/TeamCity6_dotcover_2.png" alt="" title="" width="740" height="297" />
 </div>
 
 There I found this.
@@ -71,7 +71,7 @@ it ends here.
 <Namespace Name=" Vintsoft barcode is an external library. So I added that to the excludes together with a few others. And on the next run everything works just fine. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/TeamCity/TeamCity6_dotcover_3.png" alt="" title="" width="740" height="297" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/TeamCity6_dotcover_3.png" alt="" title="" width="740" height="297" />
 </div>
 
 ## Conclusion

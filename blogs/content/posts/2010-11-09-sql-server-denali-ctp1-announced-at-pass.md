@@ -21,7 +21,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/Denali.PNG" alt="" title="" width="371" height="41" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denali.PNG" alt="" title="" width="371" height="41" />
 </div>
 
 Today at PASS the SQL Server team has publicly announced the first Community Technology Preview of the next version of SQL Server code named Denali. You can download it here: http://www.microsoft.com/downloads/en/details.aspx?FamilyID=6a04f16f-f6be-4f92-9c92-f7e5677d91f9

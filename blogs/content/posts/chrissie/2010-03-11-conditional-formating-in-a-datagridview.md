@@ -131,7 +131,7 @@ Which will make the backcolor of each cell go red except the new row one.
 And I did that because it is visually appealing 😉
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Datagridview/Datagridview1.png" alt="" title="" width="300" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Datagridview/Datagridview1.png" alt="" title="" width="300" height="300" />
 </div>
 
 Or this.
@@ -155,5 +155,5 @@ Or this.
 To make every row go red except the one with &#8220;Test2&#8221; in it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Datagridview/Datagridview2.png" alt="" title="" width="300" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Datagridview/Datagridview2.png" alt="" title="" width="300" height="300" />
 </div>

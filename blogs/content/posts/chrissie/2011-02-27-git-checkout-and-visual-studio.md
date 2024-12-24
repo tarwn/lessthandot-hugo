@@ -31,7 +31,7 @@ Function checkout($branch)
 Looks very simple and elegant indeed.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole11.png?mtime=1298795805"><img alt="" src="/wp-content/uploads/users/chrissie1/powerconsole/powerconsole11.png?mtime=1298795805" width="718" height="769" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole11.png?mtime=1298795805"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powerconsole/powerconsole11.png?mtime=1298795805" width="718" height="769" /></a>
 </div>
 
 The only problem being that even a successful checkout seems to result in a exception. But it does not bother me to much. I can now do everything from within Visual Studio and I saved a few keystrokes at the same time.

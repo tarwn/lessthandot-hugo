@@ -26,12 +26,14 @@ All the uploads for the original wordpress site are stored outside the git repo 
 Main Site:
 1. ✔ Update google analytics to newer version
 2. ✔ Update hugo to newer version
-3. Fix errors and layout changes due to extreme version upgrade of hugo
-4. Reroute all wp-content to go to azure storage $web directly so we don't have to re-host it
+3. ✔ Fix errors and layout changes due to extreme version upgrade of hugo
+4. ✔ Reroute all wp-content to go to azure storage $web directly so we don't have to re-host it
     * replace `/wp-content` to `https://lessthandot.z19.web.core.windows.net/wp-content`
     * assets in storage are doubled, both in original case and lowercase
 5. Build process to use github action and deploy to an Azure static website
-6. Change DNS to point to new site
+6. Fix issues
+    * Custom 404 page
+7. Change DNS to point to new site
 
 SQLCop:
 1. Update download links to pull directly from storage

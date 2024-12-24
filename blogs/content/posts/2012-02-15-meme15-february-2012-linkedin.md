@@ -36,7 +36,7 @@ So, while LinkedIn may still be struggling to find its identity, I've found a fe
 
 On a related note, [next Tuesday, February 21, and next Wednesday, February 22, I'll be presenting][5] "Make Your Voice Heard" for user groups. One of the tools I cover is LinkedIn, along with Twitter, forums, and blogging. Please try to attend one of these, in person or virtually, to learn more!
 
- [1]: /wp-content/uploads/blogs/ITProfessionals/-16.png?mtime=1329313898 ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-16.png?mtime=1329313898 ""
  [2]: http://twitter.com/stratesql
  [3]: http://www.jasonstrate.com/
  [4]: http://www.jasonstrate.com/2012/02/february-meme15-assignment/

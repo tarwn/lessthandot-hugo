@@ -85,7 +85,7 @@ WHERE LEFT(SomeID,1) = 's'
 Here is what the plans looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Excecutionplan.PNG?mtime=1354498760"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Excecutionplan.PNG?mtime=1354498760" width="447" height="295" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Excecutionplan.PNG?mtime=1354498760"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Excecutionplan.PNG?mtime=1354498760" width="447" height="295" /></a>
 </div>
 
 As you can see it is 9% versus 91% between the two queries, that is a big difference
@@ -320,7 +320,7 @@ AND Val LIKE 'ABCD'
 Here is the plan
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ExcecutionPlan2008.PNG?mtime=1354548699"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ExcecutionPlan2008.PNG?mtime=1354548699" width="903" height="364" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ExcecutionPlan2008.PNG?mtime=1354548699"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ExcecutionPlan2008.PNG?mtime=1354548699" width="903" height="364" /></a>
 </div>
 
 As you can see, there is a big difference between the two

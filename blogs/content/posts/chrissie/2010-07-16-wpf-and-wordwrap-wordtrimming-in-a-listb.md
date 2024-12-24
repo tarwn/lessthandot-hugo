@@ -26,7 +26,7 @@ On my dashboard there is a ListBox which shows the user some messages of the sys
 The text for each item can be longer than the width of the ListBox. This is no problem since there is a horizontal scrollbar that can be seen. But I don&#8217;t like that.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPFListBox/WPFListBox1.png" alt="" title="" width="219" height="326" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPFListBox/WPFListBox1.png" alt="" title="" width="219" height="326" />
 </div>
 
 And this is the XAML you use for this.
@@ -54,7 +54,7 @@ I would prefer some text trimming (the three dots) and a tooltip with the comple
 In Windowsforms this would just be difficult to do. In WPF this is very easy.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPFListBox/WPFListBox2.png" alt="" title="" width="280" height="120" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPFListBox/WPFListBox2.png" alt="" title="" width="280" height="120" />
 </div>
 
 You just need to add a Datatemplate like this.
@@ -79,7 +79,7 @@ Or you can make it wrap instead. Just a little change in the XAML.
 And then it looks like this. I guess you could then do without the tooltip so I removed that.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPFListBox/WPFListBox3.png" alt="" title="" width="217" height="147" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPFListBox/WPFListBox3.png" alt="" title="" width="217" height="147" />
 </div>
 
 The hardest thing to find on the internets was the Text=&#8221;{Binding}&#8221;. I actually didn&#8217;t find it on the internets I just got lucky.

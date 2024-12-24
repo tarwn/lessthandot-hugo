@@ -33,7 +33,7 @@ Hello world should be easy enough. Just create an empty asp.net project and then
 As you can see Nancy has a buttload of packages on nuget.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy1.png?mtime=1355226559"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy1.png?mtime=1355226559" width="900" height="852" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy1.png?mtime=1355226559"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy1.png?mtime=1355226559" width="900" height="852" /></a>
 </div>
 
 We pick the Nancy.Hosting.AspNet for this one.
@@ -79,7 +79,7 @@ End Class```
 Run it and see the magic.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy2.png?mtime=1355227123"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy2.png?mtime=1355227123" width="196" height="167" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy2.png?mtime=1355227123"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy2.png?mtime=1355227123" width="196" height="167" /></a>
 </div>
 
 In essence you are looking at the root route and send it hello world when that route is requested.
@@ -87,7 +87,7 @@ In essence you are looking at the root route and send it hello world when that r
 So when I try another route than just http://localhost/ I will get a 404.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy3.png?mtime=1355227555"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy3.png?mtime=1355227555" width="511" height="258" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy3.png?mtime=1355227555"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy3.png?mtime=1355227555" width="511" height="258" /></a>
 </div>
 
 Cool. 
@@ -109,7 +109,7 @@ End Class```
 you will get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy4.png?mtime=1355227810"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy4.png?mtime=1355227810" width="269" height="244" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy4.png?mtime=1355227810"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy4.png?mtime=1355227810" width="269" height="244" /></a>
 </div>
 
 Now I know you should put each route into it&#8217;s own class, but spaghetti code is so much nicer.

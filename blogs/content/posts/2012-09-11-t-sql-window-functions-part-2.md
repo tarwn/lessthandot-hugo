@@ -66,7 +66,7 @@ The ROW_NUMBER function will return a row number for each row within the partiti
    order by CustomerName;</code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/RowNumberResults2.JPG?mtime=1346987735"><img src="/wp-content/uploads/blogs/DataMgmt/RowNumberResults2.JPG?mtime=1346987735" width="766" height="361" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RowNumberResults2.JPG?mtime=1346987735"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RowNumberResults2.JPG?mtime=1346987735" width="766" height="361" /></a>
 </div>
 
 # RANK and DENSE_RANK
@@ -84,7 +84,7 @@ While these are different functions with even different rules, it is easier to u
    order by CustomerName;</code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/RankResults2.JPG?mtime=1346987733"><img src="/wp-content/uploads/blogs/DataMgmt/RankResults2.JPG?mtime=1346987733" width="978" height="394" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RankResults2.JPG?mtime=1346987733"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RankResults2.JPG?mtime=1346987733" width="978" height="394" /></a>
 </div>
 
 # NTILE
@@ -100,7 +100,7 @@ The last of the ranking functions is NTILE. NTILE groups the data into ordered a
    order by OrderDate;</code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/NtileResults2.jpg?mtime=1346988047"><img src="/wp-content/uploads/blogs/DataMgmt/NtileResults2.JPG?mtime=1346988047" width="741" height="507" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NtileResults2.jpg?mtime=1346988047"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NtileResults2.JPG?mtime=1346988047" width="741" height="507" /></a>
 </div>
 
 Up next, using aggregate functions with window functions.

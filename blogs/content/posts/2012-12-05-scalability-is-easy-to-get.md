@@ -9,7 +9,7 @@ excerpt: |
   
   Probably the number one failure of system scaling is when people dive right in and start building. No baselines, limited measurements, no analysis, just a hypothesis and a whole lot of late nights tweaking the system.
 url: /index.php/architect/designingsoftware/scalability-is-easy-to-get/
-featured_image: /wp-content/uploads/2012/12/Scalability.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2012/12/Scalability.png
 views:
   - 29952
 rp4wp_auto_linked:

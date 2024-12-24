@@ -6,7 +6,7 @@ date: 2014-01-18T10:52:54+00:00
 ID: 2265
 excerpt: Trying to show the difference between Send and Post on the SynchronizationContext object.
 url: /index.php/desktopdev/mstech/vbnet/synchronizationcontext-the-difference-between-post-and-send/
-featured_image: /wp-content/uploads/2014/01/Synch1.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch1.png
 views:
   - 7254
 categories:
@@ -32,7 +32,7 @@ Lets make a form like this.
 &nbsp;
 
 <div id="attachment_2266" style="width: 310px" class="wp-caption alignnone">
-  <a href="/wp-content/uploads/2014/01/Synch1.png"><img class="size-full wp-image-2266" alt="Empty form with 3 textboxes and a button" src="/wp-content/uploads/2014/01/Synch1.png" width="300" height="300" srcset="/wp-content/uploads/2014/01/Synch1.png 300w, /wp-content/uploads/2014/01/Synch1-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch1.png"><img class="size-full wp-image-2266" alt="Empty form with 3 textboxes and a button" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch1.png" width="300" height="300" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch1.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch1-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     Empty form with 3 textboxes and a button
@@ -91,10 +91,10 @@ End Class
 ```
 The result will be this.
 
-[<img src="/wp-content/uploads/2014/01/Synch2.png" alt="Synch2" width="300" height="300" class="alignnone size-full wp-image-2268" srcset="/wp-content/uploads/2014/01/Synch2.png 300w, /wp-content/uploads/2014/01/Synch2-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />][1]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch2.png" alt="Synch2" width="300" height="300" class="alignnone size-full wp-image-2268" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch2.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch2-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />][1]
 
 So for the send method this is 2 because the line with the return will only be executed after the send has completed. For the post method this will be one because the returnvalue gets set sometime in the future which will most likely be after the Return has been called. 
 
 So something to be aware of.
 
- [1]: /wp-content/uploads/2014/01/Synch2.png
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/Synch2.png

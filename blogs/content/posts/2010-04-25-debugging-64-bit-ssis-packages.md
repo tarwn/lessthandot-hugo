@@ -25,7 +25,7 @@ I ran into this problem myself a while ago and this week a co-worker also ran in
 
 It is pretty simple, all you have to do is click on _Project_, then select _Debug Properties_. Under _Configuration Properties_, click on _Debugging_. Make _Run64BitRuntime_ _False_. See image below. 
 
-<img src="/wp-content/uploads/blogs/DataMgmt//debug2.png" alt="" title="" width="696" height="422" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//debug2.png" alt="" title="" width="696" height="422" />
 
 Now start the debugger again, you will see now that it will stop at the breakpoint.
 

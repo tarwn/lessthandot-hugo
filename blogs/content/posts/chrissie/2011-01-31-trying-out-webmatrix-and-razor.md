@@ -34,7 +34,7 @@ He said it was only 8MB to download. It is only 8MB to download untill you click
 YOu can download webmatrix from the [ASP.Net webpages][1]. YOu just have to click the big green button on the [install page][2].
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix1.png?mtime=1296477455"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix1.png?mtime=1296477455" width="904" height="596" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix1.png?mtime=1296477455"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix1.png?mtime=1296477455" width="904" height="596" /></a>
 </div>
 
 That will download the webinstaller which is only 8MB.
@@ -42,7 +42,7 @@ That will download the webinstaller which is only 8MB.
 And then the downloading begins.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix2.png?mtime=1296477467"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix2.png?mtime=1296477467" width="700" height="480" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix2.png?mtime=1296477467"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix2.png?mtime=1296477467" width="700" height="480" /></a>
 </div>
 
 It will install IIS-express and some other things it needs.
@@ -50,7 +50,7 @@ It will install IIS-express and some other things it needs.
 This is a list of things it installed on my machine.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix3.png?mtime=1296477788"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix3.png?mtime=1296477788" width="700" height="480" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix3.png?mtime=1296477788"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix3.png?mtime=1296477788" width="700" height="480" /></a>
 </div>
 
 ## First site
@@ -60,13 +60,13 @@ So the installation was pretty painless. Now let&#8217;s get me a site. I used a
 This is were you end up after you click ok.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix4.png?mtime=1296478312"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix4.png?mtime=1296478312" width="1260" height="745" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix4.png?mtime=1296478312"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix4.png?mtime=1296478312" width="1260" height="745" /></a>
 </div>
 
 And this is what happens when you click run.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix5.png?mtime=1296478326"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix5.png?mtime=1296478326" width="947" height="362" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix5.png?mtime=1296478326"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix5.png?mtime=1296478326" width="947" height="362" /></a>
 </div>
 
 That was simple and quick. Now let&#8217;s see if I can do some razor things with it.
@@ -76,7 +76,7 @@ That was simple and quick. Now let&#8217;s see if I can do some razor things wit
 Just doing some quick and dirty things with it now. AS usual you have to jump through hoops to use VB as your language. YOu have to pick a vbhtml for this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix6.png?mtime=1296478675"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix6.png?mtime=1296478675" width="1244" height="707" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix6.png?mtime=1296478675"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix6.png?mtime=1296478675" width="1244" height="707" /></a>
 </div>
 
 It is not in common nor in suggested, you have to go to all.
@@ -120,7 +120,7 @@ End Code
 That now looks the same as the default page.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix7.png?mtime=1296479431"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix7.png?mtime=1296479431" width="938" height="345" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix7.png?mtime=1296479431"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix7.png?mtime=1296479431" width="938" height="345" /></a>
 </div>
 
 Next thing I wanted to find out is how to do a for loop.
@@ -145,7 +145,7 @@ End Code
 And this the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix8.png?mtime=1296479749"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix8.png?mtime=1296479749" width="198" height="285" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix8.png?mtime=1296479749"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/Webmatrix8.png?mtime=1296479749" width="198" height="285" /></a>
 </div>
 
 I was a bit surprised with the syntax, I don&#8217;t think it is all that consistent (why no @ before the next? and why do I need the @ in front of the li?) but I could get used to it over time.

@@ -40,19 +40,19 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/StupidMe3/introducebug.PNG?mtime=1380632628"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe3/introducebug.PNG?mtime=1380632628" alt="" width="540" height="120" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe3/introducebug.PNG?mtime=1380632628"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe3/introducebug.PNG?mtime=1380632628" alt="" width="540" height="120" /></a>
 </p>
 
 <span style="text-align: justify;">For those who haven't noticed: you cannot store -1 in a byte. Anyway, the wonderful designer that is the Visual Studio shell fails to warn me of my little indiscretion. Leaving me with a script component that won't compile.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/StupidMe3/nocompile.PNG?mtime=1380632628"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe3/nocompile.PNG?mtime=1380632628" alt="" width="676" height="212" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe3/nocompile.PNG?mtime=1380632628"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe3/nocompile.PNG?mtime=1380632628" alt="" width="676" height="212" /></a>
 </p>
 
 <span style="text-align: justify;">The matching errors aren't helpful either.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/StupidMe3/errors.PNG?mtime=1380632628"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe3/errors.PNG?mtime=1380632628" alt="" width="853" height="307" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe3/errors.PNG?mtime=1380632628"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe3/errors.PNG?mtime=1380632628" alt="" width="853" height="307" /></a>
 </p>
 
 <span style="font-weight: bold; text-align: justify;">The solution</span>
@@ -62,13 +62,13 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/StupidMe3/button.PNG?mtime=1380632628"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe3/button.PNG?mtime=1380632628" alt="" width="467" height="125" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe3/button.PNG?mtime=1380632628"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe3/button.PNG?mtime=1380632628" alt="" width="467" height="125" /></a>
 </p>
 
 <span style="text-align: justify;">This results in a blue squiggly being added to the code, together with a decent explanation.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/StupidMe3/buildscript.PNG?mtime=1380632628"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe3/buildscript.PNG?mtime=1380632628" alt="" width="559" height="227" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe3/buildscript.PNG?mtime=1380632628"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe3/buildscript.PNG?mtime=1380632628" alt="" width="559" height="227" /></a>
 </p>
 
 <span style="text-align: justify;">The moral of this story: if the script component is giving you a hard time, hit that build button!</span>

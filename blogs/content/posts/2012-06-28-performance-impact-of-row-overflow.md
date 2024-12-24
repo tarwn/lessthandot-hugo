@@ -52,7 +52,7 @@ DBCC IND('QTuner','SpanOverFlow',1)
 _Listing 3_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/overflow1.gif?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/overflow1.gif?mtime=1340765934" width="577" height="159" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/overflow1.gif?mtime=1340765934"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/overflow1.gif?mtime=1340765934" width="577" height="159" /></a>
 </div>
 
 Another, more simplistic method using the DMV (Dynamic Management View) sys.dm\_db\_index\_physical\_stats, can be used but is limited to showing the allocation units that exist for the table.  This is valuable though when performance tuning, as we will show later.
@@ -73,7 +73,7 @@ FROM sys.dm_db_index_physical_stats(DB_ID(N'QTuner'), OBJECT_ID(N'dbo.SpanOverFl
 _Listing 4_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-148.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-148.png?mtime=1340765934" width="624" height="45" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-148.png?mtime=1340765934"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-148.png?mtime=1340765934" width="624" height="45" /></a>
 </div>
 
 **How can Row Overflow affect performance by introducing more pages?**
@@ -124,7 +124,7 @@ SELECT DATEDIFF(ms,@STR,GETDATE())
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-149.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-149.png?mtime=1340765934" width="624" height="47" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-149.png?mtime=1340765934"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-149.png?mtime=1340765934" width="624" height="47" /></a>
 </div>
 
 _Listing 7_
@@ -161,7 +161,7 @@ _Listing 9_
 _Table 'OverFlowPages'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0._
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-150.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-150.png?mtime=1340765934" width="369" height="87" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-150.png?mtime=1340765934"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-150.png?mtime=1340765934" width="369" height="87" /></a>
 </div>
 
 As shown above, the statistics and actual execution plan that were generated from the select statement are optimal.  The clustered index was used, as expected, and the query executed as well as it will.  However, this was due to the first row (ID of 1) being a previously inserted row that did not exceed 8060 bytes.  The inserts from listing 8 did exceed the row limit and the remaining 100 secondary tests that were performed.  Will they show the same results?  Listing 10 shows a select that is returning a row that has a row overflow page.  With our examples, the ID of 50 is selected as it was a known insert that exceeded 8060 bytes.
@@ -180,7 +180,7 @@ _Listing 10_
 _Table 'OverFlowPages'. Scan count 0, logical reads 2, physical reads 0, read-ahead reads 0, lob logical reads 1, lob physical reads 0, lob read-ahead reads 0._
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-151.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-151.png?mtime=1340765934" width="372" height="89" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-151.png?mtime=1340765934"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-151.png?mtime=1340765934" width="372" height="89" /></a>
 </div>
 
 In the results from querying a row that does have a row overflow page, the execution plan is still an index seek, but the statistics show a slightly different result. There is now an introduction of a lob logical read in order to fulfill the request to bring in the row overflow page that is found by the pointer in the index page. The introduction of the lob logical read will affect performance in a negative way by increasing resource utilization. This would be more evident when a select statement required returning several rows, even when the index seek on the clustered index is performed, but multiple lob logical reads were needed. In this case the execution plan is performing the seek that is needed but bringing in more pages than required to fulfill the needs. 
@@ -208,7 +208,7 @@ SELECT BadUseVarcharOne FROM OverFlowPages WHERE ID = 50
 _Listing 12_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-152.png?mtime=1340765934"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-152.png?mtime=1340765934" width="351" height="84" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-152.png?mtime=1340765934"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-152.png?mtime=1340765934" width="351" height="84" /></a>
 </div>
 
  __

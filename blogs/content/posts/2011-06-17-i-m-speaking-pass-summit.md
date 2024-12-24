@@ -19,7 +19,7 @@ categories:
 
 ---
 <p align="center">
-  <img src="/wp-content/uploads/users/grrlgeek/PASS_2011_SpeakingButton_180x180-black.png?mtime=1308278113" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/PASS_2011_SpeakingButton_180x180-black.png?mtime=1308278113" />
 </p>
 
 After a very successful previous year of presentations – three user groups, two SQL Saturdays, and 24 Hours of PASS – I decided to submit abstracts to speak at [PASS Summit][1] in October 2011. Summit is huge. It's probably the biggest SQL Server conference in the world. It was hard to talk myself into hitting the submit button on the page. 

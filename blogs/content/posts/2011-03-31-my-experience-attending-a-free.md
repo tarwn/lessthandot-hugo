@@ -34,7 +34,7 @@ So I told Brent I'd love to come!
 We met [here][1] on Friday, March 25, the day before SQL Saturday 67. The meeting space was unbelievable. We had The Jitterbug. I was surrounded by free coffee, art supplies, toys, dress-up hats and comfy couches. I think the plan was to distract me from saying things like "SQUEEEEEEEEEE! It's GRANT F-ING FRITCHEY!" every time someone I admired walked in the room. Which happened approximately 10,000 times that day. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/SQLBarbiesSmall.jpg?mtime=1301584694"><img alt="" src="/wp-content/uploads/users/grrlgeek/SQLBarbiesSmall.jpg?mtime=1301584694" width="576" height="384" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/SQLBarbiesSmall.jpg?mtime=1301584694"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/SQLBarbiesSmall.jpg?mtime=1301584694" width="576" height="384" /></a>
 </div>
 
 SQL Barbies Yanni Robel and me
@@ -50,7 +50,7 @@ One of the best exercises we did all day related to branding. Brent made a circl
 When I got home, I made my own. This is my circle, my brand, the words I feel describe me, and how I want to portray myself to the community. (Note: I'm a DBA, not a graphic artist. I thought adding color was cool.) 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/3Words.JPG?mtime=1301585009"><img alt="" src="/wp-content/uploads/users/grrlgeek/3Words.JPG?mtime=1301585009" width="834" height="659" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/3Words.JPG?mtime=1301585009"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/3Words.JPG?mtime=1301585009" width="834" height="659" /></a>
 </div>
 
 **The Best Part** 

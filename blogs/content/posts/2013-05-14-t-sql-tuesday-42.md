@@ -24,7 +24,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <a href="http://wendyverse.blogspot.be/2013/05/its-time-for-t-sqltuesday-42-long-and.html" target="_blank"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
+  <a href="http://wendyverse.blogspot.be/2013/05/its-time-for-t-sqltuesday-42-long-and.html" target="_blank"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
 </div>
 
 <p style="text-align: justify;">

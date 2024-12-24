@@ -28,7 +28,7 @@ So my real developer hat went on at this point. Simple imports failed to do what
 Come on, you know who you are. I'll show you mine if you show me yours
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//runme.gif" alt="" title="" width="527" height="191" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//runme.gif" alt="" title="" width="527" height="191" />
 </div>
 
 So after I failed at my normal import practices and knowing a long day of SSIS would go out of my time bounds, I grabbed a new project (almost left WindowsApplication1 as the name :P) and started thinking and the code came out of me as it once did in my earlier programming career. I wrote that small executable in about an hour. Actually, I wrote a little before dinner and the rest after so not quite an hour. The program even logged each line processed, any errors encountered and any transaction ID found. I went as far as helping my validation process of this import by inserting fully qualified file names, line count in the files and date time values so I could write this nasty to validate against the actual files themselves afterwards...
@@ -54,7 +54,7 @@ Really there is a point to my ramblings. Even knowing the results of that query 
 (Yes, that is in seconds on import time for such a small amount of processing)
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//speedtoslow.gif" alt="" title="" width="283" height="104" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//speedtoslow.gif" alt="" title="" width="283" height="104" />
 </div>
 
 I managed to write the validation report the business wanted in minutes. Now if I would have thought of just getting the job done in the first place and listened to the voice in my head telling me about those first lines in the files, I would have delivered hours after the request. So the parameters I needed to think about before I started working on anything were pretty basic.

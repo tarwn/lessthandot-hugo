@@ -62,7 +62,7 @@ End Class```
 I saved all of it and then went into the loupe desktop.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe1.png?mtime=1364009122"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe1.png?mtime=1364009122" width="1032" height="652" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe1.png?mtime=1364009122"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe1.png?mtime=1364009122" width="1032" height="652" /></a>
 </div>
 
 YOu can now click the big green button that says Add Gribraltar now, point it to your project give it a name and whatnot and voila Gibraltar is there.
@@ -74,13 +74,13 @@ When I run it and go to live sessions.
 I can see it. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe3.png?mtime=1364009498"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe3.png?mtime=1364009498" width="1032" height="652" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe3.png?mtime=1364009498"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe3.png?mtime=1364009498" width="1032" height="652" /></a>
 </div>
 
 No idea why it is there twice but you can click one of them.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe2.png?mtime=1364009376"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe2.png?mtime=1364009376" width="991" height="524" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe2.png?mtime=1364009376"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe2.png?mtime=1364009376" width="991" height="524" /></a>
 </div>
 
 That&#8217;s already more information than we are used to, and we have yet to add logging.
@@ -99,7 +99,7 @@ And next time you run this.
 you will see this in your logging session.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe4.png?mtime=1364009881"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe4.png?mtime=1364009881" width="1101" height="187" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe4.png?mtime=1364009881"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe4.png?mtime=1364009881" width="1101" height="187" /></a>
 </div>
 
 You can even click on that link and go to your code.
@@ -107,7 +107,7 @@ You can even click on that link and go to your code.
 Or see the code in the tab mainmodule.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe5.png?mtime=1364010034"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe5.png?mtime=1364010034" width="652" height="249" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe5.png?mtime=1364010034"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe5.png?mtime=1364010034" width="652" height="249" /></a>
 </div>
 
 That is simple enough.
@@ -133,7 +133,7 @@ MyBase.Get("/test") = Function(parameters)
 If I now go to the page /test I will see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe6.png?mtime=1364010367"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe6.png?mtime=1364010367" width="813" height="199" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe6.png?mtime=1364010367"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe6.png?mtime=1364010367" width="813" height="199" /></a>
 </div>
 
 The exception is nicely logged.
@@ -168,7 +168,7 @@ End Class```
 And now we will see our exception.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Loupe/loupe7.png?mtime=1364010747"><img alt="" src="/wp-content/uploads/users/chrissie1/Loupe/loupe7.png?mtime=1364010747" width="798" height="286" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe7.png?mtime=1364010747"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Loupe/loupe7.png?mtime=1364010747" width="798" height="286" /></a>
 </div>
 
 ## Conclusion

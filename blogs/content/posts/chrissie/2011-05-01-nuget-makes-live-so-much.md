@@ -34,19 +34,19 @@ I then select File -> New and then Edit -> Edit package Metadata.
 You can then fill in all the fields you want.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget5.png?mtime=1304251123"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget5.png?mtime=1304251123" width="1000" height="765" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget5.png?mtime=1304251123"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget5.png?mtime=1304251123" width="1000" height="765" /></a>
 </div>
 
 As you can see I already picked the dependecies I want from the feed.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget10.png?mtime=1304251176"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget10.png?mtime=1304251176" width="640" height="481" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget10.png?mtime=1304251176"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget10.png?mtime=1304251176" width="640" height="481" /></a>
 </div>
 
 I can then close that edit menu and my package now looks like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget6.png?mtime=1304251134"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget6.png?mtime=1304251134" width="1000" height="765" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget6.png?mtime=1304251134"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget6.png?mtime=1304251134" width="1000" height="765" /></a>
 </div>
 
 You now have to save it via File -> Save
@@ -54,19 +54,19 @@ You now have to save it via File -> Save
 Now I can go to Visual studio where I already have nuget installed. Just open Tools -> Library Package Manager -> Package Manger Settings. Where you will see this under Package Sources.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget7.png?mtime=1304251144"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget7.png?mtime=1304251144" width="787" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget7.png?mtime=1304251144"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget7.png?mtime=1304251144" width="787" height="471" /></a>
 </div>
 
 Now browse (the three dots) for the folder where you left you little package and click Add.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget8.png?mtime=1304251166"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget8.png?mtime=1304251166" width="787" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget8.png?mtime=1304251166"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget8.png?mtime=1304251166" width="787" height="471" /></a>
 </div>
 
 Now you can rightclick your project and do Add Library Package Reference. Search for you package and click install.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget4.png?mtime=1304251113"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget4.png?mtime=1304251113" width="830" height="673" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget4.png?mtime=1304251113"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget4.png?mtime=1304251113" width="830" height="673" /></a>
 </div>
 
 <span class="MT_red">Be carefull You have to select the All source or else this will not work because of the external references.</span>
@@ -74,7 +74,7 @@ Now you can rightclick your project and do Add Library Package Reference. Search
 And after all that you have all the references you need in your product.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget9.png?mtime=1304251157"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget9.png?mtime=1304251157" width="443" height="344" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget9.png?mtime=1304251157"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget9.png?mtime=1304251157" width="443" height="344" /></a>
 </div>
 
 ## Conclusion

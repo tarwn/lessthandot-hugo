@@ -32,7 +32,7 @@ tags:
 
 <p style="text-align: justify">
   <div class="image_block">
-    <a href="http://amzn.to/1J0ZLfO"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/users/koenverbeeck/DataVizBookReview/informationdashboarddesign.png?mtime=1372771566" alt="" width="186" height="219" /></a>
+    <a href="http://amzn.to/1J0ZLfO"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataVizBookReview/informationdashboarddesign.png?mtime=1372771566" alt="" width="186" height="219" /></a>
   </div>
   
   <p style="text-align: justify">
@@ -56,7 +56,7 @@ tags:
   </p>
   
   <div class="image_block">
-    <a href="http://amzn.to/1TD1cUR"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/users/koenverbeeck/DataVizBookReview/datavisualizationprocess.png?mtime=1372771564" alt="" width="178" height="219" /></a>
+    <a href="http://amzn.to/1TD1cUR"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataVizBookReview/datavisualizationprocess.png?mtime=1372771564" alt="" width="178" height="219" /></a>
   </div>
   
   <p style="text-align: justify">
@@ -76,7 +76,7 @@ tags:
   </p>
   
   <div class="image_block">
-    <a href="http://amzn.to/1M6gzDc"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/users/koenverbeeck/DataVizBookReview/SayItWithCharts.jpg?mtime=1372771569" alt="" width="172" height="224" /></a>
+    <a href="http://amzn.to/1M6gzDc"><img class="alignnone" style="float: left;margin: 0px 10px 0px 10px" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataVizBookReview/SayItWithCharts.jpg?mtime=1372771569" alt="" width="172" height="224" /></a>
   </div>
   
   <p style="text-align: justify">

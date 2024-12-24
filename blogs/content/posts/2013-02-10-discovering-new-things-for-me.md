@@ -29,19 +29,19 @@ I decided to check it out. I knew already about the details pane, I use it all t
 What I did not know is that you can change the columns that are shown. Click on he databases folder in SSMS and press F7, this will bring up the details pane, it looks somewhat like the image below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails.PNG?mtime=1360507029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails.PNG?mtime=1360507029" width="926" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails.PNG?mtime=1360507029"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails.PNG?mtime=1360507029" width="926" height="343" /></a>
 </div>
 
 Right click on any of the columns and you will see the following menu
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTailsChoose.PNG?mtime=1360507043"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTailsChoose.PNG?mtime=1360507043" width="247" height="497" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTailsChoose.PNG?mtime=1360507043"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTailsChoose.PNG?mtime=1360507043" width="247" height="497" /></a>
 </div>
 
 Now I don't care for some of the things that are shown by default, I unchecked some of them and checked others. Here is what it looks like now, much better for what I need to see at a glance
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails2.PNG?mtime=1360507051"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails2.PNG?mtime=1360507051" width="860" height="342" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails2.PNG?mtime=1360507051"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DatabasesDeTails2.PNG?mtime=1360507051" width="860" height="342" /></a>
 </div>
 
 You can sort the results by clicking on a column, click it again and it is sorted in the reversed order

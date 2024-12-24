@@ -29,13 +29,13 @@ If you need to use a Dedicated Administrator Connection (DAC) via SSMS, you can'
 Dedicated administrator connections are not supported via SSMS as it establishes multiple connections by design. (Microsoft.SqlServer.Management.SqlStudio.Explorer)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac.PNG?mtime=1365341742"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac.PNG?mtime=1365341742" width="619" height="174" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac.PNG?mtime=1365341742"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac.PNG?mtime=1365341742" width="619" height="174" /></a>
 </div>
 
 So what do you do? You can connect from within SSMS, you need to click on the `Database Engine Query` icon
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac2.PNG?mtime=1365342094"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac2.PNG?mtime=1365342094" width="416" height="87" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac2.PNG?mtime=1365342094"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Dac2.PNG?mtime=1365342094" width="416" height="87" /></a>
 </div>
 
 Prefix the servername with Admin: Instead of **(local)**, you would do **Admin:(local)**
@@ -51,7 +51,7 @@ You can also use a trusted connection
 sqlcmd -S (local) -E -A
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/dac3.PNG?mtime=1365343123"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/dac3.PNG?mtime=1365343123" width="671" height="142" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/dac3.PNG?mtime=1365343123"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/dac3.PNG?mtime=1365343123" width="671" height="142" /></a>
 </div>
 
 If you want to know more about DAC, check out [Using a Dedicated Administrator Connection][1]

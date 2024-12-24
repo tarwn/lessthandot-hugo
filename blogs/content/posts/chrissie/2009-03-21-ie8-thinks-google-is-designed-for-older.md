@@ -14,7 +14,7 @@ categories:
 I thought this was pretty funny.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/IE8.jpg" alt="" title="" width="996" height="493" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/IE8.jpg" alt="" title="" width="996" height="493" />
 </div>
 
 And running it in comptabiliy view is not helping. And how do they think I&#8217;m going to type anything in that very small textbox and the tiny buttons.

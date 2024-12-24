@@ -35,7 +35,7 @@ Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArg
 Result
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/panel1.jpg" alt="" title="" width="301" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/panel1.jpg" alt="" title="" width="301" height="301" />
 </div>
 
 Weird no text. Well, I can explain that. If you look very carefully and change your code to this:
@@ -74,7 +74,7 @@ Private _Panel As Panel
 And this gives this result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/panel2.jpg" alt="" title="" width="301" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/panel2.jpg" alt="" title="" width="301" height="301" />
 </div>
 
 The text isn&#8217;t all that beautifully placed but we can do something about that.
@@ -106,7 +106,7 @@ End Class
 This is the result:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/panel3.jpg" alt="" title="" width="301" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/panel3.jpg" alt="" title="" width="301" height="301" />
 </div>
 
 Now the text is nicely centered without having to do to much tedious calculation. The stringformat does most of the hard work for us.

@@ -22,7 +22,7 @@ I have some very good reasons to switch from Windows forms to WPF. I think from 
 We all know that the new Visual studio uses WPF. But from time to time I see this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/WPFFail1.png" alt="" title="" width="515" height="81" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/WPFFail1.png" alt="" title="" width="515" height="81" />
 </div>
 
 That is not something I want my users to see. This was on a win7 x64 machine with two nvidia 9800GT graphics cards. 
@@ -32,7 +32,7 @@ That is not something I want my users to see. This was on a win7 x64 machine wit
 I have a test environment with VMWare and WinXP VM. And this is what I see when the splashscreen disappears.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/WPFFail2.png" alt="" title="" width="1006" height="510" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/WPFFail2.png" alt="" title="" width="1006" height="510" />
 </div>
 
 The screen is clearly not refreshing like it should. Knowing that most of my clients still run XP worries me.
@@ -42,7 +42,7 @@ The screen is clearly not refreshing like it should. Knowing that most of my cli
 And back to the win7 64x with 4 monitors setup. There I see this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/WPFFail3.png" alt="" title="" width="525" height="320" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/WPFFail3.png" alt="" title="" width="525" height="320" />
 </div>
 
 The black lines are not supposed to be there and only happen when I move the window from one monitor to another monitor.

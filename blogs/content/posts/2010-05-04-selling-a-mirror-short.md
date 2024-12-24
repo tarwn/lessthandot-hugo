@@ -47,7 +47,7 @@ At this point if your mirror is configured to save costs and stripped to the bon
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/hardware_1.gif" alt="" title="" width="254" height="166" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/hardware_1.gif" alt="" title="" width="254" height="166" />
 </div>
 
 
@@ -57,5 +57,5 @@ At this point if your mirror is configured to save costs and stripped to the bon
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/hardware_2.gif" alt="" title="" width="305" height="34" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/hardware_2.gif" alt="" title="" width="305" height="34" />
 </div>

@@ -22,7 +22,7 @@ First of course you [install the extension][3] in FF. Then you go to the options
 But it didn&#8217;t work for me the first time around. The yahoo page from AVG came up instead. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/FFnewtaburl.png" alt="" title="" width="739" height="504" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/FFnewtaburl.png" alt="" title="" width="739" height="504" />
 </div>
 
 It has been there for a while and it really bothered me because I like google better for searching anyway and I always had to click the homepage button, I think that is one click too many. 
@@ -30,13 +30,13 @@ It has been there for a while and it really bothered me because I like google be
 But you can turn that thing off. Go to options.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/FFnewtaburl2.png" alt="" title="" width="168" height="218" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/FFnewtaburl2.png" alt="" title="" width="168" height="218" />
 </div>
 
 And then uncheck the checkbox that says &#8220;Show Yahoo! search box on new tabs in the browser.&#8221;.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/FFnewtaburl3.png" alt="" title="" width="593" height="506" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/FFnewtaburl3.png" alt="" title="" width="593" height="506" />
 </div>
 
 And Yippee the NewTabUrlextension works like a charm now.

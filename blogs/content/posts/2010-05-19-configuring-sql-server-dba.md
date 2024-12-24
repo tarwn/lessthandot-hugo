@@ -31,7 +31,7 @@ tags:
 Below is a screen shot of the dreaded default 214748367 maximum server memory allowed to SQL Server. Will it take it? Yes, it will. It holds no sympathy for others and will leave no crumbs behind for mere OS operations or paging. Set this to an allowable maximum based on your server's actual available memory. Leave some for the OS to survive. The server will thank you later. Trust me!
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/memmaximum_BAD.gif" alt="" title="" width="448" height="401" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/memmaximum_BAD.gif" alt="" title="" width="448" height="401" />
 </div>
 
 

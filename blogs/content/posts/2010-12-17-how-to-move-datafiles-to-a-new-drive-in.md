@@ -26,7 +26,7 @@ tags:
 ---
 For one of the databases that I have to manage we were running out of space, so we got a shiny new 10.9 TB sized drive.
 
-<img src="/wp-content/uploads/blogs/DataMgmt/Drive.PNG" alt="" title="" width="359" height="506" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Drive.PNG" alt="" title="" width="359" height="506" />
 
 I was asked to move some files used by one database to this new drive. I decided to write up a little blog post just in case you ever need to do this so that you don't backup and restore (with move) because there is another way.
 
@@ -122,7 +122,7 @@ SET OFFLINE;
 
 If you do not stop SQL Server or take the database offline, you won't be able to move the files and you will get a message like the one below
   
-<img src="/wp-content/uploads/blogs/DataMgmt/cannotmove.PNG" alt="" title="" width="479" height="303" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/cannotmove.PNG" alt="" title="" width="479" height="303" />
   
 
 
@@ -130,13 +130,13 @@ After SQL Server is stopped, move the files to the new location
 
 In my case, here is where the files are currently C:DB_Files
   
-<img src="/wp-content/uploads/blogs/DataMgmt/beforeMove2.PNG" alt="" title="" width="613" height="451" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/beforeMove2.PNG" alt="" title="" width="613" height="451" />
 
 And after the move, this is the location of the files now D:DB_Files
   
 
   
-<img src="/wp-content/uploads/blogs/DataMgmt/afterMove2.PNG" alt="" title="" width="607" height="445" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/afterMove2.PNG" alt="" title="" width="607" height="445" />
 
 Start SQL Server again or make the database online again.
 

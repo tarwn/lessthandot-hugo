@@ -47,7 +47,7 @@ Set @cnt_test = (Select count(*) From dbo.test_scan)
 The resulting plan will show an index scan on our index PK\_test\_scan. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//scan_trick.gif" alt="" title="" width="982" height="126" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//scan_trick.gif" alt="" title="" width="982" height="126" />
 </div>
 
 That is something we'd like to get out of there. Really a seek will come from us being a bit more graphic in what we want from the tables. Saying that is the answer to the problem though. If you have an identity column and you haven't gone into the negative range of the values to utilize space then you already know the column will consist of data greater than 0. Remember this is on an IDENTITY(1,1) column. So we have our answer because we know to get a seek out of the query we need to get the count of the rows in that table is simply 
@@ -58,7 +58,7 @@ Select count(*) From dbo.test_scan where MyID >= 0
 Running this and showing the plan we can see our scan now is doing a seek on PK\_test\_scan. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//scan_trick2.gif" alt="" title="" width="983" height="127" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//scan_trick2.gif" alt="" title="" width="983" height="127" />
 </div>
 
 So now if we perform a 

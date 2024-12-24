@@ -28,7 +28,7 @@ Monitoring SQL Server
 </strong> 
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/.png?mtime=1293723940"><img src="/wp-content/uploads/blogs/DataMgmt/.png?mtime=1293723940" alt="" width="151" height="200" align="left" /></a>
+  <a href="/media/blogs/DataMgmt/.png?mtime=1293723940"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/.png?mtime=1293723940" alt="" width="151" height="200" align="left" /></a>
 </div>
 
 </a>
@@ -60,7 +60,7 @@ Installation high points
 To login you will need to create a password. The needs for the password were a little unclear but later it is clear upon logging out of the monitor and back in. When logging in, all you need is a password. That was a little surprising since I picked windows authentication for everything during the setup. Not 100% sure I like the fact that there isn't a user account so then multiple users could be controlled for accessing the monitor.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-1.png?mtime=1293723941"><img src="/wp-content/uploads/blogs/DataMgmt/-1.png?mtime=1293723941" alt="" width="567" height="102" /></a>
+  <a href="/media/blogs/DataMgmt/-1.png?mtime=1293723941"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-1.png?mtime=1293723941" alt="" width="567" height="102" /></a>
 </div>
 
 On startup, adding servers is pretty clear as far as how to do it. There is a convenient dialog shown so you do not have to hunt and peck for adding your servers to the monitor at first.
@@ -98,7 +98,7 @@ To setup the email alerts, go into the configuration page and click, "Email sett
 Next, make sure you setup your alerts and what you want to be alerted on. Trust me, your inbox will be filled with alerts that you just don't want in there. When I say filled, I mean filled. It is good that SQL Monitor has a default listing of what to email out. I like this very much for a more junior level position where the question may be raised on what really is important.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-2.png?mtime=1293723941"><img src="/wp-content/uploads/blogs/DataMgmt/-2.png?mtime=1293723941" alt="" width="624" height="199" /></a>
+  <a href="/media/blogs/DataMgmt/-2.png?mtime=1293723941"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-2.png?mtime=1293723941" alt="" width="624" height="199" /></a>
 </div>
 
 **</p> 
@@ -110,7 +110,7 @@ Let's take a tour
 The first things we all do when installing a new product is take a tour. At first glance the home page shows a very nice representation of how the monitored SQL Server instances are performing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_4.gif?mtime=1293726680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_4.gif?mtime=1293726680" width="624" height="284" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlmonitor_4.gif?mtime=1293726680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlmonitor_4.gif?mtime=1293726680" width="624" height="284" /></a>
 </div>
 
 As you can see, my instances aren't doing very well.
@@ -124,7 +124,7 @@ From the below snapshot we can see that primary status of the instance is shown,
 The level of the alert status is critical. A DBAs day is busy and having to dig into all instances with any alert is a handicap. When time is slim for proactively checking all of your SQL Server instances, having a "High" alerting process with the easy to point out view of that status is extremely helpful. As you can see from my High alert status on the instance below, that is provided right away in SQL Monitor.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_5.gif?mtime=1293726680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_5.gif?mtime=1293726680" width="624" height="383" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlmonitor_5.gif?mtime=1293726680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlmonitor_5.gif?mtime=1293726680" width="624" height="383" /></a>
 </div>
 
 **</p> 
@@ -136,7 +136,7 @@ Disk Space
 Disk space is probably one the high points in my work helping others with system problems. SQL Server installations not configured correctly often cause disk space to run low. Log file growth, backup plans etc... all can cause disk space to run low very quickly.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-5.png?mtime=1293723944"><img src="/wp-content/uploads/blogs/DataMgmt/-5.png?mtime=1293723944" alt="" width="624" height="35" /></a>
+  <a href="/media/blogs/DataMgmt/-5.png?mtime=1293723944"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-5.png?mtime=1293723944" alt="" width="624" height="35" /></a>
 </div>
 
 The alert above is indicating I have an extreme issue with disk space that needs to be looked at quickly. Clicking the alert shows a very good representation of where my disk is going along with the statistics of what is used and what is available. To go further in-depth of the disk utilization; SQL Monitor shows information that is invaluable for analyzing disk usage. The performance data section that is shown starts with the host machine and shows counters:
@@ -155,7 +155,7 @@ Navigating through the other performance tabs shows more required counters for m
 The graphs made available for a quick view of how things are running are also very well done. As a DBA with experience using many monitoring tools and understanding that the important part to alerts and fixing problems; the concept of animations or big and shiny pictures is not something I myself am concerned with. What I want as a DBA is a quick and thin representation of where a problem is. SQL Monitor provides just that in a thin and meaningful graph of the state of the counters you are viewing. The last thing a DBA wants to wait for while looking for a problem is a period of time they need to wait while graphs are loaded. Added to the graphs are quick tooltips of the timeframes in which a value of that timeframe can be viewed without digging into the graphs details.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-6.png?mtime=1293723944"><img src="/wp-content/uploads/blogs/DataMgmt/-6.png?mtime=1293723944" alt="" width="624" height="262" /></a>
+  <a href="/media/blogs/DataMgmt/-6.png?mtime=1293723944"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-6.png?mtime=1293723944" alt="" width="624" height="262" /></a>
 </div>
 
 **</p> 
@@ -169,7 +169,7 @@ A monitoring system for SQL Server is enhanced by becoming a task repository. Le
 For example: in a performance data view of SQL Server on my monitor, an alert was raised around 6:28AM for high wait times. I could have dug into management objects and historic data of the processes and transactions that were hitting my database server at that time but alas, I was required to get a project out at the same time. Since the wait time was a spike and released, I can add a comment that a trace will be scheduled to capture all the information I need to resolve the high waits or check it off as a onetime issue.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-7.png?mtime=1293723945"><img src="/wp-content/uploads/blogs/DataMgmt/-7.png?mtime=1293723945" alt="" width="620" height="430" /></a>
+  <a href="/media/blogs/DataMgmt/-7.png?mtime=1293723945"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-7.png?mtime=1293723945" alt="" width="620" height="430" /></a>
 </div>
 
 This is one of the most useful functions I believe in monitoring systems since my memory is not that great and as many know, I am horrible at writing things down.
@@ -198,7 +198,7 @@ The first point is covered extremely well with Monitor. Looking at this informat
 All of this information is a must to make a first round suggestion on why a log file may be growing rapidly. Something that would help this view greatly would be a last backup column in the File area. This comes out of the question, "Why is my log growing out of control". Failure to back up your logs in Full recovery model is typically the reason for that.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-8.png?mtime=1293723945"><img src="/wp-content/uploads/blogs/DataMgmt/-8.png?mtime=1293723945" alt="" width="541" height="400" /></a>
+  <a href="/media/blogs/DataMgmt/-8.png?mtime=1293723945"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-8.png?mtime=1293723945" alt="" width="541" height="400" /></a>
 </div>
 
 **</p> 
@@ -212,7 +212,7 @@ The last thing I want to cover on SQL Monitor in this opener to a series on the 
 The SQL Server error logs have a great deal of useful information in them when it comes to a quick view to find problems or while analyzing problems. SQL Monitor adding this to the opening page of each instance is a great idea.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_10.gif?mtime=1293726680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/sqlmonitor_10.gif?mtime=1293726680" width="624" height="151" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlmonitor_10.gif?mtime=1293726680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlmonitor_10.gif?mtime=1293726680" width="624" height="151" /></a>
 </div>
 
 **</p> 

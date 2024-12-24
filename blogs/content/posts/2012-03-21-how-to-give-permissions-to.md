@@ -145,7 +145,7 @@ SELECT * FROM @mySystableCount
 And if you look now in SSMS, you will be able to see the User-Defined Table Type in the User-Defined Table Types folder
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761" width="305" height="481" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/tvp.PNG?mtime=1332357761" width="305" height="481" /></a>
 </div>
 
 That's it for this post...hopefully this will help someone else in the future

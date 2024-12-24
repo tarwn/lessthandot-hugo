@@ -34,7 +34,7 @@ The MS Access databases are named Database1.accdb and Database2.accdb.
 The tables in each are identical and appear as follows
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//access.gif" alt="" title="" width="628" height="98" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//access.gif" alt="" title="" width="628" height="98" />
 </div>
 
 To create our supporting SQL Server table run the following create statement
@@ -69,7 +69,7 @@ We now know what we have to work with. Let's get going on the process of importi
 In a new SSIS solution, first start by setting up 4 variables. The variables will hold our MS Access database locations and the relational key that identifies them
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//variables.gif" alt="" title="" width="614" height="172" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//variables.gif" alt="" title="" width="614" height="172" />
 </div>
 
 Bring over two data flow tasks now to the control flow window. Name them Source 1 and Source 2 and double click Source 1 to go into the data flow designer.
@@ -81,7 +81,7 @@ Right click the connection manager window and click new OLE DB Connection. Make 
 Drop down the OLE DB Provider list and select either jet 4 or 12.0 in my case for 2007. Enter the location and click OK to save the connection. Repeat those steps to create Source 2. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//connmdb.gif" alt="" title="" width="614" height="623" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//connmdb.gif" alt="" title="" width="614" height="623" />
 </div>
 
 Now highlight Source 1 so you can edit the properties of it. In the expressions section click the ellipse to open the properties window. Drop down the selection and select ConnectionString. For this we will add an expression as follows
@@ -93,7 +93,7 @@ Now highlight Source 1 so you can edit the properties of it. In the expressions 
 This will create a valid connection string to the Access database. Also, add a ServerName property which will map to the same source1 variable. When you are done you should have a properties window as such
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//strings.gif" alt="" title="" width="618" height="199" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//strings.gif" alt="" title="" width="618" height="199" />
 </div>
 
 Repeat the steps again for the source 2 connection.
@@ -107,19 +107,19 @@ Now bring over the Derived Column object and double click it. The Derived column
 To do this enter "ident" into the Derived Column Name, leave "add as new column" and then expand the variables section above that to expose your user variables. You can now drag the variable source1key into the Expression place holder. Once you do this the value will be parsed and the data type will be populated for you. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//dragvariables.gif" alt="" title="" width="628" height="241" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//dragvariables.gif" alt="" title="" width="628" height="241" />
 </div>
 
 Next we need to make sure data types are handled. To do that bring over a Data Conversion task and connect the Derived Column to it. Double click the data conversion to select what we want and how to convert the values. The main thing we need to worry about is the Unicode conversion in this example. So change the DT\_WSTR to DT\_STR for all the string based columns. Alter the lengths to match also. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//columns.gif" alt="" title="" width="628" height="535" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//columns.gif" alt="" title="" width="628" height="535" />
 </div>
 
 Now bring over an OLE DB Destination and connect the data conversion to it. Select the table we created prior and go into the mappings. Map our converted copies to the table columns and click OK to save.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//mappings.gif" alt="" title="" width="628" height="535" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//mappings.gif" alt="" title="" width="628" height="535" />
 </div>
 
 That's pretty much all we need to do at this point to accomplish the task. Repeat everything for source 2 to get ready to execute the build of the package.
@@ -127,7 +127,7 @@ That's pretty much all we need to do at this point to accomplish the task. Repea
 The data flow should look like this when all done
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//finished.gif" alt="" title="" width="556" height="361" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//finished.gif" alt="" title="" width="556" height="361" />
 </div>
 
 Most of you running 64bit job servers or test systems with SSIS know that you can't just click execute now. You have to use DTEXEC so you run in 32bit mode. To do this you can build the solution so your package is created in the bin folder. Then by running the following command in command prompt
@@ -139,11 +139,11 @@ DTEXEC /f "C:MultiImport.dtsx"
 Once executing that command you should receive the following return
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//executeresults.gif" alt="" title="" width="628" height="288" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//executeresults.gif" alt="" title="" width="628" height="288" />
 </div>
 
 And checking our table we should see the data and identification of the source that it came from
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//theresults.gif" alt="" title="" width="523" height="176" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//theresults.gif" alt="" title="" width="523" height="176" />
 </div>

@@ -20,7 +20,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/resume_1.gif" alt="" title="" width="161" height="107" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/resume_1.gif" alt="" title="" width="161" height="107" align="left" />
 </div>
 
 I thoroughly enjoy interviewing people. I take it the same as getting to know everyone in the SQL Community. Even with such a limited time to directly talk about a person's experiences and skills, you can really dig deep into how a person confronts the daily trials of holding a position as a database professional or developer. At the same time, the interviewee has the same opportunity to reverse the conversation and do the same interview back. I must say, when someone does that, I am extremely impressed.
@@ -52,7 +52,7 @@ Now that is a good line! I'd like to talk to Jane about those projects and how s
 **Make them stressed**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/resume_2.gif" alt="" title="" width="142" height="104" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/resume_2.gif" alt="" title="" width="142" height="104" align="left" />
 </div>
 
 Referring back to Jane's opening paragraph leaves far too many open doors to find a breaking point during an interview. Most people that are experienced in interviewing for technical positions will look to find a stress fracture in your shell. This is even more so while interviewing for something like a DBA position. It is the interviewers' job to make sure you can handle the moment when everything is down and you are the one that needs to hold your composure in order to bring it all back up.

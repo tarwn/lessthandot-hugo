@@ -52,13 +52,13 @@ I got this error on my VCS root.
 And here it is in technicolor.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/test/Teamcity6_1.png" alt="" title="" width="594" height="94" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/test/Teamcity6_1.png" alt="" title="" width="594" height="94" />
 </div>
 
 And
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/test/Teamcity6_2.png" alt="" title="" width="657" height="235" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/test/Teamcity6_2.png" alt="" title="" width="657" height="235" />
 </div>
 
 [This happens to be a known issue][2].
@@ -72,7 +72,7 @@ It is missing a few steps.
 First you stop the teamcity services.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/test/Teamcity6_3.png" alt="" title="" width="456" height="53" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/test/Teamcity6_3.png" alt="" title="" width="456" height="53" />
 </div>
 
 The 2 above, namely Teamcity Build Agent and Teamcity Web Server.
@@ -80,7 +80,7 @@ The 2 above, namely Teamcity Build Agent and Teamcity Web Server.
 Then you go to the teamcity bin folder. and execute the teamcity-server.bat start thing.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/chrissie1/test/Teamcity6_4.png" alt="" title="" width="804" height="634" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/test/Teamcity6_4.png" alt="" title="" width="804" height="634" />
 </div>
 
 And then all is well.

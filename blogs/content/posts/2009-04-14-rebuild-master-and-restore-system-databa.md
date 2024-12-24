@@ -34,7 +34,7 @@ Delete master.mdf (don't be scared....do it. And don't be sissy and cut/paste ;)
 Go back and try to start SQL Server. BOOM!!!
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//sysdb_1.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//sysdb_1.gif" alt="" title="" />
 </div>
 
 Now for the fun of recovering it!
@@ -68,7 +68,7 @@ So run the command.
 After executing the command you will get the typical setup window checking your configuration and setup files.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//sysdb_2.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//sysdb_2.gif" alt="" title="" />
 </div>
 
 At some point you'll get a few warnings. Click Yes, Accept to all of them. Primarily say yes to the warning that you will re-install the system databases.
@@ -76,7 +76,7 @@ At some point you'll get a few warnings. Click Yes, Accept to all of them. Prima
 After that it will show you the progress as it goes along.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//sysdb_3.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//sysdb_3.gif" alt="" title="" />
 </div>
 
 You should see the system databases being populated in the Data directory now (or your data location). \*sigh\* of relief eh 🙂

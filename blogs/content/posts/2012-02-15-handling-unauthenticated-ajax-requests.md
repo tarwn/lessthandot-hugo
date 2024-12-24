@@ -23,7 +23,7 @@ tags:
 A common pattern that I use in creating ajaxy applications is to return a small HTML fragment from the request, and then inject this fragment into the DOM in the callback executed after a successful request. This tends to be a bit simpler than returning JSON and picking it apart to update the page, but it has one major problem, at least when using normal forms authentication. If the user gets logged out (either by logging out from another tab or an expiring session), the AJAX request gets redirected to the login page, which is then returned and inserted into the page. You can see how hideous this can become in the picture below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/bad-logon.PNG?mtime=1328983889"><img alt="" src="/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/bad-logon.PNG?mtime=1328983889" width="941" height="644" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/bad-logon.PNG?mtime=1328983889"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/bad-logon.PNG?mtime=1328983889" width="941" height="644" /></a>
 </div>
 
 In this case, when you sign up for a task it is supposed to return the updated task, and use this task to replace the notecard into the DOM on the right hand side. It can actually get uglier, as we support signing up for multiple tasks at a time. However, if the session expires we get a big, ugly login page displayed in the midst of all our pretty notecards. What I'd like to find is a way to retain the convenience of using forms authentication, but handle scenarios like this more gracefully.
@@ -89,7 +89,7 @@ $.ajaxSetup({
 Now that everything is set up, we are properly redirected to the login page:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/good-logon.PNG?mtime=1328987447"><img alt="" src="/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/good-logon.PNG?mtime=1328987447" width="557" height="435" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/good-logon.PNG?mtime=1328987447"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/handling-unauthenticated-ajax-requests/good-logon.PNG?mtime=1328987447" width="557" height="435" /></a>
 </div>
 
 I'm not sure this is the best solution to our problem, but it is certainly a solution. It allows us to keep leveraging ASP.net's built in error handling and authentication (I know they aren't perfect, but they are good enough for us in this scenario) while making the user's life a bit easier in the event something goes wrong. In this case, my team is the primary user of the application so it makes our lives easier 🙂

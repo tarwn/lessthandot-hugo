@@ -32,7 +32,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/error.png?mtime=1366956522"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/error.png?mtime=1366956522" alt="" width="702" height="303" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/error.png?mtime=1366956522"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/error.png?mtime=1366956522" alt="" width="702" height="303" /></a>
 </p>
 
 <span style="text-align: justify;">A quick search on the Web taught me this is the activation of .NET 3.5. I knew this was a prerequisite for SQL Server. In the past you had to enable this before you started the SQL Server set-up, but nowadays the set-up does this for you. Aren't we spoiled? Also keep in mind enabling .NET 4.5 isn't enough: the 3.5 version has to be explicitly enabled.</span>
@@ -46,37 +46,37 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_01.png?mtime=1366956829"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_01.png?mtime=1366956829" alt="" width="353" height="226" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_01.png?mtime=1366956829"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_01.png?mtime=1366956829" alt="" width="353" height="226" /></a>
 </p>
 
 <span style="text-align: justify;">Choose for </span>_Role-based or feature-based installation_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_02.png?mtime=1366957070"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_02.png?mtime=1366957070" alt="" width="556" height="390" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_02.png?mtime=1366957070"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_02.png?mtime=1366957070" alt="" width="556" height="390" /></a>
 </p>
 
 <span style="text-align: justify;">Choose the correct server, skip the Server Roles and click </span>_Next_ <span style="text-align: justify;">until you're on the Features page. Select </span>_.NET Framework 3.5 Features_ <span style="text-align: justify;">and click </span>_Next_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_05.png?mtime=1366957100"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_05.png?mtime=1366957100" alt="" width="553" height="392" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_05.png?mtime=1366957100"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_05.png?mtime=1366957100" alt="" width="553" height="392" /></a>
 </p>
 
 <span style="text-align: justify;">On the installation page you'll be confronted with a warning that the source files are missing. Fortunately you can specify an alternate source path at the bottom.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_06.png?mtime=1366957131"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_06.png?mtime=1366957131" alt="" width="553" height="390" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_06.png?mtime=1366957131"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_06.png?mtime=1366957131" alt="" width="553" height="390" /></a>
 </p>
 
 <span style="text-align: justify;">Click on the link and specify the path to the </span>_sourcessxs_ <span style="text-align: justify;">folder on your Windows Server 2012 media. In my case this was on the D: drive, which is the DVD drive.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_07.png?mtime=1366957139"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_07.png?mtime=1366957139" alt="" width="449" height="351" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_07.png?mtime=1366957139"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_07.png?mtime=1366957139" alt="" width="449" height="351" /></a>
 </p>
 
 <span style="text-align: justify;">Hit </span>_OK_ <span style="text-align: justify;">and on the Installation page, click </span>_Install_<span style="text-align: justify;">. The .NET framework 3.5 will now be installed.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_09.png?mtime=1366957167"><img src="/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_09.png?mtime=1366957167" alt="" width="556" height="392" /></a>
+  <a href="/media/users/koenverbeeck/EnableNetfx3/InstallSQL_09.png?mtime=1366957167"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/EnableNetfx3/InstallSQL_09.png?mtime=1366957167" alt="" width="556" height="392" /></a>
 </p>
 
 <span style="text-align: justify;">After the set-up, you can now re-launch the SQL Server set-up!</span>

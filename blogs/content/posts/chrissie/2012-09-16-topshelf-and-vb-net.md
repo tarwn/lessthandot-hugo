@@ -84,19 +84,19 @@ If we now got to our eventlog there will be an entry for the VSS source there th
 We can now run this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/topshelf/topshelf2.png?mtime=1347789945"><img alt="" src="/wp-content/uploads/users/chrissie1/topshelf/topshelf2.png?mtime=1347789945" width="677" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/topshelf/topshelf2.png?mtime=1347789945"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/topshelf/topshelf2.png?mtime=1347789945" width="677" height="343" /></a>
 </div>
 
 In the evntlog we will now see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/topshelf/topshelf1.png?mtime=1347789859"><img alt="" src="/wp-content/uploads/users/chrissie1/topshelf/topshelf1.png?mtime=1347789859" width="724" height="397" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/topshelf/topshelf1.png?mtime=1347789859"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/topshelf/topshelf1.png?mtime=1347789859" width="724" height="397" /></a>
 </div>
 
 And if we exit with Ctrl+C we will see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/topshelf/topshelf3.png?mtime=1347790136"><img alt="" src="/wp-content/uploads/users/chrissie1/topshelf/topshelf3.png?mtime=1347790136" width="723" height="419" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/topshelf/topshelf3.png?mtime=1347790136"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/topshelf/topshelf3.png?mtime=1347790136" width="723" height="419" /></a>
 </div>
 
 ## Conclusion

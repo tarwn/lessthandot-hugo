@@ -20,7 +20,7 @@ categories:
 Throughout the day, I probably write 5 to 15 short scripts to accomplish tasks that really, have no real purpose for future use.  That is, they aren't worth saving.  Typically this is because the script, like the one below, is easier to write than it is to search a folder to find.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/trashbin.jpg?mtime=1352997880"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/trashbin.jpg?mtime=1352997880" width="320" height="213" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/trashbin.jpg?mtime=1352997880"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/trashbin.jpg?mtime=1352997880" width="320" height="213" /></a>
 </div>
 
 Just about the time I was going to hit delete I thought; why not post them on [LTD's Wiki][1]?

@@ -23,7 +23,7 @@ And I found out that for my case sql server compact edition was less compatible.
 And you will happy to know that the person who wrote the errormessage doesn&#8217;t really care about you as the user. 
 
 <div id="attachment_2326" style="width: 310px" class="wp-caption alignnone">
-  <a href="/wp-content/uploads/2014/01/sqlce.png"><img src="/wp-content/uploads/2014/01/sqlce-300x52.png" alt="Exception thrown by QueryMultiple" width="300" height="52" class="size-medium wp-image-2326" srcset="/wp-content/uploads/2014/01/sqlce-300x52.png 300w, /wp-content/uploads/2014/01/sqlce.png 903w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/sqlce.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/sqlce-300x52.png" alt="Exception thrown by QueryMultiple" width="300" height="52" class="size-medium wp-image-2326" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/sqlce-300x52.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/sqlce.png 903w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     Exception thrown by QueryMultiple

@@ -28,19 +28,19 @@ A better way to perform a trace of events is to run it on the server. I was aske
 First, set up the trace using SQL Server Profiler, preferably against a development or test database. (The GUI tool can negatively affect performance, so be careful on production databases.) To do this, in SSMS go to Tools > SQL Server Profiler. Add a trace name, choose to save to a file, and enable file rollover. This last option means that when the max file size is reached, a new file will be created. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/grrlgeek/ProfilerPropertiesGeneral.JPG" alt="" title="" width="886" height="641" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ProfilerPropertiesGeneral.JPG" alt="" title="" width="886" height="641" />
 </div>
 
 Next, go to Events Selection and check your events. I've chosen a standard template for this test. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/grrlgeek/ProfilerPropertiesEvents.JPG" alt="" title="" width="888" height="641" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ProfilerPropertiesEvents.JPG" alt="" title="" width="888" height="641" />
 </div>
 
 Click "Run" to begin the trace. I executed a stored procedure in my AdventureWorks database to make sure the trace was capturing data. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/grrlgeek/ProfilerRunning.JPG" alt="" title="" width="692" height="565" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ProfilerRunning.JPG" alt="" title="" width="692" height="565" />
 </div>
 
 **Making a Server-Side Trace** 
@@ -50,7 +50,7 @@ Now, I stop the trace and create the script for a server-side trace. In Profiler
 Now, open the .sql file in SQL Server Management Studio. It will look similar to this: 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/grrlgeek/ProfilerTraceSQL.JPG" alt="" title="" width="786" height="520" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ProfilerTraceSQL.JPG" alt="" title="" width="786" height="520" />
 </div>
 
 On line 19, you will need to specify where to save the output files. This might be a location on the server, or a share drive on your network. 
@@ -70,7 +70,7 @@ SELECT * FROM :: fn_trace_getinfo(default)
 Your results might look something like this: 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/grrlgeek/fn_trace_getinforesults.JPG" alt="" title="" width="428" height="236" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fn_trace_getinforesults.JPG" alt="" title="" width="428" height="236" />
 </div>
 
 Traceid is the ID on the server. I currently have two, 1 and 2. Property is the ID of the trace property.

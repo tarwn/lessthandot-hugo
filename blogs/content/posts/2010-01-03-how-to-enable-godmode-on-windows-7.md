@@ -28,13 +28,13 @@ Add a new folder to your desktop and name it **GodMode.{ED7BA470-8E54-465E-825C-
 After that is done you will see the following icon on your desktop
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/GodmodeIcon.png" alt="" title="" width="78" height="80" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/GodmodeIcon.png" alt="" title="" width="78" height="80" />
 </div>
 
 Now when you click on that icon you it will open up the following folder...isn't that cool?
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/GodMode2.png?mtime=1357606733"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/GodMode2.png?mtime=1357606733" width="733" height="859" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/GodMode2.png?mtime=1357606733"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/GodMode2.png?mtime=1357606733" width="733" height="859" /></a>
 </div>
 
 By the way there is much more in this folder than in the screenshot, in the screenshot you only see 4 sections, in the folder there are 46 different ones

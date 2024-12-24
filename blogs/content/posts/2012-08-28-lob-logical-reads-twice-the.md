@@ -112,7 +112,7 @@ SELECT * FROM IND_Results
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-40.png?mtime=1346166788"><img alt="" src="/wp-content/uploads/blogs/All/-40.png?mtime=1346166788" width="624" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-40.png?mtime=1346166788"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-40.png?mtime=1346166788" width="624" height="235" /></a>
 </div>
 
 In the results above, we see that the data pages, PageType = 2, are shown first.  These pages contain the SUB_CONTENT column of the nonclustered index.  Once page 20388 appears, the LOB pages come in.  Immediately there is a noticeable difference in the PageType values.  PageType contains both 3 and 4.  Here is where we answer the question of why we return exactly twice as many reads as rows in the table.
@@ -124,7 +124,7 @@ Both page types 3 and 4 are LOB data pages or more appropriately-named text page
 To visualize this, imagine the page layout shown below starting with the root page.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-41.png?mtime=1346166788"><img alt="" src="/wp-content/uploads/blogs/All/-41.png?mtime=1346166788" width="205" height="232" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-41.png?mtime=1346166788"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-41.png?mtime=1346166788" width="205" height="232" /></a>
 </div>
 
 > Note: the ordering of the pages as they are stored does not always go in order depicted. Page 20411 starts and contains the text tree to pages 20413 to 20417. Also, page 20411 may not relate directly to the other pages but the illustration shows a good visualization to the effects of the text page type relations and tree sharing.</p>
@@ -177,7 +177,7 @@ WHERE
 From the results, the illustration below shows a more descriptive layout of the pages.  This is seen more clearly in the page\_type\_desc results.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-42.png?mtime=1346166789"><img alt="" src="/wp-content/uploads/blogs/All/-42.png?mtime=1346166789" width="624" height="111" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-42.png?mtime=1346166789"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-42.png?mtime=1346166789" width="624" height="111" /></a>
 </div>
 
 **Summary**

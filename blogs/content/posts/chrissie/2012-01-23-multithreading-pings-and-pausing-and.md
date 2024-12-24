@@ -35,19 +35,19 @@ You can pause the pings, and it will stop/pause as soon as it is finished with t
 I just added 2 extra menu items.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/GroupPing1.png?mtime=1327323869"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/GroupPing1.png?mtime=1327323869" width="649" height="610" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/GroupPing1.png?mtime=1327323869"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/GroupPing1.png?mtime=1327323869" width="649" height="610" /></a>
 </div>
 
 It just starts when you click Ping.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/GroupPing2.png?mtime=1327323878"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/GroupPing2.png?mtime=1327323878" width="649" height="610" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/GroupPing2.png?mtime=1327323878"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/GroupPing2.png?mtime=1327323878" width="649" height="610" /></a>
 </div>
 
 And it pauses when you click Pause.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/GroupPing3.png?mtime=1327323887"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/GroupPing3.png?mtime=1327323887" width="649" height="610" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/GroupPing3.png?mtime=1327323887"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/GroupPing3.png?mtime=1327323887" width="649" height="610" /></a>
 </div>
 
 And here is the enormous amount of code.

@@ -24,7 +24,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sql60_logo.gif" alt="" title="" width="300" height="236" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sql60_logo.gif" alt="" title="" width="300" height="236" align="left" />
 </div>
 
 The history of any product is important to fully understanding the product itself. With the knowledge of the foundation of a products birth, we can start to learn the depth of where it has come as it has aged over the years. SQL Server and all its features are no different. We may find ourselves disliking a product before taking full advantage of the abilities offered. 

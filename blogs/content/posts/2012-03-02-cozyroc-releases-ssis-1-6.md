@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-117.png?mtime=1330692756"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-117.png?mtime=1330692756" width="176" height="30" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-117.png?mtime=1330692756"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-117.png?mtime=1330692756" width="176" height="30" align="left" /></a>
 </div>
 
 [CozyRoc][1] has always been one of my favorite companies producing custom components and tasks for SSIS.  I've found many real life cases in production settings where the products that CozyRoc provides have been invaluable for rapid development and performance enhancing capabilities in SSIS.  The CozyRoc line has also made it into my presentations that revolve around SSIS to show how the improvements they can bring can greatly benefit installations.  These benefits include working SSIS into data movement as well as extending SSIS into the DBA world by enhancing maintenance and tasks that require logical decision making.

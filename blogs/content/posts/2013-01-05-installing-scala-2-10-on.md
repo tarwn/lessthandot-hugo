@@ -37,13 +37,13 @@ After it is downloaded and installed, it is time to get the Eclipse plugin for S
 The way you do this is you click on Help followed by Install New Software... from the menu in Eclipse
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056" width="552" height="169" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno2.PNG?mtime=1357398056" width="552" height="169" /></a>
 </div>
 
 Click on the Add button
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno3.PNG?mtime=1357398065"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno3.PNG?mtime=1357398065" width="476" height="177" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno3.PNG?mtime=1357398065"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno3.PNG?mtime=1357398065" width="476" height="177" /></a>
 </div>
 
 For Eclipse Juno you need to use the following URL in the location box http://download.scala-ide.org/sdk/e38/scala210/dev/site/
@@ -53,7 +53,7 @@ For Eclipse Indigo use the following URL http://download.scala-ide.org/sdk/e37/s
 Give a name for the repository, I named mine Scala 10 for Eclipse Juno. Hit Ok
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno4.PNG?mtime=1357398076"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno4.PNG?mtime=1357398076" width="300" height="165" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno4.PNG?mtime=1357398076"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno4.PNG?mtime=1357398076" width="300" height="165" /></a>
 </div>
 
 Hit next
@@ -63,7 +63,7 @@ On the Install Details form you will see Scala IDE for Eclipse
 You can expand it to reveal the following
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno5.PNG?mtime=1357398089"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno5.PNG?mtime=1357398089" width="352" height="152" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno5.PNG?mtime=1357398089"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno5.PNG?mtime=1357398089" width="352" height="152" /></a>
 </div>
 
 Hit next to accept the license, hit finish.
@@ -73,7 +73,7 @@ Now Eclipse will ask you to restart. After Eclipse is restarted it is time to cr
 From the menu go to File and then select New Project. Navigate to Scala Wizards and select Scala Project
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno6.PNG?mtime=1357398099"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno6.PNG?mtime=1357398099" width="562" height="361" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno6.PNG?mtime=1357398099"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno6.PNG?mtime=1357398099" width="562" height="361" /></a>
 </div>
 
 Now that the project is created let's create a simple object
@@ -81,7 +81,7 @@ Now that the project is created let's create a simple object
 Right click on the Scala Project from the package Explorer and select New–> Scala Object
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno7.PNG?mtime=1357398110"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno7.PNG?mtime=1357398110" width="510" height="573" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno7.PNG?mtime=1357398110"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno7.PNG?mtime=1357398110" width="510" height="573" /></a>
 </div>
 
 Give it a name and check _public static void main_
@@ -116,7 +116,7 @@ object Test2 {
 Run it by selecting Run As–> Scala Application from the Run as button
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno10.PNG?mtime=1357399576"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno10.PNG?mtime=1357399576" width="455" height="48" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno10.PNG?mtime=1357399576"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno10.PNG?mtime=1357399576" width="455" height="48" /></a>
 </div>
 
 Your output should be the following
@@ -172,7 +172,7 @@ Role is blogger
 Here is what my Eclipse window looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno9.PNG?mtime=1357398314"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/juno9.PNG?mtime=1357398314" width="595" height="523" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno9.PNG?mtime=1357398314"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/juno9.PNG?mtime=1357398314" width="595" height="523" /></a>
 </div>
 
 In case you are interested in all the new stuff in Scala 2.10, take a look at the stuff below.

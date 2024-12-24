@@ -19,7 +19,7 @@ categories:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlu.gif" alt="" title="" width="213" height="230" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlu.gif" alt="" title="" width="213" height="230" align="left" />
 </div>
 
 Welcome to [SQL University][1] HA and DR week! My name is Ted Krueger and I will be covering various High Availability and Disaster Recovery (HA and DR) strategies and methods. 
@@ -42,7 +42,7 @@ Before we start looking at the native SQL Server features for both HA and DR, le
 
 <p align="center">
   <div class="image_block">
-    <img src="/wp-content/uploads/blogs/DataMgmt/disaster.gif" alt="" title="" width="242" height="182" /><br /> <i>Or in other words, that mess!</i>
+    <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/disaster.gif" alt="" title="" width="242" height="182" /><br /> <i>Or in other words, that mess!</i>
   </div>
 </p>
 
@@ -50,7 +50,7 @@ Before we start looking at the native SQL Server features for both HA and DR, le
 
 <p align="center">
   <div class="image_block">
-    <img src="/wp-content/uploads/blogs/DataMgmt/recovery.gif" alt="" title="" width="231" height="180" /><br /> <i>On the mend and taking the pain pills</i>
+    <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/recovery.gif" alt="" title="" width="231" height="180" /><br /> <i>On the mend and taking the pain pills</i>
   </div>
 </p>
 
@@ -101,7 +101,7 @@ DR by itself is not commonly an automated failover process. In the event of a di
 **Availability:** _The quality or state of being available_
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dis_rec.gif" alt="" title="" width="359" height="201" align="center" /><br /> <i>If your database server ever has something in common with this gif, we should talk</i>
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dis_rec.gif" alt="" title="" width="359" height="201" align="center" /><br /> <i>If your database server ever has something in common with this gif, we should talk</i>
 </div>
 
 HA is defined as a true method of having the data available 100% (give or take some seconds) of the time with minimal to no loss of data availability in the event of a failure. In most cases, this is protection against hardware and human failures locally. Windows Clustering is a true form of HA; Database Mirroring given the appropriately configured running mode is also a true form of HA. Replication and log shipping are on the border of being considered HA, but are often used in situations where loss is acceptable and the amount of downtime is over seconds without affecting business operations. Log Shipping can have adverse effects on the performance of a database server if the schedule between the log backups is too small. Replication can be, and is, used in place of Database Mirroring, but cannot be used all of the time with some database designs, and is also more prone to a Safety Off scenario which equates to data loss vulnerabilities. Replication is also a much more administrative-intense strategy. Replication should not be ruled out due to some of these things but they must be part of the decision of your strategy. 

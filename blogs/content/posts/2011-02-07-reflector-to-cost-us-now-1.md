@@ -25,7 +25,7 @@ There is another product that is under Red Gate's ownership called [Reflector][1
 Here's a view of a program I wrote recently for an article based on troubleshooting ASYNC\_NETWORK\_IO
 
 <div class="image_block">
-  <a href="/media/blogs/DesktopDev/.png?mtime=1297132899"><img src="/wp-content/uploads/blogs/DesktopDev/.png?mtime=1297132899" alt="" width="628" height="187" /></a>
+  <a href="/media/blogs/DesktopDev/.png?mtime=1297132899"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/.png?mtime=1297132899" alt="" width="628" height="187" /></a>
 </div>
 
 As you can see, I simply browsed to the executable that was built from the solution and expanded the methods and there you go.  All of my code for that test is right there to analyze, troubleshoot or recreate in an attempt to learn from it. 
@@ -42,7 +42,7 @@ The point I'm trying to make is: Red Gate is a business and as such, is out to m
 
 <div class="image_block">
   <div class="image_block">
-    <a href="/media/blogs/DesktopDev/-1.png?mtime=1297132900"><img src="/wp-content/uploads/blogs/DesktopDev/-1.png?mtime=1297132900" alt="" width="163" height="89" align="left" /></a>
+    <a href="/media/blogs/DesktopDev/-1.png?mtime=1297132900"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/-1.png?mtime=1297132900" alt="" width="163" height="89" align="left" /></a>
   </div>
   
   <p>
@@ -65,7 +65,7 @@ The point I'm trying to make is: Red Gate is a business and as such, is out to m
     </p>
     
     <p>
-       <a href="/media/blogs/DesktopDev/-2.png?mtime=1297132900"><img src="/wp-content/uploads/blogs/DesktopDev/-2.png?mtime=1297132900" alt="" width="142" height="107" align="left" /></a>
+       <a href="/media/blogs/DesktopDev/-2.png?mtime=1297132900"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/-2.png?mtime=1297132900" alt="" width="142" height="107" align="left" /></a>
     </p>
     
     <p class="image_block">

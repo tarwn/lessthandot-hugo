@@ -19,7 +19,7 @@ I've just returned from my fourth <a href="http://sqlpass.org/summit" target="_b
 One of the highlights each year is the Women in Technology (WIT) Luncheaon on Thursday. This year was the 12th annual event, and I was invited to attend. PASS board vice president of marketing, Denise McInerney, sat down for a Q&A session with Kimberly Bryant, founder of <a href="http://www.blackgirlscode.com/" target="_blank">Black Girls CODE.</a>
 
 <div id="attachment_3063" style="width: 1034px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2014/11/WIT-lunch.jpg"><img class="size-large wp-image-3063" src="/wp-content/uploads/2014/11/WIT-lunch-1024x579.jpg" alt="Kimberly Bryant and Denise McInerney on stage" width="1024" height="579" srcset="/wp-content/uploads/2014/11/WIT-lunch-1024x579.jpg 1024w, /wp-content/uploads/2014/11/WIT-lunch-300x169.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/WIT-lunch.jpg"><img class="size-large wp-image-3063" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/WIT-lunch-1024x579.jpg" alt="Kimberly Bryant and Denise McInerney on stage" width="1024" height="579" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/WIT-lunch-1024x579.jpg 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/WIT-lunch-300x169.jpg 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
   
   <p class="wp-caption-text">
     Kimberly Bryant and Denise McInerney on stage

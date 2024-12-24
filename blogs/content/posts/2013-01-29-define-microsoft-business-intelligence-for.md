@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894" width="150" height="165" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-215.png?mtime=1359498894" width="150" height="165" align="left" /></a>
 </div>
 
 What is Microsoft Business Intelligence? I'm not asked this question very often because it's typically an assumption. As we know, assumptions can lead to misguidance or misrepresentation of a topic. This topic has been defined in so many different ways; I ask it in almost every interview I perform that has the word, "Data" in it. The reasoning for asking that question isn't directly to say a person is wrong or right but to see the range they've taken on in knowing all the factors that lead to end solutions in data. 
@@ -35,7 +35,7 @@ A great example of how these two topics relate but can be considered on a differ
 Seeing this path, we've only touched on the Business Intelligence area with the ending on SSAS. Once this task is completed, the real BI landscape sets in with the visualization of the data. During this entire transfer, BI and Performance cross each other in a few areas. To best illustrate this crossing of utilization, we can draw a guide. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-214.png?mtime=1359498781"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-214.png?mtime=1359498781" width="839" height="224" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-214.png?mtime=1359498781"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-214.png?mtime=1359498781" width="839" height="224" /></a>
 </div>
 
 As we can see from above, there are two areas of overlap, SQL Server Analysis Service and SQL Server Integration Services. This comes in because both have a performance aspect and a BI aspect to how successfully they will be utilized. SQL Server Analysis Services relates directly to how the data is stored and the analytical behavior it takes on pulling calculated fields into a visualization form. A poor OLAP design can create a bottleneck or ineffective ability to utilize SQL Server Analysis Services without added effort on altering the data. This is even more relevant in SQL Server Integration Services. While performance is important in SQL Server Analysis Service, it is brought to an entirely new level in SQL Server Integration Services. The extraction of data requires a high performance method so the sources and destinations can withstand the high volume of requirements. SQL Server Integration Services is also highly accountable for in-process transformation or manipulation of the data. The transformation of the data is also a key area that requires being attentive to how it is done as it relates to performance. 

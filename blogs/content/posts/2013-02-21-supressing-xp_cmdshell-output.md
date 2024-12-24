@@ -42,7 +42,7 @@ xp_cmdshell 'move c:tempbla.txtc:tempoldbla.txt'
 
 Here is what it looks like in SSMS
 
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/xp_cmdshellMove.PNG?mtime=1361444713" width="432" height="224" />][2]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/xp_cmdshellMove.PNG?mtime=1361444713" width="432" height="224" />][2]
 
 As you can see you get a resultset, in order to surpress that, you can add no\_output to the xp\_cmdshell call, no_output is an optional parameter, specifying that no output should be returned to the client.
 
@@ -55,4 +55,4 @@ xp_cmdshell 'move c:tempbla.txt c:tempoldbla.txt',no_output
 Executing the command like that will not return a resultset anymore
 
  [1]: /index.php/DataMgmt/DataDesign/how-to-enable-xp_cmdshell-on-sql-server-2005
- [2]: /wp-content/uploads/blogs/DataMgmt/Denis/xp_cmdshellMove.PNG?mtime=1361444713
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/xp_cmdshellMove.PNG?mtime=1361444713

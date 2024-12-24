@@ -18,7 +18,7 @@ categories:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror.gif" alt="" title="" width="550" height="678" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror.gif" alt="" title="" width="550" height="678" />
 </div>
 
 Over the weekend I started writing my documentation and lab work for a few database servers that I will be upgrading to SQL Server 2008 in the first quarter of 2010. Upgrading SQL Server has benefits in having multiple ways to go about how you plan and execute the process. I can't praise the SQL Server team enough for making the task of upgrading much less stressful than other database servers I have worked on.

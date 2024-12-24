@@ -21,7 +21,7 @@ tags:
   - syndicated
 
 ---
-[<img style="float: left;margin: 0px 10px 0px 10px" src="/wp-content/uploads/2015/01/poirot-150x150.jpg" alt="poirot" width="100" height="100" />][1]As you might have realized, this is not the title of an Agatha Christie book, but rather about some nasty permission issue I encountered with SSIS. At a new project, someone mentioned me that a scheduled job has been failing for quite some time now (actually since they created the job, yay for testing!). So I put my detective hat on (with my fake Poirot'stache) and started investigating.
+[<img style="float: left;margin: 0px 10px 0px 10px" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/01/poirot-150x150.jpg" alt="poirot" width="100" height="100" />][1]As you might have realized, this is not the title of an Agatha Christie book, but rather about some nasty permission issue I encountered with SSIS. At a new project, someone mentioned me that a scheduled job has been failing for quite some time now (actually since they created the job, yay for testing!). So I put my detective hat on (with my fake Poirot'stache) and started investigating.
 
 The SSIS catalog report _All Executions_ gave me the following wonderfull error messages:
 
@@ -43,4 +43,4 @@ Finally I stumbled upon a MSDN thread where someone suggested it might be an iss
 
 The moral of this story: Windows can be a real PITA 🙂
 
- [1]: /wp-content/uploads/2015/01/poirot.jpg
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/01/poirot.jpg

@@ -28,13 +28,13 @@ April Fools' Day is a day when people play practical jokes and hoaxes on each ot
 The first thing we are going to do is to spoof the host and program name. This is easy to do. Click on Connect, choose Database Engine, you will see the following box
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools1.PNG?mtime=1364551429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools1.PNG?mtime=1364551429" width="411" height="301" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools1.PNG?mtime=1364551429"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools1.PNG?mtime=1364551429" width="411" height="301" /></a>
 </div>
 
 Click on options >>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools2.PNG?mtime=1364551448"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools2.PNG?mtime=1364551448" width="420" height="485" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools2.PNG?mtime=1364551448"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools2.PNG?mtime=1364551448" width="420" height="485" /></a>
 </div>
 
 Click on the Additional Connection Parameters tab and paste in the following
@@ -65,7 +65,7 @@ Find out what the biggest table is in your company. Create a database with the s
 Open another connect dialog box, add the real server in the Server Name box, for example I entered PDWSQLServer2015
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools3.PNG?mtime=1364551852"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools3.PNG?mtime=1364551852" width="413" height="306" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools3.PNG?mtime=1364551852"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools3.PNG?mtime=1364551852" width="413" height="306" /></a>
 </div>
 
 Click on options >>, click on the Additional Connection Parameters tab and paste in the following _**Data Source=localhost**_
@@ -79,7 +79,7 @@ SELECT @@SERVERNAME
 That returns you the local servername. Look what you see everywhere else (highlighted in yellow)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools4.PNG?mtime=1364552737"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools4.PNG?mtime=1364552737" width="713" height="440" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools4.PNG?mtime=1364552737"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/AprilFools4.PNG?mtime=1364552737" width="713" height="440" /></a>
 </div>
 
 I see PDWSQLServer2015 everywhere else.

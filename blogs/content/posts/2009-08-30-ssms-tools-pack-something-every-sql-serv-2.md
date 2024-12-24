@@ -77,7 +77,7 @@ CREATE TABLE Test (ID INT PRIMARY KEY IDENTITY,
 Now from the menu select SSMS Tools–>CRUD Generator–>Options (see pic below)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_1.png?mtime=1357606468"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_1.png?mtime=1357606468" width="452" height="280" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_1.png?mtime=1357606468"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_1.png?mtime=1357606468" width="452" height="280" /></a>
 </div>
 
 
@@ -87,7 +87,7 @@ I like to prefix my procs with pr instead of usp_ (See pic below)
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_2.png?mtime=1357606476"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_2.png?mtime=1357606476" width="650" height="560" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_2.png?mtime=1357606476"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_2.png?mtime=1357606476" width="650" height="560" /></a>
 </div>
 
 
@@ -138,7 +138,7 @@ Right click on the table you created, select SSMS Tools and then Create CRUD (Se
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_3.png?mtime=1357606486"><img alt="" src="/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_3.png?mtime=1357606486" width="482" height="430" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_3.png?mtime=1357606486"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Denis/SSMS_3.png?mtime=1357606486" width="482" height="430" /></a>
 </div></p> 
 
 The following code will be generated

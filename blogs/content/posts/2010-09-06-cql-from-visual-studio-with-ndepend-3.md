@@ -26,7 +26,7 @@ My favorite feature of NDepend has always been CQL, the SQL-like query language 
 My favorite CQL feature is the ability to set up CQL constraints _from now_. This is really cool for older projects, where it's unrealistic to think that your team will be able to fix everything right away. But what you can do with this feature is ensure that all _new or modified_ code does measure up to your team's standards. You may not be able to clean up all those 1,000 line methods right away, but you _can_ ensure that newer methods fit in a more reasonable size limit (like 975 😉 ). This is one of the most useful features of the application, IMO. The way it works is by allowing you to establish a baseline. By comparing the code's current state to this baseline, future analyses are able to determine which methods/types/etc are new or changed, and apply the constraint to only these methods/types/etc. Sometimes I feel like this would be useful just to be able to concisely see which methods have been changed as well (version control logs aren't the most friendly things to read, especially spread throughout a large codebase). Below is a screenshot of this feature in action.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/cqlexplorer.PNG" alt="CQL Explorer" title="CQL Explorer Screenshot" width="971" height="283" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/cqlexplorer.PNG" alt="CQL Explorer" title="CQL Explorer Screenshot" width="971" height="283" />
 </div>
 
 The first three queries listed are built in to NDepend. I added the fourth, just to have a listing of new/changed methods ready. The CQL for this query is simply 
@@ -40,7 +40,7 @@ Not a bad way to keep an eye on what is getting changed in the codebase. To get 
 Double clicking a row in the CQL Explorer will take you to the CQL Editor – from here you can view the results of the query, and the CQL it contains. From there you can easily navigate to the method definition in your source code by double-clicking. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/cqleditor.PNG" alt="CQL Editor" title="CQL Editor Screenshot" width="457" height="913" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/cqleditor.PNG" alt="CQL Editor" title="CQL Editor Screenshot" width="457" height="913" />
 </div>
 
 One of the things I really like here is the comments in the built-in queries. They contain numerous links to metric definitions on the NDepend website, and sometimes even links to blog entries where the lead developer, [Patrick Smacchia][2] has explained features in greater detail. I really like this form of documentation, it makes it easier to keep up to date and also minimizes what needs to be stored on the user's computer. 
@@ -48,7 +48,7 @@ One of the things I really like here is the comments in the built-in queries. Th
 What I was happiest to find in the VS integration is the ability to superimpose CQL results onto the metrics view. The metrics view consists of a grid where each block represents a unit of code (type, method, etc...) and they are sized according to their value for the metric in question. When running CQL queries, the units of code matching your criteria are highlighted, giving a great visualization of how much code exhibits the properties you are looking for.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/metricsexplorer.PNG" alt="Metrics Explorer" title="CQL Metrics Explorer" width="887" height="686" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/CQL-VS-NDepend3/metricsexplorer.PNG" alt="Metrics Explorer" title="CQL Metrics Explorer" width="887" height="686" />
 </div>
 
 The selected query (about types having too many efferent couplings) is the currently selected query, and I had moused over the QueryParser class to highlight it in pink and show the metrics summary on the right. I find that having this built right into visual studio really helps me figure out where to focus my refactoring energy.

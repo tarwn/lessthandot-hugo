@@ -111,7 +111,7 @@ End Class
 If we run this we will get this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Datagridviewfrominterface.JPG" alt="" title="" width="778" height="297" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Datagridviewfrominterface.JPG" alt="" title="" width="778" height="297" />
 </div>
 
 So where did the person data go? 
@@ -140,7 +140,7 @@ End Class
 And see the result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Datagridviewfromclass.JPG" alt="" title="" width="777" height="302" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Datagridviewfromclass.JPG" alt="" title="" width="777" height="302" />
 </div>
 
 Yes the fields are there. Why does this happen? Well reflection and a bug in the interface implementation. Reflection should pick up the properties from IPerson in ITeacher like it does for the class but it doesn&#8217;t so your &#8230;&#8230;. The only solution that works is either bind to teacher or (like in my case) make a private class that accepts an ITeacher and has all the properties needed).

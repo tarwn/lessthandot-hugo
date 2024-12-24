@@ -30,7 +30,7 @@ There are hundreds if not thousands of T-SQL Scripts, Powershell Cmdlets, .NET p
 Years ago I realized that writing all those scripts and running them in SSIS, SQL Agent and such was good, but was I being efficient? Yes, I found that being lazy was far out of reach with these methods. Even making those scripts and programs as dynamic and mobile as they could be, there was always the fact that I had to write and update them along with implement them with in some cases, the same amount of work. Not the most efficient way to spend time as a DBA. I mean, business wants you to work for them, not for you. As sad as that is, it often is the fact. In all, writing scripts is a must and you need to in order to learn internals and become more familiar with the architecture of SQL Server and the Operating Systems they are running on. I will always recommend that and real time troubleshooting with all of indicators we retrieve in these ways can never be replaced with anything else. What about the return of investment to the company for overall monitoring? Beyond real time troubleshooting when a problem is found?
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
 </div>
 
 **Monitoring by Next, Next, Finish**
@@ -46,7 +46,7 @@ The meat of SQL Response is there and is just enough to get the job done. I'm th
 The following is a snapshot of SQL Response showing my horribly starving disk on my laptop.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazydba_monitor.gif" alt="" title="" width="628" height="240" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazydba_monitor.gif" alt="" title="" width="628" height="240" />
 </div>
 
 There really isn't much more to it than a clean and straight forward interface. I like the fact that there is a recommendations section also. This appears to be recommendations that are clear and precise. Most that I forced errors on the test database server showed recommendations that I would recommend as well. That alone shows great thought was put into this good feature.

@@ -30,7 +30,7 @@ Make sure to use something other than notepad when dealing with these files and 
 See how you can see the linefeeds here? Can't do that in notepad
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/LineFeedFile.PNG?mtime=1360855487"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/LineFeedFile.PNG?mtime=1360855487" width="421" height="223" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/LineFeedFile.PNG?mtime=1360855487"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/LineFeedFile.PNG?mtime=1360855487" width="421" height="223" /></a>
 </div>
 
 So let's say you get a file where the row terminator is a linefeed, how would you specify that as a row terminator in BULK INSERT?

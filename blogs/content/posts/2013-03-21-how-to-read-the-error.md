@@ -37,13 +37,13 @@ The first thing I did was check if I could see the logs from SSMS, I expanded th
 I decided to investigate further, there are two ways to see the error log. One way is to use the AWS RDS Dashboard. Click on the DB Instance that you are interested in and you will see a tab named Logs.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog1.PNG?mtime=1363863573"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog1.PNG?mtime=1363863573" width="752" height="446" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog1.PNG?mtime=1363863573"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog1.PNG?mtime=1363863573" width="752" height="446" /></a>
 </div>
 
 Once you click on the view button, you will see something like this
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog2.PNG?mtime=1363863585"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog2.PNG?mtime=1363863585" width="628" height="408" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog2.PNG?mtime=1363863585"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsErrorLog2.PNG?mtime=1363863585" width="628" height="408" /></a>
 </div>
 
 That is all nice and dandy but can I do it from T-SQL? Let's find out by running xp_readerrorlog.

@@ -27,7 +27,7 @@ I just [installed sandcastle][1] as one would do. Then make your project using t
 So nothing like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/sandcastle1.png?mtime=1312462687"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/sandcastle1.png?mtime=1312462687" width="1024" height="682" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/sandcastle1.png?mtime=1312462687"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/sandcastle1.png?mtime=1312462687" width="1024" height="682" /></a>
 </div>
 
 ## Teamcity
@@ -37,7 +37,7 @@ So now that you have your sandcastle project all configured and every bit of doc
 This is the easy part. And here you have it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/sandcastle2.png?mtime=1312462696"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/sandcastle2.png?mtime=1312462696" width="717" height="673" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/sandcastle2.png?mtime=1312462696"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/sandcastle2.png?mtime=1312462696" width="717" height="673" /></a>
 </div>
 
 Yes, your sandcastle project can be built with MSBuild and yes, you have to set the path to your project. And you don&#8217;t want to forget to set the correct .Net version.

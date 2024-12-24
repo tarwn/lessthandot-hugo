@@ -89,13 +89,13 @@ The first thing people see when they enter phpbb is the forumlist. So we add tha
 And here is the result. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile5.png?mtime=1309075683"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile5.png?mtime=1309075683" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile5.png?mtime=1309075683"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile5.png?mtime=1309075683" width="413" height="781" /></a>
 </div>
 
 I pick the above style by adding style= and it&#8217;s id to the URL. The above does not work when I&#8217;m not logged in however which is a shame but I&#8217;m looking in to that. So first I had to install and activate the style. you can do that in the administrator part of PHPBB.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/Stylesphpbb.png?mtime=1309076137"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/Stylesphpbb.png?mtime=1309076137" width="980" height="303" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/Stylesphpbb.png?mtime=1309076137"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/Stylesphpbb.png?mtime=1309076137" width="980" height="303" /></a>
 </div>
 
 If you then look at the URL of preview of the mobile style you will see a parameter style= and an id, that&#8217;s the id you want.
@@ -176,13 +176,13 @@ you need to add the variable PAGINATION_MOBILE also to viewtopic.php and viewfor
 Here is a view of viewtopic.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile6.png?mtime=1309076721"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile6.png?mtime=1309076721" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile6.png?mtime=1309076721"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile6.png?mtime=1309076721" width="413" height="781" /></a>
 </div>
 
 And here is a view of the pagination.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile7.png?mtime=1309076735"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile7.png?mtime=1309076735" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile7.png?mtime=1309076735"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile7.png?mtime=1309076735" width="413" height="781" /></a>
 </div>
 
 Now all we need to do is show the topic. We will need to copy bbcode.html for that (just copy it from one of the other themes). And we need a viewtopic_body.html.
@@ -209,7 +209,7 @@ Now all we need to do is show the topic. We will need to copy bbcode.html for th
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile8.png?mtime=1309077017"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile8.png?mtime=1309077017" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile8.png?mtime=1309077017"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile8.png?mtime=1309077017" width="413" height="781" /></a>
 </div>
 
 And now all that is left to do is to make styles for new posts, active posts and view online. Which are easy once you understand what I did above.

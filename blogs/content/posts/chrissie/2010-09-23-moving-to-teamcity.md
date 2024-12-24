@@ -36,7 +36,7 @@ Setting up a new process is easy in TeamCity. BUt everything is centered around 
 First you start by creating a project and giving that a name.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity1.png" alt="" title="" width="970" height="707" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity1.png" alt="" title="" width="970" height="707" />
 </div>
 
 Then you go and setup your CVS, in my case Git. My Git repository was the only thing I had trouble with to setup.
@@ -59,7 +59,7 @@ and many others
 but this worked.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity2.png" alt="" title="" width="756" height="654" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity2.png" alt="" title="" width="756" height="654" />
 </div>
 
 Then you setup the runner which is easy too, but it disturbs me that Targets, Configuration and platform are magic strings. This is the bit where Finalbuilder shines since it makes these kinds of things much easier to setup.
@@ -67,7 +67,7 @@ Then you setup the runner which is easy too, but it disturbs me that Targets, Co
 And here you also pick which tests to run.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity3.png" alt="" title="" width="704" height="504" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity3.png" alt="" title="" width="704" height="504" />
 </div>
 
 As you can see it is very easy to setup. Apart form the Run tests from textbox. I have 10 projects that contain tests and this box those not make it easy to enter them or to maintain them. Much easier in Finalbuilder.

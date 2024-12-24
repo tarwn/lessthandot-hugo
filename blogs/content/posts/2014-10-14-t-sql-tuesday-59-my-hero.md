@@ -21,7 +21,7 @@ tags:
 ---
 This month's [T-SQL Tuesday][1] is hosted by Tracy McKibben ([blog][2] | [twitter][3]) and is all about heroes (not the TV show).
 
-[<img class="alignnone size-full wp-image-2241" src="/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" />][1]
+[<img class="alignnone size-full wp-image-2241" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/TSQL2sday.png" alt="TSQL2sday" width="133" height="134" />][1]
 
 > _Ada Lovelace has been an inspiration to many. In keeping with my blog theme, let's call her a hero. We all have our heroes, those people who we admire, who inspire us, who we strive to be like. Who is your hero?_
 > 

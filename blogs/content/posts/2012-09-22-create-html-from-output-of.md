@@ -114,6 +114,6 @@ sub write_html {
 ```
 
  [1]: http://search.cpan.org/~thaljef/Perl-Critic-1.118/lib/Perl/Critic.pm
- [2]: /wp-content/uploads/blogs/WebDev/CriticHtml/critic-html-index.jpg ""
- [3]: /wp-content/uploads/blogs/WebDev/CriticHtml/critic-html-code.jpg ""
- [4]: /wp-content/uploads/blogs/WebDev/CriticHtml/critic_html.zip
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/CriticHtml/critic-html-index.jpg ""
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/CriticHtml/critic-html-code.jpg ""
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/CriticHtml/critic_html.zip

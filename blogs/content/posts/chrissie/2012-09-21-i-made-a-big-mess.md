@@ -24,7 +24,7 @@ I&#8217;m embarrassed, and not just a little. I mean a lot.
 I was wrong and I was stupid. I would never do this in production. My main application has over 9k tests before I let it go in production. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/yield/yield1.png?mtime=1348211444"><img alt="" src="/wp-content/uploads/users/chrissie1/yield/yield1.png?mtime=1348211444" width="385" height="65" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/yield/yield1.png?mtime=1348211444"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/yield/yield1.png?mtime=1348211444" width="385" height="65" /></a>
 </div>
 
 But for my blogposts I sometimes go to quickly. 
@@ -114,7 +114,7 @@ End NameSpace```
 And this is what ncrunch tells me I should have seen before posting that piece of crap.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/yield/yield2.png?mtime=1348211659"><img alt="" src="/wp-content/uploads/users/chrissie1/yield/yield2.png?mtime=1348211659" width="537" height="292" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/yield/yield2.png?mtime=1348211659"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/yield/yield2.png?mtime=1348211659" width="537" height="292" /></a>
 </div>
 
 Oh man, that is so wrong. Let&#8217;s fix it.
@@ -141,7 +141,7 @@ End NameSpace```
 And now I can be reasonably sure that it works as it should.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/yield/yield3.png?mtime=1348212035"><img alt="" src="/wp-content/uploads/users/chrissie1/yield/yield3.png?mtime=1348212035" width="529" height="289" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/yield/yield3.png?mtime=1348212035"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/yield/yield3.png?mtime=1348212035" width="529" height="289" /></a>
 </div>
 
 And now I can easily play with it and see that the shorter version gives me the same correct results.

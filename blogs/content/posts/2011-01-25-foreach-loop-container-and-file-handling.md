@@ -22,7 +22,7 @@ In the [first part of building the package][1] that will look at the complete co
 For the first step in the flow chart we defined, there is the starting process which first executes the actual work of looping through the directory and finding the files that we request. This then inserts the contents and some information about them into a staging area. To refine this, our looping process will be a Foreach Loop Container, our file information collection will be a Script Task and the insert process into the staging area will be an Execute SQL Task. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/.png?mtime=1295748012"><img alt="" src="/wp-content/uploads/blogs/All/.png?mtime=1295748012" width="624" height="325" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/.png?mtime=1295748012"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/.png?mtime=1295748012" width="624" height="325" /></a>
 </div>
 
 **The Foreach Loop Container**
@@ -36,7 +36,7 @@ Within BIDS and with the Control Flow window open, bring over a Foreach Loop Con
 In the Collection section, the options Folder and Files are required for our needs. The requirements are to pass the folder in as a dynamic value from our variables that are set prior to the containers execution. To do this, the property for Directory needs to be set to the variable ScanFolder. Setting the properties for the container can be done through the expressions window. Open the property expressions editor by clicking the button next to the Expressions option (as shown below)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-1.png?mtime=1295748013"><img alt="" src="/wp-content/uploads/blogs/All/-1.png?mtime=1295748013" width="860" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-1.png?mtime=1295748013"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-1.png?mtime=1295748013" width="860" height="207" /></a>
 </div>
 
 In the Property Expressions Editor, select the property, Directory and then enter the expression, @[User::ScanFolder]. This is referencing the variable created earlier. Alternatively, the Expression Builder can be used to build the expressions.
@@ -106,7 +106,7 @@ Close all windows and click OK to complete the setup of the Execute SQL Task.
 At this time the container should appear as below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-2.png?mtime=1295748013"><img alt="" src="/wp-content/uploads/blogs/All/-2.png?mtime=1295748013" width="351" height="246" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-2.png?mtime=1295748013"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-2.png?mtime=1295748013" width="351" height="246" /></a>
 </div>
 
 **Closing Part 2**

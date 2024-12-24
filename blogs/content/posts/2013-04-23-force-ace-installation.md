@@ -47,7 +47,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <em><a href="/media/users/koenverbeeck/ForceACE/ExecutionResult_2.png?mtime=1366689582"><img src="/wp-content/uploads/users/koenverbeeck/ForceACE/ExecutionResult_2.png?mtime=1366689582" alt="" width="857" height="137" /></a></em>
+  <em><a href="/media/users/koenverbeeck/ForceACE/ExecutionResult_2.png?mtime=1366689582"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/ForceACE/ExecutionResult_2.png?mtime=1366689582" alt="" width="857" height="137" /></a></em>
 </div>
 
 <span style="text-align: justify;">However, if Office is installed in the 32-bit version, the installation of the 64-bit ACE OLE DB provider fails with the following message:</span>
@@ -61,7 +61,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <em><a href="/media/users/koenverbeeck/ForceACE/Error_64.png?mtime=1366689573"><img src="/wp-content/uploads/users/koenverbeeck/ForceACE/Error_64.png?mtime=1366689573" alt="" width="362" height="190" /></a></em>
+  <em><a href="/media/users/koenverbeeck/ForceACE/Error_64.png?mtime=1366689573"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/ForceACE/Error_64.png?mtime=1366689573" alt="" width="362" height="190" /></a></em>
 </div>
 
  __
@@ -73,7 +73,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <a href="/media/users/koenverbeeck/ForceACE/Error_32.png?mtime=1366689566"><img src="/wp-content/uploads/users/koenverbeeck/ForceACE/Error_32.png?mtime=1366689566" alt="" width="362" height="190" /></a>
+  <a href="/media/users/koenverbeeck/ForceACE/Error_32.png?mtime=1366689566"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/ForceACE/Error_32.png?mtime=1366689566" alt="" width="362" height="190" /></a>
 </div>
 
 Apparently a teensy-weensy part of Office was installed in 64-bit, so I can't install the 32-bit provider either. Normally you wouldn't have these problems on a production server, as no Office components are installed. But what if you want to test your SQL Server Agent job on your development machine? Or what if you are reading the Excel file using an OPENROWSET command in SSMS? You need that 64-bit provider badly!
@@ -83,13 +83,13 @@ Luckily I came across a solution offered by Lowell in this [thread][1]: apparent
 Let's test if this solves our issue. I created a simple SSIS package reading from an Excel file. Nothing too fancy.
 
 <p style="text-align: center;">
-  <a href="/media/users/koenverbeeck/ForceACE/BIDS_Setup.png?mtime=1366689558"><img src="/wp-content/uploads/users/koenverbeeck/ForceACE/BIDS_Setup.png?mtime=1366689558" alt="" width="547" height="304" /></a>
+  <a href="/media/users/koenverbeeck/ForceACE/BIDS_Setup.png?mtime=1366689558"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/ForceACE/BIDS_Setup.png?mtime=1366689558" alt="" width="547" height="304" /></a>
 </p>
 
 When I deploy it to the SSIS catalog and execute it in 64-bit, I see the package has ran successfully:
 
 <p style="text-align: center;">
-  <a href="/media/users/koenverbeeck/ForceACE/ExecutionResult_3.png?mtime=1366689588"><img src="/wp-content/uploads/users/koenverbeeck/ForceACE/ExecutionResult_3.png?mtime=1366689588" alt="" width="307" height="162" /></a>
+  <a href="/media/users/koenverbeeck/ForceACE/ExecutionResult_3.png?mtime=1366689588"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/ForceACE/ExecutionResult_3.png?mtime=1366689588" alt="" width="307" height="162" /></a>
 </p>
 
 What's interesting is that on my new laptop, which has Office 2013 64-bit installed, I could install the 32-bit provider without an issue. So maybe the Office team fixed the issue in their latest release.

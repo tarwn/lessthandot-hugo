@@ -16,7 +16,7 @@ tags:
   - tsql2sday
 
 ---
-<a href="http://sqlchow.wordpress.com/2014/01/07/t-sql-tuesday-050-automation-how-much-of-it-is-the-same/" target="_blank"><img class="alignnone size-full wp-image-2241" alt="TSQL2sday" src="/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" /></a>
+<a href="http://sqlchow.wordpress.com/2014/01/07/t-sql-tuesday-050-automation-how-much-of-it-is-the-same/" target="_blank"><img class="alignnone size-full wp-image-2241" alt="TSQL2sday" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/TSQL2sday.png" width="133" height="134" /></a>
 
 This month's T-SQL Tuesday is being hosted by SQLChow (<a href="http://sqlchow.wordpress.com/" target="_blank">b</a> | <a href="https://twitter.com/sqlchow" target="_blank">t</a>) and the topic is "Automation, how much of it is the same?".  As SQLChow noted, automation was a topic a few years ago and now it is being revisited to see if and how it has changed over the years.
 

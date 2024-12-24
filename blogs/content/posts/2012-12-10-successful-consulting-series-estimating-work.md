@@ -19,7 +19,7 @@ categories:
 > The Successful Consulting Series is a set of articles that are being written to both, help decisions on joining the consulting field and also, help existing consultants in their professional development initiatives. Please visit, "[Successful Consulting Series][1]" for a full listing of each part in this series.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751" width="379" height="324" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/const_22.gif?mtime=1355163751" width="379" height="324" /></a>
 </div></p> 
 
 Estimating work is both an art and a skill as a consultant.  There isn't one way or set of standards someone can show you to take and use for every client or project you confront.  What a seasoned consultant can do isprovide a basis you can utilize for each potential client, project or task.

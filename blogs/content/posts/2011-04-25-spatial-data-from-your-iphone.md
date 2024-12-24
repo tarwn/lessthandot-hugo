@@ -40,24 +40,24 @@ Now that you've found the correct directory, we need to find out which file is t
 Sort your directory by Size (largest to smallest) and starting at the top, open each file in a text editor. The file you are looking for will start with 'SQLite format 3' and should contain the following string 'CREATE TABLE CellLocation'. On my system the file was approximately 11MB.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip1.jpg?mtime=1303746981"><img src="/wp-content/uploads/blogs/DataMgmt/ip1.jpg?mtime=1303746981" alt="" width="413" height="65" /></a>
+  <a href="/media/blogs/DataMgmt/ip1.jpg?mtime=1303746981"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip1.jpg?mtime=1303746981" alt="" width="413" height="65" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip2.jpg?mtime=1303746981"><img src="/wp-content/uploads/blogs/DataMgmt/ip2.jpg?mtime=1303746981" alt="" width="632" height="70" /></a>
+  <a href="/media/blogs/DataMgmt/ip2.jpg?mtime=1303746981"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip2.jpg?mtime=1303746981" alt="" width="632" height="70" /></a>
 </div>
 
 **Trial & Error Option 2:**  
 Using FireFox and the [SQL Lite Plug In][3] try connecting to each file and looking for a table named CellLocation in the database.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip3.jpg?mtime=1303756320"><img src="/wp-content/uploads/blogs/DataMgmt/ip3.jpg?mtime=1303756320" alt="" width="980" height="553" /></a>
+  <a href="/media/blogs/DataMgmt/ip3.jpg?mtime=1303756320"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip3.jpg?mtime=1303756320" alt="" width="980" height="553" /></a>
 </div>
 
 If the file you are opening is not a SQL Lite file the plugin will give you an error and you can simply move on to the next one.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip4.jpg?mtime=1303756321"><img src="/wp-content/uploads/blogs/DataMgmt/ip4.jpg?mtime=1303756321" alt="" width="617" height="175" /></a>
+  <a href="/media/blogs/DataMgmt/ip4.jpg?mtime=1303756321"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip4.jpg?mtime=1303756321" alt="" width="617" height="175" /></a>
 </div>
 
 Once you've found the correct file, make a note of the full path and file name as you'll need it in a few minutes. Also, it's worth noting that this file name doesn't seem to change after syncing your iPhone. I've synced a few times after doing the initial discovery and the file is updated but the name remains the same.
@@ -72,13 +72,13 @@ To access the file and import your data into SQL Server you'll need to install t
 Now that the SQLite ODBC drivers are installed we can create a DSN and setup a linked server to access the data. (Yes, I know linked servers are bad but this is just for demo purposes. If I were going to do this on an ongoing basis I would automate the import.) The DSN setup is fairly easy. Create a new System DSN using the SQL Lite 3 ODBC Driver and name it whatever you like. I named mine iPhoneConsolidated. For the Database Name, be sure to enter the full path and filename of the Consolidated.db file we found above.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip5.jpg?mtime=1303757084"><img src="/wp-content/uploads/blogs/DataMgmt/ip5.jpg?mtime=1303757084" alt="" width="463" height="468" /></a>
+  <a href="/media/blogs/DataMgmt/ip5.jpg?mtime=1303757084"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip5.jpg?mtime=1303757084" alt="" width="463" height="468" /></a>
 </div>
 
 Next, in SQL Server create a new linked server and choose the Microsoft OLE DB Provider for ODBC Drivers as the Provider. Next, fill in the Product Name and Data Source with the DSN with the one we created earlier. Save your linked server and we're ready to go.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip6.jpg?mtime=1303757085"><img src="/wp-content/uploads/blogs/DataMgmt/ip6.jpg?mtime=1303757085" alt="" width="692" height="353" /></a>
+  <a href="/media/blogs/DataMgmt/ip6.jpg?mtime=1303757085"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip6.jpg?mtime=1303757085" alt="" width="692" height="353" /></a>
 </div>
 
 Alright! Discovery and setup are done and since you've stuck with me this long it's time for some fun...
@@ -117,7 +117,7 @@ SELECT TOP 5000 * FROM iPhoneLoc
 Below is a zoomed in section of the spatial results tab.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ip7.jpg?mtime=1303758445"><img src="/wp-content/uploads/blogs/DataMgmt/ip7.jpg?mtime=1303758445" alt="" width="544" height="423" /></a>
+  <a href="/media/blogs/DataMgmt/ip7.jpg?mtime=1303758445"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip7.jpg?mtime=1303758445" alt="" width="544" height="423" /></a>
 </div>
 
 Why did I put TOP 5000 in the query you ask? Simply because the spatial results tab will only display the first 5000 points.
@@ -125,7 +125,7 @@ Why did I put TOP 5000 in the query you ask? Simply because the spatial results 
 Now that you've got your spatial fix, let's add some bling or rather Bing, maps that is, and spice up presentation of your data a little. By simply adding a Bing map to a SSRS report we can get a decent visualization of where our iPhone has been. The below screenshot shows a sample of what can be done very quickly with BIDS and Bing maps.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/ip21.jpg?mtime=1303786798"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/ip21.jpg?mtime=1303786798" width="610" height="372" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip21.jpg?mtime=1303786798"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ip21.jpg?mtime=1303786798" width="610" height="372" /></a>
 </div>
 
 **OK, I've Done All This and it's Pretty Cool...Now What?**

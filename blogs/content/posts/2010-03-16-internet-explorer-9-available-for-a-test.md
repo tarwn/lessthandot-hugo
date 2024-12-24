@@ -21,7 +21,7 @@ tags:
   - web standards
 
 ---
-<img src="/wp-content/uploads/blogs/WebDev//IE9.PNG" alt="" title="" width="361" height="76" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//IE9.PNG" alt="" title="" width="361" height="76" />
 
 Internet Explorer 9 is available for a test drive
 
@@ -51,7 +51,7 @@ HTML5 T-Shirt Designer
 
 If you look at the SunSpider results in the image below, you can see that IE 9 is much faster than IE 8.
 
-<img src="/wp-content/uploads/blogs/WebDev//SunSpiderResults.png" alt="" title="" width="736" height="520" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//SunSpiderResults.png" alt="" title="" width="736" height="520" />
 
 Microsoft also announced increased support of client development through the jQuery JavaScript Library
 

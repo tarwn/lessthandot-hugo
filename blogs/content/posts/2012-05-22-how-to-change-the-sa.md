@@ -78,7 +78,7 @@ EXEC sp_password N'old password', N'new password', N'sa';
 You can also do all of this from SSMS with the GUI, navigate to the security folder, right click on the sa account, select properties and you will see the following window
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/saChangePassword-1.PNG?mtime=1337695861"><img alt="Change sa password in sql server" src="/wp-content/uploads/blogs/DataMgmt/Denis/saChangePassword-1.PNG?mtime=1337695861" width="686" height="616" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/saChangePassword-1.PNG?mtime=1337695861"><img alt="Change sa password in sql server" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/saChangePassword-1.PNG?mtime=1337695861" width="686" height="616" /></a>
 </div>
 
 Click on the Status page to enable or disable the account

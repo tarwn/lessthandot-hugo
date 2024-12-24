@@ -60,4 +60,4 @@ I'd be very interested in finding a way to avoid the .each, but I couldn't find 
 **edit:** I threw together a quick demo per requests in the comments. You can download it here: [jQuery UI Multiple Slider Demo][2]. Hope it helps!
 
  [1]: http://jqueryui.com/demos/slider/#steps
- [2]: /wp-content/uploads/blogs/WebDev/using-multiple-jquery-ui-sliders-on-a-si/Sliders.zip "jQuery UI Multiple Slider Demo"
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/using-multiple-jquery-ui-sliders-on-a-si/Sliders.zip "jQuery UI Multiple Slider Demo"

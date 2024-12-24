@@ -146,7 +146,7 @@ Here are the results in a html table
 
 Here is an image of the same results
   
-[<img alt="Oracle SQL Developer Results" title="Oracle SQL Developer Results" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleResults.PNG?mtime=1357471831" width="318" height="135" />][1]
+[<img alt="Oracle SQL Developer Results" title="Oracle SQL Developer Results" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleResults.PNG?mtime=1357471831" width="318" height="135" />][1]
 
 See what happened, Oracle changed the blanks to NULLs. 
 
@@ -216,4 +216,4 @@ Be aware of these differences between Oracle and SQL Server, you could have some
 
 We will take a look at that strange table _dual_ in another post
 
- [1]: /wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleResults.PNG?mtime=1357471831
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleResults.PNG?mtime=1357471831

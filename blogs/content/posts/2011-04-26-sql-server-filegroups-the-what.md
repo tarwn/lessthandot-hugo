@@ -18,7 +18,7 @@ categories:
 I once had a boss whose desk looked something like this: 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/messy-desk.jpg?mtime=1303781099"><img alt="" src="/wp-content/uploads/users/grrlgeek/messy-desk.jpg?mtime=1303781099" width="310" height="232" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/messy-desk.jpg?mtime=1303781099"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/messy-desk.jpg?mtime=1303781099" width="310" height="232" /></a>
 </div>
 
 _Shudder._ I like things organized, from the files on my desk to the files in my database. There's a mechanism in SQL Server to help you separate and organize files: filegroups. 
@@ -74,7 +74,7 @@ SELECT *
 FROM sys.filegroups
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715"><img alt="" src="/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715" width="805" height="113" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sysfilegroups.JPG?mtime=1303779715" width="805" height="113" /></a>
 </div>
 
 To create a new file, **FGTest3_dat**, and assign it to **FGTestFG3**, I'll use ALTER DATABASE again. 
@@ -97,7 +97,7 @@ MODIFY FILEGROUP FGTestFG3 DEFAULT
 When I re-run my sys.filegroups query, is_default value has changed. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sysfilegroups2.JPG?mtime=1303779975"><img alt="" src="/wp-content/uploads/users/grrlgeek/sysfilegroups2.JPG?mtime=1303779975" width="804" height="113" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sysfilegroups2.JPG?mtime=1303779975"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sysfilegroups2.JPG?mtime=1303779975" width="804" height="113" /></a>
 </div>
 
 **How Do I Move An Object to a Different Filegroup?** 
@@ -120,7 +120,7 @@ I can use sp_help to see which filegroup this was created on. It was created on 
 exec sp_help 'dbo.StuffAndJunk'
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sphelp.JPG?mtime=1303780300"><img alt="" src="/wp-content/uploads/users/grrlgeek/sphelp.JPG?mtime=1303780300" width="689" height="314" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sphelp.JPG?mtime=1303780300"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sphelp.JPG?mtime=1303780300" width="689" height="314" /></a>
 </div>
 
 I can also return this information using the sys.filegroups, sys.allocation_units and sys.partitions tables. 
@@ -134,7 +134,7 @@ WHERE PA.object_id =
 	(SELECT object_id(N'FilegroupTest.dbo.StuffAndJunk'))
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416"><img alt="" src="/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416" width="215" height="78" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/objectid1.JPG?mtime=1303780416" width="215" height="78" /></a>
 </div>
 
 I cannot move the table only. That is simply not part of the ALTER TABLE syntax. According to [BOL][2], MOVE TO "Specifies a location to move the data rows currently in the leaf level of the clustered index." 
@@ -152,7 +152,7 @@ CREATE CLUSTERED INDEX StuffJunk
 If I run my sys.filegroups query again, I can see I have the same object_id, but it has moved to a different filegroup. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/objectid2.JPG?mtime=1303780550"><img alt="" src="/wp-content/uploads/users/grrlgeek/objectid2.JPG?mtime=1303780550" width="208" height="83" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/objectid2.JPG?mtime=1303780550"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/objectid2.JPG?mtime=1303780550" width="208" height="83" /></a>
 </div>
 
 How would I move a table with an existing clustered index? Let's move **StuffAndJunk** back to **FGTestFG3**. I would issue a create clustered index command with the option to drop existing, like this. 
@@ -167,7 +167,7 @@ CREATE CLUSTERED INDEX StuffJunk
 Re-running my sys.filegroups query shows that the index, and thus the data and table, are on **FGTestFG3**. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/objectid3.JPG?mtime=1303780648"><img alt="" src="/wp-content/uploads/users/grrlgeek/objectid3.JPG?mtime=1303780648" width="218" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/objectid3.JPG?mtime=1303780648"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/objectid3.JPG?mtime=1303780648" width="218" height="74" /></a>
 </div>
 
 **Organize, Organize, Organize!** 
@@ -175,10 +175,10 @@ Re-running my sys.filegroups query shows that the index, and thus the data and t
 Help your databases look like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/organized-filing-cabinet.jpg?mtime=1303781231"><img alt="" src="/wp-content/uploads/users/grrlgeek/organized-filing-cabinet.jpg?mtime=1303781231" width="336" height="448" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/organized-filing-cabinet.jpg?mtime=1303781231"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/organized-filing-cabinet.jpg?mtime=1303781231" width="336" height="448" /></a>
 </div>
 
 Filegroups are a great way to organize your data, increasing performance and providing additional disaster recovery. If you can do this in the planning stages, it's great, but be aware that you can add filegroups in later, too.
 
- [1]: /wp-content/uploads/users/grrlgeek/Filegroup.jpg?mtime=1303779237 ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup.jpg?mtime=1303779237 ""
  [2]: http://msdn.microsoft.com/en-us/library/ms190273.aspx

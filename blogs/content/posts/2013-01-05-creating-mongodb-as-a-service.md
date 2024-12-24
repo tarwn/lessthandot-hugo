@@ -81,7 +81,7 @@ README
 THIRD-PARTY-NOTICES
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo2.PNG?mtime=1357406776"><img alt="MongoDB file folder contents" title ="MongoDB file folder contents"  src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo2.PNG?mtime=1357406776" width="455" height="95" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo2.PNG?mtime=1357406776"><img alt="MongoDB file folder contents" title ="MongoDB file folder contents"  src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo2.PNG?mtime=1357406776" width="455" height="95" /></a>
 </div>
 
 After you are done with that you need to create a data folder, inside that folder you need a db folder. Your db folder would be in this location C:NoSQLmongodbdatadb
@@ -95,7 +95,7 @@ C:NoSQLmongodbbinmongod.exe –dbpath C:NoSQLmongodbdata
 Running that should trigger a firewall warning
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo1.PNG?mtime=1357406796"><img alt="MongoDB firewall warning"  title="MongoDB firewall warning" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo1.PNG?mtime=1357406796" width="526" height="373" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo1.PNG?mtime=1357406796"><img alt="MongoDB firewall warning"  title="MongoDB firewall warning" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo1.PNG?mtime=1357406796" width="526" height="373" /></a>
 </div>
 
 Check Private Networks and click Allow Access
@@ -201,7 +201,7 @@ logpath=C:NoSQLmongodblogmongo.log
 dbpath=C:NoSQLmongodbdata
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo4.PNG?mtime=1357409078"><img alt="MongoDB configuration file"  title="MongoDB configuration file" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo4.PNG?mtime=1357409078" width="443" height="208" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo4.PNG?mtime=1357409078"><img alt="MongoDB configuration file"  title="MongoDB configuration file" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/mongo4.PNG?mtime=1357409078" width="443" height="208" /></a>
 </div>
 
 In a Command Prompt with elevated privileges (Winkey + X + A) run the following
@@ -219,7 +219,7 @@ _The Mongo DB service was started successfully._
 If you look at the services (either click on Services from Control PanelSystem and SecurityAdministrative Tools or type services from the start screen), you should see the following
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo3.PNG?mtime=1357408031"><img alt="MongoDB running as a windows 8 service"  title="MongoDB running as a windows 8 service" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo3.PNG?mtime=1357408031" width="623" height="44" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo3.PNG?mtime=1357408031"><img alt="MongoDB running as a windows 8 service"  title="MongoDB running as a windows 8 service" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/Mongo3.PNG?mtime=1357408031" width="623" height="44" /></a>
 </div>
 
 Congratulations, the service is now running

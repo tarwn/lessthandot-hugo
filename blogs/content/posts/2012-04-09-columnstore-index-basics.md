@@ -22,7 +22,7 @@ categories:
 Clustered and Nonclustered indexes are stored based on rows on a page or RowStore.  Columnstore indexes store data a bit differently.  As the name insinuates, data is stored by each column or ColumnStore.  This can be visualized in its simplest form below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-123.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-123.png?mtime=1333986143" width="320" height="229" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-123.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-123.png?mtime=1333986143" width="320" height="229" /></a>
 </div>
 
 Reading data from this storage model is extremely fast comparable to row based models.  However, that level of performance revolves around a mostly read environment like a data warehouse.  Storage itself is enhanced by additional capabilities the columnstore index model has with compression of data. With warehouse situations and fact tables, data is commonly _not_ unique and this also adds an extremely enhanced ability for compression.
@@ -53,7 +53,7 @@ SELECT TotalProductCost, SalesAmount FROM [dbo].[FactInternetSales]
 Review the execution plan and the IO statistics generated from the query.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-124.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-124.png?mtime=1333986143" width="574" height="118" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-124.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-124.png?mtime=1333986143" width="574" height="118" /></a>
 </div>
 
 _(60398 row(s) affected)_
@@ -80,7 +80,7 @@ CREATE NONCLUSTERED INDEX IDX_PRODCOST_SALESAMT ON [dbo].[FactInternetSales] (To
 Then, execute the query to retrieve TotalProductCost and SalesAmount again and review the new execution plan and IO that was generated.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-125.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-125.png?mtime=1333986143" width="566" height="125" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-125.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-125.png?mtime=1333986143" width="566" height="125" /></a>
 </div>
 
 _(60398 row(s) affected)_
@@ -122,7 +122,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX IDX_COLSTORE_PRODCOST_SALESAMT ON [FactInt
 After the columnstore index is created, execute the same query used earlier and review the new execution plan generated.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-126.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-126.png?mtime=1333986143" width="570" height="131" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-126.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-126.png?mtime=1333986143" width="570" height="131" /></a>
 </div>
 
 The columnstore index is now used.  Review the IO statistics.
@@ -142,7 +142,7 @@ The logical reads have been lowered from 2062 to 21 with this new execution plan
 The overall time of execution in milliseconds can be seen with each index being used below.  Overall, the columnstore index has proven to be more efficient for this type of query and with data that is designated for reading only requirements.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-127.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-127.png?mtime=1333986143" width="485" height="295" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-127.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-127.png?mtime=1333986143" width="485" height="295" /></a>
 </div>
 
  
@@ -262,7 +262,7 @@ ORDER BY SalesTerritoryKey
 This query generates the execution plan shown below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-128.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-128.png?mtime=1333986143" width="624" height="86" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-128.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-128.png?mtime=1333986143" width="624" height="86" /></a>
 </div>
 
  
@@ -293,7 +293,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX IDX_COLSTORE_PRODCOST_SALESAMT ON [FactInt
 Execute the same query again and review the execution plan that was generated and statistics IO.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-129.png?mtime=1333986143"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-129.png?mtime=1333986143" width="624" height="76" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-129.png?mtime=1333986143"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-129.png?mtime=1333986143" width="624" height="76" /></a>
 </div>
 
  
@@ -307,7 +307,7 @@ _Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead 
 These results are much more favorable due two primary aspects of the execution plan and the actual scan on the columnstore index.  With the execution plan still showing, hover over the Columnstore Index Scan operation to show the properties.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-130.png?mtime=1333986144"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-130.png?mtime=1333986144" width="489" height="465" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-130.png?mtime=1333986144"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-130.png?mtime=1333986144" width="489" height="465" /></a>
 </div>
 
  
@@ -334,7 +334,7 @@ OPTION (MAXDOP 1)
 The execution plan generated will appear identical to the previous execution plan.  However, the time to generate the plan may have been observed as slightly longer.  This was due to the execution mode being row in this plan.  Hover the mouse over the Columnstore Index Scan and check the execution mode again.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-131.png?mtime=1333986144"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-131.png?mtime=1333986144" width="461" height="430" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-131.png?mtime=1333986144"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-131.png?mtime=1333986144" width="461" height="430" /></a>
 </div>
 
  
@@ -342,7 +342,7 @@ The execution plan generated will appear identical to the previous execution pla
 The overall execution time between the execution mode of row and batch is significant as well.  In these two tests, the actually overall time spent executing the query was 1738ms for a row execution mode and 45ms for a batch execution mode.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-132.png?mtime=1333986144"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-132.png?mtime=1333986144" width="486" height="293" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-132.png?mtime=1333986144"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-132.png?mtime=1333986144" width="486" height="293" /></a>
 </div>
 
  

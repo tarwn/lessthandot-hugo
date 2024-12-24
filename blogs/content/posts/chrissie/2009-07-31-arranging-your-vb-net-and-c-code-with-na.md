@@ -44,7 +44,7 @@ Then we set it up in external tools.
 Go to Tools -> Extern tools&#8230; click Add and fill in the arguments and initial directory and the command. like in the image.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/narrange/narrange1.png" alt="" title="" width="461" height="448" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/narrange/narrange1.png" alt="" title="" width="461" height="448" />
 </div>
 
 The tool I created here is to do an NArrange on a single source file with a backup of the original (not sure I really need that since I have source control but better safe than finding out you&#8217;re a father at the age of 60) 
@@ -56,7 +56,7 @@ Of course this works but it is a drag I would rather right-click on a file and d
 Go to View -> Toolbars -> Customize&#8230;, check Context menus and see an extra toolbar appear (magic). Now go to Tools -> NArrange (most likely this will be called External Command 4 but you can change that by right-clicking on it. And drag it while holding down the ctrl-key to the Project and Solution Context Menus -> Item
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/narrange/narrange2.png" alt="" title="" width="670" height="284" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/narrange/narrange2.png" alt="" title="" width="670" height="284" />
 </div>
 
 Then click close on the customize dialog box.
@@ -64,13 +64,13 @@ Then click close on the customize dialog box.
 Now you can click on a file and have an NArrange option to click on.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/narrange/narrange3.png" alt="" title="" width="297" height="223" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/narrange/narrange3.png" alt="" title="" width="297" height="223" />
 </div>
 
 With this as the result in the Output window.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/narrange/narrange4.png" alt="" title="" width="694" height="336" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/narrange/narrange4.png" alt="" title="" width="694" height="336" />
 </div>
 
 So now I can go in seconds from this.

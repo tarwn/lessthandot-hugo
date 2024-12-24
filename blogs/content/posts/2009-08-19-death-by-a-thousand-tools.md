@@ -20,7 +20,7 @@ categories:
 One thing these days that there is not a shortage of is tools to monitor, tune and process our database servers. We have all the big wigs providing you with dozens of packaged utilities that ensure everything you have worked hard for stays where it is and meeting your hard 99.999999% availability goals. So is that a good thing? Obviously using these tools are a good thing and they make DBAs look that much better with real-time proactive performance tuning and preventative actions before issues are even issues. The one thing I think it bad with all these bells and whistles is the concept of, "you can never have too many of them". Remember that [IBM commercial][1] with the thousands of old dust collecting servers? 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ibm_com.gif" alt="" title="" width="477" height="237" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ibm_com.gif" alt="" title="" width="477" height="237" />
 </div>
 
 Even knowing I'm not a blade fan and the mainframe commercial still makes me laugh, that marketing plan was spot on not only with servers but all aspects to the environment. 

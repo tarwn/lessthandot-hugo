@@ -41,7 +41,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://shop.oreilly.com/product/0636920029182.do"><img class="alignnone size-full wp-image-2447" alt="thinkingwithdata" src="/wp-content/uploads/2014/02/thinkingwithdata.gif" width="180" height="270" /></a>
+  <a href="http://shop.oreilly.com/product/0636920029182.do"><img class="alignnone size-full wp-image-2447" alt="thinkingwithdata" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/thinkingwithdata.gif" width="180" height="270" /></a>
 </p>
 
 <p style="text-align: justify">

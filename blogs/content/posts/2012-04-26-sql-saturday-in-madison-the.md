@@ -30,7 +30,7 @@ Those qualities do not simply sit on organizer's or volunteer's lap.  Each qual
 **Madison delivers**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319"><img alt="" src="/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319" width="236" height="115" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319" width="236" height="115" align="left" /></a>
 </div>
 
 SQL Saturday in Madison showed just how well we can keep to the true meaning of a SQL Saturday event.  Through my eyes, I saw speakers born, attendees smiling in the awe of the knowledge they were gaining and seasoned community volunteers expanding this great community.

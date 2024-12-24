@@ -36,7 +36,7 @@ In this case let's say we have a database that is 300MB with a transaction log t
 The database is a test log shipping database we will pick on named, "LOGSHIP_PUB"
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_1.gif" alt="" title="" width="628" height="134" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/shrunk_1.gif" alt="" title="" width="628" height="134" />
 </div>
 
 We can see by Size that we have the 300MB mdf and 3000MB log file. 
@@ -54,7 +54,7 @@ Resulting in 0.028... give or take a few thousands places.
 The initial thought may be to run a backup now and move the database over. You should see if you run a full backup on the database, the size will only be around 2MB. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_2.gif" alt="" title="" width="594" height="27" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/shrunk_2.gif" alt="" title="" width="594" height="27" />
 </div>
 
 The problem we will run into will be when this backup is restored. Even knowing the backup shows the 2MB, this is only the data and log to the point of recovering retained in the backup. You may find yourself copying this backup considering the restore to be limited to what is in it. What will happen is the restore will take the Meta for the database and create the initial sizes for the files contained in it. This will result in a required space of all the files initial sizes. In our case that totals 3300MB + the padding required. 
@@ -94,11 +94,11 @@ Checking our size and space utilized we should see the same results from the ini
 Select [size],[name],[filename] from sysaltfiles
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_3.gif" alt="" title="" width="543" height="50" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/shrunk_3.gif" alt="" title="" width="543" height="50" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/shrunk_4.gif" alt="" title="" width="628" height="141" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/shrunk_4.gif" alt="" title="" width="628" height="141" />
 </div></p> 
 
 ## So the bottom-line...

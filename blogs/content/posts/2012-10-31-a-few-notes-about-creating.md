@@ -25,7 +25,7 @@ If you don't know already, I'm a big fan of SQL Server Reporting Services. It's 
 SSMS already has some built-in reports. If you right-click an instance name and select Reports > Standard Reports, you'll see the list. Most reports are performance-based. They show you information about Memory Consumption, Activity – Top Sessions, Performance – Top Queries by Average CPU Time, and more.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/DiskUsageTopTables.JPG?mtime=1351689156" alt="" width="789" height="365" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DiskUsageTopTables.JPG?mtime=1351689156" alt="" width="789" height="365" />
 </p>
 
 <p style="text-align: center;">
@@ -57,7 +57,7 @@ After the .rdl is created, you want to open it in SSMS. To open the first custom
 Once a report is open, you can export reports, but it's not obvious. The menu bar above the report gives you the options to refresh and print. If you right-click the report, you can select Export and choose to export as Excel, PDF, or Word. This is useful for sending results to someone, or saving them for future reference.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/DiskUsageTopTablesExport.JPG?mtime=1351689372" alt="" width="900" height="330" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DiskUsageTopTablesExport.JPG?mtime=1351689372" alt="" width="900" height="330" />
 </p>
 
 <p style="text-align: center;">

@@ -37,7 +37,7 @@ Here is what I found interesting in that article, the following quote from Holge
 Really that is the reason, Microsoft allows running of Oracle on Azure because SQL Server has a scalibility problem? Fascinating!! What is next, Microsoft offers PHP because C# sucks?
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914" width="304" height="409" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914" width="304" height="409" /></a>
 </div>
 
 The more plausible reason is that since Microsoft is competing directly with Amazon in the cloud, it wants to offer the same things that Amazon offers. Amazon offers Oracle as well as SQL Server.

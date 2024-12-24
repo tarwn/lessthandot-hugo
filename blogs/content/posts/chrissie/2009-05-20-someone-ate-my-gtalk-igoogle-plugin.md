@@ -18,5 +18,5 @@ Like the title says.
 GIVE IT BACK!! Please.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/gtalk.png" alt="" title="" width="331" height="536" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/gtalk.png" alt="" title="" width="331" height="536" />
 </div>

@@ -71,7 +71,7 @@ Layout.Header = "&lt;!DOCTYPE html&gt;"
 With this being the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/log4net/log4net1.png?mtime=1297180388"><img alt="" src="/wp-content/uploads/users/chrissie1/log4net/log4net1.png?mtime=1297180388" width="1001" height="418" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/log4net/log4net1.png?mtime=1297180388"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/log4net/log4net1.png?mtime=1297180388" width="1001" height="418" /></a>
 </div>
 
 I will need to check what the result will be if the file is split up over multiple files since it won&#8217;t see the css anymore. It won&#8217;t slow things down too much since the conversion pattern is only slightly bigger, I might want to make info green and debug black too.
@@ -171,7 +171,7 @@ Oh my I used a static variable, but no harm was done.
 And here is the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330"><img alt="" src="/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330" width="1006" height="287" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330" width="1006" height="287" /></a>
 </div>
 
 Kinda much more readable. And very easy to implement.

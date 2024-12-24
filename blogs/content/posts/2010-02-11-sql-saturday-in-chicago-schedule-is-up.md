@@ -24,7 +24,7 @@ categories:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlsat2.gif" alt="" title="" width="265" height="121" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlsat2.gif" alt="" title="" width="265" height="121" />
 </div>
 
 <span class="MT_under"><br /> 

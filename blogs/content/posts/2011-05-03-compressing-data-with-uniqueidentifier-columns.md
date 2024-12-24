@@ -36,7 +36,7 @@ GO
 With compressing a table with one column, the results would be thought to compress greatly.  In this case they do not though.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780" width="624" height="118" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-51.png?mtime=1304392780" width="624" height="118" /></a>
 </div>
 
 **Hold on...let's talk**
@@ -68,7 +68,7 @@ GO
 This table benefits extremely well from using PAGE compression. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-52.png?mtime=1304392780"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-52.png?mtime=1304392780" width="624" height="140" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-52.png?mtime=1304392780"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-52.png?mtime=1304392780" width="624" height="140" /></a>
 </div>
 
 This reason for this is the effects from the CHAR data type and the padding removal. 
@@ -84,7 +84,7 @@ EXEC sp_estimate_data_compression_savings 'Sales', 'SalesOrderDetail', NULL, NUL
 GO
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-53.png?mtime=1304392781"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-53.png?mtime=1304392781" width="624" height="118" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-53.png?mtime=1304392781"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-53.png?mtime=1304392781" width="624" height="118" /></a>
 </div>
 
 We can see the true impact is on the first index but there is a loss on the second index.  Looking into the second index it is shown as the AK\_SalesOrderDetail\_rowguid index.  This index is the uniqueidentfier in the table.  Of course, the compression of the primary key and the slightcompression of the product ID index accumulate to savings still.  That was the why the "fence" statement earlier. 

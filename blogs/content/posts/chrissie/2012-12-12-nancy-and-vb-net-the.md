@@ -207,25 +207,25 @@ And these are the results of the Belgian jury.
 When using the url http://localhost/plants I get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy6.png?mtime=1355303812"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy6.png?mtime=1355303812" width="408" height="146" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy6.png?mtime=1355303812"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy6.png?mtime=1355303812" width="408" height="146" /></a>
 </div>
 
 When using the url http://localhost/plants/1 I get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy7.png?mtime=1355303865"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy7.png?mtime=1355303865" width="430" height="132" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy7.png?mtime=1355303865"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy7.png?mtime=1355303865" width="430" height="132" /></a>
 </div>
 
 And when using http://localhost/plants/abc I get an exception of course.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy9.png?mtime=1355303932"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy9.png?mtime=1355303932" width="605" height="246" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy9.png?mtime=1355303932"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy9.png?mtime=1355303932" width="605" height="246" /></a>
 </div>
 
 And this funny little fellow on my page.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy8.png?mtime=1355303979"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy8.png?mtime=1355303979" width="537" height="294" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy8.png?mtime=1355303979"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy8.png?mtime=1355303979" width="537" height="294" /></a>
 </div>
 
 ## Conclusion

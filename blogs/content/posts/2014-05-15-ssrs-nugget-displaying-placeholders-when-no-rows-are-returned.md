@@ -40,7 +40,7 @@ FROM            DimProductCategory;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/05/reportwithdata.png"><img class="alignnone size-full wp-image-2630" alt="reportwithdata" src="/wp-content/uploads/2014/05/reportwithdata.png" width="424" height="146" srcset="/wp-content/uploads/2014/05/reportwithdata.png 424w, /wp-content/uploads/2014/05/reportwithdata-300x103.png 300w" sizes="(max-width: 424px) 100vw, 424px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithdata.png"><img class="alignnone size-full wp-image-2630" alt="reportwithdata" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithdata.png" width="424" height="146" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithdata.png 424w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithdata-300x103.png 300w" sizes="(max-width: 424px) 100vw, 424px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -48,7 +48,7 @@ FROM            DimProductCategory;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/05/reportonlyheader.png"><img class="alignnone size-full wp-image-2629" alt="reportonlyheader" src="/wp-content/uploads/2014/05/reportonlyheader.png" width="450" height="71" srcset="/wp-content/uploads/2014/05/reportonlyheader.png 450w, /wp-content/uploads/2014/05/reportonlyheader-300x47.png 300w" sizes="(max-width: 450px) 100vw, 450px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportonlyheader.png"><img class="alignnone size-full wp-image-2629" alt="reportonlyheader" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportonlyheader.png" width="450" height="71" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportonlyheader.png 450w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportonlyheader-300x47.png 300w" sizes="(max-width: 450px) 100vw, 450px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -56,7 +56,7 @@ FROM            DimProductCategory;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/05/report_incorrect1.png"><img class="alignnone size-full wp-image-2628" alt="report_incorrect1" src="/wp-content/uploads/2014/05/report_incorrect1.png" width="448" height="103" srcset="/wp-content/uploads/2014/05/report_incorrect1.png 448w, /wp-content/uploads/2014/05/report_incorrect1-300x68.png 300w" sizes="(max-width: 448px) 100vw, 448px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/report_incorrect1.png"><img class="alignnone size-full wp-image-2628" alt="report_incorrect1" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/report_incorrect1.png" width="448" height="103" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/report_incorrect1.png 448w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/report_incorrect1-300x68.png 300w" sizes="(max-width: 448px) 100vw, 448px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -78,7 +78,7 @@ FROM            DimProductCategory;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/05/addrow_outsidegroup.png"><img class="alignnone size-full wp-image-2632" alt="addrow_outsidegroup" src="/wp-content/uploads/2014/05/addrow_outsidegroup.png" width="447" height="219" srcset="/wp-content/uploads/2014/05/addrow_outsidegroup.png 447w, /wp-content/uploads/2014/05/addrow_outsidegroup-300x146.png 300w" sizes="(max-width: 447px) 100vw, 447px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/addrow_outsidegroup.png"><img class="alignnone size-full wp-image-2632" alt="addrow_outsidegroup" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/addrow_outsidegroup.png" width="447" height="219" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/addrow_outsidegroup.png 447w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/addrow_outsidegroup-300x146.png 300w" sizes="(max-width: 447px) 100vw, 447px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -86,7 +86,7 @@ FROM            DimProductCategory;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/05/reportwithoutdata.png"><img class="alignnone size-full wp-image-2631" alt="reportwithoutdata" src="/wp-content/uploads/2014/05/reportwithoutdata.png" width="430" height="77" srcset="/wp-content/uploads/2014/05/reportwithoutdata.png 430w, /wp-content/uploads/2014/05/reportwithoutdata-300x53.png 300w" sizes="(max-width: 430px) 100vw, 430px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithoutdata.png"><img class="alignnone size-full wp-image-2631" alt="reportwithoutdata" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithoutdata.png" width="430" height="77" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithoutdata.png 430w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/reportwithoutdata-300x53.png 300w" sizes="(max-width: 430px) 100vw, 430px" /></a>
 </p>
 
 <p style="text-align: justify">

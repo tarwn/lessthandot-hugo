@@ -76,7 +76,7 @@ End Module```
 I get the following result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn3.png?mtime=1319311151"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn3.png?mtime=1319311151" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn3.png?mtime=1319311151"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn3.png?mtime=1319311151" width="707" height="423" /></a>
 </div>
 
 That is not a very usefull result since I have no idea where the properties are coming from. But that is easliy fixed since each property also has a parent property.
@@ -107,7 +107,7 @@ End Module
 Which gives this result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn4.png?mtime=1319311335"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn4.png?mtime=1319311335" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn4.png?mtime=1319311335"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn4.png?mtime=1319311335" width="707" height="423" /></a>
 </div>
 
 You have to watch out because the parent is not a ClassStatementSyntax but a ClassBlockSyntax. The ClassBlockSyntax does not contain the identifier but it does contain a childnode that is a ClassStatemetSyntax which does contain the identifier. You could just print the whole syntaxtree to find this out, or RTFM.
@@ -141,7 +141,7 @@ End Module
 With a slightly different result as before.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn5.png?mtime=1319312474"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn5.png?mtime=1319312474" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn5.png?mtime=1319312474"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn5.png?mtime=1319312474" width="707" height="423" /></a>
 </div>
 
 ## Conclusion

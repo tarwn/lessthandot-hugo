@@ -64,13 +64,13 @@ And I got this error.
 I can understand that. So I went to settings as one does in these kinds of situations. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rubymine1.png?mtime=1311407867"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rubymine1.png?mtime=1311407867" width="1161" height="785" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine1.png?mtime=1311407867"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine1.png?mtime=1311407867" width="1161" height="785" /></a>
 </div>
 
 And added the SDK like a pro.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rubymine2.png?mtime=1311407876"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rubymine2.png?mtime=1311407876" width="1161" height="785" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine2.png?mtime=1311407876"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine2.png?mtime=1311407876" width="1161" height="785" /></a>
 </div>
 
 I clicked install gems on that page too but it downloaded nothing which was a bit of shame.
@@ -78,7 +78,7 @@ I clicked install gems on that page too but it downloaded nothing which was a bi
 Then clicked run again and saw that it worked. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rubymine3.png?mtime=1311407886"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rubymine3.png?mtime=1311407886" width="879" height="611" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine3.png?mtime=1311407886"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine3.png?mtime=1311407886" width="879" height="611" /></a>
 </div>
 
 Woohoo. 
@@ -86,7 +86,7 @@ Woohoo.
 I even made an advanced Hello world. Just because I can.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rubymine4.png?mtime=1311408272"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rubymine4.png?mtime=1311408272" width="879" height="611" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine4.png?mtime=1311408272"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine4.png?mtime=1311408272" width="879" height="611" /></a>
 </div>
 
 ## Conclusion

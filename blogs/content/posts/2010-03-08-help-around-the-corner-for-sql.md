@@ -21,7 +21,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/spleen.gif" alt="" title="" width="250" height="312" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/spleen.gif" alt="" title="" width="250" height="312" />
 </div>
 
 
@@ -46,7 +46,7 @@ There are several levels of support for SQL Server. Putting these levels on pape
 **_Twitter_** is the new kid on the block. Hash tag [#sqlhelp][5] has been embraced by many SQL Server experts around the world and they offer their time to give quick expert responses. The problem with this support level is the, "140 character limit". Questions and problems composed on Twitter #sqlhelp should be precise and well thought through. Keep in mind that your question must not need a response of 1400 characters to kick off the discussion. A link can often replace a long response but the frustrations of Twitter limits are still there. Most of all, you must never become frustrated with #sqlhelp if the expert that replies to you simply points you to a link. Take the time to read the link before adding to the #sqlhelp tag. We all hate link replies but in the case of a tweet, this can be a powerful and complete answer to the problem. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/fall.gif" alt="" title="" width="300" height="450" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/fall.gif" alt="" title="" width="300" height="450" />
 </div>
 
 

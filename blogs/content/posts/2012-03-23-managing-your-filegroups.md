@@ -73,7 +73,7 @@ So now you should be able to figure out what filegroups all of your objects are 
   
 ][4]
 
- [1]: /wp-content/uploads/blogs/DataMgmt/thirster42/FG1.png "Database Files"
- [2]: /wp-content/uploads/blogs/DataMgmt/thirster42/FG2.png "Properties"
- [3]: /wp-content/uploads/blogs/DataMgmt/thirster42/FG3.png "Index Properties"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/FG1.png "Database Files"
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/FG2.png "Properties"
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/FG3.png "Index Properties"
  [4]: /index.php/DataMgmt/DBAdmin/sql-server-filegroups-the-what

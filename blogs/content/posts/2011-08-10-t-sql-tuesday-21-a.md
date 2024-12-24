@@ -18,7 +18,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><img alt="" src="/wp-content/uploads/blogs/All/tsql_trig_1.GIF?mtime=1313006344" width="150" height="147" align="left" /></a>
+  <a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_1.GIF?mtime=1313006344" width="150" height="147" align="left" /></a>
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -42,7 +42,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/tsql_trig_2.GIF?mtime=1313006344"><img alt="" src="/wp-content/uploads/blogs/All/tsql_trig_2.GIF?mtime=1313006344" width="134" height="89" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_2.GIF?mtime=1313006344"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_2.GIF?mtime=1313006344" width="134" height="89" align="left" /></a>
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -110,7 +110,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/tsql_trig_3.GIF?mtime=1313006344"><img alt="" src="/wp-content/uploads/blogs/All/tsql_trig_3.GIF?mtime=1313006344" width="323" height="184" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_3.GIF?mtime=1313006344"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_3.GIF?mtime=1313006344" width="323" height="184" align="left" /></a>
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">
@@ -142,7 +142,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/tsql_trig_4.GIF?mtime=1313006344"><img alt="" src="/wp-content/uploads/blogs/All/tsql_trig_4.GIF?mtime=1313006344" width="106" height="160" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_4.GIF?mtime=1313006344"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/tsql_trig_4.GIF?mtime=1313006344" width="106" height="160" align="left" /></a>
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

@@ -19,7 +19,7 @@ Yes you should jump on the bandwagon now before it is to late. So many people ha
 Just look at the [TIOBE Programming Community Index for September 2012][1]
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/tiobe/tiobe1.png?mtime=1348061330"><img alt="" src="/wp-content/uploads/users/chrissie1/tiobe/tiobe1.png?mtime=1348061330" width="574" height="581" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/tiobe/tiobe1.png?mtime=1348061330"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/tiobe/tiobe1.png?mtime=1348061330" width="574" height="581" /></a>
 </div>
 
 VB.Net is now the 15th most important language in the Galaxy(seeing as there are no other sentient beings in this galaxy).

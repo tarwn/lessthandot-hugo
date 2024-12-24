@@ -36,7 +36,7 @@ By utilizing execution plans in SQL Server, developers and administrators have t
 In order to tune a query, there is value in understanding how a query is processed and then stored for later reuse. This section will briefly discuss the flow that a statement will take when it is passed to SQL Server. For our reference, a statement will be directly related to any DML statement. There are three major steps or processes that a statement goes through. The first of these steps is called the parser. The parser name says exactly what this process accomplishes. The parser takes the statement and parses out all the steps that the statement has within it and creates these steps in what is called the parse tree. This is also the process that will dictate if the statement is well formed or not and rejected or allowed to proceed.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_1.gif" alt="" title="" width="619" height="92" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_1.gif" alt="" title="" width="619" height="92" />
 </div>
 
 Following the parser, the next step is to hand the parse tree off to the Algebrizer. Within the Algebrizer, all name resolving is performed. For example, if a table name is not fully qualified, the Algebrizer will handle determining the exact location. The Algebrizer also determines data types such as, VARCHAR(10) and NUMERIC(2,2). With the Algebrizer completing successfully, a query processor tree is created. The query processor tree is the final product that is required in order for the finishing task to finally create the execution plan – The Optimizer.
@@ -82,7 +82,7 @@ WHERE   objtype = 'Adhoc'
 </p> 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_2.gif" alt="" title="" width="868" height="19" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_2.gif" alt="" title="" width="868" height="19" />
 </div>
 
 Once the plan has been identified and the decision has been made to remove it, FREEPROCCACHE can be executed with either the sql\_handle or plan\_handle. 
@@ -94,13 +94,13 @@ DBCC FREEPROCCACHE (0x06000C00FCCD0D0FB8C0500B000000000000000000000000)
 GO
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_3.gif" alt="" title="" width="747" height="110" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_3.gif" alt="" title="" width="747" height="110" />
 </div></p> 
 
 If we then search for the plan by the sql_handle, we'll see it has been removed
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_4.gif" alt="" title="" width="721" height="265" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_4.gif" alt="" title="" width="721" height="265" />
 </div></p> 
 
 **Tuning Execution Plans**
@@ -280,7 +280,7 @@ At this time we do not need to run the query because our interest is in the esti
 To view the estimated execution plan, click the button located in the menu strip in SSMS.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_5.gif" alt="" title="" width="311" height="108" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_5.gif" alt="" title="" width="311" height="108" />
 </div>
 
 Place the query below into a new query window while under the context of the PLANLAB database and execute the estimated execution plan.
@@ -305,7 +305,7 @@ GROUP BY SalesOrderNumber ,
 The plan below that was generated from the query shows two very distinct and problematic operations. These operations are the table scans both on SalesOrderHeader and SalesOrderDetail. Essentially, when a table scan is performed, all the records of a table are scanned for matches. These operations tell us that our query will cause significant disk IO due to no supporting indexes to help easily find the location of the records we want returned or aggregated.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_6.gif" alt="" title="" width="710" height="127" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_6.gif" alt="" title="" width="710" height="127" />
 </div>
 
 The process to start tuning a query like this can begin in many places. The columns being requested, the filter values (WHERE clause) sorting operations such as ORDER BY or GROUP BY and JOIN values.
@@ -323,7 +323,7 @@ GO
 </p> 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_7.gif" alt="" title="" width="738" height="148" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_7.gif" alt="" title="" width="738" height="148" />
 </div>
 
 Once the clustered index is created successfully, execute the estimated execution plan again. The table scan has been replaced by an index scan now for SalesOrderHeader. An index scan is more optimal than a table scan. Index scans will only scan the entire contents of an index to determine the records to return. However, this operation is still not the most optimal operation to have in the plan. An Index Seek operation would be optimal in both lower resource utilization and more selective abilities.
@@ -337,7 +337,7 @@ CREATE NONCLUSTERED INDEX IDX_SalesNumOrderDate_Ship_ASC ON WISSUG.SalesOrderHea
 GO
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_8.gif" alt="" title="" width="724" height="158" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_8.gif" alt="" title="" width="724" height="158" />
 </div>
 
 As shown in the new estimated plan, the index scan on the clustered index remains even after covering the other columns we require from the table. Covering index refers to an index that contains all of the required columns to fully cover all the paths a query is taking to utilize them. This includes the columns that are being returned, the WHERE clause and JOIN conditions. 
@@ -347,7 +347,7 @@ A set of properties exists with with all operations. These properties can be see
 Hovering over the index scan with the mouse pointer shows that we are covering everything but CustomerID which is in our where clause and ShipDate. ShipDate was left out previously when we thought we had covered the returned columns.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_9.gif" alt="" title="" width="300" height="345" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_9.gif" alt="" title="" width="300" height="345" />
 </div>
 
 To tune further, we now need to change our indexing so that the two columns shown in the details are included in the index. Using the CREATE INDEX statement, use the WITH(DROP\_EXISTING=ON) to make this task easier. The DROP\_EXISTING still performs the same operations of dropping the index in place already and recreating it, but does it in one statement versus multiple statements. In the new index, we introduce another option called INCLUDE. INCLUDE adds columns to the leaf level of the index and does not require any sorting which makes them more efficient when we are only interested in covering the column in the index. This benefits us by reducing overhead on the index itself.
@@ -359,13 +359,13 @@ WITH (DROP_EXISTING=ON)
 GO
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_10.gif" alt="" title="" width="731" height="185" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_10.gif" alt="" title="" width="731" height="185" />
 </div>
 
 The plan that is created from the index change shows that an index scan persists on the SalesOrderHeader table. This is the case even after covering all of the columns. There is one more tuning task that is needed; structuring the index. Recall that INCLUDE does not sort. In terms of our query, this means CustomerID is forcing a scan due to the use in the WHERE clause.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_11.gif" alt="" title="" width="279" height="402" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_11.gif" alt="" title="" width="279" height="402" />
 </div>
 
 To restructure the index to handle this specific query, there is a need to move the predicate of CustomerID to the column list. The above image shows the predicate value listed in the tooltip properties. This will force the covering index concept to the include as the ordering is not a requirement for returning those columns.
@@ -377,7 +377,7 @@ WITH (DROP_EXISTING=ON)
 GO
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_12.gif" alt="" title="" width="695" height="180" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_12.gif" alt="" title="" width="695" height="180" />
 </div>
 
 The Index Seek is now present and performed on the SalesOrderHeader table. This is the optimal operation to have here and the index structure accomplishes this.
@@ -387,7 +387,7 @@ So far, we've learned about the need for covering indexes and also how the struc
 Hover over the table scan on SalesOrderDetail.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_13.gif" alt="" title="" width="261" height="332" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_13.gif" alt="" title="" width="261" height="332" />
 </div>
 
 From the details of the table scan, the output of this operation results in the columns SalesOrderID, OrderQty, UnitPrice and UnitPriceDiscount. Looking at the statement, the results required back are UnitPriceDiscount and LineTotal. This tells us that we can use the INCLUDE to capture these columns. In the JOIN condition, SalesOrderID is the next important column. This column requires the index to be sorted so the JOIN can be accomplished without a scan.
@@ -395,7 +395,7 @@ From the details of the table scan, the output of this operation results in the 
 With this information we can write the following nonclustered index to cover the SalesOrderDetail table.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_14.gif" alt="" title="" width="719" height="176" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_14.gif" alt="" title="" width="719" height="176" />
 </div>
 
 **Key Lookup**
@@ -411,7 +411,7 @@ WITH (DROP_EXISTING=ON)
 GO
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_15.gif" alt="" title="" width="701" height="251" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_15.gif" alt="" title="" width="701" height="251" />
 </div>
 
 Running the execution plan will show the new index is being used and the Key Lookup operation has been introduced. The lookup in this case is going to return ShipDate. ShipDate is missing from the index so there is missing support to cover this column. Removing the Key Lookup requires the structure of the index we created earlier in order to seek on the index.
@@ -445,7 +445,7 @@ GROUP BY SalesOrderNumber ,
 Take a look at the execution plan generated from this query given the indexes we currently have in place.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_16.gif" alt="" title="" width="726" height="256" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_16.gif" alt="" title="" width="726" height="256" />
 </div>
 
 If we look at the properties of the RID Lookup, we can see what the RID Lookup output list generates the following:
@@ -478,7 +478,7 @@ GO
 ```
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_17.gif" alt="" title="" width="682" height="179" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_17.gif" alt="" title="" width="682" height="179" />
 </div>
 
 Reviewing the execution plan, the RID Lookup has been resolved.
@@ -502,7 +502,7 @@ WHERE   customerid = 11091
         AND UnitPriceDiscount > 1.00
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_18.gif" alt="" title="" width="705" height="172" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_18.gif" alt="" title="" width="705" height="172" />
 </div>
 
 **Wrapping up**
@@ -560,7 +560,7 @@ GROUP BY SalesOrderNumber ,
         AccountNumber
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/exec_plan_19.gif" alt="" title="" width="705" height="171" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_plan_19.gif" alt="" title="" width="705" height="171" />
 </div>
 
 **Take away**
@@ -569,5 +569,5 @@ Execution plan analysis is a critical aspect to keeping SQL Server running optim
 
 Special thanks to Janice Lee, George Mastros, Howard Churchill, Denis Gobo and Jes Borland for the reviews of this paper. The SQL Community is simply amazing!
 
- [1]: /wp-content/uploads/blogs/DataMgmt/Execution_Plan_and_Tuning.pdf ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Execution_Plan_and_Tuning.pdf ""
  [2]: http://msdn.microsoft.com/en-us/library/ms174283.aspx

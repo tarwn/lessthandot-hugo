@@ -46,7 +46,7 @@ FROM ExecutionLog3;
 Your results will look like this:
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/TSQL31ExecLog.JPG?mtime=1339508905" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL31ExecLog.JPG?mtime=1339508905" alt="" />
 </p>
 
 You can get more information about this view [here][3].

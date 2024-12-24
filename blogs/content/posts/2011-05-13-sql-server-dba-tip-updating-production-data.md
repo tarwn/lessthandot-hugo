@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/media/blogs/All/-22.png?mtime=1305291213"><img src="/wp-content/uploads/blogs/All/-22.png?mtime=1305291213" alt="" width="139" height="121" align="left" /></a>
+  <a href="/media/blogs/All/-22.png?mtime=1305291213"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-22.png?mtime=1305291213" alt="" width="139" height="121" align="left" /></a>
 </div>
 
 Updating large volumes of production data is a common task for a DBA.  This task falls into the level of responsibility that has been given to the DBA role in faith that the proper steps are taken to ensure the integrity of the data before and after the update.  One problem that can arise from years of performing updates of this kind; at times a DBA may let their guard down and write an update quickly or with too much confidence and not take the needed steps to ensure the update, successful or not, is keeping the integrity of the data and recovery points in mind.
@@ -84,7 +84,7 @@ Making mistakes is a part of growing as a DBA (and any other profession).  When
  
 
 <div class="image_block">
-  <a href="/media/blogs/All/-23.png?mtime=1305291213"><img src="/wp-content/uploads/blogs/All/-23.png?mtime=1305291213" alt="" width="207" height="156" /></a>
+  <a href="/media/blogs/All/-23.png?mtime=1305291213"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-23.png?mtime=1305291213" alt="" width="207" height="156" /></a>
 </div>
 
 <p style="text-align: center;">

@@ -23,7 +23,7 @@ Recently, another community leader and coworker of mine at Magenic, Aaron Lowe (
  
 
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/-18.png?mtime=1334198524"><img src="/wp-content/uploads/blogs/ITProfessionals/-18.png?mtime=1334198524" alt="" width="297" height="64" align="left" /></a>
+  <a href="/media/blogs/ITProfessionals/-18.png?mtime=1334198524"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-18.png?mtime=1334198524" alt="" width="297" height="64" align="left" /></a>
 </div>
 
 The best way I can explain SQL Friends and what it is would be to tell you a situation that relates to what Aaron and SQL Friends are doing.

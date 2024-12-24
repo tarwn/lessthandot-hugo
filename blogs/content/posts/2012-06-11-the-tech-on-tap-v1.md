@@ -25,7 +25,7 @@ To sum up my latest adventure, [Tech on Tap v1.2 SharePoint][1], here's a simple
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/ToT12Beer.jpg?mtime=1339462924" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ToT12Beer.jpg?mtime=1339462924" alt="" />
 </p>
 
 7. Our fantastic sponsors – [Dell][6], [Idera][7], and [Oracular][8]. The willingness of national and local sponsors to contribute to the local tech community continues to amaze me. I'm always grateful.

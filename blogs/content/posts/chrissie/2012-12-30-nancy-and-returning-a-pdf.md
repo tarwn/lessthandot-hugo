@@ -84,13 +84,13 @@ Get["/trees/pdf/{Id}"] = parameters =&gt;
 So if I now go to my page http://localhost/trees/pdf/1 I will get my custom pdf.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy19.png?mtime=1356877809"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy19.png?mtime=1356877809" width="463" height="211" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy19.png?mtime=1356877809"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy19.png?mtime=1356877809" width="463" height="211" /></a>
 </div>
 
 Or I can just embed it in an iframe of course.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy20.png?mtime=1356877897"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy20.png?mtime=1356877897" width="471" height="310" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy20.png?mtime=1356877897"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy20.png?mtime=1356877897" width="471" height="310" /></a>
 </div>
 
 Which would look like this in our code.
@@ -251,7 +251,7 @@ This will work for other objets than TreeModel too, it&#8217;s far from complete
 And now my servicecall with easyhttp will create a file for me and that looks like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy21.png?mtime=1356878586"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy21.png?mtime=1356878586" width="672" height="870" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy21.png?mtime=1356878586"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy21.png?mtime=1356878586" width="672" height="870" /></a>
 </div>
 
 ## Conclusion

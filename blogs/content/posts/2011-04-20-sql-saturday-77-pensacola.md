@@ -15,7 +15,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/sqlsat77.GIF?mtime=1303303751"><img alt="" src="/wp-content/uploads/blogs/All/sqlsat77.GIF?mtime=1303303751" width="274" height="115" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat77.GIF?mtime=1303303751"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat77.GIF?mtime=1303303751" width="274" height="115" align="left" /></a>
 </div>
 
 As of the date this blog post is published, there are 45 days left until this year's [SQL Saturday in Pensacola][1].  The previous Pensacola SQL Saturdays have always sounded like much more than the everyday SQL Saturday.  This was easily seen from twitter feeds and recaps posted by presenters and attendees over the last 2 years. This coming June 4<sup>th</sup>, [Pensacola is doing SQL Saturday][2] once again and I'm very excited as I've been picked to be part of the [scheduled presenters][3].

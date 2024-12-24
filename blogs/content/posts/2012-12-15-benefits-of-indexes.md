@@ -33,7 +33,7 @@ This is day fifteen of the [SQL Advent 2012 series][1] of blog posts. Today we a
 How does an index work, how does it help SQL Server finding stuff faster? Here is an simple non technology explanation. If I told you to grab a cookbook and give me all the recipes in that book for cod, what would you do? There are two things yuo can do, you can read through the whole book page by page until you get to the last page looking for any cod recipes. Or...........take a look at the picture below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/IMG01005-20121214-1059.jpg?mtime=1355500346"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/IMG01005-20121214-1059.jpg?mtime=1355500346" width="640" height="480" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/IMG01005-20121214-1059.jpg?mtime=1355500346"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/IMG01005-20121214-1059.jpg?mtime=1355500346" width="640" height="480" /></a>
 </div>
 
 See that, in one second I know exactly where to find cod recipes, it is on page 305 and 61. Which do you think is faster, looking it up in an index or scanning through the book? 

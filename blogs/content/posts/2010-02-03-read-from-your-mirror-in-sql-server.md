@@ -60,7 +60,7 @@ AS SNAPSHOT OF NEEDTOMOVE
 Once you have done this the snapshot is available as a read-only, point in time representation of the mirror. You can locate the snapshot in SSMS under the "database snapshots" tree located directly under the system databases section.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/snaps.gif" alt="" title="" width="290" height="224" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/snaps.gif" alt="" title="" width="290" height="224" />
 </div>
 
 Now any read operation can be done on the snapshot supporting any reports that meet the needs of the data that has been captured. 

@@ -26,7 +26,7 @@ When you do a lot of ETL type of work it is good to know what kind of data distr
 In order to use the Data Profiling Task in SSIS you need to do a couple of things. First thing you have to do is adding a connection, I decided to use my local machine. Next drop a Data Profiling Task on the Control Flow designer pane.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task1.PNG?mtime=1364472826"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task1.PNG?mtime=1364472826" width="173" height="73" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task1.PNG?mtime=1364472826"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task1.PNG?mtime=1364472826" width="173" height="73" /></a>
 </div>
 
 Once you do that you will see a red circle with an x, if you hover over this icon, you will see the following text: _The "Destination" property is invalid: Missing destination for profile output._ Double click on the Data Profiling Task, leave DestinationType as FileConnection, click on Destination, in the pop up window, choose New File from the Usage Type option, navigate to the folder where you want the file and give the file a name.
@@ -222,7 +222,7 @@ The following three profiles analyze multiple columns or relationships between c
   </p>
   
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task3.PNG?mtime=1364472845"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task3.PNG?mtime=1364472845" width="716" height="615" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task3.PNG?mtime=1364472845"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task3.PNG?mtime=1364472845" width="716" height="615" /></a>
   </div>
   
   <p>
@@ -230,7 +230,7 @@ The following three profiles analyze multiple columns or relationships between c
   </p>
   
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task4.PNG?mtime=1364472855"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task4.PNG?mtime=1364472855" width="234" height="208" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task4.PNG?mtime=1364472855"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task4.PNG?mtime=1364472855" width="234" height="208" /></a>
   </div>
   
   <p>
@@ -238,7 +238,7 @@ The following three profiles analyze multiple columns or relationships between c
   </p>
   
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task5.PNG?mtime=1364472864"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task5.PNG?mtime=1364472864" width="887" height="629" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task5.PNG?mtime=1364472864"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/Data Profiling Task5.PNG?mtime=1364472864" width="887" height="629" /></a>
   </div>
   
   <p>

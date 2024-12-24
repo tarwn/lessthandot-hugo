@@ -34,7 +34,7 @@ So you have to find a better way to do this and if you have a bussines account y
 So here is how to make them. Login to paypal and click on the merchant services tab. there it has a create buttons category and a donate link. That takes you here.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/paypal.jpg" alt="" title="" width="751" height="634" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/paypal.jpg" alt="" title="" width="751" height="634" />
 </div>
 
 Just make sure you have the Secure merchant account ID and it will create something like this.

@@ -39,7 +39,7 @@ Handling default and named instances requires added coding because of the way th
 GetDataSources returns the following records for each instance found
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/getsource.gif" alt="" title="" width="732" height="161" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/getsource.gif" alt="" title="" width="732" height="161" />
 </div>
 
 Resource: http://msdn.microsoft.com/en-us/library/system.data.sql.sqldatasourceenumerator.getdatasources.aspx
@@ -124,13 +124,13 @@ Now that you have your custom assembly ready open another session of Visual Stud
 In your new report project add a new item by right clicking the project name and going through add to new item
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/addnewitem.gif" alt="" title="" width="308" height="322" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/addnewitem.gif" alt="" title="" width="308" height="322" />
 </div>
 
 For now we can ignore the Data area of this report and any data sources that you might be used to initially setting up. Ensure you are in the layout and in the menu strip, select Report and open Report Properties. In the report properties window, select the References tab. Click the brose button to add the assembly to the assembly listing by opening the browse dialog. Navigate to the private assembly folder and double click the assembly we created earlier.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/browserassembly.gif" alt="" title="" width="431" height="441" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/browserassembly.gif" alt="" title="" width="431" height="441" />
 </div>
 
 Once the assembly is added to the development environment you are ready to call it.
@@ -148,7 +148,7 @@ Add a new parameter to the report and make the following changes
   5. rary1.InstanceSearch.InstanceFinder() as an expression in the Value option
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/parm_rs_1.gif" alt="" title="" width="598" height="610" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/parm_rs_1.gif" alt="" title="" width="598" height="610" />
 </div>
 
 Once this is done, you can run the report to start the search for all the instances on the network. The report will be slow on load. Don't be surprised about this and shocked. This is the same method that is taken when click the browse the network options from BIDS and SSMS.
@@ -158,7 +158,7 @@ Once this is done, you can run the report to start the search for all the instan
 When the report renders you should see in the parameter the dropdown of all the servers available to query
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/results_scan.gif" alt="" title="" width="394" height="231" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/results_scan.gif" alt="" title="" width="394" height="231" />
 </div>
 
 You can see how useful this can be to a DBA or even other groups in the IT department. The custom assembly doesn't have to be restricted to a instance search. It can look for other software installations or other pieces of Active Directory that may interest administrators. There are many options available to the dynamic nature of starting a report path off this way.

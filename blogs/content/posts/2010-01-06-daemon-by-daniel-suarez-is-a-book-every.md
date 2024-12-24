@@ -20,7 +20,7 @@ tags:
   - goals
 
 ---
- <img src="/wp-content/uploads/blogs/ITProfessionals/da.jpg" alt="" title="" width="150" height="227" />I was tagged by [onpnt][1] in his [Goals for 2010][2] post. One of my <del>resolutions</del> goals of this year is to read more books. Right now I am in the middle of reading [Daemon][3] by Daniel Suarez.
+ <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/da.jpg" alt="" title="" width="150" height="227" />I was tagged by [onpnt][1] in his [Goals for 2010][2] post. One of my <del>resolutions</del> goals of this year is to read more books. Right now I am in the middle of reading [Daemon][3] by Daniel Suarez.
 
 According to his bio Daniel Suarez is an independent systems consultant to Fortune 1000 companies. He has designed and developed enterprise software for the defense, finance, and entertainment industries. An avid gamer and technologist. 
 

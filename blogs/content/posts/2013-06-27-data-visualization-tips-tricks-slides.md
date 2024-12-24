@@ -34,5 +34,5 @@ tags:
 </p>
 
 <div class="image_block">
-  <a href="/media/users/koenverbeeck/ComDayBe2013/long.png?mtime=1370952579"><img src="/wp-content/uploads/users/koenverbeeck/ComDayBe2013/long.png?mtime=1370952579" alt="" width="600" height="90" /></a>
+  <a href="/media/users/koenverbeeck/ComDayBe2013/long.png?mtime=1370952579"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/ComDayBe2013/long.png?mtime=1370952579" alt="" width="600" height="90" /></a>
 </div>

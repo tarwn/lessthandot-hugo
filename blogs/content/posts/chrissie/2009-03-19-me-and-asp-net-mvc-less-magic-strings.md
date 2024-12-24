@@ -112,7 +112,7 @@ This bit <code class="codespan">Inherits="System.Web.Mvc.ViewPage&lt;MvcApplicat
 The result is the same as before. But a little more flexible. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject4.jpg" alt="" title="" width="377" height="278" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject4.jpg" alt="" title="" width="377" height="278" />
 </div>
 
 I can now easily add an attribute to Person.
@@ -178,7 +178,7 @@ Just a little change to the view.
 With this as the result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject5.jpg" alt="" title="" width="306" height="242" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject5.jpg" alt="" title="" width="306" height="242" />
 </div>
 
 Warning: I&#8217;m just learning, I&#8217;m not saying what I have here is good practice. Next tie I will start unittesting.

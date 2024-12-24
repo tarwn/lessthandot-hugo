@@ -28,7 +28,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a style="line-height: 1.5em" href="/wp-content/uploads/2014/03/Koen_Table1.png"><img class="alignnone size-full wp-image-2506" alt="Koen_Table1" src="/wp-content/uploads/2014/03/Koen_Table1.png" width="203" height="94" /></a>
+  <a style="line-height: 1.5em" href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_Table1.png"><img class="alignnone size-full wp-image-2506" alt="Koen_Table1" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_Table1.png" width="203" height="94" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -44,7 +44,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_PowerViewFormat.png"><img class="alignnone size-full wp-image-2502" alt="Koen_PowerViewFormat" src="/wp-content/uploads/2014/03/Koen_PowerViewFormat.png" width="280" height="188" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_PowerViewFormat.png"><img class="alignnone size-full wp-image-2502" alt="Koen_PowerViewFormat" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_PowerViewFormat.png" width="280" height="188" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -52,7 +52,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_Table2.png"><img class="alignnone size-full wp-image-2507" alt="Koen_Table2" src="/wp-content/uploads/2014/03/Koen_Table2.png" width="220" height="93" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_Table2.png"><img class="alignnone size-full wp-image-2507" alt="Koen_Table2" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_Table2.png" width="220" height="93" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -68,7 +68,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_CubeFormat.png"><img class="alignnone size-full wp-image-2509" alt="Koen_CubeFormat" src="/wp-content/uploads/2014/03/Koen_CubeFormat.png" width="244" height="248" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_CubeFormat.png"><img class="alignnone size-full wp-image-2509" alt="Koen_CubeFormat" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_CubeFormat.png" width="244" height="248" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -92,7 +92,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_SiteSettings.png"><img class="alignnone size-full wp-image-2505" alt="Koen_SiteSettings" src="/wp-content/uploads/2014/03/Koen_SiteSettings.png" width="154" height="276" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_SiteSettings.png"><img class="alignnone size-full wp-image-2505" alt="Koen_SiteSettings" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_SiteSettings.png" width="154" height="276" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -100,7 +100,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_RegionalSettings.png"><img class="alignnone size-full wp-image-2503" alt="Koen_RegionalSettings" src="/wp-content/uploads/2014/03/Koen_RegionalSettings.png" width="154" height="84" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_RegionalSettings.png"><img class="alignnone size-full wp-image-2503" alt="Koen_RegionalSettings" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_RegionalSettings.png" width="154" height="84" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -108,7 +108,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_RegionalSettings2.png"><img class="alignnone  wp-image-2504" alt="Koen_RegionalSettings2" src="/wp-content/uploads/2014/03/Koen_RegionalSettings2.png" width="793" height="240" srcset="/wp-content/uploads/2014/03/Koen_RegionalSettings2.png 881w, /wp-content/uploads/2014/03/Koen_RegionalSettings2-300x90.png 300w" sizes="(max-width: 793px) 100vw, 793px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_RegionalSettings2.png"><img class="alignnone  wp-image-2504" alt="Koen_RegionalSettings2" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_RegionalSettings2.png" width="793" height="240" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_RegionalSettings2.png 881w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_RegionalSettings2-300x90.png 300w" sizes="(max-width: 793px) 100vw, 793px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -116,7 +116,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/03/Koen_Table3.png"><img class="alignnone size-full wp-image-2508" alt="Koen_Table3" src="/wp-content/uploads/2014/03/Koen_Table3.png" width="222" height="92" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_Table3.png"><img class="alignnone size-full wp-image-2508" alt="Koen_Table3" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/03/Koen_Table3.png" width="222" height="92" /></a>
 </p>
 
 <p style="text-align: justify">

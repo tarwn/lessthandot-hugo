@@ -67,7 +67,7 @@ select * from dual;
 
 Give you a resultset of 1 row with 1 column named DUMMY with the value X
 
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleDual.PNG?mtime=1357485931" width="315" height="74" />][1]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleDual.PNG?mtime=1357485931" width="315" height="74" />][1]
 
 So there you have it, this is why the Dual table exists.
 
@@ -85,4 +85,4 @@ SELECT 3/2 from dual;
 
 However Oracle returns 1.5 while SQL Server will return 1, SQL Server does integer math and Oracle does not. That is another difference you need to be aware of, this is more problematic when moving from Oracle SQL Server and then wondering where all the decimals went.
 
- [1]: /wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleDual.PNG?mtime=1357485931
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleDual.PNG?mtime=1357485931

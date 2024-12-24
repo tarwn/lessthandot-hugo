@@ -26,33 +26,33 @@ Some time ago [Data Explorer][1], an add-in for Excel 2010 or 2013, was released
 
 Recently, I had to create a demo for showcasing PowerPivot and Power View in Office 2013. As with all demo's, the hardest part is to figure out which compelling story you will tell. I had downloaded a publicly available Excel file with Olympic data from 1900 until 2008.
 
-<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/OlympicsData.png?mtime=1363781218"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/OlympicsData.png?mtime=1363781218" alt="" width="668" height="234" /></a>
+<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/OlympicsData.png?mtime=1363781218"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/OlympicsData.png?mtime=1363781218" alt="" width="668" height="234" /></a>
 
 <span style="text-align: justify;">This is very useful for a demo, but I wanted to create some maps in Power View, so I also needed a list of countries and their location. And this is where Data Explorer came into the picture. One of the niftiest features of the product is to search online for datasets. In reality a lot of results come from Wikipedia, but we're not picky.</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DataExplorerDemo/onlinesearch.png?mtime=1363781225"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/onlinesearch.png?mtime=1363781225" alt="" width="598" height="194" /></a>
+  <a href="/media/users/koenverbeeck/DataExplorerDemo/onlinesearch.png?mtime=1363781225"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/onlinesearch.png?mtime=1363781225" alt="" width="598" height="194" /></a>
 </div>
 
 <span style="text-align: justify;">As you can see in the first screenshot, countries are identified by their NOC code (National Olympic Committee) so the first thing we need to do is find a list of countries and the corresponding NOC codes. To make future matching a bit easier, I also include ISO codes.</span>
 
-<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/searchresult.png?mtime=1363781237"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/searchresult.png?mtime=1363781237" alt="" width="895" height="213" /></a>
+<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/searchresult.png?mtime=1363781237"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/searchresult.png?mtime=1363781237" alt="" width="895" height="213" /></a>
 
 <span style="text-align: justify;">With one click on the USE button, the entire dataset is imported into a new Excel sheet:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DataExplorerDemo/importquery.png?mtime=1363781211"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/importquery.png?mtime=1363781211" alt="" width="604" height="200" /></a>
+  <a href="/media/users/koenverbeeck/DataExplorerDemo/importquery.png?mtime=1363781211"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/importquery.png?mtime=1363781211" alt="" width="604" height="200" /></a>
 </div>
 
 <span style="text-align: justify;">Next I import similar data sets containing list of countries with their location and also some lists with unemployment rates, population and gross national income. All I need to do some serious analyses on what are the key contributing factors in winning a gold medal at the Olympics.</span>
 
 After I imported everything into PowerPivot, I did some rudimentary data cleansing. The hardest part was to match countries from different lists. For example, is it North Korea or Democratic People's Republic of Korea? Finally I have the following model:
 
-<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/diagram.png?mtime=1363781203"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/diagram.png?mtime=1363781203" alt="" width="722" height="380" /></a>
+<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/diagram.png?mtime=1363781203"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/diagram.png?mtime=1363781203" alt="" width="722" height="380" /></a>
 
 <span style="text-align: justify;">Now I can build some nice Power View reports directly in Excel 2013 and my demo is ready:</span>
 
-<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/powerview.png?mtime=1363781231"><img src="/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/powerview.png?mtime=1363781231" alt="" width="732" height="394" /></a>
+<a style="text-align: center;" href="/media/users/koenverbeeck/DataExplorerDemo/powerview.png?mtime=1363781231"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DataExplorerDemo/powerview.png?mtime=1363781231" alt="" width="732" height="394" /></a>
 
 <span style="text-align: justify;">The point of this blog post is that it's fairly easy to create a demo data set using Data Explorer; it took me a bit more than one hour to create this model. However, Data Explorer is more than just an online search tool for data sets, so if you want to learn more about this tool check out the following resources:</span>
 

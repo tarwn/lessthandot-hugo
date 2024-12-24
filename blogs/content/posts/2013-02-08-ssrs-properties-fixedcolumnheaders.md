@@ -26,19 +26,19 @@ To access the property, select the tablix and select FixedColumnHeaders.
 The options are True or False.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/fixedcolumn 1.png?mtime=1360330912" alt="" width="286" height="86" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fixedcolumn 1.png?mtime=1360330912" alt="" width="286" height="86" />
 </p>
 
 **Example:** I have a matrix that display order counts and totals by year, grouped by sales region. The Year header appears when I am at the top of the rendered report.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/fixedcolumn 2.png?mtime=1360330912" alt="" width="761" height="254" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fixedcolumn 2.png?mtime=1360330912" alt="" width="761" height="254" />
 </p>
 
 I go to the tablix properties and set FixedColumnHeaders to True (and the Background Color to white). When I view the report again, and scroll down, I see the header at the top at all times.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/fixedcolumn 3.png?mtime=1360330912" alt="" width="768" height="236" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fixedcolumn 3.png?mtime=1360330912" alt="" width="768" height="236" />
 </p>
 
 **Further Reading:**

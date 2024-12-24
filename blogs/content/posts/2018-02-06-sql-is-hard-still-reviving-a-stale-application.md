@@ -107,7 +107,7 @@ Several years ago, I [launched SQLisHard][1] to help folks learn SQL. Some folks
 </p>
 
 <div id="attachment_8855" style="width: 810px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2017/12/SQLisHard_AzureInsights.png" alt="SQL is Hard: Azure Insights" width="800" height="341" class="size-full wp-image-8855" srcset="/wp-content/uploads/2017/12/SQLisHard_AzureInsights.png 800w, /wp-content/uploads/2017/12/SQLisHard_AzureInsights-300x128.png 300w, /wp-content/uploads/2017/12/SQLisHard_AzureInsights-768x327.png 768w" sizes="(max-width: 800px) 100vw, 800px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/12/SQLisHard_AzureInsights.png" alt="SQL is Hard: Azure Insights" width="800" height="341" class="size-full wp-image-8855" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/12/SQLisHard_AzureInsights.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/12/SQLisHard_AzureInsights-300x128.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/12/SQLisHard_AzureInsights-768x327.png 768w" sizes="(max-width: 800px) 100vw, 800px" />
   
   <p class="wp-caption-text">
     SQL is Hard: Azure Insights

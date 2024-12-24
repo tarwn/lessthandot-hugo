@@ -23,13 +23,13 @@ I don&#8217;t know and I don&#8217;t really think it is my favourite behaviour.
 Try adding this http://lessthandot.com||http://forum.lessthandot.com|http://wiki.lessthandot.com to the homepage.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/firefox1.png" alt="" title="" width="593" height="515" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/firefox1.png" alt="" title="" width="593" height="515" />
 </div>
 
 Not only will you have the best of the net 😀 but it will also open four tabs. Weird very weird 88|.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/firefox2.png" alt="" title="" width="813" height="147" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/firefox2.png" alt="" title="" width="813" height="147" />
 </div>
 
 You get this also if you have a number of tabs open and click on user current page.

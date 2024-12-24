@@ -142,15 +142,15 @@ There are loads of options that you can choose from. Some examples include:
 
 That's all that I can think of for now. If you've got any tips or tricks, or a favorite person that you follow, please share it in the comments below, or even write your own blog and link us to it.
 
- [1]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt1.png "scripting select to"
- [2]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt2.png "premade excel spreadsheet"
- [3]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt3.png "filters!"
- [4]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt4.png "filter settings"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt1.png "scripting select to"
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt2.png "premade excel spreadsheet"
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt3.png "filters!"
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt4.png "filter settings"
  [5]: http://www.red-gate.com/products/sql-development/sql-developer-bundle/
  [6]: http://www.sqlsentry.net/plan-explorer/sql-server-query-view.asp
  [7]: https://twitter.com/#!/search/%23sqlhelp
  [8]: /index.php/ITProfessionals/ProfessionalDevelopment/mentoring-as-i-see-it
- [9]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt5.png "tables without schemas"
- [10]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt6.png "tables with schemas"
- [11]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt7.png "getting to the options"
- [12]: /wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt8.png "options window"
+ [9]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt5.png "tables without schemas"
+ [10]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt6.png "tables with schemas"
+ [11]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt7.png "getting to the options"
+ [12]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/DevTT/devtt8.png "options window"

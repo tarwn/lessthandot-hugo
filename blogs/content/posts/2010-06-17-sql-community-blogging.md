@@ -27,7 +27,7 @@ tags:
 [SQL University][1] is one of the greatest concepts I've seen in the SQL Community. Thanks to Jorge Segarra ([Blog][2] | [Twitter][3])for coming up with it and organizing it. Today we are going to talk about something dear and close to the concept of SQL University. Blogging! Blogs are an important part of the concept of SQL University. With them we can easily bring this wealth of knowledge in the course syllabus format with writers from the SQL Community in a vast geographical range and range of expertise. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/blog.gif" alt="" title="" width="296" height="280" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/blog.gif" alt="" title="" width="296" height="280" />
 </div>
 
 Getting your day-to-day experiences and knowledge out to the community can be tough sometimes. We can share what we know and what we learn with the teams we work in, but the walls of our building keep that from going far. Blogging removes the wall and much does much more for our personal growth. 

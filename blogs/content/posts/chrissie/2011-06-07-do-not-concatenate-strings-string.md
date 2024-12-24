@@ -66,13 +66,13 @@ Now that I know I want my code to use either stringbuilder, String.Format or par
 To make a custom pattern you go to the Resharper Options menu.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns1.png?mtime=1307444619"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns1.png?mtime=1307444619" width="700" height="461" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns1.png?mtime=1307444619"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns1.png?mtime=1307444619" width="700" height="461" /></a>
 </div>
 
 And then you need to add a pattern. For which I got [a little help][9].
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns2.png?mtime=1307444722"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns2.png?mtime=1307444722" width="1016" height="600" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns2.png?mtime=1307444722"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns2.png?mtime=1307444722" width="1016" height="600" /></a>
 </div>
 
 Like I did the above. You can find more details on how to this at [Hadi&#8217;s place.][10]
@@ -82,31 +82,31 @@ So I&#8217;m looking for <code class="codespan">&</code> with a string in front 
 Now when I do a search it will find all the concatenations in my code.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns3.png?mtime=1307445031"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns3.png?mtime=1307445031" width="714" height="571" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns3.png?mtime=1307445031"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns3.png?mtime=1307445031" width="714" height="571" /></a>
 </div>
 
 But that is not all. As you can see above I also set the severity level to warning, so the resharper code inspection thing will now also show a blue squigly line and give me the message I typed in. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns4.png?mtime=1307445123"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns4.png?mtime=1307445123" width="512" height="59" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns4.png?mtime=1307445123"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns4.png?mtime=1307445123" width="512" height="59" /></a>
 </div>
 
 And even better is that you can do Alt+Enter and have it fix it for you by choosing &#8220;Use format string for all arguments&#8221;.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns5.png?mtime=1307449847"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns5.png?mtime=1307449847" width="613" height="141" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns5.png?mtime=1307449847"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns5.png?mtime=1307449847" width="613" height="141" /></a>
 </div>
 
 and it goes from this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns6.png?mtime=1307449977"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns6.png?mtime=1307449977" width="893" height="29" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns6.png?mtime=1307449977"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns6.png?mtime=1307449977" width="893" height="29" /></a>
 </div>
 
 To this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns7.png?mtime=1307449989"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns7.png?mtime=1307449989" width="999" height="23" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns7.png?mtime=1307449989"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharpercustompatterns7.png?mtime=1307449989" width="999" height="23" /></a>
 </div>
 
 In a matter of a second.

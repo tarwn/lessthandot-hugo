@@ -30,7 +30,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="http://amzn.to/1HvgVzV"><img class="alignnone wp-image-2641 size-full" src="/wp-content/uploads/2014/05/Naked-Statistics.jpg" alt="Naked-Statistics" width="166" height="250" /></a>
+  <a href="http://amzn.to/1HvgVzV"><img class="alignnone wp-image-2641 size-full" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/Naked-Statistics.jpg" alt="Naked-Statistics" width="166" height="250" /></a>
 </p>
 
 <p style="text-align: justify">

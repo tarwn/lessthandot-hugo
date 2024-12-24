@@ -256,7 +256,7 @@ And that&#8217;s it. Have fun.
 Just in case you don&#8217;t believe me.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev//Unittestingextensionmethoodsleftandright.JPG" alt="" title="" width="494" height="348" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev//Unittestingextensionmethoodsleftandright.JPG" alt="" title="" width="494" height="348" />
 </div>
 
 <font color="Red">Need help with VB.Net? Come and ask a question in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a></font>

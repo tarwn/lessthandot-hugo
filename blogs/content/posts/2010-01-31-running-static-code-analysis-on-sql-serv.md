@@ -36,7 +36,7 @@ You can download Microsoft Visual Studio Team System 2008 Database Edition GDR R
 Once you have everything installed, start up Visual Studio and create a new database project. You should see something similar to the pic below
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//db1.png" alt="" title="" width="630" height="426" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//db1.png" alt="" title="" width="630" height="426" />
 </div>
 
 Create a new database connection, you can do that by going to View–>Server Explorer. Under Data Connections add a new connection to your database that you want to connect to, follow the wizard and create the connection. Now I decided to run static code analysis against the aspnetdb database that is used with ASP.NET. If you want to follow along and use this same database, take a look at this post [Setting up SQL Server with ASP.NET MVC][1] to see how to set it up
@@ -44,13 +44,13 @@ Create a new database connection, you can do that by going to View–>Server Exp
 Once your database is setup go to the Solution explorer, right click on the project and select Import Database Objects and Settings. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//db2.png" alt="" title="" width="276" height="197" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//db2.png" alt="" title="" width="276" height="197" />
 </div>
 
 The following dialog will be shown
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//db3.png" alt="" title="" width="841" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//db3.png" alt="" title="" width="841" height="301" />
 </div>
 
 Pick your connection and then click start
@@ -74,7 +74,7 @@ The output will be similar to this
 Here is what the solution explorer looks like, as you can see the folder hierarchy is very similar to the one in SSMS
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//db4.png" alt="" title="" width="345" height="765" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//db4.png" alt="" title="" width="345" height="765" />
 </div>
 
 Okay now we are ready to run our static code analysis, click on Data–>Static Code Analysis–Run

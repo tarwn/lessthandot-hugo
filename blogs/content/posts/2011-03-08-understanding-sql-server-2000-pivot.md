@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server
 
 ---
-[<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" align="left" />][1]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif" align="left" />][1]
   
 This month's T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot's first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to explain how you can write a pivot query in SQL 2000 using aggregate functions. Writing a query is one thing, understanding how it works is another. The goal of this blog post is to explain HOW it works so that it can be applied to other interesting problems.
 

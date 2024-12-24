@@ -28,7 +28,7 @@ If you can join, we'd love to see you! Please <a href="https://www.eventbrite.co
 Kudos to Jesse for getting this chapter started!
 
 <div id="attachment_4632" style="width: 303px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/07/WI-PASS.png"><img class="size-medium wp-image-4632" src="/wp-content/uploads/2016/07/WI-PASS-293x300.png" alt="PASS chapters in Wisconsin" width="293" height="300" srcset="/wp-content/uploads/2016/07/WI-PASS-293x300.png 293w, /wp-content/uploads/2016/07/WI-PASS.png 575w" sizes="(max-width: 293px) 100vw, 293px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/WI-PASS.png"><img class="size-medium wp-image-4632" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/WI-PASS-293x300.png" alt="PASS chapters in Wisconsin" width="293" height="300" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/WI-PASS-293x300.png 293w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/WI-PASS.png 575w" sizes="(max-width: 293px) 100vw, 293px" /></a>
   
   <p class="wp-caption-text">
     PASS chapters in Wisconsin

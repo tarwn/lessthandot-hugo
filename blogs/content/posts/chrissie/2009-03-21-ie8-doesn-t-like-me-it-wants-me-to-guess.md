@@ -14,7 +14,7 @@ categories:
 Anybody want to make a guess which one of these is internet options?
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/IE8_2.jpg" alt="" title="" width="387" height="430" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/IE8_2.jpg" alt="" title="" width="387" height="430" />
 </div>
 
 Perhaps it has something to do with Windowblinds I was running. And it was. Such a shame.

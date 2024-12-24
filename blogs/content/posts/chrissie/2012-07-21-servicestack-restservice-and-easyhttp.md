@@ -68,7 +68,7 @@ http://localhost:3318/plant
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/servicestack3.png?mtime=1342891714"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/servicestack3.png?mtime=1342891714" width="661" height="223" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack3.png?mtime=1342891714"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack3.png?mtime=1342891714" width="661" height="223" /></a>
 </div>
 
 Or I can do this and get one result.
@@ -76,7 +76,7 @@ Or I can do this and get one result.
 http://localhost:3318/plant/Beuk
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/servicestack4.png?mtime=1342891886"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/servicestack4.png?mtime=1342891886" width="660" height="214" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack4.png?mtime=1342891886"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack4.png?mtime=1342891886" width="660" height="214" /></a>
 </div>
 
 ## The easyhttp client

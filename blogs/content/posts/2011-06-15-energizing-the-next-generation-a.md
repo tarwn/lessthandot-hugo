@@ -21,7 +21,7 @@ At [SQL Saturday #75 Columbus, OH][1], on June 11, I had the distinct pleasure o
 If you haven't been to one of our lunch panels yet, this is what you need to know: a group of women in technology sit up at the front of a room, talk about their experiences, and answer questions and foster discussions with the audience. The goal is to have an honest discussion about what women bring to technology, what challenges they have, and how to encourage women and girls to get involved in technology. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/WITLunch.JPG?mtime=1308147184"><img alt="" src="/wp-content/uploads/users/grrlgeek/WITLunch.JPG?mtime=1308147184" width="320" height="240" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/WITLunch.JPG?mtime=1308147184"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/WITLunch.JPG?mtime=1308147184" width="320" height="240" /></a>
 </div>
 
 I started by having each of the panelists talk about what they are currently doing in technology, and how they got into the field. Who would have thought Erin, who has a master's degree in Kinesiology, would be a Database Engineer? Jen decided to get into web development because she saw it as a challenge. 
@@ -39,7 +39,7 @@ Girls In Tech – <http://www.girlsintech.net/> – GIT exists to engage, educat
 Girl Develop It Columbus – <http://girldevelopitcbus.com/> – A place for women and men to go to learn programming in a relaxed atmosphere. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/WITLunch2.JPG?mtime=1308147644"><img alt="" src="/wp-content/uploads/users/grrlgeek/WITLunch2.JPG?mtime=1308147644" width="360" height="204" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/WITLunch2.JPG?mtime=1308147644"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/WITLunch2.JPG?mtime=1308147644" width="360" height="204" /></a>
 </div>
 
 The overall theme that came through was that kids need to be exposed to technology in all its facets, encouraged to play with it and learn about it if they're interested, and mentored in whatever it is they are interested in pursuing. 

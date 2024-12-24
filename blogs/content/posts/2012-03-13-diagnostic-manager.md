@@ -26,7 +26,7 @@ So when I learned that Diagnostic Manager would record the state of the SQL Inst
 
 The next time I saw an e-mail asking what happened that morning around 4:00AM, I jumped into action.  I opened Diagnostic Manager and clicked on the SQL Instance in question and hit the History Browser window:
 
-[<img style="border-style: initial; border-color: initial;" src="/wp-content/uploads/users/kconan/DM - History Browser Button.jpg?mtime=1331600719" alt="" width="476" height="130" />][1]
+[<img style="border-style: initial; border-color: initial;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/DM - History Browser Button.jpg?mtime=1331600719" alt="" width="476" height="130" />][1]
 
 <p style="text-align: left;">
   On the right side of the screen, we can now navigate the Calendar to quickly go back to a specific day.  Because the issue I was looking at was from that day, I figured I just needed to scroll down to 4:00 AM and start looking at the different metrics.  Well imagine my surprise when I couldn't find anything from before 8:00 AM!  I looked at previous days and they only had data from 8:00 AM to 5:00 PM...
@@ -34,7 +34,7 @@ The next time I saw an e-mail asking what happened that morning around 4:00AM, I
 
 <div class="image_block" style="text-align: left;">
   <p>
-    <a href="/media/users/kconan/DM - History Browser.jpg?mtime=1331600733"><img src="/wp-content/uploads/users/kconan/DM - History Browser.jpg?mtime=1331600733" alt="" width="234" height="452" /></a>
+    <a href="/media/users/kconan/DM - History Browser.jpg?mtime=1331600733"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/DM - History Browser.jpg?mtime=1331600733" alt="" width="234" height="452" /></a>
   </p>
 </div>
 
@@ -46,7 +46,7 @@ After looking around for what felt like hours, I sent Idera's Support an e-mail.
 
 If you notice, in the above screenshot there is a blue link right below the Calendar that says "Between 8:00 AM and 5:00 PM".  If you click on that link you will get this screen:
 
-[<img src="/wp-content/uploads/users/kconan/DM - History Browser Options.jpg?mtime=1331600726" alt="" width="308" height="218" />][2]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/DM - History Browser Options.jpg?mtime=1331600726" alt="" width="308" height="218" />][2]
 
 Like most people, we are a 24/7/365 shop and I need to be able to look at snapshots from any point of time.  So I chose the top option "Show all snapshots".  Now I can see all of my snapshots!
 

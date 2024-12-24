@@ -31,7 +31,7 @@ tags:
 The recess bell just rang for SQL University HA / DR classrooms. While all of the SQL kiddies are running around the playground and playing with the things they have learned over this semester, the chalkboard is going to get a workout.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/bart.gif" alt="" title="" width="628" height="339" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bart.gif" alt="" title="" width="628" height="339" />
 </div>
 
 <p align="center">

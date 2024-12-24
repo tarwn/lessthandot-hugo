@@ -16,7 +16,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-[<img class="alignnone" src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" width="154" height="154" />][1]<a href="/index.php/uncategorized/youre-invited-to-t-sql-tuesday-67-extended-events/" target="_blank">It's my T-SQL Tuesday!</a> I've spent the last year learning and teaching Extended Events – because if you really want to learn something, teach. XE can be used for everything from very simple tasks, such as counting the number of query executions, to very complicated tasks, such as [anything Jonathan Kehayias writes about][2]! I'm encouraging other bloggers to write about XE today in hopes that I'll learn some new stuff – and if people have questions, that we'll be able to teach them.
+[<img class="alignnone" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" width="154" height="154" />][1]<a href="/index.php/uncategorized/youre-invited-to-t-sql-tuesday-67-extended-events/" target="_blank">It's my T-SQL Tuesday!</a> I've spent the last year learning and teaching Extended Events – because if you really want to learn something, teach. XE can be used for everything from very simple tasks, such as counting the number of query executions, to very complicated tasks, such as [anything Jonathan Kehayias writes about][2]! I'm encouraging other bloggers to write about XE today in hopes that I'll learn some new stuff – and if people have questions, that we'll be able to teach them.
 
 ### It's great, but it's not complete
 
@@ -30,15 +30,15 @@ XE doesn't have this capability. It's not in the New Session Wizard, it's not i
 
 Here's my session – I'm tracking database and object creation.
 
-[<img class="aligncenter wp-image-3404 size-full" src="/wp-content/uploads/2015/06/CreateEventSession.png" alt="CreateEventSession" width="587" height="259" srcset="/wp-content/uploads/2015/06/CreateEventSession.png 587w, /wp-content/uploads/2015/06/CreateEventSession-300x132.png 300w" sizes="(max-width: 587px) 100vw, 587px" />][3]
+[<img class="aligncenter wp-image-3404 size-full" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateEventSession.png" alt="CreateEventSession" width="587" height="259" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateEventSession.png 587w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateEventSession-300x132.png 300w" sizes="(max-width: 587px) 100vw, 587px" />][3]
 
 I create a Job that has one step – this is to set the STATE = STOP.
 
-[<img class="size-full wp-image-3406 aligncenter" src="/wp-content/uploads/2015/06/CreateJobStep.png" alt="CreateJobStep" width="820" height="668" srcset="/wp-content/uploads/2015/06/CreateJobStep.png 820w, /wp-content/uploads/2015/06/CreateJobStep-300x244.png 300w" sizes="(max-width: 820px) 100vw, 820px" />][4]
+[<img class="size-full wp-image-3406 aligncenter" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateJobStep.png" alt="CreateJobStep" width="820" height="668" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateJobStep.png 820w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateJobStep-300x244.png 300w" sizes="(max-width: 820px) 100vw, 820px" />][4]
 
 Then, I schedule the job to run once.
 
-[<img class="size-full wp-image-3405 aligncenter" src="/wp-content/uploads/2015/06/JobSchedule.png" alt="JobSchedule" width="706" height="634" srcset="/wp-content/uploads/2015/06/JobSchedule.png 706w, /wp-content/uploads/2015/06/JobSchedule-300x269.png 300w" sizes="(max-width: 706px) 100vw, 706px" />][5]
+[<img class="size-full wp-image-3405 aligncenter" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/JobSchedule.png" alt="JobSchedule" width="706" height="634" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/JobSchedule.png 706w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/JobSchedule-300x269.png 300w" sizes="(max-width: 706px) 100vw, 706px" />][5]
 
 I check Event Viewer and confirm the job ran. In SSMS, I can see the session is stopped.
 
@@ -56,7 +56,7 @@ Despite these two flaws, I love Extended Events. The ease of setup, the breadth 
 
  [1]: /index.php/uncategorized/youre-invited-to-t-sql-tuesday-67-extended-events/
  [2]: https://www.sqlskills.com/blogs/jonathan/category/extended-events/
- [3]: /wp-content/uploads/2015/06/CreateEventSession.png
- [4]: /wp-content/uploads/2015/06/CreateJobStep.png
- [5]: /wp-content/uploads/2015/06/JobSchedule.png
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateEventSession.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/CreateJobStep.png
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/JobSchedule.png
  [6]: http://www.mssqltips.com/sqlservertip/1212/correlating-performance-monitor-and-sql-server-profiler-data/

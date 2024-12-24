@@ -73,21 +73,21 @@ Prior to executing this query, our server was running as follows
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dmv_idx_1.gif" alt="" title="" width="426" height="161" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dmv_idx_1.gif" alt="" title="" width="426" height="161" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dmv_idx_2.gif" alt="" title="" width="426" height="161" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dmv_idx_2.gif" alt="" title="" width="426" height="161" />
 </div>
 
 Once executing the query we quickly see extremely high IO. IO is our major concern here. This will slow the server down noticeably and cause other operations to suffer its wrath.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dmv_idx_3.gif" alt="" title="" width="433" height="161" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dmv_idx_3.gif" alt="" title="" width="433" height="161" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/dmv_idx_4.gif" alt="" title="" width="435" height="161" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/dmv_idx_4.gif" alt="" title="" width="435" height="161" />
 </div></p> 
 
 This test was crude and we didn't go into detail of the IO and exact reactions to running the query on the server. You can see from the charts that the query was killed very quickly. We only wanted to show the start of the resource consumption and overhead. The objective and take away is the knowledge that these queries do in fact have their own resource intensive requirements. When running them due to maintenance, forum support from community members or other means in obtaining them, take care in the time that you do so. In some cases, these queries and other DMVs cannot be stopped until completion. For a truly in-depth and excellent look at usage, check Paul Randal's ([Blog][11] | [Twitter][12]) blog, "[Inside sys.dm\_db\_index\_physical\_stats][13]".

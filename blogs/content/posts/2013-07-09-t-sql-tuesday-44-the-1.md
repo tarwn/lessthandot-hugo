@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-[<img style="float: left;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" />][1]It's the second Tuesday of the month, and you know what that means: it's T-SQL Tuesday! This is a monthly blog series with a different topic each month. This month, our host, Bradley Ball ([blog][2] | [twitter][3]), wants to hear about at least one moment in SQL time that I would like back. (You can write about your moment, too – [the information you need is here][1]!)
+[<img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" />][1]It's the second Tuesday of the month, and you know what that means: it's T-SQL Tuesday! This is a monthly blog series with a different topic each month. This month, our host, Bradley Ball ([blog][2] | [twitter][3]), wants to hear about at least one moment in SQL time that I would like back. (You can write about your moment, too – [the information you need is here][1]!)
 
 _Remember that time I didn't know how to configure a cluster?_
 
@@ -29,7 +29,7 @@ We made a game plan. We were going to take a weekend outage. We were going to ta
 I'll give you one guess as to how well that went.
 
 <p style="text-align: center;">
-  <a href="http://www.flickr.com/photos/balakov/2468552226/in/set-72157594352657197"><img src="/wp-content/uploads/users/grrlgeek/2468552226_0e2637a0dd.jpg?mtime=1373373473" alt="" /></a>
+  <a href="http://www.flickr.com/photos/balakov/2468552226/in/set-72157594352657197"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/2468552226_0e2637a0dd.jpg?mtime=1373373473" alt="" /></a>
 </p>
 
 <p style="text-align: center;">

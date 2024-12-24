@@ -35,7 +35,7 @@ The Failover Partner property is all that is needed for the connection string to
 The application's interface consists of a grid view, a button to load the grid view, and an option to show the connection string using the Failover Partner property.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-98.png?mtime=1327284878"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-98.png?mtime=1327284878" width="432" height="184" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-98.png?mtime=1327284878"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-98.png?mtime=1327284878" width="432" height="184" /></a>
 </div>
 
 The design of this form allows a connection string with the Failover Partner setting and without.  If the "User Mirror Connection String?" check box is checked, the connection string will use the Failover Partner property.  The code to determine this is as follows.
@@ -100,12 +100,12 @@ The results
 
   1. Grid loading successful
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-99.png?mtime=1327284878"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-99.png?mtime=1327284878" width="357" height="151" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-99.png?mtime=1327284878"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-99.png?mtime=1327284878" width="357" height="151" /></a>
 </div>
 
   2. Grid loading failure with connection error
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-100.png?mtime=1327284878"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-100.png?mtime=1327284878" width="366" height="147" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-100.png?mtime=1327284878"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-100.png?mtime=1327284878" width="366" height="147" /></a>
 </div>
 
   3. Grid loading successful.  SQL connection showing on Principal instance for confirmation
@@ -116,7 +116,7 @@ The results
 A last step is performed for mirroring being removed from the principal database.  In this test case, the grid successfully loads even with mirroring not being configured on the database. However, taking the database offline does not check for the second instance in this case.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-101.png?mtime=1327285002"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-101.png?mtime=1327285002" width="624" height="34" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-101.png?mtime=1327285002"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-101.png?mtime=1327285002" width="624" height="34" /></a>
 </div>
 
 This confirms that the connection string, even with the Failover Partner configured, is database mirroring aware.  If the mirror is not configured, even with the Failover Partner set, the connection will persist to look to the primary data source.

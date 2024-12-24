@@ -36,7 +36,7 @@ FROM sysfiles;
 GO 
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sysfiles all columns.JPG?mtime=1324351775"><img alt="" src="/wp-content/uploads/users/grrlgeek/sysfiles all columns.JPG?mtime=1324351775" width="805" height="99" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sysfiles all columns.JPG?mtime=1324351775"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sysfiles all columns.JPG?mtime=1324351775" width="805" height="99" /></a>
 </div>
 
 Moving on, here is the query of sys.sysfiles. 
@@ -49,7 +49,7 @@ SELECT fileid, groupid, size, maxsize, growth, status, perf, name, filename
 FROM sys.sysfiles;
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sys.sysfiles all columns.JPG?mtime=1324351775"><img alt="" src="/wp-content/uploads/users/grrlgeek/sys.sysfiles all columns.JPG?mtime=1324351775" width="813" height="95" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sys.sysfiles all columns.JPG?mtime=1324351775"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sys.sysfiles all columns.JPG?mtime=1324351775" width="813" height="95" /></a>
 </div>
 
 This query's result is the same as the original virtual table. 
@@ -64,7 +64,7 @@ SELECT *
 FROM sys.database_files;
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sys.database_files all columns.JPG?mtime=1324351775"><img alt="" src="/wp-content/uploads/users/grrlgeek/sys.database_files all columns.JPG?mtime=1324351775" width="1093" height="118" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sys.database_files all columns.JPG?mtime=1324351775"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sys.database_files all columns.JPG?mtime=1324351775" width="1093" height="118" /></a>
 </div>
 
 There's an immediate difference here in the number of columns returned. The new view is much more comprehensive than the old table. 

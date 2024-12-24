@@ -44,7 +44,7 @@ In earlier public releases of SQL Server 2012 (Denali) and documentation and blo
 The views are useful but given columnstore indexing and the needs compared to row store indexing (clustered, nonclustered), the use is more informational and not based on maintenance as much other than space allocation.  This is part in thanks to columnstore and the xVelocity technology itself.  Eric Hanson authored a [Columnstore Index FAQ][4] on the wiki of Technet that also contains a very good query to return size in segments, dictionaries and partitioned information.  The output from Eric's query can be seen below on the columnstore indexes that were created from, "[Columnstore Index Basics][5]".
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-133.png?mtime=1334081259"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-133.png?mtime=1334081259" width="624" height="336" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-133.png?mtime=1334081259"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-133.png?mtime=1334081259" width="624" height="336" /></a>
 </div>
 
 **Relating segments and dictionaries**
@@ -57,7 +57,7 @@ select * from sys.column_store_segments
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-134.png?mtime=1334081261"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-134.png?mtime=1334081261" width="865" height="430" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-134.png?mtime=1334081261"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-134.png?mtime=1334081261" width="865" height="430" /></a>
 </div>
 
  
@@ -67,7 +67,7 @@ Reviewing the results, the on\_disk\_size typically draws attention right away.�
 It can also be seen from the top results from the dictionaries catalog view that each column_id relates back to the segements view to determine the actual number of segments a column contains.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-135.png?mtime=1334081262"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-135.png?mtime=1334081262" width="624" height="488" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-135.png?mtime=1334081262"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-135.png?mtime=1334081262" width="624" height="488" /></a>
 </div>
 
 In this case, column\_id 1 has 4 segments and each segment contains around a million rows.  Each segment in a columnstore index will contain up to a million rows.  Each segment can be identified by the column\_id + segment_id.
@@ -75,7 +75,7 @@ In this case, column\_id 1 has 4 segments and each segment contains around a mil
 The next part that holds value is the range values.  This was discussed earlier and is the method in which columnstore indexes are used to make them efficient for not allowing unwanted data to be pulled into memory.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-136.png?mtime=1334081262"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-136.png?mtime=1334081262" width="188" height="265" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-136.png?mtime=1334081262"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-136.png?mtime=1334081262" width="188" height="265" /></a>
 </div>
 
 In the above image, the range for column\_id 1 (column\_id 1 is the first 4 rows) is a minimum of 1 and a maximum of 10.  We can determine the actual column_id and the column name referred to by adding in the partitions view to locate the actual partition, segment and then column.
@@ -91,7 +91,7 @@ WHERE segs.COLUMN_ID = 1
  
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-137.png?mtime=1334081262"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-137.png?mtime=1334081262" width="217" height="144" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-137.png?mtime=1334081262"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-137.png?mtime=1334081262" width="217" height="144" /></a>
 </div>
 
  
@@ -118,7 +118,7 @@ WHERE idx.type_desc = 'NONCLUSTERED COLUMNSTORE'
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-138.png?mtime=1334081263"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-138.png?mtime=1334081263" width="624" height="92" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-138.png?mtime=1334081263"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-138.png?mtime=1334081263" width="624" height="92" /></a>
 </div>
 
  

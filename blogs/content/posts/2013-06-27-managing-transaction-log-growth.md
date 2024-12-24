@@ -38,7 +38,7 @@ These are just a few to look at.  The primary, and most important to think abou
 To perform an archive, the actions will be to grab rows based on an identifier, insert them to the archive location, and delete them from the source.  The flow of this is shown below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/loader_1.png?mtime=1372359868"><img alt="" src="/wp-content/uploads/blogs/All/loader_1.png?mtime=1372359868" width="408" height="516" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/loader_1.png?mtime=1372359868"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/loader_1.png?mtime=1372359868" width="408" height="516" /></a>
 </div>
 
 Again, the main objective to discuss is to manage the transaction log during this process.  To do that, options such as moving to SIMPLE recovery model or forcing transaction log backups to occur more often can be done to manage the transaction log usage.  For this, if log shipping is used, simply manipulating the schedule can be performed.  For example, if the backup occurs every 15 minutes, moving to every 5 minutes can be effective.  Once the process is performed and completed, move back to 15 minutes.
@@ -124,7 +124,7 @@ FROM [Watch]
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/loader_2.png?mtime=1372359869"><img alt="" src="/wp-content/uploads/blogs/All/loader_2.png?mtime=1372359869" width="624" height="365" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/loader_2.png?mtime=1372359869"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/loader_2.png?mtime=1372359869" width="624" height="365" /></a>
 </div>
 
 With this, we can see that the setup that was put in place to back the log up every minute, succeeded in the goals of maintaining the transaction log utilization and prevented the unwanted growth.

@@ -37,7 +37,7 @@ C:UserstkruegerAppDataRoamingMicrosoftWindowsStart MenuProgramsExpressionTester.
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-65.png?mtime=1323055267"><img src="/wp-content/uploads/blogs/DataMgmt/-65.png?mtime=1323055267" alt="" width="165" height="105" /></a>
+  <a href="/media/blogs/DataMgmt/-65.png?mtime=1323055267"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-65.png?mtime=1323055267" alt="" width="165" height="105" /></a>
 </div>
 
  
@@ -47,7 +47,7 @@ Expression Editor has all the same system variables and functions that are liste
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-66.png?mtime=1323055268"><img src="/wp-content/uploads/blogs/DataMgmt/-66.png?mtime=1323055268" alt="" width="624" height="460" /></a>
+  <a href="/media/blogs/DataMgmt/-66.png?mtime=1323055268"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-66.png?mtime=1323055268" alt="" width="624" height="460" /></a>
 </div>
 
  

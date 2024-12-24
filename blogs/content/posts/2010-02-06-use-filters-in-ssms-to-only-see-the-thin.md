@@ -51,25 +51,25 @@ go
 Now in SSMS you will see the following if you expand the tables folder
 
 <div>
-  <img src="/wp-content/uploads/blogs/DataMgmt//AllTables.PNG" alt="" title="" width="195" height="199" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//AllTables.PNG" alt="" title="" width="195" height="199" />
 </div>
 
 What if I only want to see the tables that belong to the Denis schema? Here is how you can setup the filter. Right click on the tables folder, select Filter and then Filter settings.
 
 <div>
-  <img src="/wp-content/uploads/blogs/DataMgmt//FilterSettings.PNG" alt="" title="" width="403" height="196" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//FilterSettings.PNG" alt="" title="" width="403" height="196" />
 </div>
 
 That will pop up a window that looks like the image below
 
 <div>
-  <img src="/wp-content/uploads/blogs/DataMgmt//Filters.png" alt="" title="" width="559" height="448" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//Filters.png" alt="" title="" width="559" height="448" />
 </div>
 
 For the Schema property select equals for the operator and type Denis as value. Click OK and now you will see the following when you navigate to the tables folder.
 
 <div>
-  <img src="/wp-content/uploads/blogs/DataMgmt//FilteredView.PNG" alt="" title="" width="187" height="146" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//FilteredView.PNG" alt="" title="" width="187" height="146" />
 </div>
 
 If you want to remove the filter, just right click on the folder, select Filter and then Remove Filter.
@@ -79,7 +79,7 @@ If you want to remove the filter, just right click on the folder, select Filter 
 If you work in a team and you created several tables that all start with Report then you can create a new filter and just show these objects. This way you don't need to see any tables that your team members created. Below is a screen shot of a filter like that.
 
 <div>
-  <img src="/wp-content/uploads/blogs/DataMgmt/NewSnip.PNG" alt="" title="" width="538" height="96" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NewSnip.PNG" alt="" title="" width="538" height="96" />
 </div>
 
 Another cool feature is that you can filter on Creation Date, this gives you the ability to filter all that old [Brownfield][1] stuff that nobody maintains anyway because if you change one thing it will break everything else 🙂

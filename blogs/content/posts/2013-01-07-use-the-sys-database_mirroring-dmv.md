@@ -88,8 +88,8 @@ Here are the different mirroring states and what it means, you can found this in
 
 Start using this dynamic management view to check the state of your mirrored databases. Also be aware that you can set thresholds, one way to set thresholds is by using the Database Mirroring Monitor. Thresholds can be found after clicking on the Warnings tab 
 
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/MirroringThresholds.PNG?mtime=1357579980" width="398" height="169" />][1]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/MirroringThresholds.PNG?mtime=1357579980" width="398" height="169" />][1]
 
 What is your preferred way of checking what mirroring state the databases are in?
 
- [1]: /wp-content/uploads/blogs/DataMgmt/Denis/MirroringThresholds.PNG?mtime=1357579980
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/MirroringThresholds.PNG?mtime=1357579980

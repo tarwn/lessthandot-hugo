@@ -20,7 +20,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/starterkits.jpg?mtime=1326552308"><img alt="" src="/wp-content/uploads/users/SQLDenis/starterkits.jpg?mtime=1326552308" width="400" height="501" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/starterkits.jpg?mtime=1326552308"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/starterkits.jpg?mtime=1326552308" width="400" height="501" /></a>
 </div>
 
 There are four Windows Phone starter kits available for download

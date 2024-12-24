@@ -45,7 +45,7 @@ And this is what you get when you run the administration panel in FF
 3.6
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/qnap/qnap1.png" alt="" title="" width="691" height="348" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/qnap/qnap1.png" alt="" title="" width="691" height="348" />
 </div>
 
 Not great. The funny things is is that the installation wizard works in FF3.6 but not the administration panel. 
@@ -55,7 +55,7 @@ So on to IE8 we go.
 And look how pretty this looks.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/qnap/qnap2.png" alt="" title="" width="779" height="589" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/qnap/qnap2.png" alt="" title="" width="779" height="589" />
 </div>
 
 And it&#8217;s not only pretty it also works amazingly quick. 
@@ -65,19 +65,19 @@ You have all the tools you would need at your disposal.
 You can see your disks and their status.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/qnap/qnap3.png" alt="" title="" width="757" height="415" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/qnap/qnap3.png" alt="" title="" width="757" height="415" />
 </div>
 
 System information.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/qnap/qnap4.png" alt="" title="" width="757" height="415" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/qnap/qnap4.png" alt="" title="" width="757" height="415" />
 </div>
 
 Resource monitor.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/qnap/qnap5.png" alt="" title="" width="763" height="536" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/qnap/qnap5.png" alt="" title="" width="763" height="536" />
 </div>
 
 And much, much more. Geek/nerd heaven.

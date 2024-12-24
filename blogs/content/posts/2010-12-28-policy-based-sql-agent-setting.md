@@ -83,13 +83,13 @@ EXECUTE master.dbo.xp_instance_regread N''HKEY_LOCAL_MACHINE'',
 SELECT @jobhistory_max_rows')
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/pbm_1.gif" alt="" title="" width="414" height="334" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/pbm_1.gif" alt="" title="" width="414" height="334" />
 </div>
 
 Click OK and then leave = as the operator and enter a value of 10 for this example setup.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/pbm_2.gif" alt="" title="" width="472" height="178" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/pbm_2.gif" alt="" title="" width="472" height="178" />
 </div>
 
 Click OK to save the Policy. This set of instructions created a policy and a condition that should be shown now under the Management„³Policy Management„³Policies and Conditions nodes in Object Explorer of SSMS.
@@ -103,7 +103,7 @@ To now test the policy, click the Evaluate button to the lower right of the wind
 We can see that the policy evaluation returned the actual value of 1000 while it was expecting 10.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/pbm_3.gif" alt="" title="" width="624" height="239" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/pbm_3.gif" alt="" title="" width="624" height="239" />
 </div>
 
 **Closing**

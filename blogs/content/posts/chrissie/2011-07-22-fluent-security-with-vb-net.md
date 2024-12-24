@@ -47,13 +47,13 @@ Do you see the first line of the HomeController configuration that says ignore? 
 When our users see this and click the about button/link.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity1.png?mtime=1311338511"><img alt="" src="/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity1.png?mtime=1311338511" width="204" height="132" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity1.png?mtime=1311338511"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity1.png?mtime=1311338511" width="204" height="132" /></a>
 </div>
 
 they will get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity2.png?mtime=1311338609"><img alt="" src="/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity2.png?mtime=1311338609" width="1031" height="365" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity2.png?mtime=1311338609"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/fluentsecurity/fluentsecurity2.png?mtime=1311338609" width="1031" height="365" /></a>
 </div>
 
 Neither are ideal situations but we now know what happens.

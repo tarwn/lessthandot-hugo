@@ -48,7 +48,7 @@ We will follow these steps while adding in a few catches and added details that 
 In the end, the solution shown in the following diagram will be achieved. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_01.gif" alt="" title="" width="602" height="380" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_01.gif" alt="" title="" width="602" height="380" />
 </div></p> 
 
 From the above diagram, you can see that three servers are involved. Server A acts as the principal as well as the publisher. 
@@ -81,7 +81,7 @@ On Server B, acting as our remote distributor, setup is required prior to config
 Using the wizard: right click Replication in the tree view in SSMS and select, configure Distribution...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_02.gif" alt="" title="" width="390" height="90" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_02.gif" alt="" title="" width="390" height="90" />
 </div>
 
 Setup steps included in the wizard will be as follows:
@@ -97,21 +97,21 @@ Setup steps included in the wizard will be as follows:
 Each step shown below ordered left to right
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_03.gif" alt="" title="" width="720" height="654" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_03.gif" alt="" title="" width="720" height="654" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_04.gif" alt="" title="" width="719" height="327" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_04.gif" alt="" title="" width="719" height="327" />
 </div></p> 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_05.gif" alt="" title="" width="504" height="307" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_05.gif" alt="" title="" width="504" height="307" />
 </div>
 
 **Move to the publisher now.**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_06.gif" alt="" title="" width="330" height="98" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_06.gif" alt="" title="" width="330" height="98" />
 </div>
 
 In the wizard:
@@ -129,19 +129,19 @@ In the wizard:
 These steps are shown in order below ordered left to right
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_07.gif" alt="" title="" width="695" height="640" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_07.gif" alt="" title="" width="695" height="640" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_08.gif" alt="" title="" width="698" height="318" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_08.gif" alt="" title="" width="698" height="318" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_09.gif" alt="" title="" width="709" height="638" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_09.gif" alt="" title="" width="709" height="638" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_10.gif" alt="" title="" width="356" height="320" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_10.gif" alt="" title="" width="356" height="320" />
 </div>
 
 Recap: At this point we have a distributor role on R2Distributor, Server B; and a publication role on XPS2008R2, Server A. 
@@ -149,13 +149,13 @@ Recap: At this point we have a distributor role on R2Distributor, Server B; and 
 To finish the replication setup, create a subscription to the publication on ONPNT_XPS, Server C. To do this, connect to the SQL Server in SSMS, right click the subscriptions and select New Subscriptions...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_11.gif" alt="" title="" width="361" height="132" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_11.gif" alt="" title="" width="361" height="132" />
 </div>
 
 Select XPS2008R2 (your own server name replaced here) as Publisher
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_12.gif" alt="" title="" width="498" height="238" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_12.gif" alt="" title="" width="498" height="238" />
 </div>
 
 Through the wizard, make the following selections.
@@ -170,11 +170,11 @@ Through the wizard, make the following selections.
 Each step shown below ordered left to right
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_13.gif" alt="" title="" width="727" height="662" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_13.gif" alt="" title="" width="727" height="662" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_14.gif" alt="" title="" width="732" height="332" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_14.gif" alt="" title="" width="732" height="332" />
 </div>
 
 We've successfully setup transactional replication at this point and can move to setting up the mirroring session. The mirror will exist between Server A (Replication Publisher) and Server B (Replication Distributor). To set mirroring up, refer to the following blog on [setting mirroring up with Developer Edition][1].
@@ -232,7 +232,7 @@ WHERE AddressID = 1
 Check the subscriber by running the same select. You should see the changes made to the same record. In the replication monitor we can also see the commands sent
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_15.gif" alt="" title="" width="607" height="249" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_15.gif" alt="" title="" width="607" height="249" />
 </div>
 
 Our next step it to test a complete failover of the mirror and then make this same test to ensure that replication also fails over as it is detected.
@@ -240,7 +240,7 @@ Our next step it to test a complete failover of the mirror and then make this sa
 Right click the AdventureWorks database on the Principal and select properties. Go to the mirroring page and click the Failover button
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_16.gif" alt="" title="" width="628" height="244" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_16.gif" alt="" title="" width="628" height="244" />
 </div>
 
 Click Yes to the warning on failover. The wizard screen will close when the failover is completed. 
@@ -248,7 +248,7 @@ Click Yes to the warning on failover. The wizard screen will close when the fail
 At this point replication is disconnected from the publisher on running commands. We can see this by looking at the replication monitor and seeing retry attempts
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_17.gif" alt="" title="" width="628" height="104" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_17.gif" alt="" title="" width="628" height="104" />
 </div>
 
 The default amount of time that is monitored for replication to failover is around 35 seconds. Once replication agents failover to the mirror set in the failover partner parameter, the agent status in the monitor will resume the running state.
@@ -271,7 +271,7 @@ SELECT AddressLine1 FROM person.Address WHERE AddressID = 1
 We see that the failover was successful and the value committed as, "1970 Napa Ct" and the distributor in the replication monitor shows the commands sent.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_18.gif" alt="" title="" width="628" height="218" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_repl/mirroring_replicaton_18.gif" alt="" title="" width="628" height="218" />
 </div>
 
 Once verified, fail the mirroring session back to the original state and test again.

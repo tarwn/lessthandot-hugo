@@ -132,7 +132,7 @@ As you can see the dynamic SQL query only uses 2 reads where the other solution 
 
 Here is an image of the execution plan for both queries.
 
-<img src="/wp-content/uploads/blogs/DataMgmt//Plan.PNG" alt="" title="" width="607" height="312" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//Plan.PNG" alt="" title="" width="607" height="312" />
 
 The execution plan show that the dynamic SQL is using a seek where the other query is using a scan
 
@@ -215,11 +215,11 @@ IF @col IS NOT NULL
 
 And then I ran a trace checking for SQL:StmtRecompile
 
-<img src="/wp-content/uploads/blogs/DataMgmt//Profiler.PNG" alt="" title="" width="388" height="193" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//Profiler.PNG" alt="" title="" width="388" height="193" />
 
 Here is the output from that trace
 
-<img src="/wp-content/uploads/blogs/DataMgmt//trace.PNG" alt="" title="" width="501" height="578" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//trace.PNG" alt="" title="" width="501" height="578" />
 
 **[/EDIT]**
 

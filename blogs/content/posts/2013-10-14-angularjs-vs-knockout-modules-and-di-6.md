@@ -6,7 +6,7 @@ date: 2013-10-14T14:06:00+00:00
 ID: 2171
 excerpt: "I'm reviewing Angular and Knockout to determine which would fit better for a variety of upcoming projects. The larger or more complex a project, the more important it is to be able to modularize the code. Modules provide organization, ensure script load&hellip;"
 url: /index.php/webdev/uidevelopment/angularjs-vs-knockout-modules-and-di-6/
-featured_image: /wp-content/uploads/2013/10/Javascript2.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2013/10/Javascript2.png
 views:
   - 25565
 rp4wp_auto_linked:

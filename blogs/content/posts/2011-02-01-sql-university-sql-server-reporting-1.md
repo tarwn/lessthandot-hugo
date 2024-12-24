@@ -24,7 +24,7 @@ categories:
 _SQL Server 2008 R2_ 
 
 <div class="image_block" align="left">
-  <a href="/wp-content/uploads/users/grrlgeek/sql-university-shield.png?mtime=1296100411"><img alt="" src="/wp-content/uploads/users/grrlgeek/sql-university-shield.png?mtime=1296100411" width="156" height="174" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sql-university-shield.png?mtime=1296100411"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sql-university-shield.png?mtime=1296100411" width="156" height="174" /></a>
 </div>
 
 Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a great blog project put together by Jorge Segarra ([Twitter][2] | [Blog][3]), and contributed to by many SQL professionals. If you aren't a student yet, head over to the website and get started! 
@@ -36,7 +36,7 @@ This semester, Professor Jes will be guiding you through Reporting Services admi
 When you install SQL Server Reporting Services, you will be able to access the most important and most common settings through the Configuration Manager. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/SSRSConfigMgr.JPG?mtime=1296100416"><img alt="" src="/wp-content/uploads/users/grrlgeek/SSRSConfigMgr.JPG?mtime=1296100416" width="974" height="735" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/SSRSConfigMgr.JPG?mtime=1296100416"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/SSRSConfigMgr.JPG?mtime=1296100416" width="974" height="735" /></a>
 </div>
 
 All of these settings, and many more, are stored in a series of XML configuration files. Understanding what is in these files can help you understand the SSRS architecture better, troubleshoot problems more in-depth, and customize your installations. 
@@ -80,25 +80,25 @@ Some of the settings you'll find here include:
 This is a great place to show an example of how to modify the config files. Let's use FileName. By default, it's ReportServerService_. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/ReportingServicesService Config.JPG?mtime=1296100414"><img alt="" src="/wp-content/uploads/users/grrlgeek/ReportingServicesService Config.JPG?mtime=1296100414" width="478" height="287" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ReportingServicesService Config.JPG?mtime=1296100414"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ReportingServicesService Config.JPG?mtime=1296100414" width="478" height="287" /></a>
 </div>
 
 My log file folder looks like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Config File Names A.JPG?mtime=1296100413"><img alt="" src="/wp-content/uploads/users/grrlgeek/Config File Names A.JPG?mtime=1296100413" width="400" height="229" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Config File Names A.JPG?mtime=1296100413"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Config File Names A.JPG?mtime=1296100413" width="400" height="229" /></a>
 </div>
 
 I change the name, save the file, and start the SSRS service: 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/ReportingServicesService Config B.JPG?mtime=1296100413"><img alt="" src="/wp-content/uploads/users/grrlgeek/ReportingServicesService Config B.JPG?mtime=1296100413" width="454" height="283" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ReportingServicesService Config B.JPG?mtime=1296100413"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ReportingServicesService Config B.JPG?mtime=1296100413" width="454" height="283" /></a>
 </div>
 
 And my log files are now named differently:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Config File Names B.JPG?mtime=1296100412"><img alt="" src="/wp-content/uploads/users/grrlgeek/Config File Names B.JPG?mtime=1296100412" width="389" height="250" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Config File Names B.JPG?mtime=1296100412"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Config File Names B.JPG?mtime=1296100412" width="389" height="250" /></a>
 </div>
 
 **RSSrvPolicy , RSMgrPolicy , and RSPreviewPolicy** 

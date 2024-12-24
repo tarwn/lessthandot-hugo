@@ -26,7 +26,7 @@ My philosophy on migrations is to make them as seamless as possible, so that whe
 
 LessThanDot is composed of 4 major components: the blogs (with over 2000 posts!), the wiki, the forums, and the middle bits that hold everything together and provide unified accounts (and then some more bits around the edges like SQLCop and Cooking). 
 
-[<img src="/wp-content/uploads/2014/01/LTDUmbrella1.png" alt="LTDUmbrella" width="553" height="148" class="aligncenter size-full wp-image-2300" srcset="/wp-content/uploads/2014/01/LTDUmbrella1.png 553w, /wp-content/uploads/2014/01/LTDUmbrella1-300x80.png 300w" sizes="(max-width: 553px) 100vw, 553px" />][1]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/LTDUmbrella1.png" alt="LTDUmbrella" width="553" height="148" class="aligncenter size-full wp-image-2300" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/LTDUmbrella1.png 553w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/LTDUmbrella1-300x80.png 300w" sizes="(max-width: 553px) 100vw, 553px" />][1]
 
 When I decided to finally bite the bullet and replace the blog engine (by popular request), I had three audiences, each with their own set of goals:
 
@@ -64,7 +64,7 @@ I'm pretty sure someone else did the original LessThanDot teeming work on B2Evol
 I started out the WordPress migration with a blank theme folder called "LessThanDot2009". There are a plethora of posts out there on creating a custom theme, but the one I liked walked through the creation of a theme in small steps, building it up one piece at a time. I followed along, using LessThanDot code snippets where the author was using bootstrap, until before I knew it I had most of our site put together. 
 
 <div id="attachment_2282" style="width: 310px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2014/01/WordpressProgress.png"><img src="/wp-content/uploads/2014/01/WordpressProgress-300x187.png" alt="WordPress Migration - The First Page" width="300" height="187" class="size-medium wp-image-2282" srcset="/wp-content/uploads/2014/01/WordpressProgress-300x187.png 300w, /wp-content/uploads/2014/01/WordpressProgress.png 800w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressProgress.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressProgress-300x187.png" alt="WordPress Migration - The First Page" width="300" height="187" class="size-medium wp-image-2282" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressProgress-300x187.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressProgress.png 800w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     WordPress Migration – The First Page
@@ -106,7 +106,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <p>
-  <a href="/wp-content/uploads/2014/01/login.png"><img src="/wp-content/uploads/2014/01/login.png" alt="login" width="439" height="229" class="aligncenter size-full wp-image-2295" srcset="/wp-content/uploads/2014/01/login.png 439w, /wp-content/uploads/2014/01/login-300x156.png 300w" sizes="(max-width: 439px) 100vw, 439px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/login.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/login.png" alt="login" width="439" height="229" class="aligncenter size-full wp-image-2295" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/login.png 439w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/login-300x156.png 300w" sizes="(max-width: 439px) 100vw, 439px" /></a>
 </p>
 
 <p>
@@ -150,7 +150,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <div id="attachment_2285" style="width: 682px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2014/01/WordpressUnicode.png"><img src="/wp-content/uploads/2014/01/WordpressUnicode.png" alt="B2Evo had some mix of latin, unicode, and MS Word" width="672" height="192" class="size-full wp-image-2285" srcset="/wp-content/uploads/2014/01/WordpressUnicode.png 672w, /wp-content/uploads/2014/01/WordpressUnicode-300x85.png 300w" sizes="(max-width: 672px) 100vw, 672px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressUnicode.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressUnicode.png" alt="B2Evo had some mix of latin, unicode, and MS Word" width="672" height="192" class="size-full wp-image-2285" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressUnicode.png 672w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/WordpressUnicode-300x85.png 300w" sizes="(max-width: 672px) 100vw, 672px" /></a>
   
   <p class="wp-caption-text">
     B2Evo had some mix of latin, unicode, and MS Word
@@ -162,7 +162,7 @@ I quickly started branching out as I followed the tutorial, and before long I re
 </p>
 
 <div id="attachment_2287" style="width: 310px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2014/01/wordpress_import.png"><img src="/wp-content/uploads/2014/01/wordpress_import-300x100.png" alt="Importing into WordPress" width="300" height="100" class="size-medium wp-image-2287" srcset="/wp-content/uploads/2014/01/wordpress_import-300x100.png 300w, /wp-content/uploads/2014/01/wordpress_import.png 728w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress_import.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress_import-300x100.png" alt="Importing into WordPress" width="300" height="100" class="size-medium wp-image-2287" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress_import-300x100.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress_import.png 728w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     Importing into WordPress
@@ -246,7 +246,7 @@ endforeach;
 </p>
 
 <div id="attachment_2289" style="width: 310px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2014/01/wordpress-spam.png"><img src="/wp-content/uploads/2014/01/wordpress-spam-300x55.png" alt="Time to empty out the spam for the day..." width="300" height="55" class="size-medium wp-image-2289" srcset="/wp-content/uploads/2014/01/wordpress-spam-300x55.png 300w, /wp-content/uploads/2014/01/wordpress-spam.png 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress-spam.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress-spam-300x55.png" alt="Time to empty out the spam for the day..." width="300" height="55" class="size-medium wp-image-2289" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress-spam-300x55.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/wordpress-spam.png 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     Time to empty out the spam for the day...
@@ -269,4 +269,4 @@ endforeach;
   Overall, the move to WordPress seems to have been a good one. WordPress as a platform has a heavy focus on customization and extendability, with clear documentation on the routines and hooks available and a huge community of theme and plugin authors. Though I found their support forums more frustrating than helpful, I often was able to find the information I needed elsewhere on the internet. The focus of the platform helped make our migration easier, and I think will provide a good platform for future changes as we continue to evolve the site and how we produce content.
 </p>
 
- [1]: /wp-content/uploads/2014/01/LTDUmbrella1.png
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/01/LTDUmbrella1.png

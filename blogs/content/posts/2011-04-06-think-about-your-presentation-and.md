@@ -21,7 +21,7 @@ One of my new friends that I was fortunate to make while attending the MVP Summi
 Dan's reply to my tweet:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-24.png?mtime=1302094637"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-24.png?mtime=1302094637" width="312" height="82" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-24.png?mtime=1302094637"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-24.png?mtime=1302094637" width="312" height="82" /></a>
 </div>
 
 This is something I had never considered and I will be very honest in saying that.  After reading this tweet, it hit me that I really should have thought about this a long time ago and been very proactive about it. 
@@ -31,13 +31,13 @@ What Dan mentions in the tweet is the labels we can turn on for precedence const
 Simply stated; turning precedence labels on will show precedence as success, failure and completion will be written next to the precedence connections.  (See below)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-25.png?mtime=1302094638"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-25.png?mtime=1302094638" width="759" height="440" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-25.png?mtime=1302094638"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-25.png?mtime=1302094638" width="759" height="440" /></a>
 </div>
 
 So set this option on go to Tools a Options and select Business Intelligence Designers.  Tick the Accessibility option for "Show precedence constraints labels.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-26.png?mtime=1302094638"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-26.png?mtime=1302094638" width="821" height="678" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-26.png?mtime=1302094638"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-26.png?mtime=1302094638" width="821" height="678" /></a>
 </div>
 
 Now when the package executes, the tasks that run and the flow will be easier to distinguish when green or red may not be accessible. 

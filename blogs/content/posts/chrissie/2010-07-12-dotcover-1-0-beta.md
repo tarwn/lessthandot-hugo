@@ -54,13 +54,13 @@ First I installed the new version of Resharper, namely [version 5.1][5] and then
 First of all we run our test without coverage.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/dotCover/dotcover1.png" alt="" title="" width="452" height="732" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/dotCover/dotcover1.png" alt="" title="" width="452" height="732" />
 </div>
 
 As you can see, we now have 2 tabs in the bottom of our Unit test sessions window, namely Output and Coverage. Output is empty because all the tests passed and Coverage is empty because we need to tell it to do coverage. But as you can see at the top we now also have an extra button, namely the button with the dotCover logo on it. If we click this then the Coverage tab will be filled.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/dotCover/dotcover2.png" alt="" title="" width="725" height="732" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/dotCover/dotcover2.png" alt="" title="" width="725" height="732" />
 </div>
 
 As an example, I ran the tests for one class (not a very good idea but it was just to show test things and get a nice screenshot). As you can see, it will show the covered code in green and the not covered code in pink.
@@ -68,7 +68,7 @@ As an example, I ran the tests for one class (not a very good idea but it was ju
 It will also show this in your code. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/dotCover/dotcover3.png" alt="" title="" width="539" height="324" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/dotCover/dotcover3.png" alt="" title="" width="539" height="324" />
 </div>
 
 You can thus easily see which lines you failed to test.

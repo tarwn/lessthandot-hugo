@@ -25,19 +25,19 @@ My first attempt was just for android 3.2 and above, but I changed that today to
 Here are the screen shots.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/screenshot1.png?mtime=1325250215"><img alt="" src="/wp-content/uploads/users/chrissie1/android/screenshot1.png?mtime=1325250215" width="1280" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot1.png?mtime=1325250215"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot1.png?mtime=1325250215" width="1280" height="800" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/screenshot2.png?mtime=1325250233"><img alt="" src="/wp-content/uploads/users/chrissie1/android/screenshot2.png?mtime=1325250233" width="1280" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot2.png?mtime=1325250233"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot2.png?mtime=1325250233" width="1280" height="800" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/screenshot3.png?mtime=1325250251"><img alt="" src="/wp-content/uploads/users/chrissie1/android/screenshot3.png?mtime=1325250251" width="480" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot3.png?mtime=1325250251"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot3.png?mtime=1325250251" width="480" height="800" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/screenshot4.png?mtime=1325250268"><img alt="" src="/wp-content/uploads/users/chrissie1/android/screenshot4.png?mtime=1325250268" width="480" height="800" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot4.png?mtime=1325250268"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/screenshot4.png?mtime=1325250268" width="480" height="800" /></a>
 </div>
 
 Have fun.

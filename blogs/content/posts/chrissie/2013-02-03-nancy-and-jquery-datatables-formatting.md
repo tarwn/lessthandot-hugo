@@ -25,7 +25,7 @@ tags:
 This should be the result if everything goes well, which it never does from the first time, because Murphy is pairing with us.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancydatatables2.png?mtime=1359882239"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancydatatables2.png?mtime=1359882239" width="910" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancydatatables2.png?mtime=1359882239"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancydatatables2.png?mtime=1359882239" width="910" height="423" /></a>
 </div>
 
 Isn&#8217;t it purdy?
@@ -74,7 +74,7 @@ My first attempt was this.
                         $(nRow).css('color', 'white');
                     }
                 }```<div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancydatatables3.png?mtime=1359883342"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancydatatables3.png?mtime=1359883342" width="910" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancydatatables3.png?mtime=1359883342"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancydatatables3.png?mtime=1359883342" width="910" height="423" /></a>
 </div>
 
 And that is not the desired result because someone is overriding my nice formatting with their own on a td level, bad, bad people.

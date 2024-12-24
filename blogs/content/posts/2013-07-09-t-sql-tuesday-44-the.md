@@ -20,7 +20,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  <a href="http://www.sqlballs.com/2013/07/t-sql-tuesday-44-second-chance.html"><img style="float: left; margin-top: 0px; margin-bottom: 0px; margin-left: 10px; margin-right: 10px;" src="/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
+  <a href="http://www.sqlballs.com/2013/07/t-sql-tuesday-44-second-chance.html"><img style="float: left; margin-top: 0px; margin-bottom: 0px; margin-left: 10px; margin-right: 10px;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
 </p>
 
 <p style="text-align: justify;">

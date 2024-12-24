@@ -29,7 +29,7 @@ tags:
 This past weekend I traveled to Iowa City to hold a session on SSIS basics. The drive was worth it (even the hours looking at the back of a semi while the highway was at a dead stop). My session went extremely well and the group that attended the session was interactive and we all had a great time together. Interactive groups always make sessions more enjoyable. Ask questions and give your own experiences! Even the speakers gain more from speaking when the group gets into it. There were some takeaways of my own that I will write up based on some questions and promises to the group (yes, I haven't forgotten). I hope to have those posted very soon. One was the baseline collection that I have mentioned over the past few weeks. This was based off a blog series that I discussed on collecting and making baselines a must with your SQL Server environments. I'm writing a new series of packages to handle this in a friendly and portable upload for everyone and hope to have it done soon. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/applause.gif" alt="" title="" width="176" height="133" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/applause.gif" alt="" title="" width="176" height="133" align="left" />
 </div>
 
 I'd like to single out the team that organized East Iowa SQL Saturday. If the measure of success is measured from the people reviewing the actions of others, then I'd like to say, the East Iowa SQL Saturday team is nothing short of a very successful group of leaders and organizers. One thing that really stood out to me was the time allocated per session. My session alone was a revamp of a user group session. We know that user group meetings run hours so it was difficult but doable to make this session shrink to the normal SQL Saturday 45-50 minutes times. What the team did for this SQL Saturday was allocate an hour and fifteen minutes per session though. That was a great change and I heard from other speakers that they also thought it was a really good time to be given. I'd like to thank them personally for the excellent job in organizing and changing it up to make it that much better.
@@ -41,7 +41,7 @@ This SQL Saturday also played out a WIT (Women in Technology) lunch panel. The s
 **Final note on [SQL Saturday][22] Events** 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/blogtweetspeak.png" alt="" title="" width="135" height="467" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/blogtweetspeak.png" alt="" title="" width="135" height="467" align="left" />
 </div>
 
 Weekends are a time that many spend with friends and family or relaxing by doing the things we simply work to be able to do. We recap the long weeks that we have at work, daily schedules and laugh about the events that we all enjoy so much with others. Needless to say, work typically isn't part of a normal weekend outside of a yard that has grass growing out of control or weeds for flower beds more so than flowers. This past weekend I traveled to Iowa City for the second East Iowa SQL Saturday to hold a session on SSIS. You may think that this sounds like work. In fact, it is the furthest thing from work. Speakers, organizers and volunteers alike do not look at putting our energy into events like SQL Saturday as work at all. See, the SQL Community is most of our friends and family. We cherish these events and look forward to giving all that we have back with them.

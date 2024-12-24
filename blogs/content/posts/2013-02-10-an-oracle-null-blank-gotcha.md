@@ -116,7 +116,7 @@ SELECT * FROM TestNull;
 Here is what you get
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleOutput.PNG?mtime=1360532250"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleOutput.PNG?mtime=1360532250" width="290" height="229" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleOutput.PNG?mtime=1360532250"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/OracleOutput.PNG?mtime=1360532250" width="290" height="229" /></a>
 </div>
 
 As you can see when inserting NULL or a blank into a char column into a table, it does NOT get padded like it did with the variable

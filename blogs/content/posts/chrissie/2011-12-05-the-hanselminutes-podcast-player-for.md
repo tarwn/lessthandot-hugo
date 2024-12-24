@@ -27,13 +27,13 @@ What does the application do for now.
 It gets a list of all podcasts when you click on the refresh list button.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer1.png?mtime=1323122822"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer1.png?mtime=1323122822" width="1070" height="669" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer1.png?mtime=1323122822"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer1.png?mtime=1323122822" width="1070" height="669" /></a>
 </div>
 
 When you then select a podcast and click play it will show you which title you just selected and you can also pause an stop play. Simple really.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer2.png?mtime=1323122840"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer2.png?mtime=1323122840" width="1070" height="669" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer2.png?mtime=1323122840"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer2.png?mtime=1323122840" width="1070" height="669" /></a>
 </div>
 
 The mp3 is streamed so for now you need an internet connection to make this work.

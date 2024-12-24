@@ -30,7 +30,7 @@ This article demonstrates a firm grasp of the concepts that Jonathan goes over i
 Recently a bug in Merge Replication on a specific version and build was found.  The bug revolves around the COM based interface for resolving conflicts with an article in a merge replication publication.   The exact symptoms occurred when Service Pack 3 was applied to SQL Server 2008. Packaged within SP3 for SQL Server 2008 was the COM interface for Merge Replication file, replrec.dll.  This file is the interface that is utilized when the conflict resolution event occurs.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-118.png?mtime=1331005008"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-118.png?mtime=1331005008" width="624" height="65" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-118.png?mtime=1331005008"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-118.png?mtime=1331005008" width="624" height="65" /></a>
 </div>
 
 COM based conflict resolver errors
@@ -58,7 +58,7 @@ In order to review the replrec.dll, the follwing steps must be performed to buil
 For further verification that the replrec.dll was indeed being utilized fully for the interface and the conflict resolution, Process Monitor was used while loading steps from the resolver and the backend replication processing in replmerg.exe.  The following results were observed and recorded.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-119.png?mtime=1331005010"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-119.png?mtime=1331005010" width="897" height="610" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-119.png?mtime=1331005010"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-119.png?mtime=1331005010" width="897" height="610" /></a>
 </div>
 
 The SQLConflictResolver.dll is the conflict resolver itself but we can see the replrec.dll it referrred to by replmerg.exe to complete the interface process.
@@ -96,11 +96,11 @@ The SetColumnStatus method is shown below.
 Using a text file comparison tool, the following shows the findings of the missing method in the SP3 replrec.dll and the previous replrec.dll
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-120.png?mtime=1331005012"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-120.png?mtime=1331005012" width="890" height="445" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-120.png?mtime=1331005012"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-120.png?mtime=1331005012" width="890" height="445" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-121.png?mtime=1331005012"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-121.png?mtime=1331005012" width="898" height="436" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-121.png?mtime=1331005012"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-121.png?mtime=1331005012" width="898" height="436" /></a>
 </div>
 
 This results in the call in the logical COM based resolver SQL ConclictResolver.DLL at
@@ -118,7 +118,7 @@ Testing the SQL Server by applying SP3 and then replacing the replrec.dll with t
 As shown below in steps where a subscription was synchronizing successfully, SP3 was applied, the subscription forced the Buffer too small error, the replrec.dll was back dated and then the error was resolved.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-122.png?mtime=1331005013"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-122.png?mtime=1331005013" width="624" height="136" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-122.png?mtime=1331005013"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-122.png?mtime=1331005013" width="624" height="136" /></a>
 </div>
 
 **Conclusion**

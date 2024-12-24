@@ -29,7 +29,7 @@ tags:
 ---
 This is a review of [The Well-Grounded Java Developer, Vital techniques of Java 7 and polyglot programming][1]. Written by Benjamin J. Evans and Martijn Verburg. The book was published in July, 2012 and it contains 496 pages
 
-[<img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/Denis/evans_cover150.jpg?mtime=1357748948" width="150" height="188" style="float:left;margin:0 5px 0 0;" />][2]Right from the start I want to say that this is an excellent book and I highly recommend it. One thing you do need to be aware about is that in order to use this book you need to know Java. If you don't know Java then this is not the book for you. This book is all about bringing you to the next level as a Java developer by showing you how to do continuous integration, dependency injection, testing, performance tuning, and more.
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/evans_cover150.jpg?mtime=1357748948" width="150" height="188" style="float:left;margin:0 5px 0 0;" />][2]Right from the start I want to say that this is an excellent book and I highly recommend it. One thing you do need to be aware about is that in order to use this book you need to know Java. If you don't know Java then this is not the book for you. This book is all about bringing you to the next level as a Java developer by showing you how to do continuous integration, dependency injection, testing, performance tuning, and more.
   
 This book even shows you how to use different languages that run on the JVM. The book is written in a easy and concise style, everything is very clear. I also love the annotations which are sprinkled throughout the book, they give some nice background information. While the chapters on Groovy, Scala and Clojure are not a complete reference for the language, they do provide enough material to form a nice foundation, now you can further explore the language on your own.
 
@@ -306,6 +306,6 @@ Future concurrency trends
 New directions in the JVM
 
  [1]: http://www.amazon.com/gp/product/1617290068/ref=as_li_ss_tl?ie=UTF8&tag=sql08-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1617290068
- [2]: /wp-content/uploads/blogs/EnterpriseDev/Denis/evans_cover150.jpg?mtime=1357748948
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Denis/evans_cover150.jpg?mtime=1357748948
  [3]: http://www.manning.com/evans/TWGJD_sample_ch01.pdf
  [4]: http://www.manning.com/evans/TWGJD_sample_ch04.pdf

@@ -29,13 +29,13 @@ You can see what it did with doing <code class="codespan">notepad $profile</code
 And after a restart of Visual studio it just works.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/poshgit/poshgit1.png?mtime=1328164943"><img alt="" src="/wp-content/uploads/users/chrissie1/poshgit/poshgit1.png?mtime=1328164943" width="694" height="152" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit1.png?mtime=1328164943"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit1.png?mtime=1328164943" width="694" height="152" /></a>
 </div>
 
 And even tab-completion now works for git. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953"><img alt="" src="/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953" width="739" height="135" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit2.png?mtime=1328164953" width="739" height="135" /></a>
 </div>
 
 The only thing to do now is to change the default colorscheme of posh-git to something that is better for a white background. But I hear from Keith Dalby that that should not be a problem and that he already has one. 
@@ -137,7 +137,7 @@ BeforeText                = ' ['
 And this is what it looks like.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/poshgit/poshgit3.png?mtime=1328168216"><img alt="" src="/wp-content/uploads/users/chrissie1/poshgit/poshgit3.png?mtime=1328168216" width="733" height="215" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit3.png?mtime=1328168216"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/poshgit/poshgit3.png?mtime=1328168216" width="733" height="215" /></a>
 </div>
 
  [1]: http://nuget.codeplex.com/

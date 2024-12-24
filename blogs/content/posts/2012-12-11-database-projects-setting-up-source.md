@@ -56,25 +56,25 @@ Again as a DBA I did not know what Source Control Provider to choose, I worked w
 Launch the installer, accept the license agreement and hit Install:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup1.png?mtime=1355235876"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup1.png?mtime=1355235876" width="250" height="194" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup1.png?mtime=1355235876"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup1.png?mtime=1355235876" width="250" height="194" /></a>
 </div>
 
 Off course you have to allow the program to install software:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup2.png?mtime=1355235894"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup2.png?mtime=1355235894" width="232" height="121" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup2.png?mtime=1355235894"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup2.png?mtime=1355235894" width="232" height="121" /></a>
 </div>
 
 Et voila, the setup is finished:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup3.png?mtime=1355236334"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup3.png?mtime=1355236334" width="250" height="194" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup3.png?mtime=1355236334"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup3.png?mtime=1355236334" width="250" height="194" /></a>
 </div>
 
 When you open SQL Server Data Tools and open the Options pane in the Tools menu you should see that AnkhSVN – Subversion Support for Visual Studio is selected as the Current Source Control plug in, if not you can select it from the list:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup4.png?mtime=1355235963"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup4.png?mtime=1355235963" width="373" height="215" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup4.png?mtime=1355235963"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DBPSetup4.png?mtime=1355235963" width="373" height="215" /></a>
 </div>
 
 Now that we have a Source Control provider we can get started with our database project but this will be the subject of my next post.

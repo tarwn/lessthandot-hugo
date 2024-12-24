@@ -31,19 +31,19 @@ To be honest, this line was kind of cryptic to me.
 So after some searching I found it to be this. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby1.png?mtime=1311420431"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby1.png?mtime=1311420431" width="234" height="188" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby1.png?mtime=1311420431"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby1.png?mtime=1311420431" width="234" height="188" /></a>
 </div>
 
 And it looks like a commandline dude.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby2.png?mtime=1311420441"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby2.png?mtime=1311420441" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby2.png?mtime=1311420441"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby2.png?mtime=1311420441" width="707" height="423" /></a>
 </div>
 
 And yes hello world also works.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby3.png?mtime=1311420586"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby3.png?mtime=1311420586" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby3.png?mtime=1311420586"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby3.png?mtime=1311420586" width="707" height="423" /></a>
 </div>
 
 And as you can see it also shows me the return value.
@@ -53,27 +53,27 @@ All the rest you can see on the [Ruby in twenty minutes][4] website but I saved 
 And then I found that Rubymine also has this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby4.png?mtime=1311421491"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby4.png?mtime=1311421491" width="368" height="430" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby4.png?mtime=1311421491"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby4.png?mtime=1311421491" width="368" height="430" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby5.png?mtime=1311421502"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby5.png?mtime=1311421502" width="1035" height="762" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby5.png?mtime=1311421502"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby5.png?mtime=1311421502" width="1035" height="762" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby6.png?mtime=1311421513"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby6.png?mtime=1311421513" width="1035" height="762" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby6.png?mtime=1311421513"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby6.png?mtime=1311421513" width="1035" height="762" /></a>
 </div>
 
 And apparently you can also do this in the command prompt. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby8.png?mtime=1311425868"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby8.png?mtime=1311425868" width="418" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby8.png?mtime=1311425868"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby8.png?mtime=1311425868" width="418" height="74" /></a>
 </div>
 
 Just type irb and the command prompt changes.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby7.png?mtime=1311425705"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby7.png?mtime=1311425705" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby7.png?mtime=1311425705"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby7.png?mtime=1311425705" width="707" height="423" /></a>
 </div>
 
 ## Conclusion

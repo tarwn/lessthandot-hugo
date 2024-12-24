@@ -18,7 +18,7 @@ tags:
 I upgraded to VS2010 a few weeks ago and everything went pretty OK. Until today. Today I wanted to add another report, which was no big deal. Making the report is the same as in VS2008, no improvements there. And then I tried to run the report. And all was not so well. I got this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Reportviewer/Reportviewer2008.png" alt="" title="" width="467" height="475" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Reportviewer/Reportviewer2008.png" alt="" title="" width="467" height="475" />
 </div>
 
 With the error message being.
@@ -30,7 +30,7 @@ Apparently VS2010 makes its reports in the SSRS 2008 format which the VS2008 rep
 As you can see I have both versions on my system. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Reportviewer/Reportviewer20082.png" alt="" title="" width="561" height="446" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Reportviewer/Reportviewer20082.png" alt="" title="" width="561" height="446" />
 </div>
 
 I deleted the old one and added the new reference to my project.
@@ -38,7 +38,7 @@ I deleted the old one and added the new reference to my project.
 And now the reportviewer just works.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Reportviewer/Reportviewer20083.png" alt="" title="" width="392" height="475" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Reportviewer/Reportviewer20083.png" alt="" title="" width="392" height="475" />
 </div>
 
 I guess you&#8217;ll have to trust me on this ;-).

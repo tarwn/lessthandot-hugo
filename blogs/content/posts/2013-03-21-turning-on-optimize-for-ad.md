@@ -53,19 +53,19 @@ You do not have permission to run the RECONFIGURE statement.
 Here is how you have to do it. From the dashboard click on _DB Parameter Groups_. Click on Create DB Parameter Group, pick the version of SQL Server and fill in the text boxes. Here is what it looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup1.PNG?mtime=1363879041"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup1.PNG?mtime=1363879041" width="824" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup1.PNG?mtime=1363879041"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup1.PNG?mtime=1363879041" width="824" height="207" /></a>
 </div>
 
 Check the DB Parameter Group you just created and click on Edit Parameters
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup2.PNG?mtime=1363879237"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup2.PNG?mtime=1363879237" width="740" height="180" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup2.PNG?mtime=1363879237"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup2.PNG?mtime=1363879237" width="740" height="180" /></a>
 </div>
 
 You will see a screen like this pop up
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup3.PNG?mtime=1363879348"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup3.PNG?mtime=1363879348" width="617" height="529" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup3.PNG?mtime=1363879348"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup3.PNG?mtime=1363879348" width="617" height="529" /></a>
 </div>
 
 Modify the ones that you are interested in and click Save Changes
@@ -73,7 +73,7 @@ Modify the ones that you are interested in and click Save Changes
 Click on DB Instances, Click on the Instance Actions dropdown 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526" width="357" height="225" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526" width="357" height="225" /></a>
 </div>
 
 Select Modify from this dropdown
@@ -81,7 +81,7 @@ Select Modify from this dropdown
 You will see a screen like this
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup5.PNG?mtime=1363879698"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup5.PNG?mtime=1363879698" width="654" height="387" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup5.PNG?mtime=1363879698"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup5.PNG?mtime=1363879698" width="654" height="387" /></a>
 </div>
 
 In the Parameter Group dropdown, pick the Parameter Group you just created, hit Continue and then Modify DB Instance.
@@ -91,7 +91,7 @@ In order for this to take effect, you need to reboot your instance
 Click on DB Instances, click on the Instance Actions dropdown 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526" width="357" height="225" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup4.PNG?mtime=1363879526" width="357" height="225" /></a>
 </div>
 
 Select reboot from this dropdown
@@ -99,7 +99,7 @@ Select reboot from this dropdown
 Once the instance is available again, connect from SSMS, right click on the Server, select Properties and click on the Advanced page. It should now match what you have edited in the DB Parameters Group
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup6.PNG?mtime=1363880116"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup6.PNG?mtime=1363880116" width="474" height="335" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup6.PNG?mtime=1363880116"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBParameterGroup6.PNG?mtime=1363880116" width="474" height="335" /></a>
 </div>
 
 That is it for this post, as you can see it is pretty simple to do

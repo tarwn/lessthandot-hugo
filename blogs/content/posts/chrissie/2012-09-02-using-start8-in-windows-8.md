@@ -22,13 +22,13 @@ So why install start8.
 You get the startbutton back. And you can make it look like the win7 menu.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/start8/start8.png?mtime=1346574144"><img alt="" src="/wp-content/uploads/users/chrissie1/start8/start8.png?mtime=1346574144" width="412" height="530" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/start8/start8.png?mtime=1346574144"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/start8/start8.png?mtime=1346574144" width="412" height="530" /></a>
 </div>
 
 but I can also make it look like the win8 startscreen.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/start8/start82.png?mtime=1346574380"><img alt="" src="/wp-content/uploads/users/chrissie1/start8/start82.png?mtime=1346574380" width="942" height="634" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/start8/start82.png?mtime=1346574380"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/start8/start82.png?mtime=1346574380" width="942" height="634" /></a>
 </div>
 
 and then there is the start to desktop feature which starts windows 8 directly to the desktop and avoids you seeing the startmenu.

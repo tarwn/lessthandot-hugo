@@ -22,56 +22,56 @@ I felt the need to write a VS2010 Extension. And I decided NArrange needed some 
 So I started by downloading the [VS2010 SDK][2]. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/extension5.png" alt="" title="" width="382" height="84" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/extension5.png" alt="" title="" width="382" height="84" />
 </div>
 
 This adds a category to our new project dialog and it adds several new templates to choose from in that category.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension1.png" alt="" title="" width="515" height="468" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension1.png" alt="" title="" width="515" height="468" />
 </div>
 
 I went for the Visual studio Package and named it NArrangeExtension. And now it&#8217;s time to follow the wizard.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension2.png" alt="" title="" width="955" height="660" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension2.png" alt="" title="" width="955" height="660" />
 </div>
 
 Then it is just being friendly. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension3.png" alt="" title="" width="516" height="394" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension3.png" alt="" title="" width="516" height="394" />
 </div>
 
 I choose to make it Visual Basic of course (why would I go for less?). 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension4.png" alt="" title="" width="516" height="394" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension4.png" alt="" title="" width="516" height="394" />
 </div>
 
 I did not fill in any information since I know what I&#8217;m doing.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension5.png" alt="" title="" width="516" 
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension5.png" alt="" title="" width="516" 
 height="394" />
 </div>
 
 I wanted to make a menu so I choose that.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension6.png" alt="" title="" width="516" height="394" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension6.png" alt="" title="" width="516" height="394" />
 </div>
 
 I changed the command name and Id so they would me meaningful to me and the rest of the world.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension7.png" alt="" title="" width="516" height="394" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension7.png" alt="" title="" width="516" height="394" />
 </div>
 
 And I choose to create an integration test project and unit test project because it sounds cool, but I have not yet used them.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension8.png" alt="" title="" width="516" height="394" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension8.png" alt="" title="" width="516" height="394" />
 </div>
 
 Now on to the more important bits. The programming. Let me say that documentation is not easy to find, but it is out there in some form or the other. 
@@ -116,7 +116,7 @@ If you run the Extension it will magically open a Visual studio window and it wi
 You then open a solution and right click on a project.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension9.png" alt="" title="" width="440" height="317" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension9.png" alt="" title="" width="440" height="317" />
 </div>
 
 IT WORKS!

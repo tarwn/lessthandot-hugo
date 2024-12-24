@@ -23,7 +23,7 @@ Anyway, for me the webcamps started on saturday when we had diner with Scott, Dr
 And here is a very bad picture of that night.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webcamp.png?mtime=1295897751"><img alt="" src="/wp-content/uploads/users/chrissie1/webcamp.png?mtime=1295897751" width="389" height="519" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webcamp.png?mtime=1295897751"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webcamp.png?mtime=1295897751" width="389" height="519" /></a>
 </div>
 
 I was glad to be a part of that evening. 

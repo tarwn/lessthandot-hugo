@@ -29,7 +29,7 @@ Well, I was free to decide, continue with SQL Server like the 12 years before or
 I gave it some thought, looked at the pros and cons and decided to go for it.
 
 <div class="image_block">
-  <a href="http://www.flickr.com/photos/simonk/4794640288/in/photolist-8iFMvS-8K1sP8-9GAiNZ-bPx25B-8TfF2B-asUwcB-asXa7A-asUwxR-asUvwX-asX92Y-asX9gJ-asUwFP-8QHDjD-8QHDjx-aBfrCB-7XhCeU-asX9C5-asX8T9-98Tq5c-bFtGiz-cW9GVh-cW9E4U-cWHzvU-cWbw17-cWJTp1-cW9EoQ-cWJ9nS-cWbvKQ-d78EiG-d78EoG-cWbv5G-cWJZmA-cW9Feq-fkpmvK-8CR1Hi-bEetC3-bT9dGv-bT9dEx-bT9dBt-bEetxu-bEetvL-bEetz1-bT9duP-b7CwFT-b7CwyR-bT9diz-bEetiE-bT9dfP-bT9dsB-bEetm9-bT9dqZ/lightbox/"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Axel/CarreerChange.jpg?mtime=1378996829" width="500" height="374" /></a>
+  <a href="http://www.flickr.com/photos/simonk/4794640288/in/photolist-8iFMvS-8K1sP8-9GAiNZ-bPx25B-8TfF2B-asUwcB-asXa7A-asUwxR-asUvwX-asX92Y-asX9gJ-asUwFP-8QHDjD-8QHDjx-aBfrCB-7XhCeU-asX9C5-asX8T9-98Tq5c-bFtGiz-cW9GVh-cW9E4U-cWHzvU-cWbw17-cWJTp1-cW9EoQ-cWJ9nS-cWbvKQ-d78EiG-d78EoG-cWbv5G-cWJZmA-cW9Feq-fkpmvK-8CR1Hi-bEetC3-bT9dGv-bT9dEx-bT9dBt-bEetxu-bEetvL-bEetz1-bT9duP-b7CwFT-b7CwyR-bT9diz-bEetiE-bT9dfP-bT9dsB-bEetm9-bT9dqZ/lightbox/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Axel/CarreerChange.jpg?mtime=1378996829" width="500" height="374" /></a>
 </div>
 
 # Why?

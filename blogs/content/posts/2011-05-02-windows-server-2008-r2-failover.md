@@ -18,7 +18,7 @@ categories:
 I recently took a three-day class on [Windows Server 2008 R2: Deploying and Managing Failover Clustering][1]. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/blackboardteacher.JPG?mtime=1304295364"><img alt="" src="/wp-content/uploads/users/grrlgeek/blackboardteacher.JPG?mtime=1304295364" width="309" height="256" title="Class Is In Session" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/blackboardteacher.JPG?mtime=1304295364"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/blackboardteacher.JPG?mtime=1304295364" width="309" height="256" title="Class Is In Session" /></a>
 </div>
 
 My clustering experience: At my previous job, I had supported SQL Server 2005 on a Windows Server 2003 cluster for a couple of years. I had tried to install a Windows Server 2008 cluster last year (and failed miserably, because I didn't know anything). With my current job, I support several instances of SQL Server 2008 on Windows Server 2008 and SQL Server 2005 on Windows Server 2003. 

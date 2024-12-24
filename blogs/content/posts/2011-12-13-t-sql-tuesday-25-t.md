@@ -75,7 +75,7 @@ If the database was in full recovery mode, and the users did not need point-in-t
 
 Advice I would give to anyone new to SQL Server, and even those who have worked with it for some time, is to become familiar with the system catalog views. Catalog views expose the catalog metadata that the SQL Server Engine uses. They are well documented in BOL and efficient for retrieving valuable information to make logical decisions. Catalog views are a powerful way to troubleshoot SQL Server.
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
  [2]: http://sqlblog.com/blogs/allen_white/archive/2011/12/05/t-sql-tuesday-025-invitation-to-share-your-tricks.aspx
  [3]: https://twitter.com/#!/SQLRunr
  [4]: http://sqlblog.com/blogs/allen_white/default.aspx

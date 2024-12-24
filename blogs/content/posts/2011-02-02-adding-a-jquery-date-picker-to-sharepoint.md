@@ -23,19 +23,19 @@ Here's an example of how you can add jQuery date pickers to input fields within 
 First, go the Site Settings page and select the Master pages link:
 
 <div class="image_block">
-  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker1.jpg?mtime=1296660962"><img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker1.jpg?mtime=1296660962" alt="" width="714" height="346" /></a>
+  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker1.jpg?mtime=1296660962"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker1.jpg?mtime=1296660962" alt="" width="714" height="346" /></a>
 </div>
 
 Next, drop down the default.master page list and select the Edit in Microsoft Office Sharepoint Designer:
 
 <div class="image_block">
-  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker2.jpg?mtime=1296660982"><img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker2.jpg?mtime=1296660982" alt="" width="585" height="373" /></a>
+  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker2.jpg?mtime=1296660982"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker2.jpg?mtime=1296660982" alt="" width="585" height="373" /></a>
 </div>
 
 Assuming you have already downloaded and installed the Sharepoint Designer, it will then give you a warning prompt and then open the master page file in the designer:
 
 <div class="image_block">
-  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker3.jpg?mtime=1296660994"><img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker3.jpg?mtime=1296660994" alt="" width="661" height="501" /></a>
+  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker3.jpg?mtime=1296660994"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker3.jpg?mtime=1296660994" alt="" width="661" height="501" /></a>
 </div>
 
 We are going to modify this page so start by adding the following code just before the closing </HEAD> tag:
@@ -47,5 +47,5 @@ This adds a link to 3 external css files for jQuery as well as links to the main
 If all goes according to plan, once you save the file and browse to a list with a date column, then you should see the date picker pop up once you click into the input field:
 
 <div class="image_block">
-  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker4.jpg?mtime=1296661003"><img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker4.jpg?mtime=1296661003" alt="" width="622" height="393" /></a>
+  <a href="/media/blogs/WebDev/SharepointCalendars/SharepointDatePicker4.jpg?mtime=1296661003"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/SharepointDatePicker4.jpg?mtime=1296661003" alt="" width="622" height="393" /></a>
 </div>

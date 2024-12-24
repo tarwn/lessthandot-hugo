@@ -42,7 +42,7 @@ The main processing flow of this package starts with determining where the files
 This would appear in a flowchart as shown in figure 1.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-15.png?mtime=1301516186"><img alt="" src="/wp-content/uploads/blogs/All/-15.png?mtime=1301516186" width="548" height="629" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-15.png?mtime=1301516186"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-15.png?mtime=1301516186" width="548" height="629" /></a>
 </div>
 
 Figure 1
@@ -149,7 +149,7 @@ Ensure that any variable that uses an expression property also has the EvaluateA
 The variables that are evaluating to the absolute path are then used in the File System Tasks.  This allows for the folder and file name to change freely by just changing one or two variables.  This also requires the File System Tasks to be set to use a variable by using the IsDestinationPathVariable and IsSourcePathVariable settings. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-16.png?mtime=1301516186"><img alt="" src="/wp-content/uploads/blogs/All/-16.png?mtime=1301516186" width="519" height="246" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-16.png?mtime=1301516186"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-16.png?mtime=1301516186" width="519" height="246" /></a>
 </div>
 
 The next expression usage will focus on the RESTORE command itself.  Giving the RESTORE command some thought, we see that there are many values that should be passed in order to successfully restore the database.  These values include the logical data and log names, the physical data and log file paths, the backup file itself and most importantly, the database name in which we want to restore the backup as.
@@ -194,7 +194,7 @@ The expression to validate if a differential is required and to execute the diff
 
 > @[ApplyDiff] == 1 ? True : False</p>
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-17.png?mtime=1301516187"><img alt="" src="/wp-content/uploads/blogs/All/-17.png?mtime=1301516187" width="624" height="454" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-17.png?mtime=1301516187"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-17.png?mtime=1301516187" width="624" height="454" /></a>
 </div>
 
 **Logging**
@@ -239,4 +239,4 @@ First, download the attached zip file. This file contains a DTSX file that is th
 
  
 
- [1]: /wp-content/uploads/blogs/All/Refresh Development.zip?mtime=1301517046
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/Refresh Development.zip?mtime=1301517046

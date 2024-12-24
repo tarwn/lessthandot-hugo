@@ -64,7 +64,7 @@ ORDER BY SalesPersonID;
 
 Results: 
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/mmm%20mean.JPG?mtime=1328707316)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/mmm%20mean.JPG?mtime=1328707316)
 
 **Median** 
 
@@ -89,7 +89,7 @@ FROM OrdersBySP;
 
 Here's a sample of the results. As you can see, salesperson 275 has a total of 86 orders. Salesperson 277 has 97. 
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/mmm%20median%201.JPG?mtime=1328708140)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/mmm%20median%201.JPG?mtime=1328708140)
 
 We're going to add a WHERE clause to the CTE: 
 
@@ -109,7 +109,7 @@ FROM OrdersBySP
 WHERE RowNum BETWEEN (CountOrders + 1)/2 AND (CountOrders + 2)/2;
 ```
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/mmm%20median%202.JPG?mtime=1328708437)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/mmm%20median%202.JPG?mtime=1328708437)
 
 What does this _mean_? (Please laugh at that.) Remember, to calculate median, we have to determine the middle row. This will vary depending on whether we have an even or odd number of rows. So, for a salesperson with an even number of orders, it is getting the two in the middle. For a salesperson with an odd number of orders, it is getting the one in the middle. 
 
@@ -132,7 +132,7 @@ WHERE RowNum BETWEEN (CountOrders + 1)/2 AND (CountOrders + 2)/2
 GROUP BY SPID;
 ```
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/mmm%20median%203.JPG?mtime=1328708609)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/mmm%20median%203.JPG?mtime=1328708609)
 
 You can see that this yields a different result set than using the AVG function does. 
 
@@ -151,7 +151,7 @@ WHERE OBSP.SalesPersonID IN (274, 275, 277, 278, 279, 282)
 ORDER BY OBSP.SalesPersonID;
 ```
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/mmm%20median%204.JPG?mtime=1328711541)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/mmm%20median%204.JPG?mtime=1328711541)
 
 It will look for a value in the percentile you request. The value will not necessarily exist in the set. If you want a function that looks at the values in the set and returns one in it, use PERCENTILE_DISC. 
 
@@ -175,7 +175,7 @@ GROUP BY SOD.OrderQty
 ORDER BY COUNT(SOD.OrderQty) DESC;
 ```
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/mmm%20mode%201.JPG?mtime=1328711838)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/mmm%20mode%201.JPG?mtime=1328711838)
 
 Now, we will use the TOP clause to get the most-frequently-ordered quantity. Make sure you use WITH TIES so that if if two or more values occur with the same frequency, both are listed. 
 
@@ -191,7 +191,7 @@ GROUP BY SOD.OrderQty
 ORDER BY COUNT(SOD.OrderQty) DESC;
 ```
 
-![SQL Results](/wp-content/uploads/users/grrlgeek/MMM%20mode2.JPG?mtime=1328711969)
+![SQL Results](https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/MMM%20mode2.JPG?mtime=1328711969)
 
 **It's Hard to Be Average** 
 

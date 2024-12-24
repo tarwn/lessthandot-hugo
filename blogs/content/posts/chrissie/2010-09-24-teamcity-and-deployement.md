@@ -42,7 +42,7 @@ So I already have steps 1 and 2 defined somewhere, and all I need to do is use t
 For step 3 you only need to create a new configuration that only has the runner defined and that has a &#8220;Build dependency trigger&#8221; on the configuration of step 1 and 2. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity4.png" alt="" title="" width="721" height="421" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity4.png" alt="" title="" width="721" height="421" />
 </div>
 
 ## Finalbuilder script
@@ -52,13 +52,13 @@ For step 4 we use another configuration that also has a &#8220;Build dependency 
 This configuration also only has the runner defined. Like this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity5.png" alt="" title="" width="726" height="391" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity5.png" alt="" title="" width="726" height="391" />
 </div>
 
 And as you can see this script has a few steps in it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/TeamCity6.png" alt="" title="" width="1153" height="460" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/TeamCity6.png" alt="" title="" width="1153" height="460" />
 </div>
 
 ## Conclusion
@@ -66,7 +66,7 @@ And as you can see this script has a few steps in it.
 Now I just have to run Release software build and the other 2 steps will be run one after the other.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity7.png" alt="" title="" width="1022" height="257" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Teamcity/Teamcity7.png" alt="" title="" width="1022" height="257" />
 </div>
 
 To make this continuous I just have to add a VCS trigger to that configuration and it will be done. But for now I do not see a reason to that yet. 

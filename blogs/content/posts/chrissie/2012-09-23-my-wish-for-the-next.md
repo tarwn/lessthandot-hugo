@@ -24,7 +24,7 @@ So in VS2012 they added the preview tab.
 So when you singleclick a file in the solution explorer will open the file in preview mode. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/previewtab/preview1.png?mtime=1348381073"><img alt="" src="/wp-content/uploads/users/chrissie1/previewtab/preview1.png?mtime=1348381073" width="279" height="84" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/previewtab/preview1.png?mtime=1348381073"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/previewtab/preview1.png?mtime=1348381073" width="279" height="84" /></a>
 </div>
 
 There is only one of these tabs so when you single click another file it will just &#8220;close&#8221; the previous one and show the new one.
@@ -34,7 +34,7 @@ This way you don&#8217;t have have hundreds of files open that you never wanted 
 You can of course click on the little icon to keep them open or double click the file to keep it open.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/previewtab/preview2.png?mtime=1348381083"><img alt="" src="/wp-content/uploads/users/chrissie1/previewtab/preview2.png?mtime=1348381083" width="174" height="84" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/previewtab/preview2.png?mtime=1348381083"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/previewtab/preview2.png?mtime=1348381083" width="174" height="84" /></a>
 </div>
 
 My problem is that some files are slow to open and the preview tab is a blocking operation. So if you have a slow opening file you have to wait for the preview tab to open to continue.
@@ -42,7 +42,7 @@ My problem is that some files are slow to open and the preview tab is a blocking
 But there is a solution for that. And it is Alt+Click.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/previewtab/preview3.png?mtime=1348381099"><img alt="" src="/wp-content/uploads/users/chrissie1/previewtab/preview3.png?mtime=1348381099" width="757" height="441" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/previewtab/preview3.png?mtime=1348381099"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/previewtab/preview3.png?mtime=1348381099" width="757" height="441" /></a>
 </div>
 
 This prevents the file from opening in the preview tab.

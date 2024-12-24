@@ -41,7 +41,7 @@ The second file is the **[SQLCopConfig.xml][5]**. This file holds the version le
 Place these two files in the same directory as the SQLCop.exe and SQLCop will run without requiring the check for any updates or pull down new updates to these files.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlcop_programfiles.gif" alt="" title="" width="353" height="167" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlcop_programfiles.gif" alt="" title="" width="353" height="167" />
 </div>
 
 We appreciate everyone's feedback on SQLCop and any problems or suggestions that you have are always welcome. You can post [forum topics on LessThanDot][6] to let us know. Also, SQLCop and LessThanDot is run and maintained from [donations][7]. If you can help, we greatly appreciate it. 🙂

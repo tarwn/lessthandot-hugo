@@ -50,7 +50,7 @@ I'd definitely recommend The Human Solution desks. This one is high quality and 
 <div id='gallery-5' class='gallery galleryid-4620 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/07/IMG_0791-e1468248181991.jpg'><img width="200" height="200" src="/wp-content/uploads/2016/07/IMG_0791-e1468248181991-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="This is why the wire management kit was a necessity." aria-describedby="gallery-5-4622" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0791-e1468248181991.jpg'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0791-e1468248181991-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="This is why the wire management kit was a necessity." aria-describedby="gallery-5-4622" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-5-4622'>
@@ -60,7 +60,7 @@ I'd definitely recommend The Human Solution desks. This one is high quality and 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/07/IMG_0806.jpg'><img width="200" height="200" src="/wp-content/uploads/2016/07/IMG_0806-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The after! Much better." aria-describedby="gallery-5-4624" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0806.jpg'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0806-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The after! Much better." aria-describedby="gallery-5-4624" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-5-4624'>
@@ -72,7 +72,7 @@ I'd definitely recommend The Human Solution desks. This one is high quality and 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='/wp-content/uploads/2016/07/IMG_0804-e1468248214523.jpg'><img width="200" height="200" src="/wp-content/uploads/2016/07/IMG_0804-e1468248214523-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The desk at standing height." aria-describedby="gallery-5-4623" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0804-e1468248214523.jpg'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0804-e1468248214523-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The desk at standing height." aria-describedby="gallery-5-4623" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-5-4623'>
@@ -82,7 +82,7 @@ I'd definitely recommend The Human Solution desks. This one is high quality and 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/07/IMG_0807.jpg'><img width="200" height="200" src="/wp-content/uploads/2016/07/IMG_0807-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The MonMount monitor arm." aria-describedby="gallery-5-4625" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0807.jpg'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0807-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The MonMount monitor arm." aria-describedby="gallery-5-4625" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-5-4625'>
@@ -94,7 +94,7 @@ I'd definitely recommend The Human Solution desks. This one is high quality and 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/07/IMG_0811.jpg'><img width="200" height="200" src="/wp-content/uploads/2016/07/IMG_0811-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The desk at sitting height." aria-describedby="gallery-5-4621" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0811.jpg'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0811-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="The desk at sitting height." aria-describedby="gallery-5-4621" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-5-4621'>
@@ -104,7 +104,7 @@ I'd definitely recommend The Human Solution desks. This one is high quality and 
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='/wp-content/uploads/2016/07/IMG_0808-e1468248270515.jpg'><img width="200" height="200" src="/wp-content/uploads/2016/07/IMG_0808-e1468248270515-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="Gratuitous Star Wars office art." aria-describedby="gallery-5-4626" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0808-e1468248270515.jpg'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/07/IMG_0808-e1468248270515-200x200.jpg" class="attachment-thumbnail size-thumbnail" alt="Gratuitous Star Wars office art." aria-describedby="gallery-5-4626" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-5-4626'>

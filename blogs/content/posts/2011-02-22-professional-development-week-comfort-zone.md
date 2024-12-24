@@ -15,7 +15,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlchicken.com/sql-university/"><img alt="" src="/wp-content/uploads/blogs/All/-6.png?mtime=1298241460" width="108" height="123" align="left" /></a>
+  <a href="http://sqlchicken.com/sql-university/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-6.png?mtime=1298241460" width="108" height="123" align="left" /></a>
 </div>
 
 Welcome to this semester's Professional Development week at [SQL University][1]. If you found yourself here without first reading the introduction of this week's topic, please take a moment to read, "[Professional Development Week, An introduction to this week on SQL University][2]". This week is being taught by Andy Leonard ([Twitter][3] | [Blog][4]) and Ted Krueger ([Twitter][5] | [Blog][6]). Yesterday in the introduction, there were questions raised. One of them was, "Most of all how do we truly become advanced beyond our standings and know we still has further to go?" Today we are going to focus on this question and look at how we may be able to answer it.
@@ -31,7 +31,7 @@ There is a simple answer to this question. You need to go outside your comfort z
 **Comfort in life is good: or is it?**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-9.png?mtime=1298384895"><img alt="" src="/wp-content/uploads/blogs/All/-9.png?mtime=1298384895" width="400" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-9.png?mtime=1298384895"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-9.png?mtime=1298384895" width="400" height="300" /></a>
 </div>
 
 A comfort zone is important. Never think it isn't. With your career path you must (and I mean, must) feel comfortable that you can handle the task at hand. Database professionals have the ability to cause massive degradation of performance, inaccurate results and complete failures from what we do. This can be as simple as a developer writing SELECT COUNT(col) while not knowing that NULL is not interpreted by this statement. (See, the DBA that is not known for development can take these on as outside their comfort zone.) But, if we are not comfortable with our skills and confident in where we are already, stepping outside these bounds isn't viable. We must build ourselves up professionally, in the scope of our careers, before moving to the next level.

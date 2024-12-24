@@ -24,7 +24,7 @@ Let's start with, "What is a hex editor?" It's a program that lets you view the 
 I started with my coworker Kendra Little's ([blog][1] | [twitter][2]) blog[, Corrupting Databases for Dummies- Hex Editor Edition][3]. I downloaded the hex editor [XVI32][4], as recommended. She gives instructions on how to install the software, create a database, create some objects, and then open the hex editor to break a page.
 
 <p style="text-align: center;">
-  <a href="http://www.flickr.com/photos/12739382@N04/3607882912/lightbox/"><img src="/wp-content/uploads/users/grrlgeek/skull crossbones.jpg?mtime=1351608410" alt="" /></a>
+  <a href="http://www.flickr.com/photos/12739382@N04/3607882912/lightbox/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/skull crossbones.jpg?mtime=1351608410" alt="" /></a>
 </p>
 
 <p style="text-align: center;">
@@ -68,7 +68,7 @@ Next, I open XVI32 and open the file. Well, that's kind of fun-looking!
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Hex 1.JPG?mtime=1351608565" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Hex 1.JPG?mtime=1351608565" alt="" />
 </p>
 
 Quite frankly, I have no idea what the heck I'm looking at.
@@ -78,7 +78,7 @@ To find the page I had selected, I go to Address > Go To and enter my offset val
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Hex 2.JPG?mtime=1351608653" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Hex 2.JPG?mtime=1351608653" alt="" />
 </p>
 
 I click on the first T and type X. Apparently I've just changed the data in my data file. Oops! I've corrupted a data file!
@@ -95,13 +95,13 @@ FROM dbo.DeadBirdies;
 I get a terrible error: "SQL Server detected a logical consistency-based I/O error: incorrect checksum".
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Hex 3.JPG?mtime=1351608719" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Hex 3.JPG?mtime=1351608719" alt="" />
 </p>
 
 What happens if I run a DBCC CHECKDB? More errors!
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Hex 4.JPG?mtime=1351608783" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Hex 4.JPG?mtime=1351608783" alt="" />
 </p>
 
 Yes, I broke a database. On purpose.
@@ -125,7 +125,7 @@ DROP INDEX dbo.DeadBirdies.ncBirds;
 When I run the query again, data is returned! This time, there is no error.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Hex%205.jpg?mtime=1351609676" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Hex%205.jpg?mtime=1351609676" alt="" />
 </p>
 
 Now, I rebuild the nonclustered index using the Create statement I scripted, and I can still run the query without errors.

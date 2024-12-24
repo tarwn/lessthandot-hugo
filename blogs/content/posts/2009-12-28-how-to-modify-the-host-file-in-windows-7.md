@@ -38,13 +38,13 @@ Make sure that the path and file name are correct.**
 I am getting the following error on my Windows 7 machine
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/error.png" alt="" title="" width="395" height="184" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/error.png" alt="" title="" width="395" height="184" />
 </div>
 
 In order to fix this you first need to run notepad as an adminstrator. Here is how you do this. Click Start–>All Programs–>Accessories, right-click on Notepad, and then click Run as administrator. This might ask you for a password, enter it
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins//RunAsAdmin.png" alt="" title="" width="270" height="162" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins//RunAsAdmin.png" alt="" title="" width="270" height="162" />
 </div>
 
 Now from notepad press CTRL + O (or File–> Open) and navigate to the host file after you make your changes save it..that should work.

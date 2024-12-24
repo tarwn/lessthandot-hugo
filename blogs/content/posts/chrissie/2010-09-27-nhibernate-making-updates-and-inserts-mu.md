@@ -20,13 +20,13 @@ tags:
 The model behind this screen is pretty complex. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib1.png" alt="" title="" width="1208" height="832" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib1.png" alt="" title="" width="1208" height="832" />
 </div>
 
 This part is especially bad. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib2.png" alt="" title="" width="467" height="182" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib2.png" alt="" title="" width="467" height="182" />
 </div>
 
 Each of those colored lines is 421 rows in the database and this particular one has 14 of those. So that means it has to load 5894 rows just for that little thing. But that is not the big problem since it can do that quit fast and with one select statement.
@@ -40,7 +40,7 @@ Did you notice all the Update table &#8230; where id = anumber. EAch one of thos
 This is what happens when I save the complete object to the database. (I used [NHProf][1] to visualize what was wrong). 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib4.png" alt="" title="" width="1024" height="768" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib4.png" alt="" title="" width="1024" height="768" />
 </div>
 
 It has a lot of statements it has to execute to save this thing to the database. There is nothing we can do about the number of statements but we can batch some of them so that the number of round trips to the server are limited. 
@@ -77,7 +77,7 @@ _Session.SetBatchSize(50)
 And this is the result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib3.png" alt="" title="" width="1024" height="768" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib3.png" alt="" title="" width="1024" height="768" />
 </div>
 
 It now only takes 4 seconds to save and only 194 roundtrips to the server. Compared to the 45 seconds and 6004 roundtrips that is a big improvement. 
@@ -85,7 +85,7 @@ It now only takes 4 seconds to save and only 194 roundtrips to the server. Compa
 You will see that it batches those update statement together.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib5.png" alt="" title="" width="723" height="64" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHibernate/nhib5.png" alt="" title="" width="723" height="64" />
 </div>
 
 It now only takes 14ms for 50 statements to complete. While it used to take 50*6 = 300ms in the none batched version.

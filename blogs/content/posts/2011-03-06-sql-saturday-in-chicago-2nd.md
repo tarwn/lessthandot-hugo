@@ -17,7 +17,7 @@ categories:
 Last year, I helped organized [SQL Saturday in Chicago][1] with two other people. On many occasions I have received feedback from speakers and attendees saying that SQL Saturday ranked in the top three out of all the SQL Saturday events they had attended.  Feedback like that is truly inspiring.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/All/-10.png?mtime=1299430282" alt="" width="245" height="100" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-10.png?mtime=1299430282" alt="" width="245" height="100" align="left" />
 </div>
 
  
@@ -25,7 +25,7 @@ Last year, I helped organized [SQL Saturday in Chicago][1] with two other people
 This year we're bringing another [SQL Saturday to the Chicago][2] area.  The organizer group this year includes a few more people and we've spread the duties out a bit to get things done better and more efficiently but everyone helps each other and it is making it much easier.  One of my tasks, like last year, was the scheduling of the event.  Last year I thought scheduling was difficult.  I had no idea that it could get even more difficult until this year.  In total, SQL Saturday in Chicago had 135 session submissions and just under half of those were from unique speakers. 
 
 <div class="image_block">
-  <a href="/media/blogs/All/-11.png?mtime=1299430282"><img src="/wp-content/uploads/blogs/All/-11.png?mtime=1299430282" alt="" width="128" height="146" align="left" /></a>
+  <a href="/media/blogs/All/-11.png?mtime=1299430282"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-11.png?mtime=1299430282" alt="" width="128" height="146" align="left" /></a>
 </div>
 
 To say the least, deciding which speakers and sessions to put on the schedule was a task, and a lengthy one at that.  I apologize to all the people that asked when the schedule would be completed.  I know from experience as a speaker that travel arrangements are time sensitive and knowing if you need to make them is critical to being able to attend.  I'm sure most of you understand that 135 sessions is not easy to schedule and I thank you for your patience. 

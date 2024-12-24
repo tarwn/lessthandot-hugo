@@ -18,7 +18,7 @@ categories:
 ---
 <div class="MsoNormal" style="margin: 0in 0in 10pt;">
   <div class="image_block">
-    <a href="/media/blogs/All/sqlsat98_web.png?mtime=1317909489"><img src="/wp-content/uploads/blogs/All/sqlsat98_web.png?mtime=1317909489" alt="" width="236" height="115" align="left" /></a>
+    <a href="/media/blogs/All/sqlsat98_web.png?mtime=1317909489"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat98_web.png?mtime=1317909489" alt="" width="236" height="115" align="left" /></a>
   </div>
   
   <p>

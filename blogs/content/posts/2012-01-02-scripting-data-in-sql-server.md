@@ -29,7 +29,7 @@ You would right click on the database, select Tasks–>Generate Scripts–>Pick 
 and then you would be presented with scripting options, one of the options would be to script data, this is located under Table/View options. See the image below of how it looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/ScriptWizard2008.png?mtime=1325606711"><img alt="" src="/wp-content/uploads/users/SQLDenis/ScriptWizard2008.png?mtime=1325606711" width="485" height="430" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/ScriptWizard2008.png?mtime=1325606711"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/ScriptWizard2008.png?mtime=1325606711" width="485" height="430" /></a>
 </div>
 
 In SQL Server 2012, this has changed and is kind of buried. Here is how to find it now.
@@ -39,7 +39,7 @@ Right click on the database, select Tasks–>Generate Scripts–>Set Scripting O
 Now you can select Schema only, Data only, Schema and Data. See image below of what the options should look like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/scriptData.PNG?mtime=1325543364"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/scriptData.PNG?mtime=1325543364" width="463" height="411" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/scriptData.PNG?mtime=1325543364"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/scriptData.PNG?mtime=1325543364" width="463" height="411" /></a>
 </div>
 
 Don't forget to install the [SSMS Toolspack][1], that will enable you to script just one table or just results from a query as well

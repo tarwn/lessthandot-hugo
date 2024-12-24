@@ -33,6 +33,6 @@ tags:
   You can register for the webinar <a href="https://attendee.gotowebinar.com/register/8118983337165731074">here</a>.
 </p>
 
-[<img class="alignnone wp-image-3059 size-medium" src="/wp-content/uploads/2014/11/passbivc-300x150.jpg" alt="passbivc" width="300" height="150" srcset="/wp-content/uploads/2014/11/passbivc-300x150.jpg 300w, /wp-content/uploads/2014/11/passbivc.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" />][1]
+[<img class="alignnone wp-image-3059 size-medium" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/passbivc-300x150.jpg" alt="passbivc" width="300" height="150" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/passbivc-300x150.jpg 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/11/passbivc.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" />][1]
 
  [1]: https://www.youtube.com/user/passbivc

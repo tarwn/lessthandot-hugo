@@ -296,7 +296,7 @@ This table list all the mobile devices that accessed this site aggregated over t
 
 Internet and Firefox both lost to Chrome, Chrome now has a 15 point lead against the number 2 browser. Here is the 1 year chart
   
-[<img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/StatsBrowsers.PNG?mtime=1356640800" width="480" height="292" />][2]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/StatsBrowsers.PNG?mtime=1356640800" width="480" height="292" />][2]
 
 Here is just the data for January and December so that you can see the difference between the beginning and the end of the year
 
@@ -378,7 +378,7 @@ Here is just the data for January and December so that you can see the differenc
 
 In the operating system space, windows is still king, Windows phone is still a very niche player as well. Here is the one year chart for the operating systems
 
-[<img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/StatsOS.PNG?mtime=1356640810" width="543" height="239" />][3]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/StatsOS.PNG?mtime=1356640810" width="543" height="239" />][3]
 
 Here is just the data for January and December so that you can see the difference between the beginning and the end of the year
 
@@ -551,5 +551,5 @@ Here is the data for mobile operating systems, I just picked the top 3 and only 
 Next year will be very interesting, we have to see what will happen in terms of new android and iOS devices. Will the Surface Pro help Microsoft win some tables market share or will the partners have to step up and come out with some cool Windows 8 tables? Time will tell......
 
  [1]: /index.php/ITProfessionals/other/2012-searches-countries-and-devices
- [2]: /wp-content/uploads/blogs/ITProfessionals/Denis/StatsBrowsers.PNG?mtime=1356640800
- [3]: /wp-content/uploads/blogs/ITProfessionals/Denis/StatsOS.PNG?mtime=1356640810
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/StatsBrowsers.PNG?mtime=1356640800
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/StatsOS.PNG?mtime=1356640810

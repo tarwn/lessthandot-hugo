@@ -34,7 +34,7 @@ If you are a TechNet or MSDN subscriber then you can download Windows 7 Service 
 Below is an image of what is available
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/ServicePack1.PNG?mtime=1297880666"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/ServicePack1.PNG?mtime=1297880666" width="934" height="647" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/ServicePack1.PNG?mtime=1297880666"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/ServicePack1.PNG?mtime=1297880666" width="934" height="647" /></a>
 </div>
 
 If you are a not a TechNet or MSDN subscriber, you have to wait until February 22nd to download yours. 

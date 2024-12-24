@@ -74,7 +74,7 @@ CHECKPOINT
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-143.png?mtime=1339509144"><img src="/wp-content/uploads/blogs/DataMgmt/-143.png?mtime=1339509144" alt="" width="624" height="47" /></a>
+  <a href="/media/blogs/DataMgmt/-143.png?mtime=1339509144"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-143.png?mtime=1339509144" alt="" width="624" height="47" /></a>
 </div>
 
  
@@ -101,7 +101,7 @@ From the results shown in process monitor
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-144.png?mtime=1339509144"><img src="/wp-content/uploads/blogs/DataMgmt/-144.png?mtime=1339509144" alt="" width="624" height="156" /></a>
+  <a href="/media/blogs/DataMgmt/-144.png?mtime=1339509144"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-144.png?mtime=1339509144" alt="" width="624" height="156" /></a>
 </div>
 
  
@@ -118,7 +118,7 @@ Rerun fn_dblog again and review the results.
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-145.png?mtime=1339509144"><img src="/wp-content/uploads/blogs/DataMgmt/-145.png?mtime=1339509144" alt="" width="624" height="108" /></a>
+  <a href="/media/blogs/DataMgmt/-145.png?mtime=1339509144"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-145.png?mtime=1339509144" alt="" width="624" height="108" /></a>
 </div>
 
  
@@ -164,7 +164,7 @@ Rerun the select on fn_dblog and review the results.
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-146.png?mtime=1339509144"><img src="/wp-content/uploads/blogs/DataMgmt/-146.png?mtime=1339509144" alt="" width="624" height="80" /></a>
+  <a href="/media/blogs/DataMgmt/-146.png?mtime=1339509144"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-146.png?mtime=1339509144" alt="" width="624" height="80" /></a>
 </div>
 
  
@@ -174,7 +174,7 @@ Reviewing process monitor shows activity on the physical ldf file as well.  The
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-147.png?mtime=1339509144"><img src="/wp-content/uploads/blogs/DataMgmt/-147.png?mtime=1339509144" alt="" width="624" height="78" /></a>
+  <a href="/media/blogs/DataMgmt/-147.png?mtime=1339509144"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-147.png?mtime=1339509144" alt="" width="624" height="78" /></a>
 </div>
 
  

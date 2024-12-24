@@ -45,7 +45,7 @@ This would be a typical example of searching orders. The users then ask for a cr
 Like this layout 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//parms_ssrs_2.gif" alt="" title="" width="835" height="292" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//parms_ssrs_2.gif" alt="" title="" width="835" height="292" />
 </div>
 
 Most would be inclined to create another procedure and then create matching parameters for that report. Then use the "Parameters!" call to assign a default value to the parameter going to the second procedure. You can bypass this by simply naming the parameters in the procedures the same and then call them in your dataset as Text and using the same names.
@@ -73,5 +73,5 @@ Exec FindShippedOrders @date,@plant
 Now when you check the report parameters window you will still only see two parameters. Run your report and you will see the parameters load while working with both datasets.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//parms_ssrs.gif" alt="" title="" width="819" height="330" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//parms_ssrs.gif" alt="" title="" width="819" height="330" />
 </div>

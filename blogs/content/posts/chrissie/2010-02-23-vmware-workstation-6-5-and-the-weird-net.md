@@ -25,19 +25,19 @@ Anyway, I finally found the solution. Apparently when it crashes it might think 
 First of all, on an unrelated note, when using bridged networking you can disable the 2 VMNet adapters on your host. And while you are at it disable all the others you don&#8217;t use too. This should prevent it from choosing the wrong adapter to begin with.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmware/vmware1.png" alt="" title="" width="1039" height="169" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmware/vmware1.png" alt="" title="" width="1039" height="169" />
 </div>
 
 Now to the solution I found worked best for me. In the edit menu of your Workstation click on Virtual network editor. And then go to the tab Host Virtual Network Mapping. Change it from &#8220;Bridged to an automatically chosen adapter&#8221;.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmware/vmware2.png" alt="" title="" width="554" height="448" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmware/vmware2.png" alt="" title="" width="554" height="448" />
 </div>
 
 To the adapter of your choice. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmware/vmware3.png" alt="" title="" width="554" height="448" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmware/vmware3.png" alt="" title="" width="554" height="448" />
 </div>
 
 And then I restarted the VM and everything was nice and cheery in chrissieland again.

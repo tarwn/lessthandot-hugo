@@ -40,7 +40,7 @@ GO
 
 The RunID column is populated by a package parameter; I will come back to this later on.
 
-[<img class="alignnone size-full wp-image-2558" alt="TestSSISPerf_parameter" src="/wp-content/uploads/2014/04/TestSSISPerf_parameter.png" width="559" height="115" srcset="/wp-content/uploads/2014/04/TestSSISPerf_parameter.png 559w, /wp-content/uploads/2014/04/TestSSISPerf_parameter-300x61.png 300w" sizes="(max-width: 559px) 100vw, 559px" />][2]
+[<img class="alignnone size-full wp-image-2558" alt="TestSSISPerf_parameter" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_parameter.png" width="559" height="115" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_parameter.png 559w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_parameter-300x61.png 300w" sizes="(max-width: 559px) 100vw, 559px" />][2]
 
 The package starts with an Execute SQL Task to log the start. I use the following SSIS expression to construct the SQL statement on the fly, allowing you to easy copy-paste the logging task between packages.
 
@@ -52,7 +52,7 @@ At the end of the control flow, there is an Execute SQL Task that updates the En
 
 The RunID parameter is important to link those two Execute SQL Tasks together. A typical control flow looks like this:
 
-[<img class="alignnone  wp-image-2560" alt="TestSSISPerf_controllflow" src="/wp-content/uploads/2014/04/TestSSISPerf_controllflow.png" width="286" height="329" srcset="/wp-content/uploads/2014/04/TestSSISPerf_controllflow.png 358w, /wp-content/uploads/2014/04/TestSSISPerf_controllflow-261x300.png 261w" sizes="(max-width: 286px) 100vw, 286px" />][3]
+[<img class="alignnone  wp-image-2560" alt="TestSSISPerf_controllflow" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_controllflow.png" width="286" height="329" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_controllflow.png 358w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_controllflow-261x300.png 261w" sizes="(max-width: 286px) 100vw, 286px" />][3]
 
 Logging is the first step, now we have to run the package of course. I created a stored procedure that allows me to easily start a package in the SSIS catalog.
 
@@ -125,7 +125,7 @@ ORDER BY ID;
 
 The result:
 
-[<img class="alignnone  wp-image-2559" alt="TestSSISPerf_chart" src="/wp-content/uploads/2014/04/TestSSISPerf_chart.png" width="542" height="315" srcset="/wp-content/uploads/2014/04/TestSSISPerf_chart.png 774w, /wp-content/uploads/2014/04/TestSSISPerf_chart-300x174.png 300w" sizes="(max-width: 542px) 100vw, 542px" />][4]
+[<img class="alignnone  wp-image-2559" alt="TestSSISPerf_chart" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_chart.png" width="542" height="315" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_chart.png 774w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_chart-300x174.png 300w" sizes="(max-width: 542px) 100vw, 542px" />][4]
 
 I used RunID as category, PackageName as the series and the Duration/Mean as the values. I created a custom palette where I forced the Duration measure and the Mean to have the same color.
 
@@ -136,7 +136,7 @@ If you want to know what that chart is all about and what I was optimizing, keep
 ** The MSSQLTips article mentioned in this blog post: [Improve SSIS data flow buffer performance][5].
 
  [1]: http://www.mssqltips.com/
- [2]: /wp-content/uploads/2014/04/TestSSISPerf_parameter.png
- [3]: /wp-content/uploads/2014/04/TestSSISPerf_controllflow.png
- [4]: /wp-content/uploads/2014/04/TestSSISPerf_chart.png
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_parameter.png
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_controllflow.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/TestSSISPerf_chart.png
  [5]: http://www.mssqltips.com/sqlservertip/3217/improve-ssis-data-flow-buffer-performance/

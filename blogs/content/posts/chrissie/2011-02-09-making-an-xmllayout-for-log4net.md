@@ -173,7 +173,7 @@ The XML logfile.
 And the result in the browser.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330"><img alt="" src="/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330" width="1006" height="287" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/log4net/log4net2.png?mtime=1297245330" width="1006" height="287" /></a>
 </div>
 
 That looks exactly the same as previous and the resulting logfile is machinereadable to boot.

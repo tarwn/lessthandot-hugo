@@ -42,7 +42,7 @@ Next pull the report down a bit so you have some space under the table (if none 
 Drag a textbox over. You should get to a point the report appears like this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_1.gif" alt="" title="" width="521" height="114" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssrs_ex_1.gif" alt="" title="" width="521" height="114" />
 </div>
 
 Right click the table and go into the properties. Click the tab for visibility and tick Expression.
@@ -60,7 +60,7 @@ In the new textbox type ="No data returned. Report executed on " & Now
 Like this...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_2.gif" alt="" title="" width="516" height="83" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssrs_ex_2.gif" alt="" title="" width="516" height="83" />
 </div>
 
 Now you don't want to see the textbox all the time. The two options you have are to hide it or set the visibility based on something. I like to hide it sense checking for things will obviously take more time.
@@ -74,13 +74,13 @@ You will end up with the report like this
 Notice I still have the textbox selected behind the table to show you where it should be placed.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_3.gif" alt="" title="" width="516" height="83" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssrs_ex_3.gif" alt="" title="" width="516" height="83" />
 </div>
 
 Hit preview
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_4.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssrs_ex_4.gif" alt="" title="" />
 </div>
 
 Go back to your dataset and change the query to this
@@ -92,7 +92,7 @@ select * from @tbl
 Don't forget to hit the refresh dataset button and then preview your report again. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_ex_5.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssrs_ex_5.gif" alt="" title="" />
 </div>
 
 Nice! Now the users know why there is nothing in your report and will refrain from calling you and complaining the hours you put in creating it was futile and it just doesn't work.

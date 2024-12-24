@@ -23,19 +23,19 @@ First you create an account and then you add a database.
 To make a database you just fill in the database name and and click on the red add button for the bronze plan.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ1.png?mtime=1337852093"><img alt="" src="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ1.png?mtime=1337852093" width="987" height="556" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ1.png?mtime=1337852093"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ1.png?mtime=1337852093" width="987" height="556" /></a>
 </div>
 
 And when you now go to databases you will see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ2.png?mtime=1337852213"><img alt="" src="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ2.png?mtime=1337852213" width="963" height="290" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ2.png?mtime=1337852213"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ2.png?mtime=1337852213" width="963" height="290" /></a>
 </div>
 
 Before we go on with our coding we need to know our connection details. These can be found when you click on the manage button for your database and then connectionstrings.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ3.png?mtime=1337859156"><img alt="" src="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ3.png?mtime=1337859156" width="960" height="440" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ3.png?mtime=1337859156"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ3.png?mtime=1337859156" width="960" height="440" /></a>
 </div>
 
 Now that we got this we just need our Model.
@@ -77,13 +77,13 @@ As you can see my model does not have an id but RavenDb still made one for me. I
 You can also see those documents in ravenHQ by going to the Management studio, the url for that can be found under the database info section.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ4.png?mtime=1337859990"><img alt="" src="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ4.png?mtime=1337859990" width="961" height="566" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ4.png?mtime=1337859990"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ4.png?mtime=1337859990" width="961" height="566" /></a>
 </div>
 
 The management studio will then let you view, edit, add and delete documents and much more.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ5.png?mtime=1337860203"><img alt="" src="/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ5.png?mtime=1337860203" width="1387" height="870" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ5.png?mtime=1337860203"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravenhq/RavenHQ5.png?mtime=1337860203" width="1387" height="870" /></a>
 </div>
 
 Go check it out and have fun.

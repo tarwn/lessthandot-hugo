@@ -30,6 +30,6 @@ Be sure to stick around afterward – there will be an after party at the Hampto
 
 So, in the words of Miracle Max, "Have fun storming the castle!" It won't take a miracle to have a great time and learn a lot at this event!
 
- [1]: /wp-content/uploads/blogs/All/-10.png?mtime=1299430282 "null"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-10.png?mtime=1299430282 "null"
  [2]: http://sqlsaturday.com/67/eventhome.aspx
  [3]: http://meatyballsmobile.com/

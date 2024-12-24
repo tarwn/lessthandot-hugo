@@ -33,7 +33,7 @@ or the experimental version for 3.0.x &#8211; 3.5.x : [Perma tabs][2]
 So I after install on FF3.5.3 I get this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/permatabs1.png" alt="" title="" width="302" height="76" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/permatabs1.png" alt="" title="" width="302" height="76" />
 </div>
 
 2 permanent tabs to digg and cnn.com. Which is rubbish of course. We want LTD!!!!! NOW.
@@ -41,13 +41,13 @@ So I after install on FF3.5.3 I get this.
 We start by unpermanenting (new word) the digg and cnn tabs. Just uncheck Permanent Tab and close it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/permatabs2.png" alt="" title="" width="586" height="349" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/permatabs2.png" alt="" title="" width="586" height="349" />
 </div>
 
 Then we make Lessthandot Permanent.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/permatabs3.png" alt="" title="" width="675" height="598" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/permatabs3.png" alt="" title="" width="675" height="598" />
 </div>
 
 See, cool.

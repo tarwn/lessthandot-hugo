@@ -30,13 +30,13 @@ We generally start off by defining roles for an application and/or database. The
 The Users database role is generally assigned to the application schema with insert, update, select, and execute permissions (we don't let users actually delete data). The role is also assigned to the cg schema with execute permissions.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/thirster42/UsersRole.jpg" alt="" title="" width="446" height="257" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/thirster42/UsersRole.jpg" alt="" title="" width="446" height="257" />
 </div>
 
 Once our roles in the database are created we need to create an AD security group for each database role. Generally, if we only have one database role, the only security group made would be SQL.(Application Abbreviation). We use SQL at the beginning to make it easy to find and understand what it is. The application abbreviation tells us exactly which application it's for. If there are multiple roles the roles would be named SQL.(Application Abbreviation).(Role Name). We then go into sql server, add the security group to the server, and assign it to the role. We're now done with SQL Server!
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/thirster42/DatabaseSecurityGroups.jpg" alt="" title="" width="354" height="240" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/thirster42/DatabaseSecurityGroups.jpg" alt="" title="" width="354" height="240" />
 </div>
 
 Now that the database role security groups have been created the User Security groups need to be made. These are the security groups that the application will actually check to determine permissions in the application. These could be numerous, but for the sake of simplicity and this blog we'll keep it down to two.
@@ -44,13 +44,13 @@ Now that the database role security groups have been created the User Security g
 For this example, we would need two user security groups, an Admin group and a users group. In AD we have the groups (Application Abbreviation)-Users and (Application Abbreviation)-Admins (notice the –'s, that means that actual people will be in this security group). This is where the clean-up of AD comes in handy, because depending on our requirements we can just drop a security group (or groups) in each and be done.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/thirster42/UserSecurityGroups.jpg" alt="" title="" width="425" height="162" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/thirster42/UserSecurityGroups.jpg" alt="" title="" width="425" height="162" />
 </div>
 
 The next thing to do after the user security groups are made is to tie it all together. To do this, we simply just drop the UserSecurityGroups into their proper Database Security Groups (ie, their specific roles).
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/thirster42/OverallSecurity.jpg" alt="" title="" width="436" height="489" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/thirster42/OverallSecurity.jpg" alt="" title="" width="436" height="489" />
 </div>
 
 **What We Get Out of This**

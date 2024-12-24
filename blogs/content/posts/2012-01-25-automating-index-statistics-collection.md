@@ -27,7 +27,7 @@ The design of the SSIS package that will use Jason's script involves utilizing d
 **The Design**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-102.png?mtime=1327420570"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-102.png?mtime=1327420570" width="495" height="320" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-102.png?mtime=1327420570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-102.png?mtime=1327420570" width="495" height="320" /></a>
 </div>
 
 The SSIS package will first use an external file that will have a list of all the servers to collect the index statistics from.   In the first process, the file will be read and a data table used to populate the list into a variable of an object data type.  This method is commonly referred to in SSIS as Shredding Variables.
@@ -39,7 +39,7 @@ The internal processing of the Foreach Loop will consist of an Execute T-SQL Tas
 **The SSIS Control Flow**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-103.png?mtime=1327420570"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-103.png?mtime=1327420570" width="624" height="136" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-103.png?mtime=1327420570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-103.png?mtime=1327420570" width="624" height="136" /></a>
 </div>
 
 With this design and method used, there are a few bottlenecks that appear.  Later we will look at these bottlenecks and put another design together that will allow a higher scalable SSIS package and a direct data flow.  The design above has many methods that are valuable and will be shown.
@@ -103,7 +103,7 @@ With the method and designs we have chosen to do this SSIS package, the data flo
 Using the Add Column button, add a column into the Output Columns for each matching variable that was created and populated from the Foreach Loop over the object variable.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-104.png?mtime=1327420570"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-104.png?mtime=1327420570" width="624" height="485" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-104.png?mtime=1327420570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-104.png?mtime=1327420570" width="624" height="485" /></a>
 </div>
 
 Remember to ensure the length and data types of these columns are accurate.  Lengths that are too small can cause truncation errors and lengths that are too large can cause unwanted performance problems.  In some cases, data types can be explicitly converted at the time of the buffer moving in the data flow, but this value should match to ensure no performance problems or errors on casting the data types occur.  Remember, casting from unicode to non-unicode will always generate an error.  In flat file and many systems or other data sources, Unicode will be the default.
@@ -175,7 +175,7 @@ The code above locks all the variables and then assigns them accordingly to the 
 At this point, mapping the output columns to the flat file destination columns is all that is needed.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-105.png?mtime=1327420570"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-105.png?mtime=1327420570" width="650" height="472" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-105.png?mtime=1327420570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-105.png?mtime=1327420570" width="650" height="472" /></a>
 </div>
 
 **Configuration File**
@@ -191,13 +191,13 @@ For detailed information on using and setting up configuration files, refer to "
 **Execution**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-106.png?mtime=1327420570"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-106.png?mtime=1327420570" width="624" height="123" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-106.png?mtime=1327420570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-106.png?mtime=1327420570" width="624" height="123" /></a>
 </div>
 
 This package runs well and performed the exact task that was required of it.  The shredding of the object variables completed, the output buffer created for each row and loaded into the file destination.  The files were also created for each task that we wanted based on each SQL Server Instance.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-107.png?mtime=1327420777"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-107.png?mtime=1327420777" width="437" height="73" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-107.png?mtime=1327420777"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-107.png?mtime=1327420777" width="437" height="73" /></a>
 </div>
 
 **Review and Problems with this Design**
@@ -213,7 +213,7 @@ In review, we've talked about how to do several things to make this package poss
 Although this design works well on databases with a lower number of indexes and databases used less frequently, the design is inherently poor on performance overall if a large database is a factor.  In the tests I made, the least utilized and smallest database resulted in a relatively quick total execution time.  Using a larger more realistic database, the total execution time suffered drastically from the design.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-108.png?mtime=1327420777"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-108.png?mtime=1327420777" width="389" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-108.png?mtime=1327420777"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-108.png?mtime=1327420777" width="389" height="235" /></a>
 </div>
 
 Based on three executions of the package for each instance set in the Server List file.

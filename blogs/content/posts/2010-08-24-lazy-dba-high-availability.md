@@ -31,7 +31,7 @@ The topic at hand is High Availability, so let's not accidentally cross to the D
 **Lazy High Availability**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazydba2.gif" alt="" title="" width="209" height="209" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazydba2.gif" alt="" title="" width="209" height="209" align="left" />
 </div>
 
 We're not going to discuss dark fiber, monstrous SAN replication technology or even Windows Clustering. Reality check: High Availability has work involved. There is no way around doing some work and taking the time to learn what you need to know to setup HA successfully. Planning must be done as well or the process of providing availability may fail. However, there is a lazy theme here and we will find it. It has been there since SQL Server 2005. In fact, the option has been there for the majority of SQL Server installations since SQL Server 2005 SP1. The feature is Database Mirroring. With SQL Server 2005 SP1, it was made available to Standard Edition installations as well as Enterprise.

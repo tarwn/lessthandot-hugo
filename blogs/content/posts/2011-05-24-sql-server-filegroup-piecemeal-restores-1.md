@@ -84,13 +84,13 @@ SELECT name, data_space_id, type, type_desc, is_default, filegroup_guid, log_fil
 FROM sys.filegroups;
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup1.JPG?mtime=1306200506"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup1.JPG?mtime=1306200506" width="805" height="131" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup1.JPG?mtime=1306200506"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup1.JPG?mtime=1306200506" width="805" height="131" /></a>
 </div>
 
 I can also access this information by right-clicking the database name in Object Explorer, selecting Properties, and then selecting Filegroups on the left. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup2.JPG?mtime=1306200507"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup2.JPG?mtime=1306200507" width="699" height="625" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup2.JPG?mtime=1306200507"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup2.JPG?mtime=1306200507" width="699" height="625" /></a>
 </div>
 
 In your databases, you probably have Important Data that is accessed most frequently. This may be customer information, recent orders, or current stock. Your less-important data may be historical sales information, or a table listing ledger accounts in your accounting system. In the event of a disaster, during the recovery period, wouldn't it be great to be able to get the 20% of the data that is used 80% of the time online and usable first, and then work on restoring the remaining data while the business continues to function? How long will it take to restore a filegroup with, say 20 GB of data, instead of 120 GB? With some advance planning, this is possible. 
@@ -119,7 +119,7 @@ WHERE PA.OBJECT_ID =
     (SELECT OBJECT_ID(N'FilegroupFull.dbo.Orders2011'))
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup3.JPG?mtime=1306200507"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup3.JPG?mtime=1306200507" width="189" height="71" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup3.JPG?mtime=1306200507"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup3.JPG?mtime=1306200507" width="189" height="71" /></a>
 </div>
 
 Because I specified FGFullF2 as the default, that is where this table is created. 
@@ -247,7 +247,7 @@ FROM FilegroupFull.sys.database_files;
 GO
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup4.JPG?mtime=1306200507"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup4.JPG?mtime=1306200507" width="269" height="141" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup4.JPG?mtime=1306200507"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup4.JPG?mtime=1306200507" width="269" height="141" /></a>
 </div>
 
 At this point, what will happen if I try to select from the Orders2011 table? 
@@ -292,7 +292,7 @@ FROM Orders2011
 WHERE OrderID = 400189
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup5.JPG?mtime=1306200508"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup5.JPG?mtime=1306200508" width="237" height="69" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup5.JPG?mtime=1306200508"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup5.JPG?mtime=1306200508" width="237" height="69" /></a>
 </div>
 
 I am also able to INSERT. 
@@ -302,7 +302,7 @@ INSERT INTO Orders2011
 VALUES(400203, '2011/08/30')
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup6.JPG?mtime=1306200508"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup6.JPG?mtime=1306200508" width="225" height="67" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup6.JPG?mtime=1306200508"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup6.JPG?mtime=1306200508" width="225" height="67" /></a>
 </div>
 
 At this point, my PRIMARY and default filegroups are online. Users could begin working with objects in those filegroups. Any data stored on the files in RECOVERY_PENDING status will be unavailable until those filegroup restores are complete. 
@@ -347,7 +347,7 @@ FROM Orders2009
 WHERE OrderID = 200190
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Filegroup7.JPG?mtime=1306200508"><img alt="" src="/wp-content/uploads/users/grrlgeek/Filegroup7.JPG?mtime=1306200508" width="234" height="62" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup7.JPG?mtime=1306200508"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Filegroup7.JPG?mtime=1306200508" width="234" height="62" /></a>
 </div>
 
 Success! 

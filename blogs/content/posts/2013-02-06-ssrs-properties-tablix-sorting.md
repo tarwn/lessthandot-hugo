@@ -25,7 +25,7 @@ To access the property for a tablix, right-click a row or column and select Tabl
 To select it for a row or column group, go to the group pane, click the down arrow to the right of the group name, and select Group Properties.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/sorting 1.png?mtime=1360154754" alt="" width="580" height="598" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sorting 1.png?mtime=1360154754" alt="" width="580" height="598" />
 </p>
 
 Choose what field to sort by or click fx to build an expression. You can sort ascending (A to Z) or descending (Z to A).
@@ -35,19 +35,19 @@ Choose what field to sort by or click fx to build an expression. You can sort as
 I go to my first group, which is set on the territory ID, and add sorting on the Name column, in ascending order.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/sorting 2.png?mtime=1360154754" alt="" width="575" height="465" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sorting 2.png?mtime=1360154754" alt="" width="575" height="465" />
 </p>
 
 I go to my second group, which is set on OrderYear, and add sorting on the OrderYear column, in descending order.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/sorting 3.png?mtime=1360154754" alt="" width="578" height="472" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sorting 3.png?mtime=1360154754" alt="" width="578" height="472" />
 </p>
 
 When I run the report, it is sorted in the order I specified.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/sorting 4.png?mtime=1360154754" alt="" width="476" height="498" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sorting 4.png?mtime=1360154754" alt="" width="476" height="498" />
 </p>
 
 This can be useful when datasets return data from stored procedure that isn't sorted. It can also be useful when you add grouping to the tablix and want to sort the various groups.

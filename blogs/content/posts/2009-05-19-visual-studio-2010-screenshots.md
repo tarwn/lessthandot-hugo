@@ -27,25 +27,25 @@ Visual Studio 2010 has been made available to MSDN subscribers yesterday. I down
 The new welcome screen in Visual Studio 2010
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20101.png?mtime=1357606093"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20101.png?mtime=1357606093" width="735" height="521" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20101.png?mtime=1357606093"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20101.png?mtime=1357606093" width="735" height="521" /></a>
 </div>
 
 In Visual Studio 2010 you can target frameworks 2.0, 3.0, 3.5 and 4.0
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20102.png?mtime=1357606111"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20102.png?mtime=1357606111" width="605" height="657" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20102.png?mtime=1357606111"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20102.png?mtime=1357606111" width="605" height="657" /></a>
 </div>
 
 The toolbox has changed in Visual Studio 2010. it looks a lot cleaner to me. Finally we have a toolbox which does not resemble the Visual Basic 4 toolbox anymore
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20103.png?mtime=1357606121"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20103.png?mtime=1357606121" width="864" height="643" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20103.png?mtime=1357606121"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20103.png?mtime=1357606121" width="864" height="643" /></a>
 </div>
 
 Finally here is what a WPF project looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20104.png?mtime=1357606132"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/vs20104.png?mtime=1357606132" width="436" height="638" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20104.png?mtime=1357606132"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/vs20104.png?mtime=1357606132" width="436" height="638" /></a>
 </div>
 
 

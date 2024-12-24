@@ -30,7 +30,7 @@ To create a Shared Connection Manager, open SQL Server Data Tools and create a n
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-63.png?mtime=1323036357"><img src="/wp-content/uploads/blogs/DataMgmt/-63.png?mtime=1323036357" alt="" width="418" height="220" /></a>
+  <a href="/media/blogs/DataMgmt/-63.png?mtime=1323036357"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-63.png?mtime=1323036357" alt="" width="418" height="220" /></a>
 </div>
 
  
@@ -44,7 +44,7 @@ Once you've created a connection, you will see the connections start to show in 
  
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-64.png?mtime=1323036357"><img src="/wp-content/uploads/blogs/DataMgmt/-64.png?mtime=1323036357" alt="" width="494" height="56" /></a>
+  <a href="/media/blogs/DataMgmt/-64.png?mtime=1323036357"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-64.png?mtime=1323036357" alt="" width="494" height="56" /></a>
 </div>
 
  

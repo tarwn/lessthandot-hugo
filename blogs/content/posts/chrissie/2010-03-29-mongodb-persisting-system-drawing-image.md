@@ -166,7 +166,7 @@ End Class```
 And hey presto.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/koala.png" alt="" title="" width="302" height="302" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/koala.png" alt="" title="" width="302" height="302" />
 </div>
 
 See also

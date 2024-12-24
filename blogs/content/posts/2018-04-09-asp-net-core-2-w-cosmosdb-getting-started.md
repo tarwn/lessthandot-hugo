@@ -21,7 +21,7 @@ I am building the basic foundation for a B2C web application, using ASP.Net Core
 I'm in the writers chair, though, so this will be somewhat opinionated. We'll be ignoring some pre-packaged solutions (like ASP.Net Identity, Entity Framework, Bootstrap), shipping in small increments, and aiming for a balance between [YAGNI][1] and a clean foundation.
 
 <div id="attachment_9149" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/cosmos-db-600x315.png" alt="Azure Cosmos DB - Globally distributed, multi-model database" width="600" height="315" class="size-medium-width wp-image-9149" srcset="/wp-content/uploads/2018/04/cosmos-db.png 600w, /wp-content/uploads/2018/04/cosmos-db-300x158.png 300w, /wp-content/uploads/2018/04/cosmos-db-571x300.png 571w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/cosmos-db-600x315.png" alt="Azure Cosmos DB - Globally distributed, multi-model database" width="600" height="315" class="size-medium-width wp-image-9149" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/cosmos-db.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/cosmos-db-300x158.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/cosmos-db-571x300.png 571w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     <a href="https://azure.microsoft.com/en-us/services/cosmos-db/">Azure Cosmos DB – Globally distributed, multi-model database</a>
@@ -54,7 +54,7 @@ Ready? Awesome, let's go!
 We'll start with the ASP.Net Core Web Application with the API template (Create new project...). This includes the minimal set of nuget packages we need without creating piles of example and template files we'd have to go through and clean out. Also be sure to <u>not</u> choose an Authentication option. That magic is best left for temporary projects when you're trying to decode the documentation, but don't want to accidentally add 100 packages to your real system.
 
 <div id="attachment_9088" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_001-600x395.png" alt="Creating an ASP.Net Core 2 Project" width="600" height="395" class="size-medium-width wp-image-9088" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_001-600x395.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001-300x198.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001-768x506.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001-455x300.png 455w, /wp-content/uploads/2018/04/aspnetcore2cosmos_001.png 791w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_001-600x395.png" alt="Creating an ASP.Net Core 2 Project" width="600" height="395" class="size-medium-width wp-image-9088" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_001-600x395.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_001-300x198.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_001-768x506.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_001-455x300.png 455w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_001.png 791w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Creating an ASP.Net Core 2 Project
@@ -66,7 +66,7 @@ This template has minimal magic, we get a basic ASP.Net Core 2 website with a si
 Let's lock in this first win by pressing F5 to run the site and verify we have a working API that returns the hard-coded sample values from ValuesController.Get():
 
 <div id="attachment_9089" style="width: 505px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_002.png" alt="ASP.Net Core 2 - Default ValuesController Output" width="495" height="181" class="size-full wp-image-9089" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_002.png 495w, /wp-content/uploads/2018/04/aspnetcore2cosmos_002-300x110.png 300w" sizes="(max-width: 495px) 100vw, 495px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_002.png" alt="ASP.Net Core 2 - Default ValuesController Output" width="495" height="181" class="size-full wp-image-9089" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_002.png 495w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_002-300x110.png 300w" sizes="(max-width: 495px) 100vw, 495px" />
   
   <p class="wp-caption-text">
     ASP.Net Core 2 – Default ValuesController Output
@@ -88,7 +88,7 @@ We started with an API project template, but unlike prior versions of ASP.Net it
 Following the expected conventions, let's add a "Controllers" folder to the project. Then we can use the right-click context menu from there to "Add New Item" and pick an ASP.Net Core `Controller Class`:
 
 <div id="attachment_9091" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png" alt="ASP.Net Core 2: Add New Item - Controller Class" width="600" height="418" class="size-medium-width wp-image-9091" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-300x209.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-768x535.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003-431x300.png 431w, /wp-content/uploads/2018/04/aspnetcore2cosmos_003.png 948w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png" alt="ASP.Net Core 2: Add New Item - Controller Class" width="600" height="418" class="size-medium-width wp-image-9091" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003-600x418.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003-300x209.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003-768x535.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003-431x300.png 431w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003.png 948w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     ASP.Net Core 2: Add New Item – Controller Class
@@ -120,7 +120,7 @@ namespace SampleCosmosCore2App.Controllers
 Next we'll add a `Layout.cshtml` file that to serve as the general HTML layout for the site. Again we want to match the standard ASP.Net MVC conventions, so first create a top-level folder named `Views`, then create a folder under this named `Shared`, then finally right-click this folder to "Add View", ensure you have Empty Model and no layout selected, with the name "Layout"
 
 <div id="attachment_9092" style="width: 603px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png" alt="ASP.Net Core 2 - Add View Dialog" width="593" height="347" class="size-full wp-image-9092" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png 593w, /wp-content/uploads/2018/04/aspnetcore2cosmos_004-300x176.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_004-513x300.png 513w" sizes="(max-width: 593px) 100vw, 593px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png" alt="ASP.Net Core 2 - Add View Dialog" width="593" height="347" class="size-full wp-image-9092" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_004.png 593w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_004-300x176.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_004-513x300.png 513w" sizes="(max-width: 593px) 100vw, 593px" />
   
   <p class="wp-caption-text">
     ASP.Net Core 2 – Add View Dialog
@@ -128,7 +128,7 @@ Next we'll add a `Layout.cshtml` file that to serve as the general HTML layout f
 </div>
 
 <div class="note-area">
-  Note: if you can't edit the name of the folder you just added, see if you're still running in "Debug" and press Stop <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_003.5.png" alt="Press &quot;Stop&quot; to stop debugging" width="82" height="31" class="aligncenter size-full wp-image-9090" /> I've used more than 10 versions of Visual Studio and still do this 🙂
+  Note: if you can't edit the name of the folder you just added, see if you're still running in "Debug" and press Stop <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_003.5.png" alt="Press &quot;Stop&quot; to stop debugging" width="82" height="31" class="aligncenter size-full wp-image-9090" /> I've used more than 10 versions of Visual Studio and still do this 🙂
 </div>
 
 Once created, edit the `Layout.cshtml` file to look like this:
@@ -183,7 +183,7 @@ For this post, I'm using git with [github][6] as a remote repository.
 Open up a terminal window (I prefer Powershell with the posh-git plugin), and type `git init` in the root folder of the solution:
 
 <div id="attachment_9094" style="width: 562px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_006.png" alt="Initializing a git repository" width="552" height="32" class="size-full wp-image-9094" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_006.png 552w, /wp-content/uploads/2018/04/aspnetcore2cosmos_006-300x17.png 300w" sizes="(max-width: 552px) 100vw, 552px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_006.png" alt="Initializing a git repository" width="552" height="32" class="size-full wp-image-9094" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_006.png 552w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_006-300x17.png 300w" sizes="(max-width: 552px) 100vw, 552px" />
   
   <p class="wp-caption-text">
     Initializing a git repository
@@ -256,7 +256,7 @@ Then reference the new project from the ASP.Net one:
   * Select "Add", "Reference" and check the box next to the "*.Core" project
 
 <div id="attachment_9095" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png" alt="ASP/.Net Core - Adding Project Reference" width="600" height="415" class="size-medium-width wp-image-9095" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-300x207.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-768x531.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007-434x300.png 434w, /wp-content/uploads/2018/04/aspnetcore2cosmos_007.png 794w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png" alt="ASP/.Net Core - Adding Project Reference" width="600" height="415" class="size-medium-width wp-image-9095" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_007-600x415.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_007-300x207.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_007-768x531.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_007-434x300.png 434w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_007.png 794w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     ASP/.Net Core – Adding Project Reference
@@ -274,7 +274,7 @@ I'm going to work with a data class named `Sample`, so I'll create a `Sample.cs`
 Add the Microsoft.Azure.DocumentDB.Core nuget package to your "*.Core" project:
 
 <div id="attachment_9096" style="width: 528px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_008.png" alt="Add Microsoft.Azure.DocumentDB.Core package" width="518" height="83" class="size-full wp-image-9096" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_008.png 518w, /wp-content/uploads/2018/04/aspnetcore2cosmos_008-300x48.png 300w" sizes="(max-width: 518px) 100vw, 518px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_008.png" alt="Add Microsoft.Azure.DocumentDB.Core package" width="518" height="83" class="size-full wp-image-9096" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_008.png 518w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_008-300x48.png 300w" sizes="(max-width: 518px) 100vw, 518px" />
   
   <p class="wp-caption-text">
     Add Microsoft.Azure.DocumentDB.Core package
@@ -576,7 +576,7 @@ The scaffolded views also assume we're using bootstrap and include 2-3x more HTM
 And now we have a very simple CRUD interface:
 
 <div id="attachment_9097" style="width: 419px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_009.png" alt="ASP.Net Core 2 - Basic CRUD Interface to Cosmos DB" width="409" height="215" class="size-full wp-image-9097" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_009.png 409w, /wp-content/uploads/2018/04/aspnetcore2cosmos_009-300x158.png 300w" sizes="(max-width: 409px) 100vw, 409px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_009.png" alt="ASP.Net Core 2 - Basic CRUD Interface to Cosmos DB" width="409" height="215" class="size-full wp-image-9097" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_009.png 409w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_009-300x158.png 300w" sizes="(max-width: 409px) 100vw, 409px" />
   
   <p class="wp-caption-text">
     ASP.Net Core 2 – Basic CRUD Interface to Cosmos DB

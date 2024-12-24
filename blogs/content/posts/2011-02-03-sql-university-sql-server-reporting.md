@@ -24,7 +24,7 @@ categories:
 _SQL Server 2008 R2_ 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/SQL-University-Shield-268x300.png?mtime=1296004623"><img alt="" src="/wp-content/uploads/blogs/All/SQL-University-Shield-268x300.png?mtime=1296004623" width="268" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/SQL-University-Shield-268x300.png?mtime=1296004623"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/SQL-University-Shield-268x300.png?mtime=1296004623" width="268" height="300" /></a>
 </div>
 
 Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a great blog project put together by Jorge Segarra ([Twitter][2] | [Blog][3]), and contributed to by many SQL professionals. If you aren't a student yet, head over to the website and get started in classes! 
@@ -34,7 +34,7 @@ Welcome to SQL Server Reporting Services week at [SQL University][1]. This is a 
 If you've ever set up or troubleshot a SQL Server Reporting Services installation, you have probably used the Configuration Manager. This is a nice graphical tool provided with SSRS to set things like the service account, the URLs, and more. All of this information, and much more, is stored in a series of XML configuration files. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/SSRSConfigMgr.JPG?mtime=1296005044"><img alt="" src="/wp-content/uploads/blogs/All/SSRSConfigMgr.JPG?mtime=1296005044" width="974" height="735" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/SSRSConfigMgr.JPG?mtime=1296005044"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/SSRSConfigMgr.JPG?mtime=1296005044" width="974" height="735" /></a>
 </div>
 
 The main file is RSReportServer.config. We'll explore the options you can set in this post. 
@@ -46,7 +46,7 @@ The second thing you need to do? Back up the files before making any changes.
 Once you find the file and open it in a text editor (remember, it's just an XML document), this is what you'll see. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818"><img alt="" src="/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818" width="730" height="245" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/ConfigFileStart.JPG?mtime=1296005818" width="730" height="245" /></a>
 </div>
 
 Let's break it down! 

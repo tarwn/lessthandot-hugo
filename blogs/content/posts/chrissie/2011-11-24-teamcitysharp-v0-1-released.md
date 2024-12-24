@@ -29,7 +29,7 @@ You would also like to keep it simple for your manager.
 My statusboard looks like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/teamcitysharp/teamcitysharp.png?mtime=1322128878"><img alt="" src="/wp-content/uploads/users/chrissie1/teamcitysharp/teamcitysharp.png?mtime=1322128878" width="307" height="519" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/teamcitysharp/teamcitysharp.png?mtime=1322128878"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/teamcitysharp/teamcitysharp.png?mtime=1322128878" width="307" height="519" /></a>
 </div>
 
 And yes I made that just now in less than ten minutes.

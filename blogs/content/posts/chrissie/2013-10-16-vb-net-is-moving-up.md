@@ -21,7 +21,7 @@ Last years post read [VB.Net is rapidly becoming the most popular language in th
 This year the trend is continuing according to [Tiobe][2].
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/tiobe/Stats2013.png?mtime=1381909710"><img alt="" src="/wp-content/uploads/users/chrissie1/tiobe/Stats2013.png?mtime=1381909710" width="581" height="605" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/tiobe/Stats2013.png?mtime=1381909710"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/tiobe/Stats2013.png?mtime=1381909710" width="581" height="605" /></a>
 </div>
 
 So it goes from 0.840% to 1.933% this year.

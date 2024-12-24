@@ -21,7 +21,7 @@ Using SMO to script some indexes and FK's found on tables.
 Create a new c# app project in VS.NET (mine is named object scripter). Add the GUI objects so it looks like this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//smo_1.gif" alt="" title="" width="770" height="603" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//smo_1.gif" alt="" title="" width="770" height="603" />
 </div>
 
 Paste the code (not error handled and very quickly written..you've been warned!!!) below in the code view
@@ -102,5 +102,5 @@ namespace object_scripter
 Save and run. Enter an instance (dev one!!!), DB name and hit Run Me. Should appear as
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//smo_2.gif" alt="" title="" width="770" height="603" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//smo_2.gif" alt="" title="" width="770" height="603" />
 </div>

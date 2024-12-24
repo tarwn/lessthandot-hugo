@@ -24,11 +24,11 @@ categories:
 Does this kind of diagram get you excited about what's next to come in designing and maintaining a system that involves online and offline data consuming users? If it does, read on...
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/repl_diag.GIF?mtime=1319638751"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/repl_diag.GIF?mtime=1319638751" width="450" height="286" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/repl_diag.GIF?mtime=1319638751"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/repl_diag.GIF?mtime=1319638751" width="450" height="286" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-62.png?mtime=1319638751"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-62.png?mtime=1319638751" width="236" height="115" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-62.png?mtime=1319638751"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-62.png?mtime=1319638751" width="236" height="115" align="left" /></a>
 </div>
 
 One of the cool things about SQL Saturday events, they don't necessarily need to be on a Saturday. The annual [Minnesota SQL Saturday][1] is a perfect example. They hold theirs on a Friday. From my understanding, this is to be more adaptive to the schedules of the community there. Although it may sound odd to have a SQL Saturday on a **Friday**, I can easily see why a company would see value and grab their attention more when a training event like SQL Saturday is during a normal business day. If you need proof in this method of organization, the Minnesota SQL Saturday last year was a great success. This year, registration is already to the capacity of the venue and the waiting list has been initiated.

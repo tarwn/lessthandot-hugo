@@ -40,7 +40,7 @@ I will show you what I did to solve my little problem very quickly. Pretty sure 
 Lets start with an easy one.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber1.png?mtime=1294137908"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber1.png?mtime=1294137908" width="371" height="403" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber1.png?mtime=1294137908"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber1.png?mtime=1294137908" width="371" height="403" /></a>
 </div>
 
 This is a synthetic fiber that has a nice blue color. Should be easy enough. As you can see the background is far from ideal but the contrast is big enough. Since I only want to measure the color I will not try to find colorless fibers which makes this a lot easier to begin with.
@@ -77,7 +77,7 @@ It also makes the image 24bppRgb because that&#8217;s what the documentation say
 This is the result of the color filter.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber2.png?mtime=1294138665"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber2.png?mtime=1294138665" width="753" height="544" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber2.png?mtime=1294138665"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber2.png?mtime=1294138665" width="753" height="544" /></a>
 </div>
 
 As you can see there are still a few artifacts that I need to get rid of.
@@ -96,7 +96,7 @@ Dim i = New AForge.Imaging.Filters.ExtractBiggestBlob
 Which gave me this result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885" width="753" height="544" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885" width="753" height="544" /></a>
 </div>
 
 ### Average color
@@ -128,7 +128,7 @@ Something like this will do.
 The color is shown in the statusbar.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885" width="753" height="544" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294138885" width="753" height="544" /></a>
 </div>
 
 ## Conclusion

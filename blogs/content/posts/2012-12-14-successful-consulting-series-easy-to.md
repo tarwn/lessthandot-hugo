@@ -31,7 +31,7 @@ Consulting is a lot like Christmas.  You get to unwrap a new SQL Server environ
 </div>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/hope_1.gif?mtime=1355450746" alt="" width="392" height="290" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/hope_1.gif?mtime=1355450746" alt="" width="392" height="290" />
 </p>
 
 <p style="text-align: center;">
@@ -47,7 +47,7 @@ There are times when I am pulled into hostile environments.  Projects that have
 </div>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/-24.png?mtime=1355450747" alt="" width="313" height="246" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-24.png?mtime=1355450747" alt="" width="313" height="246" />
 </p>
 
 <p style="text-align: center;">
@@ -61,7 +61,7 @@ A good DBA will take the role of protector of data very seriously and rule with 
 </div>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/-25.png?mtime=1355450750" alt="" width="397" height="351" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-25.png?mtime=1355450750" alt="" width="397" height="351" />
 </p>
 
 <p style="text-align: center;">

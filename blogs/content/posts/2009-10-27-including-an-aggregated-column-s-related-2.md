@@ -175,7 +175,7 @@ With the results
 The execution plans 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ExecutionPlans.gif" alt="" title="" width="1862" height="1902" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ExecutionPlans.gif" alt="" title="" width="1862" height="1902" />
 </div>
 
 This illustrates a real case scenario – see [ASP.NET forum's thread][6]

@@ -71,7 +71,7 @@ SELECT ItemID ,
 FROM TestRowCompression;
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%201.JPG?mtime=1355883902" alt="" width="562" height="112" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%201.JPG?mtime=1355883902" alt="" width="562" height="112" />
 
 What I want to know now is how much space these rows are taking up in the database, and on the page. I can use [sp_spaceused][2] to find the reserved and used disk space of the table.
 
@@ -79,7 +79,7 @@ What I want to know now is how much space these rows are taking up in the databa
 sp_spaceused 'dbo.TestRowCompression';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%202.JPG?mtime=1355883902" alt="" width="422" height="71" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%202.JPG?mtime=1355883902" alt="" width="422" height="71" />
 
 Here, I can see that there are three rows, and the data is taking up 8KB of space that's one page. How do I tell how much space each row is using? I can view the page, using DBCC PAGE, to find that information.
 
@@ -91,7 +91,7 @@ I'll use DBCC IND to find the file number and page number.
 DBCC IND ('AdventureWorks2012', 'TestRowCompression', 0);
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%203.JPG?mtime=1355883902" alt="" width="768" height="62" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%203.JPG?mtime=1355883902" alt="" width="768" height="62" />
 
 I'll run DBCC PAGE, using the data page – PageType 1, PagePID 23816 – to view the data on the page.
 
@@ -104,11 +104,11 @@ GO
 
 I'm going to skim past the header and go to the information for the first row. Here, in the top right, I can see the entire row uses 95 bytes. You can see the bytes used by each field by reviewing 'Length (physical)'. The ItemID field is an INT, which takes 4 bytes for storage. The ItemName field is declared as CHAR(50), and even though it is only 20 characters in length, it's using 50 bytes. ItemLength and ItemWidth take up 9 bytes each, even though they are values of 0. This is the way data is normally stored on pages.
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%204.JPG?mtime=1355883902" alt="" width="610" height="518" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%204.JPG?mtime=1355883902" alt="" width="610" height="518" />
 
 Reviewing the data for the third record, we can see that also takes up 95 bytes, even though the values for ItemID and ItemName are shorter in length.
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%205.JPG?mtime=1355883902" alt="" width="618" height="485" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%205.JPG?mtime=1355883902" alt="" width="618" height="485" />
 
 If I am looking to reduce the space used by data in my database, I could enable row compression to do so. Before you start rebuilding all your tables in a development environment, use the stored procedure [sp\_estimate\_data\_compression\_savings][4] to determine what level of compression can be achieved. This will help you determine how much space can be saved, and if it is worth making the change.
 
@@ -116,7 +116,7 @@ If I am looking to reduce the space used by data in my database, I could enable 
 EXEC sp_estimate_data_compression_savings 'dbo', 'TestRowCompression', NULL, NULL, 'ROW';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%206.JPG?mtime=1355884192" alt="" width="950" height="36" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%206.JPG?mtime=1355884192" alt="" width="950" height="36" />
 
 Compressing this table would offer very little benefit, since at this time there are only three rows. However, I decide I want to enable row compression, to manage future data growth.
 
@@ -133,7 +133,7 @@ I'll run sp_spaceused again to compare the space used for the table.
 sp_spaceused 'dbo.TestRowCompression';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%207.JPG?mtime=1355884192" alt="" width="407" height="44" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%207.JPG?mtime=1355884192" alt="" width="407" height="44" />
 
 The data size has remained the same, but the unused size has increased. But, what this doesn't tell me is how much space is SQL Server using for each field in each row? What effect has row compression had on the rows? Let's view the page again.
 
@@ -149,16 +149,16 @@ GO
 
 I can see things have changed drastically! The overall row size is reduced to 42 bytes. ItemID is only using 3 bytes. ItemName is now using 20 bytes. DateAdded has been reduced from 8 to 7 bytes. UnitPrice has decreased from 8 to 2 bytes. ItemLength and ItemWidth are using 0 bytes.
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%208.JPG?mtime=1355884192" alt="" width="643" height="507" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%208.JPG?mtime=1355884192" alt="" width="643" height="507" />
 
 Looking at the third row, I can see even less space is being used ' 36 bytes. Here, the INT field, ItemID, is reduced to 1 byte, and ItemName is using only 11 bytes.
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%209.JPG?mtime=1355884192" alt="" width="630" height="484" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%209.JPG?mtime=1355884192" alt="" width="630" height="484" />
 
 This proves that row compression can be a powerful tool for reducing the space taken up by data on pages! Here are a few examples, ranging from Person.Person barely compressing, to dbo.bigProduct showing over 50% compression.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/compression%2015.JPG?mtime=1355884466" alt="" width="637" height="490" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2015.JPG?mtime=1355884466" alt="" width="637" height="490" />
 </p>
 
  ****
@@ -538,7 +538,7 @@ WITH (DATA_COMPRESSION = PAGE);
 sp_spaceused 'dbo.TestPageCompression';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%2010.JPG?mtime=1355884192" alt="" width="416" height="68" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2010.JPG?mtime=1355884192" alt="" width="416" height="68" />
 
 Right now, this is no different from when I applied row compression. Because this is a small table, with few repeating values, this does not surprise me. I have another table in my database, [dbo.bigTransactionHistory][5], which is larger and may offer better results. Let's look.
 
@@ -546,7 +546,7 @@ Right now, this is no different from when I applied row compression. Because thi
 sp_spaceused 'dbo.bigTransactionHistory';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%2011.JPG?mtime=1355884637" alt="" width="504" height="74" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2011.JPG?mtime=1355884637" alt="" width="504" height="74" />
 
 We can see the table has approximately 1100 MB of data.
 
@@ -558,7 +558,7 @@ WITH (DATA_COMPRESSION = ROW);
 sp_spaceused 'dbo.bigTransactionHistory';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%2012.JPG?mtime=1355884638" alt="" width="492" height="77" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2012.JPG?mtime=1355884638" alt="" width="492" height="77" />
 
 The space used by data is now down to 725 MB.
 
@@ -570,7 +570,7 @@ WITH (DATA_COMPRESSION = PAGE);
 sp_spaceused 'dbo.bigTransactionHistory';
 ```
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%2013.JPG?mtime=1355884638" alt="" width="493" height="70" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2013.JPG?mtime=1355884638" alt="" width="493" height="70" />
 
 It has indeed reduced the space used, down to 472 MB. This is roughly 58% space savings.
 
@@ -586,12 +586,12 @@ GO
 
 The compression information is stored below the header and above the rows.
 
-<img src="/wp-content/uploads/users/grrlgeek/compression%2014.JPG?mtime=1355884638" alt="" width="816" height="152" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2014.JPG?mtime=1355884638" alt="" width="816" height="152" />
 
 Page compression can also greatly reduce the space your database is using on disk. Here are a few examples of tables that have had page compression applied. In these examples, space savings range from 38% to 61%.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/compression%2016.JPG?mtime=1355884817" alt="" width="526" height="333" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/compression%2016.JPG?mtime=1355884817" alt="" width="526" height="333" />
 </p>
 
 > _Question_:'if I have enabled row or page compression, can I take a backup of the database, which is on Enterprise Edition, and restore it to a server that is Standard Edition? No, that can't be done. Paul Randal demonstrates this in [Does my database contain Enterprise-only features?][6] Be aware of this, and the need to manage and be aware of your compression settings, if this could happen in your environment.

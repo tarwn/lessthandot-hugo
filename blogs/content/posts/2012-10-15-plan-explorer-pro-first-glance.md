@@ -21,7 +21,7 @@ Over these past few days, I've had a chance to check out the new release of [Pla
 We'll focus on the features I have gotten into so far as shown below 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/plan_exp_1.gif?mtime=1350304970"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/plan_exp_1.gif?mtime=1350304970" width="624" height="105" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/plan_exp_1.gif?mtime=1350304970"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/plan_exp_1.gif?mtime=1350304970" width="624" height="105" /></a>
 </div>
 
 </a>
@@ -31,7 +31,7 @@ We'll focus on the features I have gotten into so far as shown below
 This may be small to most but, efficiency is absolutely critical to my work.  I've talked about his for years in presenting and mentoring; lazy efficiency.  Lazy efficiency requires the right tools at your mouse pointer.  Such things as wizards that function, multiple monitors or even a mouse that functions the way you need it.  Remember the case study done way back referred to as, "Death by the 10 second waits"?  That study, if I recall accurately, was done based on multiple monitor utilization.  In all, the time saved by ALT+TAB or however switching between screens is performed, is increased dramatically by the addition of multiple monitors.  Window tabs fall into this area.  Plan Explorer Pro now has a tabbed format for windows.  I will admit, having a dozen unique Plan Explorer instances running while working was annoying.  Now, with Pro, we tab it!
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-164.png?mtime=1350304971"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-164.png?mtime=1350304971" width="624" height="104" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-164.png?mtime=1350304971"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-164.png?mtime=1350304971" width="624" height="104" /></a>
 </div>
 
 As shown above, I have three distinct plans open and I'm working on them at the same time.  This is absolutely excellent in the terms of efficiency.  Given the normal task in which several plans could all relate but in the scheme of things, they are unique and thus require tuning in their own window, this is a big time saver.  There is one con to this that I found but will save that for the con area even more so since it's the only con I found.  (One con alone says something about this great tool.)
@@ -41,7 +41,7 @@ As shown above, I have three distinct plans open and I'm working on them at the 
 The next thing I found really valued in the Pro Edition, the history and comments area.  At first, I didn't care all that much about this feature.  However, I saw the benefit simply from utilizing the feature.   Essentially, while tuning and changing things during that process such as indexing, T-SQL alterations or just commenting on what needs to happen, you can track that evolution in the history and comments area.  What is even better is, it will add to the history area upon each time you alter the statements you are working on.  For example, I write a statement against AdventureWorks2012, to work with the new features that Pro Edition has.  During the process of tuning the statement, I managed to retain a historic view and notes of why I did what I did, as well as what was changed.  Personally, this is critical to tuning; keeping track of what you changed.  As you inadvertently will at some point, change something and not remember why.  When that change affects other queries or batches, you'll wish you knew when and where it was made.  As shown below, the history and comments area is simply that, historic changes notes and an area to comment for each.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-165.png?mtime=1350304971"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-165.png?mtime=1350304971" width="316" height="299" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-165.png?mtime=1350304971"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-165.png?mtime=1350304971" width="316" height="299" /></a>
 </div>
 
 **Full Query Call Stack** 
@@ -63,7 +63,7 @@ WHILE @LOOP < 100
 With Pro Edition, we can now follow through the loop and each iteration as it pertains to the cost of that iteration.  In the example query, this equates to 101 generations of cost in terms of a plan to review; the first assignment of the variable @DueDate and then the 100 iterations of the loop.  In the real world, this could provide quick examination of problems that are dug deep in a long process or transaction, such as a procedure call hundreds of lines down in a conditional statement.  Now, that line can be pointed out quickly based on review of runtime based on the cost and Plan Explorer's way of highlighting the high cost operations.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-166.png?mtime=1350304971"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-166.png?mtime=1350304971" width="624" height="64" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-166.png?mtime=1350304971"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-166.png?mtime=1350304971" width="624" height="64" /></a>
 </div>
 
 In the above image, the highlighted row could be a point in which the full query stack would be extremely useful.  This line is pointing out that the step-through to this point hits a statement that throws a cost of 76 reads on an Index Scan and high duration and CPU as it pertains to the total time of execution.  Clicking the line populates the Plan Tree tab and shows more depth to the tuning area identified.
@@ -80,7 +80,7 @@ Clicking the actual plan again in Plan Explorer Pro, I drop my reads to 2 and re
 Stepping through the stack, another statement is seen as high cost to the overall runtime.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-167.png?mtime=1350304972"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-167.png?mtime=1350304972" width="624" height="57" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-167.png?mtime=1350304972"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-167.png?mtime=1350304972" width="624" height="57" /></a>
 </div>
 
 Again, we'd want to add to the comments, another index change is needed.
@@ -114,7 +114,7 @@ WHILE @LOOP < 100
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-168.png?mtime=1350304972"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-168.png?mtime=1350304972" width="299" height="116" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-168.png?mtime=1350304972"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-168.png?mtime=1350304972" width="299" height="116" /></a>
 </div>
 
 As expected, the PAGEIOLATCH_SH wait type is shown in the new tab that appears, Wait Stats.  I cannot stress enough the usefulness in this alone.  This really was the wow to me in the Pro Edition.

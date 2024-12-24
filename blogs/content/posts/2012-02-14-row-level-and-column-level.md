@@ -60,7 +60,7 @@ and genstatus = 0
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-25.png?mtime=1329265073"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-25.png?mtime=1329265073" width="624" height="41" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-25.png?mtime=1329265073"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-25.png?mtime=1329265073" width="624" height="41" /></a>
 </div>
 
 The query above shows that the update performed earlier is in a pending state on the subscriber.  This is determined by utilizing the genstatus column in MSMerge_Genhistory.  The genstatus values can be "0 = Open","1 = Closed" or "2 = Closed and the update was taken from another subscriber".  This information can be critical to tracking where updates originated from while troubleshooting.
@@ -82,7 +82,7 @@ exec sp_showcolv @colv
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-26.png?mtime=1329265073"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-26.png?mtime=1329265073" width="303" height="195" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-26.png?mtime=1329265073"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-26.png?mtime=1329265073" width="303" height="195" /></a>
 </div>
 
 The position column represents the actual column position for the results from running sp\_showcolv.  This coincides with the actual cardinality of the columns in the table.  In our results, columns 3, 4 and 5 are showing a version number of 5.  Checking INFORMATION\_SCHEMA.TABLES we can return the position and then match it up to the position returned from the sp_showcolv procedure.
@@ -132,13 +132,13 @@ select * from #colv_results
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-27.png?mtime=1329265074"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-27.png?mtime=1329265074" width="584" height="252" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-27.png?mtime=1329265074"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-27.png?mtime=1329265074" width="584" height="252" /></a>
 </div>
 
 Run the same script on the publication database so the versions can be compared.  Comment out the line and genstatus = 0 as the genstatus of the rowguid will be in the state of the last closed generation.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-28.png?mtime=1329265074"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-28.png?mtime=1329265074" width="577" height="251" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-28.png?mtime=1329265074"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-28.png?mtime=1329265074" width="577" height="251" /></a>
 </div>
 
 As shown above, the versions on the publication database for the columns and specific rowguid are lower than the versions shown on the subscriber.
@@ -150,7 +150,7 @@ Run the merge agent so the subscriber is synchronized with the publication.  On
 Results from the publication database
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-29.png?mtime=1329265074"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-29.png?mtime=1329265074" width="575" height="251" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-29.png?mtime=1329265074"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-29.png?mtime=1329265074" width="575" height="251" /></a>
 </div>
 
 **Performance**
@@ -182,7 +182,7 @@ where SalesPersonID = 275
 Results from applying the snapshot and synchronizing
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-30.png?mtime=1329265075"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-30.png?mtime=1329265075" width="624" height="464" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-30.png?mtime=1329265075"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-30.png?mtime=1329265075" width="624" height="464" /></a>
 </div>
 
 Now, alter publication and article SalesOrderHeader to use Row_Level Tracking.  Create a new snapshot and re-initialize the subscriber.  Run the same update statement to SalesPersonID of 275 as performed on the Column-Level Tracking enabled article.
@@ -190,7 +190,7 @@ Now, alter publication and article SalesOrderHeader to use Row_Level Tracking. 
 Results with Row-Level Tracking
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-31.png?mtime=1329265076"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-31.png?mtime=1329265076" width="624" height="445" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-31.png?mtime=1329265076"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-31.png?mtime=1329265076" width="624" height="445" /></a>
 </div>
 
 This shows quite a difference in both the snapshot applying and the synchronization steps.

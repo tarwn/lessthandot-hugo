@@ -29,13 +29,13 @@ When I installed Roslyn I thought the visualizer tool window would just be there
 First you need to open the Getting started document.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn10.png?mtime=1319377387"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn10.png?mtime=1319377387" width="275" height="81" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn10.png?mtime=1319377387"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn10.png?mtime=1319377387" width="275" height="81" /></a>
 </div>
 
 Then you should read the whole document, of course. If you did that you can click on the link that says Syntax Visualizer Tool Window
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn11.png?mtime=1319377523"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn11.png?mtime=1319377523" width="1070" height="663" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn11.png?mtime=1319377523"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn11.png?mtime=1319377523" width="1070" height="663" /></a>
 </div>
 
 You can find that solution file in your my documents under Microsoft Codename Roslyn CTP &#8211; October 2011SharedSyntaxVisualizerExtension
@@ -51,17 +51,17 @@ You can now run this solution. And open our previous created Roslyn Console Appl
 If you now go to the View->Other windows you will find a Roslyn syntax visualizer menu item. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn13.png?mtime=1319378501"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn13.png?mtime=1319378501" width="615" height="478" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn13.png?mtime=1319378501"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn13.png?mtime=1319378501" width="615" height="478" /></a>
 </div>
 
 If you open this and open the class1 file you will see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn12.png?mtime=1319378584"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn12.png?mtime=1319378584" width="915" height="440" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn12.png?mtime=1319378584"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn12.png?mtime=1319378584" width="915" height="440" /></a>
 </div>
 
 And if you want to see that they need to do more work on Roslyn than you should open the Modult1 file ;-).
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn14.png?mtime=1319378679"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn14.png?mtime=1319378679" width="1155" height="384" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn14.png?mtime=1319378679"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn14.png?mtime=1319378679" width="1155" height="384" /></a>
 </div>

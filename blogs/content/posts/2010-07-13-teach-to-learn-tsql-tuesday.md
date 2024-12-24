@@ -20,7 +20,7 @@ tags:
   - teach
 
 ---
-[<img src="/wp-content/uploads/blogs/DataMgmt/sqltuesday1.gif" alt="" title="T-SQL Tuesday" width="154" height="154" align="left" />][1] Robert Davis ([Twitter][2] | [Blog][3]) has the control this month and who better to have it other than him. I've come to respect Robert greatly over the last few months (yes, had no idea who he was just a short time ago). That's the point of community though, isn't it? We meet these leaders and professionals daily and scale up and out endlessly. It truly has no limits and I'm honored to be part of it. 
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqltuesday1.gif" alt="" title="T-SQL Tuesday" width="154" height="154" align="left" />][1] Robert Davis ([Twitter][2] | [Blog][3]) has the control this month and who better to have it other than him. I've come to respect Robert greatly over the last few months (yes, had no idea who he was just a short time ago). That's the point of community though, isn't it? We meet these leaders and professionals daily and scale up and out endlessly. It truly has no limits and I'm honored to be part of it. 
 
 As the host of T-SQL Tuesday this month, Robert has the topic of Getting' schooled. I'm going to take the topic and wander around a bit, not specifically about how I learn or teach, but how you can represent yourself by learning and teaching. 
 
@@ -35,7 +35,7 @@ This month's topic in my opinion is one of the single most important topics we a
 Each one of these questions has the same level of importance. Without one, the others fall short and become an unsolvable equation. In order for us as individuals and a community to grow, we must embrace learning but cannot fall short of passing our knowledge on in our **daily** teachings. I emphasize the word _daily_ in that last statement, because this is a 24/7 job we should all take seriously. Sometimes we pass on our knowledge by teaching in a simple sentence or in some cases even a subtle nudge of a word like profiler or Pivot. Each and every time we make the effort to pass these things on, we not only help the ones in need, but continue to build something that so many of us have come to cherish: Our SQL Community.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/learnlead_2.gif" alt="" title="" width="200" height="267" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/learnlead_2.gif" alt="" title="" width="200" height="267" align="left" />
 </div>
 
 **Learning not to make messes**
@@ -45,7 +45,7 @@ Everyone in a professional career that involves the constant evolution of comput
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/learnlead.gif" alt="" title="" width="225" height="137" align="right" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/learnlead.gif" alt="" title="" width="225" height="137" align="right" />
 </div>
 
 **Teach to learn** 

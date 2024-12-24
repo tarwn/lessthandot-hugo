@@ -19,7 +19,7 @@ categories:
 It's bookworm time again! Since I'm back in the throes of half marathon training, there's been less time for me to grab a cup of coffee and read a book each morning, but I'm making time for it when I can. My latest geek read was [_SQL Server Hardware_][1] by Glenn Berry ([blog][2] | [twitter][3]).
 
 <p style="text-align: center;">
-  <a href="http://www.simple-talk.com/books/sql-books/sql-server-hardware/"><img src="/wp-content/uploads/users/grrlgeek/1199-SQLServerHardware_Cover_200h.gif?mtime=1350934731" alt="" /></a>
+  <a href="http://www.simple-talk.com/books/sql-books/sql-server-hardware/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/1199-SQLServerHardware_Cover_200h.gif?mtime=1350934731" alt="" /></a>
 </p>
 
 [][1]

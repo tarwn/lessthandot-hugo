@@ -175,7 +175,7 @@ My main suspect had been NancyBootstrapperLocator from the beginning, but first 
 And this was the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy10.png?mtime=1355559642"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy10.png?mtime=1355559642" width="858" height="163" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy10.png?mtime=1355559642"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy10.png?mtime=1355559642" width="858" height="163" /></a>
 </div>
 
 AS you can see my Bootstrapper is in the list of locatedbootstrapper but it is second in the list after the Nancy.Testing configurable bootstrapper. And Nancy will take the first one out of that list so mine was ignored.

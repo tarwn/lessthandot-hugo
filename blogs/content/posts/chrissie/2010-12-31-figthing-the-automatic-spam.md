@@ -22,7 +22,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <a href="/media/users/chrissie1/spam.jpg?mtime=1293807523"><img src="/wp-content/uploads/users/chrissie1/spam.jpg?mtime=1293807523" alt="" width="168" height="133" /></a>
+  <a href="/media/users/chrissie1/spam.jpg?mtime=1293807523"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/spam.jpg?mtime=1293807523" alt="" width="168" height="133" /></a>
 </div>
 
  

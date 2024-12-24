@@ -51,7 +51,7 @@ GO
 The result looks like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply1.png?mtime=1331554009"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply1.png?mtime=1331554009" width="488" height="284" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply1.png?mtime=1331554009"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply1.png?mtime=1331554009" width="488" height="284" /></a>
 </div>
 
 Now if you look at the data you'll see we have 3 lines per course each with a different date. The request was to have 1 line per course with all the dates in one field. To do this I'm "joining" the table to itself by using it as a normal table once and as XML the second time. Using the DISTINCT clause on the left side filters out the duplicate records. The FOR XML on the right side is used to make a dummy list of the dates the courses start. With the CROSS APPLY operator I'm joining the two results in a result set like requested by the customer:
@@ -69,7 +69,7 @@ GO
 With the desired result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply2.png?mtime=1331554024"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply2.png?mtime=1331554024" width="594" height="156" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply2.png?mtime=1331554024"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CrossApply2.png?mtime=1331554024" width="594" height="156" /></a>
 </div>
 
 So maybe the end-user was right and we can do magic with data. I didn't use the tools he expected but importing the Excel file into a SQL Server database brought it to my comfort zone where I could use the XML and CROSS APPLY possibilities of SQL Server to get the desired result.

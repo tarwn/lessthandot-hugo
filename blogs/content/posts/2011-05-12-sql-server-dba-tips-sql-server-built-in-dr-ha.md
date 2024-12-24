@@ -17,7 +17,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-56.png?mtime=1305135956"><img src="/wp-content/uploads/blogs/DataMgmt/-56.png?mtime=1305135956" alt="" width="76" height="53" align="left" /></a>
+  <a href="/media/blogs/DataMgmt/-56.png?mtime=1305135956"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-56.png?mtime=1305135956" alt="" width="76" height="53" align="left" /></a>
 </div>
 
 SQL Server has several options available for a stable DR/HA solution at a minimal cost.  There is a grey area in which the time to start looking to products from third party vendors may allow more manageable DR/HA solutions.  This grey area typically becomes more prevalent when database size grows or geographical distance is added to a SQL Server landscape.  However, the features in SQL Server can scale to the higher percentages of database size that DBAs are handling. This can be seen in the [survey on SQL Skills][1] that most databases are in 100GB to 500GB range.
@@ -62,7 +62,7 @@ Replication is also transactional process which can be considered for use as a H
 **When and how to yell disaster?**
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-57.png?mtime=1305135956"><img src="/wp-content/uploads/blogs/DataMgmt/-57.png?mtime=1305135956" alt="" width="72" height="48" align="left" /></a>
+  <a href="/media/blogs/DataMgmt/-57.png?mtime=1305135956"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-57.png?mtime=1305135956" alt="" width="72" height="48" align="left" /></a>
 </div>
 
 Debating the choices to use will be impacted once determining the levels of a disaster that your unique databases can handle.  [Beginning stages of a DR plan for SQL Server][4] goes over steps of a disaster recovery planning.  Once you've gone through these steps and how they fit into your environment for each database, these choices become easier. 

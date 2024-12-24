@@ -25,7 +25,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/logo.png?mtime=1358861145"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/logo.png?mtime=1358861145" alt="" width="136" height="84" /></a>
+  <a href="/media/users/koenverbeeck/logo.png?mtime=1358861145"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/logo.png?mtime=1358861145" alt="" width="136" height="84" /></a>
 </p>
 
 <p style="text-align: justify;">

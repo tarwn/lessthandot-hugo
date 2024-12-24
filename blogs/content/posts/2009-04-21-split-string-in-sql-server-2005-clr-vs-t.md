@@ -80,13 +80,13 @@ I loaded a text file with a huge amount of delimited data to really get a gauge 
 So on a fresh restart you can see by checking type MEMORYCLERK\_SQLCLR from dm\_os\_memory\_clerks that we are clear
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//clr_clerk_1.gif" alt="" title="" width="1439" height="63" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//clr_clerk_1.gif" alt="" title="" width="1439" height="63" />
 </div>
 
 After execution of the CLR function you can see the differences
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//clr_clerk_2.gif" alt="" title="" width="1187" height="39" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//clr_clerk_2.gif" alt="" title="" width="1187" height="39" />
 </div>
 
 Call these functions as
@@ -99,7 +99,7 @@ Select * From dbo.CLR_Split(@bigdamnvar, '%')
 Below you can see first execution and then how quickly performance picks up on the second cached plan
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//split_clr.gif" alt="" title="" width="496" height="368" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//split_clr.gif" alt="" title="" width="496" height="368" />
 </div>
 
 and
@@ -112,7 +112,7 @@ Select * From dbo.[Split](@bigdamnvar, '%')
 I executed this a few times to get it in cache as well. The odd increase was the server working on something else. I validated that so ignore it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//split_tsql.gif" alt="" title="" width="769" height="372" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//split_tsql.gif" alt="" title="" width="769" height="372" />
 </div>
 
 You may notice the bytes recieved from the server are different and SQL CLR is much heavier. That is something to keep in mind. SQL will always be light compared to SQL CLR. That is my experience in using the two side by side.

@@ -55,7 +55,7 @@ IO results
 And the plan generated from this query
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/nconpk_1.gif?mtime=1349983070"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/nconpk_1.gif?mtime=1349983070" width="624" height="404" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/nconpk_1.gif?mtime=1349983070"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/nconpk_1.gif?mtime=1349983070" width="624" height="404" /></a>
 </div>
 
 In all respects, this plan is optimized fairly well.  The one key aspect to the query and plan is, the clustered index is the table and will pull all columns along with it, which equates to more pages that are required to come into the buffer.   We can look at the page count required for the exact table by utilizing dm\_os\_buffer\_descriptors, allocation\_unit, sys.indexes and sys.partitions DMOs and catalog views.
@@ -92,7 +92,7 @@ WHERE database_id = db_id() AND obj.[name] = 'IndexPageCount'
 GROUP BY obj.name, obj.index_id , i.[name],i.[type_desc]
 ORDER BY Buffered_Page_Count DESC
 ```<div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-161.png?mtime=1349983070"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-161.png?mtime=1349983070" width="516" height="73" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-161.png?mtime=1349983070"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-161.png?mtime=1349983070" width="516" height="73" /></a>
 </div>
 
 As shown, the resulting buffered page count is 172 at this point.  This page count is where we want to optimize the query and see how the indexing strategy can assist in lowering the overall page count and buffer utilization.
@@ -135,13 +135,13 @@ After reviewing the statistics IO from the second execution, the new covering in
 Looking at the execution plan, we can see the new nonclustered index is effectively being utilized as well.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-162.png?mtime=1349983071"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-162.png?mtime=1349983071" width="624" height="338" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-162.png?mtime=1349983071"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-162.png?mtime=1349983071" width="624" height="338" /></a>
 </div>
 
 Of course, we've only replaced an index seek for another index seek.  To see the real optimization, the IO and then equating that to review of the pages pulled into the buffer should be checked.  Execute the query to review the pages in the buffer that was used previously.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-163.png?mtime=1349983071"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-163.png?mtime=1349983071" width="607" height="58" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-163.png?mtime=1349983071"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-163.png?mtime=1349983071" width="607" height="58" /></a>
 </div>
 
 As shown, the page count in the buffer is drastically lower than the previous count of 172.  Based on this, we've optimized the execution of the query and plan but, more importantly, optimized the resources that are being used by the execution of the query.

@@ -22,7 +22,7 @@ I made the misstake of just using the defaults for teamcity and the default is t
 I even made a nice diagram for it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild1.png?mtime=1373613070"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild1.png?mtime=1373613070" width="2354" height="3059" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild1.png?mtime=1373613070"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild1.png?mtime=1373613070" width="2354" height="3059" /></a>
 </div>
 
 See how it says Zero exit code and tests pass after the nunit step? 
@@ -32,7 +32,7 @@ The two are totally different things. Even if some tests fail the exit code can 
 So if we leave this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild2.png?mtime=1373613305"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild2.png?mtime=1373613305" width="664" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild2.png?mtime=1373613305"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild2.png?mtime=1373613305" width="664" height="74" /></a>
 </div>
 
 And get failing tests, our nuget package will still be created. Because the exit code is 0.
@@ -40,7 +40,7 @@ And get failing tests, our nuget package will still be created. Because the exit
 It is better to set this in step 3 (build the nuget package)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild3.png?mtime=1373613492"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild3.png?mtime=1373613492" width="642" height="60" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild3.png?mtime=1373613492"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcitybuild3.png?mtime=1373613492" width="642" height="60" /></a>
 </div>
 
 It will then not make a nuget package when the tests fail or the exit code is 0.

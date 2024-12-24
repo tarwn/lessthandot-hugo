@@ -41,7 +41,7 @@ SELECT <published_columns> FROM [Person].[Person] WHERE [LoginAccount] = SUSER_S
 This configuration in the publication will automatically or manually force a data partition to be generated for any valid domain user with a listing in the publication access list when they initially connect to the publication.  For example, a publication that is based on Person.Person with a filter on SUSER_SNAME() and setting of "A row from this table will go to only one subscription" would reveal the Data Partitions page in the publications properties.  Note: Selecting either one or multiple subscriptions availability for partitions will be discussed later.  The data partitions page shows all data partitions that have been created manually or by a subscriber that has connected to the publication.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-67.png?mtime=1323215615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-67.png?mtime=1323215615" width="381" height="342" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-67.png?mtime=1323215615"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-67.png?mtime=1323215615" width="381" height="342" /></a>
 </div>
 
 Given this configuration and a subscription connecting to the publication initially, a data partition snapshot will be generated and applied to the subscriber.  During the evaluation process, replication will use _data partition views_ to retain the statement that we went over earlier.  This statement is how the evaluation process will be performed.  These views are a key object that can be used to assist in performance tuning merge replication with parameterized filters.  This is even more valuable in tuning when Join Filters are introduced into the solution, and filtering becomes complex and starts to severely impact performance.
@@ -74,7 +74,7 @@ The performance of this view is critical to the replication process and evaluati
  
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-68.png?mtime=1323215615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-68.png?mtime=1323215615" width="624" height="153" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-68.png?mtime=1323215615"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-68.png?mtime=1323215615" width="624" height="153" /></a>
 </div>
 
 IO Statistics of this statement
@@ -120,7 +120,7 @@ GO
 The new optimized plan
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-69.png?mtime=1323215615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-69.png?mtime=1323215615" width="624" height="152" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-69.png?mtime=1323215615"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-69.png?mtime=1323215615" width="624" height="152" /></a>
 </div>
 
 **What's next?**

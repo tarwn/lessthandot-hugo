@@ -35,7 +35,7 @@ First thing to do is pick a SQL Instance that you want to host the CMS (you do n
 From the View Menu, choose Registered Servers. Expand the Database Engine and then right click on Central Management Servers and choose the only option you get which is "Register Central Management Server...".
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/CMS1.jpg?mtime=1340976654"><img alt="" src="/wp-content/uploads/users/kconan/CMS1.jpg?mtime=1340976654" width="656" height="526" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/CMS1.jpg?mtime=1340976654"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/CMS1.jpg?mtime=1340976654" width="656" height="526" /></a>
 </div>
 
 In the Server name, enter the SQL Instance you chose to host the CMS, set Authentication to whatever you shop uses (we use Windows Authentication), in Registered server name you can put in a nickname for the CMS and then you can fill out the description if you want.
@@ -45,7 +45,7 @@ Now if you right click on your CMS, you choose New Server Group to create folder
 Here is a sample of how you could make it look:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/CMS2.jpg?mtime=1340976654"><img alt="" src="/wp-content/uploads/users/kconan/CMS2.jpg?mtime=1340976654" width="265" height="155" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/CMS2.jpg?mtime=1340976654"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/CMS2.jpg?mtime=1340976654" width="265" height="155" /></a>
 </div>
 
 If you right click on a folder you can choose New Query which will open a new window that is connected to all the instances in that folder including the children folders).

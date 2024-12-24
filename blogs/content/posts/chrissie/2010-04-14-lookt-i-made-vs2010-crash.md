@@ -23,7 +23,7 @@ And Still&#8230; it crashed.
 Well it wasn&#8217;t really me, but Something in the resx from a third party. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010error.png" alt="" title="" width="376" height="180" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010error.png" alt="" title="" width="376" height="180" />
 </div>
 
 And the error is very descriptive too.

@@ -162,7 +162,7 @@ Mine is installed here C:Program FilesJavajdk1.7.0_07bin
 Here is screenshot of my directory with some of those programs
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/JavaBinDirectory.PNG?mtime=1353948732"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/JavaBinDirectory.PNG?mtime=1353948732" width="795" height="635" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/JavaBinDirectory.PNG?mtime=1353948732"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/JavaBinDirectory.PNG?mtime=1353948732" width="795" height="635" /></a>
 </div>
 
 There is something called jvisualvm.exe, this is know as Java VisualVM, from the Oracle documentation: http://docs.oracle.com/javase/6/docs/technotes/tools/share/jvisualvm.html
@@ -174,15 +174,15 @@ Java VisualVM combines several monitoring, troubleshooting, and profiling utilit
 Here are some screenshots of the tool in action while running against Eclipse
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/VisualVMMonitor.PNG?mtime=1353948863"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/VisualVMMonitor.PNG?mtime=1353948863" width="929" height="579" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/VisualVMMonitor.PNG?mtime=1353948863"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/VisualVMMonitor.PNG?mtime=1353948863" width="929" height="579" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreads.PNG?mtime=1353948850"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreads.PNG?mtime=1353948850" width="919" height="581" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreads.PNG?mtime=1353948850"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreads.PNG?mtime=1353948850" width="919" height="581" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreadsTable.PNG?mtime=1353948837"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreadsTable.PNG?mtime=1353948837" width="930" height="594" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreadsTable.PNG?mtime=1353948837"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/VisualVMThreadsTable.PNG?mtime=1353948837" width="930" height="594" /></a>
 </div>
 
 Always include . as part of the classpath, this ensure that the current directory is searched in case of a default package

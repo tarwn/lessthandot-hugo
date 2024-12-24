@@ -88,7 +88,7 @@ My advice to anyone reading this: get involved involved in the SQL community. Jo
  [3]: /index.php/DataMgmt/DBAdmin/a-cheat-sheet-for-all
  [4]: /index.php/DataMgmt/ssrs/creating-mailing-labels-in-sql
  [5]: /index.php/DataMgmt/DBProgramming/MSSQLServer/user-groups-those-still-exist
- [6]: /wp-content/uploads/users/grrlgeek/IMG_1558_small.jpg?mtime=1318964780 ""
+ [6]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/IMG_1558_small.jpg?mtime=1318964780 ""
  [7]: http://sqlchicken.com/sql-university/
  [8]: http://sqlblog.com/blogs/adam_machanic/archive/tags/T-SQL+Tuesday/default.aspx
  [9]: http://madpass.org

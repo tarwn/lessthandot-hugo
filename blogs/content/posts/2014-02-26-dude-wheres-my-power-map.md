@@ -54,7 +54,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_install365.png"><img class="alignnone  wp-image-2459" alt="PowerMap_install365" src="/wp-content/uploads/2014/02/PowerMap_install365.png" width="837" height="418" srcset="/wp-content/uploads/2014/02/PowerMap_install365.png 930w, /wp-content/uploads/2014/02/PowerMap_install365-300x149.png 300w" sizes="(max-width: 837px) 100vw, 837px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install365.png"><img class="alignnone  wp-image-2459" alt="PowerMap_install365" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install365.png" width="837" height="418" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install365.png 930w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install365-300x149.png 300w" sizes="(max-width: 837px) 100vw, 837px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -62,7 +62,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_uninstall.png"><img class="alignnone  wp-image-2461" alt="PowerMap_uninstall" src="/wp-content/uploads/2014/02/PowerMap_uninstall.png" width="620" height="504" srcset="/wp-content/uploads/2014/02/PowerMap_uninstall.png 775w, /wp-content/uploads/2014/02/PowerMap_uninstall-300x243.png 300w" sizes="(max-width: 620px) 100vw, 620px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_uninstall.png"><img class="alignnone  wp-image-2461" alt="PowerMap_uninstall" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_uninstall.png" width="620" height="504" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_uninstall.png 775w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_uninstall-300x243.png 300w" sizes="(max-width: 620px) 100vw, 620px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -70,7 +70,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_install.png"><img class="alignnone size-medium wp-image-2456" alt="PowerMap_install" src="/wp-content/uploads/2014/02/PowerMap_install-300x187.png" width="300" height="187" srcset="/wp-content/uploads/2014/02/PowerMap_install-300x187.png 300w, /wp-content/uploads/2014/02/PowerMap_install.png 500w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install.png"><img class="alignnone size-medium wp-image-2456" alt="PowerMap_install" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install-300x187.png" width="300" height="187" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install-300x187.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install.png 500w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -78,7 +78,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_install1.png"><img class="alignnone size-full wp-image-2457" alt="PowerMap_install1" src="/wp-content/uploads/2014/02/PowerMap_install1.png" width="512" height="119" srcset="/wp-content/uploads/2014/02/PowerMap_install1.png 512w, /wp-content/uploads/2014/02/PowerMap_install1-300x69.png 300w" sizes="(max-width: 512px) 100vw, 512px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install1.png"><img class="alignnone size-full wp-image-2457" alt="PowerMap_install1" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install1.png" width="512" height="119" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install1.png 512w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install1-300x69.png 300w" sizes="(max-width: 512px) 100vw, 512px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -86,7 +86,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_video.png"><img class="alignnone  wp-image-2462" alt="PowerMap_video" src="/wp-content/uploads/2014/02/PowerMap_video-1024x538.png" width="717" height="377" srcset="/wp-content/uploads/2014/02/PowerMap_video-1024x538.png 1024w, /wp-content/uploads/2014/02/PowerMap_video-300x157.png 300w, /wp-content/uploads/2014/02/PowerMap_video.png 1120w" sizes="(max-width: 717px) 100vw, 717px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_video.png"><img class="alignnone  wp-image-2462" alt="PowerMap_video" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_video-1024x538.png" width="717" height="377" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_video-1024x538.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_video-300x157.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_video.png 1120w" sizes="(max-width: 717px) 100vw, 717px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -94,7 +94,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_install3.png"><img class="alignnone  wp-image-2458" alt="PowerMap_install3" src="/wp-content/uploads/2014/02/PowerMap_install3-1024x538.png" width="717" height="377" srcset="/wp-content/uploads/2014/02/PowerMap_install3-1024x538.png 1024w, /wp-content/uploads/2014/02/PowerMap_install3-300x157.png 300w, /wp-content/uploads/2014/02/PowerMap_install3.png 1120w" sizes="(max-width: 717px) 100vw, 717px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install3.png"><img class="alignnone  wp-image-2458" alt="PowerMap_install3" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install3-1024x538.png" width="717" height="377" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install3-1024x538.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install3-300x157.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_install3.png 1120w" sizes="(max-width: 717px) 100vw, 717px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -102,7 +102,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_accountsettings.png"><img class="alignnone  wp-image-2453" alt="PowerMap_accountsettings" src="/wp-content/uploads/2014/02/PowerMap_accountsettings-1024x557.png" width="819" height="446" srcset="/wp-content/uploads/2014/02/PowerMap_accountsettings-1024x557.png 1024w, /wp-content/uploads/2014/02/PowerMap_accountsettings-300x163.png 300w, /wp-content/uploads/2014/02/PowerMap_accountsettings.png 1206w" sizes="(max-width: 819px) 100vw, 819px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_accountsettings.png"><img class="alignnone  wp-image-2453" alt="PowerMap_accountsettings" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_accountsettings-1024x557.png" width="819" height="446" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_accountsettings-1024x557.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_accountsettings-300x163.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_accountsettings.png 1206w" sizes="(max-width: 819px) 100vw, 819px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -110,7 +110,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_installsavailable.png"><img class="alignnone size-full wp-image-2460" alt="PowerMap_installsavailable" src="/wp-content/uploads/2014/02/PowerMap_installsavailable.png" width="642" height="234" srcset="/wp-content/uploads/2014/02/PowerMap_installsavailable.png 642w, /wp-content/uploads/2014/02/PowerMap_installsavailable-300x109.png 300w" sizes="(max-width: 642px) 100vw, 642px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_installsavailable.png"><img class="alignnone size-full wp-image-2460" alt="PowerMap_installsavailable" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_installsavailable.png" width="642" height="234" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_installsavailable.png 642w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_installsavailable-300x109.png 300w" sizes="(max-width: 642px) 100vw, 642px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -118,7 +118,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/powermap.png"><img class="alignnone size-large wp-image-2452" alt="powermap" src="/wp-content/uploads/2014/02/powermap-1024x244.png" width="1024" height="244" srcset="/wp-content/uploads/2014/02/powermap-1024x244.png 1024w, /wp-content/uploads/2014/02/powermap-300x71.png 300w, /wp-content/uploads/2014/02/powermap.png 1151w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermap.png"><img class="alignnone size-large wp-image-2452" alt="powermap" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermap-1024x244.png" width="1024" height="244" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermap-1024x244.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermap-300x71.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermap.png 1151w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -126,7 +126,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_enable.png"><img class="alignnone size-full wp-image-2455" alt="PowerMap_enable" src="/wp-content/uploads/2014/02/PowerMap_enable.png" width="464" height="153" srcset="/wp-content/uploads/2014/02/PowerMap_enable.png 464w, /wp-content/uploads/2014/02/PowerMap_enable-300x98.png 300w" sizes="(max-width: 464px) 100vw, 464px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_enable.png"><img class="alignnone size-full wp-image-2455" alt="PowerMap_enable" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_enable.png" width="464" height="153" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_enable.png 464w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_enable-300x98.png 300w" sizes="(max-width: 464px) 100vw, 464px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -134,7 +134,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/powermapeditor.png"><img class="alignnone  wp-image-2451" alt="powermapeditor" src="/wp-content/uploads/2014/02/powermapeditor-1024x501.png" width="819" height="401" srcset="/wp-content/uploads/2014/02/powermapeditor-1024x501.png 1024w, /wp-content/uploads/2014/02/powermapeditor-300x146.png 300w" sizes="(max-width: 819px) 100vw, 819px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermapeditor.png"><img class="alignnone  wp-image-2451" alt="powermapeditor" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermapeditor-1024x501.png" width="819" height="401" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermapeditor-1024x501.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/powermapeditor-300x146.png 300w" sizes="(max-width: 819px) 100vw, 819px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -142,5 +142,5 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/PowerMap_dude.jpg"><img class="alignnone size-full wp-image-2454" alt="PowerMap_dude" src="/wp-content/uploads/2014/02/PowerMap_dude.jpg" width="342" height="147" srcset="/wp-content/uploads/2014/02/PowerMap_dude.jpg 342w, /wp-content/uploads/2014/02/PowerMap_dude-300x128.jpg 300w" sizes="(max-width: 342px) 100vw, 342px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_dude.jpg"><img class="alignnone size-full wp-image-2454" alt="PowerMap_dude" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_dude.jpg" width="342" height="147" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_dude.jpg 342w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/PowerMap_dude-300x128.jpg 300w" sizes="(max-width: 342px) 100vw, 342px" /></a>
 </p>

@@ -21,7 +21,7 @@ I had previously seen projects through the eyes of a developer (both on the data
 I think that having been on both sides of the fence that I bring some additional skills to the things that I do work on that, with luck, will bring about successful projects that don't frustrate the teams that work on them and happy end users who can use what is built. Not that I don't anticipate a variety of issues with each project but, as one former manager was notorious for putting it when we encountered issues, each one will be an opportunity to achieve and succeed. (Admittedly, though, there were times where I told him where he could stick those opportunities!) I hope to be able to provide my own insight on some issues here as I encounter them – perhaps as part of an ongoing series – with the hope that others may be able to also learn from them. Feel free to offer your own thoughts as well!
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/1359656-lumbergh_super.jpg?mtime=1327249775"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/1359656-lumbergh_super.jpg?mtime=1327249775" width="400" height="259" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/1359656-lumbergh_super.jpg?mtime=1327249775"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/1359656-lumbergh_super.jpg?mtime=1327249775" width="400" height="259" /></a>
 </div>
 
 I'll begin by offering these small things to start:

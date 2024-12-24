@@ -106,7 +106,7 @@ WITH RESULT SETS
 Here is what the output looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_helpdb.PNG?mtime=1363564008"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_helpdb.PNG?mtime=1363564008" width="822" height="253" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_helpdb.PNG?mtime=1363564008"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_helpdb.PNG?mtime=1363564008" width="822" height="253" /></a>
 </div>
 
 As you can see the column names are what we specified and DateCreated is now a datetime, instead of Mar 16 2013 we now see 2013-03-16 00:00:00.000. I think WITH RESULT SETS is a nice addition to the product, especially if you have to deal with stored procedure created by third party vendors or system procs

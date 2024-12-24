@@ -69,7 +69,7 @@ Now go back to the report and refresh it if you already did not see the report g
 You should see something like this for the overview 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ss_dashboard.gif" alt="" title="" width="989" height="590" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ss_dashboard.gif" alt="" title="" width="989" height="590" />
 </div>
 
 Nice isn't it? This is about as far as I'm going to go with it sense the links in the reports are pretty self explaining and when you click and export the statistics to formats and start on your performance increasing quest you'll learn more of this Microsoft provided monitoring tool than I. I just wanted to get you off your feet and flying. Hope I did just that with saving a little money.

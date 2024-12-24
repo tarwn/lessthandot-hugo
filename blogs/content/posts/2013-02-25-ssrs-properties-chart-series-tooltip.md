@@ -24,25 +24,25 @@ The purpose of this property is to show a specific value on a series in a chart 
 To access the property, select a chart series and go to Tooltip.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/tooltip 1.png?mtime=1361799302" alt="" width="294" height="71" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/tooltip 1.png?mtime=1361799302" alt="" width="294" height="71" />
 </p>
 
 **Example**: I have a line chart that shows sales by category by year. I want the user to be able to see the exact value as a tooltip.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/tooltip 2.png?mtime=1361799302" alt="" width="673" height="402" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/tooltip 2.png?mtime=1361799302" alt="" width="673" height="402" />
 </p>
 
 I go to the Design tab, click on the series to select it, and choose Tooltip and add my expression. I am summing the value, and formatting it as currency.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/tooltip 3.png?mtime=1361799302" alt="" width="358" height="71" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/tooltip 3.png?mtime=1361799302" alt="" width="358" height="71" />
 </p>
 
 When I run the report and hover over a point, the value of that point shows in a yellow tooltip box.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/tooltip 4.png?mtime=1361799302" alt="" width="702" height="427" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/tooltip 4.png?mtime=1361799302" alt="" width="702" height="427" />
 </p>
 
 **Further Reading:** 

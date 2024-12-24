@@ -21,13 +21,13 @@ If you ever get the question from someone why excel is dividing the number by 10
 In Excel 2003 goto <span class="MT_blue"><code class="codespan">Tools > Options > Edit > Fixed decimal</code></span> places. Chances are that that little checkbox is checked. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/exceldecimal%20places.jpg" alt="" title="" width="498" height="398" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/exceldecimal%20places.jpg" alt="" title="" width="498" height="398" />
 </div>
 
 In excel 2007 they changed the description (automaticaly insert a decimal point) for that checkbox and changed it&#8217;s location to <span class="MT_blue">Office Button > Excel Options > Advanced</span>. Thanks to George for checking this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/FixedDecimals.png" alt="" title="" width="840" height="685" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/FixedDecimals.png" alt="" title="" width="840" height="685" />
 </div>
 
 I&#8217;m sure that you can play tricks on people with that. I know of not many people that know what that option does. Including myself until a few hours ago. Took me half an hour to find it. 

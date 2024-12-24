@@ -25,11 +25,11 @@ select cast(convert (varchar(10),dateadd(dd,-(day(@joindate)-1),@joindate),101) 
 Next on the Reports Parameters window, set the default values as – From Query and select the Start and End dates.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/date-parameters.GIF" alt="" title="" width="666" height="520" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/date-parameters.GIF" alt="" title="" width="666" height="520" />
 </div>
 
 Next time when you run the report, the start and end dates will be picked up from the database. You can use these dates to generate the report by default.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/Date-Range.gif" alt="" title="" width="749" height="56" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Date-Range.gif" alt="" title="" width="749" height="56" />
 </div>

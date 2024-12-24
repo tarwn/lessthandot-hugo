@@ -45,7 +45,7 @@ SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], q
 The result set of this query looks like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB1.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB1.JPG?mtime=1358775444" width="933" height="427" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB1.JPG?mtime=1358775444"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB1.JPG?mtime=1358775444" width="933" height="427" /></a>
 </div>
 
 The result set can contain thousands of rows, depending on the uptime of the server, the number of queries and their corresponding execution plans, the available buffer memory...
@@ -96,7 +96,7 @@ SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], q
 You can see in the result set that only the Execution Plan from the above query is stored in the Procedure Cache.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB2.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB2.JPG?mtime=1358775444" width="871" height="67" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB2.JPG?mtime=1358775444"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB2.JPG?mtime=1358775444" width="871" height="67" /></a>
 </div>
 
 Now execute the stored procedure:
@@ -116,13 +116,13 @@ SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], q
 The result set shows us the execution of the above query with a usecount of 2 and the Execution Plan of our Stored Procedure:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB3.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB3.JPG?mtime=1358775444" width="871" height="85" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB3.JPG?mtime=1358775444"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB3.JPG?mtime=1358775444" width="871" height="85" /></a>
 </div>
 
 Now click the XML link in the query_plan column. A new tab will open in SSMS showing you the XML Execution Plan:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB4.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB4.JPG?mtime=1358775444" width="1434" height="865" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB4.JPG?mtime=1358775444"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB4.JPG?mtime=1358775444" width="1434" height="865" /></a>
 </div>
 
 You can now read the XML plan and you will find both the statements in the query plan:
@@ -157,13 +157,13 @@ ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Vers
 An easier trick to see the Graphical Execution Plans is to open [SQL Sentry Plan Explorer][4] and copy the XML into the Plan XML tab:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB5.JPG?mtime=1358775444"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB5.JPG?mtime=1358775444" width="652" height="298" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB5.JPG?mtime=1358775444"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB5.JPG?mtime=1358775444" width="652" height="298" /></a>
 </div>
 
 After doing this SQL Sentry Plan Explorer will give you all the details about the Execution Plan and you'll see in the Plan Diagram that SQL Server created an Execution Plan for both the queries altough only the first one was used:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB6.JPG?mtime=1358775445"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB6.JPG?mtime=1358775445" width="1347" height="765" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB6.JPG?mtime=1358775445"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB6.JPG?mtime=1358775445" width="1347" height="765" /></a>
 </div>
 
 **IF calling 2 Stored Procedures**
@@ -222,7 +222,7 @@ SELECT cp.objtype, cp.cacheobjtype, cp.usecounts, cp.size_in_bytes, st.[text], q
 And have a look at the result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB7.JPG?mtime=1358775445"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB7.JPG?mtime=1358775445" width="919" height="125" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB7.JPG?mtime=1358775445"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/IFCB7.JPG?mtime=1358775445" width="919" height="125" /></a>
 </div>
 
 Now we see that executing the second Stored Procedure also created 2 Executions Plans: 1 for the Stored Procedure "TwoProcs" and one for the Stored Procedure "EmpCntCity" that was effectively executed. But we see that there was no Execution Plan created for the Stored Procedure "OrderAmountYear". And this Execution Plan was more complex than the Execution Plan of our "TwoProcs" Stored Procedure. We can also see that the sum of the sizes of the 2 Execution Plans (65536 + 16384 = 81920) is still smaller than the Execution Plan of the "TwoPlans" Stored Procedure (98304).

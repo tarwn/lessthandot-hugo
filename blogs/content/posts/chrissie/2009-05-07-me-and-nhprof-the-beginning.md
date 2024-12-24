@@ -172,7 +172,7 @@ I&#8217;ll forgive him for misspelling my name.
 So now I have a working NHProf. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/nhprof.jpg" alt="" title="" width="614" height="461" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/nhprof.jpg" alt="" title="" width="614" height="461" />
 </div>
 
 And now I have something else to talk too ;-).

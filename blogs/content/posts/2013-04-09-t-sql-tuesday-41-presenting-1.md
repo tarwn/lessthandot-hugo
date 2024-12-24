@@ -18,7 +18,7 @@ categories:
 ---
 It's the second Tuesday of the month, and you know what that means: it's <a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank">T-SQL Tuesday</a>! This is a monthly blog series with a different topic each time. This month, our host, Bob Pusateri (<a href="http://www.bobpusateri.com/" target="_blank">blog </a>| <a href="https://twitter.com/SQLBob" target="_blank">twitter</a>), wants to know more about presenting.
 
-<a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank"><img style="float: right;" src="/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" width="150" height="150" /></a>
+<a href="http://www.bobpusateri.com/archive/2013/04/invitation-to-t-sql-tuesday-41-presenting-and-loving-it/" target="_blank"><img style="float: right;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL2sDay150x150.jpg?mtime=1365451350" alt="" width="150" height="150" /></a>
 
 Standing up in front of a room of people and talking, especially on a technical topic, can induce nightmares. Think about everything that could go wrong. Your laptop could stop working. Your demos could fail. You could forget everything you were going to say. You could fall off the stage. (Oh, no, that's just me.)
 
@@ -57,7 +57,7 @@ If you've prepared your presentation by giving careful thought to the flow, prac
 Now get your ass out there, write a session, and deliver it at a user group, SQL Saturday or go for the mountain peak and submit to PASS Summit!
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/ass.jpg?mtime=1365492012" alt="" width="400" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ass.jpg?mtime=1365492012" alt="" width="400" height="300" />
 </p>
 
 <p style="text-align: center;">

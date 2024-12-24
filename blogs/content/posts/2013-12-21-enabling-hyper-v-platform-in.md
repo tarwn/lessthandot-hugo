@@ -30,7 +30,7 @@ At this point I was confused as I had previously installed VS Express for Window
 After reviewing the two VM's I realized there must be something different with either the latest version of VS Express for Windows Phone, Windows 8.1, or both. Doing a little more research I found there were two things I needed to do:
 
   1. Enable "Virtualize Intel VT-x/EPT or AMD-V/RVI" in the settings of the VM <div class="image_block">
-      <a href="/media/users/brian78/HyperV/VMSettings.png?mtime=1387680976"><img src="/wp-content/uploads/users/brian78/HyperV/VMSettings.png?mtime=1387680976" alt="" width="362" height="140" /></a>
+      <a href="/media/users/brian78/HyperV/VMSettings.png?mtime=1387680976"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/brian78/HyperV/VMSettings.png?mtime=1387680976" alt="" width="362" height="140" /></a>
     </div>
 
   2. Open the .vmx file for the virtual machine in a text editor and add the following lines to the end of it 
@@ -40,7 +40,7 @@ After reviewing the two VM's I realized there must be something different with e
 After doing both of these I started the VM and intended to go back in and turn on Hyper-V, however, when I got back to the settings I was happy to see that "Hyper-V Platform" was already enabled.
 
 <div class="image_block">
-  <a href="/media/users/brian78/HyperV/WinFeatures.png?mtime=1387680966"><img src="/wp-content/uploads/users/brian78/HyperV/WinFeatures.png?mtime=1387680966" alt="" width="415" height="364" /></a>
+  <a href="/media/users/brian78/HyperV/WinFeatures.png?mtime=1387680966"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/brian78/HyperV/WinFeatures.png?mtime=1387680966" alt="" width="415" height="364" /></a>
 </div>
 
 ï¿½

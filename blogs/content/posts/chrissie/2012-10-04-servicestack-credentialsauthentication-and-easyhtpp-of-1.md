@@ -115,7 +115,7 @@ Sub Main()
 And here is the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta5.png?mtime=1349339440"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta5.png?mtime=1349339440" width="285" height="251" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta5.png?mtime=1349339440"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/ServiceStackSanta5.png?mtime=1349339440" width="285" height="251" /></a>
 </div>
 
 ## Conclusion

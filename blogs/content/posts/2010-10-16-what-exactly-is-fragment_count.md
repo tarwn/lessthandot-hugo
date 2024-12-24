@@ -48,7 +48,7 @@ A Fragment is a collection of pages in sequence. Assume there is a page with ID 
 In one way, a Fragment can also be indicated as a part. In our example, the CI has 17 fragments and 3832 pages in Leaf Level. So, we can say, 3832 pages are occupied across 17 parts (Fragments). Each of these parts will have its pages in sequential order. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/Fragments.jpg" alt="" title="" width="900" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Fragments.jpg" alt="" title="" width="900" height="300" />
 </div>
 
 Let's try to implement this method. The idea is to first load all the pages allocated to the Clustered Index into a temporary table and assign the sequence number to those pages and join each record with next record and find out the records where the difference is not equal to 1.

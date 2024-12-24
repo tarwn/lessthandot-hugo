@@ -24,11 +24,11 @@ And when all that is done. You can.<pre lang=bash>sudo make run</pre>
 
 Now you can create a new consoleapplication.
 
-[<img src="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835-300x180.png" alt="Screenshot from 2014-06-24 11:18:35" width="300" height="180" class="alignnone size-medium wp-image-2787" srcset="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835-300x180.png 300w, /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835.png 930w" sizes="(max-width: 300px) 100vw, 300px" />][2]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835-300x180.png" alt="Screenshot from 2014-06-24 11:18:35" width="300" height="180" class="alignnone size-medium wp-image-2787" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835-300x180.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835.png 930w" sizes="(max-width: 300px) 100vw, 300px" />][2]
 
 And see the magic happen when we click the run button.
 
-[<img src="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850-300x225.png" alt="Screenshot from 2014-06-24 11:18:50" width="300" height="225" class="alignnone size-medium wp-image-2786" srcset="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850-300x225.png 300w, /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850.png 1000w" sizes="(max-width: 300px) 100vw, 300px" />][3]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850-300x225.png" alt="Screenshot from 2014-06-24 11:18:50" width="300" height="225" class="alignnone size-medium wp-image-2786" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850-300x225.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850.png 1000w" sizes="(max-width: 300px) 100vw, 300px" />][3]
   
 And now you are wondering where your output is.
   
@@ -38,11 +38,11 @@ I was stumped.
   
 But not to worry it is there in the bash window which you used to do make run.
 
-[<img src="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157-300x191.png" alt="Screenshot from 2014-06-24 11:21:57" width="300" height="191" class="alignnone size-medium wp-image-2788" srcset="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157-300x191.png 300w, /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157.png 562w" sizes="(max-width: 300px) 100vw, 300px" />][4]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157-300x191.png" alt="Screenshot from 2014-06-24 11:21:57" width="300" height="191" class="alignnone size-medium wp-image-2788" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157-300x191.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157.png 562w" sizes="(max-width: 300px) 100vw, 300px" />][4]
 
 All&#8217;s well that ends well.
 
  [1]: http://anangbakti.wordpress.com/2014/05/16/install-monodevelop-5-1-on-fresh-ubuntu-14-04-lts-64bit/
- [2]: /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835.png
- [3]: /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850.png
- [4]: /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157.png
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111835.png
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-111850.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-112157.png

@@ -22,7 +22,7 @@ Recently I had the pleasure of working on a new database introduced to the envir
 The sad truth to the matter is, third party injections into our stable environments is something you cannot prevent. Business entities buy software by the payload and will never stop doing that. It's important to understand these entities are simply doing their part to make the business run better and make money in the long run. Of course this all means we end up dealing with the good, the bad and the ugly of software and database design.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//goodbadugly.gif" alt="" title="" width="364" height="463" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//goodbadugly.gif" alt="" title="" width="364" height="463" />
 </div>
 
 So now that we all accept the fact we have no choice of dealing with these issues we can start to write about them. This give hope that we can help the database community and prevent the recreation of the practices. My own hopes from what I found in this one database are it will never cross your mind as a good idea. This design flaw truly was beyond ugly and bordering just under the hammer of the gun on bad.

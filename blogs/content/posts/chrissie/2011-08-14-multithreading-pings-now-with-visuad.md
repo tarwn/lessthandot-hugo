@@ -92,7 +92,7 @@ End Class
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/ping4.png?mtime=1313322948"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/ping4.png?mtime=1313322948" width="391" height="280" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping4.png?mtime=1313322948"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping4.png?mtime=1313322948" width="391" height="280" /></a>
 </div>
 
 ## Async
@@ -100,7 +100,7 @@ With this as the result.
 For the Aysnc version I first downloaded the Async CTP sp1 refresh and when trying to install it I noticed that I needed VS 2010 SP1 so I installed that too.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/async1.png?mtime=1313323227"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/async1.png?mtime=1313323227" width="576" height="513" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/async1.png?mtime=1313323227"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/async1.png?mtime=1313323227" width="576" height="513" /></a>
 </div>
 
 Both take quit a while to complete. But an hour later I was ready to begin.

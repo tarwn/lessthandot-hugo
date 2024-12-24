@@ -21,7 +21,7 @@ I got the Fujitsu Siemens T1010 with Windows Vista Ultimate on it. I will write 
 But first I had to solve a little annoyance. Vista likes to add an extra mouse pointer when using the pen/touch screen.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/pen1.jpg" alt="" title="" width="179" height="153" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/pen1.jpg" alt="" title="" width="179" height="153" />
 </div>
 
 I found the answer on [windowshelp][1].
@@ -41,7 +41,7 @@ I found the answer on [windowshelp][1].
 > Under Touch Pointer, select or clear the Show the touch pointer when I’m interacting with items on the screen check box. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/pen2.jpg" alt="" title="" width="386" height="484" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/pen2.jpg" alt="" title="" width="386" height="484" />
 </div>
 
  [1]: http://windowshelp.microsoft.com/windows/en-us/help/ddea43b3-a732-4b18-8992-b23c3fdc25fc1033.mspx

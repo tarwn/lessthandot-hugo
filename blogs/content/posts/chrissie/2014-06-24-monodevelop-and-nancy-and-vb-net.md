@@ -20,7 +20,7 @@ Now create a VB.Net ConsolApplication.
 
 And then we can go look for Nancy.Hosting.Self via Project > Add Packages 
 
-[<img src="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858-300x197.png" alt="Screenshot from 2014-06-24 14:48:58" width="300" height="197" class="alignnone size-medium wp-image-2794" srcset="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858-300x197.png 300w, /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858.png 820w" sizes="(max-width: 300px) 100vw, 300px" />][3]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858-300x197.png" alt="Screenshot from 2014-06-24 14:48:58" width="300" height="197" class="alignnone size-medium wp-image-2794" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858-300x197.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858.png 820w" sizes="(max-width: 300px) 100vw, 300px" />][3]
 
 Add that to your project. 
 
@@ -34,11 +34,11 @@ And now open a browser and go to http://localhost:1234/
 
 And magic.
 
-[<img src="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441-300x221.png" alt="Screenshot from 2014-06-24 14:54:41" width="300" height="221" class="alignnone size-medium wp-image-2795" srcset="/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441-300x221.png 300w, /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441.png 423w" sizes="(max-width: 300px) 100vw, 300px" />][4]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441-300x221.png" alt="Screenshot from 2014-06-24 14:54:41" width="300" height="221" class="alignnone size-medium wp-image-2795" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441-300x221.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441.png 423w" sizes="(max-width: 300px) 100vw, 300px" />][4]
 
 Did you see the no frills VB.Net? It work but it is lightyears behind VB.Net on windows.
 
  [1]: /index.php/uncategorized/monodevelop-and-vb-net-and-ubuntu-how-to-install/
  [2]: http://community.sharpdevelop.net/blogs/mattward/archive/2013/01/07/MonoDevelopNuGetAddin.aspx
- [3]: /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858.png
- [4]: /wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441.png
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-144858.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/06/Screenshot-from-2014-06-24-145441.png

@@ -17,6 +17,6 @@ The <a href="http://newdug.org" target="_blank">Northeast Wisconsin Developer Us
 
 I gave my "Execution Plans: The Secret to Query Tuning Success" talk. I wanted developers to be more familiar with how to find and interpret SQL Server's execution plans. I had a great audience that asked questions and even laughed at some of my jokes!
 
-The slides from my session – full of helpful tips and lots of resources to learn more – <a href="/wp-content/uploads/2015/03/Execution-Plans.pdf" target="_blank">can be downloaded from this link</a>.
+The slides from my session – full of helpful tips and lots of resources to learn more – <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/Execution-Plans.pdf" target="_blank">can be downloaded from this link</a>.
 
 &nbsp;

@@ -21,7 +21,7 @@ categories:
 ---
 <div>
   <div class="image_block">
-    <a href="/media/blogs/DataMgmt/bobs.gif?mtime=1320326652"><img src="/wp-content/uploads/blogs/DataMgmt/bobs.gif?mtime=1320326652" alt="" width="350" height="263" /></a>
+    <a href="/media/blogs/DataMgmt/bobs.gif?mtime=1320326652"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bobs.gif?mtime=1320326652" alt="" width="350" height="263" /></a>
   </div>
   
   <p>

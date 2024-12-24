@@ -23,7 +23,7 @@ tags:
 If ever a DBA walked up a mountain and came back down with two stones that had 10 commandments written on them, "thou shalt not use SELECT *" would be one of them. However, that same DBA would turn around and within 5 minutes use it themselves!
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/moses.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/moses.JPG?mtime=1363096883" width="233" height="311" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/moses.JPG?mtime=1363096883"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/moses.JPG?mtime=1363096883" width="233" height="311" /></a>
 </div>
 
 One place that DBAs use SELECT * is when they create views. The idea is that you do actually want every column available to the view because the query that hits that view should limit which columns it wants returned.
@@ -44,7 +44,7 @@ GO
 SELECT * FROM vViewExample;
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883" width="67" height="83" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883" width="67" height="83" /></a>
 </div>
 
 I did break the rule of no SELECT * again but it's to demonstrate the point of this article.
@@ -59,7 +59,7 @@ GO
 SELECT * FROM vViewExample;
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883" width="67" height="83" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view1.JPG?mtime=1363096883" width="67" height="83" /></a>
 </div>
 
 Notice that col2 is missing even though the view is using SELECT *. Let's see what happens if we try to use the view to insert a new record with data in col2.
@@ -68,7 +68,7 @@ Notice that col2 is missing even though the view is using SELECT *. Let's see wh
 INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/view2.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view2.JPG?mtime=1363096883" width="245" height="38" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view2.JPG?mtime=1363096883"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view2.JPG?mtime=1363096883" width="245" height="38" /></a>
 </div>
 
 To fix the "broken" view, we have to rebuild it.
@@ -87,7 +87,7 @@ INSERT INTO vViewExample (col1, col2) VALUES (5, 5);
 SELECT * FROM vViewExample;
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/view3.JPG?mtime=1363096883"><img alt="" src="/wp-content/uploads/users/kconan/view3.JPG?mtime=1363096883" width="108" height="102" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view3.JPG?mtime=1363096883"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/view3.JPG?mtime=1363096883" width="108" height="102" /></a>
 </div>
 
 And of course, let's clean up after ourselves!

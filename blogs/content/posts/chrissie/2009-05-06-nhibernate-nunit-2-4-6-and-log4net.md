@@ -26,7 +26,7 @@ So I clicked a bit on the tabs, one never knows when one might get lucky and low
 I know my readers (all 3 of you) prefer pictures over words so here is a picture.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/nunitconsole.JPG" alt="" title="" width="600" height="353" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/nunitconsole.JPG" alt="" title="" width="600" height="353" />
 </div>
 
 Apparently nunit 2.4.6 has a config somewhere that says log4net should use debug level logging. Which slows down nhibernate like never before.

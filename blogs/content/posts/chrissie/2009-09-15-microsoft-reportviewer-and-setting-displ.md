@@ -28,13 +28,13 @@ tags:
 When working with the reportviewer I found it very annoying that it shows its report in a not printlayout mode. Like this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/reportviewer/reportviewer1.jpg" alt="" title="" width="423" height="475" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/reportviewer/reportviewer1.jpg" alt="" title="" width="423" height="475" />
 </div>
 
 But I want it in printlayout mode by default.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/reportviewer/reportviewer2.jpg" alt="" title="" width="406" height="395" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/reportviewer/reportviewer2.jpg" alt="" title="" width="406" height="395" />
 </div>
 
 After looking through Google and the properties and nearly giving up I found that they made this a function.

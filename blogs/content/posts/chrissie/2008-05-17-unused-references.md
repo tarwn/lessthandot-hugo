@@ -18,19 +18,19 @@ So how do we do it?
 First we right click on our project and select properties.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Nieuw-3.jpg" alt="" title="" width="302" height="448" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Nieuw-3.jpg" alt="" title="" width="302" height="448" />
 </div>
 
 Then we go to the tab references and click on the button Unused References.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Nieuw-5.jpg" alt="" title="" width="579" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Nieuw-5.jpg" alt="" title="" width="579" height="300" />
 </div>
 
 This will open a dialog with either a list of unused references (see below) or nothing in it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Nieuw-6.jpg" alt="" title="" width="565" height="356" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Nieuw-6.jpg" alt="" title="" width="565" height="356" />
 </div>
 
 And now you can just click remove and the references will be gone.

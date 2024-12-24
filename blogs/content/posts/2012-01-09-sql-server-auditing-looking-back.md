@@ -38,7 +38,7 @@ Let's take a look how to set it up through the SSMS:
 First of all, create the audit as previously and navigate as in the screenshot. Note that we will use testdb, check for dbo schema and only actions taking place by users which are defined as a DB_Owner:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_GUI.jpg?mtime=1326103445"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_GUI.jpg?mtime=1326103445" width="602" height="170" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_GUI.jpg?mtime=1326103445"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_GUI.jpg?mtime=1326103445" width="602" height="170" /></a>
 </div>
 
 Next we define a Server Audit Specification to Capture Schema access:
@@ -46,7 +46,7 @@ Next we define a Server Audit Specification to Capture Schema access:
 _Note. This is necessary to capture the events. Previously a Server Audit Specification captured ALL the events across ALL databases._
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_Spec_GUI.jpg?mtime=1326103453"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_Spec_GUI.jpg?mtime=1326103453" width="457" height="135" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_Spec_GUI.jpg?mtime=1326103453"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Audit_Spec_GUI.jpg?mtime=1326103453" width="457" height="135" /></a>
 </div>
 
 To create the same audit using TSQL(which is easier) is as follows:
@@ -83,7 +83,7 @@ GO
 Below is the results of querying an audit file with the filter:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Results.jpg?mtime=1326103463"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Results.jpg?mtime=1326103463" width="732" height="63" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Results.jpg?mtime=1326103463"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/SQL2012_New/Filtered_Results.jpg?mtime=1326103463" width="732" height="63" /></a>
 </div>
 
 Other additional functionality is OnError:Fail Operation as well as maximum number of files. Maximum number of files indicates the number of files needed to be kept.
@@ -657,7 +657,7 @@ ORDER BY del.event_time ASC
 This is the result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/query_exmaple_results.jpg?mtime=1326109318"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/query_exmaple_results.jpg?mtime=1326109318" width="1077" height="114" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/query_exmaple_results.jpg?mtime=1326109318"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/LookingBack/query_exmaple_results.jpg?mtime=1326109318" width="1077" height="114" /></a>
 </div>
 
 Currently the database is only hosting the information and it will be nice if Microsoft will add the ability to audit directly to a table in future versions of SQL Server.

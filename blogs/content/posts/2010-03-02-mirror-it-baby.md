@@ -18,7 +18,7 @@ categories:
 ---
 ## To sync or async...
 
-Over the weekend on twitter, the topic of high availability over a Wide Area Network (WAN) came up. The limit of 140 characters doesn't do this topic justice, so a follow up is a good idea.  <img src="/wp-content/uploads/blogs/DataMgmt/breakmirror.gif" alt="" title="" width="325" height="325" align="right" />We're going to focus on selecting an operating mode of mirroring that the business can handle then the mirror is spread over a WAN. This also came out of the conversations when synchronous mirroring (High Availability) was mentioned in a way of being over Asynchronous (High performance). To answer the question directly, High performance cannot provide you with out of the box automated failover and there is the chance for data loss. So for an absolute option of High Availability, High performance cannot fully replace it. There are options available when the performance load of synchronous mirroring with a witness is far too much for the business to carry. 
+Over the weekend on twitter, the topic of high availability over a Wide Area Network (WAN) came up. The limit of 140 characters doesn't do this topic justice, so a follow up is a good idea.  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/breakmirror.gif" alt="" title="" width="325" height="325" align="right" />We're going to focus on selecting an operating mode of mirroring that the business can handle then the mirror is spread over a WAN. This also came out of the conversations when synchronous mirroring (High Availability) was mentioned in a way of being over Asynchronous (High performance). To answer the question directly, High performance cannot provide you with out of the box automated failover and there is the chance for data loss. So for an absolute option of High Availability, High performance cannot fully replace it. There are options available when the performance load of synchronous mirroring with a witness is far too much for the business to carry. 
 
 There are a few considerations to take into account when mirroring over a WAN. The primary consideration is the latency that a wide area network brings along with it. From personal testing, results for mirror configurations in this situation, have shown an estimated performance hit of ~roughly 90% on basic transactions like INSERT, UPDATE and DELETE. The tests that can be performed to gauge operating modes do not have to go indepth. That is not to say that testing a full baseline across the normal operating hours of the business should not be done. In fact, it is critical and should never be bypassed because simple statements pass your test cases. 
 
@@ -124,7 +124,7 @@ Gathering the client statistics information, the test results from the above in 
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/crudestats.gif" alt="" title="" width="448" height="397" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/crudestats.gif" alt="" title="" width="448" height="397" />
 </div>
 
 The execution time comparisons are:
@@ -132,7 +132,7 @@ The execution time comparisons are:
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/mirrir.gif" alt="" title="" width="628" height="177" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirrir.gif" alt="" title="" width="628" height="177" />
 </div></p> 
 
 It is surprising and interesting that High Protection results have a higher average than High Availability, however, as previously mentioned, the tests are crude. They were executed 20 times to obtain the average. Keep in mind that network traffic is all part of this equation and a very important piece. Although this was on a dedicated data line, there is still log shipping and other data packets contending with bandwidth. 

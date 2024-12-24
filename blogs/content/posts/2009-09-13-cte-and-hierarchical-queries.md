@@ -437,7 +437,7 @@ select C.Root, SUM(Valore) as Total from cte C group by C.Root option (MaxRecurs
 <p>
   *** <strong>Remember, if you have a SQL related question, try our <a href="http://forum.lessthandot.com/viewforum.php?f=17">Microsoft SQL Server Programming</a> forum or our <a href="http://forum.lessthandot.com/viewforum.php?f=22">Microsoft SQL Server Admin</a> forum</strong><ins></ins></div> </div>
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif "T-SQL Tuesday logo"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif "T-SQL Tuesday logo"
  [2]: http://smehrozalam.wordpress.com/2009/06/09/t-sql-using-common-table-expressions-cte-to-generate-sequences/
  [3]: http://forum.lessthandot.com/viewtopic.php?f=17&t=7566&st=0&sk=t&sd=a
  [4]: http://www.sqlusa.com/bestpractices2005/organizationtree/

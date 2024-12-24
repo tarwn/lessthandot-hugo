@@ -37,7 +37,7 @@ Expand your instance >> Security >> Right-Click the audit folder >> Select New A
 This should bring up a new window similar to this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Audit.jpg?mtime=1324455850"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Audit.jpg?mtime=1324455850" width="651" height="585" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Audit.jpg?mtime=1324455850"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Audit.jpg?mtime=1324455850" width="651" height="585" /></a>
 </div>
 
 ##### On Audit Log Failure
@@ -63,7 +63,7 @@ Right-click Server Audit Specification >> New Server Audit Specification.
 This will bring a window similar to this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Specification.jpg?mtime=1324455868"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Specification.jpg?mtime=1324455868" width="844" height="299" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Specification.jpg?mtime=1324455868"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/Specification.jpg?mtime=1324455868" width="844" height="299" /></a>
 </div>
 
 Under Audit can select the audit you have just created. If you have multiple audits all of them will show up, however if you choose one with a specification already assigned, then it will throw an error and warn you.
@@ -97,7 +97,7 @@ _Note: All the files will be appended with a guid, there for it is easier to use
 The output of my test looks like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/FailedResults.jpg?mtime=1324455860"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/FailedResults.jpg?mtime=1324455860" width="1081" height="117" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/FailedResults.jpg?mtime=1324455860"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/ServerSpec/FailedResults.jpg?mtime=1324455860" width="1081" height="117" /></a>
 </div>
 
 This is a quick specification to monitor for failed logins using the Server Audit Specification and to demonstrate how to do it. There is more information for the different action groups to use with the server audit specification [here][1].

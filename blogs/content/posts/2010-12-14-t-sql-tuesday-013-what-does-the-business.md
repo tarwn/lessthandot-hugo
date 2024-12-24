@@ -20,7 +20,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-[<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" title="" width="154" height="154" align="left" />][1] 
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" title="" width="154" height="154" align="left" />][1] 
 
 Steve Jones (@way0utwest | blog) is hosting this month's T-SQL Tuesday blog party. The official topic this month is: "What issues have you had in interacting with the business to get your job done?" 
 

@@ -34,7 +34,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/sampledata.PNG?mtime=1355177204"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/sampledata.PNG?mtime=1355177204" alt="" width="682" height="343" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/sampledata.PNG?mtime=1355177204"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/sampledata.PNG?mtime=1355177204" alt="" width="682" height="343" /></a>
 </div>
 
 <p style="text-align: justify;">
@@ -42,7 +42,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/Hierarchy_All.PNG?mtime=1355177164"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Hierarchy_All.PNG?mtime=1355177164" alt="" width="188" height="151" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/Hierarchy_All.PNG?mtime=1355177164"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Hierarchy_All.PNG?mtime=1355177164" alt="" width="188" height="151" /></a>
 </div>
 
 <p style="text-align: justify;">
@@ -50,13 +50,13 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/DSV.PNG?mtime=1355177069"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/DSV.PNG?mtime=1355177069" alt="" width="413" height="522" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/DSV.PNG?mtime=1355177069"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/DSV.PNG?mtime=1355177069" alt="" width="413" height="522" /></a>
 </div>
 
 <span style="text-align: justify;">With the default values configured in the SSAS cube, we get this pivot table:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_NoCalc.PNG?mtime=1355177144"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_NoCalc.PNG?mtime=1355177144" alt="" width="248" height="207" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_NoCalc.PNG?mtime=1355177144"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_NoCalc.PNG?mtime=1355177144" alt="" width="248" height="207" /></a>
 </div>
 
 <span style="text-align: justify;">We can see SSAS has aggregated the values of the children to the parents, which is incorrect in our case. For example, at the time of writing SQLDenis had written 482 blog posts, not 501. Every parent is also repeated: once with the calculated aggregated value and once with its actual value. This tends to be very confusing for end users, so we want to avoid this.</span>
@@ -70,19 +70,19 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/IsAggregatable.PNG?mtime=1355177185"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/IsAggregatable.PNG?mtime=1355177185" alt="" width="423" height="193" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/IsAggregatable.PNG?mtime=1355177185"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/IsAggregatable.PNG?mtime=1355177185" alt="" width="423" height="193" /></a>
 </div>
 
 <span style="text-align: justify;">If we set this property to False, we get the following hierarchy:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/Hierarchy_NoAll.PNG?mtime=1355177173"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Hierarchy_NoAll.PNG?mtime=1355177173" alt="" width="177" height="134" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/Hierarchy_NoAll.PNG?mtime=1355177173"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Hierarchy_NoAll.PNG?mtime=1355177173" alt="" width="177" height="134" /></a>
 </div>
 
 <span style="text-align: justify;">The </span>_All_ <span style="text-align: justify;">member is gone, Chrissie is at the top, but the results are still the same when we browse the cube:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/browsecube.PNG?mtime=1355177054"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/browsecube.PNG?mtime=1355177054" alt="" width="277" height="164" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/browsecube.PNG?mtime=1355177054"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/browsecube.PNG?mtime=1355177054" alt="" width="277" height="164" /></a>
 </div>
 
 <span style="font-weight: bold; text-align: justify;">MembersWithData</span>
@@ -92,13 +92,13 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/MembersWithData.PNG?mtime=1355177194"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/MembersWithData.PNG?mtime=1355177194" alt="" width="359" height="192" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/MembersWithData.PNG?mtime=1355177194"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/MembersWithData.PNG?mtime=1355177194" alt="" width="359" height="192" /></a>
 </div>
 
 <span style="text-align: justify;">The default specifies if a parent has data, the parent is repeated as a child of its own. The child value will have the actual data, while the parent value will show the aggregated value of all its children. The </span>_NonLeafDataHidden_ <span style="text-align: justify;">setting will cause the parent-child hierarchy to show only the actual children of a parent and the parent itself with the aggregated value. This gives the following result in our sample:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_NoCalc.PNG?mtime=1355177121"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_NoCalc.PNG?mtime=1355177121" alt="" width="251" height="164" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_NoCalc.PNG?mtime=1355177121"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_NoCalc.PNG?mtime=1355177121" alt="" width="251" height="164" /></a>
 </div>
 
 <span style="text-align: justify;">This is even worse, as it's not clear how a parent gets its value. For example, blogger onpnt has a value of 406, but grrlgeek has the value 108. The pivot table does not show how the value 406 is calculated, again leading to much confusion.</span>
@@ -123,27 +123,27 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_Calc.PNG?mtime=1355177136"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_Calc.PNG?mtime=1355177136" alt="" width="346" height="206" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_Calc.PNG?mtime=1355177136"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_VisibleData_Calc.PNG?mtime=1355177136" alt="" width="346" height="206" /></a>
 </div>
 
 <span style="text-align: justify;">We are on the right track: each parent displays its own actual value. However, the parents are duplicated. Remember the </span>_NonLeafDataHidden_ <span style="text-align: justify;">property? Let's use this to get rid of those extra child members:</span>
 
 <div class="image_block" style="text-align: center;">
   <div class="image_block">
-    <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_Calc.PNG?mtime=1355177107"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_Calc.PNG?mtime=1355177107" alt="" width="334" height="161" /></a>
+    <a href="/media/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_Calc.PNG?mtime=1355177107"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_AggTrue_HiddenData_Calc.PNG?mtime=1355177107" alt="" width="334" height="161" /></a>
   </div>
 </div>
 
 <span style="text-align: justify;">Now every member of the parent-child hierarchy displays its own data. The semi-additive behavior of this solution is confirmed when browsing other dimensions:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/browseotherdimensions.PNG?mtime=1355177061"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/browseotherdimensions.PNG?mtime=1355177061" alt="" width="390" height="154" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/browseotherdimensions.PNG?mtime=1355177061"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/browseotherdimensions.PNG?mtime=1355177061" alt="" width="390" height="154" /></a>
 </div>
 
 <span style="text-align: justify;">There's no difference between our calculated measure and the normal measure defined in the measure group. We can mix all the dimensions together and the values are still displayed correctly:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_Final.PNG?mtime=1355177155"><img src="/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_Final.PNG?mtime=1355177155" alt="" width="599" height="216" /></a>
+  <a href="/media/users/koenverbeeck/DisableAggregations/Excel_Final.PNG?mtime=1355177155"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DisableAggregations/Excel_Final.PNG?mtime=1355177155" alt="" width="599" height="216" /></a>
 </div>
 
 <span style="font-weight: bold; text-align: justify;">Conclusion</span>

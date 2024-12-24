@@ -24,7 +24,7 @@ categories:
 Are you busy this Saturday, June 11, 2011? If not, head out to [SQL Saturday #75][1] in Columbus, OH! 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/sqlsat75.JPG?mtime=1307367348"><img alt="" src="/wp-content/uploads/users/grrlgeek/sqlsat75.JPG?mtime=1307367348" width="262" height="110" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sqlsat75.JPG?mtime=1307367348"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sqlsat75.JPG?mtime=1307367348" width="262" height="110" /></a>
 </div>
 
 What will you get? FREE training: 20 sessions from fellow SQL Server professionals, covering everything from baselines to Powershell to MDX. (Check out the full schedule [here][2].) Networking. (View the attendees [here][3].) A chance to interact with great vendors. (Check out this [sponsor list][4]!) 

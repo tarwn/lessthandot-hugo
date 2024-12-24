@@ -25,7 +25,7 @@ tags:
 
 <div class="image_block" style="text-align: justify;">
   <div class="image_block" style="text-align: justify;">
-    <a href="http://jasonbrimhall.info/2013/01/02/t-sql-tuesday-38-standing-firm/"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
+    <a href="http://jasonbrimhall.info/2013/01/02/t-sql-tuesday-38-standing-firm/"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
   </div>
   
   <p>

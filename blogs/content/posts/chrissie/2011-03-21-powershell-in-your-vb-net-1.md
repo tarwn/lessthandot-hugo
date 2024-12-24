@@ -35,7 +35,7 @@ I refined my code a little So I can easily choose which one to run.
 Here is how the app looks.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/gitconsole/gitconsole2.png?mtime=1300715749"><img alt="" src="/wp-content/uploads/users/chrissie1/gitconsole/gitconsole2.png?mtime=1300715749" width="684" height="420" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/gitconsole/gitconsole2.png?mtime=1300715749"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/gitconsole/gitconsole2.png?mtime=1300715749" width="684" height="420" /></a>
 </div>
 
 I added a button to run sync and async . And a button with some sample code you can run. In this version BTW write-host will not really work. But write will so use that.

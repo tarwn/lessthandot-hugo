@@ -20,7 +20,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlblog.com/blogs/allen_white/archive/2011/12/05/t-sql-tuesday-025-invitation-to-share-your-tricks.aspx"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1323611029" width="154" height="154" align="left" /></a>
+  <a href="http://sqlblog.com/blogs/allen_white/archive/2011/12/05/t-sql-tuesday-025-invitation-to-share-your-tricks.aspx"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1323611029" width="154" height="154" align="left" /></a>
 </div>
 
 This will be my contribution to the T-SQL Tuesday Challenge that was originally created by Adam Machanic. This month, my good friend Allen White ([Blog][1] | [Twitter][2]) is hosting the challenge. The topic he has chosen is, "What T-SQL tricks do you use today to make your job easier?" I enjoy this topic and understand why he chose it. As our experience grows, we compose dozens if not hundreds of methods in order to get our job done quickly or simply. We've all been faced with challenges and found the trick to resolving them given our own unique installations of SQL Server. This is a great way to get a compilation of everyone's tricks and see how we may share them with the community. 

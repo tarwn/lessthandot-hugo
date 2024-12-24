@@ -19,7 +19,7 @@ tags:
 I'm building a B2C website with Cosmos DB as the back-end store and starting with common elements like Authentication. In [my prior post][1], we connected the Cookie Middleware with custom membership logic and a standard username/password login method. In this one, we'll be extending the system to also allow users to register and login via a third party provider (Twitter). 
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     3 Authentication Scenarios: User/Pass, Twitter, API Keys
@@ -29,7 +29,7 @@ I'm building a B2C website with Cosmos DB as the back-end store and starting wit
 In this post I'll also start exploring `User Authentications` as a separate document collection, rather than as additional fields on my User document. I've noticed in several past systems I've built API keys and authentication mechanisms as properties on Users, but recently started considering that, like my house keys, mixing properties of the user with authentication methods on a single "User" record has been making me uncomfortable.
 
 <div id="attachment_9181" style="width: 236px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_202.png" alt="Defining People (Users) Separate from House Keys (User Authentication)" width="226" height="161" class="size-full wp-image-9181" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_202.png" alt="Defining People (Users) Separate from House Keys (User Authentication)" width="226" height="161" class="size-full wp-image-9181" />
   
   <p class="wp-caption-text">
     Defining People (Users) Separate from House Keys (User Authentication)
@@ -47,7 +47,7 @@ So where are we so far? We have built an ASP.net Core 2 website and added Cookie
 Let's extend the Membership logic to support Twitter:
 
 <div id="attachment_9182" style="width: 408px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_201.png" alt="File Changes for Twitter Addition" width="398" height="816" class="size-full wp-image-9182" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_201.png 398w, /wp-content/uploads/2018/04/aspnetcore2cosmos_201-146x300.png 146w" sizes="(max-width: 398px) 100vw, 398px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_201.png" alt="File Changes for Twitter Addition" width="398" height="816" class="size-full wp-image-9182" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_201.png 398w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_201-146x300.png 146w" sizes="(max-width: 398px) 100vw, 398px" />
   
   <p class="wp-caption-text">
     File Changes for Twitter Addition
@@ -73,7 +73,7 @@ The Twitter middleware uses a standard OAuth sign-in process, but does so in a w
 When a `Challenge` is issued through the twitter middleware, it takes precautions like generating a one time roundtrip token and stores that token and additional parameters for us in a shortlived cookie. It then sends the user over to twitter with a callback URL and that roundtrip token which Twitter uses once the User has logged in and granted us access. Twitter calls back to the callback, which is handled 100% by the middleware, including verifying that roundtrip token came back around successfully. Information from Twitter is added to the Claims on the HttpContext, just as cookie informaiton is when we use the Cookie Middleware, so we can then use that information to perform our internal authorization logic.
 
 <div id="attachment_9183" style="width: 595px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_203.png" alt="Twitter OAuth and Middleware Flow" width="585" height="624" class="size-full wp-image-9183" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_203.png 585w, /wp-content/uploads/2018/04/aspnetcore2cosmos_203-281x300.png 281w" sizes="(max-width: 585px) 100vw, 585px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_203.png" alt="Twitter OAuth and Middleware Flow" width="585" height="624" class="size-full wp-image-9183" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_203.png 585w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_203-281x300.png 281w" sizes="(max-width: 585px) 100vw, 585px" />
   
   <p class="wp-caption-text">
     Twitter OAuth and Middleware Flow
@@ -87,7 +87,7 @@ Once they're logged in (or registered), we can generate a session and forward th
 The first step is to set up credentials with Twitter for the application. The documented [MSDN setup documentation][3] has good steps for this, so we can follow through on the twitter side to get an app and access key setup.
 
 <div id="attachment_9184" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_204-600x495.png" alt="Twitter App Setup" width="600" height="495" class="size-medium-width wp-image-9184" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_204-600x495.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_204-300x248.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_204-364x300.png 364w, /wp-content/uploads/2018/04/aspnetcore2cosmos_204.png 760w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_204-600x495.png" alt="Twitter App Setup" width="600" height="495" class="size-medium-width wp-image-9184" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_204-600x495.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_204-300x248.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_204-364x300.png 364w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_204.png 760w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Twitter App Setup
@@ -144,7 +144,7 @@ To support the Login flow, we need a set of new endpoints and a button.
 We'll add a new `/account/login/twitter` endpoint with a final callback of `/account/login/twitter/continue` redirect URL to perform the actual Sign On, and we'll add a button to the existing Login view:
 
 <div id="attachment_9185" style="width: 361px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_205.png" alt="Addition of a &quot;Login with Twitter&quot; button" width="351" height="379" class="size-full wp-image-9185" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_205.png 351w, /wp-content/uploads/2018/04/aspnetcore2cosmos_205-278x300.png 278w" sizes="(max-width: 351px) 100vw, 351px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_205.png" alt="Addition of a &quot;Login with Twitter&quot; button" width="351" height="379" class="size-full wp-image-9185" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_205.png 351w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_205-278x300.png 278w" sizes="(max-width: 351px) 100vw, 351px" />
   
   <p class="wp-caption-text">
     Addition of a "Login with Twitter" button
@@ -214,7 +214,7 @@ The Twitter information comes back in the "ExternalCookie" we registered in the 
 The registration flow is similar to the login flow, but we need one additional endpoint to serve up the registration form once we have the user's twitter information for authentication.
 
 <div id="attachment_9186" style="width: 357px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_206.png" alt="&quot;Continue with Twitter&quot; on Register Form" width="347" height="395" class="size-full wp-image-9186" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_206.png 347w, /wp-content/uploads/2018/04/aspnetcore2cosmos_206-264x300.png 264w" sizes="(max-width: 347px) 100vw, 347px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_206.png" alt="&quot;Continue with Twitter&quot; on Register Form" width="347" height="395" class="size-full wp-image-9186" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_206.png 347w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_206-264x300.png 264w" sizes="(max-width: 347px) 100vw, 347px" />
   
   <p class="wp-caption-text">
     "Continue with Twitter" on Register Form
@@ -222,7 +222,7 @@ The registration flow is similar to the login flow, but we need one additional e
 </div>
 
 <div id="attachment_9187" style="width: 354px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_207.png" alt="Continuing Registration after logging in as @sqlishard" width="344" height="276" class="size-full wp-image-9187" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_207.png 344w, /wp-content/uploads/2018/04/aspnetcore2cosmos_207-300x241.png 300w" sizes="(max-width: 344px) 100vw, 344px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_207.png" alt="Continuing Registration after logging in as @sqlishard" width="344" height="276" class="size-full wp-image-9187" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_207.png 344w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_207-300x241.png 300w" sizes="(max-width: 344px) 100vw, 344px" />
   
   <p class="wp-caption-text">
     Continuing Registration after logging in as @sqlishard

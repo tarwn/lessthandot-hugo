@@ -18,7 +18,7 @@ categories:
 When school started this year, my 7th grade daughter was informed that she is expected to complete a science fair project. I plan on convincing her to post her final report as a blog on this site, but it's not scheduled to be completed for a couple more months. I plan on writing a series of blogs outlining the steps involved from a parents' perspective. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITStudents/albert_einstein_256515.jpg" alt="" title="" width="256" height="500" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITStudents/albert_einstein_256515.jpg" alt="" title="" width="256" height="500" />
 </div>
 
 **Step 1: Picking the project.**

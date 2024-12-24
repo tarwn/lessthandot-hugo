@@ -43,19 +43,19 @@ I opened the McAfee Security Center and navigated to the location I assume will 
 In this listing I quickly notice that my SQL Server Analysis Service instance is blocked. Fixed that! 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/manager_slow.gif" alt="" title="" width="557" height="294" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/manager_slow.gif" alt="" title="" width="557" height="294" />
 </div>
 
 After searching the listing farther down, I find the settings for Reporting Services (and Report Builder). The access is set to Outbound-Only Access. This should be Full Access for the instance to function completely. It is important to note that this would not stop functionality of Reporting Services out of the box typically. You can run and develop SSRS on an island successfully. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/manager_slow2.gif" alt="" title="" width="557" height="360" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/manager_slow2.gif" alt="" title="" width="557" height="360" />
 </div>
 
 You can see there is an option to, "Allow Access" in the Action window. I selected this and rebooted the laptop to clear all cache and load of the Report Manager. I did this because the initial load is commonly the only slow period when ASP.NET starts. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/manager_slow3.gif" alt="" title="" width="540" height="257" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/manager_slow3.gif" alt="" title="" width="540" height="257" />
 </div>
 
 The largest problem is the firewall not allowing the action to be performed entirely. 

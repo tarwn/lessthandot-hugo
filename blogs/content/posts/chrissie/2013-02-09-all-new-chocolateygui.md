@@ -43,7 +43,7 @@ That&#8217;s it. As long as you have Chocolatey installed of course. But even th
 Just look how pretty it is.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/ChocoGUI1.png?mtime=1360428609"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/ChocoGUI1.png?mtime=1360428609" width="1037" height="534" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/ChocoGUI1.png?mtime=1360428609"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/ChocoGUI1.png?mtime=1360428609" width="1037" height="534" /></a>
 </div>
 
 You can search in the list. It is a StartsWith list.

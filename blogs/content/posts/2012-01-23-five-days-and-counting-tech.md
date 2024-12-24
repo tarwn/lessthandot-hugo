@@ -17,7 +17,7 @@ categories:
 In October, [I mentioned I was working on a new adventure][1]: [Tech On Tap][2]. The first event is just days away – Saturday, January 28, 2012. 
 
 <p align="center">
-  <a href="http://techontap.org"><img src="/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" alt="" title="" /></a>
+  <a href="http://techontap.org"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" alt="" title="" /></a>
 </p>
 
 What is going to make Tech On Tap so different – and so great? 

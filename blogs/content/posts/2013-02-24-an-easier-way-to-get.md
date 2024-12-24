@@ -88,7 +88,7 @@ Here is what the default options are according to Books on line
 If you want to get the startup parameters for SQL Server, you can either read the registry or open up SQL Server Configuration Manager and look at the Startup Parameters tab, here is what it looks like on my laptop
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/StartupParameters.PNG?mtime=1361752440"><img alt="SQL Server Configuration Manager: Startup Parameters" title="SQL Server Configuration Manager: Startup Parameters" src="/wp-content/uploads/blogs/DataMgmt/Denis/StartupParameters.PNG?mtime=1361752440" width="417" height="481" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/StartupParameters.PNG?mtime=1361752440"><img alt="SQL Server Configuration Manager: Startup Parameters" title="SQL Server Configuration Manager: Startup Parameters" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/StartupParameters.PNG?mtime=1361752440" width="417" height="481" /></a>
 </div>
 
 Did you know that you can do this in an easier way on SQL Server 2012? No, I am not talking about using the undocumented `xp_regread` stored procedure. A new dynamic management view was introduced, this view is sys.dm\_server\_registry.

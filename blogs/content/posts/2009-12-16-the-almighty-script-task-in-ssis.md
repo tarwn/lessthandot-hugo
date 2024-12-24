@@ -34,13 +34,13 @@ The flat-file connection requires you to map your columns, but this is not obvio
 Right click Connection Managers and hit New Flat File Connection.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//watch_1.gif" alt="" title="" width="247" height="243" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//watch_1.gif" alt="" title="" width="247" height="243" />
 </div>
 
 Enter in some funky name so you remember this was an example and you can go back to it when you need to refresh your memory. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//watch_2.gif" alt="" title="" width="445" height="250" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//watch_2.gif" alt="" title="" width="445" height="250" />
 </div>
 
 Enter a path, any path. I like littering my C drive with files and in a month I'll be wondering if I should or shouldn't delete.
@@ -50,31 +50,31 @@ Now go into Advanced. Note: The OK is still grayed out. Click the New column but
 Ah...I can save it now
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//watch_3.gif" alt="" title="" width="397" height="313" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//watch_3.gif" alt="" title="" width="397" height="313" />
 </div>
 
 Let's try it out with a test data flow I created while helping someone out a few weeks ago. Change your connection manager property in a flat file destination to point to our new file connection.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/watch_4.gif" alt="" title="" width="469" height="143" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/watch_4.gif" alt="" title="" width="469" height="143" />
 </div>
 
 Map some columns over
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/watch_5.gif" alt="" title="" width="478" height="208" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/watch_5.gif" alt="" title="" width="478" height="208" />
 </div>
 
 And let's execute to see the results.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/watch_6.gif" alt="" title="" width="438" height="263" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/watch_6.gif" alt="" title="" width="438" height="263" />
 </div>
 
 🙂 It's a beautiful thing we have. Checking our file that was created on the C drive we see the contents pumped in
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/watch_7.gif" alt="" title="" width="460" height="173" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/watch_7.gif" alt="" title="" width="460" height="173" />
 </div>
 
 ## _Comparing and wrapping up_
@@ -87,7 +87,7 @@ The point I'm trying to get across is that the script task is nothing short of a
 So the next time you go to perform a task in SSIS and that script task stares you in the face telling you he can do it
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/doitallnight.gif" alt="" title="" width="400" height="321" /><br />ALL NIGHT LONG!!!!!
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/doitallnight.gif" alt="" title="" width="400" height="321" /><br />ALL NIGHT LONG!!!!!
 </div>
 
 You may want to think about it and look around to see if SSIS already has something that prevents the code from being rewritten allowing you to take advantage of SSIS and the abilities it brings with it.

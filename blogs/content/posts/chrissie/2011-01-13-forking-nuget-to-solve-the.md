@@ -38,7 +38,7 @@ After that I cloned my fork locally with <code class="codespan">hg clone https:/
 After that I had a lot of code.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget2.png?mtime=1294864869"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget2.png?mtime=1294864869" width="774" height="332" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget2.png?mtime=1294864869"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget2.png?mtime=1294864869" width="774" height="332" /></a>
 </div>
 
 As with all projects you fall into it seems a bit daunting to find what you need. But the code for nuget is pretty decent and finding what I needed to change was pretty easy. 
@@ -131,7 +131,7 @@ Running this the first time (the original code) gave me an Exception.
 So I put a breakpoint on the line that deals with the proxy and should get the credentials out of the cache.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307" width="769" height="179" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307" width="769" height="179" /></a>
 </div>
 
 Now I&#8217;m pretty sure that cache is related to what IE uses. So I got IE from under the dust and connected to the internet. And tried again.
@@ -139,7 +139,7 @@ Now I&#8217;m pretty sure that cache is related to what IE uses. So I got IE fro
 And here is the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307"><img alt="" src="/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307" width="769" height="179" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nuget/nuget3.png?mtime=1294907307" width="769" height="179" /></a>
 </div>
 
 I just used the same screenshot as before since their was no difference ;-).

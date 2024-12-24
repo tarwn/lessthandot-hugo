@@ -19,7 +19,7 @@ tags:
 A few days ago [Demis Bellot][1] (the creator of Servicestack) was talking about [Smalltalk][2] on twitter. A little discussion came about involving [Alex Ullrich][3].
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/smalltalk/smalltalk1.png?mtime=1354953430"><img alt="" src="/wp-content/uploads/users/chrissie1/smalltalk/smalltalk1.png?mtime=1354953430" width="299" height="718" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/smalltalk/smalltalk1.png?mtime=1354953430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/smalltalk/smalltalk1.png?mtime=1354953430" width="299" height="718" /></a>
 </div>
 
 So my next mission was to learn a thing or two about smalltalk myself. 

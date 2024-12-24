@@ -81,7 +81,7 @@ To create the publication, ensure the distributor has been configured.  Right c
 Next, create a new publication by right clicking Local Publications and selecting New Publication
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/.png?mtime=1329263427"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/.png?mtime=1329263427" width="316" height="189" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/.png?mtime=1329263427"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/.png?mtime=1329263427" width="316" height="189" /></a>
 </div>
 
 Click next to the welcome screen if it appears.
@@ -89,7 +89,7 @@ Click next to the welcome screen if it appears.
 In the Publication Database selection, choose AdventureWorks (link provided earlier for downloading the AdventureWorks database)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-1.png?mtime=1329263427"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-1.png?mtime=1329263427" width="510" height="178" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-1.png?mtime=1329263427"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-1.png?mtime=1329263427" width="510" height="178" /></a>
 </div>
 
 The Publication Database selection will allow the wizard to perform the first step of enabling the database for replication.  All databases have a publisher setting of enabled or disabled for replication.  The setting is disabled by default so unneeded maintenance of the database in the replication system tables is not done.
@@ -97,13 +97,13 @@ The Publication Database selection will allow the wizard to perform the first st
 Click Next.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-2.png?mtime=1329263427"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-2.png?mtime=1329263427" width="503" height="246" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-2.png?mtime=1329263427"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-2.png?mtime=1329263427" width="503" height="246" /></a>
 </div>
 
 In the Publication Type window, select Merge publication and click Next.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-3.png?mtime=1329263427"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-3.png?mtime=1329263427" width="502" height="204" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-3.png?mtime=1329263427"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-3.png?mtime=1329263427" width="502" height="204" /></a>
 </div>
 
 Depending on the version of SQL Server, the Subscriber Types will vary.  For this example, the subscriber is the same version as the publisher, SQL Server 2012 RC0.  If you are performing these tasks on a SQL Server 2008 publisher but want to use a SQL Server 2005 SP2 or greater version as a subscriber, select the check box to enable the support for SQL Server 2005 at this time.
@@ -113,7 +113,7 @@ Choosing versions that are an earlier compatibility level can have a slight perf
 Click Next when the selection are made (or leave the default if the same versions are used)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-4.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-4.png?mtime=1329263428" width="504" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-4.png?mtime=1329263428"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-4.png?mtime=1329263428" width="504" height="261" /></a>
 </div>
 
 In the Articles window, check the boxes next to Person, SalesOrderHeader SalesOrderDetail and TransactionHistory.
@@ -121,13 +121,13 @@ In the Articles window, check the boxes next to Person, SalesOrderHeader SalesOr
 Highlight the SalesOrderHeader table and dropdown the list for Article Properties.  Select, Set Properties of Highlighted Table Articles".  This will allow the changes for Row and Column Tracking.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-5.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-5.png?mtime=1329263428" width="596" height="253" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-5.png?mtime=1329263428"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-5.png?mtime=1329263428" width="596" height="253" /></a>
 </div>
 
 In the window that appears to alter the properties of the article, scroll down to the bottom of the window.  Under Merging Changes, change Tracking level setting to Column-Level tracking.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-6.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-6.png?mtime=1329263428" width="436" height="85" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-6.png?mtime=1329263428"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-6.png?mtime=1329263428" width="436" height="85" /></a>
 </div>
 
 Next, click the Resolver tab in the same article properties window.
@@ -137,7 +137,7 @@ Choose "Use a custom resolver (registered at the Distributor) and select the "Mi
 Enter, "DueDate" in the box below the resolver list and click OK to close and save the article properties for SalesOrderHeader.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-7.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-7.png?mtime=1329263428" width="455" height="377" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-7.png?mtime=1329263428"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-7.png?mtime=1329263428" width="455" height="377" /></a>
 </div>
 
 Click next in the publication wizard to move to the filter table rows editor.
@@ -145,7 +145,7 @@ Click next in the publication wizard to move to the filter table rows editor.
 Select Add Filter from the list box.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-8.png?mtime=1329263428"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-8.png?mtime=1329263428" width="624" height="215" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-8.png?mtime=1329263428"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-8.png?mtime=1329263428" width="624" height="215" /></a>
 </div>
 
 In the initial screen, the Person table should be selected, if it is not, drop the list down and select it.  The only changes needed to use the Person table as a parameterized filter is to edit the Filter statement.
@@ -155,7 +155,7 @@ Add to the filter statement, "[LoginAccount]=SUSER_SNAME()"
 Click the radio button to specify "A row from this table will go to only one subscriber" in the How many subscriptions will receive data area.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-9.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-9.png?mtime=1329263429" width="558" height="466" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-9.png?mtime=1329263429"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-9.png?mtime=1329263429" width="558" height="466" /></a>
 </div>
 
 Click OK to save the filter on Person.
@@ -163,7 +163,7 @@ Click OK to save the filter on Person.
 Click the Add list again and select "Add Join to Extend the Selected Filter..."
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429" width="624" height="141" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-10.png?mtime=1329263429" width="624" height="141" /></a>
 </div>
 
 In the Add Join window, ensure that Sales.SalesOrderHeader is selected in the Joined table list.
@@ -171,7 +171,7 @@ In the Add Join window, ensure that Sales.SalesOrderHeader is selected in the Jo
 Leave Use the builder to create the statement selected.  For Filtered table column select BusinessEntityID (int) and then select SalesPersonID (int) for the Joined table column.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-11.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-11.png?mtime=1329263429" width="547" height="298" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-11.png?mtime=1329263429"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-11.png?mtime=1329263429" width="547" height="298" /></a>
 </div>
 
 Click OK to close and add the join filter.
@@ -181,7 +181,7 @@ Back in the article properties window, click the Add list again and select "Add 
 Drop down the Joined table and select Sales.SalesOrderDetail.  In the join statement step 2, use SalesOrderID (int) for the filtered table column and SalesOrderID (int) in the joined table column.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-12.png?mtime=1329263429"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-12.png?mtime=1329263429" width="543" height="301" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-12.png?mtime=1329263429"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-12.png?mtime=1329263429" width="543" height="301" /></a>
 </div>
 
 Click OK to add the join filter.
@@ -189,7 +189,7 @@ Click OK to add the join filter.
 The filter window should appear as shown below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430" width="624" height="204" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-13.png?mtime=1329263430" width="624" height="204" /></a>
 </div>
 
 Back in the article properties window, click the Add list again and select "Add Join to Extend the Selected Filter..."
@@ -197,13 +197,13 @@ Back in the article properties window, click the Add list again and select "Add 
 Drop down the Joined table and select Production.TransationHistory.  In the join statement step 2, use SalesOrderID (int) for the filtered table column and ReferenceOrderID (int) in the joined table column.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-14.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-14.png?mtime=1329263430" width="548" height="273" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-14.png?mtime=1329263430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-14.png?mtime=1329263430" width="548" height="273" /></a>
 </div>
 
 Click OK to add the filter and ensure the completed filters appear as shown below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-15.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-15.png?mtime=1329263430" width="296" height="90" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-15.png?mtime=1329263430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-15.png?mtime=1329263430" width="296" height="90" /></a>
 </div>
 
 Click Next to move to the Snapshot Agent settings window.
@@ -211,7 +211,7 @@ Click Next to move to the Snapshot Agent settings window.
 For this setup, the defaults are left for the snapshot agent.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-16.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-16.png?mtime=1329263430" width="497" height="271" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-16.png?mtime=1329263430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-16.png?mtime=1329263430" width="497" height="271" /></a>
 </div>
 
 Click Next to move to the Agent Security window.  Click the browse button in the Connection to Subscriber box.  In the Snapshot Agent Security settings window that appears, Select, "Run under the SQL Server Agent service account" so the snapshot utilizes the agent account to perform the tasks.
@@ -219,19 +219,19 @@ Click Next to move to the Agent Security window.  Click the browse button in th
 (If your security does not allow the agent to access the file system, enter an account that can)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-17.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-17.png?mtime=1329263430" width="447" height="383" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-17.png?mtime=1329263430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-17.png?mtime=1329263430" width="447" height="383" /></a>
 </div>
 
 Click OK, then Next to move to the Wizard Actions window.  The defaults were left here as well.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-18.png?mtime=1329263430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-18.png?mtime=1329263430" width="500" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-18.png?mtime=1329263430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-18.png?mtime=1329263430" width="500" height="207" /></a>
 </div>
 
 Click Next and then enter a name of, Sales, in the Complete the Wizard screen.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-19.png?mtime=1329263431"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-19.png?mtime=1329263431" width="502" height="451" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-19.png?mtime=1329263431"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-19.png?mtime=1329263431" width="502" height="451" /></a>
 </div>
 
 Click Finish to create the publication.
@@ -243,7 +243,7 @@ To add a subscription to the publication just created, follow these steps.
 Right click the new publication and select New Subscriptions...
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-20.png?mtime=1329263553"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-20.png?mtime=1329263553" width="502" height="451" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-20.png?mtime=1329263553"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-20.png?mtime=1329263553" width="502" height="451" /></a>
 </div>
 
 The first screen will list all the publications available. If the publisher instance is not the one used to create the publication earlier, change the list box to represent the correct instance.
@@ -257,13 +257,13 @@ Click next to move to the Subscribers selection window.
 In the Subscribers window, check the Subscriber instance or select the list to find a different instance.  Once selected, drop down the subscription database and select the database that will be used as the subscribing database.  If following these steps, use the database AdventureWorksSalesperson.  The create script was provided earlier in this article.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-21.png?mtime=1329263553"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-21.png?mtime=1329263553" width="409" height="55" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-21.png?mtime=1329263553"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-21.png?mtime=1329263553" width="409" height="55" /></a>
 </div>
 
 Click Next to move to the Agent Security widow.  Click the browse button similar to the agent security settings performed prior in the publication wizard.  Select the radio buttons to impersonate the agent service account and click OK.  Click next to move to the final screen and click Finish to create the subscription.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-22.png?mtime=1329263553"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-22.png?mtime=1329263553" width="494" height="177" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-22.png?mtime=1329263553"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-22.png?mtime=1329263553" width="494" height="177" /></a>
 </div>
 
 **Testing row updates**
@@ -283,7 +283,7 @@ Agent jobs will follow a naming convention if the defaults were used.
 INSTANCE-database-publication-increment – Example: ONPNTRC0-AdventureWorks-Sales-1
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-23.png?mtime=1329263553"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-23.png?mtime=1329263553" width="500" height="167" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-23.png?mtime=1329263553"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-23.png?mtime=1329263553" width="500" height="167" /></a>
 </div>
 
 Test the publication and subscription by altering data in the SalesOrderHeader table on the subscriber database, AdventureWorksSalesperson.
@@ -297,7 +297,7 @@ where SalesPersonID = 275
 Back in the replication monitor, click the All Subscriptions tab.  Right click the subscriber and click Start Synchronizing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/-24.png?mtime=1329263554"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/-24.png?mtime=1329263554" width="624" height="115" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-24.png?mtime=1329263554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/-24.png?mtime=1329263554" width="624" height="115" /></a>
 </div>
 
 Check the changes were sent to the publisher by querying the AdventureWorks database.
@@ -308,7 +308,7 @@ select * from Sales.SalesOrderHeader where SalesPersonID = 275
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/MergRepl/mergesetup_25.gif?mtime=1329263554"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/MergRepl/mergesetup_25.gif?mtime=1329263554" width="624" height="114" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/mergesetup_25.gif?mtime=1329263554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/MergRepl/mergesetup_25.gif?mtime=1329263554" width="624" height="114" /></a>
 </div>
 
 The changes should show on both publisher and subscriber.

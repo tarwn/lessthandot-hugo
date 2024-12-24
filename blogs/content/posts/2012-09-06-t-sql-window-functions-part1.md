@@ -60,7 +60,7 @@ select CustomerName<br />
 </code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/NoParmResults.jpg?mtime=1346902398"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/NoParmResults.jpg?mtime=1346902398" width="301" height="239" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoParmResults.jpg?mtime=1346902398"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoParmResults.jpg?mtime=1346902398" width="301" height="239" /></a>
 </div>
 
 The OVER clause takes three additional arguments to change the scope of the clause — PARTITION BY, ORDER BY, and ROWS or RANGE. 
@@ -76,7 +76,7 @@ The PARTITION BY clause is used to reduce the scope of the window to which the a
 </code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/PartitionByResults.jpg?mtime=1346902402"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/PartitionByResults.jpg?mtime=1346902402" width="474" height="365" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/PartitionByResults.jpg?mtime=1346902402"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/PartitionByResults.jpg?mtime=1346902402" width="474" height="365" /></a>
 </div>
 
 ## ORDER BY
@@ -91,7 +91,7 @@ The ORDER BY clause is used to order how the partitions apply the window functio
 </code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/OrderByResults.jpg?mtime=1346902400"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/OrderByResults.jpg?mtime=1346902400" width="589" height="367" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/OrderByResults.jpg?mtime=1346902400"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/OrderByResults.jpg?mtime=1346902400" width="589" height="367" /></a>
 </div>
 
 As you can see, if no partition is specified the order will apply to the entire result set or the default partition. This is particularly important to understand when using ranking functions with the OVER clause. Before SQL Server 2012, the ORDER BY clause could only be used with ranking functions. With the release of SQL Server 2012, the ORDER BY clause can now be used with ranking, aggregate, and analytic functions.
@@ -99,7 +99,7 @@ As you can see, if no partition is specified the order will apply to the entire 
 The following image visually illustrates the how the PARTITION BY and ORDER BY clauses aggregate and rank data.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/PartitionIllustration.JPG?mtime=1346938792"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/PartitionIllustration.JPG?mtime=1346938792" width="1220" height="506" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/PartitionIllustration.JPG?mtime=1346938792"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/PartitionIllustration.JPG?mtime=1346938792" width="1220" height="506" /></a>
 </div>
 
 ## ROWS or RANGE
@@ -126,7 +126,7 @@ The final clauses that can be used to define a partition are the ROWS and RANGE 
 </code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/RowRangeResults.jpg?mtime=1346902407"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/RowRangeResults.jpg?mtime=1346902407" width="936" height="371" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RowRangeResults.jpg?mtime=1346902407"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RowRangeResults.jpg?mtime=1346902407" width="936" height="371" /></a>
 </div>
 
 A couple of other notes regarding ROWS and RANGE. In cases where the partition returns no rows, the value returned is NULL by default as seen in rows 5 and 10 above. Also, if the partition only returns fewer rows than specified it will only apply to rows within the range. In the example above, row 4 NextTwoAmts column will only return the sum of row 5 as it is the only row included in the partition. 
@@ -142,7 +142,7 @@ Finally, ROWS and RANGE react differently when only the CURRENT ROW is specified
 </code>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/CurrentRowResults.jpg?mtime=1346902397"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/CurrentRowResults.jpg?mtime=1346902397" width="656" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/CurrentRowResults.jpg?mtime=1346902397"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/CurrentRowResults.jpg?mtime=1346902397" width="656" height="235" /></a>
 </div>
 
 Stay tuned over the next three weeks where I will discuss ranking functions, aggregate functions and analytic functions.

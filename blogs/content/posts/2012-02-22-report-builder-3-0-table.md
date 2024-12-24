@@ -27,7 +27,7 @@ This is part two of a series about Report Builder 3.0.
 In this post, I'm going to introduce you to one the Table or Matrix Wizard.
 
 <p style="text-align: center">
-  <img style="vertical-align: middle" src="/wp-content/uploads/users/grrlgeek/Wizard.jpg?mtime=1329921629" alt="" width="196" height="225" />
+  <img style="vertical-align: middle" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Wizard.jpg?mtime=1329921629" alt="" width="196" height="225" />
 </p>
 
 SQL Server Report Builder 3.0 has a built-in Table or Matrix Wizard. It will walk you through all the necessary building blocks for a table or matrix, and generate a report layout for you. This is great if you're not comfortable with starting a report from scratch, or want to quickly create a report.
@@ -124,16 +124,16 @@ The Table or Matrix Wizard is a powerful tool to help you quickly design reports
 
 Next, we'll look at the Chart Wizard!
 
- [1]: /wp-content/uploads/users/grrlgeek/RB3TableWiz1.JPG?mtime=1329271885
- [2]: /wp-content/uploads/users/grrlgeek/RB3TableWiz2.JPG?mtime=1329271885
- [3]: /wp-content/uploads/users/grrlgeek/RB3TableWiz3.JPG?mtime=1329272175
- [4]: /wp-content/uploads/users/grrlgeek/RB3TableWiz4.JPG?mtime=1329272176
- [5]: /wp-content/uploads/users/grrlgeek/RB3TableWiz5.JPG?mtime=1329271887
- [6]: /wp-content/uploads/users/grrlgeek/RB3TableWiz6.JPG?mtime=1329272354
- [7]: /wp-content/uploads/users/grrlgeek/RB3TableWizStyle.jpg?mtime=1329272675
- [8]: /wp-content/uploads/users/grrlgeek/RB3TableWiz7.JPG?mtime=1329271960
- [9]: /wp-content/uploads/users/grrlgeek/RB3TableWiz8.JPG?mtime=1329271961
- [10]: /wp-content/uploads/users/grrlgeek/RB3TableWiz9.JPG?mtime=1329273169
- [11]: /wp-content/uploads/users/grrlgeek/RB3TableWiz10.JPG?mtime=1329271962
- [12]: /wp-content/uploads/users/grrlgeek/RB3TableWiz11.JPG?mtime=1329271962
- [13]: /wp-content/uploads/users/grrlgeek/RB3TableWiz12.JPG?mtime=1329271962
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz1.JPG?mtime=1329271885
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz2.JPG?mtime=1329271885
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz3.JPG?mtime=1329272175
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz4.JPG?mtime=1329272176
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz5.JPG?mtime=1329271887
+ [6]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz6.JPG?mtime=1329272354
+ [7]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWizStyle.jpg?mtime=1329272675
+ [8]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz7.JPG?mtime=1329271960
+ [9]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz8.JPG?mtime=1329271961
+ [10]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz9.JPG?mtime=1329273169
+ [11]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz10.JPG?mtime=1329271962
+ [12]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz11.JPG?mtime=1329271962
+ [13]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3TableWiz12.JPG?mtime=1329271962

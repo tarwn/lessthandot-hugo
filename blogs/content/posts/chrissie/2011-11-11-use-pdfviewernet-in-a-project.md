@@ -22,19 +22,19 @@ So I downloaded the source for [pdfviewernet][1] and just [ran it out of the box
 And it worked.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623" width="790" height="640" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623" width="790" height="640" /></a>
 </div>
 
 If you go look in the properties of the Samplepdfviewer you will notice that it is set to run for a .net 2.0 framework.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet4.png?mtime=1321000462"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet4.png?mtime=1321000462" width="680" height="522" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet4.png?mtime=1321000462"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet4.png?mtime=1321000462" width="680" height="522" /></a>
 </div>
 
 You might want to change that to .net 4.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet5.png?mtime=1321000725"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet5.png?mtime=1321000725" width="680" height="522" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet5.png?mtime=1321000725"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet5.png?mtime=1321000725" width="680" height="522" /></a>
 </div>
 
 If you try to run this now you will get this error.
@@ -56,7 +56,7 @@ The part with <code class="codespan">useLegacyV2RuntimeActivationPolicy="true"</
 If you run it now it will just work. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet6.png?mtime=1321001034"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet6.png?mtime=1321001034" width="727" height="533" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet6.png?mtime=1321001034"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet6.png?mtime=1321001034" width="727" height="533" /></a>
 </div>
 
 Until you click on the browse button and select a file and click Ok. You will then get the following error.
@@ -68,7 +68,7 @@ Oh joy. This is also &#8220;easily&#8221; fixed. Just replace the PDFLibnet.dll 
 And if you run it now and open your pdf you will see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623"><img alt="" src="/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623" width="790" height="640" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/pdfviewernet/pdfviewernet2.png?mtime=1320913623" width="790" height="640" /></a>
 </div>
 
 And on your development machine there is a 99% chance that this will work. This will work because like 99% of developers you installed Visual studio with the default parameters. And this means that the VC++ libraries are also installed. You might want to note that your clients will probably not have these installed and it will therefor crash on you when you run it there. It will say that PDFLibNet.dll can not be loaded because it is missing or one of it&#8217;s dependencies is missing. And we all know PDFLibnet is there so it must be the dependencies. 

@@ -76,7 +76,7 @@ I also gave that a number.
 When you have this all set up you can already try to run this. The menuitem will show up but won&#8217;t do a thing.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension10.png" alt="" title="" width="469" height="291" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Extensions/NArrangeExtension10.png" alt="" title="" width="469" height="291" />
 </div>
 
 But now we have to tell our code to do something different when that button is clicked.

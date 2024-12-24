@@ -31,7 +31,7 @@ I have put the [code on github][1].
 This is what I want.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancyjtable6.png?mtime=1359398031"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancyjtable6.png?mtime=1359398031" width="473" height="470" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable6.png?mtime=1359398031"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable6.png?mtime=1359398031" width="473" height="470" /></a>
 </div>
 
 And in a sense it is very easy to do.

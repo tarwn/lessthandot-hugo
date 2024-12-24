@@ -85,7 +85,7 @@ You can setup standard templates in SSMS for your organization, you can get to i
 Now expand the Stored Procedures folder
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/TemplateBrowserProcs.PNG?mtime=1354732944"><img alt="SSMS Template Browser Stored Procedures Folder Expanded" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/TemplateBrowserProcs.PNG?mtime=1354732944" width="254" height="292" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/TemplateBrowserProcs.PNG?mtime=1354732944"><img alt="SSMS Template Browser Stored Procedures Folder Expanded" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/TemplateBrowserProcs.PNG?mtime=1354732944" width="254" height="292" /></a>
 </div>
 
 The basic stored procedure template looks like this

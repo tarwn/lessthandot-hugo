@@ -30,37 +30,37 @@ So then I looked a little further an read something about how to do this. And I 
 First we give it the source, this is the Workstation 7 vmx file we want to convert/transfer to ESXi.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert1.png" alt="" title="" width="816" height="638" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert1.png" alt="" title="" width="816" height="638" />
 </div>
 
 After clicking next we choose VMWare Infrastructure virtual machine from destination type. And insert our serveraddress, username and password.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert2.png" alt="" title="" width="816" height="638" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert2.png" alt="" title="" width="816" height="638" />
 </div>
 
 After clicking next again. We tell it which Datastore to use and what name to use. We can even change the version (4 or 7) 7 is for ESXi 4 only and 4 is when you want backward compatibility with ESXi 3.5. Yes that is a bit confusing.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert3.png" alt="" title="" width="816" height="638" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert3.png" alt="" title="" width="816" height="638" />
 </div>
 
 Clicking next gets us to this page. Where I changed nothing. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert4.png" alt="" title="" width="816" height="638" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert4.png" alt="" title="" width="816" height="638" />
 </div>
 
 The last page is a summary and you should now click Finish to continue and start the process.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert5.png" alt="" title="" width="816" height="638" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert5.png" alt="" title="" width="816" height="638" />
 </div>
 
 The last image shows you how long it will take and a nice processbar.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert6.png" alt="" title="" width="787" height="518" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/VMWareConvert6.png" alt="" title="" width="787" height="518" />
 </div>
 
 The disk was around 11GB and it took nearly 3 hours to complete it&#8217;s mission.

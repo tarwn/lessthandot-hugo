@@ -86,13 +86,13 @@ Small changes like that will make your report into this:
 
 The Chart Wizard is a quick, simple way to build an effective report. Many times, data that is represented graphically can be more easily understood.
 
- [1]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz1.JPG?mtime=1330529209
- [2]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz2.JPG?mtime=1330529210
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz1.JPG?mtime=1330529209
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz2.JPG?mtime=1330529210
  [3]: /index.php/DataMgmt/ssrs/report-builder-3-0-table
- [4]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz3.JPG?mtime=1330529210
- [5]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz4-1.JPG?mtime=1330529211
- [6]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz5.JPG?mtime=1330529212
- [7]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz6.JPG?mtime=1330529212
- [8]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz7.JPG?mtime=1330529213
- [9]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz8.JPG?mtime=1330529214
- [10]: /wp-content/uploads/users/grrlgeek/RB3ChartWiz9.JPG?mtime=1330529215
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz3.JPG?mtime=1330529210
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz4-1.JPG?mtime=1330529211
+ [6]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz5.JPG?mtime=1330529212
+ [7]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz6.JPG?mtime=1330529212
+ [8]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz7.JPG?mtime=1330529213
+ [9]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz8.JPG?mtime=1330529214
+ [10]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ChartWiz9.JPG?mtime=1330529215

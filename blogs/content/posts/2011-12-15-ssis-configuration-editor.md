@@ -46,7 +46,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <span style="font-family: verdana,geneva;"><span style="font-size: small;"><a href="/media/blogs/DataMgmt/-93.png?mtime=1323611029"><img src="/wp-content/uploads/blogs/DataMgmt/-93.png?mtime=1323611029" alt="" width="179" height="97" /></a></span></span>
+  <span style="font-family: verdana,geneva;"><span style="font-size: small;"><a href="/media/blogs/DataMgmt/-93.png?mtime=1323611029"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-93.png?mtime=1323611029" alt="" width="179" height="97" /></a></span></span>
 </div>
 
 <span style="font-family: verdana,geneva;"><span style="font-size: small;"> </span></span>
@@ -66,7 +66,7 @@ categories:
 <span style="font-family: verdana,geneva;"><span style="font-size: small;"><br /></span></span>
 
 <div class="image_block">
-  <span style="font-family: verdana,geneva;"><span style="font-size: small;"><a href="/media/blogs/DataMgmt/-94.png?mtime=1323611029"><img src="/wp-content/uploads/blogs/DataMgmt/-94.png?mtime=1323611029" alt="" width="624" height="144" /></a></span></span>
+  <span style="font-family: verdana,geneva;"><span style="font-size: small;"><a href="/media/blogs/DataMgmt/-94.png?mtime=1323611029"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-94.png?mtime=1323611029" alt="" width="624" height="144" /></a></span></span>
 </div>
 
 <span style="font-family: verdana,geneva;"><span style="font-size: small;"> </span></span>
@@ -82,7 +82,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <span style="font-family: verdana,geneva;"><span style="font-size: small;"><a href="/media/blogs/DataMgmt/-95.png?mtime=1323611030"><img src="/wp-content/uploads/blogs/DataMgmt/-95.png?mtime=1323611030" alt="" width="624" height="134" /></a></span></span>
+  <span style="font-family: verdana,geneva;"><span style="font-size: small;"><a href="/media/blogs/DataMgmt/-95.png?mtime=1323611030"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-95.png?mtime=1323611030" alt="" width="624" height="134" /></a></span></span>
 </div>
 
 <span style="font-family: verdana,geneva;"><span style="font-size: small;"> </span></span>

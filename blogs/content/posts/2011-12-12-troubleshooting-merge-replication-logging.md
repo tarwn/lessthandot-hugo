@@ -21,7 +21,7 @@ When setting up and designing a merge replication publication that will utilize 
 The following publication on AdventureWorks database has a design flaw relating to the article SalesOrderDetail.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-77.png?mtime=1323522714"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-77.png?mtime=1323522714" width="382" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-77.png?mtime=1323522714"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-77.png?mtime=1323522714" width="382" height="343" /></a>
 </div>
 
 This publication has a parameterized filter on Person.Person of SUSER_SNAME() and join filters on SalesOrderHeader and SalesOrderDetail.  The partition that will be generated is set to be for only one subscriber.
@@ -48,31 +48,31 @@ replmerg.exe -Publisher [ONPNTRC0] -PublisherDB [AdventureWorks] -Publication [S
 This command generates the file C:replmerg2.log.  Open the file and review the logs.  For the errors that are generated from the example publication, the following was logged after the first SalesOrderDetail operation
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-78.png?mtime=1323522714"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-78.png?mtime=1323522714" width="624" height="105" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-78.png?mtime=1323522714"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-78.png?mtime=1323522714" width="624" height="105" /></a>
 </div>
 
 The problem with Production.TransationHistory is shown here.  The object is not part of replication so it has not been created on the subscriber.  Since the trigger in the SalesOrderDetail references it, the error will be thrown on each update transaction.  This could be fixed initially by using the NOT FOR REPLICATION option.  In fact, this would allow the initial snapshot to apply and complete successfully
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-79.png?mtime=1323522716"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-79.png?mtime=1323522716" width="624" height="405" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-79.png?mtime=1323522716"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-79.png?mtime=1323522716" width="624" height="405" /></a>
 </div>
 
 However, that will only prevent replication triggers from firing.  The trigger will still be on the subscriber table and when normal update operations occur, the error will be generated on the object invalid reference.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-80.png?mtime=1323522716"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-80.png?mtime=1323522716" width="537" height="160" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-80.png?mtime=1323522716"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-80.png?mtime=1323522716" width="537" height="160" /></a>
 </div>
 
 To fix this, the trigger can be altered to check for the table before updating or it can be included in the publication design.  In the case of this trigger, we can look to the relationships in the Production.TransactionHistory table.  In this case, the ReferenceOrderID can be used to join the table to SalesOrderHeader.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-81.png?mtime=1323522716"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-81.png?mtime=1323522716" width="306" height="138" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-81.png?mtime=1323522716"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-81.png?mtime=1323522716" width="306" height="138" /></a>
 </div>
 
 Applying this new filter configuration successfully completes
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-82.png?mtime=1323522716"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-82.png?mtime=1323522716" width="624" height="256" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-82.png?mtime=1323522716"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-82.png?mtime=1323522716" width="624" height="256" /></a>
 </div>
 
 This raises another problem though.  When filters and joins become extensive, replication performance can degrade quickly.  Be sure to monitor and test the levels of filters and joins you use in the publications.  On many occasions, replicating more data without a join is better performing than adding a join.  And never forget to tune for the joins themselves just as you would tune any other query.

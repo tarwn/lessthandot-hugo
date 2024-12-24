@@ -51,7 +51,7 @@ git --bare init```
 And this is what it looks like after you do the command-line thingie.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git1.png" alt="" title="" width="845" height="354" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git1.png" alt="" title="" width="845" height="354" />
 </div>
 
 ### Local repository
@@ -59,11 +59,11 @@ And this is what it looks like after you do the command-line thingie.
 Now that we have our central repository set up we need to set up our local repository. For this we go to My Documents and create a folder in there. Right click on the folder and click Git Clone.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git2.png" alt="" title="" width="248" height="64" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git2.png" alt="" title="" width="248" height="64" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git7.png" alt="" title="" width="485" height="364" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git7.png" alt="" title="" width="485" height="364" />
 </div>
 
 The url to fill in is the folder where you have setup your central repository.
@@ -71,11 +71,11 @@ The url to fill in is the folder where you have setup your central repository.
 Now we just create a few files and folders in the local repository and commit them to master (master being the branch, but more about that in the next post).
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git4.png" alt="" title="" width="245" height="69" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git4.png" alt="" title="" width="245" height="69" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git3.png" alt="" title="" width="845" height="354" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git3.png" alt="" title="" width="845" height="354" />
 </div>
 
 This commit (unlike the SVN commit) just commits things locally. To make the central repository receive our changes we need to do a push.
@@ -83,13 +83,13 @@ This commit (unlike the SVN commit) just commits things locally. To make the cen
 Via this menu.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git5.png" alt="" title="" width="432" height="149" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git5.png" alt="" title="" width="432" height="149" />
 </div>
 
 Or via the Git sync&#8230; menu item.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git6.png" alt="" title="" width="580" height="465" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git6.png" alt="" title="" width="580" height="465" />
 </div>
 
 Normally the remote should have been setup by your cloning action and should be correct. 
@@ -97,13 +97,13 @@ Normally the remote should have been setup by your cloning action and should be 
 Now if we go back to our central repository it will just look the same as before.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git1.png" alt="" title="" width="845" height="354" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git1.png" alt="" title="" width="845" height="354" />
 </div>
 
 But the files are there. We can see this best by creating a second local repository and doing the clone thing again. And here is the result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/git/git8.png" alt="" title="" width="845" height="354" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/git/git8.png" alt="" title="" width="845" height="354" />
 </div>
 
 This is magic stuff and very easy to do.

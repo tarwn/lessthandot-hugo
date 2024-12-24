@@ -5,7 +5,7 @@ type: post
 date: 2018-01-23T18:06:36+00:00
 ID: 8898
 url: /index.php/enterprisedev/cloud/streaming-alerts-using-aws-lambda-kinesis-and-dynamodb/
-featured_image: /wp-content/uploads/2018/01/Streaming.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/Streaming.png
 views:
   - 1713
 rp4wp_auto_linked:
@@ -49,7 +49,7 @@ The idea is based on one that is used frequently in CQRS and I'm far from the fi
 </p>
 
 <div id="attachment_8900" style="width: 718px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/01/AnalyticsOverview.png" alt="Analytics Overview" width="708" height="608" class="size-full wp-image-8900" srcset="/wp-content/uploads/2018/01/AnalyticsOverview.png 708w, /wp-content/uploads/2018/01/AnalyticsOverview-300x258.png 300w" sizes="(max-width: 708px) 100vw, 708px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/AnalyticsOverview.png" alt="Analytics Overview" width="708" height="608" class="size-full wp-image-8900" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/AnalyticsOverview.png 708w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/AnalyticsOverview-300x258.png 300w" sizes="(max-width: 708px) 100vw, 708px" />
   
   <p class="wp-caption-text">
     Analytics Overview
@@ -124,7 +124,7 @@ new Rule({
 </p>
 
 <div id="attachment_8901" style="width: 463px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/01/RuleProcessor.png" alt="Rule Processor Logic" width="453" height="624" class="size-full wp-image-8901" srcset="/wp-content/uploads/2018/01/RuleProcessor.png 453w, /wp-content/uploads/2018/01/RuleProcessor-218x300.png 218w" sizes="(max-width: 453px) 100vw, 453px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessor.png" alt="Rule Processor Logic" width="453" height="624" class="size-full wp-image-8901" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessor.png 453w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessor-218x300.png 218w" sizes="(max-width: 453px) 100vw, 453px" />
   
   <p class="wp-caption-text">
     Rule Processor Logic
@@ -226,7 +226,7 @@ function evaluateAndStore(eventGroup){
     </p>
     
     <div id="attachment_8902" style="width: 837px" class="wp-caption aligncenter">
-      <img src="/wp-content/uploads/2018/01/RuleProcessorOutput.png" alt="Rule Processor Output" width="827" height="255" class="size-full wp-image-8902" srcset="/wp-content/uploads/2018/01/RuleProcessorOutput.png 827w, /wp-content/uploads/2018/01/RuleProcessorOutput-300x93.png 300w, /wp-content/uploads/2018/01/RuleProcessorOutput-768x237.png 768w" sizes="(max-width: 827px) 100vw, 827px" />
+      <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessorOutput.png" alt="Rule Processor Output" width="827" height="255" class="size-full wp-image-8902" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessorOutput.png 827w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessorOutput-300x93.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/01/RuleProcessorOutput-768x237.png 768w" sizes="(max-width: 827px) 100vw, 827px" />
       
       <p class="wp-caption-text">
         Rule Processor Output

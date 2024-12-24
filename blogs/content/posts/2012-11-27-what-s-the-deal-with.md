@@ -33,7 +33,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <img style="text-align: left;" src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ugly_duckling.jpg?mtime=1353999051" alt="Excel: the ugly duckling of source files" width="250" height="173" />
+  <img style="text-align: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ugly_duckling.jpg?mtime=1353999051" alt="Excel: the ugly duckling of source files" width="250" height="173" />
 </p>
 
 <p style="text-align: left;">
@@ -47,7 +47,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/ExcelSample.png?mtime=1353999037"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ExcelSample.png?mtime=1353999037" alt="" width="673" height="256" /></a>
+  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/ExcelSample.png?mtime=1353999037"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ExcelSample.png?mtime=1353999037" alt="" width="673" height="256" /></a>
 </p>
 
 <div class="image_block" style="text-align: justify;">
@@ -55,7 +55,7 @@ tags:
 </div>
 
 <div class="image_block">
-  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_1.png?mtime=1353998990"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_1.png?mtime=1353998990" alt="" width="618" height="260" /></a>
+  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_1.png?mtime=1353998990"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_1.png?mtime=1353998990" alt="" width="618" height="260" /></a>
 </div>
 
  
@@ -99,7 +99,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_2.png?mtime=1353998997"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_2.png?mtime=1353998997" alt="" width="612" height="278" /></a>
+  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_2.png?mtime=1353998997"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_2.png?mtime=1353998997" alt="" width="612" height="278" /></a>
 </p>
 
 <span style="text-align: justify;">That looks a little bit better, doesn't it?</span>
@@ -129,7 +129,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_3.png?mtime=1353999004"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_3.png?mtime=1353999004" alt="" width="606" height="251" /></a>
+  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_3.png?mtime=1353999004"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_3.png?mtime=1353999004" alt="" width="606" height="251" /></a>
 </p>
 
  
@@ -175,7 +175,7 @@ tags:
 </p>
 
 <p class="MsoNormal">
-  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029" alt="" width="332" height="334" /></a>
+  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/ExcelComments.png?mtime=1353999029" alt="" width="332" height="334" /></a>
 </p>
 
 _Bob really hated that customer service..._
@@ -195,7 +195,7 @@ _Bob really hated that customer service..._
 </p>
 
 <p class="MsoNormal" style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_4.png?mtime=1353999022"><img src="/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_4.png?mtime=1353999022" alt="" width="400" height="239" /></a>
+  <a href="/media/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_4.png?mtime=1353999022"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DealBetweenExcelSSIS/Dataviewer_4.png?mtime=1353999022" alt="" width="400" height="239" /></a>
 </p>
 
 _The values are shown as <Long Text> as the data viewer can't show LOB data._

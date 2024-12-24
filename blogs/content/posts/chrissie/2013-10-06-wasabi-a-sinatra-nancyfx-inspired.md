@@ -61,7 +61,7 @@ We can now assume that the url will be http:\localhost:3000
 And yes, yes it does.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/wasabi/wasabi1.png?mtime=1381044543"><img alt="" src="/wp-content/uploads/users/chrissie1/wasabi/wasabi1.png?mtime=1381044543" width="267" height="163" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/wasabi/wasabi1.png?mtime=1381044543"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/wasabi/wasabi1.png?mtime=1381044543" width="267" height="163" /></a>
 </div>
 
 You should also see these mentions in your run window in intellij.
@@ -113,7 +113,7 @@ class Person()
 And when we try the above with postman we get&#8230;.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/wasabi/wasabi2.png?mtime=1381045161"><img alt="" src="/wp-content/uploads/users/chrissie1/wasabi/wasabi2.png?mtime=1381045161" width="543" height="473" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/wasabi/wasabi2.png?mtime=1381045161"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/wasabi/wasabi2.png?mtime=1381045161" width="543" height="473" /></a>
 </div>
 
 NOTHING.
@@ -154,7 +154,7 @@ I need to tell it to negotiateContent. I kinda think that should be by default.
 And now we get.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/wasabi/wasabi3.png?mtime=1381045351"><img alt="" src="/wp-content/uploads/users/chrissie1/wasabi/wasabi3.png?mtime=1381045351" width="462" height="402" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/wasabi/wasabi3.png?mtime=1381045351"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/wasabi/wasabi3.png?mtime=1381045351" width="462" height="402" /></a>
 </div>
 
 Wasabi only supports json for now. No XML, no HTML. 

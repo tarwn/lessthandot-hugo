@@ -27,19 +27,19 @@ It lets you create views on the solution explorer so you can have less files in 
 So you start of from the normal solution explorer view.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer1.png?mtime=1347968827"><img alt="" src="/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer1.png?mtime=1347968827" width="348" height="734" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer1.png?mtime=1347968827"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer1.png?mtime=1347968827" width="348" height="734" /></a>
 </div>
 
 You then right-click on the folder or file you want and click New solution explorer view.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer2.png?mtime=1347968845"><img alt="" src="/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer2.png?mtime=1347968845" width="327" height="163" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer2.png?mtime=1347968845"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer2.png?mtime=1347968845" width="327" height="163" /></a>
 </div>
 
 And then you get a new window with the view you requested.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer3.png?mtime=1347968860"><img alt="" src="/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer3.png?mtime=1347968860" width="377" height="724" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer3.png?mtime=1347968860"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/solutionexplorer/SolutionExplorer3.png?mtime=1347968860" width="377" height="724" /></a>
 </div>
 
 I like that and it&#8217;s the first I heard about it. So spread the word and be jolly.

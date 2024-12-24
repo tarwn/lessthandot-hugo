@@ -24,7 +24,7 @@ tags:
 Sometimes the creativity of the human species is truly amazing. Someone needed to export a table into a file from within SQL Server. Now there are several ways to do this like bcp, export wizard, Query..Results To File, SSIS etc etc. Today I noticed someone found yet another way....
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914" width="304" height="409" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/UmmNo.PNG?mtime=1359677914" width="304" height="409" /></a>
 </div>
 
 This person decided to use a SQL Agent job to create the file. That is still not strange but here comes the interesting part...
@@ -32,19 +32,19 @@ This person decided to use a SQL Agent job to create the file. That is still not
 Here is what the person did, first a job was added with a query.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJob.PNG?mtime=1359678193"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJob.PNG?mtime=1359678193" width="684" height="614" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJob.PNG?mtime=1359678193"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJob.PNG?mtime=1359678193" width="684" height="614" /></a>
 </div>
 
 Then in the Advanced part of the step an output file was chosen
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobAdvanced.PNG?mtime=1359678202"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobAdvanced.PNG?mtime=1359678202" width="512" height="443" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobAdvanced.PNG?mtime=1359678202"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobAdvanced.PNG?mtime=1359678202" width="512" height="443" /></a>
 </div>
 
 This of course will create the file, however there will be some output in the from the job itself
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobOutput.PNG?mtime=1359678223"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobOutput.PNG?mtime=1359678223" width="666" height="292" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobOutput.PNG?mtime=1359678223"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/FubarJobOutput.PNG?mtime=1359678223" width="666" height="292" /></a>
 </div>
 
 The only reason I found out about this was because I was asked how to skip the 'header' in SQL Server. After a good deal of puzzlement looking at this creative 'solution' I told the person how to use bcp instead

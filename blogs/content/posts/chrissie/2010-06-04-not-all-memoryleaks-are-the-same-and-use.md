@@ -74,7 +74,7 @@ So I started the application, openend Windows task manager and added the columns
 > </p>
 > 
 > <div class="image_block">
->   <img src="/wp-content/uploads/blogs/DesktopDev/Userobjects1.png" alt="" title="" width="589" height="424" />
+>   <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Userobjects1.png" alt="" title="" width="589" height="424" />
 > </div>
 > 
 > <p>
@@ -126,5 +126,5 @@ public string MakeRtf()
 > </p>
 > 
 > <div class="image_block">
->   <img src="/wp-content/uploads/blogs/DesktopDev/Userobject2.png" alt="" title="" width="727" height="459" />
+>   <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Userobject2.png" alt="" title="" width="727" height="459" />
 > </div>

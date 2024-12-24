@@ -28,7 +28,7 @@ Installing it can&#8217;t be much easier. Got to the [getting started page][3] a
 Then unzip the zipfile where you can unzip it. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq1.png?mtime=1387181402"><img alt="" src="/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq1.png?mtime=1387181402" width="598" height="266" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq1.png?mtime=1387181402"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq1.png?mtime=1387181402" width="598" height="266" /></a>
 </div>
 
 And then just double click the index.html file.
@@ -38,13 +38,13 @@ And then just double click the index.html file.
 Now you just enter the address to your Elasticsearch server and hey presto you get everything you need.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq2.png?mtime=1387181569"><img alt="" src="/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq2.png?mtime=1387181569" width="1345" height="667" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq2.png?mtime=1387181569"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq2.png?mtime=1387181569" width="1345" height="667" /></a>
 </div>
 
 The featurelist is quite rich and will get you up and going pretty quickly.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq3.png?mtime=1387181988"><img alt="" src="/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq3.png?mtime=1387181988" width="1019" height="731" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq3.png?mtime=1387181988"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/elastichq3.png?mtime=1387181988" width="1019" height="731" /></a>
 </div>
 
 ## Conclusion

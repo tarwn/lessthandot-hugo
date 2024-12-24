@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: center;">
-  <a href="http://www.xkcd.com/835/"><img src="/wp-content/uploads/users/koenverbeeck/Christmas_2012/tree.png?mtime=1356599708" alt="" width="393" height="285" /></a>
+  <a href="http://www.xkcd.com/835/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/Christmas_2012/tree.png?mtime=1356599708" alt="" width="393" height="285" /></a>
 </p>
 
 <span style="text-align: justify;">It has been a great year and I look forward to the year 2013. These are some of the professional goals I have set for myself:</span>

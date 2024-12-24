@@ -92,9 +92,9 @@ If the result sets need to tie together, you'll need to work with the T-SQL to m
 
 That's my short-and-sweet contribution to #tsql2sday24. Thanks for hosting, Brad!
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
  [2]: http://bradsruminations.blogspot.com/2011/10/invitation-for-t-sql-tuesday-024-prox-n.html
- [3]: /wp-content/uploads/users/grrlgeek/TSQL24ssmsquery.JPG?mtime=1320777536 ""
- [4]: /wp-content/uploads/users/grrlgeek/TSQL24dataset.JPG?mtime=1320777536 ""
- [5]: /wp-content/uploads/users/grrlgeek/TSQL24fields.JPG?mtime=1320777536 ""
- [6]: /wp-content/uploads/users/grrlgeek/TSQL24report.JPG?mtime=1320777537 ""
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL24ssmsquery.JPG?mtime=1320777536 ""
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL24dataset.JPG?mtime=1320777536 ""
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL24fields.JPG?mtime=1320777536 ""
+ [6]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQL24report.JPG?mtime=1320777537 ""

@@ -50,19 +50,19 @@ If anyone has other methods or improvements to these, please feel free to commen
 
   1. Bring over a Script Task into the Control Flow 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_1.gif" alt="" title="" width="437" height="157" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_1.gif" alt="" title="" width="437" height="157" />
 </div>
 
   2. Name the task, "Remove all files based on backdays"
   3. Create the following variables
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_2.gif" alt="" title="" width="343" height="137" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_2.gif" alt="" title="" width="343" height="137" />
 </div>
 
   4. Double click the script task to open the editor.
   5. Add the variable to the ReadOnlyVariables area
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_3.gif" alt="" title="" width="585" height="410" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_3.gif" alt="" title="" width="585" height="410" />
 </div>
 
   6. Click Edit Script
@@ -141,19 +141,19 @@ namespace ST_aaf20a0bd5b94ad394ab80cf5d585c41.csproj
   8. Close the code editor and click OK to the script task editor.
   9. Right click an empty space in the Control Flow and select Package Configurations
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_4.gif" alt="" title="" width="211" height="120" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_4.gif" alt="" title="" width="211" height="120" />
 </div>
 
  10. Check Enable package configurations
  11. Click Add and enter C:DelConfig.xml to the specify configuration settings directly textbox
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_5.gif" alt="" title="" width="526" height="341" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_5.gif" alt="" title="" width="526" height="341" />
 </div>
 
  12. Click Finish and Close to the configurations editor. 
  13. You can open the XML file to edit the folder location and the log file location now
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ssis_delete2_0.gif" alt="" title="" width="819" height="727" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssis_delete2_0.gif" alt="" title="" width="819" height="727" />
 </div>
 
  14. Import the package into SSIS and execute it to run. 
@@ -163,17 +163,17 @@ namespace ST_aaf20a0bd5b94ad394ab80cf5d585c41.csproj
   1. Bring over a Foreach Loop Container in the Control Flow
   2. Create these variables
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_6.gif" alt="" title="" width="273" height="129" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_6.gif" alt="" title="" width="273" height="129" />
 </div>
 
   3. Bring over a Script Task and drop it into the Foreach Loop Container
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_7.gif" alt="" title="" width="301" height="329" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_7.gif" alt="" title="" width="301" height="329" />
 </div>
 
   4. Double click the Script Task and add these ReadOnly variables
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_8.gif" alt="" title="" width="628" height="378" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_8.gif" alt="" title="" width="628" height="378" />
 </div>
 
   5. Click the Edit Script button and add this code
@@ -222,18 +222,18 @@ namespace ST_216af79b563f4866bb64f6043b232b4e.csproj
   7. Bring over and drop a File System Task into the Foreach Loop Container
   8. Connect the Script Task to the File System Task
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_9.gif" alt="" title="" width="284" height="267" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_9.gif" alt="" title="" width="284" height="267" />
 </div>
 
   9. Double click the Foreach Loop Container and go to Collection.
  10. Enter in a default folder
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_10.gif" alt="" title="" width="469" height="348" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_10.gif" alt="" title="" width="469" height="348" />
 </div>
 
  11. In Variable Mappings, drop down the Variable and select the User::filefocus variable and leave the index at 0
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_11.gif" alt="" title="" width="533" height="104" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_11.gif" alt="" title="" width="533" height="104" />
 </div>
 
  12. Click OK to close the editor
@@ -242,51 +242,51 @@ namespace ST_216af79b563f4866bb64f6043b232b4e.csproj
  15. Change IsSourcePathVariable to True
  16. SourceVariable to User::filefocus
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_12.gif" alt="" title="" width="449" height="195" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_12.gif" alt="" title="" width="449" height="195" />
 </div>
 
  17. Click OK to exit and save
  18. Add a package configurations file as an XML file
  19. Right click an empty space in the Control Flow window
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_13.gif" alt="" title="" width="413" height="135" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_13.gif" alt="" title="" width="413" height="135" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_14.gif" alt="" title="" width="469" height="400" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_14.gif" alt="" title="" width="469" height="400" />
 </div>
 
  20. Enter FileEnumConfig.xml and click, Next
  21. Click the variables filefocus and folder
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_15.gif" alt="" title="" width="402" height="205" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_15.gif" alt="" title="" width="402" height="205" />
 </div>
 
  22. Name the configuration 
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_16.gif" alt="" title="" width="419" height="372" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_16.gif" alt="" title="" width="419" height="372" />
 </div>
 
  23. Click Finish and then Close to exit and save
  24. Click SSIS in the menu strip and select Logging
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_17.gif" alt="" title="" width="254" height="187" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_17.gif" alt="" title="" width="254" height="187" />
 </div>
 
  25. Check container FileEnumTest
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_18.gif" alt="" title="" width="356" height="106" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_18.gif" alt="" title="" width="356" height="106" />
 </div>
 
  26. Select SSIS log provider for Text Files
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_19.gif" alt="" title="" width="476" height="106" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_19.gif" alt="" title="" width="476" height="106" />
 </div>
 
  27. Drop down configuration and select New Connection
  28. Select Create File and enter C:DelbyFilEnum.txt
 <div class="image_block">
-  <img src="/wp-content/uploads/users/onpnt/ssis_delete_20.gif" alt="" title="" width="476" height="241" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/onpnt/ssis_delete_20.gif" alt="" title="" width="476" height="241" />
 </div>
 
  29. Click OK and then OK to exit and save

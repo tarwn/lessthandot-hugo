@@ -35,7 +35,7 @@ Then you need proper security for your database. Don't run all demos as sa or as
 <div id='gallery-2' class='gallery galleryid-4555 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/Login-Properties.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/Login-Properties-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Username and password" aria-describedby="gallery-2-4558" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Login-Properties.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Login-Properties-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Username and password" aria-describedby="gallery-2-4558" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-2-4558'>
@@ -45,7 +45,7 @@ Then you need proper security for your database. Don't run all demos as sa or as
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/Login-Server-Roles.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/Login-Server-Roles-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Server role" aria-describedby="gallery-2-4559" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Login-Server-Roles.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Login-Server-Roles-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Server role" aria-describedby="gallery-2-4559" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-2-4559'>
@@ -57,7 +57,7 @@ Then you need proper security for your database. Don't run all demos as sa or as
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/Login-User-Mapping.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/Login-User-Mapping-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Database role" aria-describedby="gallery-2-4560" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Login-User-Mapping.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Login-User-Mapping-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Database role" aria-describedby="gallery-2-4560" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-2-4560'>
@@ -72,7 +72,7 @@ Then you need proper security for your database. Don't run all demos as sa or as
 
 Visual Studio Community 2015 is a free version that can be downloaded from <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>. Install and open, and you'll see the Start Page.
 
-[<img class="aligncenter wp-image-4565 size-medium" src="/wp-content/uploads/2016/06/Visual-Studio-Start-Page-300x163.png" alt="Visual Studio Start Page" width="300" height="163" srcset="/wp-content/uploads/2016/06/Visual-Studio-Start-Page-300x163.png 300w, /wp-content/uploads/2016/06/Visual-Studio-Start-Page-1024x557.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />][1]
+[<img class="aligncenter wp-image-4565 size-medium" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Visual-Studio-Start-Page-300x163.png" alt="Visual Studio Start Page" width="300" height="163" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Visual-Studio-Start-Page-300x163.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Visual-Studio-Start-Page-1024x557.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />][1]
 
 This hasn't changed much from my days of using Visual Studio 2005/2008, or has it? I'm about to find out.
 
@@ -86,14 +86,14 @@ What I want to do is create a new "web page" where a user can enter some informa
 
 I see HTML in the middle pane. I want to view the designer, so at the bottom of the window I choose "Split". My VS now looks like this.
 
-[<img class="aligncenter size-medium wp-image-4567" src="/wp-content/uploads/2016/06/VS-view-300x188.png" alt="VS view" width="300" height="188" srcset="/wp-content/uploads/2016/06/VS-view-300x188.png 300w, /wp-content/uploads/2016/06/VS-view-1024x644.png 1024w, /wp-content/uploads/2016/06/VS-view.png 1493w" sizes="(max-width: 300px) 100vw, 300px" />][2]
+[<img class="aligncenter size-medium wp-image-4567" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-view-300x188.png" alt="VS view" width="300" height="188" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-view-300x188.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-view-1024x644.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-view.png 1493w" sizes="(max-width: 300px) 100vw, 300px" />][2]
 
 I want to use a stored procedure to show Purchase Order information. I'm going to add a GridView to the page, and connect it to a data source. In the Toolbox, I expand Data and find GridView. I click and drag it on to the bottom half, the design view.
 
 <div id='gallery-3' class='gallery galleryid-4555 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='/wp-content/uploads/2016/06/VS-toolbox-gridview.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/VS-toolbox-gridview-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose GridView from the Toolbox" aria-describedby="gallery-3-4572" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-toolbox-gridview.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-toolbox-gridview-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose GridView from the Toolbox" aria-describedby="gallery-3-4572" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-3-4572'>
@@ -103,7 +103,7 @@ I want to use a stored procedure to show Purchase Order information. I'm going t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/VS-designer-gridview.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/VS-designer-gridview-200x200.png" class="attachment-thumbnail size-thumbnail" alt="How the GridView will appear on the Designer" aria-describedby="gallery-3-4571" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-designer-gridview.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-designer-gridview-200x200.png" class="attachment-thumbnail size-thumbnail" alt="How the GridView will appear on the Designer" aria-describedby="gallery-3-4571" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-3-4571'>
@@ -121,7 +121,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
 <div id='gallery-4' class='gallery galleryid-4555 gallery-columns-2 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/DS-wizard-type.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/DS-wizard-type-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose &quot;Database&quot;" aria-describedby="gallery-4-4580" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/DS-wizard-type.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/DS-wizard-type-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose &quot;Database&quot;" aria-describedby="gallery-4-4580" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4580'>
@@ -131,7 +131,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon portrait'>
-      <a href='/wp-content/uploads/2016/06/DS-connection.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/DS-connection-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Enter Server name, Authentication, and database name; Test Connection" aria-describedby="gallery-4-4579" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/DS-connection.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/DS-connection-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Enter Server name, Authentication, and database name; Test Connection" aria-describedby="gallery-4-4579" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4579'>
@@ -143,7 +143,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/ds-conn-string.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/ds-conn-string-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Name and save the connection string" aria-describedby="gallery-4-4578" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-conn-string.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-conn-string-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Name and save the connection string" aria-describedby="gallery-4-4578" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4578'>
@@ -153,7 +153,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/ds-config-select.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/ds-config-select-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose a custom statement" aria-describedby="gallery-4-4577" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-config-select.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-config-select-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose a custom statement" aria-describedby="gallery-4-4577" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4577'>
@@ -165,7 +165,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/ds-custom-statement.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/ds-custom-statement-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose stored procedure and select one from the list" aria-describedby="gallery-4-4576" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-custom-statement.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-custom-statement-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Choose stored procedure and select one from the list" aria-describedby="gallery-4-4576" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4576'>
@@ -175,7 +175,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/ds-parameters.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/ds-parameters-200x200.png" class="attachment-thumbnail size-thumbnail" alt="ds parameters" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-parameters.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-parameters-200x200.png" class="attachment-thumbnail size-thumbnail" alt="ds parameters" /></a>
     </dt>
   </dl>
   
@@ -183,7 +183,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='/wp-content/uploads/2016/06/ds-test-query.png'><img width="200" height="200" src="/wp-content/uploads/2016/06/ds-test-query-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Click Test Query, enter a parameter value, and make sure you get the results you expect" aria-describedby="gallery-4-4574" /></a>
+      <a href='https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-test-query.png'><img width="200" height="200" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/ds-test-query-200x200.png" class="attachment-thumbnail size-thumbnail" alt="Click Test Query, enter a parameter value, and make sure you get the results you expect" aria-describedby="gallery-4-4574" /></a>
     </dt>
     
     <dd class='wp-caption-text gallery-caption' id='gallery-4-4574'>
@@ -197,7 +197,7 @@ The next step is creating the connection. I click "New Connection" and fill in t
 I need to add that text box. First I drag a label from the Toolbox to the Designer. I change the (ID) and Text properties. Then I drag a TextBox control to the Designer, and again, change the (ID). Then, I add a Button to perform the search. I drag the Button over and change its (ID) and Text. Now, to tie the text box to the parameter, I click on my GridView so the tasks pop-out appears on the right, then click Configure Data Source. I click Next until I'm on the Define Parameters screen. For my Parameter source I choose Control. For ControlID, I choose txtItemId. I leave DefaultValue blank. I click Next and Finish.
 
 <div id="attachment_4585" style="width: 310px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/06/design-gridview-task.png"><img class="size-medium wp-image-4585" src="/wp-content/uploads/2016/06/design-gridview-task-300x90.png" alt="You can see the label and button in the top left. The GridView Tasks pop-out is to the right." width="300" height="90" srcset="/wp-content/uploads/2016/06/design-gridview-task-300x90.png 300w, /wp-content/uploads/2016/06/design-gridview-task-1024x310.png 1024w, /wp-content/uploads/2016/06/design-gridview-task.png 1238w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/design-gridview-task.png"><img class="size-medium wp-image-4585" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/design-gridview-task-300x90.png" alt="You can see the label and button in the top left. The GridView Tasks pop-out is to the right." width="300" height="90" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/design-gridview-task-300x90.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/design-gridview-task-1024x310.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/design-gridview-task.png 1238w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     You can see the label and button in the top left. The GridView Tasks pop-out is to the right.
@@ -207,7 +207,7 @@ I need to add that text box. First I drag a label from the Toolbox to the Design
 Now, I want to make sure this works. To get the web page to run, I click on Debug > Start Debugging (or F5). If all has gone according to plan, I'll see my web page.
 
 <div id="attachment_4584" style="width: 310px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/06/web-page.png"><img class="size-medium wp-image-4584" src="/wp-content/uploads/2016/06/web-page-300x64.png" alt="Opened in Edge " width="300" height="64" srcset="/wp-content/uploads/2016/06/web-page-300x64.png 300w, /wp-content/uploads/2016/06/web-page.png 882w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page.png"><img class="size-medium wp-image-4584" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-300x64.png" alt="Opened in Edge " width="300" height="64" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-300x64.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page.png 882w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     Opened in Edge
@@ -217,7 +217,7 @@ Now, I want to make sure this works. To get the web page to run, I click on Debu
 I enter a value and click Find. My results appear.
 
 <div id="attachment_4586" style="width: 310px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/06/web-page-results.png"><img class="size-medium wp-image-4586" src="/wp-content/uploads/2016/06/web-page-results-300x48.png" alt="The expected results appear " width="300" height="48" srcset="/wp-content/uploads/2016/06/web-page-results-300x48.png 300w, /wp-content/uploads/2016/06/web-page-results-1024x164.png 1024w, /wp-content/uploads/2016/06/web-page-results.png 1199w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-results.png"><img class="size-medium wp-image-4586" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-results-300x48.png" alt="The expected results appear " width="300" height="48" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-results-300x48.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-results-1024x164.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/web-page-results.png 1199w" sizes="(max-width: 300px) 100vw, 300px" /></a>
   
   <p class="wp-caption-text">
     The expected results appear
@@ -239,5 +239,5 @@ It is, however, going to show me how things appear, and need to be configured, o
 
 &nbsp;
 
- [1]: /wp-content/uploads/2016/06/Visual-Studio-Start-Page.png
- [2]: /wp-content/uploads/2016/06/VS-view.png
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/Visual-Studio-Start-Page.png
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/06/VS-view.png

@@ -22,19 +22,19 @@ Well now that we have the [engine installed][1]. We sometimes also want the GUI 
 Let&#8217;s go to the [Microsoft download page][2] again and find the install button.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller5.png" alt="" title="" width="639" height="400" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller5.png" alt="" title="" width="639" height="400" />
 </div>
 
 Click install and then you get this, since we already installed the web platform installer in a previous post:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller6.png" alt="" title="" width="769" height="568" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller6.png" alt="" title="" width="769" height="568" />
 </div>
 
 Which will present you with this:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller4.png" alt="" title="" width="363" height="353" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller4.png" alt="" title="" width="363" height="353" />
 </div>
 
 I&#8217;m sorry to say it doesn&#8217;t install that for me. But you can [download it here][3].
@@ -44,13 +44,13 @@ Many minutes later.
 We can install Management studio.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller7.png" alt="" title="" width="768" height="668" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller7.png" alt="" title="" width="768" height="668" />
 </div>
 
 And then I get this window.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller8.png" alt="" title="" width="602" height="298" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller8.png" alt="" title="" width="602" height="298" />
 </div>
 
 So I click check run program anyway, we will do the update later.

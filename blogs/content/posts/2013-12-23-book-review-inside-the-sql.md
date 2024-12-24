@@ -17,7 +17,7 @@ categories:
 <div class="bText">
   <div class="bText">
     <p>
-      <img style="float: left;" src="/wp-content/uploads/users/grrlgeek/1175-QueryOptimizerCover_200h.jpg?mtime=1387829859" alt="" />I've had Benjamin Nevarez's <a href="https://www.simple-talk.com/books/sql-books/inside-the-sql-server-query-optimizer/">Inside the SQL Server Query Optimizer</a> sitting on my bookshelf for a couple of years. I recently pulled it off the shelf to read it cover-to-cover, to see what new things I could learn.
+      <img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/1175-QueryOptimizerCover_200h.jpg?mtime=1387829859" alt="" />I've had Benjamin Nevarez's <a href="https://www.simple-talk.com/books/sql-books/inside-the-sql-server-query-optimizer/">Inside the SQL Server Query Optimizer</a> sitting on my bookshelf for a couple of years. I recently pulled it off the shelf to read it cover-to-cover, to see what new things I could learn.
     </p>
     
     <p>
@@ -37,7 +37,7 @@ categories:
     </p>
     
     <p style="text-align: center;">
-      <img src="/wp-content/uploads/users/grrlgeek/index scan.JPG?mtime=1387830757" alt="" /><img src="/wp-content/uploads/users/grrlgeek/index seek.JPG?mtime=1387830757" alt="" /><img src="/wp-content/uploads/users/grrlgeek/Key lookup.JPG?mtime=1387830757" alt="" />
+      <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/index scan.JPG?mtime=1387830757" alt="" /><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/index seek.JPG?mtime=1387830757" alt="" /><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Key lookup.JPG?mtime=1387830757" alt="" />
     </p>
     
     <p>

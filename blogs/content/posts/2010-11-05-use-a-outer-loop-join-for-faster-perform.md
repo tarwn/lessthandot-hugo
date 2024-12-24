@@ -136,7 +136,7 @@ where t2.SomeValue is null
 Below is the execution plan generated when you run these 3 queries, click on the image for a larger version.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ExecutionPlan.png" alt="Execution Plan" title="Execution Plan" width="979" height="521" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ExecutionPlan.png" alt="Execution Plan" title="Execution Plan" width="979" height="521" />
 </div>
 
 As you can see the loop join doesn't look that impressive compared to the rest, however it is the only query that does a seek instead of a scan

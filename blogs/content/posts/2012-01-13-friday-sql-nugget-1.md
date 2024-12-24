@@ -20,7 +20,7 @@ categories:
  
 
 <div class="image_block">
-  <span style="font-family: verdana,geneva;"><img src="/wp-content/uploads/blogs/ITProfessionals/sqlnugget.jpg?mtime=1326466147" alt="" width="400" height="400" align="left" /></span>
+  <span style="font-family: verdana,geneva;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/sqlnugget.jpg?mtime=1326466147" alt="" width="400" height="400" align="left" /></span>
 </div>
 
 <span style="font-family: verdana,geneva;">I'm going to try to start a new Friday post here on LessThanDot called, SQL Nuggets.  Yes, I said Nuggets!  It's commonly known that posting technical content on a Friday is less effective than publishing between Tuesday and Thursday.  The simple fact that most readers will not be in a position to read RSS feeds is there.  However, Friday still has a relaxing feel to it and SQL still has something to offer us in the form of a valuable but short post.</span>
@@ -32,7 +32,7 @@ categories:
 <span style="font-family: verdana,geneva;">So I deleted package 1.  Threw it to the curb even knowing I had little over hours to complete this task.  I did what I should have and used my brain and skills in SSIS.  I replaced the variables with basic data flow tasks and transformations.  I used another common method to handle my use of temporary tables; Execute SQL Task to Data Flow with a unique connection manager using the keep connection option true.</span>
 
 <div class="image_block">
-  <span style="font-family: verdana,geneva;"><a href="/media/blogs/ITProfessionals/-11.png?mtime=1326465329"><img src="/wp-content/uploads/blogs/ITProfessionals/-11.png?mtime=1326465329" alt="" width="200" height="200" align="left" /></a></span>
+  <span style="font-family: verdana,geneva;"><a href="/media/blogs/ITProfessionals/-11.png?mtime=1326465329"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-11.png?mtime=1326465329" alt="" width="200" height="200" align="left" /></a></span>
 </div>
 
 <span style="font-family: verdana,geneva;">Package 2 executed on three instances with dozens of databases, ranging in size from 10GB to 300GB, in a few seconds.</span>

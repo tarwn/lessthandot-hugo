@@ -21,7 +21,7 @@ tags:
 A lot of PIM projects start together with an e-commerce project. The e-commerce project will make products available online and to maintain the product information a PIM project is started preceding the e-commerce project. In my previous post "[What is Product Information Management?][1]" I explained what Product Information Management is. But who would benefit from such a PIM project? 
 
 <div class="image_block">
-  <a href="http://farm6.staticflickr.com/5045/5322091121_204bb92a05_o.jpg"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/PimBenefit.jpg?mtime=1388673769" width="500" height="333" /></a>
+  <a href="http://farm6.staticflickr.com/5045/5322091121_204bb92a05_o.jpg"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/PimBenefit.jpg?mtime=1388673769" width="500" height="333" /></a>
 </div>
 
 # The e-commerce team

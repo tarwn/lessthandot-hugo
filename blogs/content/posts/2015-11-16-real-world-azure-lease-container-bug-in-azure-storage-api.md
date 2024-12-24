@@ -85,11 +85,11 @@ _(There are also examples of raw HTTP implementations in that same test file to 
 
 On the local emulator, this will return the following details (fiddler):
 
-[<img src="/wp-content/uploads/2015/11/EmulatorFiddler.png" alt="LeaseContainer - local Emulator response (Fiddler)" width="322" height="190" class="aligncenter size-full wp-image-4253" srcset="/wp-content/uploads/2015/11/EmulatorFiddler.png 322w, /wp-content/uploads/2015/11/EmulatorFiddler-300x177.png 300w" sizes="(max-width: 322px) 100vw, 322px" />][5]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/EmulatorFiddler.png" alt="LeaseContainer - local Emulator response (Fiddler)" width="322" height="190" class="aligncenter size-full wp-image-4253" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/EmulatorFiddler.png 322w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/EmulatorFiddler-300x177.png 300w" sizes="(max-width: 322px) 100vw, 322px" />][5]
 
 Against a production API, it returns the following details (fiddler):
 
-[<img src="/wp-content/uploads/2015/11/LiveAzureFiddler.png" alt="LeaseContainer - Live Azure Response (Fiddler)" width="342" height="190" class="aligncenter size-full wp-image-4254" srcset="/wp-content/uploads/2015/11/LiveAzureFiddler.png 342w, /wp-content/uploads/2015/11/LiveAzureFiddler-300x166.png 300w" sizes="(max-width: 342px) 100vw, 342px" />][6]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/LiveAzureFiddler.png" alt="LeaseContainer - Live Azure Response (Fiddler)" width="342" height="190" class="aligncenter size-full wp-image-4254" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/LiveAzureFiddler.png 342w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/LiveAzureFiddler-300x166.png 300w" sizes="(max-width: 342px) 100vw, 342px" />][6]
 
 In this case, the emulator is correct, but the production Storage API returns the wrong error.
 
@@ -99,5 +99,5 @@ I tested this against multiple versions of the API, locally and in the cloud, an
  [2]: https://msdn.microsoft.com/en-us/library/azure/dd179439.aspx "MSDN: Blob Service Errors"
  [3]: https://msdn.microsoft.com/en-us/library/azure/jj159103.aspx "MSDN: LeaseContainer Operation"
  [4]: https://github.com/tarwn/AzureQueueIssues/blob/master/ContainerNotFoundReturnsWrongError.cs "ContainerNotFoundReturnsWrongError from tarwn/AzureQueueIssues on github"
- [5]: /wp-content/uploads/2015/11/EmulatorFiddler.png
- [6]: /wp-content/uploads/2015/11/LiveAzureFiddler.png
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/EmulatorFiddler.png
+ [6]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/LiveAzureFiddler.png

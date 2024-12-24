@@ -24,7 +24,7 @@ You might have noticed that I am switching to WPF from winforms. I&#8217;m doing
 First thing to do is download some [themes from codeplex][1]. And then we copy these themes into our project under a themes folder.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/theme1.png" alt="" title="" width="211" height="218" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/theme1.png" alt="" title="" width="211" height="218" />
 </div>
 
 Now I just add 3 buttons to my window, one for each theme.
@@ -54,25 +54,25 @@ And this is the result.
 On startup, no theme.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/theme2.png" alt="" title="" width="354" height="261" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/theme2.png" alt="" title="" width="354" height="261" />
 </div>
 
 Blue theme.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/theme3.png" alt="" title="" width="354" height="261" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/theme3.png" alt="" title="" width="354" height="261" />
 </div>
 
 Black theme.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/theme4.png" alt="" title="" width="354" height="261" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/theme4.png" alt="" title="" width="354" height="261" />
 </div>
 
 And silver theme.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/WPF/theme5.png" alt="" title="" width="354" height="261" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/WPF/theme5.png" alt="" title="" width="354" height="261" />
 </div>
 
 That was simple.

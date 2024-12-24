@@ -37,7 +37,7 @@ There are other excellent sessions about SQL Server and Business Intelligence, s
   
 Tickets are almost sold out, so you better hurry!
 
-[<img class="alignnone size-full wp-image-2612" alt="itproceed_003" src="/wp-content/uploads/2014/05/itproceed_003.png" width="340" height="62" srcset="/wp-content/uploads/2014/05/itproceed_003.png 340w, /wp-content/uploads/2014/05/itproceed_003-300x54.png 300w" sizes="(max-width: 340px) 100vw, 340px" />][1]
+[<img class="alignnone size-full wp-image-2612" alt="itproceed_003" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/itproceed_003.png" width="340" height="62" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/itproceed_003.png 340w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/itproceed_003-300x54.png 300w" sizes="(max-width: 340px) 100vw, 340px" />][1]
 
  [1]: http://www.itproceed.be/
  [2]: http://www.itproceed.be/agenda

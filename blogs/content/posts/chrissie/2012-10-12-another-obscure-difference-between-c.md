@@ -39,7 +39,7 @@ The question is this.
 It is very easy to recreate this with the above steps.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nsub/nsub2.png?mtime=1350024037"><img alt="" src="/wp-content/uploads/users/chrissie1/nsub/nsub2.png?mtime=1350024037" width="546" height="154" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub2.png?mtime=1350024037"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub2.png?mtime=1350024037" width="546" height="154" /></a>
 </div>
 
 So what is the problem. 
@@ -47,7 +47,7 @@ So what is the problem.
 NSubstitute has ILMerged a part of the Castle Windsor code into it&#8217;s own. And now it has part of that namespace too.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nsub/nsub3.png?mtime=1350024043"><img alt="" src="/wp-content/uploads/users/chrissie1/nsub/nsub3.png?mtime=1350024043" width="275" height="159" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub3.png?mtime=1350024043"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub3.png?mtime=1350024043" width="275" height="159" /></a>
 </div>
 
 This confuses the compiler. 
@@ -57,7 +57,7 @@ This is solvable in C#.
 If you right-click on the NSubstitute reference you can change the alias of that reference (which is normally global).
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nsub/nsub1.png?mtime=1350023941"><img alt="" src="/wp-content/uploads/users/chrissie1/nsub/nsub1.png?mtime=1350023941" width="732" height="187" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub1.png?mtime=1350023941"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub1.png?mtime=1350023941" width="732" height="187" /></a>
 </div>
 
 And now the code will compile.
@@ -65,7 +65,7 @@ And now the code will compile.
 In VB.Net there is no such property to be found for a reference.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nsub/nsub4.png?mtime=1350024354"><img alt="" src="/wp-content/uploads/users/chrissie1/nsub/nsub4.png?mtime=1350024354" width="709" height="283" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub4.png?mtime=1350024354"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nsub/nsub4.png?mtime=1350024354" width="709" height="283" /></a>
 </div>
 
 And adapting the vbproj won&#8217;t help either, trust me, I tried 😉

@@ -57,7 +57,7 @@ GO
 
 Now when I navigate to the Stored Procedures folder I see the following
 
-<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions.PNG/fit-400x320.PNG?mtime=1302099806" width="242" height="228" />
+<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions.PNG/fit-400x320.PNG?mtime=1302099806" width="242" height="228" />
 
 As you can see there is a lock on the encrypted stored procedure
 
@@ -83,7 +83,7 @@ GO
 ```
 When I now login as that user I don't see anything under the stored procedures folder.
 
-<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions2.PNG/fit-400x320.PNG?mtime=1302099815" width="269" height="173" />
+<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions2.PNG/fit-400x320.PNG?mtime=1302099815" width="269" height="173" />
   
   
 In order to see the procedures, the user has to have execute permissions.
@@ -96,7 +96,7 @@ GRANT EXECUTE ON prTest TO test
 ```
 The user will now see both procs with a lock on them
 
-<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions3.PNG/fit-400x320.PNG?mtime=1302099825" width="267" height="199" />
+<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions3.PNG/fit-400x320.PNG?mtime=1302099825" width="267" height="199" />
 
 If I grant view definition to the user....
 
@@ -107,7 +107,7 @@ GRANT VIEW DEFINITION ON prTest TO test
 
 The user will now see the lock only on the encrypted stored procedures, just like if he/she was a db owner
 
-<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions.PNG/fit-400x320.PNG?mtime=1302099806" width="242" height="228" />
+<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/.evocache/Permissions.PNG/fit-400x320.PNG?mtime=1302099806" width="242" height="228" />
 
 I think there should be different lock icons in SSMS, this way you will now if the proc is encrypted or that you don't have view definition permissions...what do you think?
 

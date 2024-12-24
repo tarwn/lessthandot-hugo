@@ -211,7 +211,7 @@ Coming to CTE Version, It Initially Scans the entire Non CI to retrieve only 5 I
 The Extra 1 read might be because of GUIDs????
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/queryplan.png" alt="" title="" width="800" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/queryplan.png" alt="" title="" width="800" />
 </div>
 
 Look at the Execution Plans of the 2 queries. The CTE query outperforms the non CTE query; the CTE query chooses the Non-Clustered Index Scan(to Retrieve 5 Random OrderIDs) and a Clustered Index seek(To retrieve details of 5 records), while our initial query settled for a Clustered Index Scan.

@@ -166,7 +166,7 @@ And you need a div somewhere with an id that you use in the javascript. In my ca
 And here is the result of all that hard work.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancyjtable1.png?mtime=1359220672"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancyjtable1.png?mtime=1359220672" width="469" height="741" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable1.png?mtime=1359220672"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable1.png?mtime=1359220672" width="469" height="741" /></a>
 </div>
 
 ## Conclusion

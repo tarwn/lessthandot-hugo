@@ -5,7 +5,7 @@ type: post
 date: 2016-01-08T14:43:49+00:00
 ID: 4297
 url: /index.php/webdev/duplicating-lessthandot-on-a-vagrant-vm/
-featured_image: /wp-content/uploads/2016/01/Vagrant.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/01/Vagrant.png
 views:
   - 2165
 rp4wp_auto_linked:

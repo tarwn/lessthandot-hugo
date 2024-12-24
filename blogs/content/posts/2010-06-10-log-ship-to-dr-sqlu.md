@@ -36,7 +36,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" />
 </div>
 
 Welcome to day three of HA and DR week of SQL University. Today we are going to look at cheap DR. Yes, setting up DR can be inexpensive. The best part of this strategy is it comes along with most of the editions of SQL Server. The method is Log Shipping. 
@@ -50,7 +50,7 @@ Log shipping (LS) has a bad name in the Disaster / Recovery (DR) world. There ar
 Log Shipping consists of three events. Backup transaction log, Copy remotely and Restore to subscriber(s). Any one primary (publisher or the logs) can have one or more secondary databases (subscriber to the logs). 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_7.gif" alt="" title="" width="500" height="444" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_7.gif" alt="" title="" width="500" height="444" />
 </div>
 
 When configuring Log Shipping, all of the configuration settings are held in the MSDB database. 
@@ -129,7 +129,7 @@ Log shipping is available in every edition of SQL Server but Express. In order t
   2. Expand the databases tree, right click AdventureWorks and select properties
   3. Select Transaction Log Shipping on the right
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_1.gif" alt="" title="" width="628" height="561" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_1.gif" alt="" title="" width="628" height="561" />
 </div>
 
 By default, Log Shipping is disabled on each database. In order to go further, we need to check "Enable this as a primary database in a log shipping configuration". This will set the transaction log backups available for us to open and configure.
@@ -159,7 +159,7 @@ Leave the default 15 minutes for now. If you want to alter this schedule, click 
 To show compression, next to "Set backup compression", select Compress Backup. If you are on an earlier version than 2008 R2 and any edition other than Enterprise or Developer, this option will not be available. SQL Server 2008 R2 allows compression in Standard and Enterprise (including Developer). Pre-R2, only Enterprise and Developer have this option. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_2.gif" alt="" title="" width="628" height="646" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_2.gif" alt="" title="" width="628" height="646" />
 </div>
 
   6. Click OK after ensuring everything is completed as shown above.
@@ -175,25 +175,25 @@ This will back the AdventureWorks database up and restore it as the database we 
 We can leave the default schedule to restore again, but I still recommend changing the job name to a something more meaningful and easy to read 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_3.gif" alt="" title="" width="628" height="543" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_3.gif" alt="" title="" width="628" height="543" />
 </div>
 
  12. Click the Restore Transaction Log tab and select Standby Mode and Disconnect user in the database when restoring backups. This will be required to prevent restore problems.
  13. Click OK and OK again to save all of our configurations. 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_4.gif" alt="" title="" width="628" height="551" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_4.gif" alt="" title="" width="628" height="551" />
 </div>
 
 After clicking OK, a dialog will be shown while the backup and restore of AdventureWorks runs. The SQL Agent jobs that will control log shipping will also be created after these steps succeed. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_5.gif" alt="" title="" width="628" height="334" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_5.gif" alt="" title="" width="628" height="334" />
 </div>
 
 Once the restore is done and logs have shipped, you will start to notice them moving in the publication and subscriber shares
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_6.gif" alt="" title="" width="628" height="282" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_6.gif" alt="" title="" width="628" height="282" />
 </div>
 
 Now that LS is running we can look into the process and logging of the events. The log\_shipping\_monitor_history table is extremely useful for validating the entire process between the instances. The Message column has logged information that will explain in detail the process that is occurring:
@@ -223,11 +223,11 @@ Another extremely practical usage of these tables is, in the event of a disaster
 SSMS and built in reporting already available also provides us with a great way to monitor conditions of log shipping. Right click the database server in SSMS, scroll to reports and in standard reports, click the Transaction Log Shipping Status.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_9.gif" alt="" title="" width="500" height="406" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_9.gif" alt="" title="" width="500" height="406" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/logship_10.gif" alt="" title="" width="1007" height="270" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/logship_10.gif" alt="" title="" width="1007" height="270" />
 </div>
 
 ## **Catches but not pitfalls**

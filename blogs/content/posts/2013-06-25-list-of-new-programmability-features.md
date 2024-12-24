@@ -26,7 +26,7 @@ tags:
 Here is a nice image of all the cool new programmability features and T-SQL enhancements in SQL Server 2014 CTP1, there are no Hekaton (In-memory OLTP) features in this list
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/WhiteImage.PNG?mtime=1372000602"><img alt="This Image Left Intentionally Blank" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/WhiteImage.PNG?mtime=1372000602" width="672" height="254" Title="This Image Left Intentionally Blank" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/WhiteImage.PNG?mtime=1372000602"><img alt="This Image Left Intentionally Blank" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/WhiteImage.PNG?mtime=1372000602" width="672" height="254" Title="This Image Left Intentionally Blank" /></a>
 </div>
 
 What, there is nothing there? That is right, besides the Hekaton related stuff there seems to be almost nothing. Some people seems upset about this, I think we will get new programmability features and T-SQL enhancements in the next SQl Server 2014 CTP. I believe that Microsoft wanted to make sure that people really checked out the Hekaton technology instead of focusing on other things as well

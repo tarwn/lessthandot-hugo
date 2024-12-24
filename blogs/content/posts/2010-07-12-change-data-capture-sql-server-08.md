@@ -32,7 +32,7 @@ Some databases (and software packages) simply do not track changes in the databa
 Putting all of the bickering with why or why not vendors add data tracking to overall system features aside, let's look at how we can manage data tracking with SQL Server and leave the vendor to do what the business asks of them; provide the solution to keep the business running.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/cdc.gif" alt="" title="" width="384" height="304" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/cdc.gif" alt="" title="" width="384" height="304" />
 </div>
 
 In SQL Server 2008, Change Data Capture was introduced. Oh, that sounds interesting and something you can use! Well, there is a cost just like most features have cost that go with them. Remember the performance issue with the vendor doing data tracking? It comes with CDC as well. As with everything, performance can take a back seat to providing the business with what they need, so we're going to show you how to set CDC up as a base data tracking process in your databases.
@@ -40,7 +40,7 @@ In SQL Server 2008, Change Data Capture was introduced. Oh, that sounds interest
 **Setup CDC**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/cdc_2.gif" alt="" title="" width="162" height="154" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/cdc_2.gif" alt="" title="" width="162" height="154" align="left" />
 </div>
 
 We are going to go through a step-by-step to get CDC going without falling into the deep end and then discuss the setup and overall process after accomplishing the setup.
@@ -190,7 +190,7 @@ The nice thing here is CDC will look at the data and if nothing changes, even fo
 When we check CDC we can see we get representation of the data before and after logged
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/cdc_3.gif" alt="" title="" width="722" height="323" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/cdc_3.gif" alt="" title="" width="722" height="323" />
 </div>
 
 Now the performance hit is imaginable already. 
@@ -216,7 +216,7 @@ After disabling CDC table instance for Employee, we hit 11ms averages.
 Putting that into perspective: almost triple the cost!
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/cdc_4.gif" alt="" title="" width="486" height="348" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/cdc_4.gif" alt="" title="" width="486" height="348" />
 </div>
 
 So CDC has an enormous cost with it, but in a database where logging is absent and development is out of our hands along with the question of, "Why and who changed this?" being asked often, CDC will be an option that should be brought into play to manage the change control of the database.

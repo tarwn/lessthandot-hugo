@@ -79,19 +79,19 @@ So where does that trace information end up.
 Normally it should end up in the Output window under Debug.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/simpledata/simpledata2.png?mtime=1335694334"><img alt="" src="/wp-content/uploads/users/chrissie1/simpledata/simpledata2.png?mtime=1335694334" width="711" height="464" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata2.png?mtime=1335694334"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata2.png?mtime=1335694334" width="711" height="464" /></a>
 </div>
 
 But this depends on a little setting in Tools->Options->Debugging
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/simpledata/simpledata1.png?mtime=1335694325"><img alt="" src="/wp-content/uploads/users/chrissie1/simpledata/simpledata1.png?mtime=1335694325" width="757" height="440" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata1.png?mtime=1335694325"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata1.png?mtime=1335694325" width="757" height="440" /></a>
 </div>
 
 If this options is checked than the output appears in the immediate window.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/simpledata/simpledata3.png?mtime=1335694344"><img alt="" src="/wp-content/uploads/users/chrissie1/simpledata/simpledata3.png?mtime=1335694344" width="711" height="466" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata3.png?mtime=1335694344"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata3.png?mtime=1335694344" width="711" height="466" /></a>
 </div>
 
 But you can also add tracelisteners to output the traceoutput to somewhere else.
@@ -103,7 +103,7 @@ Trace.Listeners.Add(New TextWriterTraceListener(Console.Out))```
 Which will output this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/simpledata/simpledata4.png?mtime=1335694355"><img alt="" src="/wp-content/uploads/users/chrissie1/simpledata/simpledata4.png?mtime=1335694355" width="677" height="518" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata4.png?mtime=1335694355"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/simpledata/simpledata4.png?mtime=1335694355" width="677" height="518" /></a>
 </div>
 
 You can read all about Tracelisteners on [MSDN][2].

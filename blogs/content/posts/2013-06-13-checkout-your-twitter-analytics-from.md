@@ -24,7 +24,7 @@ Did you know that you can get your twitter analytics straight from twitter?
 
 Here is how you can do it, go to https://ads.twitter.com/, sign in with your twitter username and password. click on the Analytics tab on the tab of the page (see image below)
 
-[<img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsTab.PNG?mtime=1371128480" width="303" height="100" />][1]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsTab.PNG?mtime=1371128480" width="303" height="100" />][1]
 
 Here is what you will see if you pick timeline activity
 
@@ -39,7 +39,7 @@ You can also see followers, here is what it looks like
 
 You can also download the data in csv or XLS format
   
-[<img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsDownload.PNG?mtime=1371128468" width="330" height="332" />][4]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsDownload.PNG?mtime=1371128468" width="330" height="332" />][4]
 
 If you pick the XLS format, you will see something like this
 
@@ -47,8 +47,8 @@ If you pick the XLS format, you will see something like this
 
 Very nice indeed, now let's see if facebook, google+, pinterest and others will follow suit
 
- [1]: /wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsTab.PNG?mtime=1371128480
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsTab.PNG?mtime=1371128480
  [2]: http://www.flickr.com/photos/denisgobo/9031660371/ "Twitter Analytics by Denis Gobo, on Flickr"
  [3]: http://www.flickr.com/photos/denisgobo/9041587531/ "Twitter Analytics Followers by Denis Gobo, on Flickr"
- [4]: /wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsDownload.PNG?mtime=1371128468
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/Twitter AnalyticsDownload.PNG?mtime=1371128468
  [5]: http://www.flickr.com/photos/denisgobo/9033887996/ "TwitterXls by Denis Gobo, on Flickr"

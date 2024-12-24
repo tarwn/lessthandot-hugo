@@ -23,7 +23,7 @@ I volunteered for it last year, was accepted, and served on the speaker review t
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/thumbsup.JPG?mtime=1332725746" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/thumbsup.JPG?mtime=1332725746" alt="" />
 </p>
 
 <p style="text-align: center;">

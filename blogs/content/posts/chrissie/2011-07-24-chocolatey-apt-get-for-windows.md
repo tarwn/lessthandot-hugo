@@ -261,13 +261,13 @@ With this as the result.
 And this along the way.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey1.png?mtime=1311524721"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey1.png?mtime=1311524721" width="961" height="660" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey1.png?mtime=1311524721"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey1.png?mtime=1311524721" width="961" height="660" /></a>
 </div>
 
 And now I have to test that node is there I guess.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey2.png?mtime=1311524871"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey2.png?mtime=1311524871" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey2.png?mtime=1311524871"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey2.png?mtime=1311524871" width="707" height="423" /></a>
 </div>
 
 And yes that counts as proof. 

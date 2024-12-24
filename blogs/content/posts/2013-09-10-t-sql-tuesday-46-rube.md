@@ -27,13 +27,13 @@ tags:
   - syndicated
 
 ---
-[<img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" />][1]
+[<img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" />][1]
 
 <span style="text-align: justify;">It's the second Tuesday of the month, and you know what time it is! That's right, another installment of T-SQL Tuesday which is hosted this month by Rick Krueger (</span><a style="text-align: justify;" href="http://www.dataogre.com/">blog</a> <span style="text-align: justify;">| </span><a style="text-align: justify;" href="https://twitter.com/DataOgre">twitter</a><span style="text-align: justify;">). The topic is about that one time we did a hack to get something sorted out, because of time pressure, budget, sheer laziness or whatever the reason was.</span>
 
 My story is not about a hack in its purest definition, but it is about a nice alternative way to get something done more efficiently. I'm talking about [Indicators][2] in a SSRS report. For those non-BI folks who just fell off their chair: an indicator is a visual component introduced in Reporting Services 2008R2. They are very tiny gauges that display the state of a single data value at a glance. They come in various shapes and colors and they are pretty useful for KPIs and dashboards.
 
-[<img src="/wp-content/uploads/users/koenverbeeck/TSQL2sday46/indicators.PNG?mtime=1378820544" alt="" width="403" height="362" />][3]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday46/indicators.PNG?mtime=1378820544" alt="" width="403" height="362" />][3]
 
 <span style="text-align: justify;">Once upon a time I had a fairly large matrix report at a client. There were a lot of rows and a lot of columns in that matrix, and the client wanted an indicator in every cell of the matrix. The development went pretty OK using BIDS, although it's quite a pain to configure a separate indicator for every column. However, when the report was deployed to the server, it became nerve wreckingly slow. This was caused by the sheer amount of indicators, as the query behind the report finished in less than 1 second. Time to look for an alternative.</span>
 
@@ -54,7 +54,7 @@ My story is not about a hack in its purest definition, but it is about a nice al
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/TSQL2sday46/results.PNG?mtime=1378820544"><img src="/wp-content/uploads/users/koenverbeeck/TSQL2sday46/results.PNG?mtime=1378820544" alt="" width="563" height="210" /></a>
+  <a href="/media/users/koenverbeeck/TSQL2sday46/results.PNG?mtime=1378820544"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday46/results.PNG?mtime=1378820544" alt="" width="563" height="210" /></a>
 </p>
 
 <span style="text-align: justify;">Since the report now just had to evaluate a simple expression and display a simple text for each cell instead of a single chart for each cell, the report performance went through the roof.</span>

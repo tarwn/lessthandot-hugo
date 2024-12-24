@@ -22,7 +22,7 @@ First up the code.
 When doing a find all on a class called Fibergroup I get this as a result from [NHProf][2].
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHProf/NHProf1.png" alt="" title="" width="744" height="313" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHProf/NHProf1.png" alt="" title="" width="744" height="313" />
 </div>
 
 What we see is that there is one select tbl_fibergroup and then then a select on fiberclass and several selects on fibersubclass. As a matter of fact fiberclass is a collection in fibergroup and fibersubclass is a collection in fiberclass.
@@ -73,7 +73,7 @@ After that change, I go down from 30 selects to 7 selects. Quite an improvement 
 And here is the proof.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/NHProf/NHProf3.png" alt="" title="" width="700" height="120" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/NHProf/NHProf3.png" alt="" title="" width="700" height="120" />
 </div>
 
 BTW I tried to use the fetch strategy &#8220;join&#8221; but that gave me the wrong results. From what I have read join doesn&#8217;t work so well on bag only on set, but I could be wrong.

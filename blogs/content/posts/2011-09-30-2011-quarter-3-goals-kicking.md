@@ -44,7 +44,7 @@ I could present every day. I am already working on where I will try to present n
 12 days and counting. I'm so excited, I can't focus. I'll be in a first timers group, I'm participating in the Quiz Bowl at the welcome reception, I'm presenting Reporting Services 201 on Wednesday, and I'm moderating the WIT lunch on Thursday. 
 
 <p align="center">
-  <img src="/wp-content/uploads/users/grrlgeek/PASS_2011_SpeakingButton_180x180-black.png?mtime=1312531636" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/PASS_2011_SpeakingButton_180x180-black.png?mtime=1312531636" alt="" title="" />
 </p>
 
 **Support Cool Community Projects** 
@@ -66,7 +66,7 @@ I learn more every week than I ever imagined I would, and it's wonderful. I'm st
 I am very close to my goal of 500 miles for the year. I'm running in my second half marathon next weekend. I would give this goal a thumbs up as well! 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/runningshoes.jpg?mtime=1317387489"><img alt="" src="/wp-content/uploads/blogs/All/runningshoes.jpg?mtime=1317387489" width="405" height="225" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/runningshoes.jpg?mtime=1317387489"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/runningshoes.jpg?mtime=1317387489" width="405" height="225" /></a>
 </div>
 
 **Three More Months!** 

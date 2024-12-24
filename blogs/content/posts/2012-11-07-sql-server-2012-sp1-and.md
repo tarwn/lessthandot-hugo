@@ -64,17 +64,17 @@ The Hekaton announcement can be found here: http://blogs.technet.com/b/dataplatf
 Below is an infographic summarizing today's PASS Keynote
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC1.PNG?mtime=1352311558"><img alt="" src="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC1.PNG?mtime=1352311558" width="549" height="659" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC1.PNG?mtime=1352311558"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC1.PNG?mtime=1352311558" width="549" height="659" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC2.PNG?mtime=1352311567"><img alt="" src="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC2.PNG?mtime=1352311567" width="535" height="657" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC2.PNG?mtime=1352311567"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC2.PNG?mtime=1352311567" width="535" height="657" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC3.PNG?mtime=1352311577"><img alt="" src="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC3.PNG?mtime=1352311577" width="539" height="509" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC3.PNG?mtime=1352311577"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC3.PNG?mtime=1352311577" width="539" height="509" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC4.PNG?mtime=1352311588"><img alt="" src="/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC4.PNG?mtime=1352311588" width="530" height="625" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC4.PNG?mtime=1352311588"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/sql2012iNFORMATIC4.PNG?mtime=1352311588" width="530" height="625" /></a>
 </div>

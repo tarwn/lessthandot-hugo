@@ -24,7 +24,7 @@ So how easy is it for a non-webdeveloper to create a simple site with webmatrix 
 Let me start by using the Empty site template this time.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_1.png?mtime=1296504777"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_1.png?mtime=1296504777" width="1600" height="900" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_1.png?mtime=1296504777"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_1.png?mtime=1296504777" width="1600" height="900" /></a>
 </div>
 
 Yep, that looks pretty empty to me.
@@ -65,7 +65,7 @@ Now let&#8217;s add a little text and a title to it.
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170" width="235" height="119" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170" width="235" height="119" /></a>
 </div>
 
 Now I would like to get all the overhead out of that page and make the default.vbhtml a bit less cluttered.
@@ -99,7 +99,7 @@ As you can see we removed all the redundant code and added a code block. The cod
 This is the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170"><img alt="" src="/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170" width="235" height="119" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/webmatrix/webmatrix2_2.png?mtime=1296505170" width="235" height="119" /></a>
 </div>
 
 Yep exactly the same as before. As we wanted it. So that was pretty easy. And it was especially very fast. It&#8217;s very nice to be able to use a simple IDE from time to time. But for the bigger work I would still prefer VS.Net with Resharper all though it tends to crash several times a year.

@@ -38,29 +38,29 @@ It is a pre-alpha but most things work.
 You can see the installed packages.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey7.png?mtime=1315421686"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey7.png?mtime=1315421686" width="619" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey7.png?mtime=1315421686"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey7.png?mtime=1315421686" width="619" height="471" /></a>
 </div>
 
 If it detects that an update is available than you can just click the button and it will update.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey8.png?mtime=1315421996"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey8.png?mtime=1315421996" width="619" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey8.png?mtime=1315421996"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey8.png?mtime=1315421996" width="619" height="471" /></a>
 </div>
 
 If you click Available packages than you get all the packages on chocolatey.org.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308" width="619" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308" width="619" height="471" /></a>
 </div>
 
 And if you choose a package that you don&#8217;t already have than you can click the install button and it will install.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey9.png?mtime=1315422297"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey9.png?mtime=1315422297" width="619" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey9.png?mtime=1315422297"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey9.png?mtime=1315422297" width="619" height="471" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308" width="619" height="471" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/Chocolatey10.png?mtime=1315422308" width="619" height="471" /></a>
 </div>
 
 ## Conclusion

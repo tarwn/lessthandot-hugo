@@ -29,7 +29,7 @@ It's been over a year now since Aaron Nelson created the #SQLHELP hash tag.  Th
 I do my best to help on SQL Help.  Although my part of SQL Help isn't as much as some (as seen from below), I value the concept of being able to quickly use either a phone or computer to check, review and answer questions. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-14.png?mtime=1300198375"><img alt="" src="/wp-content/uploads/blogs/All/-14.png?mtime=1300198375" width="1091" height="633" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-14.png?mtime=1300198375"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-14.png?mtime=1300198375" width="1091" height="633" /></a>
 </div>
 
 As a lot of you know, I'm on vacation in Puerto Rico this entire week.  As with most of us, vacations don't stop us from getting on and checking to see if we can help in some way.  That's more normal with most of the community than most expect. 

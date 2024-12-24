@@ -80,7 +80,7 @@ DROP TABLE tblTest;
 Here is the output from the above code:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/reccount.JPG?mtime=1363124071"><img alt="" src="/wp-content/uploads/users/kconan/reccount.JPG?mtime=1363124071" width="327" height="144" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/reccount.JPG?mtime=1363124071"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/reccount.JPG?mtime=1363124071" width="327" height="144" /></a>
 </div>
 
 So we can see that @@ROWCOUNT is not affected by the trigger. However we also see that @@IDENTITY can be affected by triggers and the way to get around it is to use SCOPE_IDENTITY() instead.

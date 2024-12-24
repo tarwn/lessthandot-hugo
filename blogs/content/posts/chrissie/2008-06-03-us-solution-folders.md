@@ -17,11 +17,11 @@ In Visual studio 2008 you can use Solution folders to organize you projects. If 
 The first image shows how to do it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Nieuw-3.png" alt="" title="" width="496" height="418" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Nieuw-3.png" alt="" title="" width="496" height="418" />
 </div>
 
 And the second shows an image where you have multiple soulution folders.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Nieuw-2.png" alt="" title="" width="312" height="767" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Nieuw-2.png" alt="" title="" width="312" height="767" />
 </div>

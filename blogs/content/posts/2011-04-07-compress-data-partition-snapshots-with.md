@@ -57,7 +57,7 @@ I won't go into the setup script for this publication as it is out of scope.  T
 Data inserted as follows:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-27.png?mtime=1302147614"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-27.png?mtime=1302147614" width="256" height="119" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-27.png?mtime=1302147614"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-27.png?mtime=1302147614" width="256" height="119" /></a>
 </div>
 
  
@@ -74,7 +74,7 @@ Create two variables at this time with both set as strings.  User::PubName and 
 Bring the success precedence constraint to a Foreach Loop Container and name it, Enumerate publications.  Set the enumerator type to Foreach ADO Enumerator.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-28.png?mtime=1302147615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-28.png?mtime=1302147615" width="624" height="249" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-28.png?mtime=1302147615"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-28.png?mtime=1302147615" width="624" height="249" /></a>
 </div>
 
 Tick the radio button to, Rows in the first table.  In the Variable Mappings, map the variable PubName to index 1 and Retention to index 4.  The index is based on the column you want to assign to the variable from the result set.  For the procedure called, the result set contains the publication name in position 1 and the retention number in position 4.
@@ -93,7 +93,7 @@ sp_helpmergepartition @publication = 'Prescriptions'
 Connect the execute task to another Foreach Loop Container named, Enumerate partitions.  Set this Foreach Loop Container with the same configuration as the first.  Use the variable User::PartitionHelp for the source variable and map the following variables as shown.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-29.png?mtime=1302147615"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-29.png?mtime=1302147615" width="368" height="145" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-29.png?mtime=1302147615"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-29.png?mtime=1302147615" width="368" height="145" /></a>
 </div>
 
 The variable mappings will set the partition ID, the last date the snapshot was successfully executed and created, the SQL agent job ID of the snapshot job and the folder where the snapshot is placed.
@@ -199,7 +199,7 @@ Source Variable = DynoFolder
 Marking the IsSource and IsDestination variable values to true allows you to use these variables in place of file or directory connections.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-30.png?mtime=1302147616"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-30.png?mtime=1302147616" width="624" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-30.png?mtime=1302147616"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-30.png?mtime=1302147616" width="624" height="343" /></a>
 </div>
 
 The last step is the CozyRoc Zip Task.  You can download and test this task from their site for this example, but follow through with the rules they have and, well, pay them and stuff.  They have very good products and components for SSIS in my opinion.
@@ -221,7 +221,7 @@ The system state is as follows.
 **F5!**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-31.png?mtime=1302147616"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-31.png?mtime=1302147616" width="615" height="550" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-31.png?mtime=1302147616"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-31.png?mtime=1302147616" width="615" height="550" /></a>
 </div>
 
 Next, check the folders to ensure the snapshots executed and then were copied to the secondary folder and compressed.
@@ -229,7 +229,7 @@ Next, check the folders to ensure the snapshots executed and then were copied to
 The regular snapshots are found in the ReplData folder
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-32.png?mtime=1302147664"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-32.png?mtime=1302147664" width="269" height="80" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-32.png?mtime=1302147664"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-32.png?mtime=1302147664" width="269" height="80" /></a>
 </div>
 
 And the directory set for them to move to was, C:ReplData_Compress
@@ -237,7 +237,7 @@ And the directory set for them to move to was, C:ReplData_Compress
 Viewing that folder shows the results.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-33.png?mtime=1302147664"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-33.png?mtime=1302147664" width="594" height="117" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-33.png?mtime=1302147664"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-33.png?mtime=1302147664" width="594" height="117" /></a>
 </div>
 
 We've now set the snapshots and have them ready for download.

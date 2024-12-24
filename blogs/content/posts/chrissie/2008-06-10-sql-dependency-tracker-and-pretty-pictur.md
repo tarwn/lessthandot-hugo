@@ -16,7 +16,7 @@ Today I finally got [SQL-Toolbelt][1] from [RedGate Software][2] and I just had 
 I especcially liked the dependency tracker and the pretty picture it produced from my Database. Look.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/SQLToolbetdependecytracker.JPG" alt="" title="" width="748" height="625" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/SQLToolbetdependecytracker.JPG" alt="" title="" width="748" height="625" />
 </div>
 
 Isn&#8217;t it pretty? It&#8217;s art :p.

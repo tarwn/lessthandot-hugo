@@ -38,7 +38,7 @@ Zero-One-Some says that if multiple instances of a value are allowed, then there
 For example, a view may return multiple records. When testing the view, a test should be written where we expect zero records returned; another test for exactly one record returned; and another test for several rows returned.
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/ZeroOneZomeTesting.png?mtime=1323782210"><img src="/wp-content/uploads/blogs/DataMgmt/ZeroOneZomeTesting.png?mtime=1323782210" alt="" width="898" height="240" /></a>
+  <a href="/media/blogs/DataMgmt/ZeroOneZomeTesting.png?mtime=1323782210"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ZeroOneZomeTesting.png?mtime=1323782210" alt="" width="898" height="240" /></a>
 </div>
 
 Zero-One-Some may be considered both on the input (e.g. a loop that may process multiple values) or the output (e.g. a query that returns multiple rows).

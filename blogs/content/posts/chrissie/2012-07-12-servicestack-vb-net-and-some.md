@@ -134,13 +134,13 @@ End Class
 If you run this you should get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/servicestack1.png?mtime=1342093847"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/servicestack1.png?mtime=1342093847" width="687" height="547" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack1.png?mtime=1342093847"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack1.png?mtime=1342093847" width="687" height="547" /></a>
 </div>
 
 Because of the routes we can also surf to http://localhost:3318/plant/test and get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/servicestack2.png?mtime=1342093992"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/servicestack2.png?mtime=1342093992" width="654" height="193" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack2.png?mtime=1342093992"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/servicestack2.png?mtime=1342093992" width="654" height="193" /></a>
 </div>
 
 But now we also want to get that data in our client code.

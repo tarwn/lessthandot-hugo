@@ -31,7 +31,7 @@ After installing Paint.net, I recommend installing the [Megalo Effects Plugin Pa
 Using Windows 7 Snipping Tool, take a screen capture of a login properties window opened from SSMS.  (Note: I marked out the real values in Server and Connection still. You can do that with Paint.net too!)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-3.png?mtime=1320411554"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-3.png?mtime=1320411554" width="318" height="284" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-3.png?mtime=1320411554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-3.png?mtime=1320411554" width="318" height="284" /></a>
 </div>
 
 We're going to edit Fred in this case.  The properties that we would not want to share to the public are Server and Connection.  These properties will show domain logins and SQL Server Instance names.  You would be surprised how many Server values I've seen that were full IP addresses that I could ping and I could actual connect to.  Those instances were placed online and exposed extremely poorly and a massive security risk to networks and even, home machines.
@@ -41,17 +41,17 @@ We're going to edit Fred in this case.  The properties that we would not want t
 To remove these values, click the cropping icon in the Tools box in Paint.net.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-4.png?mtime=1320411554"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-4.png?mtime=1320411554" width="67" height="97" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-4.png?mtime=1320411554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-4.png?mtime=1320411554" width="67" height="97" /></a>
 </div>
 
 Now, select the area you need to remove and hit Delete on your keyboard.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-5.png?mtime=1320411554"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-5.png?mtime=1320411554" width="276" height="171" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-5.png?mtime=1320411554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-5.png?mtime=1320411554" width="276" height="171" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-6.png?mtime=1320411554"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-6.png?mtime=1320411554" width="235" height="145" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-6.png?mtime=1320411554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-6.png?mtime=1320411554" width="235" height="145" /></a>
 </div>
 
 We need to make this look better because the world is going to see it.  To do this we want to first, sample the color area that the value we just removed was in and then using the paint bucket, fill that area with the selected color.
@@ -59,7 +59,7 @@ We need to make this look better because the world is going to see it.  To do t
 Select the Color Picker icon in the toolbox
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-7.png?mtime=1320411554"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-7.png?mtime=1320411554" width="91" height="99" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-7.png?mtime=1320411554"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-7.png?mtime=1320411554" width="91" height="99" /></a>
 </div>
 
 Move the color picker over the gray area next to Server: and click the area.  This selects the color exactly the way it is in the image.
@@ -67,13 +67,13 @@ Move the color picker over the gray area next to Server: and click the area.  T
 Next, select the Paint Bucket icon in the toolbox.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-8.png?mtime=1320411610"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-8.png?mtime=1320411610" width="77" height="98" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-8.png?mtime=1320411610"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-8.png?mtime=1320411610" width="77" height="98" /></a>
 </div>
 
 Move the paint bucket icon over the areas that were cropped and click the area.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-9.png?mtime=1320411611"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-9.png?mtime=1320411611" width="245" height="133" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-9.png?mtime=1320411611"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-9.png?mtime=1320411611" width="245" height="133" /></a>
 </div>
 
 Perfect!

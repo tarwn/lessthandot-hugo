@@ -25,7 +25,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/02/BIMLissue.png"><img class="alignnone size-full wp-image-2425" alt="BIMLissue" src="/wp-content/uploads/2014/02/BIMLissue.png" width="1200" height="92" srcset="/wp-content/uploads/2014/02/BIMLissue.png 1200w, /wp-content/uploads/2014/02/BIMLissue-300x23.png 300w, /wp-content/uploads/2014/02/BIMLissue-1024x78.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/BIMLissue.png"><img class="alignnone size-full wp-image-2425" alt="BIMLissue" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/BIMLissue.png" width="1200" height="92" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/BIMLissue.png 1200w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/BIMLissue-300x23.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/02/BIMLissue-1024x78.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" /></a>
 </p>
 
 <p style="text-align: justify">

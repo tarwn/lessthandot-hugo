@@ -34,7 +34,7 @@ _printPreviewDialog.ShowDialog(Me)```
 But alas that doesn&#8217;t actually turn the page. And God only knows what it really does because I have no idea.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/landscape/landscape1.png?mtime=1331544512"><img alt="" src="/wp-content/uploads/users/chrissie1/landscape/landscape1.png?mtime=1331544512" width="390" height="378" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/landscape/landscape1.png?mtime=1331544512"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/landscape/landscape1.png?mtime=1331544512" width="390" height="378" /></a>
 </div>
 
 But luckily we can do this instead.
@@ -48,7 +48,7 @@ _printPreviewDialog.ShowDialog(Me)```
 And yes that gives the desired result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/landscape/landscape2.png?mtime=1331544522"><img alt="" src="/wp-content/uploads/users/chrissie1/landscape/landscape2.png?mtime=1331544522" width="416" height="338" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/landscape/landscape2.png?mtime=1331544522"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/landscape/landscape2.png?mtime=1331544522" width="416" height="338" /></a>
 </div>
 
 Did you spot the difference?

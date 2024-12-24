@@ -53,4 +53,4 @@ Silverlight also doesn't run in the browser on mobile platforms, Adobe announced
 
 Either way, you can download Silverlight 5 here: http://www.microsoft.com/silverlight/ it might be the last version that you will download
 
- [1]: /wp-content/uploads/blogs/EnterpriseDev/.evocache/WinRT.PNG/fit-400x320.PNG?mtime=1323526718 ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/.evocache/WinRT.PNG/fit-400x320.PNG?mtime=1323526718 ""

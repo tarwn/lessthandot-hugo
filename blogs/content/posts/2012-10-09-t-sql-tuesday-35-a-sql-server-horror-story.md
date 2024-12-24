@@ -25,7 +25,7 @@ It's October. That means fall, colorful leaves on the trees, soups simmering on 
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/lego%20bride%20of%20frankenstein.jpg?mtime=1349811531" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/lego%20bride%20of%20frankenstein.jpg?mtime=1349811531" alt="" />
 </p>
 
 <address style="text-align: center;">

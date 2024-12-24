@@ -28,7 +28,7 @@ As database professionals, our intent is to be as proactive as possible when it 
 Let's take a minute to discuss the three key points (Baselines, Active Monitoring and Reporting Performance)
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sbTightRope.jpg" alt="" title="" width="455" height="320" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sbTightRope.jpg" alt="" title="" width="455" height="320" />
 </div>
 
 **Baselines**
@@ -52,7 +52,7 @@ Database growth for example is captured over long periods of time. This falls in
 Below in the graph, we see the green points as actual growth. With this we can forecast the growth into the future. Without this data we may not know that in Month 11 we will need to either expand disk or replace the entire subsystem itself to handle the growth. With that growth, resources will be consumed more so hardware upgrades to the server itself may be required.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/baseline_1.gif" alt="" title="" width="396" height="291" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/baseline_1.gif" alt="" title="" width="396" height="291" />
 </div>
 
 Reporting performance is where the term, Performance Note is introduced. 
@@ -64,13 +64,13 @@ These events can occur over months, days and even hours. They are subtle and lar
 Take the graph below for an example where CPU usage over a day is represented. In the graph we see in the beginning of the day, utilization is very low. Then at a certain time, CPU starts showing normal activity. In the middle of the day a large spike in CPU occurs. This spike should be noted and in the following days monitoring of the performance notations should be done if it is unknown to the baseline.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/baseline_2.gif" alt="" title="" width="628" height="178" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/baseline_2.gif" alt="" title="" width="628" height="178" />
 </div>
 
 Below is a graph of CPU usage over the two days after making the observation of the spike in CPU.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/baseline_3.gif" alt="" title="" width="628" height="119" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/baseline_3.gif" alt="" title="" width="628" height="119" />
 </div>
 
 We can see that the spikes occur in both days and similar times.

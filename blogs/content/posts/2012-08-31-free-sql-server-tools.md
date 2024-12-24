@@ -44,7 +44,7 @@ SQL Sentry has given us Plan Explorer for free. This takes execution plans from 
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/query plan ssms.JPG?mtime=1346429007" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/query plan ssms.JPG?mtime=1346429007" alt="" />
 </p>
 
 To this:
@@ -52,7 +52,7 @@ To this:
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/query plan plan explorer.JPG?mtime=1346429007" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/query plan plan explorer.JPG?mtime=1346429007" alt="" />
 </p>
 
 Even on a very simple query, how much easier is that to read? It's so simple to identify which operations have the highest cost. Download this today, and make sure to thank SQL Sentry for it!
@@ -66,7 +66,7 @@ Red Gate's awesome SQL Search tool will let you search across tables, views, sto
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/sql prompt.JPG?mtime=1346429007" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/sql prompt.JPG?mtime=1346429007" alt="" />
 </p>
 
 Download this today!

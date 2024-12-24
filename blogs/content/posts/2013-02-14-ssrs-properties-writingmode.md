@@ -24,7 +24,7 @@ The purpose of this property is to allow you to display text horizontally or ver
 To access the property, select the text box and go to WritingMode. The options are Horizontal, Vertical, and Rotate270.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/writingmode 1.png?mtime=1360850970" alt="" width="236" height="138" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/writingmode 1.png?mtime=1360850970" alt="" width="236" height="138" />
 </p>
 
 Modes
@@ -44,19 +44,19 @@ Modes
 **Example**: I have a product inventory report with several headers. By default, the text displays horizontally.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/writingmode 2.png?mtime=1360850970" alt="" width="690" height="212" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/writingmode 2.png?mtime=1360850970" alt="" width="690" height="212" />
 </p>
 
 I change the WritingMode of the column headers to Vertical. The text is read from top to bottom, starting in the top right corner of the cell.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/writingmode 3.png?mtime=1360850970" alt="" width="691" height="241" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/writingmode 3.png?mtime=1360850970" alt="" width="691" height="241" />
 </p>
 
 I change the WritingMode of the column headers to Rotate270. The text is read from bottom to top, starting in the lower left corner of the cell.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/writingmode 4.png?mtime=1360850970" alt="" width="700" height="252" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/writingmode 4.png?mtime=1360850970" alt="" width="700" height="252" />
 </p>
 
 **Further Reading:** 

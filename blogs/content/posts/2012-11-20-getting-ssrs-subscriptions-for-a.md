@@ -32,7 +32,7 @@ It sounds like such a simple request that I figured it couldn't be that hard to 
 ## The Hurdles
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/hurdles.jpg?mtime=1353450411"><img alt="" src="/wp-content/uploads/users/kconan/hurdles.jpg?mtime=1353450411" width="400" height="338" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/hurdles.jpg?mtime=1353450411"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/hurdles.jpg?mtime=1353450411" width="400" height="338" /></a>
 </div>
 
 After poking around in SSRS Web Interface, I quickly found that short of opening each and every subscription there was no way to find this information. Next I took a peek in the ReportServer database where SSRS is hosted and it looked pretty simple. I peeked in a few tables and the column names all lined up nice for joining to the other tables. But then I saw the first of two hurdles that wouldn't be so easy to get past.
@@ -46,7 +46,7 @@ However, my heart sank when I hit the second hurdle.
 ## Schedule.RecurrenceType, Schedule.DaysOfWeek and Schedule.DaysOfMonth
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271"><img alt="" src="/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271" width="505" height="136" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/SSRS_Schedule.JPG?mtime=1353450271" width="505" height="136" /></a>
 </div>
 
 The Schedule table has a series of fields where it stores the schedule – Schedule.RecurrenceType, Schedule.DaysOfWeek and Schedule.DaysOfMonth. This one wasn't going to be as straight forward to get past. I remember something in the back of my mind about taking a number have to square it or something or another but it was all really fuzzy.
@@ -60,7 +60,7 @@ After a little while and a couple of conversations, people gave me the idea of l
 ## Ah, there's light at the end of this tunnel!
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/tunnel.jpg?mtime=1353450579"><img alt="" src="/wp-content/uploads/users/kconan/tunnel.jpg?mtime=1353450579" width="300" height="224" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tunnel.jpg?mtime=1353450579"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tunnel.jpg?mtime=1353450579" width="300" height="224" /></a>
 </div>
 
 The difference between job schedules and subscription schedules is that there ARE posts out there on how to decipher them! Between the little I was able to find about the schedules and the information about the job schedules, now I had what I needed to decipher the Subscription Schedules.

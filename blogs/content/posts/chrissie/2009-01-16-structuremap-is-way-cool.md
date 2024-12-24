@@ -249,7 +249,7 @@ namespace Structuremaptrial
 Which as you will see if you run this will give you this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Structuremapresult.jpg" alt="" title="" width="254" height="183" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Structuremapresult.jpg" alt="" title="" width="254" height="183" />
 </div>
 
 Ain&#8217;t it purdy? I think that says it all. 

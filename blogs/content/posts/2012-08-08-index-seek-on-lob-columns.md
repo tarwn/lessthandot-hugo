@@ -60,7 +60,7 @@ As you can see, there isn't much value in looking at the results of a query like
 At this point, there are no indexes on the table other than the primary key's clustered index.  The clustered index will be used heavily due to the lack of nonclustered indexing to support any queries that you want to run on the table.  Since the clustered index contains the entire table or columns, its use here is ineffective in truly helping the query to perform as well as its potential.  For the query executed to obtain the length and LOBVAL column, we can see that an index scan on the primary key is being performed.  This may seem ok, but remember that an index scan on the clustered index at this point is the same as a table scan.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/lob_seek_1.gif?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/lob_seek_1.gif?mtime=1344439799" width="357" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lob_seek_1.gif?mtime=1344439799"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lob_seek_1.gif?mtime=1344439799" width="357" height="74" /></a>
 </div>
 
 Further investigation shows a large number of lob logical reads to return the results.
@@ -81,7 +81,7 @@ GO
 
 
 > IO Results – Table 'PerfLOB'. Scan count 1, logical reads 10, physical reads 0, read-ahead reads 0, lob logical reads 86000, lob physical reads 0, lob read-ahead reads 0.</p><div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799" width="501" height="85" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-153.png?mtime=1344439799" width="501" height="85" /></a>
 </div>
 
 The update above that is relying on searching for the matching document, like the query to obtain length and the LOBVAL column, takes an extreme amount of resources and time to complete.  Given a larger table, more resources would be required and there would be lengthy locking time on the table.  We can use the substring and computed column method to make this more efficient.
@@ -102,7 +102,7 @@ When you store LOB data in SQL Server, it is stored in LOB\_DATA and in a page t
 We could visualize this as
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-154.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-154.png?mtime=1344439799" width="194" height="172" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-154.png?mtime=1344439799"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-154.png?mtime=1344439799" width="194" height="172" /></a>
 </div>
 
 Something to consider about the storage needs for and time of a nonclustered index creation is that the LOB_DATA page will exist in the nonclustered index.  We can take a closer look at this by running the following query to dig into the pages.
@@ -124,7 +124,7 @@ from sys.objects obj
 where obj.name = 'PerfLOB' 
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-155.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-155.png?mtime=1344439799" width="624" height="85" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-155.png?mtime=1344439799"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-155.png?mtime=1344439799" width="624" height="85" /></a>
 </div>
 
 Notice that there is a LOB_DATA page type for both the clustered and the nonclustered index. Also notice the number of pages in each.  Since the clustered index includes all the data and the nonclustered, even with the use of the INCLUDE and non-key columns does not, there is a difference in the overall page count.  There will be performance gains from using the nonclustered index, but an extensive amount of resources are still needed to create the index.
@@ -148,7 +148,7 @@ GO
 Looking at the execution plans generated from the new update statements, we can see the plan looks much more effective.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-156.png?mtime=1344439799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-156.png?mtime=1344439799" width="435" height="256" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-156.png?mtime=1344439799"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-156.png?mtime=1344439799" width="435" height="256" /></a>
 </div>
 
 Further, the IO generated  by the update statement has significantly been reduced.

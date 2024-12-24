@@ -65,19 +65,19 @@ Sadly enough the following pictures are not that good a quality, having only two
 This is the app. It has a scan button and a delete all button. It adds the scanned code into a listview and into an SQLite database.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/Zxing1.png?mtime=1322906310"><img alt="" src="/wp-content/uploads/users/chrissie1/android/Zxing1.png?mtime=1322906310" width="356" height="580" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/Zxing1.png?mtime=1322906310"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/Zxing1.png?mtime=1322906310" width="356" height="580" /></a>
 </div>
 
 Here you see the scanner in action. The red line is where the barcode should go.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/Zxing2.png?mtime=1322906325"><img alt="" src="/wp-content/uploads/users/chrissie1/android/Zxing2.png?mtime=1322906325" width="613" height="354" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/Zxing2.png?mtime=1322906325"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/Zxing2.png?mtime=1322906325" width="613" height="354" /></a>
 </div>
 
 When it is able to read a code it shows a green line and then returns to your app.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/Zxing3.png?mtime=1322906337"><img alt="" src="/wp-content/uploads/users/chrissie1/android/Zxing3.png?mtime=1322906337" width="377" height="230" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/Zxing3.png?mtime=1322906337"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/Zxing3.png?mtime=1322906337" width="377" height="230" /></a>
 </div>
 
 The important lines of code are these.

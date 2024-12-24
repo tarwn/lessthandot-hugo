@@ -16,7 +16,7 @@ tags:
   - code library
 
 ---
-<img src="/wp-content/uploads/blogs/ITProfessionals/Authors.PNG" alt="" title="" width="198" height="136" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Authors.PNG" alt="" title="" width="198" height="136" />
   
 So this is my 300th post on lessthandot, I decided to make this a post about why I am blogging and why you should too. There are a couple of things that are beneficial for developers who blog, these are
 
@@ -52,7 +52,7 @@ Something like that piece of code will happen to everyone, nobody knows all that
 
 # You will discover new blogs and interact with your peers
 
-<img src="/wp-content/uploads/blogs/ITProfessionals/Comments.PNG" alt="" title="" width="188" height="119" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Comments.PNG" alt="" title="" width="188" height="119" />
   
 Once you start blogging it might be quiet in the beginning, but after you create more and more content people will find you through search engines, twitter and other social sites. Once they find you you will get comments or track backs, of course you want to know what they think about your posts so you will check out those trackbacks and links from the comments. Doing that will help you discover interesting and helpful blog, then when you leave a comment there, the visitors from those blogs will check your blog out.
 

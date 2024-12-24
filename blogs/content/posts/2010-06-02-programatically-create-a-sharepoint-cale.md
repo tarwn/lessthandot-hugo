@@ -29,7 +29,7 @@ NOTE: You'll need to replace the "nis" section with the path to your own Sharepo
 The following screen will then be presented displaying the list of available methods:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/AddWebReference.png" alt="" title="" width="817" height="563" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/AddWebReference.png" alt="" title="" width="817" height="563" />
 </div>
 
 Change the Web Reference Name to "Sharepoint.Lists" and click the "Add Reference" button to add it to your project.
@@ -101,11 +101,11 @@ MyTestPage.CreateCalendarEntry("Development Team Calendar", "LessThanDot.com", "
 then you should see an example entry in your calendar:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/CalendarEntry.png" alt="" title="" width="622" height="258" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/CalendarEntry.png" alt="" title="" width="622" height="258" />
 </div>
 
 along with some further details once you click into the actual entry:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/SharepointCalendars/CalendarEntryDetails.png" alt="" title="" width="650" height="298" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SharepointCalendars/CalendarEntryDetails.png" alt="" title="" width="650" height="298" />
 </div>

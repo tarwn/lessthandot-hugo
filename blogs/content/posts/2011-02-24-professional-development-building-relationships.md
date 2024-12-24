@@ -15,7 +15,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlchicken.com/sql-university/"><img src="/wp-content/uploads/blogs/All/-6.png?mtime=1298241460" alt="" width="108" height="123" align="left" /></a>
+  <a href="http://sqlchicken.com/sql-university/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-6.png?mtime=1298241460" alt="" width="108" height="123" align="left" /></a>
 </div>
 
 I owe my class an apology.  Today's session seems to have been lost in the workload that has been on your professor this week.  Alas, this is no excuse and as such, we are here right now and talking about another professional development topic.

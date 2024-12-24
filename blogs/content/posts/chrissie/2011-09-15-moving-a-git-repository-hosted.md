@@ -32,7 +32,7 @@ This is therefor going to be a very short blogpost.
 You just copy paste the folder containing the bare repo over to the new place.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/git/git.png?mtime=1316071284"><img alt="" src="/wp-content/uploads/users/chrissie1/git/git.png?mtime=1316071284" width="587" height="191" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/git/git.png?mtime=1316071284"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/git/git.png?mtime=1316071284" width="587" height="191" /></a>
 </div>
 
 A while ago I made myself </p> 

@@ -5,7 +5,7 @@ type: post
 date: 2014-05-05T16:34:13+00:00
 ID: 2601
 url: /index.php/datamgmt/datadesign/six-and-a-bit-years-of-lessthandot-visualized/
-featured_image: /wp-content/uploads/2014/05/blogs_image.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/05/blogs_image.png
 views:
   - 6781
 rp4wp_auto_linked:

@@ -42,7 +42,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-family: arial, helvetica, sans-serif;"><img src="/wp-content/uploads/users/kermit/coders.jpg?mtime=1359936989" alt="Coders" width="282" height="202" /></span>
+  <span style="font-family: arial, helvetica, sans-serif;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kermit/coders.jpg?mtime=1359936989" alt="Coders" width="282" height="202" /></span>
 </p>
 
 <p style="line-height: 14.25pt;">
@@ -109,7 +109,7 @@ tags:
   <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">I went ahead and installed the 64 bit Client, in this case I used the client installation that came provided with the Oracle 11g database installation CD (<em>supplied by the tech support guys</em>), selected <strong>Administrator</strong> as the installation type, pointed the installer to where I wanted the files to go, set the Oracle Home directory and went ahead with the installation (<em>no problems here</em>).</span></span>
 </p>
 
-<span style="font-family: arial, helvetica, sans-serif;"><img src="/wp-content/uploads/users/kermit/oracle-installer.jpg?mtime=1359936990" alt="Oracle Installer" width="399" height="274" /></span>
+<span style="font-family: arial, helvetica, sans-serif;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kermit/oracle-installer.jpg?mtime=1359936990" alt="Oracle Installer" width="399" height="274" /></span>
 
 <p style="line-height: 14.25pt;">
   <span style="font-family: arial, helvetica, sans-serif;">All good so far, put my <strong>TNSNAMES.ORA</strong> file into the  <strong>{Oracle_Home}Product11.2.0Client_X64NetworkAdmin</strong> folder, fired up a Command console and used Sqlplus to connect to an Oracle 11g database server that was supplied by the tech support team, worked like a charm.</span>
@@ -163,13 +163,13 @@ tags:
   <span style="font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif;">Once the de-installation (<em>uninstall to you and me...Oracle people...</em>) is complete you need to run the Oracle Universal Installer (<em>semi-cool Java tool...Java is not cool, the app is however</em>).  When this app fires up you have the option to Deinstall any installations on your system:</span></span>
 </p>
 
-<span style="font-family: arial, helvetica, sans-serif;"><img src="/wp-content/uploads/users/kermit/oracle-installer-deinstall.jpg?mtime=1359936990" alt="Oracle Deinstall" width="372" height="270" /></span>
+<span style="font-family: arial, helvetica, sans-serif;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kermit/oracle-installer-deinstall.jpg?mtime=1359936990" alt="Oracle Deinstall" width="372" height="270" /></span>
 
 <p style="line-height: 14.25pt;">
   <span style="font-family: arial, helvetica, sans-serif;">Select all the products and then click on Remove to uninstall (<em>deinstall</em>) the products:</span>
 </p>
 
-<span style="font-family: arial, helvetica, sans-serif;"><img src="/wp-content/uploads/users/kermit/oracle-installer-deinstall-inventory.jpg?mtime=1359936991" alt="Inventory" width="150" height="245" /></span>
+<span style="font-family: arial, helvetica, sans-serif;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kermit/oracle-installer-deinstall-inventory.jpg?mtime=1359936991" alt="Inventory" width="150" height="245" /></span>
 
 <p style="line-height: 14.25pt;">
   <span style="font-family: arial, helvetica, sans-serif;">If you have no issues with the uninstallation of the Oracle Client stuff you will need to go into the Windows Registry to make sure you remove any references to an Oracle installation otherwise your future Oracle Client installation exercises will result in broken installations and more headaches.</span>
@@ -232,7 +232,7 @@ tags:
 </p>
 
 <p style="line-height: 14.25pt;">
-  <span style="font-family: arial, helvetica, sans-serif;"><img src="/wp-content/uploads/users/kermit/mememe.jpg?mtime=1359936991" alt="mememe" width="98" height="156" /></span>
+  <span style="font-family: arial, helvetica, sans-serif;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kermit/mememe.jpg?mtime=1359936991" alt="mememe" width="98" height="156" /></span>
 </p>
 
 <p style="line-height: 14.25pt; tab-stops: 522.0pt;">

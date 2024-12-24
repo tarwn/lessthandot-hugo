@@ -30,7 +30,7 @@ First up, let's build out an Azure Function to accept a form post and convert it
 From the Azure Dashboard, create a new "Azure Function App".
 
 <div id="attachment_4981" style="width: 810px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_0.png"><img src="/wp-content/uploads/2017/01/Azure_0.png" alt="Azure Function App - Getting Started" width="800" height="467" class="size-full wp-image-4981" srcset="/wp-content/uploads/2017/01/Azure_0.png 800w, /wp-content/uploads/2017/01/Azure_0-300x175.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_0.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_0.png" alt="Azure Function App - Getting Started" width="800" height="467" class="size-full wp-image-4981" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_0.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_0-300x175.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Azure Function App – Getting Started
@@ -42,7 +42,7 @@ The Azure Portal offers us a few options to get started quickly. Pick the one on
 The trigger for the Azure Function is the Webhook endpoint:
 
 <div id="attachment_4998" style="width: 810px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_1.png"><img src="/wp-content/uploads/2017/01/Azure_1.png" alt="Azure Function - Webhook Trigger" width="800" height="184" class="size-full wp-image-4998" srcset="/wp-content/uploads/2017/01/Azure_1.png 800w, /wp-content/uploads/2017/01/Azure_1-300x69.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_1.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_1.png" alt="Azure Function - Webhook Trigger" width="800" height="184" class="size-full wp-image-4998" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_1.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_1-300x69.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – Webhook Trigger
@@ -52,7 +52,7 @@ The trigger for the Azure Function is the Webhook endpoint:
 We can customize this to listen only to the /contact route and POST messages:
 
 <div id="attachment_4983" style="width: 751px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_2.png"><img src="/wp-content/uploads/2017/01/Azure_2.png" alt="Azure Function - Webhook Trigger Details" width="741" height="407" class="size-full wp-image-4983" srcset="/wp-content/uploads/2017/01/Azure_2.png 741w, /wp-content/uploads/2017/01/Azure_2-300x164.png 300w" sizes="(max-width: 741px) 100vw, 741px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_2.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_2.png" alt="Azure Function - Webhook Trigger Details" width="741" height="407" class="size-full wp-image-4983" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_2.png 741w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_2-300x164.png 300w" sizes="(max-width: 741px) 100vw, 741px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – Webhook Trigger Details
@@ -64,7 +64,7 @@ There are other details we could configure, so as you do this you might start ge
 We don't have an input for this Azure Function, and the return value is simply the HTTP Response we'll return form the trigger, so no further configuration to do:
 
 <div id="attachment_4984" style="width: 401px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_3.png"><img src="/wp-content/uploads/2017/01/Azure_3.png" alt="Azure Function - Return Value" width="391" height="278" class="size-full wp-image-4984" srcset="/wp-content/uploads/2017/01/Azure_3.png 391w, /wp-content/uploads/2017/01/Azure_3-300x213.png 300w" sizes="(max-width: 391px) 100vw, 391px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_3.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_3.png" alt="Azure Function - Return Value" width="391" height="278" class="size-full wp-image-4984" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_3.png 391w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_3-300x213.png 300w" sizes="(max-width: 391px) 100vw, 391px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – Return Value
@@ -94,7 +94,7 @@ Before we start in on the email code, let's start by not putting the secrets rig
 
 
 <div id="attachment_4985" style="width: 420px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_4.png"><img src="/wp-content/uploads/2017/01/Azure_4.png" alt="Finding the App Settings, Step 1" width="410" height="249" class="size-full wp-image-4985" srcset="/wp-content/uploads/2017/01/Azure_4.png 410w, /wp-content/uploads/2017/01/Azure_4-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_4.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_4.png" alt="Finding the App Settings, Step 1" width="410" height="249" class="size-full wp-image-4985" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_4.png 410w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_4-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
   
   <p class="wp-caption-text">
     Finding the App Settings, Step 1
@@ -104,7 +104,7 @@ Before we start in on the email code, let's start by not putting the secrets rig
 Then click the "App Settings" button:
 
 <div id="attachment_4986" style="width: 420px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_5.png"><img src="/wp-content/uploads/2017/01/Azure_5.png" alt="Finding the App Settings, Step 2" width="410" height="249" class="size-full wp-image-4986" srcset="/wp-content/uploads/2017/01/Azure_5.png 410w, /wp-content/uploads/2017/01/Azure_5-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_5.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_5.png" alt="Finding the App Settings, Step 2" width="410" height="249" class="size-full wp-image-4986" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_5.png 410w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_5-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
   
   <p class="wp-caption-text">
     Finding the App Settings, Step 2
@@ -114,7 +114,7 @@ Then click the "App Settings" button:
 This will open another blade to the right. One of the sections is the "App settings" section. You can enter AppSettings key/value configurations here that will be available to your function code. In my case, I'm going to add in all of my SMTP settings so I don't have them stored in the code when I later hook this to a git repository.
 
 <div id="attachment_4987" style="width: 378px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_6.png"><img src="/wp-content/uploads/2017/01/Azure_6.png" alt="Adding SMTP AppSettings" width="368" height="459" class="size-full wp-image-4987" srcset="/wp-content/uploads/2017/01/Azure_6.png 368w, /wp-content/uploads/2017/01/Azure_6-240x300.png 240w" sizes="(max-width: 368px) 100vw, 368px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_6.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_6.png" alt="Adding SMTP AppSettings" width="368" height="459" class="size-full wp-image-4987" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_6.png 368w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_6-240x300.png 240w" sizes="(max-width: 368px) 100vw, 368px" /></a>
   
   <p class="wp-caption-text">
     Adding SMTP AppSettings
@@ -184,7 +184,7 @@ With the code in place, we can use a tool like Postman to fire off some test POS
 Don't grab the URL above your code screen yet, it probably has an Administrative key coded into it. Open the "Keys" panel from the button (#1 below) in the top right and select the "default" key in the "Function Keys" list. When you do this, it will update the Function Url (#3) above the code panel to include this key instead of one of the Admin keys. As a final step, click the "Logs" (#2) button to open the log so you can see compile and run logs when it builds or is triggered. Now copy the Function URL (#3) so we can paste it into Postman to start testing.
 
 <div id="attachment_4999" style="width: 810px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_7.png"><img src="/wp-content/uploads/2017/01/Azure_7.png" alt="Azure Functions - Key, Logs, and URL" width="800" height="131" class="size-full wp-image-4999" srcset="/wp-content/uploads/2017/01/Azure_7.png 800w, /wp-content/uploads/2017/01/Azure_7-300x49.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_7.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_7.png" alt="Azure Functions - Key, Logs, and URL" width="800" height="131" class="size-full wp-image-4999" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_7.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_7-300x49.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Azure Functions – Key, Logs, and URL
@@ -194,7 +194,7 @@ Don't grab the URL above your code screen yet, it probably has an Administrative
 In a new Postman request, enter the URL at the top, select "Post" as the method, and add in key/value pairs for the fromEmail and the message. Of course we expect this to fail the first time:
 
 <div id="attachment_5000" style="width: 810px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_8.png"><img src="/wp-content/uploads/2017/01/Azure_8.png" alt="Azure Function - First Call Failed" width="800" height="385" class="size-full wp-image-5000" srcset="/wp-content/uploads/2017/01/Azure_8.png 800w, /wp-content/uploads/2017/01/Azure_8-300x144.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_8.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_8.png" alt="Azure Function - First Call Failed" width="800" height="385" class="size-full wp-image-5000" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_8.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_8-300x144.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – First Call Failed
@@ -204,7 +204,7 @@ In a new Postman request, enter the URL at the top, select "Post" as the method,
 Fixing the code then nets us:
 
 <div id="attachment_5001" style="width: 810px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_9.png"><img src="/wp-content/uploads/2017/01/Azure_9.png" alt="Azure Function - Second Call Failed" width="800" height="326" class="size-full wp-image-5001" srcset="/wp-content/uploads/2017/01/Azure_9.png 800w, /wp-content/uploads/2017/01/Azure_9-300x122.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_9.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_9.png" alt="Azure Function - Second Call Failed" width="800" height="326" class="size-full wp-image-5001" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_9.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_9-300x122.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – Second Call Failed
@@ -214,7 +214,7 @@ Fixing the code then nets us:
 Because my code is expecting urlencoded form data and wasn't able to parse any from the body. Once we switch that, we get:
 
 <div id="attachment_5002" style="width: 810px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_10.png"><img src="/wp-content/uploads/2017/01/Azure_10.png" alt="Azure Function - Success" width="800" height="290" class="size-full wp-image-5002" srcset="/wp-content/uploads/2017/01/Azure_10.png 800w, /wp-content/uploads/2017/01/Azure_10-300x108.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_10.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_10.png" alt="Azure Function - Success" width="800" height="290" class="size-full wp-image-5002" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_10.png 800w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_10-300x108.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – Success
@@ -249,7 +249,7 @@ I use jQuery to post the form content because the Azure Function isn't going to 
 There was one more catch the first time I tried this. Because I'm posting from my a page from my personal page to a domain in Azure, the calls initially fails with a Cross-Origin error. To enable Cross-Origin calls from your domain, go back to the Azure Functions interface in the App Settings section and open the CORS page:
 
 <div id="attachment_4992" style="width: 420px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_11.png"><img src="/wp-content/uploads/2017/01/Azure_11.png" alt="Azure Function - CORS Config" width="410" height="249" class="size-full wp-image-4992" srcset="/wp-content/uploads/2017/01/Azure_11.png 410w, /wp-content/uploads/2017/01/Azure_11-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_11.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_11.png" alt="Azure Function - CORS Config" width="410" height="249" class="size-full wp-image-4992" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_11.png 410w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_11-300x182.png 300w" sizes="(max-width: 410px) 100vw, 410px" /></a>
   
   <p class="wp-caption-text">
     Azure Function – CORS Config
@@ -259,7 +259,7 @@ There was one more catch the first time I tried this. Because I'm posting from m
 This will open the list of domains allowed to make Cross-Origin calls (which will result in the necessary Cross-Origin-Access header being sent back so your browser will trust the content). Add your domain, save, and your jQuery calls should now work just fine.
 
 <div id="attachment_5003" style="width: 660px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_14.png"><img src="/wp-content/uploads/2017/01/Azure_14.png" alt="Contact Form" width="650" height="269" class="size-full wp-image-5003" srcset="/wp-content/uploads/2017/01/Azure_14.png 650w, /wp-content/uploads/2017/01/Azure_14-300x124.png 300w" sizes="(max-width: 650px) 100vw, 650px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_14.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_14.png" alt="Contact Form" width="650" height="269" class="size-full wp-image-5003" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_14.png 650w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_14-300x124.png 300w" sizes="(max-width: 650px) 100vw, 650px" /></a>
   
   <p class="wp-caption-text">
     Contact Form
@@ -267,7 +267,7 @@ This will open the list of domains allowed to make Cross-Origin calls (which wil
 </div>
 
 <div id="attachment_5004" style="width: 660px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2017/01/Azure_13.png"><img src="/wp-content/uploads/2017/01/Azure_13.png" alt="Contact Form Success!!" width="650" height="236" class="size-full wp-image-5004" srcset="/wp-content/uploads/2017/01/Azure_13.png 650w, /wp-content/uploads/2017/01/Azure_13-300x108.png 300w" sizes="(max-width: 650px) 100vw, 650px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_13.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_13.png" alt="Contact Form Success!!" width="650" height="236" class="size-full wp-image-5004" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_13.png 650w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/01/Azure_13-300x108.png 300w" sizes="(max-width: 650px) 100vw, 650px" /></a>
   
   <p class="wp-caption-text">
     Contact Form Success!!

@@ -29,7 +29,7 @@ I saw this in National Geographic magazine 2 days ago and found it a bit interes
 Take a look at this font below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont1.jpg?mtime=1357605896"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont1.jpg?mtime=1357605896" width="266" height="60" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont1.jpg?mtime=1357605896"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont1.jpg?mtime=1357605896" width="266" height="60" /></a>
 </div>
 
 You probably noticed the holes in the letters, if you print this out you will save ink. According to the Ecofont website [you can save up to 20% of ink][1]
@@ -41,7 +41,7 @@ Of course you can save more by not printing at all. 🙂
 So I decided to play around with this, I downloaded the font (you can download the font from the download link on this page: http://www.ecofont.eu/ecofont_en.html) and typed up a page in Word 2007. Below is the result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont2.png?mtime=1357605910"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont2.png?mtime=1357605910" width="563" height="705" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont2.png?mtime=1357605910"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Denis/ecofont2.png?mtime=1357605910" width="563" height="705" /></a>
 </div>
 
 I increased the font size for every and also compared bold to regular. The last 2 lines have a size of 72.

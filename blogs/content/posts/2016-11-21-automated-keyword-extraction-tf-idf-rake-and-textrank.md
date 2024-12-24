@@ -5,7 +5,7 @@ type: post
 date: 2016-11-21T21:09:50+00:00
 ID: 4819
 url: /index.php/artificial-intelligence/automated-keyword-extraction-tf-idf-rake-and-textrank/
-featured_image: /wp-content/uploads/2016/11/pythoncode.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/11/pythoncode.png
 views:
   - 12143
 rp4wp_auto_linked:

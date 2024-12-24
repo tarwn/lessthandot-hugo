@@ -77,7 +77,7 @@ End Module
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn8.png?mtime=1319371213"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn8.png?mtime=1319371213" width="1337" height="279" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn8.png?mtime=1319371213"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn8.png?mtime=1319371213" width="1337" height="279" /></a>
 </div>
 
 I just create a new syntaxtree <code class="codespan">Dim tree2 = SyntaxTree.ParseCompilationUnit(classstatement.GetFullText)</code> and then add a <code class="codespan">File.WriteAllText(filename, classstatement.Parent.GetText)</code> and I&#8217;m done. Of course this is the easy option since I don&#8217;t have to deal with namespaces or imports or options. 
@@ -165,7 +165,7 @@ End Module
 This is now our result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn9.png?mtime=1319373259"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn9.png?mtime=1319373259" width="1290" height="299" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn9.png?mtime=1319373259"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn9.png?mtime=1319373259" width="1290" height="299" /></a>
 </div>
 
 ## Conclusion

@@ -110,7 +110,7 @@ C:NoSQLmongodbbin></pre>
 If you look in your bin directory, you will see a dump directory, inside the dump directory, you will see a directory for every database that was backed up.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/MultiDBackupMongoDB.PNG?mtime=1359714862"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/MultiDBackupMongoDB.PNG?mtime=1359714862" width="640" height="265" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/MultiDBackupMongoDB.PNG?mtime=1359714862"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/MultiDBackupMongoDB.PNG?mtime=1359714862" width="640" height="265" /></a>
 </div>
 
 That is all for this post, if you are interested in my other MongoDB posts, you can find them here:

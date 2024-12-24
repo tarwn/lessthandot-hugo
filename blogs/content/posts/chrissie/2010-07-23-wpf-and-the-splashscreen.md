@@ -31,7 +31,7 @@ Making a splashscreen in WPF is easy, since the .Net framework SP1 there is even
   * Click on the file and change the Build action to SplashScreen
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/splash/splash3.png" alt="" title="" width="348" height="270" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/splash/splash3.png" alt="" title="" width="348" height="270" />
 </div>
 
 And that&#8217;s all there is to it. It does have fade-in and fade-out effect. 
@@ -248,7 +248,7 @@ Then you add an image to form. and that&#8217;s it.
 And just for fun I made the ugliest splashscreen you can think of, but it works. This is the design view.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/splash/splash1.png" alt="" title="" width="500" height="364" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/splash/splash1.png" alt="" title="" width="500" height="364" />
 </div>
 
 See how the image is outside of the bounds of the window?
@@ -256,7 +256,7 @@ See how the image is outside of the bounds of the window?
 Now see that when you run it it will chop of those parts.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/splash/splash2.png" alt="" title="" width="434" height="362" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/splash/splash2.png" alt="" title="" width="434" height="362" />
 </div>
 
 So now your window is completely transparent and as ugly as I could make it ;-).

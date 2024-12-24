@@ -78,7 +78,7 @@ SELECT * FROM sys.stats WHERE object_id = OBJECT_ID('dbo.CustTable')
 _Listing 1.3_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-158.png?mtime=1346787647"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-158.png?mtime=1346787647" width="624" height="86" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-158.png?mtime=1346787647"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-158.png?mtime=1346787647" width="624" height="86" /></a>
 </div>
 
 For SQL Server 2012, turn trace flag 8666 so we can examine the statistics being used by the plans in the cache.
@@ -110,7 +110,7 @@ GO
 _Listing 1.5_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-159.png?mtime=1346787647"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-159.png?mtime=1346787647" width="624" height="61" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-159.png?mtime=1346787647"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-159.png?mtime=1346787647" width="624" height="61" /></a>
 </div>
 
 As we can see, the three statistics are shown in the results for the plan that was cached.
@@ -129,7 +129,7 @@ _Listing 1.6_
 Rerun the query from listing 1.5.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-160.png?mtime=1346787648"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-160.png?mtime=1346787648" width="624" height="37" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-160.png?mtime=1346787648"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-160.png?mtime=1346787648" width="624" height="37" /></a>
 </div>
 
 Notice the statistic, \_WA\_Sys\_00000002\_02FC7413 is no longer referenced and shown in the results.  Overall, this plan is not optimal given the CustName column reference.  It would be ideal for SQL Server to remove it as part of the DROP COLUMN but given resource utilization and the mechanism for the plan being cycled out at the time of need, it isn't a critical situation.  However, as mentioned earlier, there can be value to clearing the plan from the cache for some instances.

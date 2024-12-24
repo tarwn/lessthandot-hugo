@@ -26,7 +26,7 @@ tags:
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/07/datavault.jpg"><img class="alignnone wp-image-2841 size-medium" src="/wp-content/uploads/2014/07/datavault-200x300.jpg" alt="datavault" width="200" height="300" srcset="/wp-content/uploads/2014/07/datavault-200x300.jpg 200w, /wp-content/uploads/2014/07/datavault.jpg 231w" sizes="(max-width: 200px) 100vw, 200px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/07/datavault.jpg"><img class="alignnone wp-image-2841 size-medium" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/07/datavault-200x300.jpg" alt="datavault" width="200" height="300" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/07/datavault-200x300.jpg 200w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/07/datavault.jpg 231w" sizes="(max-width: 200px) 100vw, 200px" /></a>
 </p>
 
 <p style="text-align: justify">

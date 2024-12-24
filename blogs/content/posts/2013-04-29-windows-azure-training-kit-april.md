@@ -25,7 +25,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/EnterpriseDev/windows_azure_small.jpg?mtime=1312531635"><img alt="" src="/wp-content/uploads/blogs/EnterpriseDev/windows_azure_small.jpg?mtime=1312531635" width="300" height="169" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/windows_azure_small.jpg?mtime=1312531635"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/windows_azure_small.jpg?mtime=1312531635" width="300" height="169" /></a>
 </div>
 
 Microsoft has released the Windows Azure Training Kit April 2013.

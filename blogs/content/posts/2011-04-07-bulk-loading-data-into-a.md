@@ -18,7 +18,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-34.png?mtime=1302226917"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-34.png?mtime=1302226917" width="108" height="82" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-34.png?mtime=1302226917"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-34.png?mtime=1302226917" width="108" height="82" align="left" /></a>
 </div>
 
 Merge Replication is a powerful beastly thing that can bring great joy and great sorrow all in the same 15 minute time span.  There is no doubt that Merge Replication is an Enterprise feature.  It has grown over the years from the days when all it took was a swift kick to the side of a server rack to knock an agent into starting, to a fancy event handler that shows us the bulk operations as they fly by our network and into the subscribers.  Face it: SQL Server 2000 and the word Replication simply were a scary combination for some administrators. 
@@ -60,13 +60,13 @@ Another staging table is created that holds 361,970 rows that need to be importe
 To load the legacy data, SSIS is used and consists of one Data Flow Task with a direct OLE DB Source to OLE DB Destination.  The package is executed with the OLE DB Destination option set for AccessMode to OpenRowset Using Fastload and no other properties altered.  The load runs successfully and inserts the 361,970 rows into PUB.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-35.png?mtime=1302226917"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-35.png?mtime=1302226917" width="384" height="209" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-35.png?mtime=1302226917"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-35.png?mtime=1302226917" width="384" height="209" /></a>
 </div>
 
 To move the newly inserted data into SUB.dbo.PUB_INVENTORY, the synchronization agent is started.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-36.png?mtime=1302226918"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-36.png?mtime=1302226918" width="546" height="256" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-36.png?mtime=1302226918"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-36.png?mtime=1302226918" width="546" height="256" /></a>
 </div>
 
 From the above status after completing the agent execution, no data was moved.  To validate, another count is performed on SUB.dbo.PUB_INVENTORY with 1,145,743 rows returned.  This is still the initial row count that was returned prior to the execution of the SSIS package.
@@ -84,7 +84,7 @@ Executing the package to load the PUB.dbo.PUB\_INVENTORY table shows much better
 To validate the Merge Replication operations were set correctly this time, start synchronizing.  Open replication monitor to show the details of the changes to the subscriber.  Once the synchronization agent is started, the monitor shows the following inserts have completed on the subscriber.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-37.png?mtime=1302226919"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-37.png?mtime=1302226919" width="653" height="308" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-37.png?mtime=1302226919"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-37.png?mtime=1302226919" width="653" height="308" /></a>
 </div>
 
 **Performance**
@@ -94,13 +94,13 @@ To put numbers to the loading operations and performance between both with FIRE_
 Performance with fire triggers
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-38.png?mtime=1302226919"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-38.png?mtime=1302226919" width="912" height="78" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-38.png?mtime=1302226919"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-38.png?mtime=1302226919" width="912" height="78" /></a>
 </div>
 
 Performance without fire triggers
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-39.png?mtime=1302226952"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-39.png?mtime=1302226952" width="911" height="78" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-39.png?mtime=1302226952"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-39.png?mtime=1302226952" width="911" height="78" /></a>
 </div>
 
 As the results show, performance without the triggers is extremely beneficial.  However, when replication is being utilized for the tables being loaded, the triggers must be enabled in order to bring the data down to the subscribers correctly.

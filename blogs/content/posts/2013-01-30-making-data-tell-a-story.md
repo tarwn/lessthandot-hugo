@@ -17,7 +17,7 @@ categories:
 ---
 SQL Server Reporting Services is one of my favorite parts of the Microsoft SQL Server stack. Making data tell a story is incredibly valuable, and fun.
 
-<img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/Intro1.png?mtime=1359555126" alt="" width="793" height="432" />
+<img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Intro1.png?mtime=1359555126" alt="" width="793" height="432" />
 
 <p style="text-align: center;">
   <em>Which one of these tells the story better?</em>

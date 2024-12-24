@@ -17,13 +17,13 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/-16.png?mtime=1329313898"></a><a href="http://www.jasonstrate.com/2012/02/february-meme15-assignment/"><img src="/wp-content/uploads/blogs/ITProfessionals/-16.png?mtime=1329313898" alt="" width="59" height="59" align="left" /></a>
+  <a href="/media/blogs/ITProfessionals/-16.png?mtime=1329313898"></a><a href="http://www.jasonstrate.com/2012/02/february-meme15-assignment/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-16.png?mtime=1329313898" alt="" width="59" height="59" align="left" /></a>
 </div>
 
 February's [#meme15 is on Linkedin][1] and how we use it.  The meme15 concept came from one of my good friends, Jason Strate ([Twitter][2] | [Blog][3]).  The monthly topics focus on professional development, blogging and really, why we do these things to help ourselves and others.  I have always been an abuser of all the social networking tools that are available.  I use them to my advantage to promote myself and my career.  Realistically, no one will know about you beyond past, current employers and interviews unless we take advantage of these tools.
 
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/-17.png?mtime=1329313899"><img src="/wp-content/uploads/blogs/ITProfessionals/-17.png?mtime=1329313899" alt="" width="136" height="550" align="left" /></a>
+  <a href="/media/blogs/ITProfessionals/-17.png?mtime=1329313899"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-17.png?mtime=1329313899" alt="" width="136" height="550" align="left" /></a>
 </div>
 
 Linkedin is a social networking tool that is geared directly towards your work experiences, skills and current employment status.  In short, your overall profile of who and what you can do.  Now, work doesn't limit us to only employer related topics.  Linkedin is a great place to supply speaking engagements, conferences attended, blogging, articles written and book authored.  All of these topics go out to a vast amount of viewers that aren't only limited to your contacts list.  Recruiters and recruiting companies have tools that work (kind of) that search your profiles and that gets them directly in touch with you for possible future opportunities.  Recruiters may be a PITA at times when their search tools fail them but we do have to account for the fact that these are tools that have flaws.  For example, I found an invitation to connect last week from a recruiter that involved RPGIV development positions.  Obviously, I heart SQL Server and I've built a respectful history around it.  The invitation was really a failure due to the recruiter not personally reviewing what it is I would actually be interested in.  The reasons this happened was due to RPG being something I worked on over a decade ago.  Now, I can hardly remember how to start writing RPG or control language programs on the AS400 but alas, they want me to take time to look into this position.

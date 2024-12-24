@@ -59,13 +59,13 @@ end```
 Which still turns green 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby14.png?mtime=1311511252"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby14.png?mtime=1311511252" width="1035" height="762" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby14.png?mtime=1311511252"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby14.png?mtime=1311511252" width="1035" height="762" /></a>
 </div>
 
 and red like before.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/ruby15.png?mtime=1311511469"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/ruby15.png?mtime=1311511469" width="1035" height="841" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby15.png?mtime=1311511469"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/ruby15.png?mtime=1311511469" width="1035" height="841" /></a>
 </div>
 
 ## Conclusion

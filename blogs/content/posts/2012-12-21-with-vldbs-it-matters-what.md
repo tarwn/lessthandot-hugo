@@ -34,7 +34,7 @@ This is day twenty-one of the [SQL Advent 2012 series][1] of blog posts. Today w
 VLDB stands for Very Large Database, Not too long ago the definition of VLDB was a database that occupies more than 1 terabyte or contains several billion rows. This of course will change over time, there are quite a few companies with Petabyte size databases. Servers with many CPUs and lots of RAM are required when your databases are big
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SQLServerCPUandRAM.jpg?mtime=1356141722"><img alt="I like big databases and I cannot lie" title ="I like big databases and I cannot lie" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SQLServerCPUandRAM.jpg?mtime=1356141722" width="582" height="395" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SQLServerCPUandRAM.jpg?mtime=1356141722"><img alt="I like big databases and I cannot lie" title ="I like big databases and I cannot lie" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/SQLServerCPUandRAM.jpg?mtime=1356141722" width="582" height="395" /></a>
 </div>
 
 **What is the big deal with VLDB anyway, it is just bigger right?**

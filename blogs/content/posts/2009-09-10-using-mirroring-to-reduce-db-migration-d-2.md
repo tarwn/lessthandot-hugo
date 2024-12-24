@@ -107,7 +107,7 @@ The failover can be accomplished by means of SSMS or a statement executed on the
 From within SSMS you can right click the database and select properties. Then from within the Mirroring page there is a failover button available to cause the failover event.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssms_failover.gif" alt="" title="" width="454" height="408" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssms_failover.gif" alt="" title="" width="454" height="408" />
 </div>
 
 To accomplish this same task from TSQL we can execute the following statement

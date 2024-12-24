@@ -72,7 +72,7 @@ namespace C_Class_Library_1.NewFolder1
 The default namespace can be found in the properties of your project, in the application tab.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/namespace.jpg" alt="" title="" width="744" height="208" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/namespace.jpg" alt="" title="" width="744" height="208" />
 </div>
 
 When you leave out the namespace, you will find your classes in the default namespace.
@@ -84,7 +84,7 @@ In VB.Net, neither the namespace nor the folder hierarchy is added when you crea
 When you do not provide a namespace, the class will go into the Root Namespace.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/namespace2.jpg" alt="" title="" width="716" height="149" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/namespace2.jpg" alt="" title="" width="716" height="149" />
 </div>
 
 This is where you have a big difference between C# and VB.Net. 
@@ -246,7 +246,7 @@ But we can also do all this at the project level so that we don&#8217;t have to 
 You can set them in the compile tab.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/optionsinVB.Net.jpg" alt="" title="" width="950" height="184" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/optionsinVB.Net.jpg" alt="" title="" width="950" height="184" />
 </div>
 
 This ends part 4, next up, Types.

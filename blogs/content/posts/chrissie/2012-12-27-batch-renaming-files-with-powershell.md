@@ -29,19 +29,19 @@ cd \192.168.1.152series```
 and you&#8217;re on that drive.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename2.png?mtime=1356627627"><img alt="" src="/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename2.png?mtime=1356627627" width="813" height="252" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename2.png?mtime=1356627627"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename2.png?mtime=1356627627" width="813" height="252" /></a>
 </div>
 
 That doesn&#8217;t work with the normal commandline BTW.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename1.png?mtime=1356627545"><img alt="" src="/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename1.png?mtime=1356627545" width="677" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename1.png?mtime=1356627545"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename1.png?mtime=1356627545" width="677" height="343" /></a>
 </div>
 
 So now we are there we can see we have bunch of files.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename3.png?mtime=1356627807"><img alt="" src="/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename3.png?mtime=1356627807" width="580" height="475" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename3.png?mtime=1356627807"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/powershell/powershellbatchrename3.png?mtime=1356627807" width="580" height="475" /></a>
 </div>
 
 It is clear that these files don&#8217;t say a lot about the contents, I will want to fix that. I want to prefix them all with Stargate. Easy just cd your way to that directory <code class="codespan">Stargate/SG1/Season 1</code> and do this.

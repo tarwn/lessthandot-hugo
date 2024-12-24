@@ -21,7 +21,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlity.net/en/1175/t-sql-tuesday-37-invite-to-join-me-in-a-month-of-joins/"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/tsql2sday.gif?mtime=1355235468" width="98" height="99" align="left" /></a>
+  <a href="http://sqlity.net/en/1175/t-sql-tuesday-37-invite-to-join-me-in-a-month-of-joins/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/tsql2sday.gif?mtime=1355235468" width="98" height="99" align="left" /></a>
 </div>
 
 This month's T-SQL Tuesday is hosted by Sebastian Meine ([blog][1] | [twitter][2]) and the topic is joins. He has a whole month worth of topics about joins: [A Join A Day – Introduction][3].</p> 

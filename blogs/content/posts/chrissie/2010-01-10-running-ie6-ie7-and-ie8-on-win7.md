@@ -26,7 +26,7 @@ It is pretty easy, even I got it to work from the first time.
 See the result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/IE7.png" alt="" title="" width="824" height="513" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/IE7.png" alt="" title="" width="824" height="513" />
 </div>
 
 and you don&#8217;t even see them running in the Virtual machine. Not that this will make your life much eassier if you want IE6 compatibility but at least it will make it a bit faster. And you will be sure you have the correct engine and not some emulation.

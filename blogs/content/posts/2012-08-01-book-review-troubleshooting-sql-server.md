@@ -20,7 +20,7 @@ My latest SQL Server read was [Troubleshooting SQL Server – A Guide for the Ac
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/TroubleshootingSQL.JPG?mtime=1343829419" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/TroubleshootingSQL.JPG?mtime=1343829419" alt="" />
 </p>
 
 Topics that are covered include disk I/O configuration, CPU, memory, indexes, blocking, deadlocks, transaction logs, and – my favorite – accidents waiting to happen.

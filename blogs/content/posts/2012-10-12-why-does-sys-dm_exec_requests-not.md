@@ -104,7 +104,7 @@ where database_id = 6
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/exec_1.gif?mtime=1350051238"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/exec_1.gif?mtime=1350051238" width="624" height="42" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_1.gif?mtime=1350051238"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/exec_1.gif?mtime=1350051238" width="624" height="42" /></a>
 </div>
 
 As shown, we now have the open session as well as the statement run so we can fine tune the command we need to write (KILL) in order to get things moving again.

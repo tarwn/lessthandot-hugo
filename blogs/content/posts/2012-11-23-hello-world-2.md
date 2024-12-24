@@ -35,7 +35,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: left;">
-  <a href="/media/users/koenverbeeck/HelloWorld/baby-steps-300x183.jpg?mtime=1353678136"><img src="/wp-content/uploads/users/koenverbeeck/HelloWorld/baby-steps-300x183.jpg?mtime=1353678136" alt="" width="300" height="183" /></a>
+  <a href="/media/users/koenverbeeck/HelloWorld/baby-steps-300x183.jpg?mtime=1353678136"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/HelloWorld/baby-steps-300x183.jpg?mtime=1353678136" alt="" width="300" height="183" /></a>
 </div>
 
 <p style="text-align: justify;">

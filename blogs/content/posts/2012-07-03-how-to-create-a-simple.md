@@ -65,7 +65,7 @@ Also, if you need to have more than one grouping on an axis (say, Year then mont
 
 To summarize, some tasks are actually fairly simple to let reporting services do most of the work for you. Getting this sort of result just in SQL Server is rather difficult and time consuming. I hope you were able to follow along and learn a new trick that can save you time and effort on future projects. If you have any questions please don't hesitate to ask.
 
- [1]: /wp-content/uploads/blogs/DataMgmt/thirster42/crosstab/Sample Grid.png "Sample Grid"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/crosstab/Sample Grid.png "Sample Grid"
  [2]: http://textsnip.com/126ac4
- [3]: /wp-content/uploads/blogs/DataMgmt/thirster42/crosstab/RowGroup.png "Row Group"
- [4]: /wp-content/uploads/blogs/DataMgmt/thirster42/crosstab/PS Designer.png "Designer"
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/crosstab/RowGroup.png "Row Group"
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/crosstab/PS Designer.png "Designer"

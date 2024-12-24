@@ -32,7 +32,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="http://sqlug.be/"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/SSD2013/sql_ug_logo.jpg?mtime=1381828300" alt="" width="133" height="75" /></a>
+  <a href="http://sqlug.be/"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSD2013/sql_ug_logo.jpg?mtime=1381828300" alt="" width="133" height="75" /></a>
 </p>
 
 <span style="text-align: justify;">My session is titled </span>_Create ETL solutions faster with metadata driven development_ <span style="text-align: justify;">and shows you how you can use </span><a style="text-align: justify;" href="http://www.varigence.com/Products/Biml/Capabilities">BIML</a> <span style="text-align: justify;">and metadata to create SSIS solutions dynamically. The abstract is as follows:</span>
@@ -60,5 +60,5 @@ _Working on your 20th staging package? Do you need to import 30 different flat f
 </p>
 
 <p style="text-align: justify;">
-  <a href="http://www.sqlserverdays.be/2013/bring-a-colleague-for-free"><img src="/wp-content/uploads/users/koenverbeeck/SSD2013/byoc.jpg?mtime=1381828293" alt="" width="472" height="196" /></a>
+  <a href="http://www.sqlserverdays.be/2013/bring-a-colleague-for-free"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSD2013/byoc.jpg?mtime=1381828293" alt="" width="472" height="196" /></a>
 </p>

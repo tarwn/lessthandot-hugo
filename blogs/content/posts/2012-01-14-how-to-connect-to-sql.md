@@ -84,25 +84,25 @@ _**Login failed for user 'TestLogin'. (Microsoft SQL Server, Error: 18456)**_
 Here is what you need to do, on the connect to server window, click on the options button
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Options.PNG?mtime=1326571296"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Options.PNG?mtime=1326571296" width="405" height="204" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Options.PNG?mtime=1326571296"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Options.PNG?mtime=1326571296" width="405" height="204" /></a>
 </div>
 
 That will open the Connection Properties tab
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269" width="401" height="348" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServer.PNG?mtime=1326571269" width="401" height="348" /></a>
 </div>
 
 Whatever you do, do not select _Browse server..._ from the connect to database option, if you do that you will get the following error
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280" width="614" height="167" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/BrowseServerError.PNG?mtime=1326571280" width="614" height="167" /></a>
 </div>
 
 Just type the database name of the database that is not offline instead 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Test2.PNG?mtime=1326571594"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Test2.PNG?mtime=1326571594" width="388" height="174" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Test2.PNG?mtime=1326571594"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Test2.PNG?mtime=1326571594" width="388" height="174" /></a>
 </div>
 
 As you will see you can connect without a problem now

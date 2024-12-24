@@ -33,13 +33,13 @@ Below will outline a process that will consume a flat file with three columns of
 Our execution in BIDS is good at this point and we are successful in the development stage of our process.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ssis agent fail 1.gif" alt="" title="" width="312" height="199" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssis agent fail 1.gif" alt="" title="" width="312" height="199" />
 </div></p> 
 
 Now we turn to creating a SQL Server Agent job to call an SSIS step. This step connects to the MSDB in which our package has been deployed to. Upon execution, we are faced with a different result:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ssis agent fail 2.gif" alt="" title="" width="529" height="170" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssis agent fail 2.gif" alt="" title="" width="529" height="170" />
 </div></p> 
 
 Now that we have paved the road to troubleshoot this error, we can take a normal approach that most troubleshooting will take.
@@ -118,7 +118,7 @@ To resolve this problem of transport and running in 32 bit mode on a 64 bit Wind
 **Double Hop** problems exist when windows authentication is used and the process in which passing credentials from a calling mechanism to a second forces another request to a third resource or server.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ssis agent fail 3.gif" alt="" title="" width="473" height="131" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssis agent fail 3.gif" alt="" title="" width="473" height="131" />
 </div></p> 
 
 In this situation, the resolution is to either change the landscape or resolve with implementing Kerberos Authentication. 

@@ -158,7 +158,7 @@ Compound Operators make it possible to declare and assign a value at the same ti
 * * *
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/SQLDenis/BillyMase.PNG?mtime=1361730496"><img alt="" src="/wp-content/uploads/users/SQLDenis/BillyMase.PNG?mtime=1361730496" width="397" height="396" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/BillyMase.PNG?mtime=1361730496"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/BillyMase.PNG?mtime=1361730496" width="397" height="396" /></a>
 </div>
 
 

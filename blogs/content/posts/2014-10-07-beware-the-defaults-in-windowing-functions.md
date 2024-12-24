@@ -46,7 +46,7 @@ VALUES	 ('A',1)
 SELECT DISTINCT [Group], MAX(Value) OVER (PARTITION BY [Group] ORDER BY Value)
 FROM dbo.TestOver;
 ```<p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/10/query1.png"><img class="alignnone size-full wp-image-3013" src="/wp-content/uploads/2014/10/query1.png" alt="query1" width="595" height="290" srcset="/wp-content/uploads/2014/10/query1.png 595w, /wp-content/uploads/2014/10/query1-300x146.png 300w" sizes="(max-width: 595px) 100vw, 595px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query1.png"><img class="alignnone size-full wp-image-3013" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query1.png" alt="query1" width="595" height="290" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query1.png 595w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query1-300x146.png 300w" sizes="(max-width: 595px) 100vw, 595px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -54,7 +54,7 @@ FROM dbo.TestOver;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/10/query2.png"><img class="alignnone size-full wp-image-3011" src="/wp-content/uploads/2014/10/query2.png" alt="query2" width="617" height="142" srcset="/wp-content/uploads/2014/10/query2.png 617w, /wp-content/uploads/2014/10/query2-300x69.png 300w" sizes="(max-width: 617px) 100vw, 617px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query2.png"><img class="alignnone size-full wp-image-3011" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query2.png" alt="query2" width="617" height="142" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query2.png 617w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/query2-300x69.png 300w" sizes="(max-width: 617px) 100vw, 617px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -89,7 +89,7 @@ FROM dbo.TestOver;
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2014/10/windows.png"><img class="alignnone size-full wp-image-3012" src="/wp-content/uploads/2014/10/windows.png" alt="windows" width="204" height="189" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/windows.png"><img class="alignnone size-full wp-image-3012" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/10/windows.png" alt="windows" width="204" height="189" /></a>
 </p>
 
 <p style="text-align: justify">

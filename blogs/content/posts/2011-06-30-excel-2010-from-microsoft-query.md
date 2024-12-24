@@ -45,9 +45,9 @@ I went back to Excel > Data > From Other Sources > From Microsoft Query. My 32-b
 
 What I learned is that 64-bit operating systems contain both 64-bit and 32-bit ODBC administration tools. You must use the appropriate tool for the application you are working with.
 
- [1]: /wp-content/uploads/users/grrlgeek/DSN6.JPG?mtime=1309464482
- [2]: /wp-content/uploads/users/grrlgeek/DSN5.JPG?mtime=1309464482
- [3]: /wp-content/uploads/users/grrlgeek/DSN1.JPG?mtime=1309446389 "null"
- [4]: /wp-content/uploads/users/grrlgeek/DSN2.JPG?mtime=1309446389 "null"
- [5]: /wp-content/uploads/users/grrlgeek/DSN3.JPG?mtime=130944638 "null"
- [6]: /wp-content/uploads/users/grrlgeek/DSN4.JPG?mtime=1309446389 "null"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DSN6.JPG?mtime=1309464482
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DSN5.JPG?mtime=1309464482
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DSN1.JPG?mtime=1309446389 "null"
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DSN2.JPG?mtime=1309446389 "null"
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DSN3.JPG?mtime=130944638 "null"
+ [6]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DSN4.JPG?mtime=1309446389 "null"

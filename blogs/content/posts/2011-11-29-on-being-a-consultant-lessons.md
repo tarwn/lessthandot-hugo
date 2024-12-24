@@ -41,4 +41,4 @@ My comfort zone is...comfortable. Like my favorite running t-shirt. But if I sta
 
 Outside my comfort zone, I discover new things. I uncover new strengths. I use my talents. I hope that one day, those two circles overlap. Or at least get closer together.
 
- [1]: /wp-content/uploads/users/grrlgeek/your-comfort-zone.jpg?mtime=1322622240 ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/your-comfort-zone.jpg?mtime=1322622240 ""

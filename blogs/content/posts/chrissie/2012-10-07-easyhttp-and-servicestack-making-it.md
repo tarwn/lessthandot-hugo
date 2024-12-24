@@ -24,7 +24,7 @@ I also used a different port for each test and thus a different instance of Serv
 Of course The Boss was not happy with this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack1.png?mtime=1349606247"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack1.png?mtime=1349606247" width="319" height="173" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack1.png?mtime=1349606247"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack1.png?mtime=1349606247" width="319" height="173" /></a>
 </div>
 
 So I went for a look on how to do this the better way.
@@ -88,7 +88,7 @@ It has no clue about apphost.
 And now the Boss is happy.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack2.png?mtime=1349608345"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack2.png?mtime=1349608345" width="320" height="213" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack2.png?mtime=1349608345"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestack/EasyhttpServiceStack2.png?mtime=1349608345" width="320" height="213" /></a>
 </div>
 
 And you can find all [the code on Github][3].

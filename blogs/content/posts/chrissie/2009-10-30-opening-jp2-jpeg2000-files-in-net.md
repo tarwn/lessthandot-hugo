@@ -355,7 +355,7 @@ If Not FreeImage.IsAvailable() Then
 The above code checks if the library works, opens a filedialog so you can select your file, opens the image in freeimage format, makes it into .Net Image and shows it in a picturebox in stretchmode.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/freeimage/freeimage.png" alt="" title="" width="563" height="358" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/freeimage/freeimage.png" alt="" title="" width="563" height="358" />
 </div>
 
 And that&#8217;s it easy as pie. 
@@ -363,7 +363,7 @@ And that&#8217;s it easy as pie.
 > <span class="MT_red">But of course it didn&#8217;t work the first time around. Not because it doesn&#8217;t work but because I forgot to read the signs, big signs at that. My system is Win7 64x and the FreeImage dll is 32 bits so it kinda didn&#8217;t like that. Easily solved though. You just set the Active Solution Platform to x86 and you&#8217;re done.</span>
 > 
 > <div class="image_block">
->   <img src="/wp-content/uploads/blogs/DesktopDev/freeimage/freeimage2.png" alt="" title="" width="717" height="450" />
+>   <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/freeimage/freeimage2.png" alt="" title="" width="717" height="450" />
 > </div>
 
  [1]: http://freeimage.sourceforge.net/index.html

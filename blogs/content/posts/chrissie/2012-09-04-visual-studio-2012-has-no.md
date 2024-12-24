@@ -25,13 +25,13 @@ Visual studio 2012 has no more Setup project, but you get the choice to download
 So if you go to Setup and deployment you get this but then without the installshield limited edition option above extensibility.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/installshield/Installshield1.png?mtime=1346766150"><img alt="" src="/wp-content/uploads/users/chrissie1/installshield/Installshield1.png?mtime=1346766150" width="955" height="660" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield1.png?mtime=1346766150"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield1.png?mtime=1346766150" width="955" height="660" /></a>
 </div>
 
 So when you choose that and type in a project name and click ok. You get sent to this page in a browser of your choosing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/installshield/Installshield2.png?mtime=1346766377"><img alt="" src="/wp-content/uploads/users/chrissie1/installshield/Installshield2.png?mtime=1346766377" width="921" height="497" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield2.png?mtime=1346766377"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield2.png?mtime=1346766377" width="921" height="497" /></a>
 </div>
 
 So yeah, it&#8217;s free and it&#8217;s supposed to have the same functionality as the setup project you used to have and blah blah. 
@@ -39,7 +39,7 @@ So yeah, it&#8217;s free and it&#8217;s supposed to have the same functionality 
 And then you go to the download page and you see this&#8230;
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/installshield/Installshield3.png?mtime=1346766581"><img alt="" src="/wp-content/uploads/users/chrissie1/installshield/Installshield3.png?mtime=1346766581" width="518" height="224" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield3.png?mtime=1346766581"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield3.png?mtime=1346766581" width="518" height="224" /></a>
 </div>
 
 Uhm, it hasn&#8217;t been called VS11 for a while now. And it is out of Beta for a few weeks now. 
@@ -49,7 +49,7 @@ So then you give them all your details because it&#8217;s free, remember.
 And then you can choose which version you want to download.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/installshield/Installshield4.png?mtime=1346766730"><img alt="" src="/wp-content/uploads/users/chrissie1/installshield/Installshield4.png?mtime=1346766730" width="508" height="211" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield4.png?mtime=1346766730"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/installshield/Installshield4.png?mtime=1346766730" width="508" height="211" /></a>
 </div>
 
 And you want me to trust these guys? Because it&#8217;s free?

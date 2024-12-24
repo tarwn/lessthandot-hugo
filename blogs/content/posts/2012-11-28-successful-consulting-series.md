@@ -40,7 +40,7 @@ The Series Titles
   * [Easy to Difficult Clients][17] By Hope Foley and [Successful Consulting Series – Difficult Clients][18] By Ted Krueger
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/consulting.gif?mtime=1354129341"><img alt="" src="/wp-content/uploads/blogs/All/consulting.gif?mtime=1354129341" width="417" height="395" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/consulting.gif?mtime=1354129341"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/consulting.gif?mtime=1354129341" width="417" height="395" /></a>
 </div>
 
 As the posts become available, reviewed, and edited by my awesome reviewer, I'll update this post making the titles links.  I truly hope this helps many people who are thinking about consulting, wondering  if they made the right choice by going to consulting, or simply want to become a better consultant.
@@ -69,4 +69,4 @@ You can download the complete series here: [The Successful Consultant][19]
  [16]: /index.php/ITProfessionals/ProfessionalDevelopment/interviewing-for-a-consulting-position
  [17]: /index.php/ITProfessionals/ProfessionalDevelopment/successful-consulting-series-easy-to
  [18]: /index.php/ITProfessionals/ProfessionalDevelopment/successful-consulting-series-difficult-clients
- [19]: /wp-content/uploads/blogs/All/The Successful Consultant.pdf?mtime=1356123161
+ [19]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/The Successful Consultant.pdf?mtime=1356123161

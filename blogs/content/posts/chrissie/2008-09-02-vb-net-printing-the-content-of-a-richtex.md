@@ -34,7 +34,7 @@ I also made it so that you can add a simple Header and Footer. Of course, you co
 Here is an example of it at work in my home-made queryanalyser. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/queryanalyser1.jpg" alt="" title="" width="482" height="542" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/queryanalyser1.jpg" alt="" title="" width="482" height="542" />
 </div>
 
 <div class="image_block">
@@ -49,7 +49,7 @@ Here is an example of it at work in my home-made queryanalyser.
   </p>
   
   <p>
-    <img src="/wp-content/uploads/blogs/DesktopDev/queryanalyserprintpreview.jpg" alt="" title="" width="428" height="331" /></div> 
+    <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/queryanalyserprintpreview.jpg" alt="" title="" width="428" height="331" /></div> 
     
     <p>
       Don&#8217;t forget, you can always ask questions about this in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net Forum</a>

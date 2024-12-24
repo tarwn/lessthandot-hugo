@@ -73,7 +73,7 @@ IF NOT EXISTS(SELECT *
 If you like to use the wizard, you can do that as well, here is what it would look like 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/gmailDBMail.PNG?mtime=1358082799"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/gmailDBMail.PNG?mtime=1358082799" width="678" height="569" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/gmailDBMail.PNG?mtime=1358082799"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/gmailDBMail.PNG?mtime=1358082799" width="678" height="569" /></a>
 </div>
 
 Make sure to check SSL and that the port number is 587
@@ -94,7 +94,7 @@ EXEC msdb.dbo.sp_send_dbmail
 Go and check that email inbox, did you get the email? If you did not get the email, make sure to check the Database Mail Log, it will contain messages telling you what the error is. Right click on Database Mail and select View Database Mail Log
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DBMailLog.PNG?mtime=1358083272"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DBMailLog.PNG?mtime=1358083272" width="291" height="155" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DBMailLog.PNG?mtime=1358083272"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Oracle/DBMailLog.PNG?mtime=1358083272" width="291" height="155" /></a>
 </div>
 
 A message might be the following, this is because the port was wrong

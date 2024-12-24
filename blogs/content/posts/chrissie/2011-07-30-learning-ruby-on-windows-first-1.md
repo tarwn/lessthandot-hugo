@@ -28,19 +28,19 @@ I would recommend reading [this guide][2] to get more of the details.
 I decided to use scaffold to make this quick and easy. And in rubymine you do this via Tools > Run rails generator&#8230; and then you fill in the model like the below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold1.png?mtime=1312033743"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold1.png?mtime=1312033743" width="355" height="308" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold1.png?mtime=1312033743"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold1.png?mtime=1312033743" width="355" height="308" /></a>
 </div>
 
 which then creates a model, controllers, helpers, views, a database script, &#8230;
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold2.png?mtime=1312033881"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold2.png?mtime=1312033881" width="916" height="824" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold2.png?mtime=1312033881"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold2.png?mtime=1312033881" width="916" height="824" /></a>
 </div>
 
 And then it is time to run our application and see if it works.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold3.png?mtime=1312033959"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold3.png?mtime=1312033959" width="732" height="526" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold3.png?mtime=1312033959"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold3.png?mtime=1312033959" width="732" height="526" /></a>
 </div>
 
 And that wasn&#8217;t the desired result.
@@ -56,7 +56,7 @@ Here is the error.
 and yes a gem install rake -v=0.9.2 and a bundle update later I could do a rake db:migrate and see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold4.png?mtime=1312034237"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold4.png?mtime=1312034237" width="699" height="216" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold4.png?mtime=1312034237"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold4.png?mtime=1312034237" width="699" height="216" /></a>
 </div>
 
 There is nothing that makes a man more happy then seeing that it works.
@@ -66,21 +66,21 @@ So back to running the server and going to my site and the route in this case is
 and I can add a plant.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold5.png?mtime=1312034363"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold5.png?mtime=1312034363" width="219" height="137" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold5.png?mtime=1312034363"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold5.png?mtime=1312034363" width="219" height="137" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold6.png?mtime=1312034517"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold6.png?mtime=1312034517" width="224" height="273" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold6.png?mtime=1312034517"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold6.png?mtime=1312034517" width="224" height="273" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold7.png?mtime=1312034530"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold7.png?mtime=1312034530" width="232" height="167" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold7.png?mtime=1312034530"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold7.png?mtime=1312034530" width="232" height="167" /></a>
 </div>
 
 And then the list looks like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/scaffold8.png?mtime=1312034539"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/scaffold8.png?mtime=1312034539" width="302" height="149" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold8.png?mtime=1312034539"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/scaffold8.png?mtime=1312034539" width="302" height="149" /></a>
 </div>
 
 ## Conclusion

@@ -22,7 +22,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Books/TheThankYouEconomy.jpg?mtime=1325953427"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Books/TheThankYouEconomy.jpg?mtime=1325953427" width="210" height="317" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Books/TheThankYouEconomy.jpg?mtime=1325953427"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Books/TheThankYouEconomy.jpg?mtime=1325953427" width="210" height="317" /></a>
 </div>
 
 **[The Thank You Economy by Gary Vaynerchuk][1]**

@@ -86,7 +86,7 @@ Rendersection("menu")
 This will look something like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy16.png?mtime=1356700759"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy16.png?mtime=1356700759" width="518" height="247" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy16.png?mtime=1356700759"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy16.png?mtime=1356700759" width="518" height="247" /></a>
 </div>
 
 All the userdata is shown and the form to upload the file.
@@ -143,13 +143,13 @@ This looks to see if an image exists and if not than it shows a default image.
 With picture.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy17.png?mtime=1356701376"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy17.png?mtime=1356701376" width="654" height="662" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy17.png?mtime=1356701376"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy17.png?mtime=1356701376" width="654" height="662" /></a>
 </div>
 
 With default picture.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy18.png?mtime=1356701492"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy18.png?mtime=1356701492" width="365" height="425" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy18.png?mtime=1356701492"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy18.png?mtime=1356701492" width="365" height="425" /></a>
 </div>
 
 This means our view is changed a little bit.

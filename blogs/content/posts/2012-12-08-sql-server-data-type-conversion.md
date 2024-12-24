@@ -31,7 +31,7 @@ The two files are _SQL Server Data Type Conversion Chart.pdf_ which is 1.7 MB, a
 Here is a small image of what the color one looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Data typeConversion chart.PNG?mtime=1354988302"><img alt="SQL Server Data Type Conversion Poster" src="/wp-content/uploads/blogs/DataMgmt/Denis/Data typeConversion chart.PNG?mtime=1354988302" width="362" height="550" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Data typeConversion chart.PNG?mtime=1354988302"><img alt="SQL Server Data Type Conversion Poster" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Data typeConversion chart.PNG?mtime=1354988302" width="362" height="550" /></a>
 </div>
 
 The files can be downloaded here: http://www.microsoft.com/en-us/download/details.aspx?id=35834

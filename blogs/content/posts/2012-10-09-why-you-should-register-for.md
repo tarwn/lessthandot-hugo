@@ -43,7 +43,7 @@ Because you just want to meet over 400 peers from Belgium who work with MS SQL S
 So what are you waiting for?
 
 <div class="image_block">
-  <a href="http://www.sqlserverdays.be/2012/registration"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/SQLDays.gif?mtime=1349790379" width="699" height="198" /></a>
+  <a href="http://www.sqlserverdays.be/2012/registration"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/SQLDays.gif?mtime=1349790379" width="699" height="198" /></a>
 </div>
 
  [1]: http://www.sqlserverdays.be/2012/

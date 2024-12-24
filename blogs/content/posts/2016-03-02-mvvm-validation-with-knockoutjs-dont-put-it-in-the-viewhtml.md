@@ -69,7 +69,7 @@ Whether you're using MVVM, MVC, or MV-Whatever in the front-end, you have a Mode
 Enter an adapter I will call, for this post, the "PresentationModel":
 
 <div id="attachment_4420" style="width: 410px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/02/Diagram.png"><img src="/wp-content/uploads/2016/02/Diagram.png" alt="PresentationModel - Defines Validation/Formatting" width="400" height="400" class="size-full wp-image-4420" srcset="/wp-content/uploads/2016/02/Diagram.png 400w, /wp-content/uploads/2016/02/Diagram-200x200.png 200w, /wp-content/uploads/2016/02/Diagram-300x300.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Diagram.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Diagram.png" alt="PresentationModel - Defines Validation/Formatting" width="400" height="400" class="size-full wp-image-4420" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Diagram.png 400w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Diagram-200x200.png 200w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Diagram-300x300.png 300w" sizes="(max-width: 400px) 100vw, 400px" /></a>
   
   <p class="wp-caption-text">
     PresentationModel – Defines Validation/Formatting
@@ -96,7 +96,7 @@ function OrderLinePresModel(orderLineModel){
 The example is an Order object with a collection of Order Lines that alow a user to free-type a name, quantity, and price which are then used for various sub-total calculations and presumably saved at some point. In the "PresentationModel", I've extended the Model's properties with the validation/formatting definitions for each of the values. 
 
 <div id="attachment_4416" style="width: 568px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/02/Screenshot.png"><img src="/wp-content/uploads/2016/02/Screenshot.png" alt="Formatted and Validated Inputs" width="558" height="183" class="size-full wp-image-4416" srcset="/wp-content/uploads/2016/02/Screenshot.png 558w, /wp-content/uploads/2016/02/Screenshot-300x98.png 300w" sizes="(max-width: 558px) 100vw, 558px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Screenshot.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Screenshot.png" alt="Formatted and Validated Inputs" width="558" height="183" class="size-full wp-image-4416" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Screenshot.png 558w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/Screenshot-300x98.png 300w" sizes="(max-width: 558px) 100vw, 558px" /></a>
   
   <p class="wp-caption-text">
     Formatted and Validated Inputs
@@ -121,7 +121,7 @@ There are 4 key parts to this: the Model, the PresentationModel, the Type, and t
 The validate extender is a computed observable that we use in the PresentationModel to define the type and additional validation parameters. It is the main workhorse behind the scenes that attaches the read and write behavior to the Model's observable property.
 
 <div id="attachment_4415" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2016/02/PresentationModel.png"><img src="/wp-content/uploads/2016/02/PresentationModel.png" alt="Validate Extender: Input/Output Handling" width="500" height="220" class="size-full wp-image-4415" srcset="/wp-content/uploads/2016/02/PresentationModel.png 500w, /wp-content/uploads/2016/02/PresentationModel-300x132.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/PresentationModel.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/PresentationModel.png" alt="Validate Extender: Input/Output Handling" width="500" height="220" class="size-full wp-image-4415" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/PresentationModel.png 500w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/PresentationModel-300x132.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
   
   <p class="wp-caption-text">
     Validate Extender: Input/Output Handling

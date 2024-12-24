@@ -36,7 +36,7 @@ The foreach loop container gives us the ability to enumerate a directory while p
 Setting up the container is the first step. The initial setting we'll need is the type of enumeration-which is _file_ in our case, and then the folder and files we want. The file pattern is typical of any other commonly used file selection. The wildcard \* is utilized to match all with a static string parameter. In this case, \*.csv is used to find only files with names that end in .csv.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_1.gif" alt="" title="" width="442" height="375" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_1.gif" alt="" title="" width="442" height="375" />
 </div>
 
 The next section under the variable mappings is crucial to the functional loop through all the files in the folder. This will allow us to set the index of the file name currently focused in a variable so we can utilize it through the flow of the import.
@@ -44,7 +44,7 @@ The next section under the variable mappings is crucial to the functional loop t
 Drop down the Variable selection and select "<new variable>" so we can create our variable with the editor. In this case, scope is important. Scope of a variable (the container in which is can be accessed) acts as option explicit does in the old visual basic world. It will dictate to the program flow what objects can access the variable and how they access them. For our case the file name is of the highest level of our objects and will be accessed by the entire package. This tells us we need to make the scope of the variable at the package container level. Index level is assigned to out variable by default based on how you add them. The file name is the first index so we simply leave our single variable in the mappings as is.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_2.gif" alt="" title="" width="485" height="193" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_2.gif" alt="" title="" width="485" height="193" />
 </div>
 
 The container is now setup to enumerate the files in our folder and set for each iteration, the file focused on name value to the variable User::focused_fil
@@ -56,7 +56,7 @@ The script task in our example shows just how we can access variables in this po
 We want focused_fil to be a constant in our script task so add it to the ReadOnlyVariables collection. Next add a variable to the package container scope named _processed_ as a string data type and in the ReadWriteVariables collection. This will be used to determine what we email the DBA to state if the file was processed. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_3.gif" alt="" title="" width="478" height="119" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_3.gif" alt="" title="" width="478" height="119" />
 </div>
 
 Now going into the designer we have the ability to read the focused_fil variable in order to make decisions on setting the processed variable. To do this in SSIS 2008 you reference Dts and drill to the Variables. Use value to reference and set like below
@@ -88,13 +88,13 @@ Create a new connection by right clicking the connection managers area and selec
 Create two new variables in the package container named, dest\_conn and dest\_db. Set these variables to string data types and enter static values for the instance and the initial catalog we want to connect to. Highlight the destination connection in the connection managers area to expose the properties of the connection in the properties window. In the properties window, click the browse button for expressions to open the property expression editor. Here we can set the connection string to what we want based on a real-time validated expression. To set a trusted connection we can build a connection string such as
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_4.gif" alt="" title="" width="523" height="463" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_4.gif" alt="" title="" width="523" height="463" />
 </div>
 
 After this, using the same property editor, we can set the initial catalog to complete the connection needs
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_5.gif" alt="" title="" width="416" height="325" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_5.gif" alt="" title="" width="416" height="325" />
 </div>
 
 We can do the same with our flat file source connection by using the variable User::focused_fil we set in our foreach container.
@@ -109,7 +109,7 @@ bankid,bankname,transcode,amt
 Saving this as C:transmission\_1.csv we set the file location in the editor and then only need to set the file containing headers option to complete our mappings. Once this is all done, we use the same property settings through the expression settings of the flat file source as we did on the destination for setting the connection string to the file we set in the focused\_fil variable.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_6.gif" alt="" title="" width="437" height="325" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_6.gif" alt="" title="" width="437" height="325" />
 </div>
 
 Once we connect the flow to the destination we can open the destination editor to see how the variables are working for the destination. Drop down the table listing and you'll see that the validation process will use the variables for the connection string and initial catalog to load the table listing in the editor. First success! 
@@ -141,7 +141,7 @@ DestinationVariable = User::archive
 We want to move the file so there is no reprocessing occurring so change the operation method to Move over the default, Copy. Notice when this is completed and saved, there will be a warning on the file system task stating the variable is empty. To ensure the package compiles correctly, setting the focused file to the file we used as a shell to map our flat file source should be set to the focused_fil variable
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_7.gif" alt="" title="" width="395" height="87" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_7.gif" alt="" title="" width="395" height="87" />
 </div>
 
 The script task is the place we can do these validations by using the System.IO and associated methods to check if the file exists that is stored in the focused file variable beforehand. We can avoid the static settings by working with the property values that way.
@@ -151,13 +151,13 @@ Now that we have gone over our finally functional example of using variables by 
 ## Our completed package execution
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_8.gif" alt="" title="" width="377" height="237" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_8.gif" alt="" title="" width="377" height="237" />
 </div>
 
 And our test one row of data transferred successfully
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/var_9.gif" alt="" title="" width="388" height="204" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/var_9.gif" alt="" title="" width="388" height="204" />
 </div>
 
 ## Closing

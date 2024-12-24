@@ -15,7 +15,7 @@ categories:
 I have had my ipad for a week now and I like it a lot but that is not what this post is about. This post is about an app I downloaded and how that app saves my password in plain text. How do I know they do this? Because if I request them to send me my password they actually are able to do it. Here is the proof. More or less.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/marvel.png?mtime=1315340333"><img alt="" src="/wp-content/uploads/users/chrissie1/marvel.png?mtime=1315340333" width="440" height="280" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/marvel.png?mtime=1315340333"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/marvel.png?mtime=1315340333" width="440" height="280" /></a>
 </div>
 
 Saving someones password is just plain wrong. It&#8217;s basic security 101. If you still do this than you are not worth the money they pay you. 

@@ -22,7 +22,7 @@ On 5, 6 and 7 March 2013 Microsoft Belux is organizing [Techdays 2013][1], 3 day
 The reason is that the [Belgian SQL Server User Group][2] organizes yearly a 2 day event about SQL Server the [SQL Server Days][3] and this is where the SQL Server enthusiasts should get their knowledge. 
 
 <div class="image_block">
-  <a href="http://it-tna.com/"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/NoSQL.jpg?mtime=1359451359" width="300" height="276" /></a>
+  <a href="http://it-tna.com/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/NoSQL.jpg?mtime=1359451359" width="300" height="276" /></a>
 </div>
 
 But I disagree, as a full-time SQL Server consultant, I can't justify going to an event where there is no SQL content at all. I know there are some other interesting sessions about Windows Server, SCOM, etc. but they aren't the core of my job so I can't register for this event and thus I will miss the opportunity to:

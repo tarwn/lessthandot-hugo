@@ -22,19 +22,19 @@ tags:
 In my [previous post][1] I wass looking for the Data Sources and Data Source Views in SSIS 2012 projects. As Carla Sabotta ([site][2]|[twitter][3]) mentioned in the comments you can change the deployment model of your project so the Data Sources folder will reappear. To do this right click the project in Solution Explorer and choose for "Convert to Package Deployment Model":
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS1.png?mtime=1332236417"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS1.png?mtime=1332236417" width="524" height="259" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DS1.png?mtime=1332236417"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DS1.png?mtime=1332236417" width="524" height="259" /></a>
 </div>
 
 After this a warning will appear that you won't be able to convert to the Package Deployment Model if you are using new features. So when I try to convert the package I created in my [previous post][1] I get a nice error report and clicking on the details I get the exact error why my project couldn't be converted:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS2.png?mtime=1332236430"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS2.png?mtime=1332236430" width="986" height="477" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DS2.png?mtime=1332236430"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DS2.png?mtime=1332236430" width="986" height="477" /></a>
 </div>
 
 When I take another (empty) project without Project Connection Managers the conversion succeeds and a Data Sources folder shows up in my Solution Explorer:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS3.png?mtime=1332236442"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/DS3.png?mtime=1332236442" width="211" height="137" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DS3.png?mtime=1332236442"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/DS3.png?mtime=1332236442" width="211" height="137" /></a>
 </div>
 
 Also note the explicit mention in the project name that we are working in the Package Deployment Model.

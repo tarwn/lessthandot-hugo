@@ -19,7 +19,7 @@ As a software developer you need to stay on top of things by reading articles, w
 So what&#8217;s new in [devdirective][4] I hear you ask that the others don&#8217;t have? They too have a voting system, it seems. Even with downvotes, which is something I&#8217;m not a fan of. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/devdirective/devdirective.png?mtime=1311146162"><img alt="" src="/wp-content/uploads/users/chrissie1/devdirective/devdirective.png?mtime=1311146162" width="1315" height="562" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/devdirective/devdirective.png?mtime=1311146162"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/devdirective/devdirective.png?mtime=1311146162" width="1315" height="562" /></a>
 </div>
 
 Here is [what James Avery has to say][5] about it.

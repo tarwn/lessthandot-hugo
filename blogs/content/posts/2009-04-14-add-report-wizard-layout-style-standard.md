@@ -72,5 +72,5 @@ Now open up Visual Studio and create a new report server project. Create a new r
 So now my report loads with my new company standard formatting and we gain standards along with time saving configurations 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//ssrs_layout_1.gif" alt="" title="" width="498" height="97" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//ssrs_layout_1.gif" alt="" title="" width="498" height="97" />
 </div>

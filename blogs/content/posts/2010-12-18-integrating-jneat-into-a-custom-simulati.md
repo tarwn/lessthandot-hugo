@@ -158,7 +158,7 @@ cd /path/to/jNEAT/gui/
 ```
 Select the View Graph tab, click Load Pop and locate the saved population. Selecting an organism from the list on the left will display its network structure.
 
-<img src="/wp-content/uploads/users/robearl/jNEATGUI.png">
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/robearl/jNEATGUI.png">
 
  [1]: http://nn.cs.utexas.edu/?neat-java
  [2]: http://nn.cs.utexas.edu/?neat

@@ -19,7 +19,7 @@ categories:
 ## SSRS errors are not friendly
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ssrs_error.gif" alt="" title="" width="288" height="150" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssrs_error.gif" alt="" title="" width="288" height="150" align="left" />
 </div>
 
 Today a friend of mine asked for a hand with an SSRS error he was getting. I have to admit, at the time I was pretty busy and feel bad that I didn't answer the question completely. The error was resolved though and the find/fix by him was impressive to say the least. One thing that was frustrating for both of us was the error presented from the report server when this particular report execution failed. In short, the error was not helpful at all. There is resource to find more in-depth descriptions on the error though by turning to the trace logs that are enabled on reporting services. Below, we will go through searching for these descriptive errors in the logs.

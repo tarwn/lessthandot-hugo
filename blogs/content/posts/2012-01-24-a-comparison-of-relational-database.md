@@ -44,4 +44,4 @@ Having this information at my fingertips, able to be presented to a client or a 
 
 ### [Cheatsheet: RDBMS Comparison][1]
 
- [1]: /wp-content/uploads/users/grrlgeek/DB comparison.pdf?mtime=1327286341
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DB comparison.pdf?mtime=1327286341

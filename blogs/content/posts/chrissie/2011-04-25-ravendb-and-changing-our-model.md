@@ -62,17 +62,17 @@ I have added a property called family name to the model and then I added another
 And here is the result. I just added 2 docs. One with family name and one without.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB4.PNG?mtime=1303716059"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB4.PNG?mtime=1303716059" width="822" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB4.PNG?mtime=1303716059"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB4.PNG?mtime=1303716059" width="822" height="300" /></a>
 </div>
 
 So I adapted the form I used in the previous post to see what happens when I load plants/1 and plants/1025. And here are the results.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB5.PNG?mtime=1303716948"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB5.PNG?mtime=1303716948" width="438" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB5.PNG?mtime=1303716948"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB5.PNG?mtime=1303716948" width="438" height="261" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB6.PNG?mtime=1303716959"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB6.PNG?mtime=1303716959" width="438" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB6.PNG?mtime=1303716959"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB6.PNG?mtime=1303716959" width="438" height="261" /></a>
 </div>
 
 It just works. No problem there.
@@ -84,21 +84,21 @@ So now I can just remove that property again. Add another plant and see if I can
 I now have another plant with id 2049. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB7.PNG?mtime=1303717345"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB7.PNG?mtime=1303717345" width="762" height="155" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB7.PNG?mtime=1303717345"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB7.PNG?mtime=1303717345" width="762" height="155" /></a>
 </div>
 
 I can now show these docs in my form, I will just have to remove the family name property usage.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB8.PNG?mtime=1303717657"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB8.PNG?mtime=1303717657" width="438" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB8.PNG?mtime=1303717657"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB8.PNG?mtime=1303717657" width="438" height="261" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB9.PNG?mtime=1303717672"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB9.PNG?mtime=1303717672" width="438" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB9.PNG?mtime=1303717672"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB9.PNG?mtime=1303717672" width="438" height="261" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB10.PNG?mtime=1303717698"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB10.PNG?mtime=1303717698" width="438" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB10.PNG?mtime=1303717698"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB10.PNG?mtime=1303717698" width="438" height="261" /></a>
 </div>
 
 And that just works.

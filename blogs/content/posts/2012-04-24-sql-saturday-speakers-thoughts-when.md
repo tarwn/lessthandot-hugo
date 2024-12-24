@@ -19,7 +19,7 @@ A conversation came up today on Twitter regarding speaker evaluations and if the
  
 
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/-22.png?mtime=1335279951"><img src="/wp-content/uploads/blogs/ITProfessionals/-22.png?mtime=1335279951" alt="" width="624" height="80" /></a>
+  <a href="/media/blogs/ITProfessionals/-22.png?mtime=1335279951"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-22.png?mtime=1335279951" alt="" width="624" height="80" /></a>
 </div>
 
  
@@ -41,7 +41,7 @@ Evaluations are important to the organizers, but I feel they are more important 
  
 
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/-23.png?mtime=1335279951"><img src="/wp-content/uploads/blogs/ITProfessionals/-23.png?mtime=1335279951" alt="" width="78" height="76" align="left" /></a>
+  <a href="/media/blogs/ITProfessionals/-23.png?mtime=1335279951"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-23.png?mtime=1335279951" alt="" width="78" height="76" align="left" /></a>
 </div>
 
  

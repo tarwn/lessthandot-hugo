@@ -34,7 +34,7 @@ The query above is a common query that is the result of designing merge replicat
 In merge replication, the query shown above is shown in the publication properties below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-87.png?mtime=1323567447"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-87.png?mtime=1323567447" width="382" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-87.png?mtime=1323567447"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-87.png?mtime=1323567447" width="382" height="343" /></a>
 </div>
 
 As shown, the filters are built the same way as the query.  The table Person.Person is the predicate on SUSER_SNAME() or in replication terms, the parameterized filter.  The first join filter on Sales.SalesOrderHeader is the same as the INNER JOIN in the query as well as the second INNER JOIN being the second join filter on Sales.SalesOrderDetail.
@@ -53,7 +53,7 @@ GO
 To show the tuning steps, the plan below is a plan based off the query shown early but without the IDX\_PARTITION\_LOGIN\_GUID\_ASC index.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-88.png?mtime=1323567447"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-88.png?mtime=1323567447" width="624" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-88.png?mtime=1323567447"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-88.png?mtime=1323567447" width="624" height="207" /></a>
 </div>
 
 The IO Statistics that we generate from this query
@@ -65,7 +65,7 @@ The index on LoginAccount is already required due to the parameterized filter. 
 Here is a look at the plan a select on all the columns returns after the IDX\_PARTITION\_LOGIN\_GUID\_ASC index is created.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-89.png?mtime=1323567448"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-89.png?mtime=1323567448" width="531" height="270" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-89.png?mtime=1323567448"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-89.png?mtime=1323567448" width="531" height="270" /></a>
 </div>
 
 From reviewing the IO statistics and the execution plan, we have altered the previous index scan on the Person table.  However, we have also introduced a Key Lookup operation.  This is due to the lack of a covering index.  A covering index refers to an index covering all the columns that are used in a query's results as well as any predicates used.  In other terms, the index satisfies all the column needs of the query.
@@ -77,7 +77,7 @@ In AdventureWorks, the first indexing strategy is to ensure the JOIN conditions 
 BusinessEntityID is a primary key on Person.Person so there is no need to alter this.  However, what about the covering index strategy?  Note that the plan shown above has two Key Lookup operations.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-90.png?mtime=1323567448"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-90.png?mtime=1323567448" width="800" height="141" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-90.png?mtime=1323567448"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-90.png?mtime=1323567448" width="800" height="141" /></a>
 </div>
 
 For Person.Person, the table is very small, both in width and rows.  This means the Key lookup on this table will not be a large hit on performance.  The Key Lookup performance being less of a performance hit can be seen quickly in the IO Statistics.
@@ -91,7 +91,7 @@ In order to fix the Key Lookups, all the columns in the table should be included
 Adding the included columns to the index on LoginAccount shows the first Key Lookup operation resolved.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-91.png?mtime=1323567448"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-91.png?mtime=1323567448" width="465" height="255" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-91.png?mtime=1323567448"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-91.png?mtime=1323567448" width="465" height="255" /></a>
 </div>
 
 To resolve the Key Lookup that is already causing a performance problem on SalesOrderHeader, we can alter a pre-existing nonclustered index in AdventureWorks, [IX\_SalesOrderHeader\_SalesPersonID].
@@ -101,7 +101,7 @@ This index is on SalesOrderID but without include columns defined.  Add the rem
 Rerun the estimated plan and review the new plan from the changes to the indexing.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-92.png?mtime=1323567449"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-92.png?mtime=1323567449" width="624" height="186" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-92.png?mtime=1323567449"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-92.png?mtime=1323567449" width="624" height="186" /></a>
 </div>
 
  

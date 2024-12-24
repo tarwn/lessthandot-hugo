@@ -25,7 +25,7 @@ For this example, I'll use a Layer Diagram for an imaginary application with Web
 Anyway here's what the diagram looks like:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/Validating-Architecture-VS2010/ArchitectureDiagramExample.PNG" alt="Sample Architecture Diagram" title="Diagram" width="428" height="372" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/Validating-Architecture-VS2010/ArchitectureDiagramExample.PNG" alt="Sample Architecture Diagram" title="Diagram" width="428" height="372" />
 </div>
 
 Nothing really special here – the words are the name of the tier, and the numbers are the number of units of code (in this case projects, but you can add individual namespaces or classes as well). To create the diagram, we need to first create a new Visual Studio Modeling Project. A new layer diagram can then be added to this project. I used the designer to add the shapes and dependency lines, and all looks good. But we want to do more than look at it!
@@ -49,7 +49,7 @@ After this call is added, try validating the architecture again. The solution wi
 Ok, so we have violations, just as expected. Clicking over to the error list you can find what exactly the errors are.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/Validating-Architecture-VS2010/ArchitectureValidationErrors.PNG" alt="Architecture Validation Errors" title="ArchitectureValidationErrors" width="862" height="233" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/Validating-Architecture-VS2010/ArchitectureValidationErrors.PNG" alt="Architecture Validation Errors" title="ArchitectureValidationErrors" width="862" height="233" />
 </div>
 
 So, not only do the undesirable calls added to the Data Layer's code trigger violations, but the reference itself does as well. There are a few things of interest that we can do with the errors from here. 

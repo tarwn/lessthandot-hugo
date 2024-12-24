@@ -22,7 +22,7 @@ When I talk about smoothing I think of two things in the programming world. The 
 Let&#8217;s say we start off with a graph like this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/smoothing/SGsmoothing1.png" alt="" title="" width="600" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/smoothing/SGsmoothing1.png" alt="" title="" width="600" height="300" />
 </div>
 
 Why would you use smoothing on a graph? Well, to make it look pretty in the first place and to impress co-workers. And then to do better peak searching or give better predictions. Or just to do what the client wants. 
@@ -30,7 +30,7 @@ Why would you use smoothing on a graph? Well, to make it look pretty in the firs
 Anyway, understanding how this works is interesting and finding the answers on Google wasn&#8217;t easy, for some reason those mathematicians think I understand them. But I understood some of them and finally came to a good result. Most of it is based on [this article by Robert Mellet][1] (I thank him for that) unfortunately, it is in French).
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/smoothing/SGsmoothing2.png" alt="" title="" width="600" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/smoothing/SGsmoothing2.png" alt="" title="" width="600" height="300" />
 </div>
 
 First of all, let me try and explain how this works in simple terms, you can find the less simple explanations in the references.
@@ -42,7 +42,7 @@ For the following values 21,21,23,24,26,22,24 and 22 and with a window of 5 we w
 So the first and last coordinates are never really smoothed and we can keep them as is or chop them off.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/smoothing/SGsmoothing3.png" alt="" title="" width="184" height="196" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/smoothing/SGsmoothing3.png" alt="" title="" width="184" height="196" />
 </div>
 
 Did you see the not smoothed part? 
@@ -127,7 +127,7 @@ So I think you have everything now. Sorry for boring you to death.
   * [Robert Mellet&#8217;s article][5]
 
  [1]: http://pagesperso-orange.fr/robert.mellet/index.htm
- [2]: /wp-content/uploads/blogs/DesktopDev/smoothing/savitskyparameters.txt ""
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/smoothing/savitskyparameters.txt ""
  [3]: http://en.wikipedia.org/wiki/Savitzky%E2%80%93Golay_smoothing_filter
  [4]: http://dx.doi.org/10.1021%2Fac60214a047
  [5]: http://pagesperso-orange.fr/robert.mellet/regrs/regrs_06.htm

@@ -86,7 +86,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev//Setup1.png" alt="" title="" width="678" height="399" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//Setup1.png" alt="" title="" width="678" height="399" />
 </div>
 
 <p>
@@ -94,7 +94,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev//Setup2.png" alt="" title="" width="579" height="450" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//Setup2.png" alt="" title="" width="579" height="450" />
 </div>
 
 <p>
@@ -102,7 +102,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev//Setup3.png" alt="" title="" width="588" height="454" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//Setup3.png" alt="" title="" width="588" height="454" />
 </div>
 
 <p>
@@ -114,7 +114,7 @@ _<span class="MT_smaller">SQLExpress database file auto-creation error: </p>
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev//Setup4.png" alt="" title="" width="553" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//Setup4.png" alt="" title="" width="553" height="300" />
 </div>
 
 <p>

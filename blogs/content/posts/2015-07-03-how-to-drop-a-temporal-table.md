@@ -41,7 +41,7 @@ CREATE TABLE dbo.TestTemporal
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2015/07/errormessage.png"><img class="alignnone size-full wp-image-3466" src="/wp-content/uploads/2015/07/errormessage.png" alt="errormessage" width="716" height="151" srcset="/wp-content/uploads/2015/07/errormessage.png 716w, /wp-content/uploads/2015/07/errormessage-300x63.png 300w" sizes="(max-width: 716px) 100vw, 716px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/errormessage.png"><img class="alignnone size-full wp-image-3466" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/errormessage.png" alt="errormessage" width="716" height="151" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/errormessage.png 716w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/errormessage-300x63.png 300w" sizes="(max-width: 716px) 100vw, 716px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -49,7 +49,7 @@ CREATE TABLE dbo.TestTemporal
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2015/07/nodelete.png"><img class="alignnone size-full wp-image-3467" src="/wp-content/uploads/2015/07/nodelete.png" alt="nodelete" width="312" height="364" srcset="/wp-content/uploads/2015/07/nodelete.png 312w, /wp-content/uploads/2015/07/nodelete-257x300.png 257w" sizes="(max-width: 312px) 100vw, 312px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/nodelete.png"><img class="alignnone size-full wp-image-3467" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/nodelete.png" alt="nodelete" width="312" height="364" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/nodelete.png 312w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/nodelete-257x300.png 257w" sizes="(max-width: 312px) 100vw, 312px" /></a>
 </p>
 
 <p style="text-align: justify">
@@ -71,7 +71,7 @@ CREATE TABLE dbo.TestTemporal
 </p>
 
 <p style="text-align: justify">
-  <a href="/wp-content/uploads/2015/07/after_alter.png"><img class="alignnone size-full wp-image-3468" src="/wp-content/uploads/2015/07/after_alter.png" alt="after_alter" width="830" height="99" srcset="/wp-content/uploads/2015/07/after_alter.png 830w, /wp-content/uploads/2015/07/after_alter-300x35.png 300w" sizes="(max-width: 830px) 100vw, 830px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/after_alter.png"><img class="alignnone size-full wp-image-3468" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/after_alter.png" alt="after_alter" width="830" height="99" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/after_alter.png 830w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/07/after_alter-300x35.png 300w" sizes="(max-width: 830px) 100vw, 830px" /></a>
 </p>
 
 <p style="text-align: justify">

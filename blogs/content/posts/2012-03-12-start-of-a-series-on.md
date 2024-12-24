@@ -27,7 +27,7 @@ That's one of the really cool things with Diagnostic Manager.  You can setup se
  
 
 <div class="image_block">
-  <a href="/media/users/kconan/DM Security.jpg?mtime=1331558267"><img src="/wp-content/uploads/users/kconan/DM Security.jpg?mtime=1331558267" alt="" width="1206" height="627" /></a>
+  <a href="/media/users/kconan/DM Security.jpg?mtime=1331558267"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/DM Security.jpg?mtime=1331558267" alt="" width="1206" height="627" /></a>
 </div>
 
  

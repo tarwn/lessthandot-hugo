@@ -36,19 +36,19 @@ I did so for our launchpad and here are the results.
 For Deuteranope.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/colorblind/Deuteranope.png?mtime=1296641857"><img alt="" src="/wp-content/uploads/users/chrissie1/colorblind/Deuteranope.png?mtime=1296641857" width="1099" height="516" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/colorblind/Deuteranope.png?mtime=1296641857"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/colorblind/Deuteranope.png?mtime=1296641857" width="1099" height="516" /></a>
 </div>
 
 For Protanope.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/colorblind/Protanope.png?mtime=1296641831"><img alt="" src="/wp-content/uploads/users/chrissie1/colorblind/Protanope.png?mtime=1296641831" width="1105" height="518" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/colorblind/Protanope.png?mtime=1296641831"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/colorblind/Protanope.png?mtime=1296641831" width="1105" height="518" /></a>
 </div>
 
 For Tritanope.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/colorblind/Tritanope.png?mtime=1296641842"><img alt="" src="/wp-content/uploads/users/chrissie1/colorblind/Tritanope.png?mtime=1296641842" width="1104" height="522" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/colorblind/Tritanope.png?mtime=1296641842"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/colorblind/Tritanope.png?mtime=1296641842" width="1104" height="522" /></a>
 </div>
 
 All three seem to remain pretty readable to me. Go check your site and see if it is too, it is important.

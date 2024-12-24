@@ -27,13 +27,13 @@ Download the Shrew Soft VPN client here: http://www.shrew.net/download/vpn
 After it is installed start it up, click on _file_ and then _import_. You should be presented with a dialog like the one in the screenshot below. Change the dropdown to Cisco PCF file and navigate to the location where your files are. Repeat the process for each PCF file you have.
 
 <div>
-  <img src="/wp-content/uploads/blogs/ITProfessionals//Import.png" alt="" title="" width="630" height="434" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//Import.png" alt="" title="" width="630" height="434" />
 </div>
 
 After you have imported everything you need, click on one of the connections with a blue padlock icon and after that click on connect
 
 <div>
-  <img src="/wp-content/uploads/blogs/ITProfessionals//connect.png" alt="" title="" width="415" height="320" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//connect.png" alt="" title="" width="415" height="320" />
 </div>
 
 <div>
@@ -42,7 +42,7 @@ After you have imported everything you need, click on one of the connections wit
   </p>
   
   <p>
-    <img src="/wp-content/uploads/blogs/ITProfessionals//Connected.png" alt="" title="" width="307" height="308" /></div> 
+    <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//Connected.png" alt="" title="" width="307" height="308" /></div> 
     
     <p>
       If everything is successful you should see something like the following in the text area above the credentials

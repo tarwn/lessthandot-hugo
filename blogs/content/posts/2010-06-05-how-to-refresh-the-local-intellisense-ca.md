@@ -28,7 +28,7 @@ What will eventually happen is that if you create new tables and stored procedur
 
 There are two ways to do it, if you are a shortcut impaired developer then here is how you do it. Click on Edit–>IntelliSense–>Refresh Local Cache
 
-<img src="/wp-content/uploads/blogs/DataMgmt//Intelli2.PNG" alt=" refresh the local IntelliSense cache in SQL Server Management Studio" title=" refresh the local IntelliSense cache in SQL Server Management Studio" width="483" height="463" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//Intelli2.PNG" alt=" refresh the local IntelliSense cache in SQL Server Management Studio" title=" refresh the local IntelliSense cache in SQL Server Management Studio" width="483" height="463" />
 
 Or you can just hit the **CTRL + SHIFT + R** shortcut. Of course Query Analyzer users will remember CTRL + SHIFT + R being the shortcut to uncomment something.
 

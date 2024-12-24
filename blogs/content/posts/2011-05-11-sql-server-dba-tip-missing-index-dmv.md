@@ -57,13 +57,13 @@ WHERE City = 'Seattle'
 In the actual execution plan we can see SSMS 2008 R2 shows a suggestion for a missing index
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-18.png?mtime=1305055395"><img alt="" src="/wp-content/uploads/blogs/All/-18.png?mtime=1305055395" width="624" height="119" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-18.png?mtime=1305055395"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-18.png?mtime=1305055395" width="624" height="119" /></a>
 </div>
 
 With the query we wrote earlier using the DMV and DMFs, we can also see the results showing the need for an index on City
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-19.png?mtime=1305055395"><img alt="" src="/wp-content/uploads/blogs/All/-19.png?mtime=1305055395" width="624" height="111" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-19.png?mtime=1305055395"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-19.png?mtime=1305055395" width="624" height="111" /></a>
 </div>
 
 Now run the following query on the Person.Address table.
@@ -81,11 +81,11 @@ WHERE City = 'Seattle'
 Reviewing the actual execution plan shows another index suggestion but now on City and AddressLine1.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-20.png?mtime=1305055395"><img alt="" src="/wp-content/uploads/blogs/All/-20.png?mtime=1305055395" width="624" height="111" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-20.png?mtime=1305055395"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-20.png?mtime=1305055395" width="624" height="111" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-21.png?mtime=1305055395"><img alt="" src="/wp-content/uploads/blogs/All/-21.png?mtime=1305055395" width="624" height="129" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-21.png?mtime=1305055395"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-21.png?mtime=1305055395" width="624" height="129" /></a>
 </div>
 
 The missing index suggestion in green shown in the actual execution plan is very helpful.  However, the second image showing the missing index DMV/DMF results is misleading.  What the query is suggesting is to create an index on City and then another index on City and AddressLine1.  This is what is referred to as an overlapping index.

@@ -27,7 +27,7 @@ This is part one of a series about Report Builder 3.0.
 I've been building reports with SQL Server Reporting Services for a few years. Until recently, I exclusively used Report Designer, which let me build reports in Business Intelligence Development Studio, a Visual Studio environment. This was warm and fuzzy and comfortable to this (gasp) former programmer.
 
 <p style="text-align: center">
-  <img title="Yes, @onpnt, I stole your image!" src="/wp-content/uploads/users/grrlgeek/RB3.0 Intro Programmer.gif" alt="" width="277" height="282" />
+  <img title="Yes, @onpnt, I stole your image!" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3.0 Intro Programmer.gif" alt="" width="277" height="282" />
 </p>
 
 <span style="text-align: center">I decided to step outside my comfort zone and learn a new tool – Report Builder 3.0.</span>
@@ -105,7 +105,7 @@ Open allows you to open a saved .rdl.
 Recent allows you to open .rdl files you've recently worked on.
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Start.JPG?mtime=1329269464" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Start.JPG?mtime=1329269464" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -121,7 +121,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3MainScreen.JPG" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3MainScreen.JPG" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -129,7 +129,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Main Home.JPG" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Main Home.JPG" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -137,7 +137,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Main Insert.JPG" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Main Insert.JPG" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -149,7 +149,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Main View.JPG" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Main View.JPG" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -161,7 +161,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3ReportData.JPG" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3ReportData.JPG" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -173,7 +173,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Main%20Groups.JPG?mtime=1329270156" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Main%20Groups.JPG?mtime=1329270156" alt="" />
 </p>
 
 <p class="MsoNormal">
@@ -185,7 +185,7 @@ Recent allows you to open .rdl files you've recently worked on.
 </p>
 
 <p class="MsoNormal">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3 Main Properties.JPG" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 Main Properties.JPG" alt="" />
 </p>
 
 <p class="MsoNormal">

@@ -61,7 +61,7 @@ FROM DUAL;
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/sourceconnection.PNG?mtime=1358753514"><img src="/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/sourceconnection.PNG?mtime=1358753514" alt="" width="556" height="307" /></a>
+  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/sourceconnection.PNG?mtime=1358753514"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/sourceconnection.PNG?mtime=1358753514" alt="" width="556" height="307" /></a>
 </div>
 
 <span style="text-align: justify;">However, when I run the package, I get the following warnings and errors during validation:</span>
@@ -77,7 +77,7 @@ FROM DUAL;
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/error_delayvalidation.PNG?mtime=1358753556"><img src="/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/error_delayvalidation.PNG?mtime=1358753556" alt="" width="296" height="229" /></a>
+  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/error_delayvalidation.PNG?mtime=1358753556"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/error_delayvalidation.PNG?mtime=1358753556" alt="" width="296" height="229" /></a>
 </div>
 
 <span style="text-align: justify;">The output has also slightly changed:</span>
@@ -97,13 +97,13 @@ FROM DUAL;
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/OracleDateValue_query.PNG?mtime=1358753584"><img src="/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/OracleDateValue_query.PNG?mtime=1358753584" alt="" width="397" height="283" /></a>
+  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/OracleDateValue_query.PNG?mtime=1358753584"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/OracleDateValue_query.PNG?mtime=1358753584" alt="" width="397" height="283" /></a>
 </div>
 
 <span style="text-align: justify;">Suddenly, the package  runs without any problem:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/success.PNG?mtime=1358753621"><img src="/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/success.PNG?mtime=1358753621" alt="" width="295" height="230" /></a>
+  <a href="/media/users/koenverbeeck/Oracle_DateLiteral/success.PNG?mtime=1358753621"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/Oracle_DateLiteral/success.PNG?mtime=1358753621" alt="" width="295" height="230" /></a>
 </div>
 
 <span style="text-align: justify;">What's more intriguing is that when I use the </span>_Microsoft OLE DB provider for Oracle_ <span style="text-align: justify;">using the original query, the package also runs succesfully. So it seems the Oracle OLE DB provider, downloaded from the Oracle website, has some sort of issue with the ANSI date literal. I haven't found any documentation why the provider messes up the columns like that, but if someone has better Google skills, please drop a note in the comments.</span>

@@ -52,7 +52,7 @@ They will return this.
 That last function is kind of weird and not recommend. The latest version of Resharper 6 will even tell you it does not understand that and give an error.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharper6_4.png?mtime=1306844014"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharper6_4.png?mtime=1306844014" width="600" height="91" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharper6_4.png?mtime=1306844014"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharper6_4.png?mtime=1306844014" width="600" height="91" /></a>
 </div>
 
 With this errormessage.
@@ -66,7 +66,7 @@ I don&#8217;t know if I should file that as a bug to the Resharper team since it
 Luckily you can not do the above in C#. You can just do normal things.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/resharper6_5.png?mtime=1306844236"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/resharper6_5.png?mtime=1306844236" width="403" height="200" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharper6_5.png?mtime=1306844236"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/resharper6_5.png?mtime=1306844236" width="403" height="200" /></a>
 </div>
 
 ## Conclusion

@@ -37,7 +37,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/ErrorScreen1.jpg?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/ErrorScreen1.jpg?mtime=1385540686" alt="" width="773" height="406" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/ErrorScreen1.jpg?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/ErrorScreen1.jpg?mtime=1385540686" alt="" width="773" height="406" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -45,7 +45,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/webconfigperms.png?mtime=1385540749"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/webconfigperms.png?mtime=1385540749" alt="" width="292" height="354" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/webconfigperms.png?mtime=1385540749"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/webconfigperms.png?mtime=1385540749" alt="" width="292" height="354" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -61,7 +61,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/ErrorScreen2.jpg?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/ErrorScreen2.jpg?mtime=1385540686" alt="" width="646" height="240" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/ErrorScreen2.jpg?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/ErrorScreen2.jpg?mtime=1385540686" alt="" width="646" height="240" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -69,7 +69,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_1.png?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_1.png?mtime=1385540686" alt="" width="405" height="304" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_1.png?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_1.png?mtime=1385540686" alt="" width="405" height="304" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -77,7 +77,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_2.png?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_2.png?mtime=1385540686" alt="" width="420" height="263" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_2.png?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_2.png?mtime=1385540686" alt="" width="420" height="263" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -85,7 +85,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_3.png?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_3.png?mtime=1385540686" alt="" width="375" height="294" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_3.png?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_3.png?mtime=1385540686" alt="" width="375" height="294" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -93,7 +93,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_4.png?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_4.png?mtime=1385540686" alt="" width="593" height="156" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_4.png?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_4.png?mtime=1385540686" alt="" width="593" height="156" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -101,7 +101,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_7.png?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_7.png?mtime=1385540686" alt="" width="476" height="342" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_7.png?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_7.png?mtime=1385540686" alt="" width="476" height="342" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -109,7 +109,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_8.png?mtime=1385540686"><img src="/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_8.png?mtime=1385540686" alt="" width="410" height="282" /></a>
+  <a href="/media/users/koenverbeeck/MDSStopsWorking/configscreen_8.png?mtime=1385540686"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MDSStopsWorking/configscreen_8.png?mtime=1385540686" alt="" width="410" height="282" /></a>
 </p>
 
 <p style="text-align: justify;">

@@ -31,7 +31,7 @@ First of all you need to have [VirtualBox][1] installed. Now open a command prom
 The result looks like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/VDI2VMDK.png?mtime=1340804694"><img alt="" src="/wp-content/uploads/users/axel8s/VDI2VMDK.png?mtime=1340804694" width="676" height="102" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/VDI2VMDK.png?mtime=1340804694"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/VDI2VMDK.png?mtime=1340804694" width="676" height="102" /></a>
 </div>
 
 Now I can create a new VMWare virtual machine, replace the blank VMDK with the converted VMDK from the VDI file and start working.

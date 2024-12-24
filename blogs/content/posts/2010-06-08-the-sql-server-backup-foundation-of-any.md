@@ -33,7 +33,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlu_logo.gif" alt="" title="" width="150" height="166" align="left" />
 </div>
 
 Welcome to our second class for HA and DR week of [SQL University][1]. Yesterday we went through defining HA and DR along with some common practices you can use. Today we are going to focus on the concept, "Backups are for sissies!" OK, we're really going to look at backup and restore for Disaster / Recovery (DR) and how being a sissy and always backing up our databases and testing out restores is a proven strategy for DR. 
@@ -70,7 +70,7 @@ Although backups are the foundation of DR, they are a slow method of restoring t
 The location of the backups is important in order to make them helpful in DR. The backups will always be required to be offsite from the primary locations, without exception. This includes all of the sites and their own unique databases. This means that each location can become a DR site for others for retaining the backup files offsite. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/back_rec_diagram.gif" alt="" title="" width="826" height="352" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/back_rec_diagram.gif" alt="" title="" width="826" height="352" />
 </div>
 
 In the diagram above, database servers A and B on Site 1 rely on the offsite backups on Site 2 for recovery. Site 2, however, has a local application and database server C that is unique to the facility. Having this database exist at Site 1 would be not utilizing resources well and could cause performance problems for the application in Site 2. In order to bring server C into the DR strategy, the database backups are sent offsite to Site 1.
@@ -165,7 +165,7 @@ This package can then be run on the same day as the Full backup to find the corr
 We can construct our package to perform the copy, restore the database and notify us of a successful restore or failures along the way. After this is completed, we can also run ALTER statements on the restore location in order to put it into a state it will not cause problems (i.e.: log growth) or run other application specific needs that may be part of our DR solution. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ssis_restoring.gif" alt="" title="" width="298" height="286" align="center" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssis_restoring.gif" alt="" title="" width="298" height="286" align="center" />
 </div>
 
 Running this process weekly (or on the Full backup day) can show problems that may otherwise not be found. This will prevent the day when the backups are called into action for recovery when all other DR strategies have failed.

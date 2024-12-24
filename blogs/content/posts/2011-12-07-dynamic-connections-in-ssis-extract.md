@@ -57,13 +57,13 @@ Create each variable in the packages as a data type of string. Leave the value e
 In the Parent package, add a Foreach Loop Container that uses the Foreach Item Enumerator.  In the Enumerator configuration, add a column.  Add as many rows that contain each unique instance name as needed.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-70.png?mtime=1323272547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-70.png?mtime=1323272547" width="458" height="388" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-70.png?mtime=1323272547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-70.png?mtime=1323272547" width="458" height="388" /></a>
 </div>
 
 Go to the variable Mappings page and add a mapping from the User::InstanceNameParent to index 0 for the enumerator.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-71.png?mtime=1323272547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-71.png?mtime=1323272547" width="593" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-71.png?mtime=1323272547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-71.png?mtime=1323272547" width="593" height="74" /></a>
 </div>
 
 The Foreach container is now configured and ready.  Click OK to save the changes.  Place an Execute Package Task into the Foreach container next.  The only change that is needed to the execute package task is the child package to call and parameter mapping.  This allows the variable that needs to pass to the child package and can be consumed by the configuration settings that will be done in the child package.
@@ -77,13 +77,13 @@ Once completed, the parent package will contain one Foreach Loop Container and o
 In the child package, first configure the package to accept the variable being passed to it from the parent package.  In SQL Server 2012, click an empty area in the Control Flow and then, in the properties window, click to open the configurations collection.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-72.png?mtime=1323272547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-72.png?mtime=1323272547" width="452" height="129" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-72.png?mtime=1323272547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-72.png?mtime=1323272547" width="452" height="129" /></a>
 </div>
 
 Map the variable as shown below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-73.png?mtime=1323272547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-73.png?mtime=1323272547" width="624" height="225" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-73.png?mtime=1323272547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-73.png?mtime=1323272547" width="624" height="225" /></a>
 </div>
 
 This is described in detail in "[Making SSIS Dynamic: Passing variables between packages][1]"
@@ -118,7 +118,7 @@ SELECT [Name],@@SERVERNAME ServerName FROM sys.databases
  
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-74.png?mtime=1323272547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-74.png?mtime=1323272547" width="624" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-74.png?mtime=1323272547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-74.png?mtime=1323272547" width="624" height="235" /></a>
 </div>
 
 Click OK to close and save the configuration.
@@ -142,7 +142,7 @@ Connect the precedence to the ADO.NET destination and open the destination edito
 Execute the parent package to ensure everything works as it should.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-75.png?mtime=1323272701"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-75.png?mtime=1323272701" width="227" height="165" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-75.png?mtime=1323272701"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-75.png?mtime=1323272701" width="227" height="165" align="left" /></a>
 </div>
 
 Success!!! Connect to the destination and verify the contents loaded.

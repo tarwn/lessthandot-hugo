@@ -82,7 +82,7 @@ Tests just begin with the word test and the class inherits from a bunch of stuff
 When I run the above I get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rubymine5.png?mtime=1311412915"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rubymine5.png?mtime=1311412915" width="1035" height="762" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine5.png?mtime=1311412915"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rubymine5.png?mtime=1311412915" width="1035" height="762" /></a>
 </div>
 
 I have to figure out this gems thing pretty soon me thinks. And then get rubymine to play nice with the test framework.

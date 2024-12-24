@@ -26,7 +26,7 @@ categories:
   <span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="font-size: small;"><span style="font-family: Calibri;"></p> 
   
   <div class="image_block">
-    <a href="/media/blogs/DataMgmt/DeepDiveV2.jpg?mtime=1317602055"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: small;"><img src="/wp-content/uploads/blogs/DataMgmt/DeepDiveV2.jpg?mtime=1317602055" alt="" width="150" height="188" align="left" /></span></span></a>
+    <a href="/media/blogs/DataMgmt/DeepDiveV2.jpg?mtime=1317602055"><span style="font-family: arial,helvetica,sans-serif;"><span style="font-size: small;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/DeepDiveV2.jpg?mtime=1317602055" alt="" width="150" height="188" align="left" /></span></span></a>
   </div>
   
   <p>

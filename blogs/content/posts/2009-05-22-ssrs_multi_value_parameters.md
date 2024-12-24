@@ -188,13 +188,13 @@ And finally, using the document names:
   <strong>Non-queried:</strong> Run a query manually to extract the list you want or locate the values wherever they are. Keep this handy to paste in later.
 
 3. Select Report->Report Parameters. If there isn't already a new parameter automatically added by the fact that your SP now has a new parameter, then Add a new parameter.<br /> • Name: Give it the same name that you called the parameter in your SP. For me: DocumentNameParam.<br /> • Data type: String<br /> • Prompt: Document Names<br /> • Check the "Multi-value" checkbox. I also checked "Allow blank value" because if no names are specified, I want the SP's list of document names to take over. You cannot choose "Allow null value" with a Multi-value parameter (at least, I couldn't select it and I think that is the reason).<br /> • Available values:<br /> – For "Non-queried" paste in each option, one at a time, from the list of options you built earlier.<br /> – For "From query" choose the Dataset you created that displays the possible list. For "Value field" select the column that has commas escaped, and for "Label field" select the one that is plain. If your Dataset only has one column, use it in both places.<br /> • Default values:<br /> – For "Non-queried" paste in each option that you want to be selected by default.<br /> – For "From query" choose your list Dataset, or perhaps select a special default Dataset you created that is different from the list of all possible options. I used the same Dataset since I want all values to be selected by default.</p> <p class="text-align:center;">
-<img src="/wp-content/uploads/blogs/DataMgmt/ssrs_multi_value_parameters/MultiValueReportParameters.PNG" alt="SSRS Report Parameters" title="Creating a Multi-value Parameter" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssrs_multi_value_parameters/MultiValueReportParameters.PNG" alt="SSRS Report Parameters" title="Creating a Multi-value Parameter" />
 </p>
 </li>
 
 <li>
 If you had to add the multi-value report parameter manually, edit the source Dataset and make sure it is mapped properly. Click on the Data tab, select the correct Dataset, click the "..." edit button, select Parameters, and make sure that the Name is mapped to the Value. <p>
-<img src="/wp-content/uploads/blogs/DataMgmt/ssrs_multi_value_parameters/MultiValueDataSet.PNG" alt="SSRS Dataset Parameters" title="Mapping A Dataset Parameter to a Report Parameter" /></li> </ol> 
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ssrs_multi_value_parameters/MultiValueDataSet.PNG" alt="SSRS Dataset Parameters" title="Mapping A Dataset Parameter to a Report Parameter" /></li> </ol> 
 
 <h1>
 Happily Use Your Shiny New Report

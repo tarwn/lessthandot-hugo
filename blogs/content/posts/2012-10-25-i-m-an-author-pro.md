@@ -20,7 +20,7 @@ categories:
 One of my bucket list items has always been "publish a book". Little did I know that I would get to cross that off my list in 2012. I'm excited to announce that I have co-authored a book, [Pro SQL Server 2012 Practices][1], and it will be available on October 31, 2012!
 
 <p style="text-align: center;">
-  <a href="http://www.apress.com/9781430247708"><img src="/wp-content/uploads/users/grrlgeek/ProSQLServer2012Practices_cover.png?mtime=1351173526" alt="" /></a>
+  <a href="http://www.apress.com/9781430247708"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ProSQLServer2012Practices_cover.png?mtime=1351173526" alt="" /></a>
 </p>
 
 <p style="padding-left: 30px;">

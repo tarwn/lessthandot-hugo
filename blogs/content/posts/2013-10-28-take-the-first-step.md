@@ -22,7 +22,7 @@ One of the questions the host asked me was, "How did you get here?" He wasn't as
 
 I wanted to think about this longer. I wanted to mention specific names. But I didn't have the time. To sum up: it was the people that encouraged me.
 
-Once upon a time, I wasn't a blogger. I wasn't a speaker. I was an "IT Support Technician" who wanted to be a DBA. I wrote reports in SSRS. I read a lot of books and blogs and went to user group meetings, hoping to learn everything I could. And then, people asked me to do more. (I blame Twitter.) <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/caution steep steps.jpg?mtime=1382901504" alt="" width="500" height="375" />
+Once upon a time, I wasn't a blogger. I wasn't a speaker. I was an "IT Support Technician" who wanted to be a DBA. I wrote reports in SSRS. I read a lot of books and blogs and went to user group meetings, hoping to learn everything I could. And then, people asked me to do more. (I blame Twitter.) <img style="float: right;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/caution steep steps.jpg?mtime=1382901504" alt="" width="500" height="375" />
 
 Someone suggested that instead of just reading blogs, perhaps I should start one. I wasn't sure about this. What was I going to blog about, that hadn't already been blogged about? What was I going to say, that hadn't already been said?
 

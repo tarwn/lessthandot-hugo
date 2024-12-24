@@ -25,7 +25,7 @@ After my presentation, we had birthday cake! It was delicious.
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/MADPASS birthday small.jpg?mtime=1330004813" alt="" />+
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/MADPASS birthday small.jpg?mtime=1330004813" alt="" />+
 </p>
 
 <p style="text-align: center;">

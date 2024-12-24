@@ -26,7 +26,7 @@ The above quote from Alex Noble could not describe how I perceive the success of
 ## Measuring the event
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/success_1.gif" alt="" title="" width="336" height="240" align="middle" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/success_1.gif" alt="" title="" width="336" height="240" align="middle" />
 </div>
 
 So how did SQL Saturday in Chicago turn out? I have a biased view on the success of this event of course. I was one of the organizers after all. What organizer wouldn't just say, "Success!" and go on with life? Well, I'm not that guy. I measure myself on my ability to provide to the SQL Community. Most of you reading this know me that way and expect nothing less. I do think SQL Saturday in Chicago was a resounding success. We had our bumps in the road but quickly picked ourselves up. That was only possible because of the team we had. At one point in the day, I ended up at the Office Depot across from the event, arguing with someone to get more session evaluations printed. They insisted I said I needed them Monday. After the event! I could write an entire blog on that problem but will leave it for you to ask me directly in person. I feel that since that was the prominent failure/problem/bump in the day, we can continue to come to the conclusion the event was well planned. The vendors were happy, speakers had a good time, attendees were happy (most) and my co-organizers never seemed to have that frightened look in their eyes. Can I call this a success yet? 
@@ -34,7 +34,7 @@ So how did SQL Saturday in Chicago turn out? I have a biased view on the success
 ## Speakers
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/success_2.gif" alt="" title="" width="375" height="255" align="middle" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/success_2.gif" alt="" title="" width="375" height="255" align="middle" />
 </div>
 
 Our lineup of [speakers][7] was remarkable. Each one gave the event all they had and I'll be in debt to them for that in the future. During the after party events, I had several of the speakers come to me and congratulate me on the event. Now if the speakers don't complain and say you did it right, I'd call that a good thing! They are of course the ones in front of the attendees the entire day and pulling in the feel of how things are going. I was lucky enough to have a chance to talk to a few of our speakers on a technical level which is something you just don't get to do on any given day. I strengthened my relations with some and also earned respect from the speakers I had not met until now. We're getting close to success now!
@@ -42,7 +42,7 @@ Our lineup of [speakers][7] was remarkable. Each one gave the event all they had
 ## Vendors
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/success_3.gif" alt="" title="" width="386" height="260" align="middle" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/success_3.gif" alt="" title="" width="386" height="260" align="middle" />
 </div>
 
 The layout of the hotel we used for SQL Saturday actually played to our favor very well. We were able to place the vendors directly in line of the main speaker rooms from the registration tables. This caused an influx of attendees directly interacting with the vendors. Towards the end of the day I got feedback from the vendors to make sure things went well. I was excited to hear that they had been equally excited and happy with the manner of interaction and marketing that had taken place for them. I thank all of them again for supporting us. 

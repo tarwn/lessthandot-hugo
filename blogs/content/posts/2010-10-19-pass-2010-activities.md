@@ -19,7 +19,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/passlogo.gif" alt="" title="" width="628" height="120" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/passlogo.gif" alt="" title="" width="628" height="120" />
 </div>
 
 [PASS][1], the largest annual SQL Server conference, is quickly approaching. This means you only have a very short time to convince your Boss to make it his good deed for the year to send you. If you are required to justify why your company should spend thousands of dollars for you to attend, check out the [ROI page on the][2] PASS website for help/tips. Use all your charms and give it your best shot.

@@ -65,7 +65,7 @@ Me.ReportViewer1.RefreshReport()```
 And run it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/reportviewer/reporting1.png" alt="" title="" width="526" height="173" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/reportviewer/reporting1.png" alt="" title="" width="526" height="173" />
 </div>
 
 And get an errormessage.
@@ -83,7 +83,7 @@ Me.ReportViewer1.LocalReport.ReportPath = Application.StartupPath & "Report1.rdl
 Now run it again and see the tiny, tiny barcode but it is scan-able.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/reportviewer/reporting2.png" alt="" title="" width="285" height="251" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/reportviewer/reporting2.png" alt="" title="" width="285" height="251" />
 </div>
 
 It needs some more work but you get the idea. Next stop would be to make this into a usercontrol that can be dragged and dropped onto the reportdesigner but for this I need the namespace Microsoft.ReportViewer.Design, which I don&#8217;t have because that is only installed with SSRS. So I guess I will need to workaround that somehow or install SSRS on this machine.

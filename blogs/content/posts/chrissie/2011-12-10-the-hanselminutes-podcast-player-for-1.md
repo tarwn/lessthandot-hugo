@@ -50,31 +50,31 @@ The screenshots.
 A complete view.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer3.png?mtime=1323520708"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer3.png?mtime=1323520708" width="1070" height="669" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer3.png?mtime=1323520708"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer3.png?mtime=1323520708" width="1070" height="669" /></a>
 </div>
 
 When refreshing the list a progressdialog appears.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer4.png?mtime=1323520718"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer4.png?mtime=1323520718" width="729" height="283" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer4.png?mtime=1323520718"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer4.png?mtime=1323520718" width="729" height="283" /></a>
 </div>
 
 When scrolling down the list will load more elements when needed.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer5.png?mtime=1323520736"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer5.png?mtime=1323520736" width="813" height="248" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer5.png?mtime=1323520736"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer5.png?mtime=1323520736" width="813" height="248" /></a>
 </div>
 
 When deleting all the items out of the cache or when you open the application.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer6.png?mtime=1323520746"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer6.png?mtime=1323520746" width="1070" height="669" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer6.png?mtime=1323520746"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer6.png?mtime=1323520746" width="1070" height="669" /></a>
 </div>
 
 The contextmenu pops up when you longclick.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer7.png?mtime=1323520757"><img alt="" src="/wp-content/uploads/users/chrissie1/android/hanselminutesplayer7.png?mtime=1323520757" width="718" height="302" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer7.png?mtime=1323520757"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/android/hanselminutesplayer7.png?mtime=1323520757" width="718" height="302" /></a>
 </div>
 
 That&#8217;s it for now.

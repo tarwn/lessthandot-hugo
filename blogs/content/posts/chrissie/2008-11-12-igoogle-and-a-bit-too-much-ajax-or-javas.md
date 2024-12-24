@@ -23,7 +23,7 @@ But sometimes the Ajax features or is the javascript part causes some problems.
 In my setup you will see the google reader thing on the left and gtalk on the right. And the red square is the problem area. Yes that&#8217;s right my scrollbar gets painted over with the gtalk thing and some of the border too. Not pretty and lucky for me I have a scroll button on my mouse.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/IGoogle.jpg" alt="" title="" width="850" height="711" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/IGoogle.jpg" alt="" title="" width="850" height="711" />
 </div>
 
 So pushing something to the foreground is full of perils. I can&#8217;t say if this works in IE because IE can&#8217;t get gtalk to work. 

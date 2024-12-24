@@ -15,7 +15,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlchicken.com/sql-university/"><img alt="" src="/wp-content/uploads/blogs/All/-6.png?mtime=1298241460" width="108" height="123" align="left" /></a>
+  <a href="http://sqlchicken.com/sql-university/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-6.png?mtime=1298241460" width="108" height="123" align="left" /></a>
 </div>
 
 Welcome to this semester's Professional Development week at [SQL University][1]. This week long course will dive deep into professional development in order to better build ourselves for the careers we are already far into building. This week is being taught by Andy Leonard ([Twitter][2] | [Blog][3]) and Ted Krueger ([Twitter][4] | [Blog][5]). Andy is well known for bringing the community together and having the ability to mentor from the individual level to large groups of the community with developing skills to build their careers. This week will be a collection of both author's experiences and suggestions that they have built in our own careers over this past decade. When the week comes to a close, students will take away notes that will assist them with an already well rounded career and start polishing their professional career and start developing it even further.

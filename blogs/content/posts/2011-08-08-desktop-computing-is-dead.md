@@ -18,7 +18,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/media/blogs/All/lanbag.png?mtime=1312833595"><img src="/wp-content/uploads/blogs/All/lanbag.png?mtime=1312833595" alt="" width="211" height="239" align="left" /></a>
+  <a href="/media/blogs/All/lanbag.png?mtime=1312833595"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/lanbag.png?mtime=1312833595" alt="" width="211" height="239" align="left" /></a>
 </div>
 
 <p class="MsoNormal">

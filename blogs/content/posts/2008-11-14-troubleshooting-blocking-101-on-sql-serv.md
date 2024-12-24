@@ -47,7 +47,7 @@ Exec sp_lock
 What I could see then was the transaction locking the object and another transaction trying to grab another lock on it. My write up on deadlock notifications is close to come for how this could go even farther south.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//lock_results.gif" alt="" title="" width="628" height="348" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//lock_results.gif" alt="" title="" width="628" height="348" />
 </div>
 
 Notice the intent shared lock and then 165 trying to issue an intent exclusive lock. That doesn't work so well. We have our blocking situation and knwo our ID's associated. This was all I needed to see who was doing it. Now we have to find out why and how to fix it. Usually you don't have alot of time if this come on all the sudden either.

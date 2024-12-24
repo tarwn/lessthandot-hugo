@@ -23,7 +23,7 @@ We talked on the phone. We met and talked over beers. We met again, and again. D
 Many months and many beers later, this _idea_ has become an **event**. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723"><img alt="" src="/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" width="301" height="201" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Tech-on-Tap_FINALBLUE.png?mtime=1317820723" width="301" height="201" /></a>
 </div>
 
 On a Saturday in November, Derek, Mark and I, and 50 or so of our closest technical cohorts, are going to gather at a brewpub in Northeast Wisconsin, have sessions and discussions about virtualization, and drink delicious beer. 

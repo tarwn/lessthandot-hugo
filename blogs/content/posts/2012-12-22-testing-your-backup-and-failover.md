@@ -29,7 +29,7 @@ Let's say your CEO comes to you and asks if your backups are good, you say yes, 
 With Hurricane Sandy causing havoc a couple of weeks ago where whole data centers ran out of fuel and generators didn't start up, there are a whole bunch of companies rethinking their HA/DR strategy. Is it really wise having your data center not enough geographically dispersed. I mean if your main data center is in New York City and your backup data center is in Jersey City or Secaucus then you will be in trouble when a storm like Sandy comes along.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Storm.PNG?mtime=1356218425"><img alt="" title="Hi I am Sandy...I am here to destroy your backups" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Storm.PNG?mtime=1356218425" width="560" height="328" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Storm.PNG?mtime=1356218425"><img alt="" title="Hi I am Sandy...I am here to destroy your backups" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Storm.PNG?mtime=1356218425" width="560" height="328" /></a>
 </div>
 
 One way I test backups is that I keep a hot backup server for some of the databases that are not changing as frequently as others. I basically have SQL jobs that backup the databases from one server straight to the other server, then a restore is done, permissions are fixed and checkdb is run. Another way I test the backups with some bigger databases is that I do restores to our staging server once a week or so, these restores take about 6 hours or so.

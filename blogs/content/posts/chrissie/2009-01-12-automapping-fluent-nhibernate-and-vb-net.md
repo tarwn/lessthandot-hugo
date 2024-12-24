@@ -171,7 +171,7 @@ End Module
 With this as the result of all our hard labor.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/fluentnhibernateresult.jpg" alt="" title="" width="668" height="335" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/fluentnhibernateresult.jpg" alt="" title="" width="668" height="335" />
 </div>
 
 Not that difficult ;-). 

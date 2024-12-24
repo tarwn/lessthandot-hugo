@@ -22,13 +22,13 @@ And here is an example. I obfuscated the results just so it looks a bit more imp
 This is the datagridview.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/QueryanalyserDatagridview.jpg" alt="" title="" width="531" height="540" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/QueryanalyserDatagridview.jpg" alt="" title="" width="531" height="540" />
 </div>
 
 And this is the printpreview.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/QueryanalyserDatagridviewpreview.jpg" alt="" title="" width="316" height="416" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/QueryanalyserDatagridviewpreview.jpg" alt="" title="" width="316" height="416" />
 </div>
 
 And all that by just having this as the code.

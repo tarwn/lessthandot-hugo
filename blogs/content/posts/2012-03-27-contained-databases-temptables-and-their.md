@@ -31,7 +31,7 @@ GO
 In my case the server en tempdb Collation are the same, Case-Insensitive and Accent-Sensitive:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB1.png?mtime=1332856134"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB1.png?mtime=1332856134" width="394" height="64" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB1.png?mtime=1332856134"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB1.png?mtime=1332856134" width="394" height="64" /></a>
 </div>
 
 To start I create a database with a different Collation than the server default, in my case Case-Sensitive:
@@ -81,7 +81,7 @@ GO
 We see that SQL Server is unable to compare the Case-Sensitive and Case-Insensitive data:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB2.png?mtime=1332856142"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB2.png?mtime=1332856142" width="996" height="64" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB2.png?mtime=1332856142"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB2.png?mtime=1332856142" width="996" height="64" /></a>
 </div>
 
 This behaviour is expected. So will it be the same with a Contained Database? To be able to test it we first have to enable the usage of Contained Databases:
@@ -141,7 +141,7 @@ GO
 We get a resultset:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB3.png?mtime=1332856155"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB3.png?mtime=1332856155" width="274" height="64" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB3.png?mtime=1332856155"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB3.png?mtime=1332856155" width="274" height="64" /></a>
 </div>
 
 So what does this means? Is the Temporary Table created in the Contained Database itself or is it stored in tempdb with the Collation of the Contained Database? When you execute the following query in both databases you'll find the answer:
@@ -154,7 +154,7 @@ GO
 The query only works when executed from tempdb. So the Temporary Table is created in tempdb and in the results of the query you can see that the table is created with the Collation of the Contained Database:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB4.png?mtime=1332856165"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB4.png?mtime=1332856165" width="832" height="277" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB4.png?mtime=1332856165"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ContDB4.png?mtime=1332856165" width="832" height="277" /></a>
 </div>
 
 So we can conclude that Temporary Tables in a Contained Database are still created in tempdb. But in contrast to the behaviour of a regular database the Temporary Table of a Contained Database keep the Collation of the Contained Database.

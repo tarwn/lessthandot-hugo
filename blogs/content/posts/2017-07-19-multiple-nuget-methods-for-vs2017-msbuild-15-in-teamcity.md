@@ -65,7 +65,7 @@ This restriction prevents me from doing a clean NuGet Restore of my solution-lev
 I ended up using 3 Build Steps to do NuGet restores in TeamCity for this one ASP.Net Core deployment.
 
 <div id="attachment_8699" style="width: 882px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2017/07/TeamCityNuGetRestorePost.png" alt="TeamCity NuGet Restore Steps" width="872" height="239" class="size-full wp-image-8699" srcset="/wp-content/uploads/2017/07/TeamCityNuGetRestorePost.png 872w, /wp-content/uploads/2017/07/TeamCityNuGetRestorePost-300x82.png 300w, /wp-content/uploads/2017/07/TeamCityNuGetRestorePost-768x210.png 768w" sizes="(max-width: 872px) 100vw, 872px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TeamCityNuGetRestorePost.png" alt="TeamCity NuGet Restore Steps" width="872" height="239" class="size-full wp-image-8699" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TeamCityNuGetRestorePost.png 872w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TeamCityNuGetRestorePost-300x82.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TeamCityNuGetRestorePost-768x210.png 768w" sizes="(max-width: 872px) 100vw, 872px" />
   
   <p class="wp-caption-text">
     TeamCity NuGet Restore Steps

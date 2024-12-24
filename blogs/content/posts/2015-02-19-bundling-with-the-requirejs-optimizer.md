@@ -105,7 +105,7 @@ To work around the "localhost is crazy fast" issue, we can use Chrome to load si
 I ran the site with and without caching enabled, refreshing and capturing only the best possible result I saw. Here's what I saw for the Vanilla site, with and without caching:
 
 <div id="attachment_3172" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/100RTT_Vanilla.png"><img src="/wp-content/uploads/2015/02/100RTT_Vanilla.png" alt="Small Sample Load - 100RTT/750kbps - Vanilla" width="451" height="30" class="size-full wp-image-3172" srcset="/wp-content/uploads/2015/02/100RTT_Vanilla.png 451w, /wp-content/uploads/2015/02/100RTT_Vanilla-300x19.png 300w" sizes="(max-width: 451px) 100vw, 451px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla.png" alt="Small Sample Load - 100RTT/750kbps - Vanilla" width="451" height="30" class="size-full wp-image-3172" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla.png 451w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla-300x19.png 300w" sizes="(max-width: 451px) 100vw, 451px" /></a>
   
   <p class="wp-caption-text">
     Small Sample Load – 100RTT/750kbps – Vanilla
@@ -113,7 +113,7 @@ I ran the site with and without caching enabled, refreshing and capturing only t
 </div>
 
 <div id="attachment_3173" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png"><img src="/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png" alt="Small Sample Load - 100RTT/750kbps - Vanilla, Cached" width="447" height="23" class="size-full wp-image-3173" srcset="/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png 447w, /wp-content/uploads/2015/02/100RTT_Vanilla_Cache-300x15.png 300w" sizes="(max-width: 447px) 100vw, 447px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png" alt="Small Sample Load - 100RTT/750kbps - Vanilla, Cached" width="447" height="23" class="size-full wp-image-3173" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla_Cache.png 447w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_Vanilla_Cache-300x15.png 300w" sizes="(max-width: 447px) 100vw, 447px" /></a>
   
   <p class="wp-caption-text">
     Small Sample Site – 100RTT/750kbps – Vanilla Cached
@@ -123,7 +123,7 @@ I ran the site with and without caching enabled, refreshing and capturing only t
 After using the optimizer (bundled and minified), the best results I received were:
 
 <div id="attachment_3174" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/100RTT_BundledMinified.png"><img src="/wp-content/uploads/2015/02/100RTT_BundledMinified.png" alt="Small Sample Load - 100RTT/750kbps - Bundled, Minified" width="446" height="26" class="size-full wp-image-3174" srcset="/wp-content/uploads/2015/02/100RTT_BundledMinified.png 446w, /wp-content/uploads/2015/02/100RTT_BundledMinified-300x17.png 300w" sizes="(max-width: 446px) 100vw, 446px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified.png" alt="Small Sample Load - 100RTT/750kbps - Bundled, Minified" width="446" height="26" class="size-full wp-image-3174" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified.png 446w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified-300x17.png 300w" sizes="(max-width: 446px) 100vw, 446px" /></a>
   
   <p class="wp-caption-text">
     Small Sample Load – 100RTT/750kbps – Bundled, Minified
@@ -131,7 +131,7 @@ After using the optimizer (bundled and minified), the best results I received we
 </div>
 
 <div id="attachment_3175" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png"><img src="/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png" alt="Small Sample Load - 100RTT/750kbps - Bundled, Minified, Cached" width="436" height="23" class="size-full wp-image-3175" srcset="/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png 436w, /wp-content/uploads/2015/02/100RTT_BundledMinified_Cache-300x15.png 300w" sizes="(max-width: 436px) 100vw, 436px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png" alt="Small Sample Load - 100RTT/750kbps - Bundled, Minified, Cached" width="436" height="23" class="size-full wp-image-3175" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache.png 436w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/100RTT_BundledMinified_Cache-300x15.png 300w" sizes="(max-width: 436px) 100vw, 436px" /></a>
   
   <p class="wp-caption-text">
     Small Sample Load – 100RTT/750kbps – Bundled, Minified, Cached
@@ -145,7 +145,7 @@ The best vanilla load was 14 requests at 1.88 seconds, with a best cache time of
 While there was a visible difference in the small site, I also wanted to see what would happen in a larger example. The larger site has almost 200 requests, including AJAX calls to an external API and numerous image and CSS resources that have not been optimized yet. Like the small example above, we are not using gzip in this example. Using the same 100RTT setting in chrome (which also impacts us more in this case, due to the 750kbps speed), here are before and after timings:
 
 <div id="attachment_3180" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png" alt="Large Sample Load - 100RTT/750kbps - Vanilla" width="447" class="size-full wp-image-3180" srcset="/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png 894w, /wp-content/uploads/2015/02/Large_100RTT_Vanilla-300x14.png 300w" sizes="(max-width: 894px) 100vw, 894px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png" alt="Large Sample Load - 100RTT/750kbps - Vanilla" width="447" class="size-full wp-image-3180" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla.png 894w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla-300x14.png 300w" sizes="(max-width: 894px) 100vw, 894px" /></a>
   
   <p class="wp-caption-text">
     Large Sample Load – 100RTT/750kbps – Vanilla
@@ -153,7 +153,7 @@ While there was a visible difference in the small site, I also wanted to see wha
 </div>
 
 <div id="attachment_3181" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png" alt="Large Sample Load - 100RTT/750kbps - Vanilla, Cached" width="438" class="size-full wp-image-3181" srcset="/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png 877w, /wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached-300x18.png 300w" sizes="(max-width: 877px) 100vw, 877px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png" alt="Large Sample Load - 100RTT/750kbps - Vanilla, Cached" width="438" class="size-full wp-image-3181" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached.png 877w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_Vanilla_Cached-300x18.png 300w" sizes="(max-width: 877px) 100vw, 877px" /></a>
   
   <p class="wp-caption-text">
     Large Sample Load – 100RTT/750kbps – Vanilla, Cached
@@ -163,7 +163,7 @@ While there was a visible difference in the small site, I also wanted to see wha
 After using the optimizer to create 2 minified bundles:
 
 <div id="attachment_3178" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png" alt="Large Sample Load - 100RTT/750kbps - Bundled, Minified" width="438" class="size-full wp-image-3178" srcset="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png 877w, /wp-content/uploads/2015/02/Large_100RTT_BundledMinified-300x16.png 300w" sizes="(max-width: 877px) 100vw, 877px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png" alt="Large Sample Load - 100RTT/750kbps - Bundled, Minified" width="438" class="size-full wp-image-3178" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified.png 877w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified-300x16.png 300w" sizes="(max-width: 877px) 100vw, 877px" /></a>
   
   <p class="wp-caption-text">
     Large Sample Load – 100RTT/750kbps – Bundled, Minified
@@ -171,7 +171,7 @@ After using the optimizer to create 2 minified bundles:
 </div>
 
 <div id="attachment_3179" style="width: 510px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png"><img src="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png" alt="Large Sample Load - 100RTT/750kbps - Bundled, Minified, Cached" width="429" class="size-full wp-image-3179" srcset="/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png 858w, /wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached-300x14.png 300w" sizes="(max-width: 858px) 100vw, 858px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png" alt="Large Sample Load - 100RTT/750kbps - Bundled, Minified, Cached" width="429" class="size-full wp-image-3179" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached.png 858w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/02/Large_100RTT_BundledMinified_Cached-300x14.png 300w" sizes="(max-width: 858px) 100vw, 858px" /></a>
   
   <p class="wp-caption-text">
     Large Sample Load – 100RTT/750kbps – Bundled, Minified, Cached

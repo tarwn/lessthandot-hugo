@@ -44,7 +44,7 @@ There are eight categories of charts in Report Builder:
 _Column_ charts will show the data as a series of vertical bars. These are great for showing differences between items. There are several variations, such as 3D Columns and 3D Cylinders.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Column.jpg?mtime=1331214270" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Column.jpg?mtime=1331214270" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -54,7 +54,7 @@ _Column_ charts will show the data as a series of vertical bars. These are great
 _Line_ charts show a series of data as a set of points, connected by a line. They're useful for showing how a value moves up or down over time. Variations include smooth and stepped lines.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Line.jpg?mtime=1331214360" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Line.jpg?mtime=1331214360" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -64,7 +64,7 @@ _Line_ charts show a series of data as a set of points, connected by a line. The
 _Shapes_ included are Pie, Doughnut, Funnel, and Pyramid. These display a value as a percentage of the whole. These are very simple views of the data.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Shape.jpg?mtime=1331214497" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Shape.jpg?mtime=1331214497" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -74,7 +74,7 @@ _Shapes_ included are Pie, Doughnut, Funnel, and Pyramid. These display a value 
 _Bar_ charts show the data as horizontal bars. They are a great way to show comparisons between groups of data. Stacked and clustered bars are two of the many variations available.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Bar.jpg?mtime=1331214601" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Bar.jpg?mtime=1331214601" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -84,7 +84,7 @@ _Bar_ charts show the data as horizontal bars. They are a great way to show comp
 _Area_ charts show your data as a series of points, with the space below filled in. Variations include smooth and stacked areas.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Area.jpg?mtime=1331214670" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Area.jpg?mtime=1331214670" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -94,7 +94,7 @@ _Area_ charts show your data as a series of points, with the space below filled 
 _Range_ charts require two values – a low and a high point – to display the range of the data. There are several options to use here, including columns and bars.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Range.jpg?mtime=1331214728" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Range.jpg?mtime=1331214728" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -104,7 +104,7 @@ _Range_ charts require two values – a low and a high point – to display the 
 _Scatter_ charts show the data as a set of points. They are best suited to numeric, aggregated data. You can show the data as points or bubbles.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Scatter.jpg?mtime=1331214794" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Scatter.jpg?mtime=1331214794" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -114,7 +114,7 @@ _Scatter_ charts show the data as a set of points. They are best suited to numer
 _Polar_ charts show data in a circle, with each value having a different length radius. This is a rarely-used type, but can show the differences between categories of data.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Polar.jpg?mtime=1331214861" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Polar.jpg?mtime=1331214861" alt="" />
 </p>
 
 <p style="text-align: center">
@@ -132,7 +132,7 @@ _Data Bar_
 A _Data Bar_ will show a vertical or horizontal bar for a data point. One bar can represent multiple data points also, like a regular bar chart. Here, I am displaying the number of items per category in a simple data bar format.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Data%20Bar.jpg?mtime=1331214962" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Data%20Bar.jpg?mtime=1331214962" alt="" />
 </p>
 
 _Sparkline_ 
@@ -140,7 +140,7 @@ _Sparkline_
 The _Sparkline_ is one of my favorite tools. They display aggregated data, one point at a time. They are extremely useful for showing trends, and can be configured numerous ways. When you add a sparkline, you can add a Column, Line, Area, Shape, or Range. They are very simplified views of these chart types. This example shows an area sparkline of sales by territory, with a data point for each month.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Sparkline.jpg?mtime=1331215035" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Sparkline.jpg?mtime=1331215035" alt="" />
 </p>
 
 _Indicator_ 
@@ -148,7 +148,7 @@ _Indicator_
 The _Indicators_ included in Report Builder 3.0 are simple gauges that tell you the state of a value at a glance. Examples include directional arrows, flags, circles, starts, and rating bars. This example shows sales by region, and if they are below (red), at (yellow), or above (green) target.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Indicator.jpg?mtime=1331215113" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Type%20Indicator.jpg?mtime=1331215113" alt="" />
 </p>
 
 **Bringing Them To Life With Properties** 
@@ -158,13 +158,13 @@ Within a chart, whatever type you choose, there will be many properties you can 
 You can access the properties of a chart in two ways. First, you can right-click part of the chart and select the properties option there.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Rightclick.jpg?mtime=1331215185" alt="" width="300" height="221" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20Rightclick.jpg?mtime=1331215185" alt="" width="300" height="221" />
 </p>
 
 The other option is to look to the right, in the Properties bar. (If you don't see it, go to View and check Properties.)
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3%20Chart%20PropertiesBar.jpg?mtime=1331215237" alt="" width="400" height="213" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3%20Chart%20PropertiesBar.jpg?mtime=1331215237" alt="" width="400" height="213" />
 </p>
 
 _Title_ 

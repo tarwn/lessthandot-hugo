@@ -25,7 +25,7 @@ tags:
 The first computer I ever bought was a commodore 128 (I actually received it as a gift for my 16th birthday)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Commodore128_01.png?mtime=1357605651"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Commodore128_01.png?mtime=1357605651" width="400" height="276" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Commodore128_01.png?mtime=1357605651"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Commodore128_01.png?mtime=1357605651" width="400" height="276" /></a>
 </div>
 
 This baby had 128K (not MB) of RAM, 4 sound channels and 16 colors
@@ -38,7 +38,7 @@ I still remember the great games from that time, here are some of my favorites
 
 **[1942][1]</p> 
 
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/1942_02.jpg?mtime=1357605697" width="216" height="189" />][2]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/1942_02.jpg?mtime=1357605697" width="216" height="189" />][2]
   
 [yie-ar kung fu][3]
   
@@ -54,7 +54,7 @@ I still remember the great games from that time, here are some of my favorites
 
 [Ghost N Goblins][9]
   
-<img alt="" src="/wp-content/uploads/users/SQLDenis/Ghost goblins.png?mtime=1355064493" width="640" height="400" /></strong>
+<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/SQLDenis/Ghost goblins.png?mtime=1355064493" width="640" height="400" /></strong>
 
 The best part about the games is that you could change the value in an address space after you loaded a game but before typing run
   
@@ -114,7 +114,7 @@ Now I will tag a bunch of people, I want to know what your first computer was an
 For all the ones I did not tag, feel free to leave a comment
 
  [1]: http://en.wikipedia.org/wiki/1942_(video_game)
- [2]: /wp-content/uploads/blogs/DataMgmt/Denis/ADvent/1942_02.jpg?mtime=1357605697
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/1942_02.jpg?mtime=1357605697
  [3]: http://en.wikipedia.org/wiki/Yie_Ar_Kung-Fu
  [4]: http://upload.wikimedia.org/wikipedia/en/thumb/5/59/Yiearkungfu.png/180px-Yiearkungfu.png
  [5]: http://en.wikipedia.org/wiki/Kung_Fu_(video_game)

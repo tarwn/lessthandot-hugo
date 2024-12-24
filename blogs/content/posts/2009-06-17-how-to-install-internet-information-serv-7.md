@@ -22,13 +22,13 @@ If you are upgrading from windows xp to windows 7 there is a change in the way y
 Go to Control Panel and click on Programs, on the following screen click on Turn Windows features on or off (see image below)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/IIS1.PNG?mtime=1357140507"><img alt="" src="/wp-content/uploads/blogs/All/IIS1.PNG?mtime=1357140507" width="663" height="120" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/IIS1.PNG?mtime=1357140507"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/IIS1.PNG?mtime=1357140507" width="663" height="120" /></a>
 </div>
 
 After that, select Internet Information Services and click ok
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/IIS2.PNG?mtime=1357140588"><img alt="" src="/wp-content/uploads/blogs/All/IIS2.PNG?mtime=1357140588" width="403" height="190" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/IIS2.PNG?mtime=1357140588"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/IIS2.PNG?mtime=1357140588" width="403" height="190" /></a>
 </div>
 
 You will be presented with a progress box and when that is done you will probably need to restart you machine.

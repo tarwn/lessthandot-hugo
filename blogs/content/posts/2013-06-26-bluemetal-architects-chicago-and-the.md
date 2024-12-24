@@ -20,7 +20,7 @@ categories:
  
 
 <div class="image_block">
-  <a href="/media/blogs/All/index.png?mtime=1372254455"><img src="/wp-content/uploads/blogs/All/index.png?mtime=1372254455" alt="" width="380" height="51" align="left" /></a>
+  <a href="/media/blogs/All/index.png?mtime=1372254455"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/index.png?mtime=1372254455" alt="" width="380" height="51" align="left" /></a>
 </div>
 
 It's been a bit longer than a month, back when I posted "<a href="/index.php/ITProfessionals/ProfessionalDevelopment/a-month-with-bluemetal" target="_blank">A Month with BlueMetal</a>".  I'm going on several months now and have started a building process in my own professional development that is down a path that fits right into where I wanted for all the goals I've made.  Standing by my own quote of, "_The last month has done nothing but solidify the fact that joining BlueMetal was, to say the least, a great decision_" the feeling is as strong as ever.  The best part of all of this is, the opportunity is there for someone else to reach the same goal of finding a place that has the model and potential as BlueMetal Architects does.

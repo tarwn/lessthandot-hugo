@@ -22,7 +22,7 @@ Last year I set out to get SQL Saturday in Wisconsin organized.  It was a goal 
  
 
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751"><img src="/wp-content/uploads/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751" alt="" width="402" height="278" /></a>
+  <a href="/media/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/sqlcowtipping.gif?mtime=1322861751" alt="" width="402" height="278" /></a>
 </div>
 
  
@@ -36,7 +36,7 @@ As many of you know, I'm also a Regional Mentor for PASS.  My region, the [Nort
 Lastly, I'd like to congratulate Sheila Acker on creating and leading the new NC PASS Chapter, Quad Cities Iowa, and Phil Milner on the St. Louis BI User Group.  I've had the pleasure of talking to Sheila at several events including SQL Saturday in Iowa and the PASS Summit.  I know she is going to do an awesome job leading this new chapter and I can't wait to work with her as a regional mentor.   As always, you can get [community updates][6] on sqlpass.org.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319"><img alt="" src="/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319" width="236" height="115" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/sqlsat118_web.png?mtime=1323282319" width="236" height="115" /></a>
 </div>
 
 Remember, SQL Saturday in Wisconsin is just a short drive away!

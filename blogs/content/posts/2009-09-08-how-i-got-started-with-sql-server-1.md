@@ -21,7 +21,7 @@ I was tagged by Denis in hopes I could actually remember back far enough to talk
 Quiet often DBAs are accidentally created. There have been dozens of blogs and articles written about how that happens in some peoples careers in IT. My story is basically the same as most of the other accidental DBAs out there. Every time I think of it I'm reminded of a sign posted near some bluffs here in WI I visit often. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//cliff.gif" alt="" title="" width="303" height="282" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//cliff.gif" alt="" title="" width="303" height="282" />
 </div>
 
 Basically I didn't listen to the sign when it came to falling into the DBA role...

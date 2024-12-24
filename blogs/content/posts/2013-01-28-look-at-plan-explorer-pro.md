@@ -34,7 +34,7 @@ To create a deadlock so we can obtain the deadlock graph, use a combination of t
 To setup profile to capture the deadlock graph, start Profiler and alter the events to capture Deadlock graph and Lock: Deadlock (Lock: Deadlock is an identifier to easily find the deadlock graphs in profiler when many events are being logged).
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/deadlock_1.gif?mtime=1359304373"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/deadlock_1.gif?mtime=1359304373" width="864" height="145" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/deadlock_1.gif?mtime=1359304373"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/deadlock_1.gif?mtime=1359304373" width="864" height="145" /></a>
 </div>
 
 Start Profiler and leave it running in the background.
@@ -61,7 +61,7 @@ WHERE ordernum = 4688235
 Go back to session 60 (first query window opened) and execute the statement. Then execute the statement in 59 and 58 in sequential order.  At this point, 60 is blocking the other statements from completing and would remain so if the sessions were left as is.  To force a deadlock, all that is needed is to COMMIT session 60.  To do this, go to session 60's query window and type "COMMIT", highlight COMMIT and execute the statement.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373" width="370" height="156" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-205.png?mtime=1359304373" width="370" height="156" /></a>
 </div>
 
 When the COMMIT is executed, session 59 will throw a deadlock error as shown below.
@@ -103,7 +103,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 
 <p>
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/-206.png?mtime=1359304373"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-206.png?mtime=1359304373" width="864" height="32" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-206.png?mtime=1359304373"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-206.png?mtime=1359304373" width="864" height="32" /></a>
   </div>
 </p>
 
@@ -113,7 +113,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 
 <p>
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/-207.png?mtime=1359304374"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-207.png?mtime=1359304374" width="864" height="149" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-207.png?mtime=1359304374"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-207.png?mtime=1359304374" width="864" height="149" /></a>
   </div>
 </p>
 
@@ -135,7 +135,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 
 <p>
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/-208.png?mtime=1359304375"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-208.png?mtime=1359304375" width="1131" height="271" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-208.png?mtime=1359304375"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-208.png?mtime=1359304375" width="1131" height="271" /></a>
   </div>
 </p>
 
@@ -145,7 +145,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 
 <p>
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/-209.png?mtime=1359304376"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-209.png?mtime=1359304376" width="1120" height="264" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-209.png?mtime=1359304376"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-209.png?mtime=1359304376" width="1120" height="264" /></a>
   </div>
 </p>
 
@@ -154,7 +154,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-210.png?mtime=1359304377"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-210.png?mtime=1359304377" width="1117" height="337" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-210.png?mtime=1359304377"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-210.png?mtime=1359304377" width="1117" height="337" /></a>
 </div>
 
 <p>
@@ -162,7 +162,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-211.png?mtime=1359304379"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-211.png?mtime=1359304379" width="1134" height="464" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-211.png?mtime=1359304379"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-211.png?mtime=1359304379" width="1134" height="464" /></a>
 </div>
 
 <p>
@@ -174,7 +174,7 @@ When the COMMIT is executed, session 59 will throw a deadlock error as shown bel
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-212.png?mtime=1359304380"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-212.png?mtime=1359304380" width="1178" height="730" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-212.png?mtime=1359304380"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-212.png?mtime=1359304380" width="1178" height="730" /></a>
 </div>
 
 <p>

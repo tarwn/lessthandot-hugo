@@ -31,13 +31,13 @@ There are a couple of ways to shut down the operating system
 2) Move the mouse to the upper right corner of you screen and wait for the charms bar to appear, click on settings, now click on power
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/Win8pic2.png?mtime=1345241321"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/Win8pic2.png?mtime=1345241321" width="302" height="277" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/Win8pic2.png?mtime=1345241321"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/Win8pic2.png?mtime=1345241321" width="302" height="277" /></a>
 </div>
 
 Now you will get a couple of choices, pick the one you want
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/Win8pic3.png?mtime=1345241327"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/Win8pic3.png?mtime=1345241327" width="285" height="310" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/Win8pic3.png?mtime=1345241327"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/Win8pic3.png?mtime=1345241327" width="285" height="310" /></a>
 </div>
 
 3) Hit Windows Key + C, this short cut will show the charms bar, this is the same as in the step above

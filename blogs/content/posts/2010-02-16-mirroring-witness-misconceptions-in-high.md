@@ -68,7 +68,7 @@ CREATE ENDPOINT Endpoint_Mirroring
 > Next we verify the port configuration using netstat –a
 > 
 > <div class="image_block">
->   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_3.gif" alt="" title="" width="628" height="36" />
+>   <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_3.gif" alt="" title="" width="628" height="36" />
 > </div>
 > 
 > Now on the principle we alter the database to let it know we want the witness on TK2008:7022 to act as the partner in the relationship to handle failing to the mirror. We do this with the following
@@ -90,13 +90,13 @@ SELECT
 > WHERE mirroring_safety_level_desc IS NOT NULL
 ```
 <div class="image_block">
->   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_2.gif" alt="" title="" width="588" height="91" />
+>   <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_2.gif" alt="" title="" width="588" height="91" />
 > </div>
 > 
 > Open services.msc and stop TK2008DEV (replaced with your principal). When we go to the mirror we can see from the database that was our mirror didn't actually become the principal but went into recovery.
 > 
 > <div class="image_block">
->   <img src="/wp-content/uploads/blogs/DataMgmt/mirror_1.gif" alt="" title="" width="269" height="150" />
+>   <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/mirror_1.gif" alt="" title="" width="269" height="150" />
 > </div>
 > 
 > At this point we may think all that needs to be done is to restore with recovery. However, when doing so, we will receive an error that the database is configured for mirroring and the restore will terminate. To bring this database up we must remove mirroring all together.

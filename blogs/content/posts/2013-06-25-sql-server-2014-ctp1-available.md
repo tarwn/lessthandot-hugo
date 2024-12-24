@@ -49,7 +49,7 @@ Enterprise Evaluation Edition (64-bit) on Windows NT 6.2 <x64> (Build 9200: )
 
 Here is what the SSMS splash screen looks like
   
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/SSMS2014Startup.PNG?mtime=1371999115" width="467" height="306" />][2]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/SSMS2014Startup.PNG?mtime=1371999115" width="467" height="306" />][2]
 
 Clicking on Help–> About gives the following info
 
@@ -144,7 +144,7 @@ Here are a couple of small posts I put together
 [New Dynamic Management Views in SQL Server 2014 CTP1][6]
 
  [1]: http://technet.microsoft.com/en-US/evalcenter/dn205292
- [2]: /wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/SSMS2014Startup.PNG?mtime=1371999115
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/SSMS2014Startup.PNG?mtime=1371999115
  [3]: http://go.microsoft.com/fwlink?LinkId=20476&ProdName=Microsoft+SQL+Server&EvtSrc=setup.rll&EvtID=50000&ProdVer=11.0.9120.5&EvtType=0xD15B4EB2%400x4BDAF9BA%401306%4026&EvtType=0xD15B4EB2%400x4BDAF9BA%401306%4026
  [4]: /index.php/DataMgmt/DBProgramming/sql-server-2014-ctp1-native
  [5]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/supported-and-unsupported-datatypes-with

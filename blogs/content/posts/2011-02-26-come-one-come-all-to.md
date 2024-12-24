@@ -35,7 +35,7 @@ The first rule of T-SQL Tuesday is: talk about T-SQL Tuesday!
 
   * Post your blog between 00:00 GMT Tuesday, March 8 and 00:00 GMT Wednesday, March 9. (This is equivalent to 8:00 PM EST Monday, March 7 and 8:00 PM EST Tuesday, March 8.) 
   * Come back here and leave a comment or a pingback to your post. 
-  * In the body of the blog, you must include the T-SQL Tuesday logo, with a link back to this blog. (Sample HTML: <code class="codespan"><a href:"/index.php/DataMgmt/DBProgramming/come-one-come-all-to"><img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif"></a></code> ) 
+  * In the body of the blog, you must include the T-SQL Tuesday logo, with a link back to this blog. (Sample HTML: <code class="codespan"><a href:"/index.php/DataMgmt/DBProgramming/come-one-come-all-to"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif"></a></code> ) 
 
 **Bonus Points** 
 
@@ -45,7 +45,7 @@ The first rule of T-SQL Tuesday is: talk about T-SQL Tuesday!
 
 I'll be reading through all the blog posts and posting a round-up. I can't wait to read your thoughts!
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
  [2]: http://twitter.com/#!/AdamMachanic
  [3]: http://sqlblog.com/blogs/adam_machanic/
  [4]: http://sqlblog.com/blogs/adam_machanic/archive/2009/11/30/invitation-to-participate-in-t-sql-tuesday-001-date-time-tricks.aspx

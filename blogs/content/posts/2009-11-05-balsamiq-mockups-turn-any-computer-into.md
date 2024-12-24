@@ -23,7 +23,7 @@ Looking at their [product overview][2] I quickly became interested. It had the "
 Lets start out with a screenshot of Mockups in action (I used a [one of my favorite posts][3] from [onpnt][4] as the basis for the mockup, but may or may not have taken some liberties with its' content :P):
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev//BalsamiqShot.png" alt="" title="" width="742" height="687" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//BalsamiqShot.png" alt="" title="" width="742" height="687" />
 </div>
 
 It doesn't look nearly as good as [tarwn's][5] finished product, but I think it does a decent enough job conveying the spirit of the page. And it took about ten minutes to put together.

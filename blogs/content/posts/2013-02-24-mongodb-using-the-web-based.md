@@ -35,7 +35,7 @@ MongoDB ships with a web-based administrative tool. You can see this tool by goi
 You can see a bunch of stuff on the administrative tool screen. here is a partial image.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminTool.PNG?mtime=1361716184"><img alt="MongoDB: web-based administrative tool" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminTool.PNG?mtime=1361716184" width="823" height="573" title="MongoDB: web-based administrative tool" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminTool.PNG?mtime=1361716184"><img alt="MongoDB: web-based administrative tool" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminTool.PNG?mtime=1361716184" width="823" height="573" title="MongoDB: web-based administrative tool" /></a>
 </div>
 
 There are a bunch of links that you can click as well. If you click on any of the links on top
@@ -64,7 +64,7 @@ rest=true</pre>
 Here is what it looks like when opened in notepad.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCfg.PNG?mtime=1361716194"><img alt="mongod.cfg" title ="mongod.cfg"  src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCfg.PNG?mtime=1361716194" width="435" height="168" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCfg.PNG?mtime=1361716194"><img alt="mongod.cfg" title ="mongod.cfg"  src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDBCfg.PNG?mtime=1361716194" width="435" height="168" /></a>
 </div>
 
 Save it, restart the MongoDB service. If you want to learn how to have MongoDB run as a service on Windows, take a look at [Creating MongoDB as a service on Windows 8][1], the process should be the same for Windows 7
@@ -72,7 +72,7 @@ Save it, restart the MongoDB service. If you want to learn how to have MongoDB r
 If you click on [List all commands][2] you will see a list of all the commands. Here is an image of a partial list
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminToolCommandList.PNG?mtime=1361716729"><img alt="MongoDB: List all commands" title ="MongoDB: List all commands" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminToolCommandList.PNG?mtime=1361716729" width="675" height="397" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminToolCommandList.PNG?mtime=1361716729"><img alt="MongoDB: List all commands" title ="MongoDB: List all commands" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/MongoDbAdminToolCommandList.PNG?mtime=1361716729" width="675" height="397" /></a>
 </div>
 
 Scroll down to hostinfo and click on it you will see the following output

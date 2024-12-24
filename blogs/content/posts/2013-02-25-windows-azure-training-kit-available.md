@@ -25,7 +25,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/EnterpriseDev//windows_azure_small.jpg" alt="" title="" width="300" height="169" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev//windows_azure_small.jpg" alt="" title="" width="300" height="169" />
 </div>
 
 Microsoft has made available the Windows Azure Training Kit

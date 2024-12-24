@@ -113,7 +113,7 @@ In the data flow tab drag over a flat file source, data conversion and OLEDB des
 Configure the flat file source with the flat file connection. Verify the mappings all look good after configuring the source. Connect to the flat file source to the data conversion and open up the configuration window of the conversion. I edit my types in the conversion so they appear as
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//mapp_view.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//mapp_view.gif" alt="" title="" />
 </div>
 
 This ensures they will pump to SQL accurately and without issues. Connect the conversion to the OLEDB destination and open the destination editor. Select the SQL connection you created earlier and then in the table listing find your table. Verify in mappings then that your converted values are mapped. By default you will probably get the original columns. I typically check "Keep nulls" for these types of tasks also. Sense we rely on external processes that are out of our control the opportunity for null values is more probable. 
@@ -121,7 +121,7 @@ This ensures they will pump to SQL accurately and without issues. Connect the co
 Go back the control flow tab and connect all your steps to the email tasks so notifications go out on success and failures. You should end up with something similar to 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//pack_view.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//pack_view.gif" alt="" title="" />
 </div>
 
 Running this package fills the discovered instances into the instance_audit table for later reporting in SSRS or you can send out a notification with a query attachment for review.

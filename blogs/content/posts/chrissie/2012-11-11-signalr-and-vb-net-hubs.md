@@ -21,7 +21,7 @@ tags:
 Yesterday I wrote [a blog about SignalR][1] and just 5 seconds after posting it I got this on twitter.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR7.png?mtime=1352622942"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR7.png?mtime=1352622942" width="299" height="125" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR7.png?mtime=1352622942"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR7.png?mtime=1352622942" width="299" height="125" /></a>
 </div>
 
 So, here I am on a Sunday morning writing about [SignalR and Hubs][2].
@@ -194,7 +194,7 @@ End Module
 And if you type 1 you should get this in return.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR8.png?mtime=1352624162"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR8.png?mtime=1352624162" width="549" height="216" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR8.png?mtime=1352624162"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR8.png?mtime=1352624162" width="549" height="216" /></a>
 </div>
 
 But we could have just use [ServiceStack][3] if we needed something like that. 
@@ -264,7 +264,7 @@ I just added the plants.On method to intercept the addMessage events.
 And now when I open multiple clients I get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR9.png?mtime=1352624644"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR9.png?mtime=1352624644" width="506" height="347" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR9.png?mtime=1352624644"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR9.png?mtime=1352624644" width="506" height="347" /></a>
 </div>
 
 Which is cool.

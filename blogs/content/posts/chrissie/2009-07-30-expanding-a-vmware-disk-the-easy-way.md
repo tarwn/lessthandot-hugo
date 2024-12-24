@@ -46,31 +46,31 @@ Then you start it up and give it the source file.
 like this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter1.png" alt="" title="" width="816" height="636" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter1.png" alt="" title="" width="816" height="636" />
 </div>
 
 The you give it the destination like this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter2.png" alt="" title="" width="816" height="636" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter2.png" alt="" title="" width="816" height="636" />
 </div>
 
 and step 3 is the important bit. Got Data to copy and click Edit then change Data copy type to &#8220;Select volumes to copy&#8221; and now you can change the target size to whatever you like. Simple huh.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter3.png" alt="" title="" width="816" height="636" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter3.png" alt="" title="" width="816" height="636" />
 </div>
 
 This is the converter in action. It took about 5 minutes to convert.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter4.png" alt="" title="" width="638" height="412" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/vmwareconverter4.png" alt="" title="" width="638" height="412" />
 </div>
 
 and see the result a 25Gig disk instead of a 10Gig disk.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwareconverter/Converterresult.JPG" alt="" title="" width="368" height="514" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwareconverter/Converterresult.JPG" alt="" title="" width="368" height="514" />
 </div>
 
 Did I mention that this converter is free!!

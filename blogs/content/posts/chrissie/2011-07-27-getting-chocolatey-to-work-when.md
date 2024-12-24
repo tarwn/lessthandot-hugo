@@ -89,7 +89,7 @@ You can find this in the chocolatey install folder in the chocolatey.ps1 file.
 I removed the -RedirectStandardOutput where I could find it. and that made the cup chocolatey work. I now see this instead of a simple blinking cursor.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey3.png?mtime=1311758120"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey3.png?mtime=1311758120" width="677" height="392" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey3.png?mtime=1311758120"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey3.png?mtime=1311758120" width="677" height="392" /></a>
 </div>
 
 So that is the installer solved.
@@ -99,7 +99,7 @@ So that is the installer solved.
 However trying to install a package like nodejs would still fail. Like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey4.png?mtime=1311758468"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey4.png?mtime=1311758468" width="677" height="392" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey4.png?mtime=1311758468"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey4.png?mtime=1311758468" width="677" height="392" /></a>
 </div>
 
 But we can soon fix this by going to the chocolateyInstaller.psm1 in the chocolateyInstall.helpers folder.
@@ -122,11 +122,11 @@ $req = [System.Net.HttpWebRequest]::Create($url);
 And now all is good and the chocolatey gods are happy again. As you can see in the following screenshots.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey5.png?mtime=1311758827"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey5.png?mtime=1311758827" width="727" height="443" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey5.png?mtime=1311758827"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey5.png?mtime=1311758827" width="727" height="443" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey6.png?mtime=1311758836"><img alt="" src="/wp-content/uploads/users/chrissie1/chocolatey/chocolatey6.png?mtime=1311758836" width="677" height="392" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey6.png?mtime=1311758836"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/chocolatey/chocolatey6.png?mtime=1311758836" width="677" height="392" /></a>
 </div>
 
 ## Conclusion

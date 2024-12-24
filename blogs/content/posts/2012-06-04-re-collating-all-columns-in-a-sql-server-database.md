@@ -31,4 +31,4 @@ From there we just needed to populate a table variable with information about th
 [DatabaseRecollatorMcJawn.txt][2]
 
  [1]: http://www.sqlservercentral.com/scripts/Indexing/31652/
- [2]: /wp-content/uploads/blogs/All/recollating-all-columns/DatabaseRecollatorMcJawn.txt?mtime=1315590758
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/recollating-all-columns/DatabaseRecollatorMcJawn.txt?mtime=1315590758

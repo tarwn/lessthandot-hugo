@@ -99,7 +99,7 @@ FROM       ctePercentile
 ```
 
  [1]: /index.php/DataMgmt/DBProgramming/come-one-come-all-to
- [2]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif "T-SQL Tuesday logo"
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif "T-SQL Tuesday logo"
  [3]: http://msdn.microsoft.com/en-us/library/ms173825.aspx
  [4]: http://msdn.microsoft.com/en-us/library/ms176102.aspx
  [5]: http://msdn.microsoft.com/en-us/library/ms186734.aspx

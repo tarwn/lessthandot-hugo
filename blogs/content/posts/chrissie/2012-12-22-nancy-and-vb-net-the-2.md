@@ -43,7 +43,7 @@ The VB razor syntax was kind of hard to figure out but nothing a little trail an
 And then you go and try this and notice the nice errormessage you will get.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy12.png?mtime=1356166006"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy12.png?mtime=1356166006" width="510" height="271" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy12.png?mtime=1356166006"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy12.png?mtime=1356166006" width="510" height="271" /></a>
 </div>
 
 With this in the details view.
@@ -97,13 +97,13 @@ With this in the details view.
 > And now we get our nice login link.
 > 
 > <div class="image_block">
->   <a href="/wp-content/uploads/users/chrissie1/nancy/nancy13.png?mtime=1356166322"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy13.png?mtime=1356166322" width="358" height="162" /></a>
+>   <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy13.png?mtime=1356166322"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy13.png?mtime=1356166322" width="358" height="162" /></a>
 > </div>
 > 
 > Or of course our nice logout link and username when we are logged in.
 > 
 > <div class="image_block">
->   <a href="/wp-content/uploads/users/chrissie1/nancy/nancy14.png?mtime=1356166446"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy14.png?mtime=1356166446" width="169" height="150" /></a>
+>   <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy14.png?mtime=1356166446"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy14.png?mtime=1356166446" width="169" height="150" /></a>
 > </div>
 > 
 > <span class="MT_red">Don&#8217;t forget that if you have a test project to add an app.config file and add those same lines as above, else your tests will fail.<br /> </span> 
@@ -161,7 +161,7 @@ Imports Nancy.Security
 > And now our view looks like this.
 > 
 > <div class="image_block">
->   <a href="/wp-content/uploads/users/chrissie1/nancy/nancy15.png?mtime=1356167873"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy15.png?mtime=1356167873" width="262" height="157" /></a>
+>   <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy15.png?mtime=1356167873"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy15.png?mtime=1356167873" width="262" height="157" /></a>
 > </div>
 > 
 > And the sky is the limit again.

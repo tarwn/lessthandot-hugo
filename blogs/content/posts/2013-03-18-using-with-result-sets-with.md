@@ -34,7 +34,7 @@ EXEC sp_spaceused
 You will get two resultsets, the output will look something like this 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_spaceused_resultset.PNG?mtime=1363647770"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_spaceused_resultset.PNG?mtime=1363647770" width="347" height="220" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_spaceused_resultset.PNG?mtime=1363647770"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQL2013/sp_spaceused_resultset.PNG?mtime=1363647770" width="347" height="220" /></a>
 </div>
 
 Now let's see what happens if we only specify the first result set

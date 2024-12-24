@@ -31,7 +31,7 @@ The group I presented to was about the best group you could get in front of you.
 The slides that were used for the session can be downloaded below. I've also included the SSIS package and test import file that the group and I went through while learning some things about SSIS. If you download the package, all you need to do to get it to work with your own test lab and instance is fill in the variables, sqlconn and dbname respectfully. Then place the import.txt on your C drive and away you go! 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqlconns.gif" alt="" title="" width="448" height="196" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqlconns.gif" alt="" title="" width="448" height="196" />
 </div>
 
 [Slides][3]
@@ -50,5 +50,5 @@ I'd also liked to thank "Everyone" that pitched in and gave Wendy, Aaron and I t
 
  [1]: http://wendyverse.blogspot.com
  [2]: http://twitter.com/wendy_dance
- [3]: /wp-content/uploads/blogs/DataMgmt//SQL Server Integrated Services 90 Minutes.pdf ""
- [4]: /wp-content/uploads/blogs/DataMgmt//SSUG Demo.zip ""
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//SQL Server Integrated Services 90 Minutes.pdf ""
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//SSUG Demo.zip ""

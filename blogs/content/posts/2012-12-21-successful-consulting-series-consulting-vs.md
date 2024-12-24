@@ -24,7 +24,7 @@ Perhaps you're thinking, "I'm bored in my full-time job, managing the same 250 S
  
 
 <p style="text-align: center;">
-  <img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/FTEvsC.gif?mtime=1356107726" alt="" width="225" height="205" />
+  <img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/FTEvsC.gif?mtime=1356107726" alt="" width="225" height="205" />
 </p>
 
 ### Money and Benefits
@@ -41,7 +41,7 @@ How will the consulting company, and the clients you are working with, respond t
 
 ### Travel
 
-When you switch to consulting, you may have to travel no further than you normally would commute to a fulltime job. Some consultants are very lucky and get to work locally for the duration of an SOW. However, you may find the opposite is true. You may have a requirement of traveling 25%, 50%, or more time per week or month. <img style="float: right;" src="/wp-content/uploads/users/grrlgeek/-2.png?mtime=1356107726" alt="" width="200" height="241" />
+When you switch to consulting, you may have to travel no further than you normally would commute to a fulltime job. Some consultants are very lucky and get to work locally for the duration of an SOW. However, you may find the opposite is true. You may have a requirement of traveling 25%, 50%, or more time per week or month. <img style="float: right;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/-2.png?mtime=1356107726" alt="" width="200" height="241" />
 
 There are many facets of travel where you have to ask, "Will I gain enough from this job to accept these conditions?" First and foremost, there is time away from your home and family. This may mean missing a school concert or having to do all chores on the weekend instead of a weeknight. What compromises will you need to make in this regard? If you're required to travel to clients that are a good distance away, you may need to fly. If this is the case, you'll need to be aware of who is responsible for booking airfare, hotel, and rental car. If you work for a consulting firm that has a person to make these arrangements for you, you're lucky. If not, you will have to spend (non-billable!) time making these arrangements. You'll also need to find out if you'll get a company credit card to use, or if you'll have to use your own. What expenses will be covered, down to things like parking your car at an airport? After that's determined, you'll have to save receipts and submit expenses in a timely manner. Take all of these points into consideration when weighing a consulting position.
 
@@ -65,7 +65,7 @@ Financially, having a safety net built up is almost a necessity before going int
 
 ### Are You Ready to Take the Fork in the Road?
 
-<img style="float: left;" src="/wp-content/uploads/users/grrlgeek/-1.png?mtime=1356107726" alt="" width="100" height="100" />Hopefully you are now looking at the fork in the road of fulltime employment and consulting with a much more thoughtful eye. Consider all aspects of this career change very carefully. Consulting can be very rewarding, but you need to aware of the risks. Choose what is best for you, and your family, at the time. If now is not the time, it may be in the future!
+<img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/-1.png?mtime=1356107726" alt="" width="100" height="100" />Hopefully you are now looking at the fork in the road of fulltime employment and consulting with a much more thoughtful eye. Consider all aspects of this career change very carefully. Consulting can be very rewarding, but you need to aware of the risks. Choose what is best for you, and your family, at the time. If now is not the time, it may be in the future!
 
  [1]: /index.php/ITProfessionals/consulting/successful-consulting-series
  [2]: /index.php/ITProfessionals/ProfessionalDevelopment/presenting-yourself-visually-and-respectfully

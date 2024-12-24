@@ -175,6 +175,6 @@ You can play with the aggregate in the query a little bit. If you change it to a
 
  [1]: http://wiki.lessthandot.com/index.php/Row_To_Column_(PIVOT)
  [2]: http://wiki.lessthandot.com/index.php/Column_To_Row_(UNPIVOT)
- [3]: /wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot1.jpg
- [4]: /wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot2.jpg
- [5]: /wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot3.jpg
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot1.jpg
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot2.jpg
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/bosspivot/pivot3.jpg

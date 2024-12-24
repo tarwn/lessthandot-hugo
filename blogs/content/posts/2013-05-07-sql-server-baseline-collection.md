@@ -79,7 +79,7 @@ FROM sys.dm_os_sys_info WITH (NOLOCK) OPTION (RECOMPILE);
 After performing this task for all the information to be collected, the tables will start to look much like the ones below.  Ensure all the tables that are specifically designed for database-level information including the database name.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_1.gif?mtime=1367922905"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_1.gif?mtime=1367922905" width="624" height="625" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_1.gif?mtime=1367922905"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_1.gif?mtime=1367922905" width="624" height="625" /></a>
 </div>
 
 **SSIS Automation**
@@ -87,13 +87,13 @@ After performing this task for all the information to be collected, the tables w
 After you've created all the tables found to be of value, the SSIS package can be created to automate loading the data based on a schedule.  In a stripped down form, the SSIS package can be executed with nothing more than the use of a series of Data Flow Tasks (DFT) and a Foreach Loop Container.   The Data Flow Tasks will be a direct source to destination loading scenario except for the initial task of loading a table with the information for the instances.  Loading the information about the instances is a task that requires a lookup to decide if something has changed.  If nothing has changed, there is no need to insert duplicate rows, which will only make reporting off the information more difficult in the future.  This lookup task would lead off the entire process.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_2.png?mtime=1367922905"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_2.png?mtime=1367922905" width="269" height="88" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_2.png?mtime=1367922905"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_2.png?mtime=1367922905" width="269" height="88" /></a>
 </div>
 
 Internally to the DFT, the process would be a source and then a lookup on the destination.  This would allow the decision to be made if the data requires a new row or an update.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_3.png?mtime=1367922905"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_3.png?mtime=1367922905" width="357" height="265" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_3.png?mtime=1367922905"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_3.png?mtime=1367922905" width="357" height="265" /></a>
 </div>
 
 In the case above, the row is always updated.  The process can also make the decision to do nothing or validate what has changed.  In the case of instance information, the count of the overall rows and width of the data is typically so low, the update should not pose a performance problem.
@@ -103,13 +103,13 @@ The next series of DFTs are all similar.  Group tables together so multiple que
 Take the same Hardwareinfo query from earlier.  For a DFT to load this table, it would be an instance level task and not in the Foreach Loop Container.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_4.png?mtime=1367922906"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_4.png?mtime=1367922906" width="425" height="137" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_4.png?mtime=1367922906"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_4.png?mtime=1367922906" width="425" height="137" /></a>
 </div>
 
 This DFT is nothing more than a direct source to destination
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_5.png?mtime=1367922906"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_5.png?mtime=1367922906" width="192" height="197" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_5.png?mtime=1367922906"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_5.png?mtime=1367922906" width="192" height="197" /></a>
 </div>
 
 Until we get to the database specific queries, the DFT creation has been fairly simple.  With database specific queries, however, we need to obtain a listing of the databases that should be evaluated and have data collected.  This can be done by using the Recordset Destination populated by a source adapter based on the following query.
@@ -120,7 +120,7 @@ select name from sys.databases where name not in ('master','tempdb','model','msd
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_6.png?mtime=1367922906"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_6.png?mtime=1367922906" width="332" height="265" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_6.png?mtime=1367922906"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_6.png?mtime=1367922906" width="332" height="265" /></a>
 </div>
 
  
@@ -128,7 +128,7 @@ select name from sys.databases where name not in ('master','tempdb','model','msd
 Now the Foreach Loop Container can be based on an ADO Enumerator and each internal DFT to the Foreach Loop can be executed only for the specific database that is currently allocated to a variable the Foreach Loop specifies in the object source variable.  This would appear as shown below in the Foreach Loop editor.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_7.png?mtime=1367922906"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_7.png?mtime=1367922906" width="624" height="261" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_7.png?mtime=1367922906"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_7.png?mtime=1367922906" width="624" height="261" /></a>
 </div>
 
 Note: setting the MaximumErrorCount higher will prevent certain DMV queries that would error on databases from failing the entire package.  This would allow the collection of databases even if one database caused an issue when the query was executed.
@@ -136,7 +136,7 @@ Note: setting the MaximumErrorCount higher will prevent certain DMV queries that
 The finished SSIS Package would appear as shown below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_8.png?mtime=1367922907"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_8.png?mtime=1367922907" width="624" height="332" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_8.png?mtime=1367922907"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_8.png?mtime=1367922907" width="624" height="332" /></a>
 </div>
 
 **Baseline Reporting**
@@ -150,7 +150,7 @@ We can also obtain a quick review of how objects like indexes are being used.  
 For example: looking at a segment of 5 days based on the collection in the IDXReadWriteStats table, we can (or, Jes can) design a chart as shown below on how the indexes are being read.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/base_9.png?mtime=1367922907"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/base_9.png?mtime=1367922907" width="624" height="319" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_9.png?mtime=1367922907"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/base_9.png?mtime=1367922907" width="624" height="319" /></a>
 </div>
 
 In this chart, we can quickly see on 4/1/2013, the pk_tblEntry (a master data table), was read heavy but then pulled back on reads on the other collection dates.  This could show a beginning-of-the-month task that would affect the data services.  Thus, the problem that could arise is the same situation where a customer comes to the team with a slow data service.  If the date lands on the first and the database is directly related to the master data database, we know the entire equation to the problem and solution.
@@ -163,4 +163,4 @@ If you would like to play with the SSIS Package that was written for this articl
 
  [1]: http://www.sqlskills.com/
  [2]: http://sqlserverperformance.wordpress.com/tag/dmv-queries/
- [3]: /wp-content/uploads/blogs/DataMgmt/Package.zip?mtime=1367927309
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Package.zip?mtime=1367927309

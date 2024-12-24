@@ -79,7 +79,7 @@ I analyzed a much more utilized SQL Server instance next to go into how the tool
 The Index Analysis report grid that is shown is extremely easy to read and quickly identifies highly fragmented indexes.  One thing I would like to see in the RTM is the ability to sort by Database.  Clicking the header does not sort the results this way.  This is another request to allow me, the DBA, to have the ability to restrict this to only the databases I want to analyze.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-76.png?mtime=1323369284"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-76.png?mtime=1323369284" width="624" height="424" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-76.png?mtime=1323369284"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-76.png?mtime=1323369284" width="624" height="424" /></a>
 </div>
 
 I need to check the help documentation but I didn't see how the page count was being calculated to provide either a low, medium or high level of fragmentation.  Since the page count and calculations look to be internal and without breaking laws to see them, I'm not sure what they are using for numbers.  I'm guessing it will be known though.  Again, this is a first look as I would give it without diving real deep into something.  First impressions are everything!

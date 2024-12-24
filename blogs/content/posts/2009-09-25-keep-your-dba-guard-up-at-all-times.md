@@ -19,7 +19,7 @@ categories:
 Crossing guards for schools are awesome! 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//stop.gif" alt="" title="" width="367" height="420" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//stop.gif" alt="" title="" width="367" height="420" />
 </div>
 
 As a parent of two boys, I entrust these people with stop signs in hand to ensure my kids (and all others) get across the busy intersections surrounding schools. 
@@ -29,7 +29,7 @@ I honestly feel comfortable knowing that large STOP sign will be throw up any ti
 A few weeks ago I had the pleasure of walking with my oldest son to school. I really enjoy these chances sense my commut is long and doesn't allow me them very often. It's any parent's enjoyment to see their children interacting with the other kids at an early age. It's amazing to see how they change personalities when they are mixed into other kids. Something about this day really bothered me though. On my way to pick my son up after school, I noticed the crossing guard sitting in her car, stop sign on the dash and parents running, skipping (one tumbling) across the busy road to school. What?!? The safety of the stop sign isn't good enough for the parents? No, I'm not that old but I feel this person should never let their guard down. It is their job to ensure that while school is in and within time frames that all pedestrians cross that road safely. If the parents cross unattended then when will it lead to kids maybe 13 to 14 years of age being ok to RUN FOR YOUR LIFE!
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//RUN.gif" alt="" title="" width="420" height="405" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//RUN.gif" alt="" title="" width="420" height="405" />
 </div>
 
 I had a very good conversation with the crossing guard. This lesson is in line with you as a DBA and handling what goes on with your database servers. Many times over, a DBA either becomes frustrated due to not getting security correct or is just lazy and grants far too much to a user or developer so they can get their tasks accomplished. Never, and I mean never let your guard down when it comes to this. 

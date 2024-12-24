@@ -25,7 +25,7 @@ With [hybris][1] 5, you can use [ImageMagick][2] to convert your images. ImageMa
 By default mediaconversion is not enabled in hybris 5 as you can see in the picture from the hMC.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag1.png?mtime=1380714712"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag1.png?mtime=1380714712" width="147" height="164" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag1.png?mtime=1380714712"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag1.png?mtime=1380714712" width="147" height="164" /></a>
 </div>
 
 
@@ -46,7 +46,7 @@ The necessary packages can be found here:
 Open the localextensions.xml file in 'hybris\_install\_dir'config and lookup the following tag:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag2.png?mtime=1380714712"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag2.png?mtime=1380714712" width="439" height="69" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag2.png?mtime=1380714712"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag2.png?mtime=1380714712" width="439" height="69" /></a>
 </div>
 
 Uncomment the tag and add the location of the mediaconversion extension:
@@ -74,7 +74,7 @@ ant clean all
 Last step is to go to the hybris Administration Console and perform a System Update.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag3.png?mtime=1380714713"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag3.png?mtime=1380714713" width="687" height="329" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag3.png?mtime=1380714713"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag3.png?mtime=1380714713" width="687" height="329" /></a>
 </div>
 
 
@@ -84,7 +84,7 @@ Last step is to go to the hybris Administration Console and perform a System Upd
 Open hMC and navigate to the Multimedia folder. If everything went well you will see the **Conversion Groups**. Also note the availabe **Conversion Media Format** while right-clicking the **Media Formats**.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag4.png?mtime=1380714713"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag4.png?mtime=1380714713" width="419" height="239" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag4.png?mtime=1380714713"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ImgMag4.png?mtime=1380714713" width="419" height="239" /></a>
 </div>
 
  [1]: http://www.hybris.com/

@@ -69,7 +69,7 @@ EXEC sp_describe_undeclared_parameters  @DynamicSql
 Here is what you see 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/sp_describe_undeclared_parameters.PNG?mtime=1362535594"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/sp_describe_undeclared_parameters.PNG?mtime=1362535594" width="631" height="226" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/sp_describe_undeclared_parameters.PNG?mtime=1362535594"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/sp_describe_undeclared_parameters.PNG?mtime=1362535594" width="631" height="226" /></a>
 </div>
 
 There are more columns in the output, feel free to run this yourself to see all of them. Basically it will give you type, precision, length parameter name and more

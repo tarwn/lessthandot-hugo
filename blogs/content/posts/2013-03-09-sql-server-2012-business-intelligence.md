@@ -25,7 +25,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQLServer2012BusinessIntelligence.png?mtime=1362825412"><img alt="SQL Server 2012 Business Intelligence" title="SQL Server 2012 Business Intelligence" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQLServer2012BusinessIntelligence.png?mtime=1362825412" width="587" height="179" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQLServer2012BusinessIntelligence.png?mtime=1362825412"><img alt="SQL Server 2012 Business Intelligence" title="SQL Server 2012 Business Intelligence" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQLServer2012BusinessIntelligence.png?mtime=1362825412" width="587" height="179" /></a>
 </div>
 
 If you are into Business Intelligence, you are in luck, this week Microsoft has released a SQL Server 2012 Business Intelligence whitepaper as well as SQL Server Data Tools – Business Intelligence for Visual Studio 2012 (SSDT BI) templates.

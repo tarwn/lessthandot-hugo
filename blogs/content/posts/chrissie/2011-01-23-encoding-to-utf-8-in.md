@@ -29,13 +29,13 @@ We had several ideas but most of them had to do with encoding.
 This is what it looked like.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/encoding/encoding1.png?mtime=1295782780"><img alt="" src="/wp-content/uploads/users/chrissie1/encoding/encoding1.png?mtime=1295782780" width="673" height="173" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/encoding/encoding1.png?mtime=1295782780"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/encoding/encoding1.png?mtime=1295782780" width="673" height="173" /></a>
 </div>
 
 The first thing I tried after some google was the utf8 encode command.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/encoding/encoding2.png?mtime=1295782793"><img alt="" src="/wp-content/uploads/users/chrissie1/encoding/encoding2.png?mtime=1295782793" width="690" height="164" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/encoding/encoding2.png?mtime=1295782793"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/encoding/encoding2.png?mtime=1295782793" width="690" height="164" /></a>
 </div>
 
 But there was a little problem. the little single quote (or whatever it was) was no longer there. So I went out to find out what the problem was. Since b2evo did not have this problem I searched how they solved it and I found it. 
@@ -106,7 +106,7 @@ function convert_chars( $content, $flag = 'html' )
 That is one hell of a solution and it would require a fari bit of research to find out why you need all this. It will need a good knowledge to see the difference between the codecs and how you can solve it. I did not feel the need to do this and just used the b2evo code. And that solved the problem.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/encoding/encoding3.png?mtime=1295782805"><img alt="" src="/wp-content/uploads/users/chrissie1/encoding/encoding3.png?mtime=1295782805" width="682" height="167" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/encoding/encoding3.png?mtime=1295782805"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/encoding/encoding3.png?mtime=1295782805" width="682" height="167" /></a>
 </div>
 
 ## Conclusion

@@ -24,7 +24,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/msdn_notforresale.gif" alt="" title="" width="250" height="145" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/msdn_notforresale.gif" alt="" title="" width="250" height="145" align="left" />
 </div>
 
 I was fortunate enough to receive MSDN Ultimate Subscriptions as well as SQLDenis ([blog][1] | [Twitter][2]). I Think Denis's idea and contest to see who we can give these to is excellent. To support Denis and his idea, I'm adding another subscription that will be handed over once we read over the responses. That means your chances just got much better to enjoy the subscriptions and the benefits Visual Studio 2010 has to offer!

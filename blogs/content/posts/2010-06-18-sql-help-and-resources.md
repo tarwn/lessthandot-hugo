@@ -38,7 +38,7 @@ Welcome to the last day of Community Service week for [SQL University][1]. Befor
 Today being our last day of community service week, we're going to take a quiz. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/quiz.gif" alt="" title="" width="160" height="201" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/quiz.gif" alt="" title="" width="160" height="201" />
 </div>
 
 Kidding!!! (I think an apple just whizzed by my head)
@@ -76,7 +76,7 @@ SQL Share is another virtual training resource. SQL Community leaders such as [J
 **Scratched it**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/scratch.gif" alt="" title="" width="250" height="245" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/scratch.gif" alt="" title="" width="250" height="245" align="left" />
 </div>
 
 Yes, I scratched again. I've only named a handful of places you can find resources to build your knowledge and networking in the SQL Community. **There is an enormous amount the SQL Community has to offer**. The homework for everyone is to go out and find people that do not know about the SQL Community and make them aware. Nothing is ever perfect and everything can build higher and out farther. The SQL Community has a lot of space to grow and growing with it is the reward we all shall share.

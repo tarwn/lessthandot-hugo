@@ -26,7 +26,7 @@ In my last blog I was playing with the AForge.Net framework and trying to get it
 This is the finished result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber6.png?mtime=1294411922"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber6.png?mtime=1294411922" width="866" height="734" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber6.png?mtime=1294411922"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber6.png?mtime=1294411922" width="866" height="734" /></a>
 </div>
 
 ## Separating

@@ -29,7 +29,7 @@ Windows Phone Developer Tools includes:
 
 The download was 228 MB for me, I already had Visual Studio 2008 and Visual Studio 2010 RC on my machine, if you don't have those, the download might be bigger.
 
-<img src="/wp-content/uploads/blogs/ITProfessionals//IPhoneSetup.png" alt="" title="" width="516" height="464" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//IPhoneSetup.png" alt="" title="" width="516" height="464" />
 
 Here are the 10 things that will be downloaded and installed.
 
@@ -55,7 +55,7 @@ Silverlight 4 Tools for Visual Studio 2010 RC_
 
 After everything is downloaded and installed, you will see the following window
   
-<img src="/wp-content/uploads/blogs/ITProfessionals//Phone7Done.png" alt="" title="" width="516" height="464" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//Phone7Done.png" alt="" title="" width="516" height="464" />
   
 
 
@@ -67,13 +67,13 @@ The way you develop apps/games for Windows Phone 7 is that you either use Silver
   
 If you pick Silverlight for Windows Phone then the following templates are available
   
-<img src="/wp-content/uploads/blogs/ITProfessionals//PhoneSilverLight.png" alt="" title="Windows Phone 7 Silverlight" width="845" height="560" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//PhoneSilverLight.png" alt="" title="Windows Phone 7 Silverlight" width="845" height="560" />
   
 
   
 If you pick XNA Game Studio 4.0 then the following templates are available
   
-<img src="/wp-content/uploads/blogs/ITProfessionals//PhoneXNA.png" alt="" title="Windows Phone 7 XNA Studio" width="845" height="560" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//PhoneXNA.png" alt="" title="Windows Phone 7 XNA Studio" width="845" height="560" />
 
 I decided to pick the Silverlight Windows Phone List Application.
   
@@ -81,7 +81,7 @@ After messing around with it for 15 minutes or so I managed to create the follow
 
 Below is an image of the "app" in action
 
-<img src="/wp-content/uploads/blogs/ITProfessionals//PhoneApp.png" alt="" title="" width="292" height="570" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals//PhoneApp.png" alt="" title="" width="292" height="570" />
   
 
 

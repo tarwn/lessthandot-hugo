@@ -66,7 +66,7 @@ GO
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/stats_key_1.gif?mtime=1356973657"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/stats_key_1.gif?mtime=1356973657" width="786" height="106" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/stats_key_1.gif?mtime=1356973657"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/stats_key_1.gif?mtime=1356973657" width="786" height="106" /></a>
 </div>
 
 Figure 1
@@ -80,7 +80,7 @@ GO
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-191.png?mtime=1356973658"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-191.png?mtime=1356973658" width="796" height="190" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-191.png?mtime=1356973658"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-191.png?mtime=1356973658" width="796" height="190" /></a>
 </div>
 
 Figure 2
@@ -100,7 +100,7 @@ GO
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-192.png?mtime=1356973658"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-192.png?mtime=1356973658" width="624" height="141" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-192.png?mtime=1356973658"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-192.png?mtime=1356973658" width="624" height="141" /></a>
 </div>
 
 Figure 3
@@ -154,7 +154,7 @@ Listing 2
 The output from listing 2 is shown in figure 4.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-193.png?mtime=1356973659"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-193.png?mtime=1356973659" width="624" height="143" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-193.png?mtime=1356973659"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-193.png?mtime=1356973659" width="624" height="143" /></a>
 </div>
 
 Figure 4
@@ -172,7 +172,7 @@ GO
 Listing 3
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-194.png?mtime=1356973659"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-194.png?mtime=1356973659" width="807" height="265" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-194.png?mtime=1356973659"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-194.png?mtime=1356973659" width="807" height="265" /></a>
 </div>
 
 Figure 5

@@ -31,7 +31,7 @@ What do I _do_? As of May 8, 2012, I'm a Consultant with Brent Ozar PLF. Consult
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/my office.jpg" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/my office.jpg" alt="" />
 </p>
 
 I start by reading through my email and saying hello to all my friends Twitter. I need Twitter, now that I work from home. It gives me virtual "coworkers" to talk to.

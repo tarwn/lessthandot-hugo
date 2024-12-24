@@ -14,7 +14,7 @@ categories:
   - Professional Development
 
 ---
-[<img style="float: left;" src="/wp-content/uploads/blogs/DataMgmt/-62.png?mtime=1319638751" alt="" width="236" height="115" />SQL Saturday in Minnesota][1] is upon us.  Only a few more days and I'll be heading to Minnesota and have a chance to hang out with many of my good friends as well as meet hundreds of other SQL Server professionals.  Last year I wasn't able to make this event due to a change in jobs.  This year, I'm happy to not only be making the event but see my current employers, Magenic Technologies, on the sponsor list.
+[<img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-62.png?mtime=1319638751" alt="" width="236" height="115" />SQL Saturday in Minnesota][1] is upon us.  Only a few more days and I'll be heading to Minnesota and have a chance to hang out with many of my good friends as well as meet hundreds of other SQL Server professionals.  Last year I wasn't able to make this event due to a change in jobs.  This year, I'm happy to not only be making the event but see my current employers, Magenic Technologies, on the sponsor list.
 
 Magenic has turned into a great home for me and a company that is respected as well as known for having some of the most skilled people in the profession.  I'm looking forward to being able to catch up with the Minnesota area co-workers just as much as the event itself.
 

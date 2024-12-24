@@ -653,7 +653,7 @@ That is it for this post, there is a lot of code but hopefully you can get an id
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][5] forum or our [Microsoft SQL Server Admin][6] forum**<ins></ins>
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif
  [2]: /index.php/DataMgmt/DBProgramming/come-one-come-all-to
  [3]: /index.php/DataMgmt/?disp=authdir&author=420
  [4]: http://msdn.microsoft.com/en-us/library/ms190279.aspx

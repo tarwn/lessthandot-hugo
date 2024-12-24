@@ -20,7 +20,7 @@ tags:
 
 ---
 <div>
-  <img src="/wp-content/uploads/blogs/DesktopDev//logo_vstudio.png" alt="" title="" width="155" height="23" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev//logo_vstudio.png" alt="" title="" width="155" height="23" />
 </div>
 
 Visual Studio 2010 and Microsoft .NET Framework 4 will be available for download later today on MSDN. Right now it looks like the time that it will be available is 10 AM PDT.
@@ -37,6 +37,6 @@ Visual Studio 2010 Express is publicly available now. Get it here: http://www.mi
 
 Installing it now, here is what I generally install
   
-<img src="/wp-content/uploads/blogs/DesktopDev//Ultimate.PNG" alt="" title="" width="756" height="581" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev//Ultimate.PNG" alt="" title="" width="756" height="581" />
 
 When you cut out C++ and SQL Server Express/Sharepoint you save 3GB

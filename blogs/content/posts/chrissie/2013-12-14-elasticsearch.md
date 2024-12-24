@@ -31,7 +31,7 @@ Once you have Mint installed go to the [Elasticsearch download page][3] and sele
 Once you have done that goto your favorite browser and check if it installed ok by going to http://localhost:9200 which should give you this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch1.png?mtime=1387013631"><img alt="" src="/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch1.png?mtime=1387013631" width="1163" height="723" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch1.png?mtime=1387013631"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch1.png?mtime=1387013631" width="1163" height="723" /></a>
 </div>
 
 The install also set up the firewall so that port is now also available from your host machine.
@@ -45,7 +45,7 @@ I would also recommend using chrome and install [the sense extension][5] to get 
 And here are the results of the Belgian jury.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch2.png?mtime=1387014155"><img alt="" src="/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch2.png?mtime=1387014155" width="773" height="719" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch2.png?mtime=1387014155"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ElasticSearch/ElasticSearch2.png?mtime=1387014155" width="773" height="719" /></a>
 </div>
 
 Go read the blog by Joel to get you going.

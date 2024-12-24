@@ -41,7 +41,7 @@ Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.Event
 The above code does not print a header or footer on the first page and it seemed to me that it should.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/itextsharp/pdfnoimageonfirstpage.png" alt="" title="" width="549" height="928" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/itextsharp/pdfnoimageonfirstpage.png" alt="" title="" width="549" height="928" />
 </div>
 
 But I found the solution in the end.
@@ -66,7 +66,7 @@ Can you see the difference? Ok, I&#8217;ll tell you. The Document is no longer o
 Which then gave this result.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/itextsharp/pdffooteronfirstpage.png" alt="" title="" width="549" height="928" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/itextsharp/pdffooteronfirstpage.png" alt="" title="" width="549" height="928" />
 </div>
 
  [1]: http://itextsharp.sourceforge.net/

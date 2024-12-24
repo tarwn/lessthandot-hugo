@@ -69,7 +69,7 @@ Where OBJECT_NAME(referencing_id) = 'vEmployee'
 Resulting in 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/viewmeta_1.gif?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/viewmeta_1.gif?mtime=1317908836" width="413" height="165" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/viewmeta_1.gif?mtime=1317908836"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/viewmeta_1.gif?mtime=1317908836" width="413" height="165" /></a>
 </div>
 
 The same tables listed in the referenceing\_id and using the OBJECT\_NAME to return the objects name for more meaningful information. Reversing this, in a sense, and adding the sys.objects catalog view, we can start by looking deeper into the dependencies and focus on one of the tables the view is referencing.
@@ -86,7 +86,7 @@ referenced_id = OBJECT_ID(N'HumanResources.Employee')
 And OBJECT_NAME(referencing_id) = N'vEmployee'; 
 ```
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-24.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-24.png?mtime=1317908836" width="401" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-24.png?mtime=1317908836"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-24.png?mtime=1317908836" width="401" height="74" /></a>
 </div>
 
 We now see that relationship in the results between the table and the view in a reverse reference based on the same dependency view. This can be taken a bit further in looking to the columns that are only EmployeeID.
@@ -143,13 +143,13 @@ So we can see the INT value is in the place holders of the varchar value. Imagin
 Look at the table and view just created with the queries from earlier and verify the dependencies.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-25.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-25.png?mtime=1317908836" width="452" height="62" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-25.png?mtime=1317908836"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-25.png?mtime=1317908836" width="452" height="62" /></a>
 </div>
 
 Nothing is jumping out until we look at the system view sysdepends and the results that were shown from the batch earlier. Those results are shown below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-26.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-26.png?mtime=1317908836" width="624" height="82" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-26.png?mtime=1317908836"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-26.png?mtime=1317908836" width="624" height="82" /></a>
 </div>
 
 Now, run the sysdepends check again
@@ -157,7 +157,7 @@ Now, run the sysdepends check again
 e.g. SELECT * FROM sysdepends where id = OBJECT_ID('dbo.vTbl')
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-27.png?mtime=1317908836"><img alt="" src="/wp-content/uploads/blogs/All/-27.png?mtime=1317908836" width="589" height="156" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-27.png?mtime=1317908836"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-27.png?mtime=1317908836" width="589" height="156" /></a>
 </div>
 
 WHOA!!! Yes, we have a problem here and actually one of the points where the problem starts with what we tested above. Now we've identified this one reaction to the underlying table changes but there are more. Several issues can come from a non-schema bound view and the changes to underlying tables. Mostly the wildcard usage is the worst case practice. Like we said earlier, image calculations being run off the wrong column when the view is using an underlying definition that has been set to calculate things on specific columns. We could fall into sales reporting incorrectly, shipments going to the wrong locations and a mess of other possibilities.

@@ -24,7 +24,7 @@ But alas, sometimes there is this one little thing missing.
 If you used resharper you will have noticed that if your filename and typename don&#8217;t match up it shows you the &#8220;rename file to match typename&#8221; quick fix. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin1.png?mtime=1347802545"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin1.png?mtime=1347802545" width="322" height="133" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin1.png?mtime=1347802545"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin1.png?mtime=1347802545" width="322" height="133" /></a>
 </div>
 
 But not the other way around &#8220;Rename type to macth filename&#8221;. Which is odd because sometimes that can be handy. In case you edited the filename and forgot to edit the classname to match.
@@ -36,7 +36,7 @@ First of all you need Resharper 7 and you need the resharper 7 SDK. Both can be 
 Then you need to create a new Resharper 7.0 plugin project. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin2.png?mtime=1347802747"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin2.png?mtime=1347802747" width="955" height="660" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin2.png?mtime=1347802747"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin2.png?mtime=1347802747" width="955" height="660" /></a>
 </div>
 
 You then need to inherit from ContextActionBase.
@@ -93,13 +93,13 @@ So now I just have to build the project and copy the dll over to the Plugins fol
 And now after restarting VS I see this when I Alt Enter on the classname when filename and classname don&#8217;t match. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin3.png?mtime=1347803232"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin3.png?mtime=1347803232" width="305" height="126" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin3.png?mtime=1347803232"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin3.png?mtime=1347803232" width="305" height="126" /></a>
 </div>
 
 And when I select my new plugin I get this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin4.png?mtime=1347803338"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin4.png?mtime=1347803338" width="225" height="117" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin4.png?mtime=1347803338"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/ResharperPlugin4.png?mtime=1347803338" width="225" height="117" /></a>
 </div>
 
 Woohoo, it works.

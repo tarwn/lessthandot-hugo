@@ -54,7 +54,7 @@ I&#8217;m sure you know what bits to chance to make that work.
 I made one table in my database.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/massive/massive1.png?mtime=1317289570"><img alt="" src="/wp-content/uploads/users/chrissie1/massive/massive1.png?mtime=1317289570" width="336" height="200" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/massive/massive1.png?mtime=1317289570"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/massive/massive1.png?mtime=1317289570" width="336" height="200" /></a>
 </div>
 
 ## Getting the data

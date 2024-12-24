@@ -31,19 +31,19 @@ You can read all on the plugwise website.
 I will use the builtin webserver from the source software to communicate with. For this you need to open the source software.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/plugwise/plugwise1.png?mtime=1357478168"><img alt="" src="/wp-content/uploads/users/chrissie1/plugwise/plugwise1.png?mtime=1357478168" width="990" height="816" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise1.png?mtime=1357478168"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise1.png?mtime=1357478168" width="990" height="816" /></a>
 </div>
 
 Then click on Program and Enable the webserver.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/plugwise/plugwise2.png?mtime=1357478180"><img alt="" src="/wp-content/uploads/users/chrissie1/plugwise/plugwise2.png?mtime=1357478180" width="1003" height="807" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise2.png?mtime=1357478180"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise2.png?mtime=1357478180" width="1003" height="807" /></a>
 </div>
 
 you can now just browse to http://localhost:8080 and see your modules and their energy consumption and you can turn them on or off.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/plugwise/plugwise3.png?mtime=1357478474"><img alt="" src="/wp-content/uploads/users/chrissie1/plugwise/plugwise3.png?mtime=1357478474" width="1041" height="293" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise3.png?mtime=1357478474"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise3.png?mtime=1357478474" width="1041" height="293" /></a>
 </div>
 
 I could now just adapt those files. But it will be easier if I just create a second webapplication that talks to that server. This way I can program it like I want.
@@ -180,7 +180,7 @@ So that is how this all works.
 And this is what it looks like for now.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/plugwise/plugwise4.png?mtime=1357479769"><img alt="" src="/wp-content/uploads/users/chrissie1/plugwise/plugwise4.png?mtime=1357479769" width="896" height="421" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise4.png?mtime=1357479769"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/plugwise/plugwise4.png?mtime=1357479769" width="896" height="421" /></a>
 </div>
 
 But I&#8217;m sure you can imagine where we are going with this. It will be easy to add a mobile version and so on. It was getting started that was difficult, since there is not to much documentation to learn from or examples. 

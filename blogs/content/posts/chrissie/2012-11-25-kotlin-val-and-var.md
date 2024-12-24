@@ -44,7 +44,7 @@ fun main(args : Array&lt;String&gt;) {
 you will get an error on the <code class="codespan">c1.s = "s"</code> line because s is immutable and has been set in the constructor.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/kotlin/kotlin1.png?mtime=1353831918"><img alt="" src="/wp-content/uploads/users/chrissie1/kotlin/kotlin1.png?mtime=1353831918" width="279" height="124" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlin1.png?mtime=1353831918"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/kotlin/kotlin1.png?mtime=1353831918" width="279" height="124" /></a>
 </div>
 
 You might have noticed that we instantiated our class with the val keyword as well. this means you can no longer assign another instance to it..

@@ -27,7 +27,7 @@ And again the guide to read for me was [migrations on the ruby on rails guide][1
 After some swearing and cursing and reading lots of out of date websites, I finally found what I was looking for when it comes to adding a column to a table/model.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/migrate1.png?mtime=1312098695"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/migrate1.png?mtime=1312098695" width="435" height="208" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate1.png?mtime=1312098695"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate1.png?mtime=1312098695" width="435" height="208" /></a>
 </div>
 
 Some things to not that are very important in this case or it won&#8217;t work. 
@@ -129,7 +129,7 @@ def picture_path
 Which will give you this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/migrate3.png?mtime=1312113231"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/migrate3.png?mtime=1312113231" width="359" height="147" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate3.png?mtime=1312113231"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate3.png?mtime=1312113231" width="359" height="147" /></a>
 </div>
 
 This was before I added the link it will show you the alt text since we don&#8217;t have an image in the database yet.
@@ -148,7 +148,7 @@ And I added an upload action to the plans controller.
 If you now run this than you will notice that this does not work. You get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/migrate2.png?mtime=1312112937"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/migrate2.png?mtime=1312112937" width="726" height="112" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate2.png?mtime=1312112937"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate2.png?mtime=1312112937" width="726" height="112" /></a>
 </div>
 
 This because the scaffolding does not set the routing to allow another route which the upload is. 
@@ -169,7 +169,7 @@ resources :plants do
 And now it will work.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/migrate4.png?mtime=1312113731"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/migrate4.png?mtime=1312113731" width="440" height="157" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate4.png?mtime=1312113731"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate4.png?mtime=1312113731" width="440" height="157" /></a>
 </div>
 
 Before I can click the upload image link I should also add a view for this action. So just add a file called upload.html.erb and then add this code to it.
@@ -188,7 +188,7 @@ Before I can click the upload image link I should also add a view for this actio
 and if I now click the link I get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/migrate5.png?mtime=1312114026"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/migrate5.png?mtime=1312114026" width="316" height="112" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate5.png?mtime=1312114026"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate5.png?mtime=1312114026" width="316" height="112" /></a>
 </div>
 
 I can now upload the picture.
@@ -205,7 +205,7 @@ end
 where I tell the model to put the data from the fileupload routine into the image field.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/migrate6.png?mtime=1312114358"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/migrate6.png?mtime=1312114358" width="474" height="232" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate6.png?mtime=1312114358"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/migrate6.png?mtime=1312114358" width="474" height="232" /></a>
 </div>
 
 And that is it. I have no uploaded the file, put it in the database and shown it on the screen.

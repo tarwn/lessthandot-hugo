@@ -18,7 +18,7 @@ categories:
 [][1]
 
 <div class="image_block" style="text-align: left;">
-  <a href="http://www.jasonstrate.com/2012/01/january-meme15-assignment/"><img src="/wp-content/uploads/blogs/DataMgmt/-96.png?mtime=1326730739" alt="" width="85" height="85" align="left" /></a>Good friend and SQL Server MVP, Jason Strate (<a href="http://www.jasonstrate.com/2012/01/january-meme15-assignment/">Blog</a> | <a href="https://twitter.com/#%21/stratesql">Twitter</a>) put together the meme15 topic.  Meme15 is a monthly post that involves topics about blogging or meta-blogging.  The monthly event has a ton of value in helping build blogging skills, share blogging experiences and get more bloggers to start up.
+  <a href="http://www.jasonstrate.com/2012/01/january-meme15-assignment/"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-96.png?mtime=1326730739" alt="" width="85" height="85" align="left" /></a>Good friend and SQL Server MVP, Jason Strate (<a href="http://www.jasonstrate.com/2012/01/january-meme15-assignment/">Blog</a> | <a href="https://twitter.com/#%21/stratesql">Twitter</a>) put together the meme15 topic.  Meme15 is a monthly post that involves topics about blogging or meta-blogging.  The monthly event has a ton of value in helping build blogging skills, share blogging experiences and get more bloggers to start up.
 </div>
 
  

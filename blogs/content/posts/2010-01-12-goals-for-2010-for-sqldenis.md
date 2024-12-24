@@ -20,7 +20,7 @@ tags:
 I was tagged by [onpnt][1] in his [2010 Goals][2] post. So here is my short list of goals that I would like to accomplish in 2010
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/logo-header-sql08-dg.gif" alt="Upgrade our servers to SQL Server 2008" title="Upgrade our servers to SQL Server 2008" width="363" height="75" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/logo-header-sql08-dg.gif" alt="Upgrade our servers to SQL Server 2008" title="Upgrade our servers to SQL Server 2008" width="363" height="75" />
 </div>
 
 ## Upgrade our servers to SQL Server 2008

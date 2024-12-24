@@ -20,7 +20,7 @@ tags:
 I'm building the foundation for an ASP.Net Core 2 site with [Cosmos DB][1] as the back-end store and want to build in the idea of user-manageable API keys. In the past two posts, I've added interactive registration and login to the application using built-in Cookie and Twitter middleware on top of custom authorization logic and Cosmos DB. In this one, we'll be adding endpoints that require API Keys that can be created and revoked by the user.
 
 <div id="attachment_9155" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, /wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png" alt="3 Authentication Scenarios: User/Pass, Twitter, API Keys" width="600" height="406" class="size-medium-width wp-image-9155" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-600x406.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-300x203.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106-443x300.png 443w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_106.png 748w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     3 Authentication Scenarios: User/Pass, Twitter, API Keys
@@ -30,7 +30,7 @@ I'm building the foundation for an ASP.Net Core 2 site with [Cosmos DB][1] as th
 While I started out with credentials stored directly in the `LoginUser` Document, in the prior post I decided to start treating authentication mechanisms as separate documents (my house keys are not a property of me). 
 
 <div id="attachment_9181" style="width: 236px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_202.png" alt="Defining People (Users) Separate from House Keys (User Authentication)" width="226" height="161" class="size-full wp-image-9181" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_202.png" alt="Defining People (Users) Separate from House Keys (User Authentication)" width="226" height="161" class="size-full wp-image-9181" />
   
   <p class="wp-caption-text">
     Defining People (Users) Separate from House Keys (User Authentication)
@@ -63,7 +63,7 @@ In this post, that separation will start paying off, as it will allow us to add 
 In the last two posts, we laid the groundwork for authentication from the UI down to Cosmos DB. With this post, we're going to build a minimal screen to let users generate API Keys, some protected API endpoints, and the logic to tie these into the `LoginUserAuthentications` DocumentCollection in Cosmos DB.
 
 <div id="attachment_9202" style="width: 426px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_301.png" alt="From UI down to Cosmos DB back up to Middleware" width="416" height="874" class="size-full wp-image-9202" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_301.png 416w, /wp-content/uploads/2018/04/aspnetcore2cosmos_301-143x300.png 143w" sizes="(max-width: 416px) 100vw, 416px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_301.png" alt="From UI down to Cosmos DB back up to Middleware" width="416" height="874" class="size-full wp-image-9202" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_301.png 416w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_301-143x300.png 143w" sizes="(max-width: 416px) 100vw, 416px" />
   
   <p class="wp-caption-text">
     From UI down to Cosmos DB back up to Middleware
@@ -491,7 +491,7 @@ Now we can test out this process.
 First we'll add a new Key:
 
 <div id="attachment_9203" style="width: 368px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_302.png" alt="Adding an API Key" width="358" height="254" class="size-full wp-image-9203" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_302.png 358w, /wp-content/uploads/2018/04/aspnetcore2cosmos_302-300x213.png 300w" sizes="(max-width: 358px) 100vw, 358px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_302.png" alt="Adding an API Key" width="358" height="254" class="size-full wp-image-9203" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_302.png 358w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_302-300x213.png 300w" sizes="(max-width: 358px) 100vw, 358px" />
   
   <p class="wp-caption-text">
     Adding an API Key
@@ -501,7 +501,7 @@ First we'll add a new Key:
 And here it is:
 
 <div id="attachment_9204" style="width: 435px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_303.png" alt="New API Key, Fancy UI :)" width="425" height="337" class="size-full wp-image-9204" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_303.png 425w, /wp-content/uploads/2018/04/aspnetcore2cosmos_303-300x238.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_303-378x300.png 378w" sizes="(max-width: 425px) 100vw, 425px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_303.png" alt="New API Key, Fancy UI :)" width="425" height="337" class="size-full wp-image-9204" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_303.png 425w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_303-300x238.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_303-378x300.png 378w" sizes="(max-width: 425px) 100vw, 425px" />
   
   <p class="wp-caption-text">
     New API Key, Fancy UI 🙂
@@ -511,7 +511,7 @@ And here it is:
 And it shows up in our fancy API Key list like so:
 
 <div id="attachment_9205" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_304-600x92.png" alt="Viewing created API Keys" width="600" height="92" class="size-medium-width wp-image-9205" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_304-600x92.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_304-300x46.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_304-768x118.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_304-1024x157.png 1024w, /wp-content/uploads/2018/04/aspnetcore2cosmos_304.png 1141w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_304-600x92.png" alt="Viewing created API Keys" width="600" height="92" class="size-medium-width wp-image-9205" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_304-600x92.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_304-300x46.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_304-768x118.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_304-1024x157.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_304.png 1141w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Viewing created API Keys
@@ -521,7 +521,7 @@ And it shows up in our fancy API Key list like so:
 And we can revoke one of the keys easily:
 
 <div id="attachment_9206" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_305-600x77.png" alt="Revoked API Key disappears, success!" width="600" height="77" class="size-medium-width wp-image-9206" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_305-600x77.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_305-300x38.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_305-768x98.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_305-1024x131.png 1024w, /wp-content/uploads/2018/04/aspnetcore2cosmos_305.png 1129w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_305-600x77.png" alt="Revoked API Key disappears, success!" width="600" height="77" class="size-medium-width wp-image-9206" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_305-600x77.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_305-300x38.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_305-768x98.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_305-1024x131.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_305.png 1129w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Revoked API Key disappears, success!
@@ -531,7 +531,7 @@ And we can revoke one of the keys easily:
 And here it is in Cosmos DB Data Explorer, with the poorly named "Scheme" property indicating "3", which is "RevokedAPIKey":
 
 <div id="attachment_9207" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png" alt="Viewing Revoked API Key in Cosmos DB Data Explorer" width="600" height="236" class="size-medium-width wp-image-9207" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-300x118.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-768x302.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306-763x300.png 763w, /wp-content/uploads/2018/04/aspnetcore2cosmos_306.png 885w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png" alt="Viewing Revoked API Key in Cosmos DB Data Explorer" width="600" height="236" class="size-medium-width wp-image-9207" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_306-600x236.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_306-300x118.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_306-768x302.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_306-763x300.png 763w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_306.png 885w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Viewing Revoked API Key in Cosmos DB Data Explorer
@@ -715,7 +715,7 @@ That's all we needed! Let's try it out with [postman][15].
 Let's start with the happy path, passing in good credentials:
 
 <div id="attachment_9209" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_308-600x230.png" alt="Testing the successful path w/ good API Credentials" width="600" height="230" class="size-medium-width wp-image-9209" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_308-600x230.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308-300x115.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308-768x294.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308-784x300.png 784w, /wp-content/uploads/2018/04/aspnetcore2cosmos_308.png 888w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_308-600x230.png" alt="Testing the successful path w/ good API Credentials" width="600" height="230" class="size-medium-width wp-image-9209" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_308-600x230.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_308-300x115.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_308-768x294.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_308-784x300.png 784w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_308.png 888w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Testing the successful path w/ good API Credentials
@@ -725,7 +725,7 @@ Let's start with the happy path, passing in good credentials:
 Then we should try a number of failure situations, like no credentials, bad credentials, and invalidly formatted credentials:
 
 <div id="attachment_9208" style="width: 610px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2018/04/aspnetcore2cosmos_307-600x331.png" alt="Verifying Bad Token reports 401" width="600" height="331" class="size-medium-width wp-image-9208" srcset="/wp-content/uploads/2018/04/aspnetcore2cosmos_307-600x331.png 600w, /wp-content/uploads/2018/04/aspnetcore2cosmos_307-300x166.png 300w, /wp-content/uploads/2018/04/aspnetcore2cosmos_307-768x424.png 768w, /wp-content/uploads/2018/04/aspnetcore2cosmos_307-544x300.png 544w, /wp-content/uploads/2018/04/aspnetcore2cosmos_307.png 888w" sizes="(max-width: 600px) 100vw, 600px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_307-600x331.png" alt="Verifying Bad Token reports 401" width="600" height="331" class="size-medium-width wp-image-9208" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_307-600x331.png 600w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_307-300x166.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_307-768x424.png 768w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_307-544x300.png 544w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/aspnetcore2cosmos_307.png 888w" sizes="(max-width: 600px) 100vw, 600px" />
   
   <p class="wp-caption-text">
     Verifying Bad Token reports 401

@@ -21,7 +21,7 @@ The question was raised again if SA should be disabled. First, it doesn't matter
 So to put it lightly...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//NoEntry.gif" alt="" title="" width="292" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//NoEntry.gif" alt="" title="" width="292" height="301" />
 </div>
 
 I want to get some things out of the way first that I believe in and go about while having SA on my database servers

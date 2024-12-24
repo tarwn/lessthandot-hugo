@@ -26,11 +26,11 @@ I have been using Chrome for over a year now and have been very happy with it. Y
 
 I decided to look at some stats for this site and compared April of this year to April of last year. The image below has this information.
 
-<img src="/wp-content/uploads/blogs/WebDev//BrowserPercentage.PNG" alt="" title="" width="592" height="756" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//BrowserPercentage.PNG" alt="" title="" width="592" height="756" />
 
 As you can see FireFox lost about 10% while Chrome gained 9% and Safari gained almost 1%. So what is going on, are the early adapters switching to Chrome from FireFox? Take a look at the [NetMarket stats][1]
 
-<img src="/wp-content/uploads/blogs/WebDev//stats.PNG" alt="" title="" width="750" height="242" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//stats.PNG" alt="" title="" width="750" height="242" />
 
 FireFox had 24.72% of all bowser traffic in November, in April it had 24.59%, FireFox didn't gain anything in the last 6 months.
 

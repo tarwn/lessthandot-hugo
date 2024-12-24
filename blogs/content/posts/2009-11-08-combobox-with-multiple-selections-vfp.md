@@ -273,6 +273,6 @@ ENDDEFINE
 **************************************************
 ```
 
-Attached is the <a href="/wp-content/uploads/blogs/DataMgmt/collapsable\_listbox.zip" Title = "Collapsable Listbox">collapsable\_listbox.zip</a>
+Attached is the <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/collapsable\_listbox.zip" Title = "Collapsable Listbox">collapsable\_listbox.zip</a>
 
  [1]: http://www.universalthread.com/Report.aspx?Session=4E347844434F494E675A633D20664C635A4A4F345A4F3762735542576858773356636E377936573763386E4541

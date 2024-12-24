@@ -48,13 +48,13 @@ FROM OPENROWSET('MSDASQL',
 Back to the import wizard; now that you have the data source, click browse to locate your Excel file. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//xls_1.gif" alt="" title="" width="541" height="519" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//xls_1.gif" alt="" title="" width="541" height="519" />
 </div>
 
 Hit Next and you should be able to hit next again sense you are working in the database to import directly. If they are not, fill in the blanks as needed for your DB and instance. Leave, "copy data from one or more tables or views" select and hit next in the next screen. In the, "select source tables and views screen, tick the first sheet (or the sheet that has the relevant data) and either leave the name for the destination the same or change it to what you want. I like to change it to a meaningful name and one that is easier to type for my query.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//xls_2.gif" alt="" title="" width="541" height="519" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//xls_2.gif" alt="" title="" width="541" height="519" />
 </div>
 
 Hit next and then hit finish. That should be it.

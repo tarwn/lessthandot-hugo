@@ -32,7 +32,7 @@ I downloaded mint 14 and did apt-get install redis-server. Then you need to chan
 I used VMWare workstation 8 and I had to use NAT translation for the network and add forward the 6379 port.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/redis/redis1.png?mtime=1362333768"><img alt="" src="/wp-content/uploads/users/chrissie1/redis/redis1.png?mtime=1362333768" width="602" height="612" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/redis/redis1.png?mtime=1362333768"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/redis/redis1.png?mtime=1362333768" width="602" height="612" /></a>
 </div>
 
 you can check if your redis server works by doing <code class="codespan">redis-cli ping</code> on the server. This should return PONG. To be sure the binding works you should try <code class="codespan">redis-cli -h ipaddress ping</code>. where you change ipaddress with the ip-address of the linux machine. This should also give PONG. 

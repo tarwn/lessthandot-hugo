@@ -81,7 +81,7 @@ By taking a little time to develop some standards and follow them, and understan
 
 I am excited to read the other T-SQL Tuesday entries!
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif
  [2]: http://troubleshootingsql.com/2011/07/05/invitation-for-t-sql-tuesday-19-t-sql-best-practices/
  [3]: http://twitter.com/#!/SQLPoolBoy
  [4]: http://sqlskills.com/blogs/jonathan/

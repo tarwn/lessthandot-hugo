@@ -45,7 +45,7 @@ So whatever unittest we no create to test if it selectsall text when we enter th
 Creating a unittest for this in MS-test is trivial. Just rightclick the method and hit create unit tests.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mstest/mstest1.png?mtime=1316334059"><img alt="" src="/wp-content/uploads/users/chrissie1/mstest/mstest1.png?mtime=1316334059" width="585" height="464" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mstest/mstest1.png?mtime=1316334059"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mstest/mstest1.png?mtime=1316334059" width="585" height="464" /></a>
 </div>
 
 Just select the method you want to test and click enter.
@@ -161,7 +161,7 @@ End Class
 If you now run this test, you will get this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mstest/mstest2.png?mtime=1316334400"><img alt="" src="/wp-content/uploads/users/chrissie1/mstest/mstest2.png?mtime=1316334400" width="566" height="148" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mstest/mstest2.png?mtime=1316334400"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mstest/mstest2.png?mtime=1316334400" width="566" height="148" /></a>
 </div>
 
 Now we change our code to this.
@@ -180,7 +180,7 @@ End Class
 And we run the test again to see the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mstest/mstest3.png?mtime=1316334574"><img alt="" src="/wp-content/uploads/users/chrissie1/mstest/mstest3.png?mtime=1316334574" width="539" height="144" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mstest/mstest3.png?mtime=1316334574"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mstest/mstest3.png?mtime=1316334574" width="539" height="144" /></a>
 </div>
 
 ## Conclusion

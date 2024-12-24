@@ -33,7 +33,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  For those of you interested, you can download the slide deck of the session – which contains a lot of links to very useful resources – at <a href="http://www.slideshare.net/KoenVerbeeck/sql-server-days-2013-create-etl-solutions-faster-with-metadata-driven-development">slideshare</a>. I used a small application I wrote to upload flat file metadata to a database. You can find the code <a href="/wp-content/uploads/users/koenverbeeck/SSD2013/MetadataLoader.zip?mtime=1384287593">here</a>. I do not provide any support however and using it is at your own risk. A zip file with sample flat files, the .sql scripts and the BIML script used in the demos can be downloaded <a href="/wp-content/uploads/users/koenverbeeck/SSD2013/GenerateSSISWithBIML.zip">here</a>.
+  For those of you interested, you can download the slide deck of the session – which contains a lot of links to very useful resources – at <a href="http://www.slideshare.net/KoenVerbeeck/sql-server-days-2013-create-etl-solutions-faster-with-metadata-driven-development">slideshare</a>. I used a small application I wrote to upload flat file metadata to a database. You can find the code <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSD2013/MetadataLoader.zip?mtime=1384287593">here</a>. I do not provide any support however and using it is at your own risk. A zip file with sample flat files, the .sql scripts and the BIML script used in the demos can be downloaded <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSD2013/GenerateSSISWithBIML.zip">here</a>.
 </p>
 
 <p style="text-align: justify;">

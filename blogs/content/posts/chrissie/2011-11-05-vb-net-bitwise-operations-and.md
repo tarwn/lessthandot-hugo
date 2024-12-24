@@ -31,7 +31,7 @@ So I digressed, this post is not about floating point calculations. This post is
 I just know you have come across something like this in your life.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/enums/enums1.png?mtime=1320479235"><img alt="" src="/wp-content/uploads/users/chrissie1/enums/enums1.png?mtime=1320479235" width="240" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/enums/enums1.png?mtime=1320479235"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/enums/enums1.png?mtime=1320479235" width="240" height="207" /></a>
 </div>
 
 And we all know this needs a backing object. 
@@ -125,7 +125,7 @@ We would of course have unittests to check our theories.
 We want to store what we have in our view into our backingobject.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765"><img alt="" src="/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765" width="240" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765" width="240" height="207" /></a>
 </div>
 
 0110 = Option2 and Option3 are selected. in decimal that would be 6. 
@@ -205,7 +205,7 @@ Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles M
 Which would then look like this on load.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765"><img alt="" src="/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765" width="240" height="207" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/enums/Enums2.png?mtime=1320480765" width="240" height="207" /></a>
 </div>
 
 And again I&#8217;m sure you can find a way to make this better.

@@ -26,4 +26,4 @@ The PowerPoint presentation and all .rdl files can be downloaded [here][3].
 
  [1]: http://sqlconnections-eorg.eventbrite.com/
  [2]: http://www.sqlpass.org/summit/2011/Speakers/CallForSpeakers/SessionDetail.aspx?sid=1004
- [3]: /wp-content/uploads/users/grrlgeek/ChiSQL%2020110802.zip?mtime=1312426528
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/ChiSQL%2020110802.zip?mtime=1312426528

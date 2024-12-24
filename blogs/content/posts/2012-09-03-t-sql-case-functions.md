@@ -35,7 +35,7 @@ SELECT TOP 10 ISNULL(MiddleName,'NA')AS NoNullMiddleName FROM Person.Person
 In the result we see that all the NULL values are replaced by the 'NA' value. Values that were not NULL keep their value:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC1.gif?mtime=1346673979"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC1.gif?mtime=1346673979" width="154" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC1.gif?mtime=1346673979"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC1.gif?mtime=1346673979" width="154" height="235" /></a>
 </div>
 
 **COALESCE**
@@ -61,7 +61,7 @@ Select name, size, weight, COALESCE(size,CAST(weight AS VARCHAR(10))) AS coalesc
 In the result you see that the size is shown in the coalesceresult column unless the original value was NULL. In that case the weight value is returned:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC2.gif?mtime=1346673994"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC2.gif?mtime=1346673994" width="369" height="269" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC2.gif?mtime=1346673994"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC2.gif?mtime=1346673994" width="369" height="269" /></a>
 </div>
 
 **IIF**
@@ -77,7 +77,7 @@ SELECT IIF(Title LiKE '%s.','Miss','Mister') AS Title, FirstName
 Since IIF supports the true/false expressions you can even put logical expressions in their place to create single line CASE scenarios to have more possibilities. For ease of use and general readability of your code, I would not recommend this. The result of the previous query:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC3.gif?mtime=1346674010"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC3.gif?mtime=1346674010" width="154" height="257" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC3.gif?mtime=1346674010"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC3.gif?mtime=1346674010" width="154" height="257" /></a>
 </div>
 
 **CHOOSE**
@@ -92,7 +92,7 @@ SELECT FirstName, LastName, MiddleName, CHOOSE(2,FirstName, LastName, MiddleName
 In normal coding you would dynamically assign a value to the index with a variable. The result of the above query is:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC4.gif?mtime=1346674021"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC4.gif?mtime=1346674021" width="330" height="256" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC4.gif?mtime=1346674021"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/CaseSC4.gif?mtime=1346674021" width="330" height="256" /></a>
 </div>
 
 **Conclusion**

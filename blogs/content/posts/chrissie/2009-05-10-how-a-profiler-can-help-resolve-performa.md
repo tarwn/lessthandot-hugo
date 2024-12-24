@@ -21,7 +21,7 @@ Today I finaly had some time to sacrifice to finding why my application was slow
 So here is the first profiler screenshot.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/profiler/profiler2.jpg" alt="" title="" width="911" height="265" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/profiler/profiler2.jpg" alt="" title="" width="911" height="265" />
 </div>
 
 Here we can see that the main method takes 20 seconds to run and that <code class="codespan">resolve&lt;T&gt;</code> takes the most time.
@@ -29,13 +29,13 @@ Here we can see that the main method takes 20 seconds to run and that <code clas
 Now lets drill down and see if we can find one that takes up most of that time.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/profiler/profiler1.jpg" alt="" title="" width="561" height="135" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/profiler/profiler1.jpg" alt="" title="" width="561" height="135" />
 </div>
 
 As we can see FindAllPimsCases lin LoadList takes up 9 seconds of my time and it&#8217;s not even needed (it&#8217;s a connection with a very slow Oracle database). So I delete it. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/profiler/profiler3.jpg" alt="" title="" width="962" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/profiler/profiler3.jpg" alt="" title="" width="962" height="301" />
 </div>
 
 And the result is above. Main now takes 11 seconds to run. Which is acceptable for now.

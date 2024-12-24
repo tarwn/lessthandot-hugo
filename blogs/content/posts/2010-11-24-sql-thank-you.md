@@ -19,7 +19,7 @@ tags:
 This will be a short post but nonetheless a very important one to me. A good friend of mine, Jason Strate ([Blog][1] | [Twitter][2]), posted a blog, "[What are you thankful for][3]?" In this post he asked all of his readers to also take a few moments and blog about the same. So here we go...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/thankssqlstyle.gif" alt="" title="" width="264" height="199" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/thankssqlstyle.gif" alt="" title="" width="264" height="199" align="left" />
 </div>
 
 Most know that I recently changed jobs. This change was pretty big for me. The reason this was not a small move is due to leaving a production DBA role and moving into consulting. The commute is longer as well but as odd as it may seem, I don't mind the drive. The drive gives me time to catch podcasts and other audio type training materials. With the change I find myself extremely thankful for the fact that I have a great amount of support from another good friend, Aaron Lowe ([Blog][4] | [Twitter][5]). Moving into this role has been nothing but smooth. Finding things, meeting people (which are next to impossible when consultants are in and out), knowing what and where I need to be and what to focus on are all things that typically is a bumpy ride when you jump in. That hasn't been the case this time and between Aaron and my new management, has been extremely pleasant. An added bonus has been Wendy Pastrick ([Blog][6] | [Twitter][7]) also working alongside helping me pave the way forward with the new company. The SQL Saturday in Chicago crew took it to the next level of working together!

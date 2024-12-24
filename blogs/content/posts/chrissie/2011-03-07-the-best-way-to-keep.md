@@ -58,7 +58,7 @@ Requires quite a bit of code in VB.Net. And you can&#8217;t change at runtime.
 You can add a settings file via new item in any visual studio project you want. The files also have a .settings extension. Every setting ha a name, type, scope and value. The settings are actually a bit of XML with some T4-generated code attached to it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/settings/settings.png?mtime=1299486179"><img alt="" src="/wp-content/uploads/users/chrissie1/settings/settings.png?mtime=1299486179" width="794" height="181" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/settings/settings.png?mtime=1299486179"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/settings/settings.png?mtime=1299486179" width="794" height="181" /></a>
 </div>
 
 ```vbnet

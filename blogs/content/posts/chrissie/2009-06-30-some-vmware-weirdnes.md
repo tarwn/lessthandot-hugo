@@ -30,13 +30,13 @@ The last one did the same thing as the server. It rebooted, ran chkdsk, rebooted
 First I had to start the machine in bios mode.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwarepowerontobios.png" alt="" title="" width="569" height="281" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwarepowerontobios.png" alt="" title="" width="569" height="281" />
 </div>
 
 you can than change the boot sequence so that the CD-ROM drive is first.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/vmwarebios.png" alt="" title="" width="640" height="475" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/vmwarebios.png" alt="" title="" width="640" height="475" />
 </div>
 
 Now pop in the CD and save and exit the bios. The machine will now reboot.

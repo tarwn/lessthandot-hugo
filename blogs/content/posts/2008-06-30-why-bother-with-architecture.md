@@ -39,7 +39,7 @@ Why indeed... well, I thought it may be useful to post a little analogy with the
 Firstly, let me introduce the Winchester Mystery House, of the Winchester Guns family fame:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/Architect/images/winchesterhouse.png" alt="" title="" width="440" height="286" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect/images/winchesterhouse.png" alt="" title="" width="440" height="286" />
 </div>
 
 

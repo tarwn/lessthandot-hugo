@@ -54,19 +54,19 @@ You can publish from both Report Designer (BIDS, or now SQL Server Data Tools) a
 When looking at a report in Report Builder 3.0, go to the Report Builder button in the top left corner and select "Publish Report Parts". A screen that opens will allow you to publish all parts of the report you've chosen, or only selected parts.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Parts1.JPG?mtime=1336705090" alt="" width="603" height="456" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Parts1.JPG?mtime=1336705090" alt="" width="603" height="456" />
 </p>
 
 In this report, I only want to deploy Chart8 as a report part. I can click the triangle next to each item to view it, and add a description. You can choose what folder on the report server to publish to by clicking the Browse button. Click the Publish button to send the parts to your report server.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Parts2.JPG?mtime=1336705090" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Parts2.JPG?mtime=1336705090" alt="" />
 </p>
 
 Log in to your report server and navigate to the folder you selected. You will see the report part listed there. If provided, the description will be below the name.
 
 <p style="text-align: center">
-  <img style="text-align: center" src="/wp-content/uploads/users/grrlgeek/RB3Parts3.JPG?mtime=1336705090" alt="" />
+  <img style="text-align: center" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Parts3.JPG?mtime=1336705090" alt="" />
 </p>
 
 **Using a Report Part In Another Report** 
@@ -74,19 +74,19 @@ Log in to your report server and navigate to the folder you selected. You will s
 When working with a report, click the Insert tab, then the Report Parts button.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Parts4.JPG?mtime=1336705090" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Parts4.JPG?mtime=1336705090" alt="" />
 </p>
 
 The Report Part Gallery will open.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Parts5.JPG?mtime=1336705090" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Parts5.JPG?mtime=1336705090" alt="" />
 </p>
 
 Double-click the part you wish to use on this report and it will be added to the report. Notice that the associated Data Source and Dataset have also been added.
 
 <p style="text-align: center">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3Parts6.JPG?mtime=1336705090" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3Parts6.JPG?mtime=1336705090" alt="" />
 </p>
 
 Yes, publishing and re-using report parts is that easy.

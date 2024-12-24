@@ -52,7 +52,7 @@ console.log('Server running at http://127.0.0.1:1337/');```
 for this I went to my Documents place and added a new empty document.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nodejs/nodejs1.png?mtime=1307949854"><img alt="" src="/wp-content/uploads/users/chrissie1/nodejs/nodejs1.png?mtime=1307949854" width="1070" height="879" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs1.png?mtime=1307949854"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs1.png?mtime=1307949854" width="1070" height="879" /></a>
 </div>
 
 and the name the file helloworld.js. Copy the code you see above in it and save it.
@@ -60,7 +60,7 @@ and the name the file helloworld.js. Copy the code you see above in it and save 
 Now go back to the terminal and go to the Documents directory and type in <code class="codespan">node helloworld.js </code>. And this will be the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nodejs/nodejs2.png?mtime=1307950076"><img alt="" src="/wp-content/uploads/users/chrissie1/nodejs/nodejs2.png?mtime=1307950076" width="1070" height="879" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs2.png?mtime=1307950076"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs2.png?mtime=1307950076" width="1070" height="879" /></a>
 </div>
 
 As you can see I have also opened firefox and surfed to http://127.0.0.1:1337/ because that is where the script said it was going to be on the line <code class="codespan">.listen(1337, "127.0.0.1");</code> on the lines 

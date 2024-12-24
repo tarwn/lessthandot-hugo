@@ -28,7 +28,7 @@ Fear not, you can add this keyboard short-cut!
   6. Click the Assign button and then the OK button.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/SSMSCtrlRSettings.JPG?mtime=1362416270"><img alt="" src="/wp-content/uploads/users/kconan/SSMSCtrlRSettings.JPG?mtime=1362416270" width="644" height="376" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/SSMSCtrlRSettings.JPG?mtime=1362416270"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/SSMSCtrlRSettings.JPG?mtime=1362416270" width="644" height="376" /></a>
 </div>
 
 And presto, the Ctrl+R functionality to hide or display the query results/messages pane in SSMS!

@@ -37,13 +37,13 @@ SELECT * FROM Sales.vStoreWithContacts
 And then you click the "Display Estimated Execution Plan" or the "Include Actual Execution Plan" button in the SQL Editor Toolbar of SQL Server Management Studio.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP1.JPG?mtime=1357810925"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP1.JPG?mtime=1357810925" width="730" height="129" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP1.JPG?mtime=1357810925"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP1.JPG?mtime=1357810925" width="730" height="129" /></a>
 </div>
 
 The difference between the Estimated and the Actual plan is the execution of the query itself. When you hit the "Display Estimated Execution Plan" button, SQL Server Management Studio will immediately show you an Execution plan, however it's an estimated plan and the query itself is NOT executed. When you hit the "Include Actual Execution Plan" nothing will happen until you execute the query. After execution of the query a third tab will appear in SSMS showing the Execution Plan that was actually used:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP2.JPG?mtime=1357810925"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP2.JPG?mtime=1357810925" width="1651" height="711" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP2.JPG?mtime=1357810925"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP2.JPG?mtime=1357810925" width="1651" height="711" /></a>
 </div>
 
 **Reading Execution Plans**
@@ -51,19 +51,19 @@ The difference between the Estimated and the Actual plan is the execution of the
 When you want to read the above Execution Plan you have to read from right to left and from bottom to top. So SQL Server will start with
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP3.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP3.JPG?mtime=1357810926" width="232" height="200" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP3.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP3.JPG?mtime=1357810926" width="232" height="200" /></a>
 </div>
 
 And end with
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP4.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP4.JPG?mtime=1357810926" width="91" height="86" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP4.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP4.JPG?mtime=1357810926" width="91" height="86" /></a>
 </div>
 
 Other information you directly can see is the most expensive operation and based on the thickness of the connecting arrows you can see the amount of data thatï¿½s streaming through them:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP5.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP5.JPG?mtime=1357810926" width="783" height="226" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP5.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP5.JPG?mtime=1357810926" width="783" height="226" /></a>
 </div>
 
 **Finding more information**
@@ -71,7 +71,7 @@ Other information you directly can see is the most expensive operation and based
 When you hover your mouse over the arrows or operations in an Execution Plan a pop-up will appear giving you more detailed information about the rows or operation:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP6.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP6.JPG?mtime=1357810926" width="225" height="270" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP6.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP6.JPG?mtime=1357810926" width="225" height="270" /></a>
 </div>
 
 Needless to say that the Actual Number of Rows and some other information will not be available in an Estimated Execution Plan. In the example above we see a big difference between the Estimated and the Actual Number of Rows which might indicate that our statistics are out of date.
@@ -79,13 +79,13 @@ Needless to say that the Actual Number of Rows and some other information will n
 For even more information select an operation and open the Properties Window (F4):
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP7.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP7.JPG?mtime=1357810926" width="400" height="225" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP7.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP7.JPG?mtime=1357810926" width="400" height="225" /></a>
 </div>
 
 Another option to get more out of your Execution Plans is to download [SQL Sentry Plan Explorer][1] more information is found at their site but here is a screenshot from the same Execution Plan in the Free Plan Explorer:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP8.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP8.JPG?mtime=1357810926" width="1267" height="502" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP8.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP8.JPG?mtime=1357810926" width="1267" height="502" /></a>
 </div>
 
 As you can see, the most expensive operation is highlighted in red and the tool also highlights the difference between the estimated and actual rows.
@@ -101,7 +101,7 @@ WHERE Firstname = 'Alan'
 You'll see some green text in the top of the Execution Plan:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP9.JPG?mtime=1357810926"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/EP9.JPG?mtime=1357810926" width="1081" height="77" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP9.JPG?mtime=1357810926"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/EP9.JPG?mtime=1357810926" width="1081" height="77" /></a>
 </div>
 
 This information comes from the Dynamic Management View: sys.dm\_db\_missing\_index\_details. More information on Indexes is out of scope for this post but be careful with just implanting these Missing Indexes. They might improve the performance of this query but since they need to be maintained they can also slow down other operations on the database.
@@ -122,7 +122,7 @@ GO
 When you execute the queries you'll see they both return the same 70 rows but when you look at the header of the Execution Plans you'll see that the first query costs less than the second one in this batch:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/ep10.JPG?mtime=1357810927"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/ep10.JPG?mtime=1357810927" width="275" height="150" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ep10.JPG?mtime=1357810927"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/ep10.JPG?mtime=1357810927" width="275" height="150" /></a>
 </div>
 
 **Conclusion**

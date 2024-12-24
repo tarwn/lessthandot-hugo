@@ -31,7 +31,7 @@ Luckily my esteemed colleague Chrissie1 has been preaching the gospel of nHibern
 I've started down the road, and I think that it really will. This series of blogposts will contain my ramblings as I travel down the path of recreating this application. We'll start with development of the domain model. The program has a very simple domain model (Recipe, Ingredient, Impression, and Person) which will make it a good way to demonstrate new concepts without getting bogged down in complex application design. Here is a diagram of the application's problem domain:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev//RecipeTrackerDomain.jpg" alt="" title="" width="709" height="530" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev//RecipeTrackerDomain.jpg" alt="" title="" width="709" height="530" />
 </div>
 
 The goals of this exercise will be:

@@ -5,7 +5,7 @@ type: post
 date: 2015-11-18T14:36:12+00:00
 ID: 4228
 url: /index.php/architect/distributed-storage-how-sql-azure-replicas-work/
-featured_image: /wp-content/uploads/2015/11/SQL-Azure-Sq.png
+featured_image: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/11/SQL-Azure-Sq.png
 views:
   - 9034
 rp4wp_auto_linked:

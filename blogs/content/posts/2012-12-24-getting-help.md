@@ -39,7 +39,7 @@ Don't be scared to ask for help on twitter, if you don't know any of the SQL Ser
 Here is an image of the replies on twitter after I asked a question with the #sqlhelp tag
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/sqlhelp.PNG?mtime=1355070897"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/sqlhelp.PNG?mtime=1355070897" width="516" height="438" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/sqlhelp.PNG?mtime=1355070897"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/sqlhelp.PNG?mtime=1355070897" width="516" height="438" /></a>
 </div>
 
 Here is a small list of people with their speciality on twitter

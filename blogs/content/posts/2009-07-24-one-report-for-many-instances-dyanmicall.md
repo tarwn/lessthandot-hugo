@@ -71,7 +71,7 @@ Now to use that in SSRS we have to do a few things. Get a project ready and name
 Create a new dataset named "ServerListing" like below
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//srv_1.gif" alt="" title="" width="463" height="380" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//srv_1.gif" alt="" title="" width="463" height="380" />
 </div>
 
 Save that by hitting OK and now let's create a parameter that our dataset will populate. Name the parameter "ServerName". Select "From Query" for available values and find ServerListing in the list. select the only value available for "Value field" and "Label field".
@@ -85,7 +85,7 @@ like so...
 and should appear like this in the prompts...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//srv_2.gif" alt="" title="" width="474" height="408" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//srv_2.gif" alt="" title="" width="474" height="408" />
 </div>
 
 Save all of this and then in the text for the dataset use
@@ -97,7 +97,7 @@ Select [Name] From sys.databases
 This step is import so don't forget to do it. In order for SSRS to know what you are returning from the query on NoIntialCatalog, you need to define it sense validation is out of it's control here and the column will not prefill for you. So in the Fields tab go ahead and enter a field name, "Name" with a type of databases field and value of Name.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//srv_3.gif" alt="" title="" width="474" height="408" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//srv_3.gif" alt="" title="" width="474" height="408" />
 </div>
 
 Now to actually show this in action we need something on the report so drag a table over and remove the extra columns but the first. Drag over the "Name" from the dataset, "DBListing" and preview the report. 
@@ -107,7 +107,7 @@ The report is obviously going to be slow loading. You're scanning the network an
 So after that runs you should end up with the list, select a instance and hit View Report. After that your database listing should return. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//srv_4.gif" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//srv_4.gif" alt="" title="" />
 </div>
 
 To go farther, you linked the results of the database listing to another parameter like the instance listing. Then run your analysis off of that per database.

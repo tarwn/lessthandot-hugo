@@ -43,7 +43,7 @@ My slides and .rdls can be found [here][6]. Thank you again to all fantastic org
 
  [1]: http://sqlsaturday.com/eventhome.aspx
  [2]: http://voodoodoughnut.com/index.php
- [3]: /wp-content/uploads/users/grrlgeek/IMG_1497_small.jpg?mtime=1318893291 ""
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/IMG_1497_small.jpg?mtime=1318893291 ""
  [4]: http://www.amazon.com/Microsoft%C2%AE-Server%C2%AE-Reporting-Services-Microsoft/dp/0735626472/ref=sr_1_3?ie=UTF8&qid=1318893376&sr=8-3
  [5]: http://www.amazon.com/Professional-SQL-Server-Reporting-Services/dp/0764568787/ref=sr_1_10?s=books&ie=UTF8&qid=1318893484&sr=1-10
  [6]: http://sqlsaturday.com/viewsession.aspx?sat=92&sessionid=4830

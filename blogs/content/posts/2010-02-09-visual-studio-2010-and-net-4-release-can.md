@@ -19,7 +19,7 @@ tags:
 
 ---
 <div>
-  <img src="/wp-content/uploads/blogs/DesktopDev//logo_vstudio.png" alt="" title="" width="155" height="23" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev//logo_vstudio.png" alt="" title="" width="155" height="23" />
 </div>
 
 Visual Studio 2010 and .NET 4 release candidates are available for download

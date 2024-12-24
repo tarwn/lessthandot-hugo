@@ -27,7 +27,7 @@ I like the and later part.
 Here is the printscreen, just in case you don&#8217;t believe me.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Reportviewer/ReportviewerError.png" alt="" title="" width="497" height="184" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Reportviewer/ReportviewerError.png" alt="" title="" width="497" height="184" />
 </div>
 
 Solving this took some time. Finding out that they changed this is easy. Finding out how to solve it is a little less documented. 
@@ -40,7 +40,7 @@ _PreviewForm.Viewer.LocalReport.AddTrustedCodeModuleInCurrentAppDomain("rbarcode
 Well to be honest it had a green squigle underneath it to say that AddTrustedCodeModuleInCurrentAppDomain was deprecated and that I had to use AddFullTrustModuleInSandboxAppDomain all the time. But I thought it was just trying to annoy me.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Reportviewer/ReportviewerError2.png" alt="" title="" width="990" height="20" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Reportviewer/ReportviewerError2.png" alt="" title="" width="990" height="20" />
 </div>
 
 So I changed it to this.

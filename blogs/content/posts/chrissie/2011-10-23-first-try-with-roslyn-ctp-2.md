@@ -91,7 +91,7 @@ End Module
 This gives me the following result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn6.png?mtime=1319355123"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn6.png?mtime=1319355123" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn6.png?mtime=1319355123"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn6.png?mtime=1319355123" width="707" height="423" /></a>
 </div>
 
 As you can see I still have the Private class in that list, which I don&#8217;t want. So I get that out using this linq statement.
@@ -110,7 +110,7 @@ Dim classes =
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn7.png?mtime=1319356957"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn7.png?mtime=1319356957" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn7.png?mtime=1319356957"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn7.png?mtime=1319356957" width="707" height="423" /></a>
 </div>
 
 Since this post is getting rather long already I will leave the reading and writing bit for the next post and the conclusion too.

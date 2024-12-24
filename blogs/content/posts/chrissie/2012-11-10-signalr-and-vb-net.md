@@ -77,7 +77,7 @@ This is the most basic form. Take the data you recieved and broadcast it to all 
 Start this project and you should see something like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR1.png?mtime=1352541992"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR1.png?mtime=1352541992" width="688" height="369" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR1.png?mtime=1352541992"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR1.png?mtime=1352541992" width="688" height="369" /></a>
 </div>
 
 Which at least means our server has started. 
@@ -125,7 +125,7 @@ And it will give you the possibility to send messages.
 Build it and go to your output folder where you click on the exe file several times to get several windows open at the same time and start typing in one of them.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR2.png?mtime=1352542739"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR2.png?mtime=1352542739" width="1186" height="473" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR2.png?mtime=1352542739"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR2.png?mtime=1352542739" width="1186" height="473" /></a>
 </div>
 
 You can see the window I have typed in has the message twice and the other clients will have it once. 
@@ -143,7 +143,7 @@ Then do the nuget thing again.
 And make sure it created a Scripts folder with 5 js files in it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR3.png?mtime=1352543078"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR3.png?mtime=1352543078" width="273" height="151" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR3.png?mtime=1352543078"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR3.png?mtime=1352543078" width="273" height="151" /></a>
 </div>
 
 The important file here is jquery.signalR-1.0.0-alpha1.min.js We will need that soon.
@@ -188,19 +188,19 @@ Make sure you reference the right jquery.signalr file and that you change the ur
 Now you will get a very boring page like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR4.png?mtime=1352543346"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR4.png?mtime=1352543346" width="256" height="67" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR4.png?mtime=1352543346"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR4.png?mtime=1352543346" width="256" height="67" /></a>
 </div>
 
 But let&#8217;s go back to our console app and start typing things in there, and see the magic happen.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR5.png?mtime=1352543488"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR5.png?mtime=1352543488" width="649" height="267" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR5.png?mtime=1352543488"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR5.png?mtime=1352543488" width="649" height="267" /></a>
 </div>
 
 And that&#8217;s not all you can also do this in the webpage.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/SignalR/SignalR6.png?mtime=1352543835"><img alt="" src="/wp-content/uploads/users/chrissie1/SignalR/SignalR6.png?mtime=1352543835" width="583" height="232" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR6.png?mtime=1352543835"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/SignalR/SignalR6.png?mtime=1352543835" width="583" height="232" /></a>
 </div>
 
 Simples.

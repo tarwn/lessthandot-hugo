@@ -52,11 +52,11 @@ Listing 1
 The above code is an extract from a mock monitoring system for an internal dashboard display for an inside sales center. Each monitor that is distributed through the sales center displays 5 to 6 charts at any given time showing key performance indicators (KPIs) by customer sales. For the query in listing 1, the KPI that is obtained displays a table and a line chart showing sales per customer, by name, for the current year. Due to a different report showing critical sales pitfalls of any sale that had a quantity less than 10, which has been deemed by the business as a loss due to cost, the query only returns sales with a quantity greater than 10 units. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/tuning_101_1.gif?mtime=1355031677"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/tuning_101_1.gif?mtime=1355031677" width="624" height="195" /></a><br /> Figure 2
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/tuning_101_1.gif?mtime=1355031677"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/tuning_101_1.gif?mtime=1355031677" width="624" height="195" /></a><br /> Figure 2
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-171.png?mtime=1355031677"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-171.png?mtime=1355031677" width="624" height="217" /></a><br /> Figure 3
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-171.png?mtime=1355031677"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-171.png?mtime=1355031677" width="624" height="217" /></a><br /> Figure 3
 </div>
 
 Formatting aside, this chart can quickly show inside sales where to focus on. The associates of the inside sales department focus on this chart when making calls to customers, when they are not seeking new customers. 
@@ -81,7 +81,7 @@ Of course, best practices should always be a task in review for any query review
 Sargable queries come down to search argument capable, or effectively utilizing indexing to minimize time, memory usage and overall consumption of resource like IO to fulfill the query's needs. This indicates the primary area to review first is the WHERE – the predicates area of the query.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677" width="418" height="174" /></a><br /> Figure 4
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-172.png?mtime=1355031677" width="418" height="174" /></a><br /> Figure 4
 </div>
 
 A good rule to go by out of the box is, anything that manipulates the left side of the comparison will indicate a non-sargable situation. In listing 1, the function Year on the column ShipDate to the left, comparing 2005 to the resulting value, causes this to be a non-sargable predicate – a predicate that cannot fully take advantage of indexing. The YEAR() function is used in this example due to the high usage of it just as shown in listing 1. Luckily, there is an effective way to write this in a sargable manner.
@@ -122,7 +122,7 @@ Listing 3
 The data is as shown in figure 5
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-173.png?mtime=1355031678"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-173.png?mtime=1355031678" width="624" height="237" /></a><br /> Figure 5
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-173.png?mtime=1355031678"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-173.png?mtime=1355031678" width="624" height="237" /></a><br /> Figure 5
 </div>
 
 If the following query was executed against this table to return all the rows in column bla1 that are similar to the parameter string of "data"
@@ -137,7 +137,7 @@ Listing 4
 The above query would result in a plan that effectively scans on the index created from listing 3 (in an OLAP situation, this would be acceptable).
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-174.png?mtime=1355031679"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-174.png?mtime=1355031679" width="580" height="182" /></a><br /> Figure 6
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-174.png?mtime=1355031679"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-174.png?mtime=1355031679" width="580" height="182" /></a><br /> Figure 6
 </div>
 
 If this were an OLAP setup, the query and resulting plan would typically be acceptable. However, if the reporting needs that caused this query to be written and utilized also required the data to be sorted by columns, the needs of the query would drastically change. To take a close look at what sorting would do to the tempdb utilization to fulfill the query, we can look at sys.dm\_io\_virtual\_file\_stats. 
@@ -150,13 +150,13 @@ SELECT num_of_reads,num_of_writes FROM sys.dm_io_virtual_file_stats(DB_ID('tempd
 Listing 5
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-175.png?mtime=1355031679"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-175.png?mtime=1355031679" width="368" height="70" /></a><br /> Figure 7
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-175.png?mtime=1355031679"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-175.png?mtime=1355031679" width="368" height="70" /></a><br /> Figure 7
 </div>
 
 The results above are from the query in listing 4 being executed. To get a good baseline of the tempdb utilization, run listing 4 again and then compare the difference. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-176.png?mtime=1355031679"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-176.png?mtime=1355031679" width="400" height="83" /></a><br /> Figure 8
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-176.png?mtime=1355031679"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-176.png?mtime=1355031679" width="400" height="83" /></a><br /> Figure 8
 </div>
 
 This shows us that tempdb was written to with a factor of 5 given the query from listing 4. Overall, this is a low number and we could live with it on a lot of instances. To show how sorting in SQL Server could drastically change this utilization, execute the query in listing 6. 
@@ -172,19 +172,19 @@ Listing 6
 The first thing to note is the sort operation in the execution plan. In many queries, an ORDER BY may be hard to focus on. In an execution plan, they may stick out a bit more and give a point in the query to refer back to. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-177.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-177.png?mtime=1355031680" width="624" height="142" /></a><br /> Figure 9
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-177.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-177.png?mtime=1355031680" width="624" height="142" /></a><br /> Figure 9
 </div>
 
 Notice first that the warning indicator of red on the highest cost operation has moved from the index scan and to the sort operation. Now, check the tempdb usage that was needed to fulfill the demand the query has.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-178.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-178.png?mtime=1355031680" width="358" height="79" /></a><br /> Figure 10
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-178.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-178.png?mtime=1355031680" width="358" height="79" /></a><br /> Figure 10
 </div>
 
 As shown, the use of tempdb when the estimated memory needs of the plan is exceeded is drastic. In a baseline situation, there would be a major spike in tempdb utilization and overall, cause for concern, review or tempdb configuration changes to handle the increased need.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-179.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-179.png?mtime=1355031680" width="252" height="230" /></a><br /> Figure 11
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-179.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-179.png?mtime=1355031680" width="252" height="230" /></a><br /> Figure 11
 </div>
 
 The above query could effectively be sorted in the final tool to eliminate the ORDER BY all together. Reporting Services has its own sorting capability as do most of the other reporting mechanisms used in most enterprise installations. The key is to measure the effects of the reporting tools or services against the needs of SQL Server performing the sorting. You will find that this tuning effort does lend to a 50/50 finding of, 50% will kick back to better performance, even with the tempdb utilization, over the reporting tool's memory consumption of overall performance of sorting the data at runtime. 
@@ -198,7 +198,7 @@ To monitor cached pages, the Cache Pages counter can be utilized. To test a quer
 Executing the query from listing 1 results in the following buffer allocations
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-180.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-180.png?mtime=1355031680" width="624" height="127" /></a><br /> Figure 12
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-180.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-180.png?mtime=1355031680" width="624" height="127" /></a><br /> Figure 12
 </div>
 
 At this time, no indexing has been performed on the tables the query is reading. This results in 3 HEAP tables and an overall consumption of 39MB of the buffer.
@@ -212,7 +212,7 @@ As stated, indexing can have the highest impact on performance for a SQL Server 
 In listing 1, the following actual execution plan is generated by the optimization process in SQL Server.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-181.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-181.png?mtime=1355031680" width="624" height="170" /></a><br /> Figure 13
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-181.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-181.png?mtime=1355031680" width="624" height="170" /></a><br /> Figure 13
 </div>
 
 > Note: [Plan Explorer Pro][4] is utilized in all the execution plan and tuning efforts shown in this article. This tool is also available in a free version from [SQL Sentry][4]. The pro version is highly recommended and an asset to tuning.</p>
@@ -230,7 +230,7 @@ The above 6 operations are a great place to start when tuning by execution plan 
 Look at the table scan on SalesOrderHeader
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-182.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-182.png?mtime=1355031680" width="791" height="179" /></a><br /> Figure 14
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-182.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-182.png?mtime=1355031680" width="791" height="179" /></a><br /> Figure 14
 </div>
 
 The scan contained a sort on ShipDate and then SalesOrderID and SalesPersonID with a filter on ShipDate. This tells us all we need to create an effective index on SalesOrderHeader.
@@ -251,25 +251,25 @@ Listing 7
 Execute the query from listing 1 again in Plan Explorer and review the results from our index creation
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-183.png?mtime=1355031680"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-183.png?mtime=1355031680" width="624" height="92" /></a><br /> Figure 15
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-183.png?mtime=1355031680"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-183.png?mtime=1355031680" width="624" height="92" /></a><br /> Figure 15
 </div>
 
 Checking the page allocation and how it has changed from our initial results, we can see that the FK indexes are utilized as well as the new index.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-184.png?mtime=1355031681"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-184.png?mtime=1355031681" width="624" height="114" /></a><br /> Figure 16
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-184.png?mtime=1355031681"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-184.png?mtime=1355031681" width="624" height="114" /></a><br /> Figure 16
 </div>
 
 Recall prior in figure 12, the HEAP and resulting pages pulled into the buffer were 799. This has now been reduced to a total of 31 for SalesOrderHeader. As well as the buffered page count being tuned, the execution plan generated has also been tuned for SalesOrderHeader.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-185.png?mtime=1355031681"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-185.png?mtime=1355031681" width="624" height="149" /></a><br /> Figure 17
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-185.png?mtime=1355031681"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-185.png?mtime=1355031681" width="624" height="149" /></a><br /> Figure 17
 </div>
 
 Following the same effective steps to create indexes, cover the remaining table scans from the figure 18.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-186.png?mtime=1355031682"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-186.png?mtime=1355031682" width="624" height="165" /></a><br /> Figure 18
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-186.png?mtime=1355031682"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-186.png?mtime=1355031682" width="624" height="165" /></a><br /> Figure 18
 </div>
 
 Person.Person
@@ -280,7 +280,7 @@ CREATE NONCLUSTERED INDEX IDX_FirstLastName ON Person.Person (FirstName,LastName
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-187.png?mtime=1355031682"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-187.png?mtime=1355031682" width="624" height="48" /></a><br /> Figure 19
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-187.png?mtime=1355031682"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-187.png?mtime=1355031682" width="624" height="48" /></a><br /> Figure 19
 </div>
 
 Sales.SalesOrderDetail
@@ -291,19 +291,19 @@ CREATE NONCLUSTERED INDEX IDX_OrderQTY ON Sales.SalesOrderDetail (OrderQTY)
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-188.png?mtime=1355031682"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-188.png?mtime=1355031682" width="624" height="35" /></a><br /> Figure 20
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-188.png?mtime=1355031682"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-188.png?mtime=1355031682" width="624" height="35" /></a><br /> Figure 20
 </div>
 
 Plan completion after indexing
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-189.png?mtime=1355031682"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-189.png?mtime=1355031682" width="624" height="161" /></a><br /> Figure 21
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-189.png?mtime=1355031682"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-189.png?mtime=1355031682" width="624" height="161" /></a><br /> Figure 21
 </div>
 
 The final step will be reviewing the buffered pages again to ensure the query is utilizing as little resources as needed at this time.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-190.png?mtime=1355032754"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-190.png?mtime=1355032754" width="624" height="149" /></a><br /> Figure 22
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-190.png?mtime=1355032754"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-190.png?mtime=1355032754" width="624" height="149" /></a><br /> Figure 22
 </div>
 
 **Summary**

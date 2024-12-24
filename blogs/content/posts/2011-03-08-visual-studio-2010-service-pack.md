@@ -30,4 +30,4 @@ If you don't have a msdn subscription, then you can download Visual Studio 2010 
 
 ![][1]
 
- [1]: /wp-content/uploads/blogs/DesktopDev/VS%20sp1.PNG ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/VS%20sp1.PNG ""

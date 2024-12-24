@@ -32,9 +32,9 @@ You can check the full agenda [here][2]. There is still room available, so hurry
 
 See you at ITPROceed!
 
-[<img class="alignnone wp-image-3384" src="/wp-content/uploads/2015/05/itproceed.png" alt="itproceed" />][4]
+[<img class="alignnone wp-image-3384" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/05/itproceed.png" alt="itproceed" />][4]
 
  [1]: http://azure.itproceed.be/
  [2]: http://azure.itproceed.be/agenda/
  [3]: http://azure.itproceed.be/registration/
- [4]: /wp-content/uploads/2015/05/itproceed.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/05/itproceed.png

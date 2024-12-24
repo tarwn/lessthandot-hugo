@@ -27,7 +27,7 @@ tags:
 Everyone took all the good things already so I'm here with the leftovers but still things I call the pet peeves and I wouldn't miss. So here is the big five that came to mind
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
 </div>
 
 ### Default Configurations
@@ -35,7 +35,7 @@ Everyone took all the good things already so I'm here with the leftovers but sti
 OK, defaults help everyone. Mostly they help them not actually think about what they are doing. My first call to the drop spree is roughly 90% of all the defaults. Make us think about it! Is making us enter something really that bad of a thing? Maybe it will catch another 1% of the installers if they actually have to think. They may actually say, "Hmm...wonder what that means. I'll go find out before putting a 1MB in that growth box". We have the ability to optimize our own default settings so leave it to us. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
 </div>
 
 ### MSDTC usage
@@ -43,7 +43,7 @@ OK, defaults help everyone. Mostly they help them not actually think about what 
 Can we please come up with something that is actually stable by now??? All I think I have to say about that. Really, all there is to say about it 😉
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
 </div>
 
 ### MAX Memory settings
@@ -51,7 +51,7 @@ Can we please come up with something that is actually stable by now??? All I thi
 SQL Server is an intelligent beastly database server. I mean, smart! So why does SQL Server let people put 2TB into the max memory settings when they have 4GB of RAM? Drop that! And if I catch any of you leaving 2147483647 as the default, your DBA days are numbered. SQL Server will act as fast as a cookie monster with memory cookies if you let it. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
 </div>
 
 ### Everyone will hate me and disagree on this, but can we get rid of db\_datareader and db\_datawriter already?
@@ -59,7 +59,7 @@ SQL Server is an intelligent beastly database server. I mean, smart! So why does
 Security isn't that complex. Really, it isn't. They need SELECT on this so you bottle it role and they have it. How many times do you just click db\_datareader when they "just" need read rights? The same thing goes for db\_datawriter. Well, they need write access to the DB so give it to them. Do they need write to ALL of it? No one can give me the excuse that your security would simply be far too complex to setup or you have hundreds of thousands of users. Hey, if you use all the containers and roles in which you setup right, it actually makes it easier to maintain 😉 Really, if a db\_datareader or db\_datawriter is needed, then create it. Don't leave it as a big red button to be pushed far too many times.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/bullet.gif" alt="" title="" width="50" height="42" align="left" />
 </div>
 
 ### Last but nowhere near least; xp_cmdshell.

@@ -59,13 +59,13 @@ This method is extremely fast. The result is the same.
 Here is my version.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber2.png?mtime=1294139316"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294139316" width="753" height="544" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber2.png?mtime=1294139316"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294139316" width="753" height="544" /></a>
 </div>
 
 And here is the new method.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294139356"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber4.png?mtime=1294139356" width="753" height="544" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber3.png?mtime=1294139356"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber4.png?mtime=1294139356" width="753" height="544" /></a>
 </div>
 
 ## Naming the color
@@ -153,7 +153,7 @@ So I decided on some boundaries and I show an arrow where the average color is s
 And here is the result of the Belgian jury.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber5.png?mtime=1294226022"><img alt="" src="/wp-content/uploads/users/chrissie1/Findfiber/FindFiber5.png?mtime=1294226022" width="831" height="511" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber5.png?mtime=1294226022"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Findfiber/FindFiber5.png?mtime=1294226022" width="831" height="511" /></a>
 </div>
 
 And I&#8217;m actually quit pleased with the result.

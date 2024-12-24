@@ -42,55 +42,55 @@ Yes, I was that excited!
 I have a table with ID, DateAdded, and TimeAdded fields. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt1.JPG?mtime=1301928592"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt1.JPG?mtime=1301928592" width="256" height="126" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt1.JPG?mtime=1301928592"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt1.JPG?mtime=1301928592" width="256" height="126" /></a>
 </div>
 
 I take a full backup of my database at 11:23 AM. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt2.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt2.jpg?mtime=1301928593" width="453" height="60" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt2.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt2.jpg?mtime=1301928593" width="453" height="60" /></a>
 </div>
 
 I insert two more rows into the table. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt3.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt3.jpg?mtime=1301928593" width="238" height="168" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt3.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt3.jpg?mtime=1301928593" width="238" height="168" /></a>
 </div>
 
 I take a transaction log backup at 11:28 AM. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt4.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt4.jpg?mtime=1301928593" width="460" height="56" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt4.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt4.jpg?mtime=1301928593" width="460" height="56" /></a>
 </div>
 
 I delete a record. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt5.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt5.jpg?mtime=1301928593" width="243" height="144" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt5.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt5.jpg?mtime=1301928593" width="243" height="144" /></a>
 </div>
 
 I take another transaction log backup at 11:38 AM. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt6.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt6.jpg?mtime=1301928593" width="455" height="56" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt6.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt6.jpg?mtime=1301928593" width="455" height="56" /></a>
 </div>
 
 I insert two more records. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt7.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt7.jpg?mtime=1301928593" width="250" height="187" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt7.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt7.jpg?mtime=1301928593" width="250" height="187" /></a>
 </div>
 
 I take another transaction log backup at 11:49 AM. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt8.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt8.jpg?mtime=1301928593" width="457" height="57" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt8.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt8.jpg?mtime=1301928593" width="457" height="57" /></a>
 </div>
 
 I insert another record. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt9.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt9.jpg?mtime=1301928593" width="239" height="201" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt9.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt9.jpg?mtime=1301928593" width="239" height="201" /></a>
 </div>
 
 I realize that an application change made at 11:40 was not needed. I want to restore the database to 11:40:00, essentially leaving record 7 but removing records 8 and 9. My transaction log backups were taken at 11:38 and 11:49.
@@ -120,7 +120,7 @@ RESTORE LOG AdventureWorks
 When I select rows from my table, I can see that rows 1, 2, 3, 5 and 6 are included. These were part of the transaction log backup taken at 11:38 AM. From the transaction log backup taken at 11:49, only transactions entered before 11:40 AM are restored – row 7. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/StopAt10.jpg?mtime=1301928593"><img alt="" src="/wp-content/uploads/users/grrlgeek/StopAt10.jpg?mtime=1301928593" width="241" height="172" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt10.jpg?mtime=1301928593"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/StopAt10.jpg?mtime=1301928593" width="241" height="172" /></a>
 </div>
 
 **RESTORE: Learn, Understand, Use** 

@@ -23,7 +23,7 @@ I originally started from the first mentioned article. Our application uses SQL 
 Now, since I am describing the solution I used for the particular application, I will start with the SQL Server table I was using. That table was named Prefs_sl and it was a flat table with 1 record containing all preferences for a sales point. Because of its flat nature it was badly normalized. Say, it had 11 language fields language00 – language10 (nvarchar(100)) to hold name of the language the Sales Point can display and 11 image lngImage00-lngImage10 (varbinary(max)) fields to hold the image of the country flag. So, this was the table I was working with on the SQL Server side.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Prefs_sl SQL Server table.JPG?mtime=1325442752"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Prefs_sl SQL Server table.JPG?mtime=1325442752" width="1764" height="162" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Prefs_sl SQL Server table.JPG?mtime=1325442752"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Prefs_sl SQL Server table.JPG?mtime=1325442752" width="1764" height="162" /></a>
 </div>
 
 Now, I wanted to display these 11 languages with their corresponding flags on the form, so the logical choice was to create a class with the textbox for the unicode text and image for the image flag and then instantiate this class on the form.
@@ -436,7 +436,7 @@ and then convert this value back to nvarchar(max) when saving with sqlexec.
 This is how the form with many languages looked like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/ManyLanguages.JPG?mtime=1325442752"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/ManyLanguages.JPG?mtime=1325442752" width="927" height="654" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ManyLanguages.JPG?mtime=1325442752"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ManyLanguages.JPG?mtime=1325442752" width="927" height="654" /></a>
 </div>
 
 —————————

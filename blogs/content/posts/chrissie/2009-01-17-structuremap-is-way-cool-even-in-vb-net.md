@@ -293,13 +293,13 @@ End Module
 The form now looks like this when run.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Structuremap/structuremapbuildupform2.jpg" alt="" title="" width="304" height="300" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Structuremap/structuremapbuildupform2.jpg" alt="" title="" width="304" height="300" />
 </div>
 
 And as you can see I can even open it in the designer.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/Structuremap/structuremapbuildupform.jpg" alt="" title="" width="746" height="545" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Structuremap/structuremapbuildupform.jpg" alt="" title="" width="746" height="545" />
 </div>
 
 And no instatiating the service anywhere. and only one ObjectFactory.GetInstance in the whole project.
@@ -315,4 +315,4 @@ Sorry for this extra long post.
 **<span class="MT_red">You can always ask question about this in our <a href="http://forum.lessthandot.com/viewforum.php?f=39">VB.Net forum</a>.</span>**
 
  [1]: /index.php/DesktopDev/MSTech/structuremap-is-way-cool
- [2]: /wp-content/uploads/blogs/DesktopDev/Structuremap/Structuremaptrial.zip "Structuremaptrial.zip"
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Structuremap/Structuremaptrial.zip "Structuremaptrial.zip"

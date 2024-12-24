@@ -45,7 +45,7 @@ CREATE NONCLUSTERED INDEX [_dta_index_9_379148396__K1] ON [dbo].[WHDR]
 Why is that a problem you might ask? Well, it might not be a problem if you are working on a HEAP table and that typical work order ID is really in need of a nonclustered index. At that point we would want the awesomeness of a clustered index anyhow.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/omg.gif" alt="" title="" width="243" height="243" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/omg.gif" alt="" title="" width="243" height="243" align="left" />
 </div>
 
 Here is the biggest problem. There is a clustered index on the table and that clustered index only consists of the WO_ID. Yes, that would be an extremely big problem as far as performance goes. You would have two indexes doing the same thing and on every change to the table, you would be updating them at the same time. In a large table that cost can show quick and become painful to the users.

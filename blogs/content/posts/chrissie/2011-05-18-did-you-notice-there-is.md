@@ -21,7 +21,7 @@ This one slipped by me [Microsoft .NET Framework 4 Platform Update 1][1]. So we 
 And let&#8217;s not forget that there is a client profile with the same name, did I mention I hate the client profile? And why is it made the default?
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/5810_2E00_.NET-Framework-4-Platform-Update-1-New-Project.jpg?mtime=1305719488"><img alt="" src="/wp-content/uploads/users/chrissie1/5810_2E00_.NET-Framework-4-Platform-Update-1-New-Project.jpg?mtime=1305719488" width="550" height="302" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/5810_2E00_.NET-Framework-4-Platform-Update-1-New-Project.jpg?mtime=1305719488"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/5810_2E00_.NET-Framework-4-Platform-Update-1-New-Project.jpg?mtime=1305719488" width="550" height="302" /></a>
 </div>
 
 And it consist of three packages.

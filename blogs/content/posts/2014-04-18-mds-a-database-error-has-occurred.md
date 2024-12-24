@@ -24,7 +24,7 @@ I recently came across the following error message when I tried to look at the b
 
 <pre parse="no">515: A database error has occurred. Please contact your system administrator</pre>
 
-[<img class="alignnone size-full wp-image-2585" alt="koen_mdserror" src="/wp-content/uploads/2014/04/koen_mdserror.png" width="299" height="120" />][1]
+[<img class="alignnone size-full wp-image-2585" alt="koen_mdserror" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/koen_mdserror.png" width="299" height="120" />][1]
 
 Too bad I am the system administrator on that machine...
 
@@ -38,4 +38,4 @@ WHERE BatchTag IS NULL;
 ```
 
 
- [1]: /wp-content/uploads/2014/04/koen_mdserror.png
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2014/04/koen_mdserror.png

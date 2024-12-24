@@ -67,13 +67,13 @@ Yep that&#8217;s it.
 The output now looks like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext1.png?mtime=1356945714"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext1.png?mtime=1356945714" width="532" height="670" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext1.png?mtime=1356945714"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext1.png?mtime=1356945714" width="532" height="670" /></a>
 </div>
 
 Or I could output a list of objects and that would look like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext2.png?mtime=1356945965"><img alt="" src="/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext2.png?mtime=1356945965" width="594" height="723" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext2.png?mtime=1356945965"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/servicestacktext/servicestacktext2.png?mtime=1356945965" width="594" height="723" /></a>
 </div>
 
 And that is very convenient. This is the the same as doing SerializeAndFormat().

@@ -27,7 +27,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="http://www.packtpub.com/sql-server-2012-reporting-services-blueprints/book?utm_source=mention.com&utm_medium=link&utm_campaign=book_mention.com"><br /><img style="float: left; margin-left: 5px; margin-right: 5px;" src="/wp-content/uploads/users/koenverbeeck/SSRS_blueprints/ssrsblueprints.png?mtime=1386846154" alt="" width="231" height="284" /></a>
+  <a href="http://www.packtpub.com/sql-server-2012-reporting-services-blueprints/book?utm_source=mention.com&utm_medium=link&utm_campaign=book_mention.com"><br /><img style="float: left; margin-left: 5px; margin-right: 5px;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSRS_blueprints/ssrsblueprints.png?mtime=1386846154" alt="" width="231" height="284" /></a>
 </div>
 
 <p style="text-align: justify;">

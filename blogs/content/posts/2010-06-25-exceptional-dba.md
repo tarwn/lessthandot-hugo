@@ -23,7 +23,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/dba_year.gif" alt="" title="" width="180" height="79" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/dba_year.gif" alt="" title="" width="180" height="79" />
 </div>
 
 This week brought one of the highest achievements in my career and community work. On June 23rd it was announced by Red Gate and SQL Server Central that I had made it into the finalists for the Exceptional DBA of the Year award. WOW! Every time I say it, I still get that feeling in my gut only certain things that you are truly emotional about can bring. 
@@ -45,7 +45,7 @@ I have to thank Rose Waters ([Twitter][5]) dearly. Rose works on my team as a SQ
 </p>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/thanks.gif" alt="" title="" width="200" height="133" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/thanks.gif" alt="" title="" width="200" height="133" />
 </div></p> 
 
 **The week in play**
@@ -59,7 +59,7 @@ I feel the Exceptional DBA of the Year award that Red Gate and SQL Server Centra
 **Cast Your Vote!**
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/vote.gif" alt="" title="" width="200" height="168" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/vote.gif" alt="" title="" width="200" height="168" align="left" />
 </div>
 
 

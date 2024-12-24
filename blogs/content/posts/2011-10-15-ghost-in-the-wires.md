@@ -16,7 +16,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/Books/GhostInTheWires.jpg?mtime=1318682575"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/Books/GhostInTheWires.jpg?mtime=1318682575" width="131" height="200" style="float: left; margin: 10px 10px 10px 10px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Books/GhostInTheWires.jpg?mtime=1318682575"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Books/GhostInTheWires.jpg?mtime=1318682575" width="131" height="200" style="float: left; margin: 10px 10px 10px 10px" /></a>
 </div>
 
 I noticed Kevin Mitnick latest book [Ghost In The Wires][1] was released, since I already read [The Art of Deception][2] and [The Art of Intrusion][3] I decided to give Ghost in the wires a try. Ghost in the wires is the first time that Kevin Mitnick tells the story of how he did his hacking and phreaking and how he was eventually caught, caught with the help of another hacker nonetheless. 

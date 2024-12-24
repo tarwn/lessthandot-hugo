@@ -66,7 +66,7 @@ Of course the test just shows me I have something there but now I need to try if
 So I created a form.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797" width="438" height="382" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797" width="438" height="382" /></a>
 </div>
 
 And added some code to it.
@@ -124,19 +124,19 @@ End Module```
 And this is what it looks like with some data filled in.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB2.PNG?mtime=1303630161"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB2.PNG?mtime=1303630161" width="438" height="382" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB2.PNG?mtime=1303630161"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB2.PNG?mtime=1303630161" width="438" height="382" /></a>
 </div>
 
 I then click Empty and get this again.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797" width="438" height="382" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB1.PNG?mtime=1303629797" width="438" height="382" /></a>
 </div>
 
 And then we load it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ravendb/RavenDB3.PNG?mtime=1303630308"><img alt="" src="/wp-content/uploads/users/chrissie1/ravendb/RavenDB3.PNG?mtime=1303630308" width="438" height="382" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB3.PNG?mtime=1303630308"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ravendb/RavenDB3.PNG?mtime=1303630308" width="438" height="382" /></a>
 </div>
 
 And now we see we have 1 plant in our database. 

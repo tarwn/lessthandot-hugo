@@ -21,9 +21,9 @@ A little while back [SQL Server 2016 CTP2 was announced][1] and I have spent so
   
 It seems I have already found a very small bug while creating a new database:
 
-[<img class="alignnone size-full wp-image-3430" src="/wp-content/uploads/2015/06/firstBug.png" alt="firstBug" width="704" height="214" srcset="/wp-content/uploads/2015/06/firstBug.png 704w, /wp-content/uploads/2015/06/firstBug-300x91.png 300w" sizes="(max-width: 704px) 100vw, 704px" />][2]
+[<img class="alignnone size-full wp-image-3430" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/firstBug.png" alt="firstBug" width="704" height="214" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/firstBug.png 704w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/firstBug-300x91.png 300w" sizes="(max-width: 704px) 100vw, 704px" />][2]
 
 Apparently they forgot to rename the compatibility level 🙂
 
  [1]: /index.php/datamgmt/dbprogramming/mssqlserver/sql-2016-preview-has-been-released/
- [2]: /wp-content/uploads/2015/06/firstBug.png
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/firstBug.png

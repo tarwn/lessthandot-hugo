@@ -32,7 +32,7 @@ I have not yet put the site up but I will set it up this week for everyone to te
 First I needed to create an index page which would show the tittle of the latest blogposts. This is what it looks like on an iphone emulator.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile1.png?mtime=1308552574" width="413" height="781" /></a>
 </div>
 
 First thing to know is that you add the jQuery and jQuery Mobile references and that it uses HTML 5 to do it&#8217;s magic.
@@ -76,7 +76,7 @@ After that it was time to add the items. I choose a collapsible set.
 Which gave me the possibility to add excerpts to it and a more button to open the post. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile2.png?mtime=1308553200"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile2.png?mtime=1308553200" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile2.png?mtime=1308553200"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile2.png?mtime=1308553200" width="413" height="781" /></a>
 </div>
 
 The list and individual items would look something like this.
@@ -94,7 +94,7 @@ I also added a footer for paging on the page.
 Which looks something like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile3.png?mtime=1308553752"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile3.png?mtime=1308553752" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile3.png?mtime=1308553752"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile3.png?mtime=1308553752" width="413" height="781" /></a>
 </div>
 
 And here is the code.
@@ -109,7 +109,7 @@ Look at how you can easily add the icons to it.
 Then I made something similar to show the post.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/jquery/jquerymobile4.png?mtime=1308553930"><img alt="" src="/wp-content/uploads/users/chrissie1/jquery/jquerymobile4.png?mtime=1308553930" width="413" height="781" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile4.png?mtime=1308553930"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/jquery/jquerymobile4.png?mtime=1308553930" width="413" height="781" /></a>
 </div>
 
 The code for that is pretty much the same. as the above.

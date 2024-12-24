@@ -24,7 +24,7 @@ tags:
 ---
 I have two instances of SQL Server running on my laptop, one is SQL Server 2008 and the other is SQL Server 2008 R2. Now take a look at this image from task manager.
 
-<img src="/wp-content/uploads/blogs/DataMgmt//TaskManager.PNG" alt="" title="" width="737" height="236" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//TaskManager.PNG" alt="" title="" width="737" height="236" />
 
 Can you tell which process is the 2008 instance and which process is the 2008 R2 instance? I can't either. Now if you want to know what process id your instance is using you can do three things
 
@@ -61,7 +61,7 @@ If I look at my SQL Server log, I see the following
 
 This is probably the easiest one, just switch to the services tab
 
-<img src="/wp-content/uploads/blogs/DataMgmt//Services.PNG" alt="" title="" width="614" height="183" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//Services.PNG" alt="" title="" width="614" height="183" />
 
 \*** **Remember, if you have a SQL related question, try our [Microsoft SQL Server Programming][1] forum or our [Microsoft SQL Server Admin][2] forum**<ins></ins></x64></nl></nl></nl></c>
 

@@ -25,13 +25,13 @@ But the time has come for the developer of this product to make some money out o
 I think [the price][3] is more than reasonable.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ncrunch/ncrunch2.png?mtime=1350292141"><img alt="" src="/wp-content/uploads/users/chrissie1/ncrunch/ncrunch2.png?mtime=1350292141" width="1202" height="685" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunch2.png?mtime=1350292141"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunch2.png?mtime=1350292141" width="1202" height="685" /></a>
 </div>
 
 You can also just [download a trial version][4] if you want.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ncrunch/ncrunch.png?mtime=1350292128"><img alt="" src="/wp-content/uploads/users/chrissie1/ncrunch/ncrunch.png?mtime=1350292128" width="1213" height="710" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunch.png?mtime=1350292128"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunch.png?mtime=1350292128" width="1213" height="710" /></a>
 </div>
 
 If you are serious about your software and automated testing then you should get a tool like NCrunch, it makes life a lot easier.

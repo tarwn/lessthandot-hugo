@@ -129,7 +129,7 @@ Exec dbo.ImportFileAttributes 'C:XML_ARCHIVE','C:XML','[XMLImportWT]'
 Executing this I can now see in XMLImportWT that I've grabbed the file names and file creation date and times.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//xmlimport_1.gif" alt="" title="" width="540" height="141" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//xmlimport_1.gif" alt="" title="" width="540" height="141" />
 </div>
 
 Now let's finish the process and grab the XML data and move everything from the work table to the table that we actually want in our DR strategies.
@@ -187,13 +187,13 @@ where filenm not in (select filenm from XMLTestArchive)
 After running all of this, the XML file should have been moved to the yyyymm folder as shown below
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//xmlimport_2.gif" alt="" title="" width="443" height="160" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//xmlimport_2.gif" alt="" title="" width="443" height="160" />
 </div>
 
 The XMLTestArchive table also has all of our XML and file attribute data
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//xmlimport_3.gif" alt="" title="" width="628" height="123" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//xmlimport_3.gif" alt="" title="" width="628" height="123" />
 </div>
 
 This seems to run pretty well. I'd like to hear performance improvements on my T-SQL if anyone has some of course. I wrote this without looking at my original coding but I think it was pretty close minus all the extra steps to handle errors and such. 

@@ -67,7 +67,7 @@ This however only works for "simple" tests. As soon as you start to use testcase
 
 Just nuget the NUnit.Engine package and make sure everyone of those files is in your outputfolder
 
-[<img src="/wp-content/uploads/2016/11/nunitengine.png" alt="nunitengine" width="184" height="184" class="alignnone size-full wp-image-4806" />][2]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/11/nunitengine.png" alt="nunitengine" width="184" height="184" class="alignnone size-full wp-image-4806" />][2]
 
 (I don't care how you do this just make it happen, no need to kill kittens for this, but if you must). 
 
@@ -143,7 +143,7 @@ This might be of use for you
 And that's it. Any questions?
 
  [1]: http://stackoverflow.com/questions/2834717/nunit-is-it-possible-to-continue-executing-test-after-assert-fails
- [2]: /wp-content/uploads/2016/11/nunitengine.png
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/11/nunitengine.png
  [3]: https://github.com/nunit/docs/wiki/Test-Engine-API-Spec
  [4]: https://github.com/nunit/nunit-console/blob/8cb7226c0ad683fe5eb7a4eee8989aff08dc4ccb/src/NUnitEngine/nunit.engine.tests/Services/TestFilterBuilderTests.cs
  [5]: https://github.com/nunit/docs/wiki/Test-Result-XML-Format

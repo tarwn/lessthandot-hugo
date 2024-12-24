@@ -29,13 +29,13 @@ And here is my first impression.
 And woohoo it now supports the VS dark theme.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_1.png?mtime=1385461326"><img alt="" src="/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_1.png?mtime=1385461326" width="360" height="751" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_1.png?mtime=1385461326"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_1.png?mtime=1385461326" width="360" height="751" /></a>
 </div>
 
 And the little codecoverage markers no longer overlap with my text. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_2.png?mtime=1385461390"><img alt="" src="/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_2.png?mtime=1385461390" width="127" height="329" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_2.png?mtime=1385461390"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ncrunch/ncrunchV2_2.png?mtime=1385461390" width="127" height="329" /></a>
 </div>
 
 There, I am exited.

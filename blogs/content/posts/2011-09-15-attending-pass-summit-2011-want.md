@@ -24,7 +24,7 @@ categories:
 I'm excited! 
 
 <div class="image_block">
-  <a href="http://wit.sqlpass.org/"><img alt="" src="/wp-content/uploads/users/grrlgeek/WIT_Logo_Red_Final_web.jpg?mtime=1316095947" width="249" height="159" /></a>
+  <a href="http://wit.sqlpass.org/"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/WIT_Logo_Red_Final_web.jpg?mtime=1316095947" width="249" height="159" /></a>
 </div>
 
 One event you should not miss that week is the [Women In Technology Lunch and Panel Discussion][3], which is being sponsored by [SQL Sentry][4]. It is being held Thursday, October 13, 2011, 11:30 a.m. – 1:30 p.m. Guess what? This lunch isn't just for women – it's open to all conference attendees! (Note: seating is limited to the first 300 attendees. Get there early!) There will be a delicious lunch served – yum! After that, you'll get to hear the topic "Make Yourself Heard: How to Ask for What You Want at Work" discussed by four successful panelists. The discussion will center around how to ask for things like raises, promotions and benefits. How do you ask? What do you ask for? What do you need to bring to the table? I think this topic is relevant for all professionals – DBAs, developers, even managers – and both women and men. 

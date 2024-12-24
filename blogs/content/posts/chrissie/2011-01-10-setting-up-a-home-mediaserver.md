@@ -21,7 +21,7 @@ So I started out to convert them with [Clonedvd2][3] and converted them to ISO i
 So I looked for another solution. [MKV][4] is a very good format (container actually), free and you can stream it. So I set about searching for a solution that is free and good. First thing I found was Handbrake. Handbrake is very cool.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ripping/handbrake1.png?mtime=1294686078"><img alt="" src="/wp-content/uploads/users/chrissie1/ripping/handbrake1.png?mtime=1294686078" width="1018" height="621" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ripping/handbrake1.png?mtime=1294686078"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ripping/handbrake1.png?mtime=1294686078" width="1018" height="621" /></a>
 </div>
 
 The advantage of handbrake is that you can queue your jobs and that it is easy to use. When you use H.264 format the files will be about 60% the size of the ISO(MPEG2) files. The disadvantages are that it takes a long time to rip a disc, about 2 hours per disc, it uses a lot of CPU power while doing it and you can only do one disc at a time. The slowness is however because it needs to recode everything and that takes time and effort. 
@@ -29,7 +29,7 @@ The advantage of handbrake is that you can queue your jobs and that it is easy t
 I also tried [makeMKV][5]. It is also free. It does however not recode. It just transcodes to mkv using the same MPEG2 codec as the DVD. Which means the files are just as big as the original. But the transcoding is fast and you can do more than one at a time. It however does not let you name the titles to a nema you like so you need to rename them all afterward.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ripping/handbrake1.png?mtime=1294686078"><img alt="" src="/wp-content/uploads/users/chrissie1/ripping/makedvd1.png?mtime=1294686078" width="1018" height="621" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ripping/handbrake1.png?mtime=1294686078"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ripping/makedvd1.png?mtime=1294686078" width="1018" height="621" /></a>
 </div>
 
 I think this might be illegal in some countries but it falls under the fair use/backup for personal use laws in other countries.

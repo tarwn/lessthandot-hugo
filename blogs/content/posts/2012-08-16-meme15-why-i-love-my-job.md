@@ -19,7 +19,7 @@ tags:
   - '#meme15'
 
 ---
-[<img style="float: right;" src="/wp-content/uploads/users/kconan/meme15new.png?mtime=1331607208" alt="" width="150" height="150" />][1]
+[<img style="float: right;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/meme15new.png?mtime=1331607208" alt="" width="150" height="150" />][1]
 
 <span style="font-size: small;">This month's <a href="http://www.jasonstrate.com/2012/08/august-meme15-assignment/" target="_blank">#Meme15</a> topic is one that I suggested to Jason State (<a title="Blog" href="http://www.jasonstrate.com" target="_blank">B</a>|<a title="Twitter" href="http://twitter.com/stratesql">T</a>): What are 5 (or 10) reasons why you like your job?</span>
 

@@ -32,13 +32,13 @@ I have used [Gadwin Printscreen][4] in the past and [blogged about it][5]. I wil
 Window clippings like Gadwin has many settings but the one setting that I like the most is this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings.png?mtime=1303721044"><img alt="" src="/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings.png?mtime=1303721044" width="625" height="506" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings.png?mtime=1303721044"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings.png?mtime=1303721044" width="625" height="506" /></a>
 </div>
 
 You can remove he background and keep the shadows of your window. As you can see above that gives some good results. Nice and clean. Compared to the normal printscreen below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings2.png?mtime=1303721288"><img alt="" src="/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings2.png?mtime=1303721288" width="595" height="475" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings2.png?mtime=1303721288"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/windowclippings/Windowsclippings2.png?mtime=1303721288" width="595" height="475" /></a>
 </div>
 
 What I miss in Window clippings is the ability to add a stamp. like I can in Gadwin. 

@@ -48,7 +48,7 @@ EXEC (@command)
 Now I query the table using the SQLQueryStress tool and I choose a high Number of Iterations to get a meaningful average:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform1.JPG?mtime=1357132527"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform1.JPG?mtime=1357132527" width="1361" height="430" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform1.JPG?mtime=1357132527"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform1.JPG?mtime=1357132527" width="1361" height="430" /></a>
 </div>
 
 In the Client Seconds/Iteration (Avg) you see that the performance difference for an individual query is negligible but a similar query often executed on a busy server can result in 15 extra seconds on 5000 Iterations.
@@ -87,7 +87,7 @@ GO
 And I get this result back:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform2.JPG?mtime=1357132538"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform2.JPG?mtime=1357132538" width="261" height="95" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform2.JPG?mtime=1357132538"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform2.JPG?mtime=1357132538" width="261" height="95" /></a>
 </div>
 
 Now let's drop the table and recreate it but switch the position of the two datecolumns:
@@ -115,13 +115,13 @@ GO
 When I query the table again I get the correct result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform3.JPG?mtime=1357132547"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform3.JPG?mtime=1357132547" width="262" height="97" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform3.JPG?mtime=1357132547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform3.JPG?mtime=1357132547" width="262" height="97" /></a>
 </div>
 
 But when I query my view again I get the following result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform4.JPG?mtime=1357132561"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform4.JPG?mtime=1357132561" width="261" height="95" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform4.JPG?mtime=1357132561"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform4.JPG?mtime=1357132561" width="261" height="95" /></a>
 </div>
 
 You see that the column headers are in the same order as in the initial table but the data reflects the column order of the second table.
@@ -149,7 +149,7 @@ INSERT INTO StarBreak (Name, DateFirstPost, DateLastPost)
 	VALUES ('Denis','20080207','20130101'),('Ted','20081107','20121231'),('Koen','20121123','20121227'),('Jes','20101210','20121221');
 GO
 ```<div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571" width="258" height="96" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform5.JPG?mtime=1357132571" width="258" height="96" /></a>
 </div>
 
 What happens when I recreate the table but only 3 instead of 4 columns? Let's try:
@@ -182,7 +182,7 @@ SELECT ID, Name, DateLastPost FROM GetStarFromStarBreak
 And the result is:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform6.JPG?mtime=1357132583"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform6.JPG?mtime=1357132583" width="672" height="66" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform6.JPG?mtime=1357132583"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform6.JPG?mtime=1357132583" width="672" height="66" /></a>
 </div>
 
 You see the code breaks because the view still expects 4 columns although you specified you only query 3 columns from the view.
@@ -194,7 +194,7 @@ We have seen several reasons to stay away from the SELECT * statement but we do 
 When you drag the Columns folder of your table in Object Explorer to the Query Pane, SQL Server Management Studio will automatically list the column names separated with commas for you.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform7.JPG?mtime=1357132592"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform7.JPG?mtime=1357132592" width="608" height="233" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform7.JPG?mtime=1357132592"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/StarPerform7.JPG?mtime=1357132592" width="608" height="233" /></a>
 </div>
 
  [1]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/select-vs-select-1-with

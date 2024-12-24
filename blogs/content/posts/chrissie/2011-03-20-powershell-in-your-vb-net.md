@@ -30,7 +30,7 @@ Here are two excellent articles on how to do it.
 And look what I made in a few minutes.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/gitconsole/gitconsole1.png?mtime=1300642827"><img alt="" src="/wp-content/uploads/users/chrissie1/gitconsole/gitconsole1.png?mtime=1300642827" width="398" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/gitconsole/gitconsole1.png?mtime=1300642827"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/gitconsole/gitconsole1.png?mtime=1300642827" width="398" height="300" /></a>
 </div>
 
 And here is all the code I needed to make that work. It was more work finding where they hid the System.Management.Automation.dll but nothing Google can&#8217;t handle.

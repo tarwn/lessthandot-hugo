@@ -26,7 +26,7 @@ To access the property, go to Report, Body, Table, or Matrix properties and sele
 The options are Source, Value, MIMEType, and BackgroundRepeat.
 
 <p style="text-align: center;">
-  <img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/Background1.png?mtime=1359555474" alt="" width="276" height="89" />
+  <img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Background1.png?mtime=1359555474" alt="" width="276" height="89" />
 </p>
 
 Source:
@@ -84,19 +84,19 @@ Background Repeat:
 Choose the Body properties. I select an embedded JPEG, set to clip.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Background2.png?mtime=1359555474" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Background2.png?mtime=1359555474" alt="" />
 </p>
 
 This is how the background image appears in Design mode:
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Background3.png?mtime=1359555474" alt="" width="439" height="178" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Background3.png?mtime=1359555474" alt="" width="439" height="178" />
 </p>
 
 This is how the background image appears in Preview mode:
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Background4.png?mtime=1359555474" alt="" width="424" height="295" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Background4.png?mtime=1359555474" alt="" width="424" height="295" />
 </p>
 
 <p style="text-align: left;">

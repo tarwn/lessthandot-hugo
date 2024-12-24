@@ -20,7 +20,7 @@ categories:
 On Wednesday, I shut down my work laptop at 4:00 PM, drove an hour and a half to Madison, WI, went to the [MADPASS SQL Server user group][1] meeting, and drove an hour and half to get back home. It was worth every minute. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/logMadPass_591x275_3.jpg?mtime=1308923594"><img alt="" src="/wp-content/uploads/users/grrlgeek/logMadPass_591x275_3.jpg?mtime=1308923594" width="591" height="275" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/logMadPass_591x275_3.jpg?mtime=1308923594"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/logMadPass_591x275_3.jpg?mtime=1308923594" width="591" height="275" /></a>
 </div>
 
 Every month, at least one person asks, why? Why would I drive so far? Why would I keep attending a user group? If I asked you to attend a user group meeting tonight, I'm sure you could give me several reasons you couldn't attend.

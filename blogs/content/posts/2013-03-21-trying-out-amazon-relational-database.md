@@ -90,31 +90,31 @@ Here is what the multi-step process looks like
 First you need to select the database engine, you can choose from MySQL, Oracle and SQL Server. Pick the edition that you want
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard1.PNG?mtime=1363853447"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard1.PNG?mtime=1363853447" width="692" height="436" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard1.PNG?mtime=1363853447"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard1.PNG?mtime=1363853447" width="692" height="436" /></a>
 </div>
 
 Give your database a name, specify storage, add a user and a password
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard2.PNG?mtime=1363853461"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard2.PNG?mtime=1363853461" width="680" height="542" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard2.PNG?mtime=1363853461"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard2.PNG?mtime=1363853461" width="680" height="542" /></a>
 </div>
 
 Pick the port, the availiblity zone
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard3.PNG?mtime=1363853470"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard3.PNG?mtime=1363853470" width="702" height="404" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard3.PNG?mtime=1363853470"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard3.PNG?mtime=1363853470" width="702" height="404" /></a>
 </div>
 
 Specify the backup and maintenance windows as well as the retention period
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard4.PNG?mtime=1363853480"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard4.PNG?mtime=1363853480" width="699" height="419" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard4.PNG?mtime=1363853480"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard4.PNG?mtime=1363853480" width="699" height="419" /></a>
 </div>
 
 Now it is all ready
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard5.PNG?mtime=1363853438"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard5.PNG?mtime=1363853438" width="694" height="489" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard5.PNG?mtime=1363853438"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSDbWizard5.PNG?mtime=1363853438" width="694" height="489" /></a>
 </div>
 
 After this is all done, you will get a summary page where everything is displayed about your instance.
@@ -122,7 +122,7 @@ After this is all done, you will get a summary page where everything is displaye
 Next go to your db instance, it takes about 15 minutes before it is available. Click on the checkmark next to your instance and you will see something like this
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/RDSMSFTSQLConnect00.png?mtime=1363853892"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/RDSMSFTSQLConnect00.png?mtime=1363853892" width="952" height="740" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/RDSMSFTSQLConnect00.png?mtime=1363853892"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/RDSMSFTSQLConnect00.png?mtime=1363853892" width="952" height="740" /></a>
 </div>
 
 Notice the endpoint and the port? Remember those, you will need those to connect to your SQL server instance.
@@ -141,7 +141,7 @@ Here is more info about Amazon RDS Security Groups http://docs.aws.amazon.com/Am
 
 Click on DB Security Groups
   
-[<img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBSecurityGroups.PNG?mtime=1363855346" width="191" height="540" />][2]
+[<img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBSecurityGroups.PNG?mtime=1363855346" width="191" height="540" />][2]
   
 Click on details and add the CIDR/IP of your machine, you will see it displayed there ,you can just paste that in the box.
 
@@ -150,19 +150,19 @@ Now you are ready to connect to your AWS RDS instance
 Paste the endpoint in the Servername box, add the user name and password. You should be all ready now. If you check for @@servername and @@version, you should see something like this
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSQuery.PNG?mtime=1363855711"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSQuery.PNG?mtime=1363855711" width="457" height="317" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSQuery.PNG?mtime=1363855711"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSQuery.PNG?mtime=1363855711" width="457" height="317" /></a>
 </div>
 
 Take a look at your dashboard, check out everything that is available. Here is what monitoring looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsMonitoring.PNG?mtime=1363855852"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsMonitoring.PNG?mtime=1363855852" width="849" height="589" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsMonitoring.PNG?mtime=1363855852"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AwsMonitoring.PNG?mtime=1363855852" width="849" height="589" /></a>
 </div>
 
 You can setup alarms as well, here is what that looks like
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSAlarms.PNG?mtime=1363856013"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSAlarms.PNG?mtime=1363856013" width="648" height="362" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSAlarms.PNG?mtime=1363856013"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/AWSAlarms.PNG?mtime=1363856013" width="648" height="362" /></a>
 </div>
 
 Run some queries, see what works what doesn't. I decided to run sp_helpdb
@@ -186,6 +186,6 @@ That is all for this posts, I will post more once I start messing around with th
 I created two more posts [How to read the error log on an Amazon RDS SQL Server instance][3] and [Turning on Optimize for Ad hoc Workloads, Ad Hoc Distributed Queries and more on a AWS RDS SQL Server Instance][4]
 
  [1]: http://aws.amazon.com/rds/free/
- [2]: /wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBSecurityGroups.PNG?mtime=1363855346
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/AWS/DBSecurityGroups.PNG?mtime=1363855346
  [3]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/how-to-read-the-error
  [4]: /index.php/DataMgmt/DBAdmin/MSSQLServerAdmin/turning-on-optimize-for-ad

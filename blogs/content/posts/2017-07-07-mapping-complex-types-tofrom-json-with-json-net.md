@@ -22,7 +22,7 @@ In an [earlier post][1] I introduced a strongly typed Identity object I am using
 This is my desired state:
 
 <div id="attachment_8690" style="width: 634px" class="wp-caption aligncenter">
-  <img src="/wp-content/uploads/2017/07/TransparentIdentityType.png" alt="Transparent Server Side Identity Type" width="624" height="121" class="size-full wp-image-8690" srcset="/wp-content/uploads/2017/07/TransparentIdentityType.png 624w, /wp-content/uploads/2017/07/TransparentIdentityType-300x58.png 300w" sizes="(max-width: 624px) 100vw, 624px" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TransparentIdentityType.png" alt="Transparent Server Side Identity Type" width="624" height="121" class="size-full wp-image-8690" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TransparentIdentityType.png 624w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2017/07/TransparentIdentityType-300x58.png 300w" sizes="(max-width: 624px) 100vw, 624px" />
   
   <p class="wp-caption-text">
     Transparent Server Side Identity Type

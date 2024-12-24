@@ -21,7 +21,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/comp_level.gif" alt="" title="" width="121" height="91" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/comp_level.gif" alt="" title="" width="121" height="91" align="left" />
 </div>
 
 One very sound argument that many DBAs have for pushing an upgrade of SQL Server is the fact that you have the ability to leave a database in an older compatibility level. In some ways, compatibility levels in a SQL Server database govern the feature set that the database will utilize. SQL Server will treat the database as though it is still being hosted on the server version that matches the compatibility level the database has been left in. 

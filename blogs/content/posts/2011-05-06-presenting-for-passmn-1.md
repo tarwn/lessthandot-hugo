@@ -20,7 +20,7 @@ categories:
 May 17<sup>th</sup> I have the distinct pleasure of presenting for one of the strongest SQL Server User Groups around; [PASSMN (Minnesota SQL Server User Group)][1]. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-54.png?mtime=1304691862"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-54.png?mtime=1304691862" width="182" height="77" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-54.png?mtime=1304691862"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-54.png?mtime=1304691862" width="182" height="77" align="left" /></a>
 </div>
 
 Visiting this user group has an added bonus of me being the Regional Mentor for the area.  It isn't very often I am able to attend in person the user groups that I stay in contact with for the mentorship program.  I hope to use this to build more personal relationships with the groups.    

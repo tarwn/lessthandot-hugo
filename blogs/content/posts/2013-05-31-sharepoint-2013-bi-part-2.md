@@ -32,7 +32,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_00.png?mtime=1369838970"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_00.png?mtime=1369838970" alt="" width="343" height="300" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_00.png?mtime=1369838970"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_00.png?mtime=1369838970" alt="" width="343" height="300" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -46,37 +46,37 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_01.png?mtime=1369838970"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_01.png?mtime=1369838970" alt="" width="361" height="265" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_01.png?mtime=1369838970"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_01.png?mtime=1369838970" alt="" width="361" height="265" /></a>
 </p>
 
 <span style="text-align: justify;">In the wizard, choose the VHD format and click </span>_Next_
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_02.png?mtime=1369838970"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_02.png?mtime=1369838970" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_02.png?mtime=1369838970"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_02.png?mtime=1369838970" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">In order to save disk space, choose a </span>**dynamically expanding VHD**<span style="text-align: justify;">. In theory Fixed Size VHD are faster, but this means you lose all that disk space, something I'd rather avoid on my SSD. Furthermore, more recent versions of Hyper-V have closed the performance gap between these two types quite a bit, so there's no reason not to choose for the dynamic VHD.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_03.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_03.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_03.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_03.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">Specify a name and a location for your VHD and click </span>_Next_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_04.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_04.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_04.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_04.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">I configured the size of the VHD to be 40GB maximum. This might seems small for a single server environment with SharePoint 2013 and SQL Server, but at the time of writing the size of my VHD is nearly 30GB. I expended the size later on, as the size of the VHD will grow with the continued use of the VM and I didn't want issues in the middle of a demo. </span><a style="text-align: justify;" href="http://www.petri.co.il/expanding-virtual-hard-disks-with-hyper-v.htm">This article</a> <span style="text-align: justify;">explains how you can expand a VHD. You don't need to follow my 40GB limit; choose a size you are comfortable with (and which your hard drive can support). If you choose big enough immediately, you don't need to expand the VHD later on.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_05.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_05.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_05.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_05.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">You'll get an overview of the actions to be taken. Click </span>_Finish_ <span style="text-align: justify;">to create the VHD.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_06.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_06.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_06.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_06.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="font-weight: bold; text-align: justify;">Create a network adapter</span>
@@ -90,13 +90,13 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10bis.png?mtime=1369839732"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10bis.png?mtime=1369839732" alt="" width="360" height="140" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10bis.png?mtime=1369839732"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10bis.png?mtime=1369839732" alt="" width="360" height="140" /></a>
 </p>
 
 <span style="text-align: justify;">In the following screen, type a name for the virtual switch and click on </span>_OK_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10.png?mtime=1369838971" alt="" width="441" height="416" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_10.png?mtime=1369838971" alt="" width="441" height="416" /></a>
 </p>
 
 <span style="font-weight: bold; text-align: justify;">Create the virtual machine</span>
@@ -106,31 +106,31 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_07.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_07.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_07.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_07.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">Configure the amount of memory your VM will use. In my case 20GB of RAM. SharePoint 2013 needs quite some memory, so don't be cheap on this. You can always change the amount of memory at a later point in time,  but you'll have to turn down the machine to do so.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_08.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_08.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_08.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_08.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">Next you'll have to configure networking. Choose the virtual switch we created earlier and click on </span>_Next_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_09.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_09.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_09.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_09.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">In this step you choose the virtual hard disk. Select the option </span>_Use an existing virtual hard disk_<span style="text-align: justify;">, specify its location and click </span>_Next_<span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_11.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_11.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_11.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_11.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="text-align: justify;">You'll get an overview of the actions to be taken. Click </span>_Finish_ <span style="text-align: justify;">to end the wizard.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_12.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_12.png?mtime=1369838971" alt="" width="430" height="324" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_12.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_12.png?mtime=1369838971" alt="" width="430" height="324" /></a>
 </p>
 
 <span style="font-weight: bold; text-align: justify;">Additional configuration</span>
@@ -144,25 +144,25 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_13.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_13.png?mtime=1369838971" alt="" width="437" height="412" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_13.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_13.png?mtime=1369838971" alt="" width="437" height="412" /></a>
 </p>
 
 <span style="text-align: justify;">Right-click on your virtual machine and choose </span>_Settings._ <span style="text-align: justify;">In the Hardware section, go to </span>_Add Hardware_ <span style="text-align: justify;">and add a network adapter.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_14.png?mtime=1369838971"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_14.png?mtime=1369838971" alt="" width="441" height="416" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_14.png?mtime=1369838971"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_14.png?mtime=1369838971" alt="" width="441" height="416" /></a>
 </p>
 
 <span style="text-align: justify;">In the newly added adapter, choose the virtual switch you just created from the dropdown.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_15.png?mtime=1369838972"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_15.png?mtime=1369838972" alt="" width="441" height="416" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_15.png?mtime=1369838972"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_15.png?mtime=1369838972" alt="" width="441" height="416" /></a>
 </p>
 
 <span style="text-align: justify;">I also set the number of processors to a higher number. Go to </span>_Processor_ <span style="text-align: justify;">and change the number of processors the VM can use.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_16.png?mtime=1369838972"><img src="/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_16.png?mtime=1369838972" alt="" width="441" height="416" /></a>
+  <a href="/media/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_16.png?mtime=1369838972"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SP2013DemoEnv/Part2/createVMandVHD_16.png?mtime=1369838972" alt="" width="441" height="416" /></a>
 </p>
 
 <p style="text-align: justify;">

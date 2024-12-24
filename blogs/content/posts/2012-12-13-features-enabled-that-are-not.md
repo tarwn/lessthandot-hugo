@@ -66,7 +66,7 @@ GO
 If you prefer the GUI, you can also use that, right click on the database server name in SSMS, select Facets, from the Facet dropdown select Surface Area Configuration. You will see the following Facet properties
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Facets.PNG?mtime=1355339984"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Facets.PNG?mtime=1355339984" width="665" height="531" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Facets.PNG?mtime=1355339984"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/ADvent/Facets.PNG?mtime=1355339984" width="665" height="531" /></a>
 </div>
 
 Here you can enable or disable the features you are interested in. You can also export these properties as a policy to use on other servers so that the features are the same on all your servers

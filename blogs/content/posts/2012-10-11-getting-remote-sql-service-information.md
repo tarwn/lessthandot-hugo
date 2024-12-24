@@ -33,7 +33,7 @@ Get-Service -ComputerName <SQLServerHostName>
 This gives you all the information you need:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/PSSQLService1.PNG?mtime=1349948019"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService1.PNG?mtime=1349948019" width="646" height="278" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService1.PNG?mtime=1349948019"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService1.PNG?mtime=1349948019" width="646" height="278" /></a>
 </div>
 
 But since I only need SQL Server information I will filter out all the other services using the Where-Object and the like operator:
@@ -45,7 +45,7 @@ Get-Service -ComputerName <SQLServerHostName> -name "MSSQL*"
 As you can see we can now see the installed instances of SQL Server on our remote server. Only if the Instance name is too long you will see ... at some point:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026" width="575" height="138" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService2.PNG?mtime=1349948026" width="575" height="138" /></a>
 </div>
 
 Since we only need the Name and ass a surplus the Status of our SQL Server Services we can format the output:
@@ -57,7 +57,7 @@ Get-Service -ComputerName <SQLServerHostName> -name "MSSQL*"|Format-Table -Prope
 And now we have only the information we need:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/PSSQLService3.PNG?mtime=1349948035"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService3.PNG?mtime=1349948035" width="983" height="136" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService3.PNG?mtime=1349948035"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService3.PNG?mtime=1349948035" width="983" height="136" /></a>
 </div>
 
 Like in my [previous post][1] I will put the command in a PS1 script using a parameter and a Throw to be able to reuse the script:
@@ -71,7 +71,7 @@ Get-Service -ComputerName $compname -name "MSSQL*"|Format-Table -Property Name, 
 Executing the script will look like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043"><img alt="" src="/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043" width="983" height="253" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/PSSQLService4.PNG?mtime=1349948043" width="983" height="253" /></a>
 </div>
 
 Et voila, another point I can take of my list of items I can't do on a Server Core...

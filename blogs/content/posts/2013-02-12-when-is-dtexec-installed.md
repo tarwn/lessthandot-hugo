@@ -36,13 +36,13 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/simplepackage.PNG?mtime=1360669546"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/simplepackage.PNG?mtime=1360669546" alt="" width="152" height="206" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/simplepackage.PNG?mtime=1360669546"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/simplepackage.PNG?mtime=1360669546" alt="" width="152" height="206" /></a>
 </div>
 
 <span style="text-align: justify;">The AdvancedTest package reads the same flat file, but uses a term extraction component to do a term based analysis and it writes the results to a flat file. This package is used to see if there's any difference when an Enterprise-only  component is used (see </span><a style="text-align: justify;" href="http://msdn.microsoft.com/en-us/library/cc645993(v=sql.105).aspx">Features Supported by the Editions of SQL Server 2008 R2</a><span style="text-align: justify;">).</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/advancedpackage.PNG?mtime=1360669554"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/advancedpackage.PNG?mtime=1360669554" alt="" width="288" height="299" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/advancedpackage.PNG?mtime=1360669554"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/advancedpackage.PNG?mtime=1360669554" alt="" width="288" height="299" /></a>
 </div>
 
 <span style="text-align: justify;">The server is a Windows 2008R2 64-bit server. The edition of SQL Server being installed is SQL Server 2008R2 Developer edition.</span>
@@ -72,7 +72,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/ManagementTools_Install.png?mtime=1360669453"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_Install.png?mtime=1360669453" alt="" width="490" height="369" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/ManagementTools_Install.png?mtime=1360669453"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_Install.png?mtime=1360669453" alt="" width="490" height="369" /></a>
 </div>
 
  <span style="text-align: justify;"></span>
@@ -82,7 +82,7 @@ tags:
 </p>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_Result.png?mtime=1360669459" alt="" width="435" height="189" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_Result.png?mtime=1360669459" alt="" width="435" height="189" />
 </p>
 
 <p style="text-align: justify;">
@@ -96,13 +96,13 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/ManagementTools_DTEXECUI.png?mtime=1360669438"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_DTEXECUI.png?mtime=1360669438" alt="" width="411" height="348" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/ManagementTools_DTEXECUI.png?mtime=1360669438"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_DTEXECUI.png?mtime=1360669438" alt="" width="411" height="348" /></a>
 </div>
 
 <span style="text-align: justify;">However, the Import/Export wizard is also installed. When I import a flat file to another flat file – the workflow used by the SimpleTest package – the wizard executes successfully:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/ManagementTools_importwizard.png?mtime=1360669446"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_importwizard.png?mtime=1360669446" alt="" width="389" height="393" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/ManagementTools_importwizard.png?mtime=1360669446"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ManagementTools_importwizard.png?mtime=1360669446" alt="" width="389" height="393" /></a>
 </div>
 
 <span style="text-align: justify;">The only reason DTEXEC was installed is to run the Import/Export wizard. Installing BIDS as well doesn't solve the issue, as expected. You can run packages within BIDS, but I guess nobody is excited about staying up all night in order to manually kick off SSIS packages. So basically we have installed a lightweight development environment, but not a server.</span>
@@ -144,19 +144,19 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/ssis_only_install.png?mtime=1360669468"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ssis_only_install.png?mtime=1360669468" alt="" width="439" height="322" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/ssis_only_install.png?mtime=1360669468"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/ssis_only_install.png?mtime=1360669468" alt="" width="439" height="322" /></a>
 </div>
 
 <span style="text-align: justify;">DTEXEC is installed, as expected of course, alongside the Integrations Services service. Running DTEXEC through the command line gives us the result we were hoping for:</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/SSISonly_serviceON_dtexec_success.png?mtime=1360669481"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/SSISonly_serviceON_dtexec_success.png?mtime=1360669481" alt="" width="518" height="245" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/SSISonly_serviceON_dtexec_success.png?mtime=1360669481"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/SSISonly_serviceON_dtexec_success.png?mtime=1360669481" alt="" width="518" height="245" /></a>
 </div>
 
 <span style="text-align: justify;">Success at last! DTEXECUI isn't installed, indicating this is a client component only. This is OK, because you probably won't ever use it on a server.</span>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/DTEXEC_install/SSISonly_nodtexecui.png?mtime=1360669475"><img src="/wp-content/uploads/users/koenverbeeck/DTEXEC_install/SSISonly_nodtexecui.png?mtime=1360669475" alt="" width="373" height="211" /></a>
+  <a href="/media/users/koenverbeeck/DTEXEC_install/SSISonly_nodtexecui.png?mtime=1360669475"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/DTEXEC_install/SSISonly_nodtexecui.png?mtime=1360669475" alt="" width="373" height="211" /></a>
 </div>
 
 <span style="text-align: justify;">One final question remains: do we need the SSIS service? The answer is short: no. According to </span><a style="text-align: justify;" href="http://support.microsoft.com/kb/942176">Microsoft</a><span style="text-align: justify;">, the SSIS service only extends the functionality of SSMS, in the sense that it manages the storage of SSIS packages and that it monitors the running packages. So you can safely stop the service. However, you need to disable it as well; otherwise the service is started again once you run a package.</span>

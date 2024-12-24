@@ -132,7 +132,7 @@ Exec(@query)
 The results shows us the PIVOT results of each account number and the sales for the week of the year
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//pivot_1.gif" alt="" title="" width="628" height="354" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//pivot_1.gif" alt="" title="" width="628" height="354" />
 </div>
 
 The problem with all of this is the dynamic nature of the column names. In reporting services we're used to handling column names as static entities. So here is how we'll build our report given the fact these column names can and will change over time.
@@ -146,7 +146,7 @@ Exec GetSalesPerWeek
 Run the DataSet to verify everything comes in ok.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//pivot_2.gif" alt="" title="" width="628" height="354" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//pivot_2.gif" alt="" title="" width="628" height="354" />
 </div>
 
 Now add a new table to your empty report. Add the account number and product number as you would normally. Next we need to figure out what week is actually first. To do this we're going to write a function in the code section of SSRS
@@ -172,7 +172,7 @@ This code was written by our own gmmastros. Thanks to him for this and the help 
 Final results should look like this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//pivot_3.gif" alt="" title="" width="628" height="367" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//pivot_3.gif" alt="" title="" width="628" height="367" />
 </div>
 
 Hit OK to save.
@@ -190,7 +190,7 @@ Most developers don't know they can reference the fields by name in this manner.
 I went ahead and put a few more columns and increased the index requested from the ArrayList. Running that results in the following.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//pivot_4.gif" alt="" title="" width="628" height="538" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//pivot_4.gif" alt="" title="" width="628" height="538" />
 </div>
 
 Now you have your customer matrix by means of dynamic column and field referencing. You also a nice example of PIVOT by means of dynamic column names.

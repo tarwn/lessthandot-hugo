@@ -32,7 +32,7 @@ tags:
 </p>
 
 <p class="MsoNormal" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/StupidMe1/login.png?mtime=1358236062"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe1/login.png?mtime=1358236062" alt="" width="492" height="442" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe1/login.png?mtime=1358236062"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe1/login.png?mtime=1358236062" alt="" width="492" height="442" /></a>
 </p>
 
 <span style="text-align: justify;">After a couple of months, the database was getting cluttered with all kinds of test tables, stored procedures, views et cetera. Time to clean ship I thought and I dropped the Test database, with the idea of just creating a new one. First I got this lovely message:</span>
@@ -42,7 +42,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <a href="/media/users/koenverbeeck/StupidMe1/error_inuse.png?mtime=1358236018"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe1/error_inuse.png?mtime=1358236018" alt="" width="560" height="427" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe1/error_inuse.png?mtime=1358236018"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe1/error_inuse.png?mtime=1358236018" alt="" width="560" height="427" /></a>
 </div>
 
 <span style="text-align: justify;">I thought one of my query windows was still open with an active connection to the database, so being the smarty pants that I am I ticked the checkbox </span>_"Close existing connections"_ <span style="text-align: justify;">without giving it too much thought. The drop database succeeded, but when I tried to create a new database, I got this beauty on my screen:</span>
@@ -52,7 +52,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <a href="/media/users/koenverbeeck/StupidMe1/error1.png?mtime=1358235987"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe1/error1.png?mtime=1358235987" alt="" width="536" height="177" /></a>
+  <a href="/media/users/koenverbeeck/StupidMe1/error1.png?mtime=1358235987"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe1/error1.png?mtime=1358235987" alt="" width="536" height="177" /></a>
 </div>
 
 <span style="text-align: justify;">Whoops. I dropped my default database. Logging out and in didn't work:</span>
@@ -63,7 +63,7 @@ tags:
 
 <div class="image_block">
   <div class="image_block">
-    <a href="/media/users/koenverbeeck/StupidMe1/error2.png?mtime=1358235996"><img src="/wp-content/uploads/users/koenverbeeck/StupidMe1/error2.png?mtime=1358235996" alt="" width="536" height="144" /></a>
+    <a href="/media/users/koenverbeeck/StupidMe1/error2.png?mtime=1358235996"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/StupidMe1/error2.png?mtime=1358235996" alt="" width="536" height="144" /></a>
   </div>
 </div>
 

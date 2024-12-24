@@ -24,7 +24,7 @@ So I googled and found [Linux reader 1.1 from diskinternals][1] you find it in t
 You then get a screen with your drives on it, ext 3 drives included.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/diskinternals2.png" alt="" title="" width="733" height="671" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/diskinternals2.png" alt="" title="" width="733" height="671" />
 </div>
 
 You then choose the folder you want to recover and click on recover this folder in the sidebar.
@@ -32,7 +32,7 @@ You then choose the folder you want to recover and click on recover this folder 
 After which it starts.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/SysAdmins/diskinternals1.png" alt="" title="" width="693" height="554" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/diskinternals1.png" alt="" title="" width="693" height="554" />
 </div>
 
 And now I have one extra 250GB drive in my desktop.

@@ -24,7 +24,7 @@ Reporting Services web service is the simplest way to meet the above requirement
 Change the web reference name say ReportingService and click Add Web Reference. This name will become the namespace for the web service proxy. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/RSWebService.JPG" alt="" title="" width="640" height="400" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/RSWebService.JPG" alt="" title="" width="640" height="400" />
 </div>
 
 Once the reference is added,open the web.config file. You'll notice a new section has been added the web.config
@@ -55,7 +55,7 @@ Microsoft.ReportViewer.WebForms. Click Add. This would add the Report Viewer to 
 4. Now we move on to creating a new page and designing the layout of the page. Typically the design would be given by user group but in my case I had to create a layout and present it for approval. As I browsed the report manager, I realized that we had several folders and each folder had reports related to a department or task. I had to organize the reports in such a way it would be easy for novice users to use it without any help. I cannot list all the reports as that would show too many reports to the user (depending on their access level of course) and that can be overwhelming!! Therefore I decided to use 2 combo boxes, one to list the folders and the second to list the reports in each folder. I also have a Run Report button the page. User can select a report in the combo box and click Run Report. This would display the in a new window.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/reportcatalog.JPG" alt="" title="" width="640" height="400" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/reportcatalog.JPG" alt="" title="" width="640" height="400" />
 </div>
 
 5. We start by including the Reporting Services namespace to the code behind file. Then create an instance of the ReportingService proxy class on the page load event. Pass the client login credentials.

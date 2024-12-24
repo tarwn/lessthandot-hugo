@@ -79,7 +79,7 @@ GO
 Here is what it looks like in file explorer
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/sqlfilesorig.PNG?mtime=1333217594"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/sqlfilesorig.PNG?mtime=1333217594" width="364" height="262" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/sqlfilesorig.PNG?mtime=1333217594"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/sqlfilesorig.PNG?mtime=1333217594" width="364" height="262" /></a>
 </div>
 
 Or if you want to do this from T-SQL
@@ -114,7 +114,7 @@ GO
 Navigate to the folder and what do you see?
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/sqlfiles.PNG?mtime=1333217577"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/sqlfiles.PNG?mtime=1333217577" width="449" height="204" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/sqlfiles.PNG?mtime=1333217577"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/sqlfiles.PNG?mtime=1333217577" width="449" height="204" /></a>
 </div>
 
 That's right there is only MBs difference between the 3MB database and the 3 GB database. I checked my production server and the backup took 30 minutes less to complete compared to the backups that ran before I freed up space

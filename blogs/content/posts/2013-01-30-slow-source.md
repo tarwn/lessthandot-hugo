@@ -25,7 +25,7 @@ tags:
 
 ---
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SlowSource/PropertySettings.PNG?mtime=1359554797"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/SlowSource/PropertySettings.PNG?mtime=1359554797" alt="" width="222" height="84" /></a>
+  <a href="/media/users/koenverbeeck/SlowSource/PropertySettings.PNG?mtime=1359554797"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SlowSource/PropertySettings.PNG?mtime=1359554797" alt="" width="222" height="84" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -35,7 +35,7 @@ tags:
 <span style="text-align: justify;">Rob Farley (</span><a style="text-align: justify;" href="http://sqlblog.com/blogs/rob_farley/default.aspx">blog </a><span style="text-align: justify;">| </span><a style="text-align: justify;" href="https://twitter.com/rob_farley">twitter</a><span style="text-align: justify;">) describes the concept in his excellent blog post </span><a style="text-align: justify;" href="http://sqlblog.com/blogs/rob_farley/archive/2011/02/17/the-ssis-tuning-tip-that-everyone-misses.aspx">The SSIS tuning tip that everyone misses</a><span style="text-align: justify;">. Basically, it's about filling your buffers with data as soon as possible, so other data flow tasks can start working on it. Rob achieved his goal by specifying a query hint, but you can do the same by making your buffers smaller. Because, a smaller buffer takes less time to be filled with data and can be passed on the data flow much quicker. Jamie Thomson (</span><a style="text-align: justify;" href="http://sqlblog.com/blogs/jamie_thomson/default.aspx">blog</a> <span style="text-align: justify;">| </span><a style="text-align: justify;" href="https://twitter.com/jamiet">twitter</a><span style="text-align: justify;">) describes the effect in his blog post </span><a style="text-align: justify;" href="http://consultingblogs.emc.com/jamiethomson/archive/2007/12/18/SSIS_3A00_-A-performance-tuning-success-story.aspx">SSIS: A performance tuning success story</a><span style="text-align: justify;">. I also encountered a similar story in a </span><a style="text-align: justify;" href="http://www.sqlservercentral.com/Forums/Topic1404429-364-1.aspx#bm1404567">forum thread</a><span style="text-align: justify;">.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SlowSource/Pending.PNG?mtime=1359554789"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/SlowSource/Pending.PNG?mtime=1359554789" alt="" width="157" height="154" /></a>
+  <a href="/media/users/koenverbeeck/SlowSource/Pending.PNG?mtime=1359554789"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SlowSource/Pending.PNG?mtime=1359554789" alt="" width="157" height="154" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -45,19 +45,19 @@ tags:
 <span style="text-align: justify;">After almost 35 minutes, the package finished loading all the rows into SQL Server.</span>
 
 <p style="text-align: justify;">
-  <a style="text-align: center;" href="/media/users/koenverbeeck/SlowSource/Output1.PNG?mtime=1359554758"><img src="/wp-content/uploads/users/koenverbeeck/SlowSource/Output1.PNG?mtime=1359554758" alt="" width="796" height="190" /></a>
+  <a style="text-align: center;" href="/media/users/koenverbeeck/SlowSource/Output1.PNG?mtime=1359554758"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SlowSource/Output1.PNG?mtime=1359554758" alt="" width="796" height="190" /></a>
 </p>
 
 <span style="text-align: justify;">However, when I changed the </span>_DefaultBufferMaxRows_ <span style="text-align: justify;">to 500, the package finished in a mere 11 minutes!</span>
 
 <p style="text-align: justify;">
-  <a style="text-align: center;" href="/media/users/koenverbeeck/SlowSource/Output2.PNG?mtime=1359554763"><img src="/wp-content/uploads/users/koenverbeeck/SlowSource/Output2.PNG?mtime=1359554763" alt="" width="792" height="184" /></a>
+  <a style="text-align: center;" href="/media/users/koenverbeeck/SlowSource/Output2.PNG?mtime=1359554763"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SlowSource/Output2.PNG?mtime=1359554763" alt="" width="792" height="184" /></a>
 </p>
 
 <span style="text-align: justify;">To make sure this incredible speed-up wasn't the result of any caching on the source, I ran the package again with the default settings:</span>
 
 <p style="text-align: justify;">
-  <a style="text-align: center;" href="/media/users/koenverbeeck/SlowSource/Output3.PNG?mtime=1359554783"><img src="/wp-content/uploads/users/koenverbeeck/SlowSource/Output3.PNG?mtime=1359554783" alt="" width="794" height="181" /></a>
+  <a style="text-align: center;" href="/media/users/koenverbeeck/SlowSource/Output3.PNG?mtime=1359554783"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SlowSource/Output3.PNG?mtime=1359554783" alt="" width="794" height="181" /></a>
 </p>
 
 <span style="text-align: justify;">Possible caching seems to nibble 2 minutes off (or it just might be coincidence), but it isn't responsible for making the packages run three times as fast.</span>
@@ -67,7 +67,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/koenverbeeck/SlowSource/Graph.PNG?mtime=1359554752"><img src="/wp-content/uploads/users/koenverbeeck/SlowSource/Graph.PNG?mtime=1359554752" alt="" width="507" height="317" /></a>
+  <a href="/media/users/koenverbeeck/SlowSource/Graph.PNG?mtime=1359554752"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SlowSource/Graph.PNG?mtime=1359554752" alt="" width="507" height="317" /></a>
 </div>
 
 <span style="text-align: justify;">We can see that around row 2800 a 20 megabyte CLOB value shows up, followed by several other large XML files. In the second buffer we have even larger XML files, one of 25MB and one of 40MB. Needless to say, it takes a while for SSIS can fill a buffer with this large data. Once a buffer is full, it is passed immediately to the destination. It's possible the next buffer is very quickly populated if the next rows contain only XML files of a few kilobytes large. But because the destination is still processing the previous large buffer, we get an effect called </span>_pipeline backpressure_<span style="text-align: justify;">, which is described in detail by Todd McDermid (</span><a style="text-align: justify;" href="http://toddmcdermid.blogspot.be/">blog </a><span style="text-align: justify;">| </span><a style="text-align: justify;" href="https://twitter.com/Todd_McDermid">twitter</a><span style="text-align: justify;">) in his blog post </span><a style="text-align: justify;" href="http://toddmcdermid.blogspot.be/2011/07/what-is-pipeline-backpressure.html">What is Pipeline Backpressure?</a><span style="text-align: justify;">. When we combine these two effects – a slow source and an occasional pipeline backpressure – we get a very slow package.</span>

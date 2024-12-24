@@ -24,7 +24,7 @@ Now that you have a report I prefer to configure subscriptions via the instance 
 So for 2005 connect to the SSRS instance. Expand Home to the report and expand subscriptions. Right click and add new subscription. Fill in the options you need and then select Excel for the Render Format.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//subscription_options.gif" alt="" title="" width="704" height="628" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//subscription_options.gif" alt="" title="" width="704" height="628" />
 </div>
 
 You're done with that massive amount of work you told your manager you'd have to do in order to email the daily KPI's as Excel attachments. Now take a week to be lazy cause that's how much you said you needed. 

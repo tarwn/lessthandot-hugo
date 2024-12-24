@@ -34,7 +34,7 @@ However, there may come a day when you run into this error:
 When you log into SQL Server Management Studio, right-click the database, and select Properties, you'll see this dialog box: 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/DBOwnerError.JPG?mtime=1296767797"><img alt="" src="/wp-content/uploads/users/grrlgeek/DBOwnerError.JPG?mtime=1296767797" width="626" height="198" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DBOwnerError.JPG?mtime=1296767797"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DBOwnerError.JPG?mtime=1296767797" width="626" height="198" /></a>
 </div>
 
 Without a database owner, you can't view the database properties. You may run into issues executing sp_helpdb. You may get an error using "EXECUTE AS OWNER". How do you fix this? 

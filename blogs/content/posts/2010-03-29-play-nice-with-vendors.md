@@ -28,7 +28,7 @@ tags:
 ## Will you be my friend?
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/friends.gif" alt="" title="" width="134" height="149" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/friends.gif" alt="" title="" width="134" height="149" align="left" />
 </div>
 
 When it comes to database performance issues, finding the cause and the resolution is usually half the battle, if not most of it. But when the database involved is vendor-provided, getting the resolution implemented can actually be another (long) story. Not only does the vendor have to be involved, they also have to somewhat agree to the resolution and participate actively in implementing it. This is the reason it is so important to build a good relationship with your vendor—and to do so **_before_** it's actually needed.
@@ -40,7 +40,7 @@ When it comes to database performance issues, finding the cause and the resoluti
 How do you do this? The answer to the question is simple and can be done with a few emails or calls over time. This relationship should start as early as the review process before choosing to purchase the software for you business requirements. Interact with the vendors in the demo process to build respect between each other. Even when problems are not present, it can be an asset to keep in touch with key individuals that are handling or working directly on the database structure. You will be able to react more quickly and successfully to performance issues in vendor-provided databases if you already have a good, working relationship with the vendor. This doesn't necessarily mean calling them up daily and talking to them about your NCAA picks (in fact that may not be a good idea at all). You want to build a technical relationship on a professional level but at the same time build trust and respect for each other. Portray your abilities, concerns, thoughts and understanding of the database the vendor has taken great time in creating. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/fishmarket.gif" alt="" title="" width="600" height="450" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/fishmarket.gif" alt="" title="" width="600" height="450" />
 </div>
 
 Think of it as a fish market shopping experience. If you have a good rapport with the fish vendor, you will most likely get the big tuna behind the counter and not the Chinese carp that they are trying to pawn off as a walleye displayed on the shelf. 

@@ -29,7 +29,7 @@ The first thing you'll need to do is go to <https://sqlmonitor.red-gate.com/> an
 
 Second, you'll download and install the relay service – once for each server you wish to monitor.
 
-<img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/smh 1.JPG?mtime=1388175665" alt="" width="991" height="320" />
+<img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/smh 1.JPG?mtime=1388175665" alt="" width="991" height="320" />
 
 The server you're installing it on needs to be able to communicate with a Red Gate IP, which is given to you in the setup process, in case you need to add that to your firewall.
 
@@ -37,15 +37,15 @@ After installation, you can go to the SQL Monitor Hosted page and log in. Then, 
 
 Then you begin monitoring! You get all the functionality of SQL Monitor that is installed on a local server – without having to install the application and database on your server. Here's a screenshot of my overview:
 
-<img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/smh 3.JPG?mtime=1388175665" alt="" width="1375" height="376" />
+<img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/smh 3.JPG?mtime=1388175665" alt="" width="1375" height="376" />
 
 I can see the number of alerts that have been raised, the priority, and which servers need the most attention. I can drill into that more by going to the Alerts tab. Clicking on an alert will bring up further information, which can help me determine the cause and take action to fix it (if necessary).
 
-<img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/smh 2.JPG?mtime=1388175666" alt="" width="1299" height="590" />
+<img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/smh 2.JPG?mtime=1388175666" alt="" width="1299" height="590" />
 
 The Analysis tab lets you view a history of various metrics on the system. I can view CPU usage, memory usage, disk usage, and more. One of my favorite features here is the ability to compare it to a baseline. I can choose to compare the last hour of data with the hour prior to that, for example.
 
-<img style="vertical-align: middle;" src="/wp-content/uploads/users/grrlgeek/smh 4.JPG?mtime=1388175666" alt="" width="1372" height="618" />
+<img style="vertical-align: middle;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/smh 4.JPG?mtime=1388175666" alt="" width="1372" height="618" />
 
 Security shouldn't be a concern – everything sent between your server and Red Gate's server is SSL-encrypted, and the credentials are stored on your server, not Red Gate's.
 

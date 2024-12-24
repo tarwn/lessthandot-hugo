@@ -24,7 +24,7 @@ The purpose of this property is to provide a description that can appear on the 
 To access this property go to the Report properties. Choose Description.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Description 1.png?mtime=1359727836" alt="" width="288" height="403" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Description 1.png?mtime=1359727836" alt="" width="288" height="403" />
 </p>
 
 **Example**: I have a report that shows sales per year by product category. I've given my report the description, "Sales by category, summed by year and month."
@@ -32,7 +32,7 @@ To access this property go to the Report properties. Choose Description.
 After I deploy the report, I can see the report description underneath the title in Report Manager.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Description 2.png?mtime=1359727836" alt="" width="970" height="188" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Description 2.png?mtime=1359727836" alt="" width="970" height="188" />
 </p>
 
 This can be useful when you have similar reports that have different parameters or return different fields.

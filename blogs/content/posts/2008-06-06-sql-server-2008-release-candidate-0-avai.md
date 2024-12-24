@@ -39,5 +39,5 @@ Have fun downloading and installing 🙂
 I started 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/sqldown.JPG" alt="" title="" width="551" height="156" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/sqldown.JPG" alt="" title="" width="551" height="156" />
 </div>

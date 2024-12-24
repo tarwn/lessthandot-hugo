@@ -169,7 +169,7 @@ Obviously I like the right click script option. The important things you need to
 The main task will require you to push to the successful notification upon a successful run and then the failure on that event. So in SSMS you're going to have it look like this
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//job1.gif" alt="" title="" width="703" height="349" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//job1.gif" alt="" title="" width="703" height="349" />
 </div>
 
 Make sure you use your successful notification task in the On success action or you're job will have an unreachable task and complain when you save it. Then make sure your Success Caller reports success but if failure points to the failure caller task. In your failure task your always going to want to report failure on success. So you're other tasks advanced options will appear as 
@@ -177,13 +177,13 @@ Make sure you use your successful notification task in the On success action or 
 Success...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//job2.gif" alt="" title="" width="702" height="246" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//job2.gif" alt="" title="" width="702" height="246" />
 </div>
 
 Failure...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//job3.gif" alt="" title="" width="705" height="323" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//job3.gif" alt="" title="" width="705" height="323" />
 </div>
 
 I also recommend notification services and setting up the normal failure notifications in the SQL job. This way if all fails you should get it queued up.

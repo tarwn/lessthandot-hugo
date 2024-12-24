@@ -29,7 +29,7 @@ The best way to learn about new additions to a framework is to look at some code
 
 Here is a screen shot of the Mandelbrot Fractals sample.
   
-<img src="/wp-content/uploads/blogs/Architect//Fractal.png" alt="" title="" width="407" height="405" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//Fractal.png" alt="" title="" width="407" height="405" />
 
 If you run the sample on a 2 core machine you will see that the parallel execution is about 60% faster than the sequential one.
 
@@ -130,12 +130,12 @@ Again these were from my dual core laptop, you might get a bigger difference if 
 Visual Studio 2010 ships with a couple of tools that will make your life easier if you do parallel programming. Launch the Performance Wizard from Tools–>Launch Performance Wizard
   
   
-<img src="/wp-content/uploads/blogs/Architect//LaunchWizard.PNG" alt="" title="" width="479" height="217" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//LaunchWizard.PNG" alt="" title="" width="479" height="217" />
 
 After that a wizard will launch and you will see a window like the one in the sreenshot below
   
   
-<img src="/wp-content/uploads/blogs/Architect//Profile Wizard.png" alt="" title="" width="647" height="556" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//Profile Wizard.png" alt="" title="" width="647" height="556" />
 
 Pick concurrency and visualize the behaviour of a multithreaded application.
 
@@ -147,15 +147,15 @@ FYI, You need to run as admin to generate these report and if you are on a 64bit
 
 There are 3 types of reports that you will see. Here is what the CPU Utilization report looks like.
   
-<img src="/wp-content/uploads/blogs/Architect//CPUUtil.PNG" alt="" title="" width="459" height="293" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//CPUUtil.PNG" alt="" title="" width="459" height="293" />
 
 There is a report for threads
   
-<img src="/wp-content/uploads/blogs/Architect//Threads.PNG" alt="" title="" width="741" height="596" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//Threads.PNG" alt="" title="" width="741" height="596" />
 
 Finally there is also a report for cores
   
-<img src="/wp-content/uploads/blogs/Architect//Cores.PNG" alt="" title="" width="662" height="522" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//Cores.PNG" alt="" title="" width="662" height="522" />
 
 Instead of having 20 images embedded I decided that a video would be more useful. This video is about 1 minute and 52 seconds and it shows you what the tool looks like when I am clicking around in it.
 
@@ -200,7 +200,7 @@ So hopefully this post will spark your interest and you will take a look at thes
 
 Happy &#960; day ,and today is also Albert Einstein's birthday.
 
-<img src="/wp-content/uploads/blogs/Architect//Pi_Pie.jpg" alt="" title="" width="577" height="576" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/Architect//Pi_Pie.jpg" alt="" title="" width="577" height="576" />
 
  [1]: http://code.msdn.microsoft.com/ParExtSamples
  [2]: http://social.msdn.microsoft.com/forums/en-us/vstsprofiler

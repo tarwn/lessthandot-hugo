@@ -150,7 +150,7 @@ Here are the times that each backup took.
 </p>
 
 <p>
-  Here is also a chart showing you the backup times in seconds.<br /> <img src="/wp-content/uploads/blogs/DataMgmt//BackupChart4.PNG" alt="" title="" width="554" height="409" /><br /> <em>1 = TestCompressedBackupCompressed.bak<br /> 2 = TestCompressedBackupUnCompressed.bak<br /> 3 = TestUncompressedBackupCompressed.bak<br /> 4 = TestUncompressedBackupUnCompressed.bak</em>
+  Here is also a chart showing you the backup times in seconds.<br /> <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//BackupChart4.PNG" alt="" title="" width="554" height="409" /><br /> <em>1 = TestCompressedBackupCompressed.bak<br /> 2 = TestCompressedBackupUnCompressed.bak<br /> 3 = TestUncompressedBackupCompressed.bak<br /> 4 = TestUncompressedBackupUnCompressed.bak</em>
 </p>
 
 <p>
@@ -158,7 +158,7 @@ Here are the times that each backup took.
 </p>
 
 <p>
-  <img src="/wp-content/uploads/blogs/DataMgmt//CompressedSizes.PNG" alt="" title="" width="445" height="152" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//CompressedSizes.PNG" alt="" title="" width="445" height="152" />
 </p>
 
 <p>
@@ -209,7 +209,7 @@ GO
   </p>
   
   <p>
-    <img src="/wp-content/uploads/blogs/DataMgmt//BackupChart3.PNG" alt="" title="" width="554" height="409" />
+    <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//BackupChart3.PNG" alt="" title="" width="554" height="409" />
   </p>
   
   <p>

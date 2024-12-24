@@ -52,7 +52,7 @@ End Sub```
 Looks like this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/ping1.png?mtime=1302788168"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/ping1.png?mtime=1302788168" width="425" height="410" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping1.png?mtime=1302788168"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping1.png?mtime=1302788168" width="425" height="410" /></a>
 </div>
 
 So now that we have that we can do the pings in another thread. So I made a button to spawn this thread and begin the process.
@@ -189,13 +189,13 @@ While running it you will see that if one is online it will turn green immediate
 Look also that the Parallel For second parameter is Exclusive To so it does not translate into For i as integer = 0 to 5 but it translates into For i as integer = 0 to 4. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/ping2.png?mtime=1302788818"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/ping2.png?mtime=1302788818" width="425" height="410" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping2.png?mtime=1302788818"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping2.png?mtime=1302788818" width="425" height="410" /></a>
 </div>
 
 And that you have to wait for about 2 (timeout we used) seconds for all the others to turn red.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ping/ping3.png?mtime=1302788825"><img alt="" src="/wp-content/uploads/users/chrissie1/ping/ping3.png?mtime=1302788825" width="425" height="410" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping3.png?mtime=1302788825"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ping/ping3.png?mtime=1302788825" width="425" height="410" /></a>
 </div>
 
 Writing thread safe code is tricky but I think I covered all the bases to make this as thread safe as possible without getting race conditions.

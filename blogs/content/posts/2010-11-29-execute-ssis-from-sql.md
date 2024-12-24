@@ -32,13 +32,13 @@ To show this alternative and possibly more secure solution to executing an SSIS 
 The diagram below shows the flow of the starting point being the agent execution, step execution containing the SSIS package and then ending on the success and normal logging of the agent services.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_2.gif" alt="" title="" width="432" height="454" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_2.gif" alt="" title="" width="432" height="454" />
 </div>
 
 The SSIS package flow itself will follow the following chart
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_3.gif" alt="" title="" width="402" height="332" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_3.gif" alt="" title="" width="402" height="332" />
 </div>
 
 **Setting up a proxy for SSIS**
@@ -56,13 +56,13 @@ GO
 In SSMS, right click the Credentials tree under Security and select New Credential. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_4.gif" alt="" title="" width="309" height="193" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_4.gif" alt="" title="" width="309" height="193" />
 </div>
 
 The minimum requirement for the creation of a credential is the name and Windows identity that it will map to and store the password.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_5.gif" alt="" title="" width="628" height="254" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_5.gif" alt="" title="" width="628" height="254" />
 </div>
 
 The Credential is then utilized in the creation of the proxy account so the step in the job can be executed under the context of the credential with the stored password. 
@@ -81,13 +81,13 @@ GO
 With SSMS, right click the Proxies tree under the SQL Server Agent section
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_6.gif" alt="" title="" width="317" height="170" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_6.gif" alt="" title="" width="317" height="170" />
 </div>
 
 Ensure that the subsystem for this proxy is mapped to SSIS. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_7.gif" alt="" title="" width="628" height="449" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_7.gif" alt="" title="" width="628" height="449" />
 </div>
 
 Now complete the security setup by creating the login for machinenameImportUser with mappings to the AdventureWorks database. Later, we will grant the necessary permissions to the database and tables. The ImportUser login also needs to be mapped to MSDB and added to the db_ssisoperator role to allow the acount to execute SSIS packages.
@@ -123,7 +123,7 @@ EXEC dbo.uspGetEmployeeManagers @EmployeeID=4
 This will allow the mappings to be performed before we add the expression to build the execute procedure statement at run-time.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_8.gif" alt="" title="" width="387" height="278" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_8.gif" alt="" title="" width="387" height="278" />
 </div>
 
 The ADO.NET Destination now can point directly to the table, "dbo"."EmpManagers".
@@ -147,7 +147,7 @@ To see how to create a configuration file follow the steps outlined here.
 Below shows a select of the table after completing the creation of the SQL Server Table Configuration.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_9.gif" alt="" title="" width="628" height="151" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_9.gif" alt="" title="" width="628" height="151" />
 </div>
 
 **The SQL Agent Job**
@@ -157,13 +157,13 @@ SQL Agent Jobs can be created with T-SQL and SSMS. SSMS is a good control to use
 To create the job to call the SSIS package, right click the Jobs node in the SQL Agent tree and select, New Job.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_10.gif" alt="" title="" width="372" height="118" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_10.gif" alt="" title="" width="372" height="118" />
 </div>
 
 The name of our job will be CallSSIS and will consist of one step. The step will be a SQL Server Integration Services type and connect to the instance that the package created earlier was deployed to. Recall the proxy account that was created earlier was named, ImportUser. This proxy account should be selected as the Run as account.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_11.gif" alt="" title="" width="400" height="195" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_11.gif" alt="" title="" width="400" height="195" />
 </div>
 
 Once this is completed, save the job. Executing the job at this point is a good idea to ensure no problems exist. This allows for troubleshooting internal problems either to the security of the proxy account or the SSIS package itself. Adding the procedure to call the job at this point without testing the job would add a level to the process that would increase the difficulty of troubleshooting any problems.
@@ -253,7 +253,7 @@ The first message is from the update to the configuration table and the second m
 Validating the data has been inserted into the EmpManagers table:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/callssisfromproc_12.gif" alt="" title="" width="622" height="260" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/callssisfromproc_12.gif" alt="" title="" width="622" height="260" />
 </div>
 
 **The downfall**

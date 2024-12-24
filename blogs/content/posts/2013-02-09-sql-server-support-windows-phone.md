@@ -30,7 +30,7 @@ tags:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/SQLApp.png?mtime=1360454998"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/SQLApp.png?mtime=1360454998" width="252" height="252" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQLApp.png?mtime=1360454998"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/SQLApp.png?mtime=1360454998" width="252" height="252" /></a>
 </div>
 
 A SQL Server Support Windows Phone App has been released in the Windows Phone App store. This app will work on Windows Phone 7, Windows Phone 7.5 as well as Windows Phone 8
@@ -44,9 +44,9 @@ I already installed mine, you can get yours here: http://www.windowsphone.com/en
 Here are two screenshots, you can see more when you click on the link above
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/EscalationBlog.png?mtime=1360455013"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/EscalationBlog.png?mtime=1360455013" width="329" height="548" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/EscalationBlog.png?mtime=1360455013"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/EscalationBlog.png?mtime=1360455013" width="329" height="548" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/Version.png?mtime=1360455028"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/Version.png?mtime=1360455028" width="329" height="548" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Version.png?mtime=1360455028"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/Version.png?mtime=1360455028" width="329" height="548" /></a>
 </div>

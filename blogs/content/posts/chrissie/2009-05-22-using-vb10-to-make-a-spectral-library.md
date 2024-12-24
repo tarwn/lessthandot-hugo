@@ -42,7 +42,7 @@ I open the VS2008/Framework 3.5 solution in VS2010 and the same import wizard sh
 It then goes on to open my solution in the VS2010 format (I guess) and I get the first errors.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010FirstProblem.png" alt="" title="" width="558" height="119" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010FirstProblem.png" alt="" title="" width="558" height="119" />
 </div>
 
 It seems as though it can&#8217;t find System.Windows.Forms.DataVisualization but I&#8217;m sure I read somewhere that this is now part of the 4.0 framework. So I guess like VS2008 VS2010 keeps the framework your project was compiled for. Time to change that. 
@@ -50,7 +50,7 @@ It seems as though it can&#8217;t find System.Windows.Forms.DataVisualization bu
 Right-click on the project pick Properties, pick Compile, blah blah, jada jada, see picture.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010ChangeFramework.png" alt="" title="" width="720" height="450" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010ChangeFramework.png" alt="" title="" width="720" height="450" />
 </div>
 
 We change the framework to 4.0 and voila there we have it the first problem solved everything is now ready to go for us. Lets see if it runs.
@@ -58,7 +58,7 @@ We change the framework to 4.0 and voila there we have it the first problem solv
 and it does.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010RunFirst.png" alt="" title="" width="628" height="534" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/VS2010/VS2010RunFirst.png" alt="" title="" width="628" height="534" />
 </div>
 
 Next step was to test those lambda expressions.

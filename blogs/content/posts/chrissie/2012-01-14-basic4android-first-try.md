@@ -24,7 +24,7 @@ So I tried to make a textview that I would change to hello world when the applic
 First thing you get to see when is this screen.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/basic4android/basic4android1.png?mtime=1326567552"><img alt="" src="/wp-content/uploads/users/chrissie1/basic4android/basic4android1.png?mtime=1326567552" width="785" height="393" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android1.png?mtime=1326567552"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android1.png?mtime=1326567552" width="785" height="393" /></a>
 </div>
 
 I guess that if you want to use it for real you should buy it.
@@ -32,7 +32,7 @@ I guess that if you want to use it for real you should buy it.
 Then I clicked on designer and was greeted with these two windows.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/basic4android/basic4android3.png?mtime=1326567574"><img alt="" src="/wp-content/uploads/users/chrissie1/basic4android/basic4android3.png?mtime=1326567574" width="999" height="667" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android3.png?mtime=1326567574"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android3.png?mtime=1326567574" width="999" height="667" /></a>
 </div>
 
 And as you can see I added a label, yeah that&#8217;s what they call a TextView.
@@ -74,13 +74,13 @@ Then you load the layout in your create method and change the text of the label.
 After that you run it by clicking, uhm, run. And you will see that it starts converting your code to Java code. But first you open an emulator with the AVD manager.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/basic4android/basic4android2.png?mtime=1326567562"><img alt="" src="/wp-content/uploads/users/chrissie1/basic4android/basic4android2.png?mtime=1326567562" width="512" height="291" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android2.png?mtime=1326567562"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android2.png?mtime=1326567562" width="512" height="291" /></a>
 </div>
 
 And does it work you ask?
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/basic4android/basic4android4.png?mtime=1326568124"><img alt="" src="/wp-content/uploads/users/chrissie1/basic4android/basic4android4.png?mtime=1326568124" width="996" height="900" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android4.png?mtime=1326568124"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/basic4android/basic4android4.png?mtime=1326568124" width="996" height="900" /></a>
 </div>
 
 Yes of course it does.

@@ -17,7 +17,7 @@ categories:
   - Microsoft SQL Server Admin
 
 ---
-[<img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" align="left" />][1]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif" align="left" />][1]
   
 This month's T-SQL Tuesday is being hosted by our very own, Jes Borland ([Twitter][2] | [Blog][3]). Not only is she hosting this month but she is making it possible for LessThanDot's first T-SQL Tuesday event. The topic that is brought to us is to discuss with everyone how we solved business problems with aggregate functions. I thought this would be a good time to delete some data so here is my post on the topic.</p> 
 
@@ -28,7 +28,7 @@ Duplicates in data can be detrimental to how you return data from tables.  They
 **Seek and Destroy**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-13.png?mtime=1299559389"><img alt="" src="/wp-content/uploads/blogs/All/-13.png?mtime=1299559389" width="150" height="150" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-13.png?mtime=1299559389"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-13.png?mtime=1299559389" width="150" height="150" align="left" /></a>
 </div>
 
 Removing duplicates begins with finding them.  Hopefully at the stage in which you are trying to find duplicates in a table (or several), you have proactively found problems they cause before they have had a negative impact on business. 
@@ -154,7 +154,7 @@ HAVING COUNT(ORDERNUM) > 1
 The results shown list all the order numbers that are found to be duplicates (or more than 1)
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/All/-12.png?mtime=1299559198"><img alt="" src="/wp-content/uploads/blogs/All/-12.png?mtime=1299559198" width="282" height="368" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-12.png?mtime=1299559198"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/All/-12.png?mtime=1299559198" width="282" height="368" /></a>
 </div></p> 
 
 **Destroy**

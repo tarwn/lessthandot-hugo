@@ -69,19 +69,19 @@ So I would recommend not using the + sign to concatenate strings.
 The solution is called [Resharper][3]. Resharper and the custom patterns (this could have been a book title) to be exact. And this is the custom pattern you can use.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/image1.png?mtime=1312198816"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/image1.png?mtime=1312198816" width="800" height="600" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/image1.png?mtime=1312198816"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/image1.png?mtime=1312198816" width="800" height="600" /></a>
 </div>
 
 As you can see I have also done a replace already. So next time you use a plus you will see this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/image2.png?mtime=1312198826"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/image2.png?mtime=1312198826" width="960" height="111" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/image2.png?mtime=1312198826"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/image2.png?mtime=1312198826" width="960" height="111" /></a>
 </div>
 
 Alas the replace does not work well in Resharper 6.0. But I have filed a bug and I hope this will be fixed soon.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/resharper/image3.png?mtime=1312198835"><img alt="" src="/wp-content/uploads/users/chrissie1/resharper/image3.png?mtime=1312198835" width="1494" height="80" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/image3.png?mtime=1312198835"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/resharper/image3.png?mtime=1312198835" width="1494" height="80" /></a>
 </div>
 
 And here you have the pattern you can import into your patterns. Just save it in an xml-file and import.

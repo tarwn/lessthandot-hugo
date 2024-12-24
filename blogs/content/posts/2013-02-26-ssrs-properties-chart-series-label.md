@@ -28,13 +28,13 @@ The purpose of this property is to show the values of data points in the series 
 To access the property, go to the chart series properties, expand Label, and go to Visible.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/label visible 1.png?mtime=1361883851" alt="" width="276" height="344" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/label visible 1.png?mtime=1361883851" alt="" width="276" height="344" />
 </p>
 
 **Example**: I have a chart that shows sales by year, with a series for each product category.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/label visible 2.png?mtime=1361883851" alt="" width="673" height="402" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/label visible 2.png?mtime=1361883851" alt="" width="673" height="402" />
 </p>
 
 Because there are few data points on the chart, I want each value to show a label of the exact value.
@@ -42,19 +42,19 @@ Because there are few data points on the chart, I want each value to show a labe
 I go to the Design tab, select the series on the chart, expand Label, and set Visible to True.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/label visible 3.png?mtime=1361883851" alt="" width="634" height="396" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/label visible 3.png?mtime=1361883851" alt="" width="634" height="396" />
 </p>
 
 I want this to look more readable. I set Font Size to 8, Format to "c" (currency), and Position to Top.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/label visible 4.png?mtime=1361883851" alt="" width="271" height="335" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/label visible 4.png?mtime=1361883851" alt="" width="271" height="335" />
 </p>
 
 The chart is much more readable now.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/label visible 5.png?mtime=1361883851" alt="" width="683" height="398" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/label visible 5.png?mtime=1361883851" alt="" width="683" height="398" />
 </p>
 
 **Further Reading:** 

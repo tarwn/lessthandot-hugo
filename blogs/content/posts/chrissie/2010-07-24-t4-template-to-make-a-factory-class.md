@@ -69,7 +69,7 @@ First problem to solve was how to easily get the interfaces in a nice list.
 I made a ConsoleApplication to test this. First I added a few interfaces in 2 different namespace and then I created a program to find the interfaces in the namespace I want.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4.png" alt="" title="" width="177" height="179" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4.png" alt="" title="" width="177" height="179" />
 </div>
 
 ```csharp
@@ -112,7 +112,7 @@ And now came the tricky part, writing the template.
 First of all we create a file called IFactory.tt. Visual studio will give you a warning if you do that, but it is safe to ignore that warning, just pretend that you know what you are doing.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4_1.png" alt="" title="" width="548" height="199" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4_1.png" alt="" title="" width="548" height="199" />
 </div>
 
 Then we add the generating language. and we tell it to output our file with a .vb extension.
@@ -240,17 +240,17 @@ End Namespace```
 The tt will now have a vb file attached to it.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4_3.png" alt="" title="" width="194" height="56" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4_3.png" alt="" title="" width="194" height="56" />
 </div>
 
 And that will then look like this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4_2.png" alt="" title="" width="647" height="809" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4_2.png" alt="" title="" width="647" height="809" />
 </div>
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4_3.png" alt="" title="" width="194" height="56" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4_3.png" alt="" title="" width="194" height="56" />
 </div>
 
 All ready for use. Now I can just add an interface and the factory will.

@@ -37,7 +37,7 @@ You can add extended properties to many – but not all – objects in SQL Serve
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/xp hierarchy.JPG?mtime=1383748570" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/xp hierarchy.JPG?mtime=1383748570" alt="" />
 </p>
 
 <p style="text-align: center;">
@@ -198,7 +198,7 @@ WHERE EP.name <> 'MS_Description'
 	AND EP.class = 7; 
 ```
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/xp 1.JPG?mtime=1383748570" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/xp 1.JPG?mtime=1383748570" alt="" />
 </p>
 
 <p style="text-align: center;">
@@ -230,7 +230,7 @@ The results are much more comprehensive now.
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/xp 2.JPG?mtime=1383748570" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/xp 2.JPG?mtime=1383748570" alt="" />
 </p>
 
 <p style="text-align: center;">
@@ -256,7 +256,7 @@ FROM sys.extended_properties AS EP
 WHERE EP.name <> 'MS_Description' 
 	AND EP.class = 0; 
 ```<p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/xp 3.JPG?mtime=1383748570" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/xp 3.JPG?mtime=1383748570" alt="" />
 </p>
 
 <p style="text-align: center;">
@@ -281,7 +281,7 @@ FROM sys.extended_properties AS EP
 WHERE EP.name <> 'MS_Description' 
 	AND EP.class = 3; 
 ```<p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/xp 4.JPG?mtime=1383748570" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/xp 4.JPG?mtime=1383748570" alt="" />
 </p>
 
 <p style="text-align: center;">
@@ -309,7 +309,7 @@ FROM sys.extended_properties AS EP
 WHERE EP.name <> 'MS_Description' 
 	AND EP.class = 1;  
 ```<p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/xp 5.JPG?mtime=1383748571" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/xp 5.JPG?mtime=1383748571" alt="" />
 </p>
 
 <p style="text-align: center;">

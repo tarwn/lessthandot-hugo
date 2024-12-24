@@ -56,7 +56,7 @@ exports.helloworld = helloworld;```
 as you can see I made an object of mustache, I made a template and I made a model. And then I gave both of them to the to_html function so that it could create the html.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nodejs/nodejs3.png?mtime=1307977091"><img alt="" src="/wp-content/uploads/users/chrissie1/nodejs/nodejs3.png?mtime=1307977091" width="1070" height="868" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs3.png?mtime=1307977091"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs3.png?mtime=1307977091" width="1070" height="868" /></a>
 </div>
 
 Of course this is no good to us I want that template to be outside my controller.
@@ -97,7 +97,7 @@ As you can see I imported fs and used readfile t read from a file and pass it to
 This gives the desired result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nodejs/nodejs4.png?mtime=1307982081"><img alt="" src="/wp-content/uploads/users/chrissie1/nodejs/nodejs4.png?mtime=1307982081" width="1070" height="868" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs4.png?mtime=1307982081"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nodejs/nodejs4.png?mtime=1307982081" width="1070" height="868" /></a>
 </div>
 
 So in the future we should probably make a function that accepts a model and a template and gets rid of the code I just showed but this will do for now.

@@ -22,7 +22,7 @@ In my [last blogpost][1] I talked about property generation and how the naming f
 So I acted on it and found what he was talking about. I always use the prefix with underscore and have camelcasing because I have NHibernate setup like that too. And it becomes a habit. So I just had to add the underscore to the namingstyle, like shown in the picture.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/ResharperNamingStyle.jpg" alt="" title="" width="702" height="428" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/ResharperNamingStyle.jpg" alt="" title="" width="702" height="428" />
 </div>
 
 And then this

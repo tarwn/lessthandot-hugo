@@ -19,7 +19,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><img alt="" src="/wp-content/uploads/users/grrlgeek/TSQLWednesday_thumb_578C7A06.jpg?mtime=1312985179" width="244" height="244" /></a>
+  <a href="http://sqlblog.com/blogs/adam_machanic/archive/2011/08/03/t-sql-tuesday-21-a-day-late-and-totally-full-of-it.aspx"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/TSQLWednesday_thumb_578C7A06.jpg?mtime=1312985179" width="244" height="244" /></a>
 </div>
 
 It's T-SQL <del>Tuesday </del>Wednesday again! This month's topic, hosted by Adam Machanic, is "Crap Code". We've all seen it, and we've all written it. Even me. Here's one of my stories. 
@@ -37,7 +37,7 @@ They were not.
 The worst offender was a view, of a view, of a view, of a view, of a view. Each one summed or counted or averaged something different. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/GoldToilet.jpg?mtime=1312985547"><img alt="" src="/wp-content/uploads/users/grrlgeek/GoldToilet.jpg?mtime=1312985547" title="It should have been flushed down this" width="198" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/GoldToilet.jpg?mtime=1312985547"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/GoldToilet.jpg?mtime=1312985547" title="It should have been flushed down this" width="198" height="235" /></a>
 </div>
 
 Now, I wouldn't be writing this post if I could say, "The moment I realized this, I pulled out my cape, began re-writing all the queries, and saved the day." 

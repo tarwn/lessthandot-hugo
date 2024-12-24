@@ -26,19 +26,19 @@ To access the property, select the tablix and select FixedRowHeaders.
 The options are True or False.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/fixedrow 1.png?mtime=1360590963" alt="" width="248" height="74" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fixedrow 1.png?mtime=1360590963" alt="" width="248" height="74" />
 </p>
 
 **Example:** I have a matrix that displays order counts and totals by year, grouped by sales region. The Territory Name header appears when I am left-most in the rendered report.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/fixedrow 2.png?mtime=1360590963" alt="" width="760" height="251" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fixedrow 2.png?mtime=1360590963" alt="" width="760" height="251" />
 </p>
 
 I go to the report and set FixedRowHeaders to True (and the Background Color of the column with the text boxes to white). When I view the report again, and scroll to the right, I see the row at the left at all times.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/fixedrow 3.png?mtime=1360590963" alt="" width="605" height="307" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/fixedrow 3.png?mtime=1360590963" alt="" width="605" height="307" />
 </p>
 
 **Further Reading:**

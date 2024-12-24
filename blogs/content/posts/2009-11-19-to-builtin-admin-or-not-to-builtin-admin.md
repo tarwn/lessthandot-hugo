@@ -22,7 +22,7 @@ A while back I wrote, "[To SA or not to SA][1]". That blog touched my security s
 So to put it as slightly as I did with SA...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/NoEntry_admin.gif" alt="" title="" width="292" height="301" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/NoEntry_admin.gif" alt="" title="" width="292" height="301" />
 </div>
 
 If you are on SQL Server 2008 and upgraded by using a fresh install, you do not have to worry about the BUILTIN Administrators group. As SQL Server has evolved and the security has become more advanced, security has been tightened out of the box. I applaud the SQL Server 2008 teams for these changes. Taking this and many other bad practices out of the default settings has pushed SQL Server even farther into the enterprise group.
@@ -36,13 +36,13 @@ To check your BUILTIN Administrators group and the server role you can do few th
 Open SSMS, connect to a 2005 or 2000 instance and expand the Security node.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/admin_1.gif" alt="" title="" width="293" height="79" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/admin_1.gif" alt="" title="" width="293" height="79" />
 </div>
 
 Double click the group and select the Server Roles window.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/admin_2.gif" alt="" title="" width="421" height="332" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/admin_2.gif" alt="" title="" width="421" height="332" />
 </div>
 
 Note the sysadmin checkbox and it being checked. This is from an instance installed with no pre-configurations in mind. 

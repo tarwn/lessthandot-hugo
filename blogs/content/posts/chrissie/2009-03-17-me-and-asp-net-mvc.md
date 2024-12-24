@@ -24,13 +24,13 @@ Here we go. First thing to do is [download the stuff][3]. And install it of cour
 Then I startup VS2008 and I get the option to make a new asp.net MVC project.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject.jpg" alt="" title="" width="691" height="424" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject.jpg" alt="" title="" width="691" height="424" />
 </div>
 
 So I do that. And then it asks me if I want a Test project to go with that.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/image004.jpg" alt="" title="" width="547" height="363" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/image004.jpg" alt="" title="" width="547" height="363" />
 </div>
 
 I only get to choose a Visual studio unit test. But I don&#8217;t really want that, allthough I am curious what it will do so I create it anyway.
@@ -40,7 +40,7 @@ First thing it does is create a whole bunch of folders and files that it things 
 This is the main page.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject1.jpg" alt="" title="" width="1082" height="274" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject1.jpg" alt="" title="" width="1082" height="274" />
 </div>
 
 So now I want to add my own page to the mix. I want to add the Person page. A page with a lastanme and a firstname, because our Person only has those two attributes.
@@ -126,7 +126,7 @@ How does this ActionLink work. Well according to the intelisense (who needs a ma
 So now we have this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject2.jpg" alt="" title="" width="326" height="124" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject2.jpg" alt="" title="" width="326" height="124" />
 </div>
 
 I can live with that.
@@ -134,7 +134,7 @@ I can live with that.
 Of course when I click on it nothing happens since I have no controller yet. I get this errormessage. Which is in Dutch for some reason. But in short it says it can&#8217;t find Person/Person.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject3.jpg" alt="" title="" width="1070" height="220" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject3.jpg" alt="" title="" width="1070" height="220" />
 </div>
 
 Which means it can&#8217;t find a controller.
@@ -260,7 +260,7 @@ namespace MvcApplication1.Controllers
 I will even get something to show up on that page.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/mvcnewproject4.jpg" alt="" title="" width="377" height="278" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/mvcnewproject4.jpg" alt="" title="" width="377" height="278" />
 </div>
 
 So all this in less than 5 minutes. Next stop is using some real data.

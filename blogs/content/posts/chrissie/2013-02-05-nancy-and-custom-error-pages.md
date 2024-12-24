@@ -23,7 +23,7 @@ I wanted to show my users some prettier errorpages then the default you get from
 This being the default for Nancy. Because I know you guys like pictures.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/error/NancyError1.png?mtime=1360064701"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/error/NancyError1.png?mtime=1360064701" width="552" height="285" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/error/NancyError1.png?mtime=1360064701"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/error/NancyError1.png?mtime=1360064701" width="552" height="285" /></a>
 </div>
 
 Of course this was the first time ever in any webapp that I did that, So I had to look certain things up. And [I thought this][2] was pretty cool.
@@ -158,7 +158,7 @@ Imports Nancy.Bootstrapper
 I&#8217;m sure I killed a few puppies along the way. But it works. And here is the smoking gun.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/error/NancyError2.png?mtime=1360065383"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/error/NancyError2.png?mtime=1360065383" width="193" height="62" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/error/NancyError2.png?mtime=1360065383"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/error/NancyError2.png?mtime=1360065383" width="193" height="62" /></a>
 </div>
 
 Pretty, no?
@@ -237,7 +237,7 @@ So that now every statuscode in the known world is handled by your custom errorp
 And now you get pretty page.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/error/NancyError3.png?mtime=1360074055"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/error/NancyError3.png?mtime=1360074055" width="843" height="751" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/error/NancyError3.png?mtime=1360074055"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/error/NancyError3.png?mtime=1360074055" width="843" height="751" /></a>
 </div>
 
 Cooooooooooollll!!!

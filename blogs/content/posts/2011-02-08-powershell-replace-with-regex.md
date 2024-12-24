@@ -18,7 +18,7 @@ categories:
 
 ---
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1297172329"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1297172329" width="154" height="154" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1297172329"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-19.png?mtime=1297172329" width="154" height="154" align="left" /></a>
 </div>
 
 The big man with the camera, Pat Wright ([Blog][1] | [Twitter][2]) is holding [T-SQL Tuesday this month][1].  The topic this month is Automation with T-SQL or with PowerShell (or a mix of both).  Most know that when I say automation, SSIS is the first thing to come to mind.  I've taken SSIS and abused and tuned it to automate just about every DBA task that is known to SQL Server.  I've started to take my own advice over the last year though.  I've taken PowerShell to heart on how rapidly you can write, execute and automate scripts to handle some of my SSIS packages.  The ultimate goal is always to spend less time writing these automation initiatives and getting them in place so they are working for us.
@@ -48,13 +48,13 @@ So the patterns I came up with to match these two conditions are:
 Match NOLOCK in an option list with others = ((({0,1}NOLOCK,)|(,NOLOCK({0,1}))
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-21.png?mtime=1297172329"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-21.png?mtime=1297172329" width="440" height="198" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-21.png?mtime=1297172329"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-21.png?mtime=1297172329" width="440" height="198" /></a>
 </div>
 
 Match NOLOCK used as the only option = (WITHs(({0,1}NOLOCK){0,1})|({0,1}NOLOCK){0,1})
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-20.png?mtime=1297172329"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-20.png?mtime=1297172329" width="432" height="193" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-20.png?mtime=1297172329"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-20.png?mtime=1297172329" width="432" height="193" /></a>
 </div>
 
 The view above is from one of my favorite RegEx pattern testing tools over on <http://gskinner.com/RegExr/>

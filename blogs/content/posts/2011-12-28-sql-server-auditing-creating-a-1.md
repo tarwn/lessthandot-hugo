@@ -33,7 +33,7 @@ Expand your instance >> Security >> Right-Click the audit folder >> Select New A
 This should bring up a new window similar to this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/AuditFilejpg.jpg?mtime=1325055918"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/AuditFilejpg.jpg?mtime=1325055918" width="650" height="584" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/AuditFilejpg.jpg?mtime=1325055918"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/AuditFilejpg.jpg?mtime=1325055918" width="650" height="584" /></a>
 </div>
 
 ### Creating the Specification
@@ -45,7 +45,7 @@ Database >> Security >> Database Audit Specification
 The first configuration I have for the Database Specification, I am capturing on a database level, only deletes, and only when executed by user belonging to the db_datawriter role.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_1.jpg?mtime=1325062219"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_1.jpg?mtime=1325062219" width="856" height="152" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_1.jpg?mtime=1325062219"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_1.jpg?mtime=1325062219" width="856" height="152" /></a>
 </div>
 
 I executed the following query on my account which is sysadmin:
@@ -65,7 +65,7 @@ GO
 This resulted in no deletes being captured:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result1.jpg?mtime=1325057639"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result1.jpg?mtime=1325057639" width="902" height="171" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result1.jpg?mtime=1325057639"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result1.jpg?mtime=1325057639" width="902" height="171" /></a>
 </div>
 
 When executed as test\_writer, which belongs to the db\_datawriter role and I execute the following:
@@ -85,7 +85,7 @@ GO
 I receive the following results:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650" width="1099" height="130" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result2.jpg?mtime=1325057650" width="1099" height="130" /></a>
 </div>
 
 _One thing to note on the output is under "audit\_file\_offset". All three values are 6144, which indicates that the three statements where executed in the same query._
@@ -108,7 +108,7 @@ FROM    fn_get_audit_file('E:SQLAuditingDBAudit*.sqlaudit',
 The second example is just to audit a specific table:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_2.jpg?mtime=1325062315"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_2.jpg?mtime=1325062315" width="853" height="154" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_2.jpg?mtime=1325062315"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/DBSpec_2.jpg?mtime=1325062315" width="853" height="154" /></a>
 </div>
 
 _Note the areas in the red squares, it changes to audit objects, then a specific table, and lastly to which principle it should be bound and again in this case it will be db_datawriter._
@@ -130,7 +130,7 @@ GO
 Inspecting the statement column, we can see that it only captured the delete statement that was executed against tab1:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result3.jpg?mtime=1325062845"><img alt="" src="/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result3.jpg?mtime=1325062845" width="1087" height="89" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result3.jpg?mtime=1325062845"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/AuditBlog/DatabaseSpec/result3.jpg?mtime=1325062845" width="1087" height="89" /></a>
 </div>
 
 To create the users, database, and populate it with the data I used – run the following:

@@ -90,7 +90,7 @@ With this as the result.
 And of course all this time the browser client will just keep on working like nothing happened.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancy11.png?mtime=1356160832"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancy11.png?mtime=1356160832" width="396" height="272" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy11.png?mtime=1356160832"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancy11.png?mtime=1356160832" width="396" height="272" /></a>
 </div>
 
 ## Parameters

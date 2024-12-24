@@ -165,7 +165,7 @@ This simulates the drop command and will initilize the subscription.
 This gives us the synchronized data and pushing it across. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt//rep_1.gif" alt="" title="" width="628" height="398" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//rep_1.gif" alt="" title="" width="628" height="398" />
 </div>
 
 Launching the replication monitor will show the snapshot delivery

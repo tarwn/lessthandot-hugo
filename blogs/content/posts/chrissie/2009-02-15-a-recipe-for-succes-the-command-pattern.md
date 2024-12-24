@@ -429,4 +429,4 @@ There is a VB.Net version of this code in there too.
 
 I hope this will help someone. I know it helped me.;-)
 
- [1]: /wp-content/uploads/blogs/DesktopDev//Structuremaptrial.zip ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev//Structuremaptrial.zip ""

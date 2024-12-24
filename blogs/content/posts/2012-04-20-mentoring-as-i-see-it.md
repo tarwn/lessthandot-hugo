@@ -23,7 +23,7 @@ This definition is, of course, true.  However, we can dive a bit deeper into th
 _SQL Community Mentoring_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-19.png?mtime=1334886635"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-19.png?mtime=1334886635" width="61" height="67" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-19.png?mtime=1334886635"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-19.png?mtime=1334886635" width="61" height="67" align="left" /></a>
 </div>
 
 I've been fortunate in my career and time as a part of the SQL Community, to have a few mentors that are remarkable people in the world of SQL Server.  All of these mentors have formed into dear friendships that could not be replaced with any amount of years continuing in this field.  This brings up the first expansion of the term, Mentoring.  Gaining not only the exchange of knowledge and experiences but friendships that may or may not have, been formed and solidified though mentorships.
@@ -31,7 +31,7 @@ I've been fortunate in my career and time as a part of the SQL Community, to hav
 _Friendship with Mentoring_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-20.png?mtime=1334886635"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-20.png?mtime=1334886635" width="86" height="63" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-20.png?mtime=1334886635"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-20.png?mtime=1334886635" width="86" height="63" align="left" /></a>
 </div>
 
 Being a mentor or having a mentor truly is only successful based on the relationship that you form with the individual that is acting as the mentor or being mentored.  The true needs of mentorship do sit in the need for guidance and there is no doubt to that fact.  However, during that guidance, respect and trust should be formed.  This undoubtedly leads to friendships that last the times.  After all, a friendship in most terms is deemed a mutual mentorship.  Two or more people rely on each other to help them beat the odds of life and career and defeat hurdles that the others may have seen, defeated and gained an aptitude in.
@@ -39,7 +39,7 @@ Being a mentor or having a mentor truly is only successful based on the relation
 _Mentor and Mentoring to be Successful_
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/ITProfessionals/-21.png?mtime=1334886635"><img alt="" src="/wp-content/uploads/blogs/ITProfessionals/-21.png?mtime=1334886635" width="86" height="55" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-21.png?mtime=1334886635"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/-21.png?mtime=1334886635" width="86" height="55" align="left" /></a>
 </div>
 
 Mentoring is a successfully and valuable stage of any one person's career or life.  Without mentorship, a career could and most often does, become stagnant and confused.  On the same token, mentoring and being mentored brings with it praise in what you are doing.  Everyone needs praise in their accomplishments.  Even if they hide this overjoyed feeling of accomplishing a task, a true mentor will see the accomplishment and not only build upon it, but praise the success.  As it is, praising someone that is being mentored is as important as the mentoring itself and passing of experience to another.

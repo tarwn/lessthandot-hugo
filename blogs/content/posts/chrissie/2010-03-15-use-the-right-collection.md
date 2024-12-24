@@ -34,7 +34,7 @@ End Sub```
 Look Mama, I made a queue. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/queue/queue.gif" alt="" title="" width="295" height="277" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/queue/queue.gif" alt="" title="" width="295" height="277" />
 </div>
 
 Oh wait, there is a queue object that I should have used.

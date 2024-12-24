@@ -46,4 +46,4 @@ This can be summed up with one image:
 
 I look forward to the weeks and months ahead of me. I can't wait to learn more and get involved in more cool projects!
 
- [1]: /wp-content/uploads/users/grrlgeek/your-comfort-zone.jpg?mtime=1322622240 ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/your-comfort-zone.jpg?mtime=1322622240 ""

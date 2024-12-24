@@ -117,7 +117,7 @@ Here is the working code:
 
 
 <div id="attachment_4678" style="width: 810px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2016/10/PassingTests.png"><img src="/wp-content/uploads/2016/10/PassingTests-1024x338.png" alt="Passing Tests w/ Inline Markers and Wallaby Console" width="800"" class="size-large wp-image-4678" srcset="/wp-content/uploads/2016/10/PassingTests-1024x338.png 1024w, /wp-content/uploads/2016/10/PassingTests-300x99.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/PassingTests.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/PassingTests-1024x338.png" alt="Passing Tests w/ Inline Markers and Wallaby Console" width="800"" class="size-large wp-image-4678" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/PassingTests-1024x338.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/PassingTests-300x99.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
   
   <p class="wp-caption-text">
     Passing Tests w/ Inline Markers and Wallaby Console
@@ -129,7 +129,7 @@ and now when I add a "+ 1" to the end of the line without even saving the file, 
 
 
 <div id="attachment_4679" style="width: 810px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2016/10/FailingTests.png"><img src="/wp-content/uploads/2016/10/FailingTests-1024x436.png" alt="Failing Tests - Red Marker, Clickable Console Details" width="800" class="size-large wp-image-4679" srcset="/wp-content/uploads/2016/10/FailingTests-1024x436.png 1024w, /wp-content/uploads/2016/10/FailingTests-300x127.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/FailingTests.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/FailingTests-1024x436.png" alt="Failing Tests - Red Marker, Clickable Console Details" width="800" class="size-large wp-image-4679" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/FailingTests-1024x436.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/10/FailingTests-300x127.png 300w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
   
   <p class="wp-caption-text">
     Failing Tests – Red Marker, Clickable Console Details

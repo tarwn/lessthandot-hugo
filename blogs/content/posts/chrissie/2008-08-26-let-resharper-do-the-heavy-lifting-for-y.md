@@ -40,13 +40,13 @@ For this we use the [Reshaper][1] generate option, which is available via the sh
 This brings up the following contextmenu:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/ResharperGenerate.jpg" alt="" title="" width="315" height="270" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/ResharperGenerate.jpg" alt="" title="" width="315" height="270" />
 </div>
 
 We choose Read-only properties:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/ResharperGeneratereadonlyproperties.jpg" alt="" title="" width="501" height="499" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/ResharperGeneratereadonlyproperties.jpg" alt="" title="" width="501" height="499" />
 </div>
 
 And get this as a result:
@@ -97,7 +97,7 @@ But now for the most important part. The overriding of the Equals and GetHashCod
 So we do Alt+Ins again and choose Equality members and get this dialog. We choose name and some other things that seem useful.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/ResharperGenerateEqualitymembers.jpg" alt="" title="" width="502" height="502" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/ResharperGenerateEqualitymembers.jpg" alt="" title="" width="502" height="502" />
 </div>
 
 And we get this as a result:

@@ -168,7 +168,7 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 Here is the execution plan
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan1.PNG?mtime=1357609354"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan1.PNG?mtime=1357609354" width="308" height="181" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan1.PNG?mtime=1357609354"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan1.PNG?mtime=1357609354" width="308" height="181" /></a>
 </div>
 
 As you can see there were no conversions.
@@ -276,7 +276,7 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan2.PNG?mtime=1357609363"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan2.PNG?mtime=1357609363" width="306" height="177" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan2.PNG?mtime=1357609363"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan2.PNG?mtime=1357609363" width="306" height="177" /></a>
 </div>
 
 <p>
@@ -314,7 +314,7 @@ exec sp_executesql 	@SQL,@ParmDefinition,
 </p>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan3.PNG?mtime=1357609373"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan3.PNG?mtime=1357609373" width="299" height="182" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan3.PNG?mtime=1357609373"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/ExecPlan3.PNG?mtime=1357609373" width="299" height="182" /></a>
 </div>
 
 <p>

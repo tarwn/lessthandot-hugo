@@ -59,7 +59,7 @@ WHERE ProductID = 517
 When we look at the data in the PriceLog we see all the requested data:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/OUTPUT1.png?mtime=1337954208"><img alt="" src="/wp-content/uploads/users/axel8s/OUTPUT1.png?mtime=1337954208" width="622" height="63" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/OUTPUT1.png?mtime=1337954208"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/OUTPUT1.png?mtime=1337954208" width="622" height="63" /></a>
 </div>
 
 Now we can wrap the code in a stored procedure:
@@ -93,7 +93,7 @@ Exec PriceUpdate 520, 175.83
 And check to see if the change is stored in the PriceLog table:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/axel8s/OUTPUT2.png?mtime=1337954220"><img alt="" src="/wp-content/uploads/users/axel8s/OUTPUT2.png?mtime=1337954220" width="621" height="84" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/OUTPUT2.png?mtime=1337954220"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/axel8s/OUTPUT2.png?mtime=1337954220" width="621" height="84" /></a>
 </div>
 
 So as you can see, using the OUTPUT clause can be a very effective way of logging changes to the data. The biggest disadvantage is when somebody is updating the data with a direct query. But in a production system this shouldn't be the case.

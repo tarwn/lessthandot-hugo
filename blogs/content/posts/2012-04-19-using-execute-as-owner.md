@@ -57,7 +57,7 @@ GO
 Run the procedure and review the results
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-139.png?mtime=1334852510"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-139.png?mtime=1334852510" width="225" height="122" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-139.png?mtime=1334852510"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-139.png?mtime=1334852510" width="225" height="122" /></a>
 </div>
 
 This is all expected behavior.
@@ -131,7 +131,7 @@ RESTORE DATABASE successfully processed 218 pages in 0.547 seconds (3.101 MB/sec
 Make sure that a query window is open with the context as a user that is in the sysadmin server role or that is an owner of the database, OwnerTest.  This is simply to show the high level access that the account has, still will not execute the procedure successfully.  Execute the procedure that was created earlier, Get_OwnerTest.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-140.png?mtime=1334852510"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-140.png?mtime=1334852510" width="624" height="65" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-140.png?mtime=1334852510"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-140.png?mtime=1334852510" width="624" height="65" /></a>
 </div>
 
 
@@ -159,7 +159,7 @@ Make sure that a query window is open with the context as a user that is in the 
 
 <p>
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/-141.png?mtime=1334852511"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-141.png?mtime=1334852511" width="624" height="137" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-141.png?mtime=1334852511"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-141.png?mtime=1334852511" width="624" height="137" /></a>
   </div>
 </p>
 
@@ -182,7 +182,7 @@ Go</pre>
 
 <p>
   <div class="image_block">
-    <a href="/wp-content/uploads/blogs/DataMgmt/-142.png?mtime=1334852511"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-142.png?mtime=1334852511" width="318" height="146" /></a>
+    <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-142.png?mtime=1334852511"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-142.png?mtime=1334852511" width="318" height="146" /></a>
   </div>
 </p>
 

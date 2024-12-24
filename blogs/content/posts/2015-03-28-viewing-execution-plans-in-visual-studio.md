@@ -21,19 +21,19 @@ To start, I selected File > New > Project.
 
 On the left I expand Installed > Templates and select SQL Server. I name it and select OK.
 
-[<img class="aligncenter size-full wp-image-3321" src="/wp-content/uploads/2015/03/VSNewProject.png" alt="VSNewProject" width="956" height="580" srcset="/wp-content/uploads/2015/03/VSNewProject.png 956w, /wp-content/uploads/2015/03/VSNewProject-300x182.png 300w" sizes="(max-width: 956px) 100vw, 956px" />][1]
+[<img class="aligncenter size-full wp-image-3321" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSNewProject.png" alt="VSNewProject" width="956" height="580" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSNewProject.png 956w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSNewProject-300x182.png 300w" sizes="(max-width: 956px) 100vw, 956px" />][1]
 
 &nbsp;
 
 The first thing I want to do is connect to my database. I expand out the Server Explorer and click the Add SQL Server option.
 
-[<img class="aligncenter size-full wp-image-3323" src="/wp-content/uploads/2015/03/VSServerExplorer1.png" alt="VSServerExplorer" width="304" height="225" srcset="/wp-content/uploads/2015/03/VSServerExplorer1.png 304w, /wp-content/uploads/2015/03/VSServerExplorer1-300x222.png 300w" sizes="(max-width: 304px) 100vw, 304px" />][2]
+[<img class="aligncenter size-full wp-image-3323" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSServerExplorer1.png" alt="VSServerExplorer" width="304" height="225" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSServerExplorer1.png 304w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSServerExplorer1-300x222.png 300w" sizes="(max-width: 304px) 100vw, 304px" />][2]
 
 A connection box opens; I enter my SQL Server name and credentials. This verifies I have permission to view the server. I can now select View > SQL Server Object Explorer to view the server objects in that pane.
 
-[<img class="aligncenter size-full wp-image-3324" src="/wp-content/uploads/2015/03/VSSQLServerObjectExplorer.png" alt="VSSQLServerObjectExplorer" width="306" height="324" srcset="/wp-content/uploads/2015/03/VSSQLServerObjectExplorer.png 306w, /wp-content/uploads/2015/03/VSSQLServerObjectExplorer-283x300.png 283w" sizes="(max-width: 306px) 100vw, 306px" />][3]To start a new query, I go to Tools > SQL Server > New Query. I can open an existing query by going to File > Open > File and selecting a .sql file. The query window has a toolbar that has some of the same options as SSMS, although the icons look different.
+[<img class="aligncenter size-full wp-image-3324" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSSQLServerObjectExplorer.png" alt="VSSQLServerObjectExplorer" width="306" height="324" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSSQLServerObjectExplorer.png 306w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSSQLServerObjectExplorer-283x300.png 283w" sizes="(max-width: 306px) 100vw, 306px" />][3]To start a new query, I go to Tools > SQL Server > New Query. I can open an existing query by going to File > Open > File and selecting a .sql file. The query window has a toolbar that has some of the same options as SSMS, although the icons look different.
 
-[<img class="aligncenter size-full wp-image-3326" src="/wp-content/uploads/2015/03/VSQueryWithToolbar.png" alt="VSQueryWithToolbar" width="636" height="145" srcset="/wp-content/uploads/2015/03/VSQueryWithToolbar.png 636w, /wp-content/uploads/2015/03/VSQueryWithToolbar-300x68.png 300w" sizes="(max-width: 636px) 100vw, 636px" />][4]
+[<img class="aligncenter size-full wp-image-3326" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSQueryWithToolbar.png" alt="VSQueryWithToolbar" width="636" height="145" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSQueryWithToolbar.png 636w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSQueryWithToolbar-300x68.png 300w" sizes="(max-width: 636px) 100vw, 636px" />][4]
 
 1. Display Estimated Execution Plan
 
@@ -44,7 +44,7 @@ A connection box opens; I enter my SQL Server name and credentials. This verifie
 The estimated and actual execution plans look and behave the same as they do in SSMS.
 
 <div id="attachment_3327" style="width: 1037px" class="wp-caption aligncenter">
-  <a href="/wp-content/uploads/2015/03/VSActualExecPlan.png"><img class="size-full wp-image-3327" src="/wp-content/uploads/2015/03/VSActualExecPlan.png" alt="An actual execution plan" width="1027" height="584" srcset="/wp-content/uploads/2015/03/VSActualExecPlan.png 1027w, /wp-content/uploads/2015/03/VSActualExecPlan-300x170.png 300w, /wp-content/uploads/2015/03/VSActualExecPlan-1024x582.png 1024w" sizes="(max-width: 1027px) 100vw, 1027px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSActualExecPlan.png"><img class="size-full wp-image-3327" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSActualExecPlan.png" alt="An actual execution plan" width="1027" height="584" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSActualExecPlan.png 1027w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSActualExecPlan-300x170.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSActualExecPlan-1024x582.png 1024w" sizes="(max-width: 1027px) 100vw, 1027px" /></a>
   
   <p class="wp-caption-text">
     An actual execution plan
@@ -53,7 +53,7 @@ The estimated and actual execution plans look and behave the same as they do in 
 
 This ability can be helpful if you spend a lot of time working in Visual Studio and want to access execution plans.
 
- [1]: /wp-content/uploads/2015/03/VSNewProject.png
- [2]: /wp-content/uploads/2015/03/VSServerExplorer1.png
- [3]: /wp-content/uploads/2015/03/VSSQLServerObjectExplorer.png
- [4]: /wp-content/uploads/2015/03/VSQueryWithToolbar.png
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSNewProject.png
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSServerExplorer1.png
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSSQLServerObjectExplorer.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/03/VSQueryWithToolbar.png

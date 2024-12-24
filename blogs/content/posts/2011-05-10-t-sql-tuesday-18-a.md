@@ -25,7 +25,7 @@ Bob asked us to write about something I embraced many years ago: Common Table Ex
 I've used CTEs for many things, but always avoided learning a recursive CTE. So, I challenged myself to sit down, find a use for one, write the code for it, and blog it. Challenge met. 
 
 <p align="center">
-  <img src="/wp-content/uploads/users/grrlgeek/RecursionAgain250x200.png?mtime=1304994446" alt="" title="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RecursionAgain250x200.png?mtime=1304994446" alt="" title="" />
 </p>
 
 I didn't want to go down the manager/employee or order/item path. Those have been done, many times, and I'm not interested in them. Then I remembered a challenge I'd run into at my previous job that I had always looked for a new solution to: building a dates table. (I am not going to go into whether or not this is the _best_ way or the _most efficient_ way or the _prettiest_ way to build this table. I believe those debates have been raging for years, and I have nothing new to add to any side of the argument. I simply wanted to _do it_.) 
@@ -239,11 +239,11 @@ I have successfully inserted 366 rows into my Dates table.
 
 I'm glad I took the time to break down the recursive CTE and learn how to use it. I know I'll use it in the future. The CTE has limitations, and is not always the most efficient SQL, but it is useful and flexible. I suggest you learn to write CTEs and recursive CTEs, to have another tool in your SQL toolbox.
 
- [1]: /wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif ""
  [2]: http://www.bobpusateri.com/archive/2011/04/invitation-to-t-sql-tuesday-18-ctes/
  [3]: http://www.bobpusateri.com
  [4]: http://twitter.com/sqlbob
- [5]: /wp-content/uploads/users/grrlgeek/DateCTE1.JPG?mtime=1304994784 ""
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DateCTE1.JPG?mtime=1304994784 ""
  [6]: http://msdn.microsoft.com/en-us/library/ms181714.aspx
- [7]: /wp-content/uploads/users/grrlgeek/DateCTE2.JPG?mtime=1304994887 ""
- [8]: /wp-content/uploads/users/grrlgeek/DateCTE4.JPG?mtime=1304994888 ""
+ [7]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DateCTE2.JPG?mtime=1304994887 ""
+ [8]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/DateCTE4.JPG?mtime=1304994888 ""

@@ -24,7 +24,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazydba2.gif" alt="" title="" width="209" height="209" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazydba2.gif" alt="" title="" width="209" height="209" />
 </div>
 
 Today on the lazy DBA we're going to talk about why Gandalf couldn't open the door to the mines of Moria. OK, we're not going to talk about Gandalf or even Trolls. Although some of us might work with a few Trolls. We are going to talk about Wizards without pointy hats. 
@@ -71,7 +71,7 @@ Option 2 played out...
 Excel file comes in from Arwen
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_1.gif" alt="" title="" width="362" height="311" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazxywizard_1.gif" alt="" title="" width="362" height="311" />
 </div>
 
 Open SSMS and find your DBA database (that you should have in Simple recovery and is a place where you should do all of your godly DBA, Developer work)
@@ -79,31 +79,31 @@ Open SSMS and find your DBA database (that you should have in Simple recovery an
 Right click the DB–>Tasks–>Import Data...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_2.gif" alt="" title="" width="357" height="330" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazxywizard_2.gif" alt="" title="" width="357" height="330" />
 </div>
 
 Select Excel as the source and find your XLS file
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_3.gif" alt="" title="" width="467" height="116" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazxywizard_3.gif" alt="" title="" width="467" height="116" />
 </div>
 
 Hit next and leave the destination as your DBA work area. Hit next again to go to the mappings definition. Check the first tab (or whichever the right sheet is)
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_4.gif" alt="" title="" width="636" height="244" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazxywizard_4.gif" alt="" title="" width="636" height="244" />
 </div>
 
 Name the table that you want to create and hit Next and then Finish
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_5.gif" alt="" title="" width="547" height="450" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazxywizard_5.gif" alt="" title="" width="547" height="450" />
 </div>
 
 Write up a quick SELECT with whatever filters are required and join it to the destination of the ITEMMSTR
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazxywizard_6.gif" alt="" title="" width="628" height="477" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazxywizard_6.gif" alt="" title="" width="628" height="477" />
 </div>
 
 Then Alter the statement to make it an UPDATE

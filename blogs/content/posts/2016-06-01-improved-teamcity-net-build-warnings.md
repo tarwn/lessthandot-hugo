@@ -22,7 +22,7 @@ A few years back, I posted "[Displaying .Net Build Warnings in TeamCity][1]". Ma
 
 
 <div id="attachment_4497" style="width: 494px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2016/05/TeamCity_Output_1.png"><img src="/wp-content/uploads/2016/05/TeamCity_Output_1.png" alt="Improved output in your build status" width="484" height="117" class="size-full wp-image-4497" srcset="/wp-content/uploads/2016/05/TeamCity_Output_1.png 484w, /wp-content/uploads/2016/05/TeamCity_Output_1-300x72.png 300w" sizes="(max-width: 484px) 100vw, 484px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_1.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_1.png" alt="Improved output in your build status" width="484" height="117" class="size-full wp-image-4497" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_1.png 484w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_1-300x72.png 300w" sizes="(max-width: 484px) 100vw, 484px" /></a>
   
   <p class="wp-caption-text">
     Improved build status
@@ -34,7 +34,7 @@ A few years back, I posted "[Displaying .Net Build Warnings in TeamCity][1]". Ma
 
 
 <div id="attachment_4498" style="width: 1034px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2016/05/TeamCity_Output_2.png"><img src="/wp-content/uploads/2016/05/TeamCity_Output_2-1024x310.png" alt="Interactive Build Warning tab with the assembly hierarchy" width="1024" height="310" class="size-large wp-image-4498" srcset="/wp-content/uploads/2016/05/TeamCity_Output_2-1024x310.png 1024w, /wp-content/uploads/2016/05/TeamCity_Output_2-300x90.png 300w, /wp-content/uploads/2016/05/TeamCity_Output_2.png 1076w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_2.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_2-1024x310.png" alt="Interactive Build Warning tab with the assembly hierarchy" width="1024" height="310" class="size-large wp-image-4498" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_2-1024x310.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_2-300x90.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_2.png 1076w" sizes="(max-width: 1024px) 100vw, 1024px" /></a>
   
   <p class="wp-caption-text">
     Interactive Build Warning tab
@@ -46,7 +46,7 @@ A few years back, I posted "[Displaying .Net Build Warnings in TeamCity][1]". Ma
 
 
 <div id="attachment_4499" style="width: 939px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2016/05/TeamCity_Output_3.png"><img src="/wp-content/uploads/2016/05/TeamCity_Output_3.png" alt="A chart in the Statistics tab of the project" width="929" height="271" class="size-full wp-image-4499" srcset="/wp-content/uploads/2016/05/TeamCity_Output_3.png 929w, /wp-content/uploads/2016/05/TeamCity_Output_3-300x87.png 300w" sizes="(max-width: 929px) 100vw, 929px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_3.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_3.png" alt="A chart in the Statistics tab of the project" width="929" height="271" class="size-full wp-image-4499" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_3.png 929w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_3-300x87.png 300w" sizes="(max-width: 929px) 100vw, 929px" /></a>
   
   <p class="wp-caption-text">
     Statistics Chart
@@ -58,7 +58,7 @@ A few years back, I posted "[Displaying .Net Build Warnings in TeamCity][1]". Ma
 
 
 <div id="attachment_4500" style="width: 667px" class="wp-caption alignleft">
-  <a href="/wp-content/uploads/2016/05/TeamCity_Output_4.png"><img src="/wp-content/uploads/2016/05/TeamCity_Output_4.png" alt="Custom failure when warning count exceeds a given number" width="657" height="115" class="size-full wp-image-4500" srcset="/wp-content/uploads/2016/05/TeamCity_Output_4.png 657w, /wp-content/uploads/2016/05/TeamCity_Output_4-300x52.png 300w" sizes="(max-width: 657px) 100vw, 657px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_4.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_4.png" alt="Custom failure when warning count exceeds a given number" width="657" height="115" class="size-full wp-image-4500" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_4.png 657w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCity_Output_4-300x52.png 300w" sizes="(max-width: 657px) 100vw, 657px" /></a>
   
   <p class="wp-caption-text">
     Custom failures
@@ -105,11 +105,11 @@ Download the powershell script here: [BuildWarningReportGenerator.ps1 Gist][2]
    Value: /l:FileLogger,Microsoft.Build.Engine;logfile=%BuildLogFile%;Append
 </pre>
 
-[<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png" alt="Add Parameters" width="800" class="aligncenter size-large wp-image-4501" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png 1024w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_1-300x89.png 300w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_1.png 1043w" sizes="(max-width: 1024px) 100vw, 1024px" />][3]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png" alt="Add Parameters" width="800" class="aligncenter size-large wp-image-4501" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-1024x306.png 1024w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_1-300x89.png 300w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_1.png 1043w" sizes="(max-width: 1024px) 100vw, 1024px" />][3]
 
 Next we'll want to add build steps to purge any prior versions of the file, run the log during MS Build calls, and then evaluate the log file for warnings at the end of the run.
 
-[<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png" alt="Build Steps" width="839" height="341" class="aligncenter size-full wp-image-4502" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png 839w, /wp-content/uploads/2016/05/TeamCityWarnings_Template_2-300x121.png 300w" sizes="(max-width: 839px) 100vw, 839px" />][4]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png" alt="Build Steps" width="839" height="341" class="aligncenter size-full wp-image-4502" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png 839w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_2-300x121.png 300w" sizes="(max-width: 839px) 100vw, 839px" />][4]
 
 **1. Purge Build Log**
 
@@ -142,7 +142,7 @@ Advanced Settings: <input type="checkbox" checked /> Add -NoProfile argument
 
 To add a report tab with the warning information in TeamCity:
 
-[<img src="/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png" alt="Add Report Tab" width="895" height="453" class="aligncenter size-full wp-image-4503" srcset="/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png 895w, /wp-content/uploads/2016/05/TeamCityWarnings_Report1-300x151.png 300w" sizes="(max-width: 895px) 100vw, 895px" />][5]
+[<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png" alt="Add Report Tab" width="895" height="453" class="aligncenter size-full wp-image-4503" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png 895w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Report1-300x151.png 300w" sizes="(max-width: 895px) 100vw, 895px" />][5]
 
 1. Open the Project and click "Edit Project Settings" and select the Report Tab
   
@@ -194,6 +194,6 @@ I wanted to thank Mitch again for sending back the improvements he made on the o
 
  [1]: /index.php/enterprisedev/application-lifecycle-management/displaying-net-build-warnings-in/ "Displaying .Net Build Warnings in TeamCity"
  [2]: https://gist.github.com/tarwn/bfd08f42226463871389a766fa40258c
- [3]: /wp-content/uploads/2016/05/TeamCityWarnings_Template_1.png
- [4]: /wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png
- [5]: /wp-content/uploads/2016/05/TeamCityWarnings_Report1.png
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_1.png
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Template_2.png
+ [5]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/05/TeamCityWarnings_Report1.png

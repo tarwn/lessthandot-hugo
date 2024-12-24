@@ -19,7 +19,7 @@ I remember having a hard time [installing sql server express 2008 on windows XP]
 So today I had to install it again on win7 I looked for the download and found it on the [microsoft website][2]. I was prepared for some more pain and a long wait like I was used to. But it started by installing the web platform installer. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller3.png" alt="" title="" width="945" height="637" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller3.png" alt="" title="" width="945" height="637" />
 </div>
 
 So I downloaded that and installed it (not something that works by itself, it needs an extra click or two. 
@@ -27,7 +27,7 @@ So I downloaded that and installed it (not something that works by itself, it ne
 And then I could click on the &#8220;Finish your installation&#8221; thing. Which showed me this. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller4.png" alt="" title="" width="363" height="353" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller4.png" alt="" title="" width="363" height="353" />
 </div>
 
 Which was telling me to click Web platform installer and then Ok. Easy
@@ -35,13 +35,13 @@ Which was telling me to click Web platform installer and then Ok. Easy
 After that, I could go on with installing SQL Server 2008 Express. Because as soon as the web platform installer launched it showed me this:
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller1.png" alt="" title="" width="767" height="570" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller1.png" alt="" title="" width="767" height="570" />
 </div>
 
 Just click Install, and watch the progressbars move.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller2.png" alt="" title="" width="700" height="480" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/wpiinstaller/wpiinstaller2.png" alt="" title="" width="700" height="480" />
 </div>
 
 And after a short while it said it was installed. No reboots or anything. 

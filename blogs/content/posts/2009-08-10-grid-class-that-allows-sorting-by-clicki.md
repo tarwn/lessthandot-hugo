@@ -685,4 +685,4 @@ Attached is the file
 
 [grdSorting class][1]
 
- [1]: /wp-content/uploads/blogs/DataMgmt/grdSorting.zip "Grid Sorting"
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/grdSorting.zip "Grid Sorting"

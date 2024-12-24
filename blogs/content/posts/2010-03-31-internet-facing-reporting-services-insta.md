@@ -41,4 +41,4 @@ This is one of the articles that I used while setting up.
   
 <a href="http://msdn.microsoft.com/en-us/library/ms159272.aspx" target="_blank">Planning for Extranet or Internet Deployment</a>
 
- [1]: /wp-content/uploads/blogs/DataMgmt/thirster42/basicnetwork.JPG
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/thirster42/basicnetwork.JPG

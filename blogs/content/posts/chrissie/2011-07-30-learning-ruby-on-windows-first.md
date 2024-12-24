@@ -27,7 +27,7 @@ First thing I did was to make a new Rails project or application as they call it
 So I clicked the necessary buttons and got told that rails was not installed. Which made me click the &#8230; button next to where it say no rails found and it started installing rails.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails1.png?mtime=1312012971"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails1.png?mtime=1312012971" width="587" height="302" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails1.png?mtime=1312012971"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails1.png?mtime=1312012971" width="587" height="302" /></a>
 </div>
 
 But I&#8217;m sad to say that failed.
@@ -39,13 +39,13 @@ gem install rails```
 And poof there is rails.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails2.png?mtime=1312013081"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails2.png?mtime=1312013081" width="707" height="675" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails2.png?mtime=1312013081"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails2.png?mtime=1312013081" width="707" height="675" /></a>
 </div>
 
 And I now get this when I create an new rails application.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails3.png?mtime=1312013161"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails3.png?mtime=1312013161" width="508" height="291" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails3.png?mtime=1312013161"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails3.png?mtime=1312013161" width="508" height="291" /></a>
 </div>
 
 ## hello world in rubymine
@@ -53,7 +53,7 @@ And I now get this when I create an new rails application.
 So now we have our first rails application in rubymine and we are overwhelmed with this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails4.png?mtime=1312013835"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails4.png?mtime=1312013835" width="1035" height="872" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails4.png?mtime=1312013835"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails4.png?mtime=1312013835" width="1035" height="872" /></a>
 </div>
 
 I would suggest clicking around a bit and getting a feel of the place. 
@@ -65,25 +65,25 @@ And dude that looks so easy. But in Rubymine you can use a generate for this. Ju
 Select controller from this list.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails5.png?mtime=1312014692"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails5.png?mtime=1312014692" width="331" height="343" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails5.png?mtime=1312014692"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails5.png?mtime=1312014692" width="331" height="343" /></a>
 </div>
 
 Call it hello. and add an action called index.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails6.png?mtime=1312014821"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails6.png?mtime=1312014821" width="407" height="421" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails6.png?mtime=1312014821"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails6.png?mtime=1312014821" width="407" height="421" /></a>
 </div>
 
 And now we got our first ever controller.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails7.png?mtime=1312014973"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails7.png?mtime=1312014973" width="1035" height="872" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails7.png?mtime=1312014973"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails7.png?mtime=1312014973" width="1035" height="872" /></a>
 </div>
 
 Now we just adapt the routes.rb.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails8.png?mtime=1312015069"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails8.png?mtime=1312015069" width="1035" height="872" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails8.png?mtime=1312015069"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails8.png?mtime=1312015069" width="1035" height="872" /></a>
 </div>
 
 and now we should click the run button.
@@ -91,13 +91,13 @@ and now we should click the run button.
 And see the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails9.png?mtime=1312017384"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails9.png?mtime=1312017384" width="314" height="202" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails9.png?mtime=1312017384"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails9.png?mtime=1312017384" width="314" height="202" /></a>
 </div>
 
 But where does this text come from? Well, it comes from the file index.html.erb in our app/views/hello folder.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails15.png?mtime=1312017206"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails15.png?mtime=1312017206" width="708" height="507" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails15.png?mtime=1312017206"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails15.png?mtime=1312017206" width="708" height="507" /></a>
 </div>
 
 ## hello world in the command line.
@@ -111,13 +111,13 @@ rails new hello```
 and was greeted with this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails10.png?mtime=1312015793"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails10.png?mtime=1312015793" width="555" height="706" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails10.png?mtime=1312015793"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails10.png?mtime=1312015793" width="555" height="706" /></a>
 </div>
 
 And this in explorer.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails11.png?mtime=1312015858"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails11.png?mtime=1312015858" width="615" height="476" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails11.png?mtime=1312015858"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails11.png?mtime=1312015858" width="615" height="476" /></a>
 </div>
 
 I then did the 
@@ -129,7 +129,7 @@ and
 
 ```
 rails generate controller hello```<div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails12.png?mtime=1312015993"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails12.png?mtime=1312015993" width="555" height="356" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails12.png?mtime=1312015993"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails12.png?mtime=1312015993" width="555" height="356" /></a>
 </div>
 
 Then I edited the routes.rb in the config folder. And I just kept the following.
@@ -141,7 +141,7 @@ end```
 Then I had to create a file called index.html.erb in app/views/hello and I added a little text to it.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails13.png?mtime=1312016440"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails13.png?mtime=1312016440" width="617" height="276" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails13.png?mtime=1312016440"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails13.png?mtime=1312016440" width="617" height="276" /></a>
 </div>
 
 Then it was time to run our server via.
@@ -151,7 +151,7 @@ rails server```
 With this as the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/ruby/rails14.png?mtime=1312016878"><img alt="" src="/wp-content/uploads/users/chrissie1/ruby/rails14.png?mtime=1312016878" width="544" height="737" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails14.png?mtime=1312016878"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/ruby/rails14.png?mtime=1312016878" width="544" height="737" /></a>
 </div>
 
 ## Conclusion

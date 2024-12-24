@@ -38,7 +38,7 @@ You can find [documentation][2] on MSDN.
 Now that you have Roslyn installed you will see that you have a whole slew of new projecttypes at your disposal.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn.png?mtime=1319305610"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn.png?mtime=1319305610" width="985" height="691" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn.png?mtime=1319305610"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn.png?mtime=1319305610" width="985" height="691" /></a>
 </div>
 
 I will start with a Console application.
@@ -93,7 +93,7 @@ Dim tree = SyntaxTree.ParseCompilationUnit(sourcetext)
 First we need to get the root of our class, which we can get with tree.Root. We then get the properties via the descendentnodes and we tell it to get all nodes of type PropertyStatementSyntax. We then just write the result out on the Console.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/roslyn/roslyn2.png?mtime=1319307178"><img alt="" src="/wp-content/uploads/users/chrissie1/roslyn/roslyn2.png?mtime=1319307178" width="707" height="423" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn2.png?mtime=1319307178"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/roslyn/roslyn2.png?mtime=1319307178" width="707" height="423" /></a>
 </div>
 
 The identifier will get you the name of the property. You can also get the return type and so much more. Like attributes and what not.

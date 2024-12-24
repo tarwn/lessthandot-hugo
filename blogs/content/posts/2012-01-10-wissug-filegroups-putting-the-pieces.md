@@ -32,4 +32,4 @@ If you're interested in having me present this for your user group or other grou
 
  [1]: http://wisconsin.sqlpass.org/
  [2]: http://www.mmpworld.com/wp-content/uploads/2010/05/legos.jpg ""
- [3]: /wp-content/uploads/users/grrlgeek/WiSSUG 20120110.zip?mtime=1326250959
+ [3]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/WiSSUG 20120110.zip?mtime=1326250959

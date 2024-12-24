@@ -33,7 +33,7 @@ So we also need to create a helper project. I used a windows application for thi
 See here the structure of the solution.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/setup/setup.png" alt="" title="" width="440" height="487" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/setup/setup.png" alt="" title="" width="440" height="487" />
 </div>
 
 DownloadDatabase is the setup project that does not change the app.config. and DownloadDatabaseKits does change it.
@@ -139,7 +139,7 @@ Now comes the difficult thing.
 You have to add a Custom action to your setup project and this in the Commit category. You add the install helper primary output and you give you change its properties. See Image for more details.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/setup/setup2.png" alt="" title="" width="598" height="390" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/setup/setup2.png" alt="" title="" width="598" height="390" />
 </div>
 
 The important thing is the 

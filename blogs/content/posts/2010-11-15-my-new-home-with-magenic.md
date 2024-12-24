@@ -19,7 +19,7 @@ tags:
 
 ---
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/moving-day.jpg" alt="" title="" width="468" height="330" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/moving-day.jpg" alt="" title="" width="468" height="330" />
 </div>
 
 The SQL Community is an important part to everything I do both in work and pleasure. Over the last year, I've started to realize that the work aspect to my life could be pushed higher and at the same time, pushed more into a role that benefits the SQL Community. It is always hard to disconnect yourself as a production DBA from the systems that you build and nurture from a failing service into an enterprise worthy service. Even so, I've made the decision to part with those systems and my current employer to move into a role that will for one, be more challenging and second, a company that supports both the community and has great pride in the product and services they provide.

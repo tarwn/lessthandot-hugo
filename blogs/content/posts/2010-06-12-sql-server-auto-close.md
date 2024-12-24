@@ -25,7 +25,7 @@ tags:
 Today I woke up to a little over a hundred emails from one of my database servers letting me know that my resources were jumping around like a kangaroo. Actually, more like a boxing match with one...
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/autoclose_2.gif" alt="" title="" width="380" height="263" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/autoclose_2.gif" alt="" title="" width="380" height="263" />
 </div>
 
 In the mix of those emails I also had alerts thrown stating, 
@@ -35,7 +35,7 @@ In the mix of those emails I also had alerts thrown stating,
 I actively monitor the state of the database being open or closed (which also shows status of suspect, recovering etc...) I recommend the same so you catch these situations. When I read the emails, I knew exactly what the setting was that had been set to true. "Auto Close"
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/autclose.gif" alt="" title="" width="494" height="184" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/autclose.gif" alt="" title="" width="494" height="184" />
 </div>
 
 Why is this bad? Buck Woody ([Blog][1] | [Twitter][2]) tells us in his blog, "_[SQL Server Best Practices: AutoClose Should be Off][3]_"

@@ -151,11 +151,11 @@ As you can see I added a paging attribute and set it to true and a pageSize that
 And here is the proof that it works. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancyjtable2.png?mtime=1359274900"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancyjtable2.png?mtime=1359274900" width="474" height="404" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable2.png?mtime=1359274900"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable2.png?mtime=1359274900" width="474" height="404" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancyjtable3.png?mtime=1359274910"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancyjtable3.png?mtime=1359274910" width="473" height="256" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable3.png?mtime=1359274910"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable3.png?mtime=1359274910" width="473" height="256" /></a>
 </div>
 
 ## Sorting
@@ -233,13 +233,13 @@ Just look at thos cute little arrows in the columnheader of the name column.
 Ascending 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancyjtable4.png?mtime=1359275725"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancyjtable4.png?mtime=1359275725" width="473" height="405" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable4.png?mtime=1359275725"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable4.png?mtime=1359275725" width="473" height="405" /></a>
 </div>
 
 Descending
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancyjtable5.png?mtime=1359275736"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancyjtable5.png?mtime=1359275736" width="474" height="404" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable5.png?mtime=1359275736"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancyjtable5.png?mtime=1359275736" width="474" height="404" /></a>
 </div>
 
 ## Conclusion

@@ -23,7 +23,7 @@ tags:
 A few days ago I made a post on [how to make a factory with T4 templates][1]. That version only made one factory for one namespace. So it was pretty limiting. But as you could see, in that example, we had 2 namespaces, namely Test and Test2.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4.png" alt="" title="" width="177" height="179" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4.png" alt="" title="" width="177" height="179" />
 </div>
 
 We need a factory for both those namespaces. We can either copy/paste or change our template to produce more files. After all, these files are nearly the same.
@@ -121,7 +121,7 @@ void WriteTemplateOutputToFile(string relativeOutputFilePath)
 The bit of code above writes the generated code to the filesystem and clears the Generated code so that you get a blank slate to generate the next file. I also added a comment at the top of the file to warn users not to change the file since it is generated and changes will get lost when regenerated.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/T4/T4_4.png" alt="" title="" width="189" height="268" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/T4/T4_4.png" alt="" title="" width="189" height="268" />
 </div>
 
 ## Conclusion

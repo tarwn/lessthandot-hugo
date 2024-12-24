@@ -123,7 +123,7 @@ AND DATEPART(dw,SomeDate  ) IN(1,7)
 
 Below are the execution plans, as you can see both queries result in an index seek
 
-<img src="/wp-content/uploads/blogs/DataMgmt//Execution plan.PNG" alt="" title="" width="855" height="536" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt//Execution plan.PNG" alt="" title="" width="855" height="536" />
 
 Why the top query takes 60% and the bottom one 40% is a little strange to me, I know that they did some optimizations where CONVERT(DATE, Column) .... is now SARGAble but this should be executed only once
 

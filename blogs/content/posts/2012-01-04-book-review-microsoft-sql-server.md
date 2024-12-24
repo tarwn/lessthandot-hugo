@@ -20,7 +20,7 @@ categories:
 Remember this moment? 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/grrlgeek/IMG_1122.JPG?mtime=1325477156"><img alt="" src="/wp-content/uploads/users/grrlgeek/IMG_1122.JPG?mtime=1325477156" width="484" height="648" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/IMG_1122.JPG?mtime=1325477156"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/IMG_1122.JPG?mtime=1325477156" width="484" height="648" /></a>
 </div>
 
 I sure do. At SQL Saturday #67, Chicago 2011, I won the SQLskills swag bag. My second-favorite part of the package was the book, [Microsoft SQL Server 2008 Internals][1]. It was written by Kalen Delaney ([blog][2] | [twitter][3]), Paul Randal ([blog][4] | [twitter][5]), Kimberly Tripp ([blog][6] | [twitter][7]), Conor Cunningham ([blog][8]), Adam Machanic ([blog][9] | [twitter][10]), and Ben Nevarez ([blog][11] | [twitter][12]). (My favorite part was the SQLskills Sharpie pen!) This is **The Book** to read if you want to know the "how" of SQL Server. 

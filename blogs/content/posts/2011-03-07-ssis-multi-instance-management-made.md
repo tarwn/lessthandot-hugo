@@ -27,7 +27,7 @@ Now to give you the ability to save and manage SSIS packages on specific MSDB da
  
 
 <div class="image_block">
-  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Config Path.jpg?mtime=1299482416"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Config Path.jpg?mtime=1299482416" alt="" width="652" height="29" /></a>
+  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Config Path.jpg?mtime=1299482416"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Config Path.jpg?mtime=1299482416" alt="" width="652" height="29" /></a>
 </div>
 
  
@@ -37,7 +37,7 @@ You can now either scroll down or order the document type in descending order an
  
 
 <div class="image_block">
-  <a href="/media/users/sqlarcher/SSIS_Post/SSIS File.jpg?mtime=1299482416"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS File.jpg?mtime=1299482416" alt="" width="587" height="26" /></a>
+  <a href="/media/users/sqlarcher/SSIS_Post/SSIS File.jpg?mtime=1299482416"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS File.jpg?mtime=1299482416" alt="" width="587" height="26" /></a>
 </div>
 
  
@@ -47,7 +47,7 @@ This is the configuration document for the SSIS engine where it provides the con
  
 
 <div class="image_block">
-  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Config.jpg?mtime=1299482416"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Config.jpg?mtime=1299482416" alt="" width="1014" height="249" /></a>
+  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Config.jpg?mtime=1299482416"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Config.jpg?mtime=1299482416" alt="" width="1014" height="249" /></a>
 </div>
 
  
@@ -57,7 +57,7 @@ We are interested in the following node, which we will also edit:
  
 
 <div class="image_block">
-  <a href="/media/users/sqlarcher/SSIS_Post/Concerning Factor.jpg?mtime=1299482415"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/Concerning Factor.jpg?mtime=1299482415" alt="" width="360" height="71" /></a>
+  <a href="/media/users/sqlarcher/SSIS_Post/Concerning Factor.jpg?mtime=1299482415"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/SSIS_Post/Concerning Factor.jpg?mtime=1299482415" alt="" width="360" height="71" /></a>
 </div>
 
  
@@ -67,7 +67,7 @@ The highlighted lines will be changed according to the respective settings in yo
  
 
 <div class="image_block">
-  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Config Edit.jpg?mtime=1299482416"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Config Edit.jpg?mtime=1299482416" alt="" width="721" height="154" /></a>
+  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Config Edit.jpg?mtime=1299482416"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Config Edit.jpg?mtime=1299482416" alt="" width="721" height="154" /></a>
 </div>
 
  
@@ -81,7 +81,7 @@ Now we will see the following:
  
 
 <div class="image_block">
-  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Folders.jpg?mtime=1299482416"><img src="/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Folders.jpg?mtime=1299482416" alt="" width="445" height="130" /></a>
+  <a href="/media/users/sqlarcher/SSIS_Post/SSIS Folders.jpg?mtime=1299482416"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/sqlarcher/SSIS_Post/SSIS Folders.jpg?mtime=1299482416" alt="" width="445" height="130" /></a>
 </div>
 
 Thanks to this handy configuration, all of your SSIS packages can be saved to their respective instance MSDBs' and management will be easier due to a centralized access point and no need of guessing where your packages are being saved.

@@ -20,13 +20,13 @@ _MspFactory.Stub(Function(e) e.CrudLocus).Return(_CrudILocus)```
 And that happens to work and compile. However, intellisense doesn&#8217;t seem to be able to infer the type of e like the compiler seems to be able to do. Just look at picture 1.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/lambdanotinfer1.jpg" alt="" title="" width="434" height="116" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/lambdanotinfer1.jpg" alt="" title="" width="434" height="116" />
 </div>
 
 But when I specify the type, it is happy to add the intellisense.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/lambdanotinfer2.jpg" alt="" title="" width="747" height="152" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/lambdanotinfer2.jpg" alt="" title="" width="747" height="152" />
 </div>
 
 Something to work on for version 2010 boys and girls. Let the inferring begin ;D.

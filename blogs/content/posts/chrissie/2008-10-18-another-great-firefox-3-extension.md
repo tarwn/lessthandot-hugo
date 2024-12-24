@@ -18,7 +18,7 @@ I stumbled across this one just today. It is called Googlepreview.
 And this is what happens if you search for Lessthandot in google.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/googlepreview.jpg" alt="" title="" width="747" height="772" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/googlepreview.jpg" alt="" title="" width="747" height="772" />
 </div>
 
 Look at the preview thumbnail and also look at the page rank it provides.

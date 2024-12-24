@@ -195,7 +195,7 @@ It was also lacking on which libraries to import (js and css) but you now have a
 And this is the result.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/nancydatatables1.png?mtime=1359831744"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/nancydatatables1.png?mtime=1359831744" width="857" height="560" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancydatatables1.png?mtime=1359831744"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/nancydatatables1.png?mtime=1359831744" width="857" height="560" /></a>
 </div>
 
 ## Conclusion

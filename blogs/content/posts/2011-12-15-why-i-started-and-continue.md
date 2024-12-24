@@ -27,7 +27,7 @@ The forums went on for a few years.  I made some great friends like Denis, Eli 
  
 
 <div class="image_block">
-  <a href="/media/blogs/ITProfessionals/onpnt.com.GIF?mtime=1323966196"><img src="/wp-content/uploads/blogs/ITProfessionals/onpnt.com.GIF?mtime=1323966196" alt="" width="900" height="424" /></a>
+  <a href="/media/blogs/ITProfessionals/onpnt.com.GIF?mtime=1323966196"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/onpnt.com.GIF?mtime=1323966196" alt="" width="900" height="424" /></a>
 </div>
 
  

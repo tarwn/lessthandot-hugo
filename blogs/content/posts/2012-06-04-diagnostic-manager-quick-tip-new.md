@@ -26,19 +26,19 @@ One solution that I like to use, is to create a "New Server" tag and slap it on 
 Let's just right in and create the "New Server" tag. From the File Menu choose Manage Tags.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/tag1.jpg?mtime=1338861169"><img alt="" src="/wp-content/uploads/users/kconan/tag1.jpg?mtime=1338861169" width="231" height="150" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tag1.jpg?mtime=1338861169"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tag1.jpg?mtime=1338861169" width="231" height="150" /></a>
 </div>
 
 Near the bottom of the Manage Tags screen, choose Add.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/tag2.jpg?mtime=1338861170"><img alt="" src="/wp-content/uploads/users/kconan/tag2.jpg?mtime=1338861170" width="578" height="544" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tag2.jpg?mtime=1338861170"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tag2.jpg?mtime=1338861170" width="578" height="544" /></a>
 </div>
 
 Enter "New Server" into the Name field and click on ok.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/kconan/tag3.JPG?mtime=1338861170"><img alt="" src="/wp-content/uploads/users/kconan/tag3.JPG?mtime=1338861170" width="359" height="121" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tag3.JPG?mtime=1338861170"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/tag3.JPG?mtime=1338861170" width="359" height="121" /></a>
 </div>
 
 Now as you add servers, assign them to the "New Server" tag and then you can filter on them!

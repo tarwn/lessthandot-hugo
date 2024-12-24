@@ -18,7 +18,7 @@ categories:
 ## Event #1
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/myevents1.gif" alt="" title="" width="501" height="296" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/myevents1.gif" alt="" title="" width="501" height="296" />
 </div>
 
 Yes, that was me at one time. At the old age of my pre-teen years my parents split and I went my own way shortly after that. At this time skateboarding was synonymous with punk rock along with drinking as much as you possibly could. I'm not talking water either. When I refer to punk rock, I'm not referring to the green hair script kiddies that have a weekend plot to use Kool-Aid to be cool either. We all thought at this point in our lives that we would always be as rebellious in every way we could be and write songs to prove it. The norm and the government were evil and we looked up to no one in our lives. I even have a percentage of my body tattooed and the scars from slam dancing and fighting to reflect the rebellion in us. There was death, drugs and jail all around me though and that's pretty much good enough to get the point across on the significance. 
@@ -28,7 +28,7 @@ So why was this remotely significant to where I am today? The one thing I learne
 ## Event #2
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/myevents2.gif" alt="" title="" width="287" height="287" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/myevents2.gif" alt="" title="" width="287" height="287" />
 </div>
 
 This point in my life changed everything. Around the age of 20 I was diagnosed with [Crohns disease][3]. This ended my punk years and opened my eyes. It opened my eyes primarily to the fact that drinking Milwaukee's Best by the keg daily was going to put me 6 feet under. Either that or I would be put away like most of the people around me. So I slowly left the punk scene although it never truly leaves a person inside. I pushed hard to find my first real job. That ended up being a factory job for $7.50 an hour. Later in the years to follow finding that first job, the company helped put me through school and helped me grow as a person all together. Rebuilding after dropping out of high school is not the easiest thing in the world but I knew I had to do it. In 3 years I moved into the process engineering area and thought I had it made. I thought I had it made until I purchased my first computer. In the weeks following that purchase I knew I had found the one thing I could make a living at while honestly being happy and enjoying what it was I was doing. I created a web design business which shortly turned into a consulting business focused around development and databases. I then moved to the IT group in the same company and started my career in development and database systems. At this time I had also dove head first into the technical forums and starting absorbing as much as my brain could while helping others around me. 
@@ -38,7 +38,7 @@ There is no hatred in me for Crohns or having to deal with pain in my life like 
 ## Event #3
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/myevents3.gif" alt="" title="" width="256" height="172" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/myevents3.gif" alt="" title="" width="256" height="172" />
 </div>
 
 I met this event 11 years ago. She is the most important thing to me and without her I could not have done any of this. She has spent more time than I wish she ever would have had to taking care of me when I was down and ready to give in. I'm reminded every day how lucky I am and why I work so hard to make her life with me the best I can. Together we have created a family I never thought I would have with our perfect two sons. I can't thank her enough because without her I know I could not hold my head up every day. 

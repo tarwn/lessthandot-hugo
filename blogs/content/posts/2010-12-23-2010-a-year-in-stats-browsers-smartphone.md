@@ -26,7 +26,7 @@ This post is about stats from hits to this website. I always find this interesti
 
 ## Smart phones
 
-<img src="/wp-content/uploads/blogs/WebDev/SmartPhones.png" alt="" title="" width="559" height="285" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/SmartPhones.png" alt="" title="" width="559" height="285" />
   
 As you can see from that chart, in January iPhone was at 70% and it ended up in December at 34%, Android went from 13% to 40%, Android activations are almost double now compared to Apple's in the last quarter. My predictions is that Android will have at least 55% share by the end of next year. It is not all doom and gloom for Apple however, the iPad managed to rise to almost 19% since April. Below are the numbers that were used to generate the chart.
 
@@ -374,7 +374,7 @@ As you can see from that chart, in January iPhone was at 70% and it ended up in 
 
 ## Browsers
 
-<img src="/wp-content/uploads/blogs/WebDev/Browsers.png" alt="" title="" width="598" height="279" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/Browsers.png" alt="" title="" width="598" height="279" />
   
 The year 2010 was a very good year for Chrome, Chrome has more than doubled its share, FireFox lost about 8% and IE lost about 5%. Now that Chrome has a lot of the Extensions that FireFox has I think even more people will switch to Chrome, I have been using Chrome since the first beta version and have never gone back to fireFox or IE. My predictions is that Chrome will capture a third of the market by the end of next year.
 
@@ -672,7 +672,7 @@ Below are the numbers that were used to generate the chart.
 
 ### Internet Explorer
 
-<img src="/wp-content/uploads/blogs/WebDev/IE.png" alt="" title="" width="592" height="297" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/IE.png" alt="" title="" width="592" height="297" />
   
 Internet Explorer 6 is slowly going to below 5% share, IE8 is the most used browser with almost 70% share. I tried IE 9 a couple of times, I like the speed and the other improvements it has but it won't be enough to make me switch from Chrome
 
@@ -970,7 +970,7 @@ Below are the numbers that were used to generate the chart.
 
 ## Windows
 
-<img src="/wp-content/uploads/blogs/WebDev/Windows.png" alt="" title="" width="591" height="286" />
+<img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/Windows.png" alt="" title="" width="591" height="286" />
   
 Windows 7 has been the most used version of windows for the past two month on this site. XP is still going strong..especially in corporations. Vista's share dropped in half.
 

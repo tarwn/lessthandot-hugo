@@ -26,7 +26,7 @@ I was installing an instance of SQL Server on a VM this afternoon and ran into t
 Rule "Consistency validation for SQL Server registry keys" failed.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052" width="624" height="344" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-113.png?mtime=1329268052" width="624" height="344" /></a>
 </div>
 
 The error isn't very common, that I knew of.  Before we go about why this error did actually happen and how to fix it in the case of this installation, let's go through troubleshooting an error that occurs in the setups rules validation steps.
@@ -50,7 +50,7 @@ In the Detail_GlobalRules.txt file that relates to the error noted in the beginn
 The information found here is valuable but in reality, it is only a review of what the installer has already shown us; the error and a slight and not very helpful, description.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-114.png?mtime=1329268053"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-114.png?mtime=1329268053" width="624" height="359" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-114.png?mtime=1329268053"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-114.png?mtime=1329268053" width="624" height="359" /></a>
 </div>
 
 Open the Details.txt file next and search for the same keyword.  In the case below, the keyword was expanded to "Registry Key" to help refine the search.
@@ -60,13 +60,13 @@ Here we can see that the actual registry keys that failed the validation are sho
 Although that resolution would be a fix, it was only a clue in this case.  If you look closely, a UNC path was used to access an admin share on another machine for the setup files.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-115.png?mtime=1329268054"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-115.png?mtime=1329268054" width="624" height="276" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-115.png?mtime=1329268054"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-115.png?mtime=1329268054" width="624" height="276" /></a>
 </div>
 
 Looking closer into the Detail.txt log, we can see the reference to AclPermissionsFacet.  This is another clue that the security resolution is on the right track. With the knowledge of the permissions error and the UNC and admin share usage in hand, we can come to a step to attempt as a resolution of our own.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-116.png?mtime=1329268054"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-116.png?mtime=1329268054" width="624" height="83" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-116.png?mtime=1329268054"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-116.png?mtime=1329268054" width="624" height="83" /></a>
 </div>
 
 Since this installation was run from a remote drive by accessing it via the admin share.  E.g. \192.168.1.100f$ and with the machine that had the setup files on it existing in another work group, security was passed to access those files by manually entering an account on the remote machine that could do this.  This is fine for most installations but in this case, the credentials appeared to be used to attempt to alter the registry during the validation rules steps.

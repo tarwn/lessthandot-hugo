@@ -26,7 +26,7 @@ Files critical to any application, service or operating system that directly con
 For our design we want to create a workflow to define our needs. In all, the work flow involves the looping through an open directory (and subdirectories) while pulling files out of them and inserting them into a database.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-10.png?mtime=1295736729"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-10.png?mtime=1295736729" width="167" height="167" align="left" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-10.png?mtime=1295736729"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-10.png?mtime=1295736729" width="167" height="167" align="left" /></a>
 </div>
 
 As mentioned earlier, SSIS provides us with all the tasks and components to achieve this complete process. They have been identified as follows:
@@ -42,7 +42,7 @@ As mentioned earlier, SSIS provides us with all the tasks and components to achi
 From the generic image above a workflow begins to take shape. Flow charting this workflow allows us to single out each step and process that needs to be developed. Not only does it allow us to make this identification but it provides us with focus while not losing the direction that has been defined. That is not to say that a definition and flow chart is set in stone. These can and typically will develop over the process of creating the actual system from these tools. As long as the scope is not lost with these alterations to the definition, this can be a powerful designing practice.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-11.png?mtime=1295736730"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-11.png?mtime=1295736730" width="624" height="361" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-11.png?mtime=1295736730"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-11.png?mtime=1295736730" width="624" height="361" /></a>
 </div>
 
 With this flow we achieve the major tasks: Get the file information, decision to update or insert and then the final cleansing of what the process itself has created.
@@ -52,7 +52,7 @@ In SSIS we have the unique ability to show a DTSX package from Business Intellig
 **For our task this appears as follows.**
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-12.png?mtime=1295736731"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-12.png?mtime=1295736731" width="607" height="371" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-12.png?mtime=1295736731"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-12.png?mtime=1295736731" width="607" height="371" /></a>
 </div>
 
 Of course designing a package is the second to last step just before testing your development efforts. The above illustration is given to show the comparison to your workflow creation and how it can be viewed in a finished product from BIDS. 

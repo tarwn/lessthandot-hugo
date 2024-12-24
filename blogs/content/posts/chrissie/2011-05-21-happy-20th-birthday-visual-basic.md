@@ -38,7 +38,7 @@ I have written [my fair share of posts][3] about VB.Net over the years here at L
 <span class="MT_larger"><span class="MT_red">So happy birthday VB and may you live to be a hundred.</span></span>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/birthday.png?mtime=1305962933"><img alt="" src="/wp-content/uploads/users/chrissie1/birthday.png?mtime=1305962933" width="300" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/birthday.png?mtime=1305962933"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/birthday.png?mtime=1305962933" width="300" height="300" /></a>
 </div>
 
 Sources

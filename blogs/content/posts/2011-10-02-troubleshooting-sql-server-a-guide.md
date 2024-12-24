@@ -34,7 +34,7 @@ categories:
 </p>
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-61.png?mtime=1317591579"><img src="/wp-content/uploads/blogs/DataMgmt/-61.png?mtime=1317591579" alt="" width="173" height="200" /></a>
+  <a href="/media/blogs/DataMgmt/-61.png?mtime=1317591579"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-61.png?mtime=1317591579" alt="" width="173" height="200" /></a>
 </div>
 
 <p class="MsoNormal" style="margin: 0in 0in 10pt;">

@@ -75,7 +75,7 @@ You can check for these files using sysaltfiles
 SELECT * FROM master.dbo.sysaltfiles
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_0.gif" alt="" title="" width="478" height="89" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_0.gif" alt="" title="" width="478" height="89" />
 </div></p> 
 
 Backing up the principal to get the mirror ready is the next major piece to preparation. Without the full backup and any logs or differentials in between the tail end log backup, we will not be able to get the mirror into a synchronized state in which the process can successfully match where the logging is. 
@@ -115,7 +115,7 @@ Right click the database from Object Explorer and select Properties.
 In the Database Properties dialog, select Mirroring. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_1.gif" alt="" title="" width="525" height="469" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_1.gif" alt="" title="" width="525" height="469" />
 </div>
 
 To set mirroring up we must go into the "Configure Security" wizard. This is slightly off on what it means. In this wizard we will in all, setup security, endpoints and the location of the instances.
@@ -125,19 +125,19 @@ The first tab will ask if we want a witness or not. A witness can be located on 
 We will select No here but by default it is set to Yes.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_2.gif" alt="" title="" width="546" height="491" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_2.gif" alt="" title="" width="546" height="491" />
 </div>
 
 On the next screen we jump right into the principal instance selection. The settings will be pre-filled out given the instance you started the wizard from. The only change we will make here is the port to 7088
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_3.gif" alt="" title="" width="546" height="491" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_3.gif" alt="" title="" width="546" height="491" />
 </div>
 
 At the next screen we will need to connect to the server that will act as our mirror. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_4.gif" alt="" title="" width="517" height="479" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_4.gif" alt="" title="" width="517" height="479" />
 </div>
 
 Once the instance, change the port number to 7089.
@@ -145,25 +145,25 @@ Once the instance, change the port number to 7089.
 Security follows for both instances. Enter the service accounts for your own environment and click, Next.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_5.gif" alt="" title="" width="535" height="481" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_5.gif" alt="" title="" width="535" height="481" />
 </div>
 
 Once security is configured, the mirroring setup is complete. Clicking Finish will complete the configuration. This will also create the endpoints on the instances in order to start mirroring. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_6.gif" alt="" title="" width="535" height="481" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_6.gif" alt="" title="" width="535" height="481" />
 </div>
 
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_7.gif" alt="" title="" width="376" height="153" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_7.gif" alt="" title="" width="376" height="153" />
 </div>
 
 Once you exit the wizard, a dialog will come up asking if you want to start the mirror. At this point we want to do the start up process so click Start.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_8.gif" alt="" title="" width="456" height="299" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_8.gif" alt="" title="" width="456" height="299" />
 </div>
 
 Check it out, it works!
@@ -172,7 +172,7 @@ Check it out, it works!
 select * from sys.database_mirroring where mirroring_guid is not null
 ```
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/setupmirror_9.gif" alt="" title="" width="628" height="127" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/setupmirror_9.gif" alt="" title="" width="628" height="127" />
 </div>
 
 In the real world, the mirroring\_state\_desc will say "Synchronizing" much longer than the amount of time it takes to execute this query. The initial startup of the mirroring requires it to catch up, and with larger databases that are active, the synchronizing status can last minutes.

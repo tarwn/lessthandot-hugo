@@ -25,7 +25,7 @@ Second, it seems that this version is based on the Apple Webkit (AppleWebKit/525
 So, first order of business is downloading it. You can find it very easily via Google (duh). They even added a link to it on their frontpage. Like this.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev/GoogleChrome.jpg" alt="" title="" width="609" height="410" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/GoogleChrome.jpg" alt="" title="" width="609" height="410" />
 </div>
 
 This is only a 475kb download file. But at work it doesn&#8217;t download that fast, so I had to wait for it.

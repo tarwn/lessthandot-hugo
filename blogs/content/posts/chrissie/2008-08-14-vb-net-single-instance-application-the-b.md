@@ -23,7 +23,7 @@ Based on [Scott Hanselman&#8217; s][1] blogpost named [The Weekly Source Code 31
 We all know about this little setting, right? At least now you do ;-).
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/SingleInstance.jpg" alt="" title="" width="313" height="322" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/SingleInstance.jpg" alt="" title="" width="313" height="322" />
 </div>
 
 <div class="image_block">
@@ -36,7 +36,7 @@ We all know about this little setting, right? At least now you do ;-).
   </p>
   
   <p>
-    <img src="/wp-content/uploads/blogs/DesktopDev/Singleinstancewitherror.jpg" alt="" title="" width="783" height="422" /></div> 
+    <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/Singleinstancewitherror.jpg" alt="" title="" width="783" height="422" /></div> 
     
     <p>
       That meant you had to have all your startupcode in the constructor or loadevent of that form (:'()
@@ -185,7 +185,7 @@ End Namespace</pre>
     </p>
     
     <p>
-      <a href="/wp-content/uploads/blogs/DesktopDev/SingleInstance.zip" title="">SingleInstance.zip</a>
+      <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/SingleInstance.zip" title="">SingleInstance.zip</a>
     </p>
 
  [1]: http://www.hanselman.com/blog/

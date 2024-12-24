@@ -36,7 +36,7 @@ I can't wait to do this again in 2014!
 Here's a peek at our first-time speakers! (My deepest apologies to Jennifer Salvo, whose session I missed while cleaning up for the day.)
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/Frank.jpg?mtime=1365666281" alt="" width="400" height="282" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Frank.jpg?mtime=1365666281" alt="" width="400" height="282" />
 </p>
 
 <p style="text-align: center;">
@@ -44,7 +44,7 @@ Here's a peek at our first-time speakers! (My deepest apologies to Jennifer Salv
 </p>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/Leonard.jpg?mtime=1365666279" alt="" width="400" height="238" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Leonard.jpg?mtime=1365666279" alt="" width="400" height="238" />
 </p>
 
 <p style="text-align: center;">
@@ -52,7 +52,7 @@ Here's a peek at our first-time speakers! (My deepest apologies to Jennifer Salv
 </p>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/ITProfessionals/Ken.jpg?mtime=1365666279" alt="" width="400" height="229" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/ITProfessionals/Ken.jpg?mtime=1365666279" alt="" width="400" height="229" />
 </p>
 
 <p style="text-align: center;">
@@ -60,7 +60,7 @@ Here's a peek at our first-time speakers! (My deepest apologies to Jennifer Salv
 </p>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Gill.jpg?mtime=1365666510" alt="" width="400" height="262" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Gill.jpg?mtime=1365666510" alt="" width="400" height="262" />
 </p>
 
 <p style="text-align: center;">
@@ -68,7 +68,7 @@ Here's a peek at our first-time speakers! (My deepest apologies to Jennifer Salv
 </p>
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/Jim.jpg?mtime=1365666510" alt="" width="400" height="292" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/Jim.jpg?mtime=1365666510" alt="" width="400" height="292" />
 </p>
 
 <p style="text-align: center;">

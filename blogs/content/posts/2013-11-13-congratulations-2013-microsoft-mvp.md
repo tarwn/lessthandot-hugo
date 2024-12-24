@@ -31,7 +31,7 @@ When I was contacted over the summer by Microsoft and asked to submit a list of 
   
 **Some Influential Folk**
   
-<img style="float: right;" src="/wp-content/uploads/users/mndba/OtherSQLFamily1.jpg" width="150" height="96" alt="" />  
+<img style="float: right;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/mndba/OtherSQLFamily1.jpg" width="150" height="96" alt="" />  
 <u>My "Other SQL Family" </u>– I would not get to do the cool things I do without the support of my wife Jen and two young boys, Darren and Joe. They get me. It's that simple. Knowing that I love my work with the SQL Server Community, they support me unconditionally. Upon arriving home from PASS Summit 2012, I found them at baggage claim, holding this sign. They are that awesome. 
 
 <u>A Unicorn and a Teacher </u>– I first met Jason Strate (<a href="http://www.jasonstrate.com/" target="_blank">B</a> | <a href="https://twitter.com/stratesql" target="_blank">T</a>) in 2011 during his final year as Chair of PASSMN, a position I would one day hold myself. I met Sarah (<a href="http://sarahsjolander.wordpress.com/" target="_blank">B</a> | <a href="https://twitter.com/Dancem0m" target="_blank">T</a>) a few months later during my first SQL Saturday volunteer gig at SQL Saturday 99. Jason sets a great example of what it means to be an MVP and together he and Sarah personify <a href="https://twitter.com/search?q=%23SQLFamily&src=typd" target="_blank">#SQLFamily</a>.

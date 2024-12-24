@@ -25,7 +25,7 @@ Remember this article, "[Comparing the Chicago Highway System to your Disaster/R
 </p>
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/pred_1.gif?mtime=1358960651"><img src="/wp-content/uploads/blogs/DataMgmt/pred_1.gif?mtime=1358960651" alt="" width="617" height="158" /></a>
+  <a href="/media/blogs/DataMgmt/pred_1.gif?mtime=1358960651"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/pred_1.gif?mtime=1358960651" alt="" width="617" height="158" /></a>
 </div>
 
  
@@ -35,7 +35,7 @@ Well, today, as with most days that I drive to the office or a client, the drive
 **Predictive Driving vs. Analytics** 
 
 <div class="image_block">
-  <a href="/media/blogs/DataMgmt/-195.png?mtime=1358960652"><img src="/wp-content/uploads/blogs/DataMgmt/-195.png?mtime=1358960652" alt="" width="208" height="156" align="left" /></a>
+  <a href="/media/blogs/DataMgmt/-195.png?mtime=1358960652"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-195.png?mtime=1358960652" alt="" width="208" height="156" align="left" /></a>
 </div>
 
 The method I've chosen in driving is a predictive, offensive method.  While driving, I'm attentive to the objects around me.  These objects are break lights, manner in which a person is seated while driving and even, how a car is maintaining a path between the lines.  What also comes to mind is the past.  When you drive on a road, roughly the same time, you begin to retain a historical picture of the road, merges and even cars that are familiar and how they drove the last time you were near them.  Given that compilation or, aggregation of data in my own head, I predictively can make judgment calls on whether I'll slow down to avoid a driver, switch lanes a mile early to avoid a backup for an on ramp or even, prepare to stop when I know, traffic will be stopping or slowing.

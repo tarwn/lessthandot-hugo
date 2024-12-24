@@ -30,7 +30,7 @@ I decided to take a look at my [Has FireFox lost its Mojo, are Firefox user jump
 Well Firefox never reached 25%, as a matter of fact Firefox is at less than 20% market share today. Here is what the stats look like for the last 12 months according to [NetMarket Share][2]
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/WebDev/BrowserStats.PNG?mtime=1328978705"><img alt="" src="/wp-content/uploads/blogs/WebDev/BrowserStats.PNG?mtime=1328978705" width="805" height="235" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/BrowserStats.PNG?mtime=1328978705"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev/BrowserStats.PNG?mtime=1328978705" width="805" height="235" /></a>
 </div>
 
 As you can see Chrome has almost surpassed Firefox, I think that in 2 or 3 months Google will have surpassed Firefox. A lot of people still use Firefox because of the fact that some extensions don't exist on Chrome. NoScript is a big one, Chrome has actually somethign similar, it is called [ScriptNo][3]. FireBug is another reason that people stick with FireFox for now. Even Germany's Federal Office for Information Security (BSI) is [recommending Chrome][4] now, they did not pick FireFox.

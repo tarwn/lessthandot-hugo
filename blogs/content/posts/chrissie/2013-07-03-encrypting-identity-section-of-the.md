@@ -23,7 +23,7 @@ This is an app that uses windows authentication but my test server has an identi
 Anyway. I noticed that the password was wrong because of this.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt.png?mtime=1372839465"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt.png?mtime=1372839465" width="1007" height="405" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt.png?mtime=1372839465"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt.png?mtime=1372839465" width="1007" height="405" /></a>
 </div>
 
 Yay, it shows my username and password in plaintext. 
@@ -50,7 +50,7 @@ Log.Debug("Rootpath = {0}", "")
 And now I get this errormessage.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt2.png?mtime=1372839980"><img alt="" src="/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt2.png?mtime=1372839980" width="1020" height="431" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt2.png?mtime=1372839980"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/nancy/WebconfigEncrypt2.png?mtime=1372839980" width="1020" height="431" /></a>
 </div>
 
 So there, it works and I&#8217;m happy, let&#8217;s move on.

@@ -49,13 +49,13 @@ When I start putting together a disaster and recovery plan for SQL Server, I loo
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/line.gif" alt="" title="" width="100%" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/line.gif" alt="" title="" width="100%" />
 </div>
 
 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/easylanding.gif" alt="" title="" width="142" height="149" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/easylanding.gif" alt="" title="" width="142" height="149" />
 </div>
 
 <h2 style="text-align:center">
@@ -65,7 +65,7 @@ When I start putting together a disaster and recovery plan for SQL Server, I loo
 These recovery points are any requests that require analysis on corruption, financials or even data changes captured over time or are non-critical in nature. This is a slow paced recovery. Corruption would be the fine line between Audit and Object recovery. If the corruption involves any type of situation where a company process is in the stop mode, you have to make the managing decision to move the recovery level to the next phase. If these disasters are not stopping the business flow, then backups can come into play to recover. Typically, in an Audit recovery level disaster, you have the time and resources for restoring data from backups because they do not affect the flow of money like most disasters do. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/ducttape.gif" alt="" title="" width="136" height="136" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/ducttape.gif" alt="" title="" width="136" height="136" />
 </div>
 
 <h2 style="text-align:center">
@@ -79,7 +79,7 @@ Low level object recovery consists of any object in the database that the compan
 Low level object recovery can be a rapid recovery point most of the time. This level usually starts and ends with the DBA. Simple methods such as table backups and object versioning or scripting can prevent loss and promote quick recovery points before the disaster ever becomes critical. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/kissit.gif" alt="" title="" width="136" height="136" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/kissit.gif" alt="" title="" width="136" height="136" />
 </div>
 
 <h2 style="text-align:center">
@@ -91,7 +91,7 @@ Critical objects, mirrors, replication settings, instance level security and ser
 High level can fall into disabling disasters or exposure disaster. Disabling disasters explain themselves. The business flow is completely stopped at this point. Exposure disasters are of the same importance but less of an impact to the actual flow of data. Mirroring is a major object that falls into the exposure listing. If you lose a mirror, business still runs but at a cost of being exposed to a much more critical disaster. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/cablesinhand.gif" alt="" title="" width="165" height="111" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/cablesinhand.gif" alt="" title="" width="165" height="111" />
 </div>
 
 <h2 style="text-align:center">
@@ -101,7 +101,7 @@ High level can fall into disabling disasters or exposure disaster. Disabling dis
 This is a very high-level object recovery plan. This includes entire databases, instances, replication subscriptions and even entire facilities – but does not specifically stop the flow of money through the company. This recovery may simply mean you fail portions of your systems to your offsite DR location. This is a Disaster Recovery level but also can be blurred into HA (High Availability). The defining line between the two is that, in the case of a high recovery event, HA is typically part of the disaster and immediate loss. Essentially, this becomes a recovery point in your DR plans when HA strategies fail or are not in place at all. The largest object defined in this level is an entire manufacturing location or hub in the company's infrastructure. One prime example is a case I went through last year when a hurricane hit our Texas facility. DR strategy's part in the high level recovery went into effect to recover from the complete loss of communication with the facility. In my experience, this can be the most time-consuming recovery point if you don't think about it before it happens. 
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/rip.gif" alt="" title="" width="134" height="132" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/rip.gif" alt="" title="" width="134" height="132" />
 </div>
 
 <h2 style="text-align:center">

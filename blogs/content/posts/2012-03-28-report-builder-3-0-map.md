@@ -45,7 +45,7 @@ Select Map Gallery, expand USA, expand States by County, and select New York.
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz1.JPG?mtime=1332901366" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz1.JPG?mtime=1332901366" alt="" />
 </p>
 
 _Choose spatial data and map view options_ 
@@ -58,7 +58,7 @@ _Choose spatial data and map view options_
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz2.JPG?mtime=1332901367" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz2.JPG?mtime=1332901367" alt="" />
 </p>
 
 _Choose map visualization_ 
@@ -72,7 +72,7 @@ Choose Basic map and continue.
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz3.JPG?mtime=1332901367" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz3.JPG?mtime=1332901367" alt="" />
 </p>
 
 _Choose color theme and data visualization_ 
@@ -86,7 +86,7 @@ Choose Single color map and Display labels. Select the label #COUNTYNAME.
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz4.JPG?mtime=1332901368" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz4.JPG?mtime=1332901368" alt="" />
 </p>
 
 When you click Finish, you'll be taken to the Report Builder main screen.
@@ -98,7 +98,7 @@ When you click anywhere on the map, the Map Layers screen will pop up. Here, you
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz5.JPG?mtime=1332901368" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/RB3 MapWiz5.JPG?mtime=1332901368" alt="" />
 </p>
 
 Running the report right now will result in a map of the state of New York, with the names of a few counties displayed. We need to add a dataset to tell the report what data to display.
@@ -114,7 +114,7 @@ Double-click the map to bring up the Map Layers screen, and click the New layer 
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3 MapWiz6.JPG?mtime=1332901940" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz6.JPG?mtime=1332901940" alt="" />
 </p>
 
 _Choose a source of spatial data_
@@ -124,7 +124,7 @@ This time, choose SQL Server spatial query.
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3 MapWiz7.JPG?mtime=1332901940" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz7.JPG?mtime=1332901940" alt="" />
 </p>
 
 _Choose a dataset with SQL Server spatial data_
@@ -132,7 +132,7 @@ _Choose a dataset with SQL Server spatial data_
 Select Add a new dataset with SQL Server spatial data and click Next.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3 MapWiz8.JPG?mtime=1332901941" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz8.JPG?mtime=1332901941" alt="" />
 </p>
 
 _Choose a connection to a SQL Server spatial data source_ 
@@ -140,7 +140,7 @@ _Choose a connection to a SQL Server spatial data source_
 I am going to use my pre-configured AdvWorks2008R2 dataset.
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3 MapWiz9.JPG?mtime=1332901941" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz9.JPG?mtime=1332901941" alt="" />
 </p>
 
 _Design a query_
@@ -161,7 +161,7 @@ You won't "Embed map data" or "Add a Bing Maps layer" on this layer, in this exa
  
 
 <p style="text-align: center;">
-  <img src="/wp-content/uploads/users/grrlgeek/RB3 MapWiz17.JPG?mtime=1332903198" alt="" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz17.JPG?mtime=1332903198" alt="" />
 </p>
 
 _Choose map visualization_ 
@@ -215,9 +215,9 @@ This was a very basic introduction – there is much more you can accomplish wit
  [5]: /index.php/DataMgmt/ssrs/report-builder-3-0-report
  [6]: http://msdn.microsoft.com/en-us/library/bb964711.aspx
  [7]: /index.php/DataMgmt/ssrs/report-builder-3-0-table
- [8]: /wp-content/uploads/users/grrlgeek/RB3 MapWiz11.JPG?mtime=1332902571
- [9]: /wp-content/uploads/users/grrlgeek/RB3 MapWiz12.JPG?mtime=1332902571
- [10]: /wp-content/uploads/users/grrlgeek/RB3 MapWiz13.JPG?mtime=1332902572
- [11]: /wp-content/uploads/users/grrlgeek/RB3 MapWiz14.JPG?mtime=1332902573
- [12]: /wp-content/uploads/users/grrlgeek/RB3 MapWiz15.JPG?mtime=1332902573
- [13]: /wp-content/uploads/users/grrlgeek/RB3 MapWiz16.JPG?mtime=1332902573
+ [8]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz11.JPG?mtime=1332902571
+ [9]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz12.JPG?mtime=1332902571
+ [10]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz13.JPG?mtime=1332902572
+ [11]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz14.JPG?mtime=1332902573
+ [12]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz15.JPG?mtime=1332902573
+ [13]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/RB3 MapWiz16.JPG?mtime=1332902573

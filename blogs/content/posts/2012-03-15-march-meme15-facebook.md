@@ -20,7 +20,7 @@ tags:
 
 ---
 <p style="text-align: center;">
-  <a href="/media/users/kconan/meme15new.png?mtime=1331607208"><img src="/wp-content/uploads/users/kconan/meme15new.png?mtime=1331607208" alt="" width="150" height="150" /></a>
+  <a href="/media/users/kconan/meme15new.png?mtime=1331607208"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/meme15new.png?mtime=1331607208" alt="" width="150" height="150" /></a>
 </p>
 
 <p style="text-align: left;">
@@ -36,7 +36,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/kconan/FB Start.JPG?mtime=1331683448"><img src="/wp-content/uploads/users/kconan/FB Start.JPG?mtime=1331683448" alt="" width="427" height="131" /></a>
+  <a href="/media/users/kconan/FB Start.JPG?mtime=1331683448"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/FB Start.JPG?mtime=1331683448" alt="" width="427" height="131" /></a>
 </div>
 
  
@@ -66,7 +66,7 @@ tags:
 </p>
 
 <div class="image_block" style="text-align: center;">
-  <a href="/media/users/kconan/China Parking.jpg?mtime=1331684769"><img src="/wp-content/uploads/users/kconan/China Parking.jpg?mtime=1331684769" alt="" width="419" height="546" /></a>
+  <a href="/media/users/kconan/China Parking.jpg?mtime=1331684769"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/kconan/China Parking.jpg?mtime=1331684769" alt="" width="419" height="546" /></a>
 </div>
 
  

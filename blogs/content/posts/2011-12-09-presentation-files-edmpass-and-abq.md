@@ -27,8 +27,8 @@ Next up for me is speaking at the Wisconsin SQL Server User Group in January! It
  [1]: http://www.sqlpass.org/summit/2011/
  [2]: http://www.madpass.org/
  [3]: http://edmpass.com/
- [4]: /wp-content/uploads/users/grrlgeek/EDMPASS 2011-12-8.zip?mtime=1323399117
+ [4]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/EDMPASS 2011-12-8.zip?mtime=1323399117
  [5]: https://twitter.com/#!/ColinStasiuk
  [6]: http://benchmarkitconsulting.com/
  [7]: http://www.linkedin.com/groups/Albuquerque-SQL-Server-User-Group-3921251
- [8]: /wp-content/uploads/users/grrlgeek/SSRS 201 ABQSQL 2011-12-9.zip?mtime=1323467478
+ [8]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/grrlgeek/SSRS 201 ABQSQL 2011-12-9.zip?mtime=1323467478

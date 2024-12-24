@@ -37,7 +37,7 @@ tags:
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/ssisproject.png?mtime=1377025062"><img src="/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/ssisproject.png?mtime=1377025062" alt="" width="542" height="385" /></a>
+  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/ssisproject.png?mtime=1377025062"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/ssisproject.png?mtime=1377025062" alt="" width="542" height="385" /></a>
 </p>
 
 <span style="text-align: justify;">When I deploy the project, I want to hook the OLE_TEST connection manager to an environment, so that I can easily change the destination server and/or database.</span>
@@ -110,7 +110,7 @@ Write-Host "All done."
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/configureProject_before.png?mtime=1377025062"><img src="/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/configureProject_before.png?mtime=1377025062" alt="" width="785" height="536" /></a>
+  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/configureProject_before.png?mtime=1377025062"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/configureProject_before.png?mtime=1377025062" alt="" width="785" height="536" /></a>
 </p>
 
 <span style="text-align: justify;">Instead, it is still linked to the default design-time value. Remark that you can configure a package/project with an environment without actually using parameters. This is because a few properties of a connection manager are linked to parameters behind the scenes. For example, the Initial Catalog property is linked to the parameter with the name </span>_[CM.<connection manager name>.InitialCatalog]_<span style="text-align: justify;">. You can find the parameter name at the top of the </span>_Set Parameter Value_ <span style="text-align: justify;">dialog box.</span>
@@ -135,13 +135,13 @@ $ssisPackage.Alter()
 </p>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/configureProject_after.png?mtime=1377025061"><img src="/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/configureProject_after.png?mtime=1377025061" alt="" width="747" height="375" /></a>
+  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/configureProject_after.png?mtime=1377025061"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/configureProject_after.png?mtime=1377025061" alt="" width="747" height="375" /></a>
 </p>
 
 <span style="text-align: justify;">The environment variables are now linked to the two properties of the connection manager. When you run the package and choose the environment, the data is transferred to another database different from the one configured in the package, due to the reconfiguring of the connection manager by the environment variables.</span>
 
 <p style="text-align: justify;">
-  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/executePackage.png?mtime=1377025062"><img src="/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/executePackage.png?mtime=1377025062" alt="" width="530" height="363" /></a>
+  <a href="/media/users/koenverbeeck/SSISDeploymentPowershell/executePackage.png?mtime=1377025062"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/SSISDeploymentPowershell/executePackage.png?mtime=1377025062" alt="" width="530" height="363" /></a>
 </p>
 
 <span style="text-align: justify;">To wrap-up this post, here's the entire deployment script for easier copy-paste:</span>

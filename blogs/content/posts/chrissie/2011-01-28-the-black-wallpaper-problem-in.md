@@ -26,13 +26,13 @@ tags:
 The computers in my domain get a standard (but very well designed) background to look at. I set this via a group policy.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Wallpaper.png?mtime=1296224855"><img alt="" src="/wp-content/uploads/users/chrissie1/Wallpaper.png?mtime=1296224855" width="723" height="302" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Wallpaper.png?mtime=1296224855"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Wallpaper.png?mtime=1296224855" width="723" height="302" /></a>
 </div>
 
 ## The problem
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/Wallpaper2.png?mtime=1296224957"><img alt="" src="/wp-content/uploads/users/chrissie1/Wallpaper2.png?mtime=1296224957" width="723" height="302" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Wallpaper2.png?mtime=1296224957"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/Wallpaper2.png?mtime=1296224957" width="723" height="302" /></a>
 </div>
 
 Yep a black background instead of my beautifully designed background. 

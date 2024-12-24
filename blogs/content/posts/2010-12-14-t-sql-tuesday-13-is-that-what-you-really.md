@@ -21,7 +21,7 @@ categories:
  
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" title="" width="154" height="154" align="left" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/olap_1.gif" alt="" title="" width="154" height="154" align="left" />
 </div></a>Steve Jones ([Twitter][1] | [Blog][2]), The Voice of the DBA, is hosting the T-SQL Tuesday blogging fest over on [SQLServerCentral.com][3] this month. This months topic involves businesses and what they really want.As many of you know, I am the owner of a small software company that satisfies a niche market. I've been in business for 13 years now, and am still working on the same core application. I constantly find new features and functionality to offer in the app, continually improving it for the benefit of my customers. I think it's safe to say that I understand the technical challenge that my software accommodates, as well as the business implications involved. I also have a very good appreciation for the logistics involved in the business process, and the most efficient ways to accomplish the business goals.Occasionally, we will come across a customer that thinks their method of accomplishing the business's goals is the only correct one, even though my experience clearly indicates there is a better (more efficient) way. I was talking to Ted/onpnt ([Twitter][4] | [Blog][5]) yesterday about this very same topic. The conversation went something like this:**George:** You should see the frickin hoops I gotta jump through for this one customer. I feel like a whipping boy.
   
 **Ted:** what did they have you doing??

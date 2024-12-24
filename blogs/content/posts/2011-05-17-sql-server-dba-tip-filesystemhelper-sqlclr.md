@@ -20,7 +20,7 @@ categories:
 Today's tip is a short but powerful one.  On many occasions a DBA is forced to deal with files in some way.  It may be the need to download and move a file (or folder) around in order to prepare for importing the contents into a database or simply maintain the contents or auditing levels of them.  
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-58.png?mtime=1305633960"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-58.png?mtime=1305633960" width="840" height="188" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-58.png?mtime=1305633960"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-58.png?mtime=1305633960" width="840" height="188" /></a>
 </div>
 
 Working with files through SQL Server is more difficult than your everyday select of data from a database.  SQL Server is made to stay within the walls it has built.  This means we have to use other methods in order to accomplish what we need to do with file and folders. 

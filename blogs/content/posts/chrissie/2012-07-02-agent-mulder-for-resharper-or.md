@@ -31,7 +31,7 @@ I will test it with Autofac and VB.Net (of course) and I used Agent mulder 1.0.4
 But first you install it. [Download the msi][3] first or [the source][4] and compile it yourself.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mulder/Mulder1.png?mtime=1341212474"><img alt="" src="/wp-content/uploads/users/chrissie1/mulder/Mulder1.png?mtime=1341212474" width="870" height="670" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder1.png?mtime=1341212474"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder1.png?mtime=1341212474" width="870" height="670" /></a>
 </div>
 
 When installed, you should see this in the Resharper -> Options -> plugins window thing.
@@ -81,7 +81,7 @@ namespace ConsoleApplication1
 If you have the resharper solution wide analysis turned on you will see this on the Service1 class.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mulder/Mulder2.png?mtime=1341214353"><img alt="" src="/wp-content/uploads/users/chrissie1/mulder/Mulder2.png?mtime=1341214353" width="281" height="81" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder2.png?mtime=1341214353"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder2.png?mtime=1341214353" width="281" height="81" /></a>
 </div>
 
 This is because we inject our service in to our class and never instantiate it anywhere. We let our DI-container deal with that. So resharper will always give this error.
@@ -91,7 +91,7 @@ Now if we use the Agent mulder plugin this warningwill go away.
 But now we will see an icon appear.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mulder/Mulder3.png?mtime=1341214738"><img alt="" src="/wp-content/uploads/users/chrissie1/mulder/Mulder3.png?mtime=1341214738" width="396" height="81" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder3.png?mtime=1341214738"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder3.png?mtime=1341214738" width="396" height="81" /></a>
 </div>
 
 Which tells us agent mulder has detected it&#8217;s existence and knows it has been configured in our DI-container.
@@ -105,7 +105,7 @@ It will give the warning again.
 What is even more amazing is that you can click on the icon and navigate to where service has been registered.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/mulder/Mulder4.png?mtime=1341215109"><img alt="" src="/wp-content/uploads/users/chrissie1/mulder/Mulder4.png?mtime=1341215109" width="236" height="91" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder4.png?mtime=1341215109"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/mulder/Mulder4.png?mtime=1341215109" width="236" height="91" /></a>
 </div>
 
 Sadly Agent mulder doesn&#8217;t seem to work in VB.Net.

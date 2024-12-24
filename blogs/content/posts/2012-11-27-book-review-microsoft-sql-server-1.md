@@ -23,7 +23,7 @@ tags:
 With a basis as a system engineer, I became a DBA. And DBA's don't often write real DML queries. I can read a query, understand what it's doing but when I need to read one I need BOL the help me out. Taking the [070-457 Transition Your MCTS on SQL Server to MCSA: SQL Server 2012,Part 1][1] exam showed me I'm strong in database administration but there was room for improvement for my query skills. That's why I bought [Microsoft SQL Server 2012 T-SQL Fundamentals][2] by Itzik Ben-Gan ([blog][3] | [twitter][4]).
 
 <div class="image_block">
-  <a href="http://shop.oreilly.com/product/0790145321978.do"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/BRTsql.jpg?mtime=1354044858" width="175" height="214" /></a>
+  <a href="http://shop.oreilly.com/product/0790145321978.do"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/BRTsql.jpg?mtime=1354044858" width="175" height="214" /></a>
 </div>
 
 **Chapter 1: Background to T-SQL Querying and Programming**

@@ -218,7 +218,7 @@ public void AllApiActionsHaveExplicitAuthorizationDefined()
   </p>
   
   
-  <a href="/wp-content/uploads/2016/03/ASPNetAuthTests.png"><img src="/wp-content/uploads/2016/03/ASPNetAuthTests.png" alt="NCrunch Test Output" class="size-full wp-image-4472" srcset="/wp-content/uploads/2016/03/ASPNetAuthTests.png 1014w, /wp-content/uploads/2016/03/ASPNetAuthTests-300x85.png 300w" sizes="(max-width: 1014px) 100vw, 1014px" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/03/ASPNetAuthTests.png"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/03/ASPNetAuthTests.png" alt="NCrunch Test Output" class="size-full wp-image-4472" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/03/ASPNetAuthTests.png 1014w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/03/ASPNetAuthTests-300x85.png 300w" sizes="(max-width: 1014px) 100vw, 1014px" /></a>
   
   
   <p>

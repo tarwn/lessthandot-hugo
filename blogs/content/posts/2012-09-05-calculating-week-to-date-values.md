@@ -28,7 +28,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;"><img src="/wp-content/uploads/users/joshuafennessy/1.png?mtime=1346900843&quot;><img alt=&quot;&quot; src=&quot;/wp-content/uploads/users/joshuafennessy/1.png" alt="" /><br /></span>
+  <span style="font-family: verdana,geneva;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/joshuafennessy/1.png?mtime=1346900843&quot;><img alt=&quot;&quot; src=&quot;https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/joshuafennessy/1.png" alt="" /><br /></span>
 </p>
 
 <p class="MsoNormal">
@@ -78,7 +78,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;"><img src="/wp-content/uploads/users/joshuafennessy/2.png" alt="" /><br /></span>
+  <span style="font-family: verdana,geneva;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/joshuafennessy/2.png" alt="" /><br /></span>
 </p>
 
 <p class="MsoNormal">
@@ -98,7 +98,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;"><img src="/wp-content/uploads/users/joshuafennessy/3.png" alt="" /><br /></span>
+  <span style="font-family: verdana,geneva;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/joshuafennessy/3.png" alt="" /><br /></span>
 </p>
 
 <p class="MsoNormal">
@@ -124,7 +124,7 @@ categories:
 </p>
 
 <p class="MsoNormal">
-  <span style="font-family: verdana,geneva;"><img src="/wp-content/uploads/users/joshuafennessy/4.png" alt="" /><br /></span>
+  <span style="font-family: verdana,geneva;"><img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/joshuafennessy/4.png" alt="" /><br /></span>
 </p>
 
 <p class="MsoNormal">

@@ -55,7 +55,7 @@ xp_cmdshell 'net view \.'
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-110.png?mtime=1328627231"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-110.png?mtime=1328627231" width="292" height="191" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-110.png?mtime=1328627231"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-110.png?mtime=1328627231" width="292" height="191" /></a>
 </div>
 
 We have now exposed a local share named Imports.  Further attempts at trying to write files to the share have shown the share is indeed, secured.  That is, until the following xp_cmdshell statement is executed.
@@ -66,13 +66,13 @@ xp_cmdshell 'icacls \%COMPUTERNAME%Imports /t /grant Everyone:F'
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-111.png?mtime=1328627231"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-111.png?mtime=1328627231" width="310" height="74" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-111.png?mtime=1328627231"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-111.png?mtime=1328627231" width="310" height="74" /></a>
 </div>
 
 Results
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-112.png?mtime=1328627231"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-112.png?mtime=1328627231" width="275" height="227" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-112.png?mtime=1328627231"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-112.png?mtime=1328627231" width="275" height="227" /></a>
 </div>
 
 As we can see, after the statement using XP_CMDSHELL was executed and the command utilizing CACLS was executed on the operating system under the local system account, the Imports share now contains the account "Everyone", with Full Control of the share.

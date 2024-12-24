@@ -18,4 +18,4 @@ I presented "Level Up Your SQL Server Index Knowledge" on Wednesday, June 10 for
 
 For those of you interested, [the slides and demos can be downloaded here][1].
 
- [1]: /wp-content/uploads/2015/06/Level-Up-Your-SQL-Server-Index-Knowledge.zip
+ [1]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2015/06/Level-Up-Your-SQL-Server-Index-Knowledge.zip

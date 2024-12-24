@@ -32,25 +32,25 @@ You can find all the reasons to upgrade on [the jetbrains website.][2]
 I downloaded Teamcity 6.5 (dooh) and copied the file over to the buildserver. And I took a screenshot of the old teamcity window and said goodbye.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity 6.0.png?mtime=1306493133"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity 6.0.png?mtime=1306493133" width="1019" height="625" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity 6.0.png?mtime=1306493133"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity 6.0.png?mtime=1306493133" width="1019" height="625" /></a>
 </div>
 
 And I clicked next here.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_1.png?mtime=1306493377"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_1.png?mtime=1306493377" width="498" height="383" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_1.png?mtime=1306493377"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_1.png?mtime=1306493377" width="498" height="383" /></a>
 </div>
 
 No going back now.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_2.png?mtime=1306493488"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_2.png?mtime=1306493488" width="440" height="82" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_2.png?mtime=1306493488"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_2.png?mtime=1306493488" width="440" height="82" /></a>
 </div>
 
 Got this and clicked upgrade.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_3.png?mtime=1306493830"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_3.png?mtime=1306493830" width="1021" height="527" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_3.png?mtime=1306493830"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_3.png?mtime=1306493830" width="1021" height="527" /></a>
 </div>
 
 Waited&#8230;.. Long time.
@@ -58,7 +58,7 @@ Waited&#8230;.. Long time.
 And it worked as the previous version.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_4.png?mtime=1306496030"><img alt="" src="/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_4.png?mtime=1306496030" width="1225" height="677" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_4.png?mtime=1306496030"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/TeamCity/Teamcity65_4.png?mtime=1306496030" width="1225" height="677" /></a>
 </div>
 
 ## Conclusion

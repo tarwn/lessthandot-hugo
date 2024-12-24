@@ -101,4 +101,4 @@ This isn't something you'd really ever want to use if you could avoid it, but in
 [Remapper.cs.txt][2]
 
  [1]: http://devlicio.us/blogs/krzysztof_kozmic/archive/2009/08/17/adjusting-nhibernate-mapping-for-tests.aspx
- [2]: /wp-content/uploads/blogs/EnterpriseDev/Tweaking-NHibernate-Mappings-Remapper/Remapper.cs.txt?mtime=1315527513
+ [2]: https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/EnterpriseDev/Tweaking-NHibernate-Mappings-Remapper/Remapper.cs.txt?mtime=1315527513

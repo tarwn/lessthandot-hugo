@@ -39,7 +39,7 @@ GO
 If we take a look at the execution plan:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction1.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction1.png?mtime=1359036029" width="767" height="153" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction1.png?mtime=1359036029"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction1.png?mtime=1359036029" width="767" height="153" /></a>
 </div>
 
 We see that there is a complete scan of the Clustered Index which makes sense since there is no index on the OrderDate column.
@@ -61,7 +61,7 @@ GO
 Results in the following Execution Plan:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029" width="771" height="143" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction2.png?mtime=1359036029" width="771" height="143" /></a>
 </div>
 
 You see that the query is internally translated to <code class="codespan">SELECT [OrderDate] FROM [Sales].[SalesOrderHeader] WHERE [OrderDate]<=@1 AND [OrderDate]<=@2></code> just like the first query using the BETWEEN keyword. The big change is in the execution plan. Since we created an index on the OrderDate column, SQL Server is now using an Index Seek on our index to fetch the results.
@@ -75,7 +75,7 @@ SELECT YEAR('20060127 02:15:59')
 Results in 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction3.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction3.png?mtime=1359036029" width="159" height="66" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction3.png?mtime=1359036029"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction3.png?mtime=1359036029" width="159" height="66" /></a>
 </div>
 
 So the following query should make sense and is more readable then the former 2:
@@ -88,13 +88,13 @@ GO
 And looking at the result set it makes sense:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction4.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction4.png?mtime=1359036029" width="980" height="300" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction4.png?mtime=1359036029"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction4.png?mtime=1359036029" width="980" height="300" /></a>
 </div>
 
 But when we look at the execution plan:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction5.png?mtime=1359036029"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction5.png?mtime=1359036029" width="622" height="149" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction5.png?mtime=1359036029"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Axel8s/WhereFunction5.png?mtime=1359036029" width="622" height="149" /></a>
 </div>
 
 We see that our index isn't seeked anymore but gets a complete scan. So instead of searching in some 4K rows, SQL Server is scanning more than 30K of rows. This is because SQL Server is applying the function to all of the rows in our Sales.SalesOrderHeader table before it's compared to our desired value.

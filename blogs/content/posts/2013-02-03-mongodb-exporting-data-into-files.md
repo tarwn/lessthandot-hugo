@@ -77,7 +77,7 @@ C:NoSQLmongodbbin>
 If you now locate the file in the bin directory and open the file, you should see something like this
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutput.PNG?mtime=1359896992"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutput.PNG?mtime=1359896992" width="660" height="184" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutput.PNG?mtime=1359896992"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutput.PNG?mtime=1359896992" width="660" height="184" /></a>
 </div>
 
 ## Export in csv format
@@ -113,13 +113,13 @@ C:NoSQLmongodbbin></pre>
 Now if we open up the file in notepad you will see the following
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputCsv.PNG?mtime=1359897545"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputCsv.PNG?mtime=1359897545" width="289" height="181" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputCsv.PNG?mtime=1359897545"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputCsv.PNG?mtime=1359897545" width="289" height="181" /></a>
 </div>
 
 If you open up the file in Excel, it will look like this
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputExcel.PNG?mtime=1359897556"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputExcel.PNG?mtime=1359897556" width="498" height="362" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputExcel.PNG?mtime=1359897556"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/Denis/mongo/PersonOutputExcel.PNG?mtime=1359897556" width="498" height="362" /></a>
 </div>
 
 There you have it, if you want to quickly export some data into file, you can use the mongoexport utility to accomplish that

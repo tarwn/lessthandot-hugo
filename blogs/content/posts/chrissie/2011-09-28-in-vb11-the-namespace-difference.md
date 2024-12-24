@@ -33,7 +33,7 @@ In [a previous post][2] I wrote about the difference in namespaces between VB.Ne
 On a project level C# uses a default namespace setting which means you can just overwrite it at the class level.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/namespace.jpg" alt="" title="" width="744" height="208" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/namespace.jpg" alt="" title="" width="744" height="208" />
 </div>
 
 So if you create a new class you will get something like this.
@@ -69,7 +69,7 @@ Which means that your class is in a different namespace than all the other class
 In VB.Net this was never possible, because they use a root namespace at the project level. Which means that all classes in your project will be under that namespace.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DesktopDev/namespace2.jpg" alt="" title="" width="716" height="149" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DesktopDev/namespace2.jpg" alt="" title="" width="716" height="149" />
 </div>
 
 You can of course cheat and not set a root namespace and then set a namespace on each and every file/class.

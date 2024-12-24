@@ -25,7 +25,7 @@ tags:
 ASP.NET MVC 2 RC 2 has been released and is available for download.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/WebDev//mvc-logo-landing-page.png" alt="" title="" width="142" height="58" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/WebDev//mvc-logo-landing-page.png" alt="" title="" width="142" height="58" />
 </div>
 
 For those that don't know what ASP.NET MVC 2 is. ASP.NET MVC 2 is a framework for developing highly testable and maintainable Web applications by leveraging the Model-View-Controller (MVC) pattern. The framework encourages developers to maintain a clear separation of concerns among the responsibilities of the application – the UI logic using the view, user-input handling using the controller, and the domain logic using the model. ASP.NET MVC applications are easily testable using techniques such as test-driven development (TDD).

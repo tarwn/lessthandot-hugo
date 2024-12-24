@@ -28,7 +28,7 @@ For this report I had to make I needed to show an image I had on file, an image 
 This is what it looked like in the end.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/users/chrissie1/rdlc/reportrdlc1.png?mtime=1296141524"><img alt="" src="/wp-content/uploads/users/chrissie1/rdlc/reportrdlc1.png?mtime=1296141524" width="412" height="87" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/rdlc/reportrdlc1.png?mtime=1296141524"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/chrissie1/rdlc/reportrdlc1.png?mtime=1296141524" width="412" height="87" /></a>
 </div>
 
 ## Solution 1

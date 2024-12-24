@@ -55,7 +55,7 @@ tags:
   </li>
 </ul>
 
-<a style="text-align: justify" href="/media/users/koenverbeeck/MCSEPrep/MCSE.jpg?mtime=1365060226"><img style="float: left;margin-left: 10px;margin-right: 10px" src="/wp-content/uploads/users/koenverbeeck/MCSEPrep/MCSE.jpg?mtime=1365060226" alt="" width="300" height="171" /></a>
+<a style="text-align: justify" href="/media/users/koenverbeeck/MCSEPrep/MCSE.jpg?mtime=1365060226"><img style="float: left;margin-left: 10px;margin-right: 10px" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/MCSEPrep/MCSE.jpg?mtime=1365060226" alt="" width="300" height="171" /></a>
 
 <div class="image_block" style="text-align: justify">
   The MCSA exams are the same for everyone; it doesn't matter if you are going for the MCSE – Business Intelligence or for MCSE – Data Platform. Personally I like this decision, as everyone with the MCSA has the same common ground in the SQL Server platform. There's always some overlap between the tasks a specific role is supposed to do. For example, DBA's need SSIS from time to time to move data around and BI developers might need to set-up replication to feed a reporting database. Forcing everyone to do the same exams ensures certification holders have a certain skill set in the most important aspects of SQL Server.

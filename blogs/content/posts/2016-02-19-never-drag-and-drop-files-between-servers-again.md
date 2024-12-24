@@ -39,7 +39,7 @@ I want to move the files from my Extended Events folder on AG1 to AG 2. Command:
 <pre>robocopy "C:\Users\a-jes\Documents\SQL Server Management Studio\Extended Events" "\\SQL2014AG2\C$\Users\a-jes\Documents\SQL Server Management Studio" /z</pre>
 
 <div id="attachment_4389" style="width: 885px" class="wp-caption aligncenter">
-  <img class="wp-image-4389 size-full" src="/wp-content/uploads/2016/02/robocopy-1.png" alt="All sorts of goodness!" width="875" height="647" srcset="/wp-content/uploads/2016/02/robocopy-1.png 875w, /wp-content/uploads/2016/02/robocopy-1-300x221.png 300w" sizes="(max-width: 875px) 100vw, 875px" />
+  <img class="wp-image-4389 size-full" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/robocopy-1.png" alt="All sorts of goodness!" width="875" height="647" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/robocopy-1.png 875w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/robocopy-1-300x221.png 300w" sizes="(max-width: 875px) 100vw, 875px" />
   
   <p class="wp-caption-text">
     All sorts of goodness!
@@ -54,7 +54,7 @@ Let's say I wanted to move all the .xml.gz files from one directory to another. 
 
 </pre>
 
-<img class="aligncenter wp-image-4390 size-full" src="/wp-content/uploads/2016/02/robocopy-2.png" alt="robocopy 2" width="883" height="645" srcset="/wp-content/uploads/2016/02/robocopy-2.png 883w, /wp-content/uploads/2016/02/robocopy-2-300x219.png 300w" sizes="(max-width: 883px) 100vw, 883px" />
+<img class="aligncenter wp-image-4390 size-full" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/robocopy-2.png" alt="robocopy 2" width="883" height="645" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/robocopy-2.png 883w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2016/02/robocopy-2-300x219.png 300w" sizes="(max-width: 883px) 100vw, 883px" />
 
 That's a very quick look at Robocopy. I suggest you know it, use it, and love it!
 

@@ -31,7 +31,7 @@ There are a few critical steps that need to be handled as well as deciding if an
 Back in the [designing phase][2] the flowchart for the entire process that is being developed was shown.  The DFT portion was the secondary sub process to the start and enumeration processing.  This phase from the flowchart perspective is shown below
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-13.png?mtime=1296446146"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-13.png?mtime=1296446146" width="624" height="280" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-13.png?mtime=1296446146"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-13.png?mtime=1296446146" width="624" height="280" /></a>
 </div>
 
  
@@ -63,7 +63,7 @@ Set the Lookup Transformation as follows:
       4. Save the editor settings
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-14.png?mtime=1296446146"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-14.png?mtime=1296446146" width="209" height="182" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-14.png?mtime=1296446146"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-14.png?mtime=1296446146" width="209" height="182" /></a>
 </div>
 
  
@@ -83,7 +83,7 @@ No other changes are needed to the Conditional Split.  Click OK to save the con
   2. In the Derived Column Transform Editor, create the base three columns be dragging them to the output area.  Additionally, drag the variables ServerName and FileNameOnly as columns.  Use type casts to retain the non-unicode values as shown below.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-15.png?mtime=1296446146"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-15.png?mtime=1296446146" width="472" height="233" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-15.png?mtime=1296446146"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-15.png?mtime=1296446146" width="472" height="233" /></a>
 </div>
 
   1. Drag the success precedence to a new OLEDB Command.  
@@ -98,7 +98,7 @@ No other changes are needed to the Conditional Split.  Click OK to save the con
           5. ServerName_Source to @ServerName
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-16.png?mtime=1296446147"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-16.png?mtime=1296446147" width="387" height="257" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-16.png?mtime=1296446147"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-16.png?mtime=1296446147" width="387" height="257" /></a>
 </div>
 
   1. Click OK to save the OLEDB Command
@@ -125,7 +125,7 @@ At this point the package is ready to be executed on a machine.  For test purpo
 The primary length for execution is done for building the staging table.  This direct import of the contents into a staging table, as discussed in part one, is done so we can optimize this initial step so the row-by-row operations are giving higher performance.  Total execution on the test machine with the discovery of 1027 *.config files was 2.6 minutes. 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-17.png?mtime=1296446147"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-17.png?mtime=1296446147" width="344" height="385" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-17.png?mtime=1296446147"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-17.png?mtime=1296446147" width="344" height="385" /></a>
 </div>
 
 Querying these configuration tables shows the contents successfully inserted
@@ -133,7 +133,7 @@ Querying these configuration tables shows the contents successfully inserted
  
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-18.png?mtime=1296446150"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-18.png?mtime=1296446150" width="624" height="266" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-18.png?mtime=1296446150"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-18.png?mtime=1296446150" width="624" height="266" /></a>
 </div>
 
  

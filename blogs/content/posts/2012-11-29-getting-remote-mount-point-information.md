@@ -37,13 +37,13 @@ $_.FreeSpace/$_.Size*100}}|Sort-Object -descending PCTfreespace|format-table
 I get the following result:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/FSMP1.JPG?mtime=1354195164"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/FSMP1.JPG?mtime=1354195164" width="977" height="144" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP1.JPG?mtime=1354195164"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP1.JPG?mtime=1354195164" width="977" height="144" /></a>
 </div>
 
 Knowing the sizes of my databases, I knew the numbers were wrong. So I opened a RDP session to the server and found this picture in Disk Management:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/FSMP2.JPG?mtime=1354195179"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/FSMP2.JPG?mtime=1354195179" width="810" height="530" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP2.JPG?mtime=1354195179"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP2.JPG?mtime=1354195179" width="810" height="530" /></a>
 </div>
 
 At that moment I realized I wasn't getting the information from the Mount Points, just from the Disks that had a drive letter assigned to them.
@@ -58,7 +58,7 @@ select name, label, driveletter
 The result looks like this:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/FSMP3.JPG?mtime=1354195191"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/FSMP3.JPG?mtime=1354195191" width="733" height="200" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP3.JPG?mtime=1354195191"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP3.JPG?mtime=1354195191" width="733" height="200" /></a>
 </div>
 
 As you can see, the drive letter properties are empty for my Mount Points and in the name column I can find the file and folder where they are mounted.
@@ -74,7 +74,7 @@ format-table
 The result now shows the drives and Mount Points with all the requested information:
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/SysAdmins/FSMP4.JPG?mtime=1354195223"><img alt="" src="/wp-content/uploads/blogs/SysAdmins/FSMP4.JPG?mtime=1354195223" width="964" height="186" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP4.JPG?mtime=1354195223"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/SysAdmins/FSMP4.JPG?mtime=1354195223" width="964" height="186" /></a>
 </div>
 
 To be able to reuse the script I do what I did in the other two PowerShell post:

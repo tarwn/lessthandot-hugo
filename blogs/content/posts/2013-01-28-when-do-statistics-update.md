@@ -83,7 +83,7 @@ SELECT
 ```
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/autostat_1.gif?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/autostat_1.gif?mtime=1359303289" width="477" height="87" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/autostat_1.gif?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/autostat_1.gif?mtime=1359303289" width="477" height="87" /></a>
 </div>
 
  
@@ -116,7 +116,7 @@ SELECT COUNT(*) *.20 + 500 [When will they update?] FROM statsupdate
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-196.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-196.png?mtime=1359303289" width="295" height="92" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-196.png?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-196.png?mtime=1359303289" width="295" height="92" /></a>
 </div>
 
  
@@ -135,7 +135,7 @@ GO
 Viewing the statistics area in Object Explorer in SSMS, we can see the statistics were created.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-197.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-197.png?mtime=1359303289" width="390" height="100" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-197.png?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-197.png?mtime=1359303289" width="390" height="100" /></a>
 </div>
 
 We can also see this by querying the [sys.stats][3] catalog view.
@@ -146,7 +146,7 @@ SELECT * FROM sys.stats WHERE name = 'IDX_Col1'
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-198.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-198.png?mtime=1359303289" width="624" height="52" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-198.png?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-198.png?mtime=1359303289" width="624" height="52" /></a>
 </div>
 
  
@@ -160,11 +160,11 @@ GO
 
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-199.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-199.png?mtime=1359303289" width="389" height="135" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-199.png?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-199.png?mtime=1359303289" width="389" height="135" /></a>
 </div>
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-200.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-200.png?mtime=1359303289" width="624" height="79" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-200.png?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-200.png?mtime=1359303289" width="624" height="79" /></a>
 </div>
 
 The above screenshot is from the tool [Plan Explorer Pro][4] – highly recommended for more effectively tuning and reviewing execution plans in SQL Server
@@ -191,13 +191,13 @@ GO
 After executing the update, check to see if we captured an auto_stats event
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-201.png?mtime=1359303289"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-201.png?mtime=1359303289" width="455" height="84" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-201.png?mtime=1359303289"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-201.png?mtime=1359303289" width="455" height="84" /></a>
 </div>
 
 As shown, no auto_stats event was executed.  Further investigation shows a cardinality issue in the execution plan that was generated from the query.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-202.png?mtime=1359303290"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-202.png?mtime=1359303290" width="792" height="102" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-202.png?mtime=1359303290"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-202.png?mtime=1359303290" width="792" height="102" /></a>
 </div>
 
 At this time we are at a 20% + 499 row changes to the data in the statsupdate table.  This would mean that only one more row needs to change in order to flag the statistics for automatic updating.
@@ -225,7 +225,7 @@ GO
 First, review the execution plan from the above query.  Check the estimation verses the actual rows that were returned.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-203.png?mtime=1359303290"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-203.png?mtime=1359303290" width="624" height="57" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-203.png?mtime=1359303290"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-203.png?mtime=1359303290" width="624" height="57" /></a>
 </div>
 
 As shown, the estimated and actual are equal in this execution.
@@ -233,7 +233,7 @@ As shown, the estimated and actual are equal in this execution.
 Now, check to see if the auto_stats event was indeed captured.
 
 <div class="image_block">
-  <a href="/wp-content/uploads/blogs/DataMgmt/-204.png?mtime=1359303290"><img alt="" src="/wp-content/uploads/blogs/DataMgmt/-204.png?mtime=1359303290" width="461" height="89" /></a>
+  <a href="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-204.png?mtime=1359303290"><img alt="" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/-204.png?mtime=1359303290" width="461" height="89" /></a>
 </div>
 
 As shown, we absolutely triggered automatically updating of the statistics by reaching the change count of 2700 rows in our test table (20% + 500).

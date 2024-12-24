@@ -25,7 +25,7 @@ Ever since that lesson I had from observing another DBA for the first time, I qu
 I won't try to fool anyone reading this, SQL Server 2000 and previous versions were downright horrid for email abilities. Install Outlook to setup sql mail??? WHAT? Can I say, Bite me in a blog? Oh and let's not forget the external sp_ calls to CDOTNS.DLL. They did work though because I refused to install Outlook on a database server to date. So even back then I was setting up email notifications based on events in SQL Server. They were nothing near what we have at our disposal now, but they did work.
 
 <div class="image_block">
-  <img src="/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
+  <img src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/blogs/DataMgmt/lazydba.gif" alt="" title="" width="378" height="378" />
 </div>
 
 Jump ahead 300 years in computing years and we have SQL Server 2008 R2. I'm impressed! Did I mention that? SQL Server has evolved and done so very rapidly while showing growth that leaves itself with the top database servers out there.

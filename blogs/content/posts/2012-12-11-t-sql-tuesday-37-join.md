@@ -33,7 +33,7 @@ tags:
 </p>
 
 <div class="image_block">
-  <a href="http://sqlity.net/en/1175/t-sql-tuesday-37-invite-to-join-me-in-a-month-of-joins/"><img style="float: left;" src="/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
+  <a href="http://sqlity.net/en/1175/t-sql-tuesday-37-invite-to-join-me-in-a-month-of-joins/"><img style="float: left;" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/users/koenverbeeck/TSQL2sday37/TSQL2sday.PNG?mtime=1355209029" alt="" width="133" height="134" /></a>
 </div>
 
  
