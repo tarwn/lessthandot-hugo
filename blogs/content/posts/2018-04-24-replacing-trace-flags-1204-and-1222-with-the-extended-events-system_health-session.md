@@ -26,7 +26,7 @@ Let me walk through what a deadlock looks like with TF 1222 and compare that to 
 
 In my instance, I have TF 1222 enabled.
 
-[<img class="aligncenter size-full wp-image-9227" src="/wp-content/uploads/2018/04/config-mgr.png" alt="config-mgr" width="414" height="496" srcset="/wp-content/uploads/2018/04/config-mgr.png 414w, /wp-content/uploads/2018/04/config-mgr-250x300.png 250w" sizes="(max-width: 414px) 100vw, 414px" />][1]
+[<img class="aligncenter size-full wp-image-9227" src="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/config-mgr.png" alt="config-mgr" width="414" height="496" srcset="https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/config-mgr.png 414w, https://lessthandot.z19.web.core.windows.net/wp-content/uploads/2018/04/config-mgr-250x300.png 250w" sizes="(max-width: 414px) 100vw, 414px" />][1]
 
 I have simple code to create a deadlock. You can use this as an example in a test environment to replicate it.
 

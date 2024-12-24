@@ -5,10 +5,15 @@ theme = "lessthandot"
 
 disableKinds = ["RSS"]
 
+preserveTaxonomyNames = true
+
 [taxonomies]
   author = "author"
   tag = "tags"
   category = "categories"
 
 [params]
-googleAnalytics = "UA-4471405-1"
+googleAnalytics = "G-WMQZ4JWS0V"
+
+[markup.goldmark.renderer]
+unsafe= true

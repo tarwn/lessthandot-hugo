@@ -2,7 +2,7 @@
 title: How to get data out of Microsoft Dynamics Great Plains
 author: David Forck (thirster42)
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 504
 draft: true
 url: /?p=504

@@ -5,6 +5,8 @@ theme = "lessthandot"
 
 disableKinds = ["RSS"]
 
+preserveTaxonomyNames = true
+
 [taxonomies]
   author = "author"
   tag = "tags"
@@ -13,3 +15,5 @@ disableKinds = ["RSS"]
 [params]
 googleAnalytics = ""
 
+[markup.goldmark.renderer]
+unsafe= true

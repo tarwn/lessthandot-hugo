@@ -5,8 +5,9 @@
             <li><a href="/author">All</a> ({{ (where .Site.Pages "Section" "posts") | len }})</li>
             {{ $authors := .Site.Data._authors }}
             {{ range $key, $value := .Site.Taxonomies.author }}
-                {{ $authorData := index $authors $key}}
-                <li><a href="/author/{{ $key }}">{{ $authorData.name }}</a> ({{ $value | len }})</li>
+                {{ $fixedKey := replace $key " " "-" | replaceRE "[()]" "" }}
+                {{ $authorData := index $authors $fixedKey}}
+                <li><a href="/author/{{ $fixedKey }}">{{ $authorData.name }}</a> ({{ $value | len }})</li>
             {{ end }}
         </ul>
     </div>
@@ -15,7 +16,8 @@
         <ul class="dimmed">
             <li><a href="/categories">All</a> ({{ (where .Site.Pages "Section" "posts") | len }})</li>
         {{ range first 15 .Site.Taxonomies.categories.ByCount }}
-            <li><a href="/categories/{{ .Name }}">{{ .Name | humanize }}</a> ({{ .Count }})</li>
+            {{ $fixedKey := replace .Name " " "-" | replaceRE "[(),]" "" | replaceRE "#" "%23" }}
+            <li><a href="/categories/{{ $fixedKey }}/">{{ .Name | humanize }}</a> ({{ .Count }})</li>
         {{ end }}
         </ul>
     </div>

@@ -2,7 +2,7 @@
 title: Altering the State of the Database Can Cause DMVs to Clear
 author: Paul Timmerman
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 2052
 excerpt: |
   For a number of these DMVs, MSDN states:

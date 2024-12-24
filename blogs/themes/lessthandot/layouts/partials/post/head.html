@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github-gist.css" />
 
 {{ if eq .Params.author "Eli Weinstock-Herman (tarwn)" }}
-    {{ $lastUrlElement := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
+    {{ $lastUrlElement := index (last 1 (split (delimit (split .RelPermalink "/") "," "") ",")) 0 }}
     {{ $replacement := $lastUrlElement | printf "http://www.tiernok.com/posts/%s.html" }}
     <link rel="canonical" href="{{ $replacement }}" />
 {{ else }}

@@ -2,7 +2,7 @@
 title: T-SQL Query Optimization Quick Tip
 author: Erik
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 848
 excerpt: "A query with low CPU and reads was taking over 3 minutes to complete, and an experienced SQL developer couldn't optimize it. Finally, the query was reduced to half a second not by changing the query but by changing the table ..."
 draft: true

@@ -2,7 +2,7 @@
 title: Don't use Default Database in SQL Server
 author: George Mastros (gmmastros)
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 1983
 excerpt: "When you create a login with SQL Server, you can specify the default database for that login, but you shouldn't.  Here's why."
 draft: true

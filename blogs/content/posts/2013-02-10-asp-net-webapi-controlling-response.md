@@ -2,7 +2,7 @@
 title: ASP.Net WebAPI – Controlling Response Formats
 author: Eli Weinstock-Herman (tarwn)
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 1985
 excerpt: 'Recently we were trying to consume a WebAPI call from an application that could only really consume HTML tables and basic XML. Unfortunately, nowhere in the long list of content-types in the Accepts header does the application actually list XML. So WebA&hellip;'
 draft: true

@@ -2,7 +2,7 @@
 title: 'On Being A Consultant: Lessons Learned, Week One'
 author: Jes Borland
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 1398
 excerpt: Three things I learned in my first week as A Consultant
 draft: true

@@ -3,7 +3,7 @@
 
 {{ partial "sidebar.html" . }}
 
-{{ $paginator := .Paginate (where .Pages "Section" "posts") }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Section" "posts") }}
 <div class="content-main">
   {{ range $paginator.Pages }}
   {{ partial "post/summary.html" . }}

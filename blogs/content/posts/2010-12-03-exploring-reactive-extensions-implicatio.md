@@ -2,7 +2,7 @@
 title: Exploring Reactive Extensions – Implications for Parallelism
 author: Alex Ullrich
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 963
 excerpt: |
   I'm pretty sure this is going to be necessary post :)

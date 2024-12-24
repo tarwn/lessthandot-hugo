@@ -2,7 +2,7 @@
 title: Sparklines and Conditional Formatiing in SSRS
 author: Sam Vanga
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 2008
 excerpt: 'When creating a SSRS report, you want to add lines that display trends. Sparklines introduced with SQL Server 2008 R2 allow you to do this easily. You want to show trends for more than one data point. For example, actual sales and target amount. And you&hellip;'
 draft: true

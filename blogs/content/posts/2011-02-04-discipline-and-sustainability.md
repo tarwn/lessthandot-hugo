@@ -2,7 +2,7 @@
 title: Discipline and Sustainability
 author: Alex Ullrich
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 1003
 excerpt: 'About six months ago I started a new job at yet another "Agile" shop.  I joined the team because I thought the other developers seemed smart and easy to get along with, and the pair programming they practice really appealed to me.  Maybe every past expe&hellip;'
 draft: true

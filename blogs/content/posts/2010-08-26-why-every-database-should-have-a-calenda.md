@@ -2,7 +2,7 @@
 title: Why every database should have a calendar table
 author: SQLDenis
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2000-11-30T00:00:00+00:00
 ID: 888
 excerpt: |
   create table Calendar (
