@@ -1,0 +1,36 @@
+name: Build and Deploy site
+
+env:
+  APP_LOCATION: "/blogs/public"
+
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: '0.140.1'
+        # extended: true
+
+    - name: Build
+      working-directory: ./blogs
+      run: hugo --config config-prod.toml --minify
+
+    # use this smaller, opensource github action that doesn't try to build anything: 
+    #  https://github.com/Azure/static-web-apps/issues/878#issuecomment-1246800871
+    - name: Deploy site content
+      uses: ajraczkowski/static-web-apps-deploy@v1
+      with:
+        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        action: "upload"
+        app_location: ${{ env.APP_LOCATION }}
+        skip_app_build: true
+        skip_api_build: true
