@@ -41,7 +41,7 @@ First thing to do here is add a reference to your class library project to both 
 
 First thing we want to do is get the MVC project ready. I got rid of everything in the Views folder except for the About and Index pages in Views/Home. I also got rid of the Account controller. Feel free to do this if you want, but I suppose it isn't necessary. One thing that is necessary, since we want to use jQuery to get the webservice value eventually, is to reference the jQuery script. So just add this to the bottom of the page called Site.Master (before the closing html tag):
 
-<code class="codespan"><script type="text/javascript" src="../../Scripts/jquery-1.2.6.min.js" /></code>
+`<script type="text/javascript" src="../../Scripts/jquery-1.2.6.min.js" />`
 
 Next, we want to add a simple form to Index.aspx. This form just has one text input, and a submit button.
 
